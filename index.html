@@ -1,604 +1,479 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
-    <title>F9XR | Crypto & Blockchain Developer</title>
-    <meta name="description" content="Welcome to the personal landing page of F9XR, a Crypto & Blockchain Lover. Explore my projects, articles, and get in touch.">
-    <meta name="keywords" content="F9XR, TTEarnCrypto, Crypto, Blockchain, Developer, Open Source, Web3">
-    <meta name="author" content="F9XR">
-
-    <!-- Google Fonts -->
+    <!-- Primary Meta Tags -->
+    <title>F9XR Team | Digital Agency & Web Development Experts</title>
+    <meta name="title" content="F9XR Team | Digital Agency & Web Development Experts">
+    <meta name="description" content="F9XR Team provides premium web design, SEO, and digital maintenance for local Indian businesses, coaches, and NGOs. Starting from ₹8,000.">
+    <meta name="keywords" content="F9XR, Web Development India, Digital Agency, Business Landing Pages, WordPress Maintenance, SEO India">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://f9xr.team/">
+    <meta property="og:title" content="F9XR Team | Scale Your Digital Presence">
+    <meta property="og:description" content="High-performance websites and digital solutions tailored for Indian small businesses.">
+    
+    <!-- Google Fonts: Montserrat with swap for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'stone-brown': '#544b3d',
+                        'deep-teal': '#4e6e58',
+                        'jungle-teal': '#4c8577',
+                        'pearl-aqua': '#a6ece0',
+                        'aquamarine': '#7adfbb',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 
     <style>
-        /* --- CSS --- */
-        
-        /* 1. Root & Base Styles */
-        :root {
-            --primary-color: #FFFFFF;
-            --secondary-color: #000000;
-            --background-color: #0a0a0a;
-            --card-background: rgba(255, 255, 255, 0.05);
-            --card-border: rgba(255, 255, 255, 0.1);
-            --accent-color-1: #00f2a1;
-            --accent-color-2: #ff4d4d;
-            --text-muted: #a0a0a0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        /* Custom Smooth Utilities */
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--background-color);
-            color: var(--primary-color);
-            line-height: 1.6;
-            overflow-x: hidden;
-            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcfdfd;
+            font-display: swap;
         }
 
-        /* 2. Background SVGs (Advanced Feature) */
-        .background-shapes {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
+        .glass-header {
+            background: rgba(84, 75, 61, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .background-shapes svg {
-            position: absolute;
-            opacity: 0.15;
-            animation: rotate 60s linear infinite;
+        .hero-gradient {
+            background: linear-gradient(135deg, #544b3d 0%, #4e6e58 100%);
         }
 
-        .background-shapes svg:nth-child(1) {
-            top: 10%;
-            left: 10%;
-            width: 200px;
-            height: 200px;
-            animation-duration: 50s;
-        }
-        
-        .background-shapes svg:nth-child(2) {
-            bottom: 15%;
-            right: 5%;
-            width: 300px;
-            height: 300px;
-            animation-duration: 70s;
-            animation-direction: reverse;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        /* 3. Layout & Container */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        /* 4. General UI Elements */
-        section {
-            padding: 4rem 0;
-            border-bottom: 1px solid var(--card-border);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            font-weight: 600;
-        }
-
-        .glass-card {
-            background: var(--card-background);
-            border: 1px solid var(--card-border);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.8rem;
-            border: 1px solid var(--accent-color-1);
-            color: var(--accent-color-1);
-            background: transparent;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-color-1);
-            color: var(--secondary-color);
-        }
-
-        /* 5. Header / Hero Section */
-        #hero {
-            text-align: center;
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        #hero h1 .wave {
-            display: inline-block;
-            animation: wave-animation 2.5s infinite;
-            transform-origin: 70% 70%;
-        }
-
-        @keyframes wave-animation {
-            0% { transform: rotate(0.0deg) }
-            10% { transform: rotate(14.0deg) }
-            20% { transform: rotate(-8.0deg) }
-            30% { transform: rotate(14.0deg) }
-            40% { transform: rotate(-4.0deg) }
-            50% { transform: rotate(10.0deg) }
-            60% { transform: rotate(0.0deg) }
-            100% { transform: rotate(0.0deg) }
-        }
-
-        #hero .subtitle {
-            font-size: 1.5rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .social-links a {
-            color: var(--primary-color);
-            font-size: 1.8rem;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            color: var(--accent-color-1);
-            transform: scale(1.2);
-        }
-
-        /* 6. Links Section */
-        #links .links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .link-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .link-card i {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--accent-color-1);
-        }
-
-        .link-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .link-card p {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        /* 7. Crypto Tool Section */
-        #tool .tool-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: flex-start;
-        }
-        
-        #crypto-calculator-form .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        #crypto-calculator-form label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        
-        #crypto-calculator-form input {
-            width: 100%;
-            padding: 0.8rem;
-            background: rgba(0,0,0,0.2);
-            border: 1px solid var(--card-border);
-            border-radius: 8px;
-            color: var(--primary-color);
-            font-size: 1rem;
-        }
-
-        .form-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .btn-secondary {
-            border-color: var(--text-muted);
-            color: var(--text-muted);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--text-muted);
-            color: var(--secondary-color);
-        }
-
-        #result-container {
-            padding: 2rem;
-            border-left: 3px solid var(--accent-color-1);
-            display: none; /* Initially hidden */
-        }
-
-        #result-container h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .result-highlight {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .result-highlight.profit { color: var(--accent-color-1); }
-        .result-highlight.loss { color: var(--accent-color-2); }
-        .result-highlight.even { color: var(--text-muted); }
-
-        .calculation-guide p {
-            margin-bottom: 0.5rem;
-            color: var(--text-muted);
-        }
-        
-        .calculation-guide code {
-            background: rgba(0,0,0,0.3);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-        
-        /* 8. FAQ Section */
-        .faq-item {
-            border-bottom: 1px solid var(--card-border);
-            padding: 1.5rem 0;
-        }
-
-        .faq-item summary {
-            font-size: 1.2rem;
-            font-weight: 600;
-            cursor: pointer;
-            list-style: none; /* Removes default triangle */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-item summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .faq-item summary::after {
-            content: '\f078'; /* Font Awesome down arrow */
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item[open] summary::after {
-            transform: rotate(180deg);
-        }
-
-        .faq-item .faq-content {
-            padding-top: 1rem;
-            color: var(--text-muted);
-        }
-
-        /* 9. Open Source & Footer */
-        #opensource {
-            text-align: center;
-            border-bottom: none;
-        }
-        
-        #opensource p {
-            font-size: 1.1rem;
-        }
-
-        #opensource a {
-            color: var(--accent-color-1);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--card-border);
-        }
-        
-        /* 10. Scroll Animations (Advanced Feature) */
-        .fade-in {
+        .reveal {
             opacity: 0;
             transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transition: all 0.8s ease-out;
         }
 
-        .fade-in.visible {
+        .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
-        
-        /* 11. Responsiveness */
-        @media (max-width: 900px) {
-            #tool .tool-container {
-                grid-template-columns: 1fr;
-            }
-            #result-container {
-                border-left: none;
-                border-top: 3px solid var(--accent-color-1);
-            }
+
+        .floating-pill {
+            border-radius: 50px;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
         }
-        
-        @media (max-width: 768px) {
-            #hero h1 {
-                font-size: 2.5rem;
-            }
-            #hero .subtitle {
-                font-size: 1.2rem;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
+
+        /* Prevent Layout Shift */
+        .img-placeholder {
+            aspect-ratio: 16/9;
+            background-color: #e5e7eb;
         }
+
+        summary::-webkit-details-marker { display: none; }
     </style>
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "F9XR Team",
+      "image": "https://f9xr.team/logo.png",
+      "description": "Digital Agency providing high-quality web development and SEO services.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "India",
+        "addressCountry": "IN"
+      },
+      "priceRange": "INR 8000 - 30000"
+    }
+    </script>
 </head>
-<body>
+<body class="text-stone-brown">
 
-    <!-- Animated Background SVGs -->
-    <div class="background-shapes">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#00F2A1" d="M48.2,-58.3C61.4,-47.3,70.3,-31.1,74.5,-13.4C78.7,4.3,78.2,23.6,69.5,39.1C60.8,54.6,43.9,66.3,26.4,72.6C8.9,78.9,-9.2,79.8,-26.6,74.2C-44,68.6,-60.7,56.5,-69.3,40.7C-77.9,24.9,-78.4,5.4,-72.7,-11.9C-67,-29.2,-55.1,-44.3,-41.4,-54.6C-27.7,-64.9,-13.9,-70.4,1.8,-72.2C17.5,-74.1,35,-71.4,48.2,-58.3Z" transform="translate(100 100)" />
-        </svg>
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#FFFFFF" d="M48.8,-53.9C61.5,-40.1,68.9,-20.1,68.8,-0.2C68.8,19.6,61.4,39.2,48,51.8C34.6,64.4,15.2,70,-4.5,71.1C-24.2,72.1,-48.5,68.6,-60,54.4C-71.5,40.2,-70.3,15.3,-64.1,-6.6C-57.9,-28.5,-46.8,-47.3,-32.4,-59.5C-18,-71.7,-0.3,-77.3,16.7,-72.1C33.7,-66.9,50.1,-50.9,48.8,-53.9Z" transform="translate(100 100)" />
-        </svg>
-    </div>
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" aria-label="Back to Top" class="fixed bottom-8 right-8 z-50 bg-aquamarine text-stone-brown w-12 h-12 rounded-full shadow-lg opacity-0 transition-opacity duration-300 flex items-center justify-center hover:scale-110">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <div class="container">
-        <!-- Hero Section -->
-        <header id="hero" class="fade-in">
-            <h1>Hi <span class="wave">👋</span> There, I'm F9XR</h1>
-            <p class="subtitle">A Crypto & Blockchain Lover!</p>
-            <div class="social-links">
-                <a href="https://github.com/TTEarnCrypto" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://discord.gg/D6hAEEumtx" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fab fa-discord"></i></a>
-                <a href="https://bento.me/ttearncrypto" target="_blank" rel="noopener noreferrer" aria-label="Bento"><i class="fa-solid fa-link"></i></a>
-            </div>
-        </header>
-
-        <main>
-            <!-- Links Section -->
-            <section id="links">
-                <div class="links-grid">
-                    <div class="link-card fade-in">
-                        <i class="fas fa-briefcase"></i>
-                        <h3>My Work</h3>
-                        <p>Currently building and contributing at TTEarnCrypto. Check out our dashboards and tools.</p>
-                        <a href="https://ttearncrypto.github.io/dashboards/" class="btn" target="_blank" rel="noopener noreferrer">Visit TTEarnCrypto</a>
-                    </div>
-                    <div class="link-card fade-in">
-                        <i class="fas fa-comments"></i>
-                        <h3>Ask Me Anything</h3>
-                        <p>Have questions about crypto, blockchain, or my projects? Join the discussion on our forum.</p>
-                        <a href="https://ttearncrypto.webforum.club/" class="btn" target="_blank" rel="noopener noreferrer">Go to Forum</a>
-                    </div>
-                    <div class="link-card fade-in">
-                        <i class="fas fa-pen-nib"></i>
-                        <h3>My Articles</h3>
-                        <p>I regularly write articles about my journey and insights in the crypto space on my blog.</p>
-                        <a href="https://ttearncrypto.blogspot.com/" class="btn" target="_blank" rel="noopener noreferrer">Read My Blog</a>
-                    </div>
-                    <div class="link-card fade-in">
-                        <i class="fas fa-hand-holding-dollar"></i>
-                        <h3>Support Me</h3>
-                        <p>If you find my work valuable, consider supporting my open-source contributions.</p>
-                        <a href="https://ttearncrypto.blogspot.com/p/donate.html" class="btn" target="_blank" rel="noopener noreferrer">Donate Here</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Crypto Tool Section -->
-            <section id="tool" class="fade-in">
-                <h2 class="section-title">Crypto Profit & Loss Calculator</h2>
-                <div class="tool-container">
-                    <div class="calculator-form glass-card">
-                        <h3>Enter Your Trade Details</h3>
-                        <form id="crypto-calculator-form">
-                            <div class="form-group">
-                                <label for="initial-investment">Initial Investment (USD)</label>
-                                <input type="number" id="initial-investment" placeholder="e.g., 1000" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="final-value">Final Value (USD)</label>
-                                <input type="number" id="final-value" placeholder="e.g., 1500" required>
-                            </div>
-                            <div class="form-buttons">
-                                <button type="submit" class="btn">Calculate</button>
-                                <button type="button" id="reset-btn" class="btn btn-secondary">Reset</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="result-display">
-                        <div id="result-container" class="glass-card">
-                            <h3>Your Result</h3>
-                            <p id="result-text" class="result-highlight even">$0.00 (0.00%)</p>
-                            <div class="calculation-guide">
-                                <h4>How it's calculated:</h4>
-                                <p><strong>Profit/Loss:</strong> <code>Final Value - Initial Investment</code></p>
-                                <p><strong>Percentage:</strong> <code>(Profit/Loss / Initial Investment) * 100</code></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FAQ Section -->
-            <section id="faq" class="fade-in">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <div class="faq-container">
-                    <details class="faq-item">
-                        <summary>What kind of projects do you work on?</summary>
-                        <div class="faq-content">
-                            <p>I primarily focus on open-source projects in the crypto and blockchain space. This includes dashboards, educational tools, and community platforms. You can see all my public work on my <a href="https://github.com/TTEarnCrypto" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color-1);">GitHub profile</a>.</p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary>Which blockchain are you most excited about?</summary>
-                        <div class="faq-content">
-                            <p>While I'm interested in the entire ecosystem, I'm particularly excited about advancements in Layer 2 scaling solutions like Optimistic Rollups and ZK-Rollups, as they are crucial for making blockchain technology accessible to a mainstream audience.</p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary>How can I start learning about crypto development?</summary>
-                        <div class="faq-content">
-                            <p>A great starting point is learning Solidity for smart contracts (if you're into Ethereum) and JavaScript for building decentralized applications (dApps) using libraries like Ethers.js or Web3.js. There are many great free resources online like CryptoZombies and the official Ethereum documentation.</p>
-                        </div>
-                    </details>
-                </div>
-            </section>
-            
-            <!-- Open Source Section -->
-            <section id="opensource" class="fade-in">
-                <p>This landing page is fully open-source. <br> Feel free to explore the code, fork it, or contribute on <a href="https://github.com/f9xr/personal" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
-            </section>
-        </main>
+    <!-- FLOATING PILL HEADER -->
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl glass-header floating-pill px-6 py-3 flex items-center justify-between">
+        <a href="#" class="text-pearl-aqua font-bold text-xl tracking-tighter" aria-label="F9XR Home">F9XR<span class="text-aquamarine">TEAM</span></a>
         
-        <footer>
-            <p>&copy; 2023 F9XR. All Rights Reserved.</p>
-        </footer>
-    </div>
+        <ul class="hidden md:flex space-x-8 text-white text-sm font-semibold uppercase tracking-wider">
+            <li><a href="#services" class="hover:text-aquamarine transition-colors">Services</a></li>
+            <li><a href="#about" class="hover:text-aquamarine transition-colors">About</a></li>
+            <li><a href="#pricing" class="hover:text-aquamarine transition-colors">Pricing</a></li>
+            <li><a href="#faq" class="hover:text-aquamarine transition-colors">FAQ</a></li>
+        </ul>
+
+        <a href="#contact" class="bg-aquamarine text-stone-brown px-5 py-2 rounded-full text-sm font-bold hover:bg-white transition-all transform hover:-translate-y-1">GET STARTED</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-screen flex items-center hero-gradient text-white pt-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#grid)" />
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <span class="inline-block px-4 py-1 bg-jungle-teal rounded-full text-xs font-bold mb-6 tracking-widest text-pearl-aqua uppercase">Next Gen Digital Agency</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    WE BUILD AND <span class="text-aquamarine underline decoration-stone-brown">SCALE</span> YOUR PRODUCT.
+                </h1>
+                <p class="text-lg text-pearl-aqua/80 mb-10 max-w-lg leading-relaxed">
+                    Premium web development, high-converting landing pages, and smart SEO solutions for ambitious Indian businesses. 
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#services" class="bg-aquamarine text-stone-brown px-8 py-4 rounded-xl font-bold text-center hover:shadow-[0_0_20px_rgba(122,223,187,0.5)] transition-all">Explore Services</a>
+                    <a href="#contact" class="border-2 border-pearl-aqua text-pearl-aqua px-8 py-4 rounded-xl font-bold text-center hover:bg-pearl-aqua hover:text-stone-brown transition-all">Work With Us</a>
+                </div>
+            </div>
+            
+            <div class="hidden lg:block reveal">
+                <!-- Abstract UI Component -->
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <div class="flex space-x-2 mb-6">
+                        <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                        <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="h-4 bg-pearl-aqua/20 rounded-full w-3/4"></div>
+                        <div class="h-4 bg-pearl-aqua/10 rounded-full w-full"></div>
+                        <div class="h-4 bg-pearl-aqua/10 rounded-full w-5/6"></div>
+                        <div class="grid grid-cols-3 gap-4 mt-8">
+                            <div class="h-20 bg-aquamarine/40 rounded-xl"></div>
+                            <div class="h-20 bg-jungle-teal/40 rounded-xl"></div>
+                            <div class="h-20 bg-deep-teal/40 rounded-xl"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATS SECTION -->
+    <section class="py-16 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="reveal">
+                    <div class="text-4xl font-extrabold text-jungle-teal mb-2">50+</div>
+                    <p class="text-gray-500 text-sm uppercase font-bold tracking-widest">Projects Delivered</p>
+                </div>
+                <div class="reveal">
+                    <div class="text-4xl font-extrabold text-jungle-teal mb-2">₹8K+</div>
+                    <p class="text-gray-500 text-sm uppercase font-bold tracking-widest">Pricing Starts</p>
+                </div>
+                <div class="reveal">
+                    <div class="text-4xl font-extrabold text-jungle-teal mb-2">100%</div>
+                    <p class="text-gray-500 text-sm uppercase font-bold tracking-widest">Happy Clients</p>
+                </div>
+                <div class="reveal">
+                    <div class="text-4xl font-extrabold text-jungle-teal mb-2">24/7</div>
+                    <p class="text-gray-500 text-sm uppercase font-bold tracking-widest">Support Access</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                <div class="reveal">
+                    <h2 class="text-sm font-bold text-jungle-teal uppercase tracking-[0.2em] mb-4">Our Services</h2>
+                    <p class="text-4xl md:text-5xl font-extrabold">Excellence in every pixel.</p>
+                </div>
+                <div class="reveal">
+                    <p class="text-gray-500 max-w-sm text-right">Providing end-to-end digital solutions tailored for your business needs.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="reveal bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-aquamarine/30 group">
+                    <div class="w-14 h-14 bg-pearl-aqua/30 rounded-2xl flex items-center justify-center text-jungle-teal text-2xl mb-8 group-hover:bg-aquamarine group-hover:text-white transition-all">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-4 uppercase">Web Design</h3>
+                    <p class="text-gray-600 mb-6">Static & dynamic websites crafted with HTML, CSS, JS or modern CMS like WordPress.</p>
+                    <ul class="text-sm space-y-2 text-gray-500 font-medium">
+                        <li><i class="fas fa-check text-aquamarine mr-2"></i> Custom Landing Pages</li>
+                        <li><i class="fas fa-check text-aquamarine mr-2"></i> UI/UX Improvements</li>
+                    </ul>
+                </div>
+                <!-- Card 2 -->
+                <div class="reveal bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-aquamarine/30 group">
+                    <div class="w-14 h-14 bg-pearl-aqua/30 rounded-2xl flex items-center justify-center text-jungle-teal text-2xl mb-8 group-hover:bg-aquamarine group-hover:text-white transition-all">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-4 uppercase">SEO & Growth</h3>
+                    <p class="text-gray-600 mb-6">Optimizing your online presence to ensure you appear when local customers search.</p>
+                    <ul class="text-sm space-y-2 text-gray-500 font-medium">
+                        <li><i class="fas fa-check text-aquamarine mr-2"></i> Keyword Research</li>
+                        <li><i class="fas fa-check text-aquamarine mr-2"></i> Local Google Ranking</li>
+                    </ul>
+                </div>
+                <!-- Card 3 -->
+                <div class="reveal bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-aquamarine/30 group">
+                    <div class="w-14 h-14 bg-pearl-aqua/30 rounded-2xl flex items-center justify-center text-jungle-teal text-2xl mb-8 group-hover:bg-aquamarine group-hover:text-white transition-all">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-4 uppercase">Maintenance</h3>
+                    <p class="text-gray-600 mb-6">Monthly support to keep your site running smoothly, secure, and updated.</p>
+                    <ul class="text-sm space-y-2 text-gray-500 font-medium">
+                        <li><i class="fas fa-check text-aquamarine mr-2"></i> Security Audits</li>
+                        <li><i class="fas fa-check text-aquamarine mr-2"></i> Monthly Backups</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-stone-brown text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal relative">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-aquamarine/20 rounded-full blur-3xl"></div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Team Work" class="rounded-[2rem] shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div class="reveal">
+                    <h2 class="text-sm font-bold text-aquamarine uppercase tracking-[0.2em] mb-4">Who is F9XR Team?</h2>
+                    <h3 class="text-4xl font-extrabold mb-6 leading-tight">Empowering Indian Businesses in the Digital Age.</h3>
+                    <p class="text-pearl-aqua/80 mb-8 leading-relaxed">
+                        We are a specialized team of developers and strategists focused on helping local businesses, clinics, gyms, and coaches establish a high-quality online presence. We believe that technology shouldn't be complicated or expensive—it should just work.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-aquamarine w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center">
+                                <i class="fas fa-check text-stone-brown text-xs"></i>
+                            </div>
+                            <p class="font-bold">Transparent Project-Based Pricing</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-aquamarine w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center">
+                                <i class="fas fa-check text-stone-brown text-xs"></i>
+                            </div>
+                            <p class="font-bold">Focus on ROI & Lead Generation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="py-24">
+        <div class="container mx-auto px-6 text-center">
+            <div class="reveal mb-16">
+                <h2 class="text-sm font-bold text-jungle-teal uppercase tracking-[0.2em] mb-4">Investment</h2>
+                <h3 class="text-4xl font-extrabold">Simple & Transparent.</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Basic -->
+                <div class="reveal border border-gray-100 p-10 rounded-[3rem] bg-white transition-all hover:border-aquamarine">
+                    <h4 class="text-xl font-bold mb-2">Basic Business</h4>
+                    <div class="text-4xl font-extrabold mb-6 text-stone-brown">₹8,000<span class="text-sm text-gray-400 font-normal"> /once</span></div>
+                    <ul class="text-left space-y-4 text-gray-500 mb-10">
+                        <li><i class="fas fa-circle text-[8px] mr-2 text-aquamarine"></i> Single Page Landing</li>
+                        <li><i class="fas fa-circle text-[8px] mr-2 text-aquamarine"></i> Fully Responsive Design</li>
+                        <li><i class="fas fa-circle text-[8px] mr-2 text-aquamarine"></i> WhatsApp Integration</li>
+                        <li><i class="fas fa-circle text-[8px] mr-2 text-aquamarine"></i> SEO Ready</li>
+                    </ul>
+                    <a href="#" class="block w-full py-4 bg-gray-100 rounded-2xl font-bold hover:bg-stone-brown hover:text-white transition-colors">Select Plan</a>
+                </div>
+                <!-- Dynamic -->
+                <div class="reveal border-2 border-aquamarine p-10 rounded-[3rem] bg-white scale-105 shadow-xl relative">
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-aquamarine text-stone-brown px-6 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Most Popular</span>
+                    <h4 class="text-xl font-bold mb-2">Dynamic Website</h4>
+                    <div class="text-4xl font-extrabold mb-6 text-stone-brown">₹15,000<span class="text-sm text-gray-400 font-normal"> /once</span></div>
+                    <ul class="text-left space-y-4 text-gray-500 mb-10">
+                        <li><i class="fas fa-circle text-[8px] mr-2 text-aquamarine"></i> Multi-page Website</li>
+                        <li><i class="fas fa-circle text-[8px] mr-2 text-aquamarine"></i> CMS/Admin Dashboard</li>
+                        <li><i class="fas fa-circle text-[8px] mr-2 text-aquamarine"></i> Contact Forms & CRM</li>
+                        <li><i class="fas fa-circle text-[8px] mr-2 text-aquamarine"></i> Google Analytics Setup</li>
+                    </ul>
+                    <a href="#" class="block w-full py-4 bg-aquamarine text-stone-brown rounded-2xl font-bold hover:bg-stone-brown hover:text-white transition-colors shadow-lg">Choose Dynamic</a>
+                </div>
+                <!-- Maintenance -->
+                <div class="reveal border border-gray-100 p-10 rounded-[3rem] bg-white transition-all hover:border-aquamarine">
+                    <h4 class="text-xl font-bold mb-2">Maintenance</h4>
+                    <div class="text-4xl font-extrabold mb-6 text-stone-brown">₹1,500<span class="text-sm text-gray-400 font-normal"> /month</span></div>
+                    <ul class="text-left space-y-4 text-gray-500 mb-10">
+                        <li><i class="fas fa-circle text-[8px] mr-2 text-aquamarine"></i> Weekly Backups</li>
+                        <li><i class="fas fa-circle text-[8px] mr-2 text-aquamarine"></i> Hosting Management</li>
+                        <li><i class="fas fa-circle text-[8px] mr-2 text-aquamarine"></i> Security Updates</li>
+                        <li><i class="fas fa-circle text-[8px] mr-2 text-aquamarine"></i> Content Updates</li>
+                    </ul>
+                    <a href="#" class="block w-full py-4 bg-gray-100 rounded-2xl font-bold hover:bg-stone-brown hover:text-white transition-colors">Join Monthly</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="reveal text-center mb-16">
+                <h2 class="text-sm font-bold text-jungle-teal uppercase tracking-[0.2em] mb-4">FAQs</h2>
+                <h3 class="text-4xl font-extrabold">Common Questions.</h3>
+            </div>
+
+            <div class="space-y-4">
+                <details class="reveal bg-white rounded-2xl shadow-sm border border-gray-100 group">
+                    <summary class="p-6 cursor-pointer font-bold text-lg flex justify-between items-center list-none">
+                        How long does it take to build a website?
+                        <i class="fas fa-chevron-down text-aquamarine transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-500">
+                        Standard landing pages take 5-7 business days. Dynamic websites typically take 14-21 days depending on complexity and content requirements.
+                    </div>
+                </details>
+                <details class="reveal bg-white rounded-2xl shadow-sm border border-gray-100 group">
+                    <summary class="p-6 cursor-pointer font-bold text-lg flex justify-between items-center list-none">
+                        Do I have to pay for hosting and domain?
+                        <i class="fas fa-chevron-down text-aquamarine transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-500">
+                        Yes, domain and hosting are separate costs (typically ₹3,000 - ₹5,000/year). We assist you in setting up with providers like Hostinger or AWS Lightsail.
+                    </div>
+                </details>
+                <details class="reveal bg-white rounded-2xl shadow-sm border border-gray-100 group">
+                    <summary class="p-6 cursor-pointer font-bold text-lg flex justify-between items-center list-none">
+                        Will my website be mobile-friendly?
+                        <i class="fas fa-chevron-down text-aquamarine transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-500">
+                        100%. We follow a mobile-first approach. Your site will look perfect on everything from high-end desktops to entry-level smartphones.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-stone-brown text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-12 mb-12">
+                <div class="lg:col-span-2">
+                    <a href="#" class="text-pearl-aqua font-bold text-3xl mb-6 inline-block">F9XR<span class="text-aquamarine">TEAM</span></a>
+                    <p class="text-pearl-aqua/60 max-w-sm mb-8">
+                        The F9XR Team is dedicated to building a better internet, one business at a time. High performance, beautifully designed.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Github" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-aquamarine hover:text-stone-brown transition-all"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-aquamarine hover:text-stone-brown transition-all"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-aquamarine hover:text-stone-brown transition-all"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold text-lg mb-6 text-aquamarine">Services</h5>
+                    <ul class="space-y-4 text-pearl-aqua/60 text-sm">
+                        <li><a href="#" class="hover:text-white">Web Design</a></li>
+                        <li><a href="#" class="hover:text-white">WordPress CMS</a></li>
+                        <li><a href="#" class="hover:text-white">Basic SEO</a></li>
+                        <li><a href="#" class="hover:text-white">Logo Branding</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold text-lg mb-6 text-aquamarine">Quick Links</h5>
+                    <ul class="space-y-4 text-pearl-aqua/60 text-sm">
+                        <li><a href="#about" class="hover:text-white">About Us</a></li>
+                        <li><a href="#pricing" class="hover:text-white">Pricing Plans</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-pearl-aqua/40 text-xs gap-4">
+                <p>&copy; 2024 F9XR Team. Built with passion in India.</p>
+                <div class="flex space-x-8">
+                    <span>Performance Optimized</span>
+                    <span>SEO Ready</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
-        // --- JavaScript ---
+        // 1. Reveal Animations on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
 
-        document.addEventListener('DOMContentLoaded', () => {
-
-            // Advanced Feature: Scroll Animations using Intersection Observer
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // Optional: stop observing after it's visible
-                    }
-                });
-            }, {
-                threshold: 0.1 // Trigger when 10% of the element is in view
-            });
-
-            const elementsToAnimate = document.querySelectorAll('.fade-in');
-            elementsToAnimate.forEach(el => observer.observe(el));
-
-
-            // Crypto Calculator Logic
-            const form = document.getElementById('crypto-calculator-form');
-            const resultContainer = document.getElementById('result-container');
-            const resultText = document.getElementById('result-text');
-            const initialInvestmentInput = document.getElementById('initial-investment');
-            const finalValueInput = document.getElementById('final-value');
-            const resetButton = document.getElementById('reset-btn');
-
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-
-                const initialInvestment = parseFloat(initialInvestmentInput.value);
-                const finalValue = parseFloat(finalValueInput.value);
-
-                if (isNaN(initialInvestment) || isNaN(finalValue) || initialInvestment <= 0) {
-                    alert('Please enter valid, positive numbers for both fields.');
-                    return;
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target); // Optimize: Only animate once
                 }
-
-                const profitLoss = finalValue - initialInvestment;
-                const percentageChange = (profitLoss / initialInvestment) * 100;
-                
-                const formatter = new Intl.NumberFormat('en-US', {
-                    style: 'currency',
-                    currency: 'USD'
-                });
-
-                resultText.textContent = `${formatter.format(profitLoss)} (${percentageChange.toFixed(2)}%)`;
-                
-                // Remove previous color classes
-                resultText.classList.remove('profit', 'loss', 'even');
-                
-                // Add new color class based on result
-                if (profitLoss > 0) {
-                    resultText.classList.add('profit');
-                } else if (profitLoss < 0) {
-                    resultText.classList.add('loss');
-                } else {
-                    resultText.classList.add('even');
-                }
-                
-                // Show the result container
-                resultContainer.style.display = 'block';
             });
+        }, observerOptions);
 
-            resetButton.addEventListener('click', () => {
-                form.reset();
-                resultContainer.style.display = 'none';
-                resultText.textContent = '$0.00 (0.00%)';
-                resultText.classList.remove('profit', 'loss');
-                resultText.classList.add('even');
-            });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // 2. Back to Top Logic
+        const bttBtn = document.getElementById('backToTop');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                bttBtn.classList.remove('opacity-0');
+                bttBtn.classList.add('opacity-100');
+            } else {
+                bttBtn.classList.remove('opacity-100');
+                bttBtn.classList.add('opacity-0');
+            }
+        };
+
+        bttBtn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        // 3. Simple Header Behavior
+        let lastScroll = 0;
+        const header = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 100) {
+                header.style.top = '10px';
+                header.style.width = '95%';
+            } else {
+                header.style.top = '24px';
+                header.style.width = '90%';
+            }
+            lastScroll = currentScroll;
         });
     </script>
 </body>
