@@ -1,481 +1,560 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F9XR Team | Performance-Driven Digital Agency & SEO Architects</title>
     
-    <!-- PRIMARY SEO -->
-    <title>F9XR Team | Premium Digital Agency & Web Development</title>
-    <meta name="description" content="F9XR Team crafts seamless digital experiences. Specializing in high-performance websites, UI/UX design, and SEO for businesses worldwide.">
-    <meta name="keywords" content="F9XR, Digital Agency India, Web Development, UI/UX Design, WordPress Maintenance, SEO Services, Business Landing Pages">
-    <meta name="author" content="F9XR Team">
-
-    <!-- OPEN GRAPH / SOCIAL -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://f9xr.com/">
-    <meta property="og:title" content="F9XR Team | Digital Excellence">
-    <meta property="og:description" content="Empowering companies to create compelling digital products that engage and delight customers.">
-    <meta property="og:image" content="https://f9xr.com/og-image.jpg">
-
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="F9XR Team designs high-performance, AI-powered websites. Specialized in Local SEO, Maintenance, and Growth for global brands and local businesses.">
+    <meta name="keywords" content="F9XR Team, AI Web Design, Local SEO, Business Growth, Web Maintenance, UI/UX Agency">
     
-    <!-- ICONS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- External Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
-    <!-- TAILWIND CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- SCHEMA MARKUP (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "F9XR Team",
-      "image": "https://f9xr.com/logo.png",
-      "description": "Digital agency providing premium web design, development, and SEO services.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "IN"
-      },
-      "priceRange": "₹8000 - ₹30000",
-      "url": "https://f9xr.com"
-    }
-    </script>
-
-    <style type="text/css">
-        /* BRAND COLORS & CONFIG */
+    <style>
         :root {
-            --frosted-mint: #d8f3dc;
-            --celadon: #b7e4c7;
-            --mint-leaf: #74c69d;
-            --mint-leaf-2: #52b788;
-            --sea-green: #40916c;
-            --dark-emerald: #2d6a4f;
-            --pine-teal: #1b4332;
-            --evergreen: #081c15;
+            --bright-snow: #f8f9fa;
+            --platinum: #e9ecef;
+            --alabaster-grey: #dee2e6;
+            --pale-slate: #ced4da;
+            --pale-slate-2: #adb5bd;
+            --slate-grey: #6c757d;
+            --iron-grey: #495057;
+            --gunmetal: #343a40;
+            --carbon-black: #212529;
+            --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--evergreen);
-            color: var(--frosted-mint);
-            font-display: swap;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--carbon-black);
+            color: var(--bright-snow);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* CUSTOM UTILITIES */
-        .glass-pill {
-            background: rgba(8, 28, 21, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(216, 243, 220, 0.1);
+        /* --- Global UI Components --- */
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 120px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        
+        .section-header { margin-bottom: 70px; max-width: 800px; }
+        .section-header h2 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -3px; line-height: 1; margin-bottom: 25px; font-weight: 800; }
+        .section-header p { color: var(--pale-slate-2); font-size: 1.2rem; font-weight: 400; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 12px;
+            padding: 18px 36px; border-radius: 100px; text-decoration: none;
+            font-weight: 700; transition: var(--transition); cursor: pointer; border: none; font-size: 1rem;
         }
+        .btn-primary { background: var(--bright-snow); color: var(--carbon-black); }
+        .btn-primary:hover { transform: translateY(-3px); background: var(--platinum); }
+        .btn-outline { border: 1px solid var(--iron-grey); color: var(--bright-snow); }
+        .btn-outline:hover { background: var(--iron-grey); }
 
-        .gradient-text {
-            background: linear-gradient(45deg, var(--mint-leaf), var(--frosted-mint));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .tagline { text-transform: uppercase; letter-spacing: 4px; color: var(--pale-slate-2); font-weight: 800; font-size: 0.8rem; display: block; margin-bottom: 15px; }
+
+        /* --- Header --- */
+        header { position: fixed; top: 25px; left: 50%; transform: translateX(-50%); z-index: 1000; width: 95%; max-width: 1100px; }
+        .nav-pill {
+            background: rgba(33, 37, 41, 0.85); backdrop-filter: blur(20px);
+            padding: 14px 40px; border-radius: 100px; display: flex; justify-content: space-between; align-items: center;
+            border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
+        .logo { font-weight: 800; font-size: 1.6rem; color: var(--bright-snow); text-decoration: none; letter-spacing: -1px; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--pale-slate); font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--bright-snow); }
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
+        /* --- Hero --- */
+        .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 150px; position: relative; }
+        .hero h1 { font-size: clamp(3.5rem, 9vw, 7.5rem); font-weight: 800; letter-spacing: -6px; line-height: 0.85; margin-bottom: 35px; }
+        .hero .accent { color: transparent; -webkit-text-stroke: 1px var(--bright-snow); }
+        .hero-sub { font-size: 1.4rem; color: var(--pale-slate); max-width: 800px; margin-bottom: 50px; }
 
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        /* --- Stats --- */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; padding: 50px; background: var(--gunmetal); border-radius: 40px; border: 1px solid var(--iron-grey); }
+        .stat-item h3 { font-size: 3rem; font-weight: 800; margin-bottom: 5px; }
+        .stat-item p { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: var(--pale-slate-2); font-weight: 700; }
 
-        .service-card:hover i {
-            transform: scale(1.2) rotate(10deg);
-            color: var(--frosted-mint);
-        }
+        /* --- Problems & Niches --- */
+        .problems-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .problem-card { background: var(--gunmetal); padding: 50px; border-radius: 40px; border: 1px solid var(--iron-grey); }
+        .problem-list { list-style: none; margin-top: 30px; }
+        .problem-list li { margin-bottom: 20px; display: flex; align-items: center; gap: 20px; font-size: 1.2rem; }
+        .problem-list i { color: #ff6b6b; font-size: 1.4rem; }
 
-        /* CUSTOM SCROLLBAR */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--evergreen); }
-        ::-webkit-scrollbar-thumb { background: var(--sea-green); border-radius: 10px; }
+        .niche-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .niche-item { background: var(--gunmetal); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid var(--iron-grey); transition: var(--transition); }
+        .niche-item:hover { border-color: var(--bright-snow); transform: translateY(-5px); }
+        .niche-item i { font-size: 2.5rem; margin-bottom: 15px; color: var(--pale-slate); display: block; }
 
-        #backToTop {
-            transition: all 0.3s ease;
-            display: none;
+        /* --- Services Deep Dive --- */
+        .services-bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .service-card { background: var(--gunmetal); padding: 45px; border-radius: 40px; border: 1px solid var(--iron-grey); transition: var(--transition); }
+        .service-card:hover { border-color: var(--bright-snow); background: #3d444b; }
+        .service-card i { font-size: 3rem; margin-bottom: 30px; color: var(--pale-slate); }
+        .service-card h3 { font-size: 1.8rem; margin-bottom: 20px; letter-spacing: -1px; }
+        .service-card.wide { grid-column: span 2; }
+        .deliverables { list-style: none; margin-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; }
+        .deliverables li { font-size: 0.95rem; color: var(--pale-slate-2); margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+        .deliverables i { font-size: 0.8rem; color: var(--bright-snow); margin: 0; }
+
+        /* --- Why Choose Us --- */
+        .why-box { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .why-points li { display: flex; gap: 20px; margin-bottom: 35px; list-style: none; }
+        .why-points i { font-size: 1.8rem; color: var(--bright-snow); }
+
+        /* --- Footer (Gretta Style) --- */
+        .footer-main { padding: 100px 0 60px; background: var(--carbon-black); color: var(--bright-snow); }
+        .footer-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 80px; flex-wrap: wrap; gap: 40px; }
+        .footer-logo { font-size: 4rem; font-weight: 800; letter-spacing: -4px; line-height: 1; }
+        .footer-cols { display: flex; gap: 80px; flex-wrap: wrap; }
+        .footer-col h4 { font-size: 0.9rem; color: var(--slate-grey); text-transform: uppercase; margin-bottom: 30px; letter-spacing: 2px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 15px; }
+        .footer-col a { color: var(--bright-snow); text-decoration: none; font-size: 1.1rem; font-weight: 500; transition: var(--transition); opacity: 0.8; }
+        .footer-col a:hover { opacity: 1; padding-left: 5px; }
+        
+        .kbd-guide { background: #1a1a1a; padding: 25px; border-radius: 20px; border: 1px solid var(--iron-grey); width: 280px; }
+        .kbd-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem; }
+        .key { background: var(--gunmetal); padding: 2px 8px; border-radius: 6px; font-weight: 800; border: 1px solid var(--iron-grey); }
+
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; color: var(--slate-grey); font-size: 0.9rem; }
+
+        /* --- FAQ --- */
+        .faq-box { max-width: 900px; margin: 0 auto; }
+        .faq-item { background: var(--gunmetal); border-radius: 20px; margin-bottom: 15px; border: 1px solid var(--iron-grey); overflow: hidden; }
+        .faq-trigger { padding: 25px 35px; cursor: pointer; display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem; }
+        .faq-content { padding: 0 35px; max-height: 0; overflow: hidden; transition: var(--transition); color: var(--pale-slate-2); }
+
+        /* --- Utility --- */
+        #backToTop { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: var(--bright-snow); color: var(--carbon-black); border-radius: 50%; display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; border: none; font-size: 1.5rem; }
+        .reader-tool { position: fixed; bottom: 30px; left: 30px; z-index: 1000; }
+        .reader-btn { padding: 12px 25px; background: var(--gunmetal); border: 1px solid var(--iron-grey); color: var(--bright-snow); border-radius: 100px; cursor: pointer; font-size: 0.8rem; font-weight: 700; }
+        
+        /* Toast Feedback */
+        #toast { position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); background: var(--bright-snow); color: var(--carbon-black); padding: 12px 30px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; display: none; z-index: 2000; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+        @media (max-width: 992px) {
+            .problems-grid, .services-bento, .why-box, .hero { grid-template-columns: 1fr; text-align: center; }
+            .service-card.wide { grid-column: span 1; }
+            .footer-top { flex-direction: column; }
+            .footer-logo { font-size: 3rem; }
+            .nav-links { display: none; }
         }
     </style>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        mint: {
-                            50: '#d8f3dc',
-                            100: '#b7e4c7',
-                            200: '#95d5b2',
-                            300: '#74c69d',
-                            400: '#52b788',
-                            500: '#40916c',
-                            600: '#2d6a4f',
-                            700: '#1b4332',
-                            800: '#081c15',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
-<body class="overflow-x-hidden">
+<body>
 
-    <!-- FLOATING PILL HEADER -->
-    <header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] md:w-auto">
-        <nav class="glass-pill px-6 py-3 rounded-full flex items-center justify-between md:gap-12 shadow-2xl">
-            <a href="#" class="text-xl font-extrabold tracking-tighter text-mint-50 flex items-center gap-2" aria-label="F9XR Home">
-                <span class="bg-mint-400 text-mint-800 px-2 py-1 rounded-md text-sm">F9XR</span>
-                <span class="hidden sm:inline">TEAM</span>
-            </a>
-            
-            <ul class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-mint-100">
-                <li><a href="#services" class="hover:text-mint-400 transition-colors">Services</a></li>
-                <li><a href="#about" class="hover:text-mint-400 transition-colors">About</a></li>
-                <li><a href="#pricing" class="hover:text-mint-400 transition-colors">Pricing</a></li>
-                <li><a href="#faq" class="hover:text-mint-400 transition-colors">FAQ</a></li>
-            </ul>
+    <div id="toast">Copied to clipboard!</div>
+    <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+    <div class="reader-tool">
+        <button class="reader-btn" id="ttsToggle"><i class="fas fa-volume-up"></i> Voice Mode</button>
+    </div>
 
-            <a href="#contact" class="bg-mint-400 hover:bg-mint-300 text-mint-800 px-5 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105" aria-label="Contact Us">
-                LET'S TALK
-            </a>
+    <header>
+        <nav class="nav-pill">
+            <a href="#" class="logo">F9XR <span style="font-weight: 300;">TEAM</span></a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-primary" style="padding: 10px 25px; font-size: 0.85rem;">Free Audit</a>
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative min-height-[100vh] pt-40 pb-20 px-6 flex flex-col items-center justify-center text-center">
-        <!-- Background SVGs -->
-        <div class="absolute inset-0 -z-10 overflow-hidden">
-            <svg class="absolute top-0 left-0 opacity-20" width="400" height="400" viewBox="0 0 400 400" fill="none">
-                <circle cx="200" cy="200" r="150" stroke="url(#paint0_linear)" stroke-width="2" />
-                <defs>
-                    <linearGradient id="paint0_linear" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#52b788" />
-                        <stop offset="1" stop-color="#081c15" />
-                    </linearGradient>
-                </defs>
-            </svg>
-        </div>
-
-        <div class="max-w-4xl mx-auto reveal">
-            <span class="px-4 py-2 rounded-full border border-mint-500/30 text-mint-300 text-xs font-bold tracking-widest uppercase mb-6 inline-block">
-                Global Digital Agency
-            </span>
-            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
-                Crafting <span class="gradient-text">Intuitive Experiences</span> for the Digital Age
-            </h1>
-            <p class="text-lg md:text-xl text-mint-100/80 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-                We empower businesses worldwide to create compelling digital products that engage, delight, and scale. Your vision, our technical expertise.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#services" class="bg-mint-400 text-mint-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-mint-300 transition-all shadow-lg shadow-mint-500/20" aria-label="Explore Services">
-                    Explore Services
-                </a>
-                <a href="#about" class="border border-mint-500/50 text-mint-50 px-8 py-4 rounded-xl font-bold text-lg hover:bg-mint-500/10 transition-all" aria-label="Learn More About Us">
-                    Learn More
-                </a>
-            </div>
-        </div>
-
-        <!-- STATS SECTION -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 w-full max-w-5xl reveal">
-            <div class="p-6">
-                <div class="text-4xl font-bold text-mint-400 mb-1">50+</div>
-                <div class="text-sm uppercase tracking-tighter text-mint-200/60">Projects Delivered</div>
-            </div>
-            <div class="p-6">
-                <div class="text-4xl font-bold text-mint-400 mb-1">98%</div>
-                <div class="text-sm uppercase tracking-tighter text-mint-200/60">Client Satisfaction</div>
-            </div>
-            <div class="p-6">
-                <div class="text-4xl font-bold text-mint-400 mb-1">12+</div>
-                <div class="text-sm uppercase tracking-tighter text-mint-200/60">Countries Served</div>
-            </div>
-            <div class="p-6">
-                <div class="text-4xl font-bold text-mint-400 mb-1">24/7</div>
-                <div class="text-sm uppercase tracking-tighter text-mint-200/60">Global Support</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section id="services" class="py-24 bg-mint-800/50 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Our Expertise</h2>
-                <p class="text-mint-200/70 max-w-xl mx-auto">From static landing pages to complex dynamic ecosystems, we build it all with precision.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="service-card group p-10 rounded-3xl bg-mint-800 border border-mint-700 hover:border-mint-400 transition-all reveal">
-                    <div class="w-16 h-16 bg-mint-700 rounded-2xl flex items-center justify-center mb-8 transition-transform">
-                        <i class="fas fa-laptop-code text-3xl text-mint-400"></i>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="reveal">
+                    <span class="tagline">Global Growth Studio</span>
+                    <h1>EMPOWERING <br> <span class="accent">BRANDS.</span></h1>
+                    <p class="hero-sub">We design and develop high-performance, AI-powered websites that drive growth, engagement, and measurable success for brands worldwide.</p>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <a href="#contact" class="btn btn-primary">Get Free Website Audit</a>
+                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Chat with Us</a>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Web Development</h3>
-                    <p class="text-mint-100/60 mb-6">High-performance static and dynamic websites using HTML, CSS, JS, or modern frameworks.</p>
-                    <ul class="text-sm space-y-2 text-mint-200/80">
-                        <li><i class="fas fa-check text-mint-400 mr-2"></i> Responsive Layouts</li>
-                        <li><i class="fas fa-check text-mint-400 mr-2"></i> Clean Architecture</li>
-                    </ul>
+                    <span style="display: block; margin-top: 20px; color: var(--pale-slate-2); font-size: 0.9rem;">⚡ Free demo website before you decide</span>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="service-card group p-10 rounded-3xl bg-mint-800 border border-mint-700 hover:border-mint-400 transition-all reveal">
-                    <div class="w-16 h-16 bg-mint-700 rounded-2xl flex items-center justify-center mb-8 transition-transform">
-                        <i class="fab fa-wordpress text-3xl text-mint-400"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">CMS Solutions</h3>
-                    <p class="text-mint-100/60 mb-6">Expert WordPress development and maintenance tailored for businesses going online.</p>
-                    <ul class="text-sm space-y-2 text-mint-200/80">
-                        <li><i class="fas fa-check text-mint-400 mr-2"></i> Custom Themes</li>
-                        <li><i class="fas fa-check text-mint-400 mr-2"></i> Security Hardening</li>
-                    </ul>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="service-card group p-10 rounded-3xl bg-mint-800 border border-mint-700 hover:border-mint-400 transition-all reveal">
-                    <div class="w-16 h-16 bg-mint-700 rounded-2xl flex items-center justify-center mb-8 transition-transform">
-                        <i class="fas fa-magnifying-glass-chart text-3xl text-mint-400"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">SEO & Optimization</h3>
-                    <p class="text-mint-100/60 mb-6">Boosting your visibility with basic SEO setup, speed optimization, and UI improvements.</p>
-                    <ul class="text-sm space-y-2 text-mint-200/80">
-                        <li><i class="fas fa-check text-mint-400 mr-2"></i> On-Page SEO</li>
-                        <li><i class="fas fa-check text-mint-400 mr-2"></i> Fast Loading Times</li>
-                    </ul>
+                <div class="stats-grid reveal" style="margin-top: 80px;">
+                    <div class="stat-item"><h3>150+</h3><p>Global Projects</p></div>
+                    <div class="stat-item"><h3>$20M+</h3><p>Revenue Managed</p></div>
+                    <div class="stat-item"><h3>98%</h3><p>Retention Rate</p></div>
+                    <div class="stat-item"><h3>24/7</h3><p>Priority Care</p></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ABOUT US SECTION -->
-    <section id="about" class="py-24 px-6 overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="relative reveal">
-                <div class="absolute -top-10 -left-10 w-64 h-64 bg-mint-400/10 rounded-full blur-3xl"></div>
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team working" class="rounded-3xl shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700">
-                <div class="absolute -bottom-6 -right-6 bg-mint-400 p-8 rounded-2xl z-20 hidden md:block">
-                    <p class="text-mint-900 font-bold text-xl italic">"User-centric design at our core."</p>
-                </div>
-            </div>
-            <div class="reveal">
-                <h2 class="text-4xl font-bold mb-6">What is F9XR Team?</h2>
-                <p class="text-mint-100/70 mb-6 leading-relaxed">
-                    We offer a range of design and development services tailored to each client's specific needs. We take a user-centric design approach and use the latest technologies to ensure products are functional, visually appealing, and scalable.
-                </p>
-                <div class="space-y-4 mb-8">
-                    <div class="flex items-start gap-4">
-                        <div class="mt-1 bg-mint-400/20 p-2 rounded-lg"><i class="fas fa-shield-halved text-mint-400"></i></div>
-                        <div>
-                            <h4 class="font-bold">Security First</h4>
-                            <p class="text-sm text-mint-200/60">Robust development practices ensuring your data stays safe.</p>
+        <!-- Problem Section -->
+        <section id="problems">
+            <div class="container">
+                <div class="problems-grid">
+                    <div class="reveal">
+                        <div class="section-header">
+                            <span class="tagline">Solutions</span>
+                            <h2>Is Your Business Facing These Problems?</h2>
+                            <p>Clients buy solutions, not just services. We identify the gaps costing you money.</p>
+                        </div>
+                        <div class="problem-card">
+                            <ul class="problem-list">
+                                <li><i class="fas fa-times-circle"></i> Outdated or missing website</li>
+                                <li><i class="fas fa-times-circle"></i> Low Google visibility & maps ranking</li>
+                                <li><i class="fas fa-times-circle"></i> Losing leads to local competitors</li>
+                                <li><i class="fas fa-times-circle"></i> No automated online presence</li>
+                            </ul>
+                            <p style="margin-top: 30px; font-weight: 700;">F9XR Team fixes all of this — simply & affordably.</p>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4">
-                        <div class="mt-1 bg-mint-400/20 p-2 rounded-lg"><i class="fas fa-bolt text-mint-400"></i></div>
-                        <div>
-                            <h4 class="font-bold">Extreme Performance</h4>
-                            <p class="text-sm text-mint-200/60">Optimized code that loads in the blink of an eye.</p>
+                    <div class="reveal">
+                        <div class="section-header">
+                            <span class="tagline">Niches</span>
+                            <h2>Who We Work With</h2>
+                        </div>
+                        <div class="niche-grid">
+                            <div class="niche-item"><i class="fas fa-spa"></i><h4>Salons</h4></div>
+                            <div class="niche-item"><i class="fas fa-user-md"></i><h4>Clinics</h4></div>
+                            <div class="niche-item"><i class="fas fa-dumbbell"></i><h4>Gyms</h4></div>
+                            <div class="niche-item"><i class="fas fa-handshake"></i><h4>Services</h4></div>
                         </div>
                     </div>
                 </div>
-                <a href="#contact" class="inline-block border-b-2 border-mint-400 pb-1 font-bold text-mint-400 hover:text-mint-200 hover:border-mint-200 transition-all">Work with us &rarr;</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- PRICING SECTION -->
-    <section id="pricing" class="py-24 bg-mint-900 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Transparent Pricing</h2>
-                <p class="text-mint-200/70">Quality digital solutions at competitive project-based rates.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Basic -->
-                <div class="p-8 rounded-3xl border border-mint-700 bg-mint-800/30 flex flex-col reveal">
-                    <h3 class="text-xl font-bold mb-2">Basic Business</h3>
-                    <div class="text-4xl font-extrabold mb-6">₹8,000 <span class="text-lg text-mint-400/60 font-medium">+</span></div>
-                    <ul class="space-y-4 mb-10 flex-grow text-sm">
-                        <li class="flex items-center gap-3 text-mint-100/70"><i class="fas fa-circle-check text-mint-400"></i> Professional Landing Page</li>
-                        <li class="flex items-center gap-3 text-mint-100/70"><i class="fas fa-circle-check text-mint-400"></i> Mobile Responsive</li>
-                        <li class="flex items-center gap-3 text-mint-100/70"><i class="fas fa-circle-check text-mint-400"></i> Basic SEO Setup</li>
-                    </ul>
-                    <a href="#contact" class="w-full py-3 rounded-xl border border-mint-400 text-center font-bold hover:bg-mint-400 hover:text-mint-900 transition-all">Get Started</a>
-                </div>
-
-                <!-- Dynamic -->
-                <div class="p-8 rounded-3xl border-2 border-mint-400 bg-mint-800 relative transform md:-translate-y-4 reveal">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-mint-400 text-mint-900 px-4 py-1 rounded-full text-xs font-bold uppercase">Most Popular</div>
-                    <h3 class="text-xl font-bold mb-2 text-mint-400">Dynamic Website</h3>
-                    <div class="text-4xl font-extrabold mb-6">₹15,000 <span class="text-lg text-mint-400/60 font-medium">+</span></div>
-                    <ul class="space-y-4 mb-10 flex-grow text-sm">
-                        <li class="flex items-center gap-3"><i class="fas fa-circle-check text-mint-400"></i> CMS / WordPress Integration</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-circle-check text-mint-400"></i> Advanced UI/UX Effects</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-circle-check text-mint-400"></i> Contact Form & Leads</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-circle-check text-mint-400"></i> Hosting Setup</li>
-                    </ul>
-                    <a href="#contact" class="w-full py-3 rounded-xl bg-mint-400 text-mint-900 text-center font-bold hover:bg-mint-300 transition-all shadow-lg shadow-mint-400/20">Enquire Now</a>
-                </div>
-
-                <!-- Maintenance -->
-                <div class="p-8 rounded-3xl border border-mint-700 bg-mint-800/30 flex flex-col reveal">
-                    <h3 class="text-xl font-bold mb-2">Maintenance</h3>
-                    <div class="text-4xl font-extrabold mb-6">₹1,500 <span class="text-lg text-mint-400/60 font-medium">/mo</span></div>
-                    <ul class="space-y-4 mb-10 flex-grow text-sm">
-                        <li class="flex items-center gap-3 text-mint-100/70"><i class="fas fa-circle-check text-mint-400"></i> Monthly Backups</li>
-                        <li class="flex items-center gap-3 text-mint-100/70"><i class="fas fa-circle-check text-mint-400"></i> Security Updates</li>
-                        <li class="flex items-center gap-3 text-mint-100/70"><i class="fas fa-circle-check text-mint-400"></i> Minor Content Edits</li>
-                    </ul>
-                    <a href="#contact" class="w-full py-3 rounded-xl border border-mint-400 text-center font-bold hover:bg-mint-400 hover:text-mint-900 transition-all">Learn More</a>
+        <!-- Who We Are -->
+        <section id="about">
+            <div class="container">
+                <div class="problems-grid">
+                    <div class="reveal">
+                        <div class="section-header">
+                            <span class="tagline">Who We Are</span>
+                            <h2>Architects of Digital Precision.</h2>
+                        </div>
+                        <p style="font-size: 1.2rem; margin-bottom: 30px; color: var(--pale-slate);">Serving worldwide businesses and influencers with high-performance, AI-driven web architectures.</p>
+                        <ul class="problem-list" style="margin-bottom: 40px;">
+                            <li><i class="fas fa-check-circle" style="color: var(--bright-snow);"></i> Monthly Care Packages</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--bright-snow);"></i> Results-Focused UI</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Our Full Process <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="reveal" style="height: 450px; background: var(--gunmetal); border-radius: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--iron-grey);">
+                        <i class="fas fa-cubes" style="font-size: 10rem; opacity: 0.1;"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ SECTION -->
-    <section id="faq" class="py-24 px-6 max-w-3xl mx-auto reveal">
-        <h2 class="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
-        <div class="space-y-4">
-            <details class="group p-6 rounded-2xl bg-mint-800/50 border border-mint-700 cursor-pointer transition-all hover:border-mint-400">
-                <summary class="flex justify-between items-center font-bold text-mint-100 list-none">
-                    How long does it take to build a website?
-                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-mint-200/60 text-sm leading-relaxed">
-                    A basic business site usually takes 7-10 business days. For more complex dynamic websites with custom requirements, it can take 3-5 weeks depending on the scope.
-                </p>
-            </details>
-            <details class="group p-6 rounded-2xl bg-mint-800/50 border border-mint-700 cursor-pointer transition-all hover:border-mint-400">
-                <summary class="flex justify-between items-center font-bold text-mint-100 list-none">
-                    Do you charge per hour or per project?
-                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-mint-200/60 text-sm leading-relaxed">
-                    We prefer project-based pricing. This ensures you know the total cost upfront without any hidden surprises. Maintenance is handled via a monthly retainer.
-                </p>
-            </details>
-            <details class="group p-6 rounded-2xl bg-mint-800/50 border border-mint-700 cursor-pointer transition-all hover:border-mint-400">
-                <summary class="flex justify-between items-center font-bold text-mint-100 list-none">
-                    Can you help local businesses move online?
-                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-mint-200/60 text-sm leading-relaxed">
-                    Absolutely! We specialize in helping clinics, gyms, salons, and consultants build their first digital presence to attract more local and global clients.
-                </p>
-            </details>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="py-24 px-6">
-        <div class="max-w-7xl mx-auto bg-gradient-to-br from-mint-700 to-evergreen rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden reveal">
-            <div class="relative z-10 max-w-2xl mx-auto">
-                <h2 class="text-4xl md:text-6xl font-bold mb-6 text-mint-50">Ready to start your digital journey?</h2>
-                <p class="text-mint-100/80 mb-10 text-lg">Contact F9XR Team today for a free consultation and quote.</p>
-                <form class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-                    <input type="text" placeholder="Full Name" class="bg-evergreen/50 border border-mint-500/30 p-4 rounded-xl focus:outline-none focus:border-mint-400" required aria-label="Name">
-                    <input type="email" placeholder="Email Address" class="bg-evergreen/50 border border-mint-500/30 p-4 rounded-xl focus:outline-none focus:border-mint-400" required aria-label="Email">
-                    <textarea placeholder="Tell us about your project" class="bg-evergreen/50 border border-mint-500/30 p-4 rounded-xl md:col-span-2 h-32 focus:outline-none focus:border-mint-400" required aria-label="Message"></textarea>
-                    <button type="submit" class="bg-mint-400 text-mint-900 py-4 rounded-xl font-bold md:col-span-2 hover:bg-mint-300 transition-all text-xl">Send Message</button>
-                </form>
+        <!-- Engineered for Excellence (Features) -->
+        <section id="features">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="tagline">Core Features</span>
+                    <h2>Engineered for Excellence.</h2>
+                </div>
+                <div class="stats-grid reveal">
+                    <div class="stat-item" style="text-align: left;"><i class="fas fa-bolt" style="font-size: 2rem; margin-bottom: 20px;"></i><h4>Performance First</h4><p>Sub-second loads.</p></div>
+                    <div class="stat-item" style="text-align: left;"><i class="fas fa-shield-alt" style="font-size: 2rem; margin-bottom: 20px;"></i><h4>Security & Backups</h4><p>Weekly off-site data.</p></div>
+                    <div class="stat-item" style="text-align: left;"><i class="fas fa-fingerprint" style="font-size: 2rem; margin-bottom: 20px;"></i><h4>Niche AI Logic</h4><p>Automated engagement.</p></div>
+                </div>
             </div>
-            <!-- Decorative circle -->
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-mint-400/10 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
-    <footer class="py-12 px-6 border-t border-mint-800">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-center md:text-left">
-                <div class="text-2xl font-black text-mint-50 mb-2">F9XR TEAM</div>
-                <p class="text-mint-200/40 text-sm max-w-xs">Building the future of digital interaction, one pixel at a time.</p>
+        <!-- Deep Dive Services Bento -->
+        <section id="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="tagline">Deep Dive</span>
+                    <h2>Our Services</h2>
+                    <p>Websites + Local SEO + Digital Marketing — built to grow your business, not just look good.</p>
+                </div>
+                <div class="services-bento">
+                    <div class="service-card wide reveal">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Business Websites (WordPress)</h3>
+                        <p>High-conversion WordPress architectures optimized for mobile and lead generation.</p>
+                        <ul class="deliverables">
+                            <li><i class="fas fa-check"></i> Google Search Console Setup</li>
+                            <li><i class="fas fa-check"></i> UI/UX Redesign & Improvement</li>
+                            <li><i class="fas fa-check"></i> Mobile Responsive Architecture</li>
+                        </ul>
+                    </div>
+                    <div class="service-card reveal">
+                        <i class="fas fa-search-dollar"></i>
+                        <h3>Local SEO & GMB</h3>
+                        <p>Dominate local searches and climb the Google Business maps.</p>
+                        <ul class="deliverables">
+                            <li><i class="fas fa-check"></i> Maps Setup & Management</li>
+                            <li><i class="fas fa-check"></i> Local Citation Building</li>
+                        </ul>
+                    </div>
+                    <div class="service-card reveal">
+                        <i class="fas fa-tools"></i>
+                        <h3>Monthly Maintenance</h3>
+                        <p>Total peace of mind with proactive technical care.</p>
+                        <ul class="deliverables">
+                            <li><i class="fas fa-check"></i> Weekly Automated Backups</li>
+                            <li><i class="fas fa-check"></i> Speed & SEO Enhancements</li>
+                            <li><i class="fas fa-check"></i> Security Patching</li>
+                        </ul>
+                    </div>
+                    <div class="service-card wide reveal">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <h3>Professional Infrastructure</h3>
+                        <p>Complete business communication and setup management.</p>
+                        <ul class="deliverables">
+                            <li><i class="fas fa-check"></i> Domain Registration & DNS Setup</li>
+                            <li><i class="fas fa-check"></i> Business Email (Workspace/Outlook)</li>
+                            <li><i class="fas fa-check"></i> Google Workspace Management</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            
-            <div class="flex gap-6">
-                <a href="#" class="w-12 h-12 rounded-full border border-mint-700 flex items-center justify-center hover:bg-mint-400 hover:text-mint-900 transition-all" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="w-12 h-12 rounded-full border border-mint-700 flex items-center justify-center hover:bg-mint-400 hover:text-mint-900 transition-all" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="w-12 h-12 rounded-full border border-mint-700 flex items-center justify-center hover:bg-mint-400 hover:text-mint-900 transition-all" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            </div>
+        </section>
 
-            <div class="text-sm text-mint-200/40">
-                &copy; <span id="year"></span> F9XR Team. All Rights Reserved.
+        <!-- Our Approach -->
+        <section id="approach">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="tagline">The Roadmap</span>
+                    <h2>Our Approach</h2>
+                </div>
+                <div class="services-bento">
+                    <div class="service-card reveal"><h3>01. Discover</h3><p>We analyze your business gaps and current audience bottlenecks.</p></div>
+                    <div class="service-card reveal"><h3>02. Design</h3><p>Creating result-focused UIs that convert visitors into paying clients.</p></div>
+                    <div class="service-card reveal"><h3>03. Execute</h3><p>Launching clean, SEO-optimized code with AI-powered engagement.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose F9XR Team? -->
+        <section id="why">
+            <div class="container">
+                <div class="why-box">
+                    <div class="reveal">
+                        <div class="section-header">
+                            <span class="tagline">The Advantage</span>
+                            <h2>Why Choose F9XR Team?</h2>
+                            <p>We grow with our clients — not just deliver and disappear.</p>
+                        </div>
+                        <ul class="why-points">
+                            <li><i class="fas fa-user-friends"></i> <div><h4>Personal Attention</h4><p>Small team, deep commitment. You talk directly to us.</p></div></li>
+                            <li><i class="fas fa-wallet"></i> <div><h4>Affordable Pricing</h4><p>Premium agency results at local business friendly rates.</p></div></li>
+                            <li><i class="fas fa-rocket"></i> <div><h4>Fast Delivery</h4><p>Ready to launch in 10-14 days with zero fluff.</p></div></li>
+                        </ul>
+                    </div>
+                    <div class="reveal">
+                        <div class="service-card" style="background: var(--bright-snow); color: var(--carbon-black); text-align: center;">
+                            <i class="fas fa-award" style="color: var(--carbon-black); font-size: 5rem;"></i>
+                            <h3 style="font-size: 2.5rem; margin: 20px 0;">Result-Focused</h3>
+                            <p style="color: var(--slate-grey);">We provide free guidance even after project delivery to ensure long-term ROI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="tagline">Case Studies</span>
+                    <h2>Featured Works</h2>
+                </div>
+                <div class="problems-grid" style="margin-bottom: 40px;">
+                    <a href="https://ttearncrypto.github.io/dashboards" target="_blank" class="niche-item reveal">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>TT Earn Crypto</h3>
+                        <p>Fintech Dashboard Architecture</p>
+                    </a>
+                    <a href="https://vroai.in" target="_blank" class="niche-item reveal">
+                        <i class="fas fa-brain"></i>
+                        <h3>VRO AI</h3>
+                        <p>AI Interface & Branding</p>
+                    </a>
+                </div>
+                <div style="text-align: center;"><a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-outline">Request Full Portfolio</a></div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="tagline">Reviews</span>
+                    <h2>What Our Clients Say</h2>
+                </div>
+                <div class="services-bento">
+                    <div class="service-card reveal">
+                        <div style="color:gold; margin-bottom: 20px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"F9XR Team fixed our clinic's local SEO. We are finally visible to people searching for doctors in our area. Incredible growth."</p>
+                        <h4 style="margin-top: 20px;">- Dr. Arshdeep</h4>
+                    </div>
+                    <div class="service-card reveal">
+                        <div style="color:gold; margin-bottom: 20px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"The best maintenance package I've ever had. Speed is insane and backups are automated. Peace of mind found."</p>
+                        <h4 style="margin-top: 20px;">- Sarah Jenkins</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="service-card reveal" style="max-width: 900px; margin: 0 auto; padding: 60px;">
+                    <div class="section-header" style="text-align: center; margin-inline: auto;">
+                        <h2>Start Your Audit</h2>
+                        <p>Contact us via your preferred method.</p>
+                    </div>
+                    
+                    <div id="emailZone" style="text-align: center; margin-bottom: 40px;">
+                        <h4 style="margin-bottom: 15px;">Official Email</h4>
+                        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                            <a href="mailto:tontufytservices@gmail.com" class="btn btn-primary">Mail To Us</a>
+                            <button onclick="copyEmail()" class="btn btn-outline">Copy Address <i class="fas fa-copy"></i></button>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <h4 style="margin-bottom: 15px;">Direct Chat</h4>
+                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-primary" style="background: #25D366; border: none; font-size: 1.2rem; width: 100%; justify-content: center;"><i class="fab fa-whatsapp"></i> WhatsApp Strategy Chat</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>FAQs</h2>
+                </div>
+                <div class="faq-box">
+                    <div class="faq-item reveal">
+                        <div class="faq-trigger">What is included in the demo? <i class="fas fa-plus"></i></div>
+                        <div class="faq-content"><p style="padding-bottom: 25px;">We create a single-page concept design specifically for your business so you can see the F9XR quality before signing any agreements.</p></div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <div class="faq-trigger">How much is Monthly Care? <i class="fas fa-plus"></i></div>
+                        <div class="faq-content"><p style="padding-bottom: 25px;">Pricing varies based on site complexity, but our base package covers backups, security, and minor updates at a flat monthly rate.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-main">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">F9XR Team</div>
+                <div class="footer-cols">
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#portfolio">Projects</a></li>
+                            <li><a href="#approach">Process</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Twitter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Shortcuts</h4>
+                        <div class="kbd-guide">
+                            <div class="kbd-row"><span>Home</span><span class="key">H</span></div>
+                            <div class="kbd-row"><span>Services</span><span class="key">S</span></div>
+                            <div class="kbd-row"><span>Work</span><span class="key">P</span></div>
+                            <div class="kbd-row"><span>Contact</span><span class="key">C</span></div>
+                            <div class="kbd-row"><span>Listen</span><span class="key">L</span></div>
+                            <div class="kbd-row"><span>Top</span><span class="key">T</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2025 F9XR Team. All rights reserved.</p>
+                <div style="display: flex; gap: 30px;">
+                    <a href="agreement.html" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+                    <a href="agreement.html" style="color: inherit; text-decoration: none;">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- BACK TO TOP -->
-    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-mint-400 text-mint-900 rounded-full shadow-2xl z-[60] flex items-center justify-center hover:-translate-y-2" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
     <script>
-        // Set Current Year
-        document.getElementById('year').textContent = new Date().getFullYear();
+        // --- Utilities ---
+        const btt = document.getElementById("backToTop");
+        window.onscroll = () => { btt.style.display = (window.scrollY > 600) ? "flex" : "none"; };
+        btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
 
-        // REVEAL ANIMATION ON SCROLL
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealOnScroll = () => {
-            const triggerBottom = window.innerHeight * 0.9;
-            revealElements.forEach(el => {
-                const elTop = el.getBoundingClientRect().top;
-                if (elTop < triggerBottom) {
-                    el.classList.add('active');
-                }
-            });
-        };
+        function copyEmail() {
+            navigator.clipboard.writeText('tontufytservices@gmail.com');
+            const toast = document.getElementById('toast');
+            toast.style.display = 'block';
+            setTimeout(() => { toast.style.display = 'none'; }, 2500);
+        }
 
-        // BACK TO TOP VISIBILITY
-        const bttButton = document.getElementById('backToTop');
-        const handleScroll = () => {
-            if (window.scrollY > 500) {
-                bttButton.style.display = 'flex';
-            } else {
-                bttButton.style.display = 'none';
+        // --- Voice Mode ---
+        let synth = window.speechSynthesis;
+        let reading = false;
+        function toggleVoice() {
+            if (reading) { synth.cancel(); reading = false; document.getElementById('ttsToggle').innerHTML = '<i class="fas fa-volume-up"></i> Voice Mode'; }
+            else { 
+                const utter = new SpeechSynthesisUtterance(document.body.innerText); 
+                utter.onend = () => { reading = false; document.getElementById('ttsToggle').innerHTML = '<i class="fas fa-volume-up"></i> Voice Mode'; };
+                synth.speak(utter); reading = true; document.getElementById('ttsToggle').innerHTML = '<i class="fas fa-stop"></i> Stop Voice';
             }
-            revealOnScroll();
-        };
+        }
+        document.getElementById('ttsToggle').onclick = toggleVoice;
 
-        bttButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        // --- Accordions ---
+        document.querySelectorAll('.faq-trigger').forEach(f => {
+            f.onclick = () => {
+                const c = f.nextElementSibling;
+                const i = f.querySelector('i');
+                if(c.style.maxHeight) { c.style.maxHeight = null; i.className = "fas fa-plus"; }
+                else { c.style.maxHeight = c.scrollHeight + "px"; i.className = "fas fa-minus"; }
+            };
         });
 
-        // OPTIMIZED SCROLL LISTENER (Debounced/Throttled)
-        let isScrolling;
-        window.addEventListener('scroll', () => {
-            window.clearTimeout(isScrolling);
-            isScrolling = setTimeout(handleScroll, 10);
-        }, false);
+        // --- Shortcuts ---
+        window.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            const k = e.key.toLowerCase();
+            const map = { 'h': '#home', 's': '#services', 'p': '#portfolio', 'c': '#contact' };
+            if (map[k]) { const target = document.querySelector(map[k]); window.scrollTo({top: target.offsetTop - 80, behavior: 'smooth'}); }
+            if (k === 'l') toggleVoice();
+            if (k === 't') window.scrollTo({top: 0, behavior: 'smooth'});
+        });
 
-        // INITIAL LOAD
-        window.onload = revealOnScroll;
-
-        // PREVENT FORCED REFLOW - Caching layout properties
-        let lastKnownScrollPosition = 0;
-        let ticking = false;
-        function doSomething(scrollPos) {
-          // Perform UI updates here without invalidating layout
-        }
-        window.addEventListener("scroll", (event) => {
-          lastKnownScrollPosition = window.scrollY;
-          if (!ticking) {
-            window.requestAnimationFrame(() => {
-              doSomething(lastKnownScrollPosition);
-              ticking = false;
-            });
-            ticking = true;
-          }
+        // --- Animations ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const obs = new IntersectionObserver((es) => {
+                es.forEach(e => {
+                    if (e.isIntersecting) {
+                        anime({ targets: e.target, translateY: [40, 0], opacity: [0, 1], duration: 1000, easing: 'easeOutExpo' });
+                        obs.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => { el.style.opacity = '0'; obs.observe(el); });
         });
     </script>
 </body>
