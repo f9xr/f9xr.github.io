@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- === PRIMARY SEO META TAGS === -->
+    <title>Service Agreement | F9XR Team - Digital Agency</title>
+    <meta name="title" content="Service Agreement | F9XR Team">
+    <meta name="description" content="Official Terms and Service Agreement for F9XR Team. Transparency, Trust, and professional digital services.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="F9XR Team">
+
+    <!-- === SCHEMA MARKUP === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "F9XR Team Service Agreement",
+      "publisher": {
+        "@type": "ProfessionalService",
+        "name": "F9XR Team",
+        "url": "https://f9xr.github.io/"
+      }
+    }
+    </script>
+
+    <!-- === FONTS & ICONS === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Montserrat with font-display: swap to prevent layout shifts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- === TAILWIND CONFIG === -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'carbon-black': '#212529',
+                        'bright-snow': '#f8f9fa',
+                        'platinum': '#e9ecef',
+                        'iron-grey': '#495057',
+                        'gunmetal': '#343a40',
+                        'accent-blue': '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        /* Performance: Prevent layout shifts */
+        @font-face { font-family: 'Montserrat'; font-display: swap; }
+        
+        body { background-color: #212529; -webkit-font-smoothing: antialiased; }
+
+        /* Custom Scroll Progress */
+        #progress-bar {
+            position: fixed; top: 0; left: 0; height: 3px;
+            background: linear-gradient(to right, #3b82f6, #f8f9fa);
+            z-index: 2000; width: 0%; transition: width 0.1s;
+        }
+
+        .glass-pill {
+            background: rgba(33, 37, 41, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .reveal { opacity: 0; transform: translateY(20px); }
+
+        /* Mobile Optimization for Clause Cards */
+        @media (max-width: 640px) {
+            .clause-card { padding: 1.5rem !important; }
+            h1 { font-size: 2.5rem !important; }
+        }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; color: black; }
+            .clause-card { border: 1px solid #eee; break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="text-bright-snow font-sans">
+
+    <div id="progress-bar"></div>
+
+    <!-- === FLOATING PILL HEADER === -->
+    <header class="fixed top-6 left-0 right-0 z-[1000] px-4 no-print">
+        <nav class="glass-pill max-w-4xl mx-auto rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
+            <a href="https://f9xr.github.io/" class="flex items-center gap-2 group">
+                <div class="bg-bright-snow text-carbon-black w-8 h-8 rounded-full flex items-center justify-center font-black text-xs transition-transform group-hover:rotate-12">F9</div>
+                <span class="text-lg font-black tracking-tighter uppercase">F9XR <span class="font-light opacity-60">Team</span></span>
+            </a>
+            <div class="hidden md:flex gap-6 font-bold text-[10px] tracking-[0.2em] uppercase">
+                <a href="#terms" class="hover:text-accent-blue transition-colors">Agreements</a>
+                <a href="#contact" class="hover:text-accent-blue transition-colors">Support</a>
+            </div>
+            <button onclick="window.print()" class="bg-accent-blue text-white px-5 py-2 rounded-full font-bold text-[10px] tracking-widest uppercase hover:scale-105 transition-transform flex items-center gap-2">
+                <i class="fas fa-file-pdf"></i> <span class="hidden sm:inline">Save PDF</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
+        
+        <!-- === HERO SECTION === -->
+        <section class="mb-20 reveal">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block">Official Service Agreement</span>
+            <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-tight">Legal <br> Understanding.</h1>
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 py-8 border-y border-white/10">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-gunmetal flex items-center justify-center">
+                        <i class="fas fa-calendar-alt text-accent-blue"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-iron-grey font-bold">Last Updated</p>
+                        <p id="current-date" class="font-bold text-lg">December 19, 2025</p>
+                    </div>
+                </div>
+                <p class="text-platinum/50 font-medium max-w-md">Transparency and Trust are our core values. This document ensures a professional workflow for both parties.</p>
+            </div>
+        </section>
+
+        <!-- === DOCUMENT BODY === -->
+        <div class="grid lg:grid-cols-3 gap-12">
+            
+            <!-- Sidebar Navigation (Desktop Only) -->
+            <aside class="hidden lg:block space-y-4 sticky top-32 h-fit no-print">
+                <h4 class="text-xs font-black uppercase tracking-widest text-iron-grey mb-6">Clauses</h4>
+                <nav class="flex flex-col gap-2">
+                    <a href="#s1" class="px-4 py-2 hover:bg-white/5 rounded-lg transition-all border-l-2 border-transparent hover:border-accent-blue font-semibold text-sm">01 Services Offered</a>
+                    <a href="#s3" class="px-4 py-2 hover:bg-white/5 rounded-lg transition-all border-l-2 border-transparent hover:border-accent-blue font-semibold text-sm">03 Payment Terms</a>
+                    <a href="#s7" class="px-4 py-2 hover:bg-white/5 rounded-lg transition-all border-l-2 border-transparent hover:border-accent-blue font-semibold text-sm">07 Website Ownership</a>
+                    <a href="#s10" class="px-4 py-2 hover:bg-white/5 rounded-lg transition-all border-l-2 border-transparent hover:border-accent-blue font-semibold text-sm">10 Limitation of Liability</a>
+                </nav>
+            </aside>
+
+            <!-- Clause Content -->
+            <div class="lg:col-span-2 space-y-8">
+                
+                <!-- Intro -->
+                <div class="clause-card bg-gunmetal/30 p-8 md:p-12 rounded-[2.5rem] border border-white/5 reveal">
+                    <h2 class="text-3xl font-black tracking-tighter mb-6">Introduction</h2>
+                    <p class="text-lg md:text-xl text-platinum/80 leading-relaxed mb-6">
+                        This Service Agreement (“Agreement”) outlines the terms and conditions under which <strong>F9XR Team</strong> provides web development and digital marketing services to its clients (“Client”, “You”).
+                    </p>
+                    <p class="text-lg md:text-xl text-platinum/80 leading-relaxed font-bold italic">
+                        By hiring our services, you agree to the terms mentioned below.
+                    </p>
+                </div>
+
+                <!-- 1. Services Offered -->
+                <div id="s1" class="clause-card bg-gunmetal/10 p-8 md:p-12 rounded-[2.5rem] border border-white/5 hover:border-accent-blue/20 transition-all reveal">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-4xl font-black text-white/10 italic">01</span>
+                        <h3 class="text-2xl font-black uppercase tracking-tighter">Services Offered</h3>
+                    </div>
+                    <ul class="grid md:grid-cols-2 gap-4 text-platinum/70 font-semibold text-lg">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Web Development</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> WordPress Development</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Landing Pages</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Local SEO Setup</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Social Management</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Technical Support</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Project Scope -->
+                <div id="s2" class="clause-card p-8 md:p-12 border-b border-white/10 reveal">
+                    <h3 class="text-xl font-black uppercase tracking-widest mb-6 flex items-center gap-4">
+                        <span class="w-8 h-[2px] bg-accent-blue"></span> 02 Project Scope
+                    </h3>
+                    <p class="text-lg text-platinum/70 leading-relaxed">The scope of work will be clearly defined before starting. Any additional features or changes requested after approval may be charged extra. Major changes require a revised timeline and cost.</p>
+                </div>
+
+                <!-- 3. Payment Terms -->
+                <div id="s3" class="clause-card p-8 md:p-12 border-b border-white/10 bg-accent-blue/5 rounded-3xl reveal">
+                    <h3 class="text-xl font-black uppercase tracking-widest mb-6">03 Payment Terms</h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <i class="fas fa-percentage text-accent-blue mt-1"></i>
+                            <p class="text-lg font-bold">50% Advance Required</p>
+                        </div>
+                        <p class="text-lg text-platinum/70 leading-relaxed">Remaining payment must be completed before final delivery or website launch. Payments once made are non-refundable.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Project Timeline -->
+                <div class="clause-card p-8 md:p-12 border-b border-white/10 reveal">
+                    <h3 class="text-xl font-black uppercase tracking-widest mb-6">04 Project Timeline</h3>
+                    <p class="text-lg text-platinum/70 leading-relaxed">Timelines are estimates and depend on timely input and approvals from the Client. Delays due to late responses may extend delivery timelines.</p>
+                </div>
+
+                <!-- 5. Client Responsibilities -->
+                <div class="clause-card p-8 md:p-12 border-b border-white/10 reveal">
+                    <h3 class="text-xl font-black uppercase tracking-widest mb-6 text-accent-blue">05 Client Responsibilities</h3>
+                    <p class="text-lg text-platinum/70 leading-relaxed mb-4">The Client agrees to provide accurate content and review work promptly. F9XR Team is not responsible for copyright issues related to client-provided content.</p>
+                </div>
+
+                <!-- 6. Revisions -->
+                <div class="clause-card p-8 md:p-12 border-b border-white/10 reveal">
+                    <h3 class="text-xl font-black uppercase tracking-widest mb-6">06 Revisions & Changes</h3>
+                    <p class="text-lg text-platinum/70 leading-relaxed italic">"Reasonable revisions are included. Excessive revisions or new features may be charged additionally."</p>
+                </div>
+
+                <!-- 7. Ownership -->
+                <div id="s7" class="clause-card bg-bright-snow text-carbon-black p-8 md:p-12 rounded-[2.5rem] reveal">
+                    <h3 class="text-2xl font-black uppercase tracking-tighter mb-4">07 Website Ownership</h3>
+                    <p class="text-xl font-bold leading-relaxed mb-6">Full ownership is transferred to the Client after full payment.</p>
+                    <p class="text-sm font-medium opacity-60 italic">F9XR Team reserves the right to showcase work in our portfolio unless requested otherwise.</p>
+                </div>
+
+                <!-- 8-9-10 (Grouped for readability) -->
+                <div class="space-y-12 py-10">
+                    <div class="reveal" id="s10">
+                        <h4 class="font-black text-sm uppercase tracking-[0.3em] text-iron-grey mb-4">08 - 10 Operational Bounds</h4>
+                        <div class="space-y-6 text-lg text-platinum/70">
+                            <p><strong>Support:</strong> Monthly maintenance plans are separate. Third-party issues (Hosting/Plugins) are not the liability of F9XR Team.</p>
+                            <p><strong>Liability:</strong> F9XR Team is not liable for loss of business, downtime, or consequential damages.</p>
+                        </div>
+                    </div>
+
+                    <!-- 11-12 Termination & Confidentiality -->
+                    <div class="grid md:grid-cols-2 gap-8 reveal">
+                        <div class="p-8 bg-white/5 rounded-3xl">
+                            <h5 class="font-black mb-4">11 Termination</h5>
+                            <p class="text-sm opacity-60">Either party may terminate with notice. Work completed must be paid for. Advance payments are non-refundable.</p>
+                        </div>
+                        <div class="p-8 bg-white/5 rounded-3xl">
+                            <h5 class="font-black mb-4">12 Confidentiality</h5>
+                            <p class="text-sm opacity-60">Both parties agree to keep all credentials and sensitive information confidential at all times.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13. Acceptance -->
+                <div id="acceptance" class="bg-accent-blue p-10 md:p-16 rounded-[3rem] reveal text-center">
+                    <h3 class="text-3xl md:text-5xl font-black tracking-tighter mb-6 italic">13 Agreement Acceptance</h3>
+                    <p class="text-xl font-bold mb-10 opacity-90">By proceeding with our services, the Client acknowledges that they have read, understood, and agreed to this Service Agreement.</p>
+                    <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="inline-block bg-carbon-black text-white px-10 py-5 rounded-full font-black text-lg hover:scale-105 transition-all no-print shadow-2xl">
+                        I AGREE & START PROJECT
+                    </a>
+                </div>
+
+                <p class="text-center text-iron-grey text-xs font-bold uppercase tracking-widest pt-10">
+                    This agreement is subject to change without prior notice.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- === FOOTER === -->
+    <footer id="contact" class="bg-zinc-950 pt-24 pb-12 px-6 border-t border-white/5 no-print">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-16 mb-16">
+                <div>
+                    <h3 class="text-4xl font-black mb-8 italic tracking-tighter uppercase">F9XR Team.</h3>
+                    <p class="text-lg text-platinum/40 leading-relaxed mb-8">Crafting high-performance digital products for local legends and global brands.</p>
+                </div>
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-black text-iron-grey mb-8">Contact Information</h4>
+                    <div class="space-y-4 font-bold">
+                        <a href="mailto:tontufytservices@gmail.com" class="block text-xl hover:text-accent-blue transition-colors">tontufytservices@gmail.com</a>
+                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="block text-xl hover:text-accent-blue transition-colors underline">WhatsApp Support</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-black text-iron-grey mb-8">Team</h4>
+                    <div class="flex gap-4">
+                        <a href="https://inakm.github.io" target="_blank" class="bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors">AKM</a>
+                        <a href="https://aryansh.site" target="_blank" class="bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors">Aryansh</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-iron-grey font-bold">&copy; 2025 F9XR Team. All rights reserved.</p>
+                <a href="https://github.com/f9xr/f9xr.github.io" class="text-xs font-black uppercase tracking-widest opacity-30 hover:opacity-100 transition-opacity">
+                    <i class="fab fa-github mr-2"></i> Open Source Repository
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === BACK TO TOP === -->
+    <button id="btt" class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-2xl no-print">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- === SCRIPTS === -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        // Update current date dynamically
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').innerText = new Date().toLocaleDateString('en-US', options);
+
+        // Scroll Progress
+        window.onscroll = () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+            
+            // Toggle BTT
+            const btt = document.getElementById('btt');
+            if (window.scrollY > 600) btt.classList.remove('hidden');
+            else btt.classList.add('hidden');
+        };
+
+        document.getElementById('btt').onclick = () => window.scrollTo({top:0, behavior:'smooth'});
+
+        // Animations: Optimized Reveal
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        anime({
+                            targets: entry.target,
+                            translateY: [30, 0],
+                            opacity: [0, 1],
+                            duration: 1200,
+                            easing: 'easeOutExpo'
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

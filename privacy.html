@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- === PRIMARY SEO META TAGS === -->
+    <title>Privacy & Policy | F9XR Team - Digital Agency</title>
+    <meta name="title" content="Privacy Policy | F9XR Team">
+    <meta name="description" content="Official Privacy Policy for F9XR Team. Learn how we collect, use, and safeguard your information to provide premium digital services.">
+    <meta name="author" content="F9XR Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- === OPEN GRAPH / FACEBOOK === -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://f9xr.github.io/privacy.html">
+    <meta property="og:title" content="Privacy Policy | F9XR Team">
+    <meta property="og:description" content="Transparency and Trust are our core values. Read our official Privacy Policy.">
+
+    <!-- === SCHEMA MARKUP (JSON-LD) === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PrivacyPolicy",
+      "name": "F9XR Team Privacy Policy",
+      "url": "https://f9xr.github.io/privacy.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "F9XR Team",
+        "logo": "https://f9xr.github.io/logo.png"
+      }
+    }
+    </script>
+
+    <!-- === FONTS & ICONS === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Montserrat with font-display: swap for performance & stability -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- === TAILWIND CONFIG === -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'carbon-black': '#212529',
+                        'bright-snow': '#f8f9fa',
+                        'platinum': '#e9ecef',
+                        'iron-grey': '#495057',
+                        'gunmetal': '#343a40',
+                        'accent-blue': '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        /* Performance: Optimize font visibility and mitigate layout shifts */
+        @font-face { font-family: 'Montserrat'; font-display: swap; }
+        
+        body { 
+            background-color: #212529; 
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Floating Pill Header Glassmorphism */
+        .pill-header {
+            background: rgba(33, 37, 41, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Modern Scroll Progress Bar */
+        #scroll-progress {
+            position: fixed; top: 0; left: 0; height: 3px;
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            z-index: 2000; width: 0%; transition: width 0.1s;
+        }
+
+        /* Animation Reveal Utility */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Custom Hover for Section Cards */
+        .policy-card:hover { border-color: rgba(59, 130, 246, 0.4); background-color: rgba(52, 58, 64, 0.4); }
+
+        @media (max-width: 480px) {
+            .header-text { display: none; }
+            .pill-header { padding: 0.75rem 1.25rem; }
+        }
+    </style>
+</head>
+<body class="text-bright-snow font-sans selection:bg-accent-blue selection:text-white">
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- === FLOATING PILL HEADER === -->
+    <header class="fixed top-6 left-0 right-0 z-[1000] px-4">
+        <nav class="pill-header max-w-4xl mx-auto rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
+            <a href="https://f9xr.github.io/" class="flex items-center gap-3 group">
+                <div class="bg-bright-snow text-carbon-black w-10 h-10 rounded-full flex items-center justify-center font-black text-xs transition-transform group-hover:rotate-12">F9</div>
+                <span class="text-lg font-black tracking-tighter uppercase header-text">F9XR <span class="font-light opacity-60">Team</span></span>
+            </a>
+            
+            <div class="hidden md:flex gap-8 font-bold text-[10px] tracking-[0.2em] uppercase">
+                <a href="#collect" class="hover:text-accent-blue transition-colors">Data</a>
+                <a href="#security" class="hover:text-accent-blue transition-colors">Security</a>
+                <a href="#contact" class="hover:text-accent-blue transition-colors">Contact</a>
+            </div>
+
+            <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="bg-accent-blue text-white px-5 py-2.5 rounded-full font-bold text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg shadow-blue-500/20">
+                <i class="fab fa-whatsapp mr-1"></i> Chat
+            </a>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
+        
+        <!-- === HERO SECTION === -->
+        <section class="mb-24 reveal text-center md:text-left">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+                <div>
+                    <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block">Confidentiality Agreement</span>
+                    <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-none mb-6">Privacy <br> <span class="text-transparent" style="-webkit-text-stroke: 1px #f8f9fa;">Policy.</span></h1>
+                </div>
+                <div class="bg-gunmetal border border-white/5 p-6 rounded-3xl backdrop-blur-md h-fit">
+                    <p class="text-[10px] uppercase tracking-widest text-iron-grey font-black mb-1">Last Updated</p>
+                    <p id="dynamic-date" class="font-bold text-lg text-platinum italic">December 19, 2025</p>
+                </div>
+            </div>
+            
+            <p class="text-xl md:text-2xl text-platinum/80 font-medium leading-relaxed max-w-4xl">
+                At <span class="text-white font-bold border-b-2 border-accent-blue">F9XR Team</span>, we respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, and safeguard your data.
+            </p>
+        </section>
+
+        <!-- === POLICY CONTENT GRID === -->
+        <div class="grid lg:grid-cols-2 gap-8 mb-24">
+            
+            <!-- 1. Information We Collect -->
+            <div id="collect" class="policy-card p-10 bg-gunmetal/20 rounded-[3rem] border border-white/5 transition-all reveal lg:col-span-2">
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-1/3">
+                        <span class="text-5xl font-black opacity-10 block mb-4 italic">01</span>
+                        <h3 class="text-3xl font-black tracking-tighter uppercase mb-4">Information We Collect</h3>
+                        <p class="text-platinum/50 text-sm">We collect data to improve your agency experience.</p>
+                    </div>
+                    <div class="md:w-2/3 grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="font-bold text-accent-blue mb-4 flex items-center gap-2"><i class="fas fa-user-circle"></i> Personal</h4>
+                            <ul class="space-y-2 text-platinum/70 font-medium text-lg">
+                                <li>Name & Business Details</li>
+                                <li>Email & Phone Number</li>
+                                <li>WhatsApp Credentials</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-accent-blue mb-4 flex items-center gap-2"><i class="fas fa-microchip"></i> Technical</h4>
+                            <ul class="space-y-2 text-platinum/70 font-medium text-lg">
+                                <li>IP & Device Info</li>
+                                <li>Browser Type</li>
+                                <li>User Interaction Data</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Usage -->
+            <div class="policy-card p-10 bg-gunmetal/20 rounded-[3rem] border border-white/5 transition-all reveal">
+                <span class="text-5xl font-black opacity-10 block mb-4 italic">02</span>
+                <h3 class="text-2xl font-black tracking-tighter uppercase mb-6">How We Use Data</h3>
+                <ul class="space-y-4 text-lg text-platinum/70 font-medium">
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-accent-blue mt-1"></i> Project communication & delivery</li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-accent-blue mt-1"></i> Improving AI architectures</li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check-circle text-accent-blue mt-1"></i> Sending proposals & updates</li>
+                </ul>
+                <p class="mt-8 text-xs font-black uppercase tracking-[0.2em] text-accent-blue">We never sell or trade your data.</p>
+            </div>
+
+            <!-- 3. Cookies -->
+            <div class="policy-card p-10 bg-gunmetal/20 rounded-[3rem] border border-white/5 transition-all reveal">
+                <span class="text-5xl font-black opacity-10 block mb-4 italic">03</span>
+                <h3 class="text-2xl font-black tracking-tighter uppercase mb-6">Cookie Policy</h3>
+                <p class="text-lg text-platinum/70 leading-relaxed">
+                    Our website uses cookies to enhance functionality and analyze traffic. You can choose to disable cookies through your browser settings, though this may impact some site features.
+                </p>
+                <i class="fas fa-cookie-bite text-5xl opacity-5 absolute bottom-8 right-10"></i>
+            </div>
+
+            <!-- 4. Security -->
+            <div id="security" class="policy-card p-10 bg-accent-blue/5 rounded-[3rem] border border-accent-blue/20 transition-all reveal lg:col-span-2">
+                <div class="flex items-center gap-6 mb-8">
+                    <span class="text-5xl font-black opacity-10 italic">04</span>
+                    <h3 class="text-3xl font-black tracking-tighter uppercase">Data Protection & Security</h3>
+                </div>
+                <p class="text-xl text-platinum/70 leading-relaxed mb-8 max-w-4xl">
+                    We employ robust development practices to protect your data from unauthorized access or disclosure. While no internet transmission is 100% secure, we utilize industry-standard encryption for all sensitive client information.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <span class="px-6 py-2 bg-gunmetal rounded-full border border-white/5 text-sm font-bold"><i class="fas fa-shield-alt mr-2 text-accent-blue"></i> SSL Encrypted</span>
+                    <span class="px-6 py-2 bg-gunmetal rounded-full border border-white/5 text-sm font-bold"><i class="fas fa-lock mr-2 text-accent-blue"></i> Secure Storage</span>
+                    <span class="px-6 py-2 bg-gunmetal rounded-full border border-white/5 text-sm font-bold"><i class="fas fa-user-secret mr-2 text-accent-blue"></i> Internal Record Confidentiality</span>
+                </div>
+            </div>
+
+            <!-- 5-8 Grouped -->
+            <div class="policy-card p-10 bg-gunmetal/20 rounded-[3rem] border border-white/5 transition-all reveal">
+                <span class="text-5xl font-black opacity-10 block mb-4 italic">05-08</span>
+                <h3 class="text-2xl font-black tracking-tighter uppercase mb-6">Third-Party & Project Handling</h3>
+                <div class="space-y-6 text-platinum/70">
+                    <p><strong class="text-white">Services:</strong> We use tools like Google Analytics and Payment Gateways. Each has its own privacy policy.</p>
+                    <p><strong class="text-white">Client Data:</strong> Content shared is used exclusively for project execution and remains confidential.</p>
+                </div>
+            </div>
+
+            <!-- 9-11 Contact & Updates -->
+            <div id="contact" class="policy-card p-10 bg-bright-snow text-carbon-black rounded-[3rem] transition-all reveal">
+                <span class="text-5xl font-black opacity-10 block mb-4 italic">09-11</span>
+                <h3 class="text-2xl font-black tracking-tighter uppercase mb-6">Updates & Support</h3>
+                <p class="font-bold mb-6">We reserve the right to modify this policy. Your continued use of our services constitutes consent.</p>
+                
+                <div class="space-y-4 pt-4 border-t border-carbon-black/10">
+                    <a href="mailto:tontufytservices@gmail.com" class="flex items-center gap-4 text-xl font-black hover:text-accent-blue transition-colors">
+                        <i class="fas fa-envelope"></i> tontufytservices@gmail.com
+                    </a>
+                    <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="flex items-center gap-4 text-xl font-black hover:text-accent-blue transition-colors">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Direct
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- === ABOUT F9XR SECTION === -->
+        <section class="py-24 border-t border-white/10 reveal">
+            <div class="max-w-4xl">
+                <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8 italic">What is F9XR Team?</h2>
+                <p class="text-xl text-platinum/60 leading-relaxed mb-8">
+                    F9XR Team builds websites that grow businesses, not just look good. We specialize in AI-powered architectures and Local SEO for Salons, Clinics, and Global Brands. Our mission is to prioritize performance, security, and scalability through robust development practices.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://f9xr.github.io/" class="bg-white/5 border border-white/10 px-8 py-4 rounded-2xl font-black hover:bg-white/10 transition-all uppercase tracking-widest text-xs">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Consent -->
+        <div class="text-center py-20 reveal">
+            <p class="text-xl md:text-2xl font-medium text-platinum/50 italic leading-relaxed">
+                "By using our website and services, you agree to our <br class="hidden md:block"> 
+                <span class="text-white font-black underline decoration-accent-blue decoration-4 underline-offset-8">Privacy Policy</span>, 
+                <span class="text-white font-black underline decoration-accent-blue decoration-4 underline-offset-8">Terms of Service</span>, and 
+                <span class="text-white font-black underline decoration-accent-blue decoration-4 underline-offset-8">Service Agreement</span>."
+            </p>
+        </div>
+
+    </main>
+
+    <!-- === FOOTER === -->
+    <footer class="bg-zinc-950 pt-24 pb-12 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-16">
+                <div class="text-center md:text-left">
+                    <h3 class="text-4xl font-black italic tracking-tighter uppercase mb-2">F9XR Team.</h3>
+                    <p class="text-iron-grey font-bold tracking-widest text-[10px] uppercase">Crafting Digital Excellence Worldwide</p>
+                </div>
+                
+                <div class="flex gap-8">
+                    <a href="https://inakm.github.io" target="_blank" class="text-sm font-black text-platinum/40 hover:text-white transition-colors">AKM</a>
+                    <a href="https://aryansh.site" target="_blank" class="text-sm font-black text-platinum/40 hover:text-white transition-colors">Aryansh</a>
+                    <a href="https://github.com/f9xr/f9xr.github.io" target="_blank" class="text-sm font-black text-platinum/40 hover:text-white transition-colors"><i class="fab fa-github"></i> Source</a>
+                </div>
+            </div>
+            
+            <div class="text-center md:text-left pt-12 border-t border-white/5">
+                <p class="text-[10px] font-black uppercase tracking-[0.4em] text-iron-grey">
+                    &copy; 2025 F9XR Team. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === BACK TO TOP === -->
+    <button id="btt" class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-all shadow-2xl">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- === SCRIPTS === -->
+    <script>
+        // 1. Dynamic Date Injector
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('dynamic-date').innerText = new Date().toLocaleDateString('en-US', options);
+
+        // 2. Performance-Focused Scroll Logic (Avoids forced reflows)
+        let lastKnownScrollPosition = 0;
+        let ticking = false;
+
+        window.addEventListener('scroll', () => {
+            lastKnownScrollPosition = window.scrollY;
+
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    handleScroll(lastKnownScrollPosition);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        function handleScroll(scrollPos) {
+            // Scroll Progress
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (scrollPos / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+
+            // Back to Top Toggle
+            const btt = document.getElementById('btt');
+            if (scrollPos > 600) btt.classList.remove('hidden');
+            else btt.classList.add('hidden');
+        }
+
+        document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // 3. Reveal Animation with Intersection Observer
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
