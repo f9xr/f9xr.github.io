@@ -191,6 +191,11 @@
         .footer-col a { color: var(--bright-snow); text-decoration: none; font-size: 1.1rem; font-weight: 500; transition: var(--transition); opacity: 0.8; }
         .footer-col a:hover { opacity: 1; padding-left: 5px; }
 
+        /* --- Our Approach --- */
+        .approach-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .step-card { padding: 40px; background: transparent; border: 1px solid var(--iron-grey); border-radius: 24px; position: relative; }
+        .step-num { font-size: 4rem; font-weight: 800; opacity: 0.1; position: absolute; top: 10px; right: 20px; }
+
         /* --- Featured Works (Browser Style) --- */
         .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 35px; }
         .browser-card { 
@@ -412,13 +417,30 @@
         <section id="approach">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="tagline">The Roadmap</span>
                     <h2>Our Approach</h2>
+                    <p>A systematic roadmap from initial concept to digital dominance.</p>
                 </div>
-                <div class="services-bento">
-                    <div class="service-card reveal"><h3>01. Discover</h3><p>We analyze your business gaps and current audience bottlenecks.</p></div>
-                    <div class="service-card reveal"><h3>02. Design</h3><p>Creating result-focused UIs that convert visitors into paying clients.</p></div>
-                    <div class="service-card reveal"><h3>03. Execute</h3><p>Launching clean, SEO-optimized code with AI-powered engagement.</p></div>
+                <div class="approach-steps">
+                    <div class="step-card reveal">
+                        <div class="step-num">01</div>
+                        <h4>Discovery</h4>
+                        <p>We analyze your brand DNA, competition, and goals to build a strategic foundation.</p>
+                    </div>
+                    <div class="step-card reveal">
+                        <div class="step-num">02</div>
+                        <h4>Design</h4>
+                        <p>High-fidelity prototyping focusing on user psychology and modern aesthetics.</p>
+                    </div>
+                    <div class="step-card reveal">
+                        <div class="step-num">03</div>
+                        <h4>Development</h4>
+                        <p>Writing clean, scalable code and integrating AI modules for functionality.</p>
+                    </div>
+                    <div class="step-card reveal">
+                        <div class="step-num">04</div>
+                        <h4>Optimization</h4>
+                        <p>Rigorous testing, SEO indexing, and performance tuning for launch.</p>
+                    </div>
                 </div>
             </div>
         </section>
