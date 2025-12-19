@@ -1,769 +1,603 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
     <!-- === PRIMARY SEO META TAGS === -->
-<title>F9XR Team | AI-Powered Web Design & Local SEO Growth Agency</title>
-<meta name="title" content="F9XR Team | AI-Powered Web Design & Local SEO Growth Agency">
-<meta name="description" content="F9XR Team designs high-performance, AI-powered websites that drive measurable growth. Specialized in Local SEO, Monthly Maintenance, and UI/UX for global brands and local businesses.">
-<meta name="keywords" content="F9XR Team, AI Web Design, Local SEO Agency, WordPress Maintenance, Digital Marketing Studio, Website SEO Audit, Global Digital Agency">
-<meta name="author" content="F9XR Team">
-<meta name="robots" content="index, follow">
-<meta name="language" content="English">
-<link rel="canonical" href="https://f9xr.github.io/"> 
+    <title>F9XR Team | AI-Powered Web Design & Local SEO Growth Agency</title>
+    <meta name="description" content="F9XR Team designs high-performance, AI-powered websites. Specialized in Local SEO, Monthly Maintenance, and UI/UX for global brands.">
+    <meta name="author" content="F9XR Team">
 
-<!-- === OPEN GRAPH / FACEBOOK / LINKEDIN === -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://f9xr.github.io/"> 
-<meta property="og:title" content="F9XR Team | AI-Powered Web Design & Local SEO Growth Agency">
-<meta property="og:description" content="We build websites that grow businesses, not just look good. Specialized AI-powered architectures and Local SEO for Salons, Clinics, and Global Brands.">
-<meta property="og:image" content="https://yourdomain.com/og-image.jpg"> 
+    <!-- === PERFORMANCE & FONTS === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- font-display: swap is included in the URL -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
-<!-- === TWITTER === -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://f9xr.github.io/"> 
-<meta property="twitter:title" content="F9XR Team | AI-Powered Web Design & Local SEO Growth Agency">
-<meta property="twitter:description" content="High-performance, AI-powered websites that drive growth. Get your free website audit today.">
-<meta property="twitter:image" content="https://yourdomain.com/og-image.jpg"> 
-
-<!-- === MOBILE OPTIMIZATION === -->
-<meta name="theme-color" content="#212529"> <!-- Matches Carbon Black -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "F9XR Team",
-  "alternateName": "F9XR Digital",
-  "description": "Global digital agency and creative studio specializing in AI-powered web development, Local SEO, and monthly website maintenance.",
-  "url": "https://f9xr.github.io/",
-  "logo": "https://yourdomain.com/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "",
-    "contactType": "customer service",
-    "email": "tontufytservices@gmail.com",
-    "availableLanguage": "en"
-  },
-  "sameAs": [
-    "https://wa.me/message/X3KGWTAJ6Z6NB1",
-    "https://facebook.com/f9xrteam",
-    "https://instagram.com/f9xrteam",
-    "https://linkedin.com/company/f9xrteam"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Remote",
-    "addressCountry": "Global"
-  },
-  "serviceArea": "Worldwide",
-  "priceRange": "$$"
-}
-</script>
-
-    <!-- External Dependencies -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
-    <style>
-        :root {
-            --bright-snow: #f8f9fa;
-            --platinum: #e9ecef;
-            --alabaster-grey: #dee2e6;
-            --pale-slate: #ced4da;
-            --pale-slate-2: #adb5bd;
-            --slate-grey: #6c757d;
-            --iron-grey: #495057;
-            --gunmetal: #343a40;
-            --carbon-black: #212529;
-            --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bright-snow': '#f8f9fa',
+                        'platinum': '#e9ecef',
+                        'iron-grey': '#495057',
+                        'gunmetal': '#343a40',
+                        'carbon-black': '#212529',
+                        'accent-blue': '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                }
+            }
         }
+    </script>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--carbon-black);
-            color: var(--bright-snow);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* --- Global UI Components --- */
-        .container { max-width: 1300px; margin: 0 auto; padding: 0 2rem; }
-        section { padding: 120px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        
-        .section-header { margin-bottom: 70px; max-width: 800px; }
-        .section-header h2 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -3px; line-height: 1; margin-bottom: 25px; font-weight: 800; }
-        .section-header p { color: var(--pale-slate-2); font-size: 1.2rem; font-weight: 400; }
-
-        .btn {
-            display: inline-flex; align-items: center; gap: 12px;
-            padding: 18px 36px; border-radius: 100px; text-decoration: none;
-            font-weight: 700; transition: var(--transition); cursor: pointer; border: none; font-size: 1rem;
-        }
-        .btn-primary { background: var(--bright-snow); color: var(--carbon-black); }
-        .btn-primary:hover { transform: translateY(-3px); background: var(--platinum); }
-        .btn-outline { border: 1px solid var(--iron-grey); color: var(--bright-snow); }
-        .btn-outline:hover { background: var(--iron-grey); }
-
-        .tagline { text-transform: uppercase; letter-spacing: 4px; color: var(--pale-slate-2); font-weight: 800; font-size: 0.8rem; display: block; margin-bottom: 15px; }
-
-        /* --- Header --- */
-        header { position: fixed; top: 25px; left: 50%; transform: translateX(-50%); z-index: 1000; width: 95%; max-width: 1100px; }
-        .nav-pill {
-            background: rgba(33, 37, 41, 0.85); backdrop-filter: blur(20px);
-            padding: 14px 40px; border-radius: 100px; display: flex; justify-content: space-between; align-items: center;
-            border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-        .logo { font-weight: 800; font-size: 1.6rem; color: var(--bright-snow); text-decoration: none; letter-spacing: -1px; }
-        .nav-links { display: flex; gap: 30px; }
-        .nav-links a { text-decoration: none; color: var(--pale-slate); font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
-        .nav-links a:hover { color: var(--bright-snow); }
-
-        /* --- Hero --- */
-        .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 150px; position: relative; }
-        .hero h1 { font-size: clamp(3.5rem, 9vw, 7.5rem); font-weight: 800; letter-spacing: -6px; line-height: 0.85; margin-bottom: 35px; }
-        .hero .accent { color: transparent; -webkit-text-stroke: 1px var(--bright-snow); }
-        .hero-sub { font-size: 1.4rem; color: var(--pale-slate); max-width: 800px; margin-bottom: 50px; }
-
-        /* --- Stats --- */
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; padding: 50px; background: var(--gunmetal); border-radius: 40px; border: 1px solid var(--iron-grey); }
-        .stat-item h3 { font-size: 3rem; font-weight: 800; margin-bottom: 5px; }
-        .stat-item p { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: var(--pale-slate-2); font-weight: 700; }
-
-        /* --- Problems & Niches --- */
-        .problems-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .problem-card { background: var(--gunmetal); padding: 50px; border-radius: 40px; border: 1px solid var(--iron-grey); }
-        .problem-list { list-style: none; margin-top: 30px; }
-        .problem-list li { margin-bottom: 20px; display: flex; align-items: center; gap: 20px; font-size: 1.2rem; }
-        .problem-list i { color: #ff6b6b; font-size: 1.4rem; }
-
-        .niche-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-        .niche-item { background: var(--gunmetal); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid var(--iron-grey); transition: var(--transition); }
-        .niche-item:hover { border-color: var(--bright-snow); transform: translateY(-5px); }
-        .niche-item i { font-size: 2.5rem; margin-bottom: 15px; color: var(--pale-slate); display: block; }
-
-        /* --- Services Deep Dive --- */
-        .services-bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
-        .service-card { background: var(--gunmetal); padding: 45px; border-radius: 40px; border: 1px solid var(--iron-grey); transition: var(--transition); }
-        .service-card:hover { border-color: var(--bright-snow); background: #3d444b; }
-        .service-card i { font-size: 3rem; margin-bottom: 30px; color: var(--pale-slate); }
-        .service-card h3 { font-size: 1.8rem; margin-bottom: 20px; letter-spacing: -1px; }
-        .service-card.wide { grid-column: span 2; }
-        .deliverables { list-style: none; margin-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; }
-        .deliverables li { font-size: 0.95rem; color: var(--pale-slate-2); margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
-        .deliverables i { font-size: 0.8rem; color: var(--bright-snow); margin: 0; }
-
-        /* --- Why Choose Us --- */
-        .why-box { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .why-points li { display: flex; gap: 20px; margin-bottom: 35px; list-style: none; }
-        .why-points i { font-size: 1.8rem; color: var(--bright-snow); }
-
-        /* --- Contact Form Section --- */
-        .contact-box { background: var(--gunmetal); border-radius: 40px; padding: 60px; border: 1px solid var(--iron-grey); max-width: 900px; margin: 0 auto; }
-        .toggle-nav { display: flex; gap: 10px; background: var(--carbon-black); padding: 6px; border-radius: 100px; width: fit-content; margin: 0 auto 40px; }
-        .toggle-btn { padding: 12px 25px; border-radius: 100px; cursor: pointer; transition: 0.3s; font-weight: 700; font-size: 0.85rem; }
-        .toggle-btn.active { background: var(--bright-snow); color: var(--carbon-black); }
-        
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
-        .form-group input, .form-group textarea { width: 100%; padding: 16px; background: var(--carbon-black); border: 1px solid var(--iron-grey); border-radius: 12px; color: white; outline: none; font-family: inherit; }
-
-        /* --- Pricing & FAQ --- */
-        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .price-card { background: var(--gunmetal); padding: 50px; border-radius: 40px; border: 1px solid var(--iron-grey); }
-        .price-card.featured { border-color: var(--bright-snow); background: var(--iron-grey); transform: scale(1.05); }
-
-        /* --- Footer (Gretta Style) --- */
-        .footer-main { padding: 100px 0 60px; background: var(--carbon-black); color: var(--bright-snow); }
-        .footer-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 80px; flex-wrap: wrap; gap: 40px; }
-        .footer-logo { font-size: 4rem; font-weight: 800; letter-spacing: -4px; line-height: 1; }
-        .footer-cols { display: flex; gap: 80px; flex-wrap: wrap; }
-        .footer-col h4 { font-size: 0.9rem; color: var(--slate-grey); text-transform: uppercase; margin-bottom: 30px; letter-spacing: 2px; }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 15px; }
-        .footer-col a { color: var(--bright-snow); text-decoration: none; font-size: 1.1rem; font-weight: 500; transition: var(--transition); opacity: 0.8; }
-        .footer-col a:hover { opacity: 1; padding-left: 5px; }
-
-        /* --- Our Approach --- */
-        .approach-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .step-card { padding: 40px; background: transparent; border: 1px solid var(--iron-grey); border-radius: 24px; position: relative; }
-        .step-num { font-size: 4rem; font-weight: 800; opacity: 0.1; position: absolute; top: 10px; right: 20px; }
-
-        /* --- Featured Works (Browser Style) --- */
-        .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 35px; }
-        .browser-card { 
-            background: var(--gunmetal); border-radius: 20px; overflow: hidden; border: 1px solid var(--iron-grey);
-            text-decoration: none; color: inherit; transition: var(--transition);
-        }
-        .browser-card:hover { transform: translateY(-10px); border-color: var(--bright-snow); }
-        .browser-header { background: #2a2e33; padding: 12px 15px; display: flex; gap: 8px; border-bottom: 1px solid var(--iron-grey); }
-        .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--slate-grey); }
-        .browser-body { height: 280px; background: var(--carbon-black); display: flex; align-items: center; justify-content: center; position: relative; }
-        .browser-body i { font-size: 5rem; opacity: 0.05; }
-        .browser-overlay { position: absolute; bottom: 20px; left: 20px; }
-        .work-info { padding: 25px; }
-        
-        .kbd-guide { background: #1a1a1a; padding: 25px; border-radius: 20px; border: 1px solid var(--iron-grey); width: 280px; }
-        .kbd-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem; }
-        .key { background: var(--gunmetal); padding: 2px 8px; border-radius: 6px; font-weight: 800; border: 1px solid var(--iron-grey); }
-
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; color: var(--slate-grey); font-size: 0.9rem; }
-
-        /* --- FAQ --- */
-        .faq-box { max-width: 900px; margin: 0 auto; }
-        .faq-item { background: var(--gunmetal); border-radius: 20px; margin-bottom: 15px; border: 1px solid var(--iron-grey); overflow: hidden; }
-        .faq-trigger { padding: 25px 35px; cursor: pointer; display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem; }
-        .faq-content { padding: 0 35px; max-height: 0; overflow: hidden; transition: var(--transition); color: var(--pale-slate-2); }
-
-        /* --- Utility --- */
-        #backToTop { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: var(--bright-snow); color: var(--carbon-black); border-radius: 50%; display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; border: none; font-size: 1.5rem; }
-        .reader-tool { position: fixed; bottom: 30px; left: 30px; z-index: 1000; }
-        .reader-btn { padding: 12px 25px; background: var(--gunmetal); border: 1px solid var(--iron-grey); color: var(--bright-snow); border-radius: 100px; cursor: pointer; font-size: 0.8rem; font-weight: 700; }
-        
-        /* Toast Feedback */
-        #toast { position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); background: var(--bright-snow); color: var(--carbon-black); padding: 12px 30px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; display: none; z-index: 2000; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-
-        @media (max-width: 992px) {
-            .problems-grid, .services-bento, .why-box, .hero { grid-template-columns: 1fr; text-align: center; }
-            .service-card.wide { grid-column: span 1; }
-            .footer-top { flex-direction: column; }
-            .footer-logo { font-size: 3rem; }
-            .nav-links { display: none; }
-        }
+    <style type="text/css">
+        @font-face { font-family: 'Plus Jakarta Sans'; font-display: swap; }
+        body { background-color: #212529; overflow-x: hidden; }
+        .text-stroke { -webkit-text-stroke: 1px #f8f9fa; color: transparent; }
+        .glass-nav { background: rgba(33, 37, 41, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.1); }
+        .reveal { transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); opacity: 0; transform: translateY(30px); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; }
+        .faq-item.open .faq-content { max-height: 500px; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #212529; }
+        ::-webkit-scrollbar-thumb { background: #495057; border-radius: 10px; }
     </style>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
 
-    <div id="toast">Copied to clipboard!</div>
-    <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
-    <div class="reader-tool">
-        <button class="reader-btn" id="ttsToggle"><i class="fas fa-volume-up"></i> Voice Mode</button>
-    </div>
+<body class="text-bright-snow font-sans antialiased">
 
-    <header>
-        <nav class="nav-pill">
-            <a href="#" class="logo">F9XR <span style="font-weight: 300;">TEAM</span></a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#portfolio">Works</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#contact">Contact</a>
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-24 left-1/2 -translate-x-1/2 z-[2000] bg-bright-snow text-carbon-black px-8 py-3 rounded-full font-bold shadow-2xl hidden">Copied to clipboard!</div>
+
+    <!-- UI Tools -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl"><i class="fas fa-arrow-up text-xl"></i></button>
+
+    <!-- Navigation -->
+    <header class="fixed top-6 left-0 right-0 z-[1000] px-4">
+        <nav class="glass-nav max-w-6xl mx-auto rounded-full px-6 py-4 flex justify-between items-center shadow-2xl">
+            <a href="#" class="text-2xl font-extrabold tracking-tighter">F9XR <span class="font-light opacity-80 uppercase text-xs tracking-[0.2em] ml-1">Team</span></a>
+            <div class="hidden md:flex gap-8 font-semibold text-platinum/70 uppercase text-xs tracking-widest">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#services" class="hover:text-white transition-colors">Services</a>
+                <a href="#portfolio" class="hover:text-white transition-colors">Works</a>
+                <a href="#contact" class="hover:text-white transition-colors text-accent-blue">Hire Us</a>
             </div>
-            <a href="#contact" class="btn btn-primary" style="padding: 10px 25px; font-size: 0.85rem;">Hire Us!</a>
+            <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="bg-bright-snow text-carbon-black px-6 py-2 rounded-full font-bold text-sm hover:scale-105 transition-all">WHATSAPP</a>
         </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="container">
+        <section class="min-h-screen flex items-center pt-32 pb-20 px-6" id="home">
+            <div class="max-w-7xl mx-auto w-full">
                 <div class="reveal">
-                    <span class="tagline">Global Digital Studio</span>
-                    <h1>EMPOWERING <br> <span class="accent">BRANDS.</span></h1>
-                    <p class="hero-sub">We design and develop high-performance, AI-powered websites that drive growth, engagement, and measurable success for brands worldwide.</p>
-                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                        <a href="#contact" class="btn btn-primary">Get Free Website Audit</a>
-                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Chat with Us</a>
+                    <span class="inline-block px-4 py-1 border border-iron-grey rounded-full uppercase tracking-[0.3em] text-xs font-bold text-platinum/50 mb-8">Digital Strategy Agency</span>
+                    <h1 class="text-6xl md:text-[8.5rem] font-black leading-[0.85] tracking-tighter mb-10">
+                        EMPOWERING <br> <span class="text-stroke italic">BRANDS.</span>
+                    </h1>
+                    <p class="text-xl md:text-3xl text-platinum/80 max-w-3xl leading-relaxed mb-12">
+                        Architecting high-performance digital products and AI-powered experiences that drive measurable growth.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="#contact" class="bg-bright-snow text-carbon-black px-12 py-6 rounded-full font-bold text-xl text-center hover:bg-white transition-all shadow-xl">Get Free Audit</a>
+                        <a href="#portfolio" class="border border-iron-grey px-12 py-6 rounded-full font-bold text-xl text-center hover:bg-iron-grey transition-all">View Our Work</a>
                     </div>
-                    <span style="display: block; margin-top: 20px; color: var(--pale-slate-2); font-size: 0.9rem;">⚡ Free demo website before you decide</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Solutions Section -->
+        <section class="py-24 px-6 border-t border-white/5 bg-zinc-900/40" id="problems">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <span class="text-accent-blue font-black uppercase tracking-widest mb-4 block">Problem vs Solution</span>
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-none text-white">Is Your Business <br>Falling Behind?</h2>
+                    <p class="text-2xl text-platinum/60 mb-10 leading-relaxed">Most agencies sell features. We sell solutions to the gaps costing you money every day.</p>
+                    
+                    <div class="bg-gunmetal p-10 rounded-[3rem] border border-white/10">
+                        <ul class="space-y-6">
+                            <li class="flex items-center gap-5 text-xl font-medium text-platinum">
+                                <i class="fas fa-times-circle text-red-500 text-2xl"></i> Low Google visibility & maps ranking
+                            </li>
+                            <li class="flex items-center gap-5 text-xl font-medium text-platinum">
+                                <i class="fas fa-times-circle text-red-500 text-2xl"></i> Losing leads to local competitors
+                            </li>
+                            <li class="flex items-center gap-5 text-xl font-medium text-platinum">
+                                <i class="fas fa-times-circle text-red-500 text-2xl"></i> No automated online presence
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="stats-grid reveal" style="margin-top: 80px;">
-                    <div class="stat-item"><h3>5+</h3><p>Global Projects</p></div>
-                    <div class="stat-item"><h3>$10k</h3><p>Ad Spend Managed</p></div>
-                    <div class="stat-item"><h3>98%</h3><p>Retention Rate</p></div>
-                    <div class="stat-item"><h3>24/5</h3><p>Priority Care</p></div>
+                <div class="grid grid-cols-2 gap-4 reveal">
+                    <div class="bg-zinc-800 p-8 rounded-3xl border border-white/5 text-center transition-transform hover:-translate-y-2">
+                        <i class="fas fa-spa text-5xl mb-6 opacity-30"></i>
+                        <h4 class="font-bold text-xl uppercase tracking-tighter">Salons</h4>
+                    </div>
+                    <div class="bg-zinc-800 p-8 rounded-3xl border border-white/5 text-center transition-transform hover:-translate-y-2">
+                        <i class="fas fa-user-md text-5xl mb-6 opacity-30"></i>
+                        <h4 class="font-bold text-xl uppercase tracking-tighter">Clinics</h4>
+                    </div>
+                    <div class="bg-zinc-800 p-8 rounded-3xl border border-white/5 text-center transition-transform hover:-translate-y-2">
+                        <i class="fas fa-dumbbell text-5xl mb-6 opacity-30"></i>
+                        <h4 class="font-bold text-xl uppercase tracking-tighter">Gyms</h4>
+                    </div>
+                    <div class="bg-zinc-800 p-8 rounded-3xl border border-white/5 text-center transition-transform hover:-translate-y-2">
+                        <i class="fas fa-handshake text-5xl mb-6 opacity-30"></i>
+                        <h4 class="font-bold text-xl uppercase tracking-tighter">Services</h4>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Problem Section -->
-        <section id="problems">
-            <div class="container">
-                <div class="problems-grid">
-                    <div class="reveal">
-                        <div class="section-header">
-                            <span class="tagline">Solutions</span>
-                            <h2>Is Your Business Facing These Problems?</h2>
-                            <p>Clients buy solutions, not just services. We identify the gaps costing you money.</p>
-                        </div>
-                        <div class="problem-card">
-                            <ul class="problem-list">
-                                <li><i class="fas fa-times-circle"></i> Outdated or missing website</li>
-                                <li><i class="fas fa-times-circle"></i> Low Google visibility & maps ranking</li>
-                                <li><i class="fas fa-times-circle"></i> Losing leads to local competitors</li>
-                                <li><i class="fas fa-times-circle"></i> No automated online presence</li>
-                            </ul>
-                            <p style="margin-top: 30px; font-weight: 900;">F9XR Team fixes all of this — simply & affordably.</p>
-                        </div>
+        <!-- Problem vs Solution -->
+        <section class="py-24 px-6 border-t border-white/5 bg-zinc-950/50" id="problems">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <span class="text-accent-blue font-black tracking-widest uppercase mb-4 block">The Gap</span>
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-none">Why Most Sites <br> Fail.</h2>
+                    <p class="text-xl md:text-2xl text-platinum/60 leading-relaxed mb-10">Generic websites don't convert. We identify the friction points in your digital journey and solve them with precision.</p>
+                </div>
+                <div class="grid gap-6 reveal">
+                    <div class="bg-gunmetal p-8 rounded-[2rem] border-l-4 border-red-500 shadow-xl">
+                        <h4 class="text-red-500 font-bold uppercase text-sm mb-2">The Problem</h4>
+                        <p class="text-xl font-medium">Outdated design and poor mobile responsiveness are causing 70% of your visitors to bounce.</p>
                     </div>
-                    <div class="reveal">
-                        <div class="section-header">
-                            <span class="tagline">Niches</span>
-                            <h2>Who We Work With</h2>
-                        </div>
-                        <div class="niche-grid">
-                            <div class="niche-item"><i class="fas fa-spa"></i><h4>Salons</h4></div>
-                            <div class="niche-item"><i class="fas fa-user-md"></i><h4>Clinics</h4></div>
-                            <div class="niche-item"><i class="fas fa-dumbbell"></i><h4>Gyms</h4></div>
-                            <div class="niche-item"><i class="fas fa-handshake"></i><h4>Local Services</h4></div>
-                            <div class="niche-item"><i class="fas fa-star"></i><h4>Influencers</h4></div>
-                        </div>
+                    <div class="bg-gunmetal p-8 rounded-[2rem] border-l-4 border-green-500 shadow-xl">
+                        <h4 class="text-green-500 font-bold uppercase text-sm mb-2">The F9XR Solution</h4>
+                        <p class="text-xl font-medium">AI-driven UX optimization and lightning-fast architectures that turn visitors into loyal customers.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Who We Are -->
-        <section id="about">
-            <div class="container">
-                <div class="problems-grid">
-                    <div class="reveal">
-                        <div class="section-header">
-                            <span class="tagline">Who We Are</span>
-                            <h2>Architects of Digital Precision.</h2>
+        <section id="about" class="py-24 px-6">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1 reveal">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-accent-blue/20 rounded-[3rem] blur-2xl group-hover:bg-accent-blue/30 transition duration-1000"></div>
+                        <div class="relative bg-zinc-900 aspect-square rounded-[3rem] border border-white/10 flex items-center justify-center">
+                            <i class="fas fa-cubes text-[12rem] opacity-10"></i>
                         </div>
-                        <p style="font-size: 1.2rem; margin-bottom: 30px; color: var(--pale-slate);">F9XR Team is more than a digital agency; we are your strategic partner in the digital landscape. Our mission is to bridge the gap between complex technology and human-centric design. Founded by architects and engineers, we bring a structural approach to web design, ensuring every pixel serves a purpose and every line of code drives performance.</p>
-                        <ul class="problem-list" style="margin-bottom: 40px;">
-                            <li><i class="fas fa-check-circle" style="color: var(--bright-snow);"></i> Monthly Care Packages</li>
-                            <li><i class="fas fa-check-circle" style="color: var(--bright-snow);"></i> Results-Focused UI</li>
-                            <li><i class="fas fa-check-circle" style="color: var(--bright-snow);"></i> Personal attention for every niche</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline">Our Full Process <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="reveal" style="height: 450px; background: var(--gunmetal); border-radius: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--iron-grey);">
-                        <i class="fas fa-cubes" style="font-size: 10rem; opacity: 0.1;"></i>
+                </div>
+                <div class="order-1 lg:order-2 reveal">
+                    <span class="text-iron-grey font-black uppercase tracking-widest mb-4 block">Who We Are</span>
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-tight">Architects of Digital Precision.</h2>
+                    <p class="text-xl md:text-2xl text-platinum/70 leading-relaxed mb-8">F9XR Team is more than a digital agency; we are your strategic partner. We bridge the gap between complex technology and human-centric design, ensuring every line of code drives performance.</p>
+                    <div class="flex flex-wrap gap-4 font-bold">
+                        <span class="bg-zinc-800 px-6 py-2 rounded-full border border-white/5">#ResultsFocused</span>
+                        <span class="bg-zinc-800 px-6 py-2 rounded-full border border-white/5">#AIIntegration</span>
+                        <span class="bg-zinc-800 px-6 py-2 rounded-full border border-white/5">#SpeedMasters</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Engineered for Excellence (Features) -->
-        <section id="features">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="tagline">Core Features</span>
-                    <h2>Engineered for Excellence.</h2>
+        <!-- Core Features -->
+        <section class="py-24 px-6 bg-zinc-900/50" id="features">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 italic text-stroke">CORE STRENGTHS</h2>
                 </div>
-                <div class="stats-grid reveal">
-                    <div class="stat-item" style="text-align: left;"><i class="fas fa-bolt" style="font-size: 2rem; margin-bottom: 20px;"></i><h4>Performance First</h4><p>Sub-second loads.</p></div>
-                    <div class="stat-item" style="text-align: left;"><i class="fas fa-shield-alt" style="font-size: 2rem; margin-bottom: 20px;"></i><h4>Security & Backups</h4><p>Weekly off-site data.</p></div>
-                    <div class="stat-item" style="text-align: left;"><i class="fas fa-fingerprint" style="font-size: 2rem; margin-bottom: 20px;"></i><h4>Niche AI Logic</h4><p>Automated engagement.</p></div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-10 bg-gunmetal rounded-[3rem] border border-white/10 reveal">
+                        <i class="fas fa-bolt text-4xl text-yellow-400 mb-6"></i>
+                        <h4 class="text-2xl font-bold mb-4">Performance First</h4>
+                        <p class="text-lg text-platinum/60">We target sub-second load times to ensure your users never wait and Google rewards your speed.</p>
+                    </div>
+                    <div class="p-10 bg-gunmetal rounded-[3rem] border border-white/10 reveal">
+                        <i class="fas fa-shield-alt text-4xl text-green-400 mb-6"></i>
+                        <h4 class="text-2xl font-bold mb-4">Security & Backups</h4>
+                        <p class="text-lg text-platinum/60">Weekly off-site data backups and proactive security patching keep your business safe 24/7.</p>
+                    </div>
+                    <div class="p-10 bg-gunmetal rounded-[3rem] border border-white/10 reveal">
+                        <i class="fas fa-fingerprint text-4xl text-accent-blue mb-6"></i>
+                        <h4 class="text-2xl font-bold mb-4">Niche AI Logic</h4>
+                        <p class="text-lg text-platinum/60">Custom AI modules tailored to your industry, from automated booking to intelligent lead scoring.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Deep Dive Services Bento -->
-        <section id="services">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="tagline">Deep Dive</span>
-                    <h2>Our Services</h2>
-                    <p>Websites + Local SEO + Digital Marketing — built to grow your business, not just look good.</p>
+        <!-- In-Depth Services Section -->
+        <section class="py-32 px-6" id="services">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-20 reveal">
+                    <span class="text-accent-blue font-black uppercase tracking-widest block mb-4">Deep Dive</span>
+                    <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none">Comprehensive <br> Solutions.</h2>
                 </div>
-                <div class="services-bento">
-                    <div class="service-card wide reveal">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Business Websites</h3>
-                        <p>High-conversion WordPress/Blogger architectures optimized for mobile and lead generation.</p>
-                        <ul class="deliverables">
-                            <li><i class="fas fa-check"></i> Google Search Console Setup</li>
-                            <li><i class="fas fa-check"></i> UI/UX Redesign & Improvement</li>
-                            <li><i class="fas fa-check"></i> Mobile Responsive Architecture</li>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- S1 -->
+                    <div class="md:col-span-2 bg-gunmetal p-12 rounded-[4rem] border border-white/5 hover:border-accent-blue/30 transition-all reveal group">
+                        <div class="flex justify-between items-start mb-10">
+                            <i class="fas fa-laptop-code text-6xl opacity-30 group-hover:opacity-100 transition-opacity"></i>
+                            <span class="bg-bright-snow text-carbon-black px-4 py-1 rounded-full text-xs font-black">MOST POPULAR</span>
+                        </div>
+                        <h3 class="text-4xl font-black mb-6">Business Website Ecosystems</h3>
+                        <p class="text-xl text-platinum/60 mb-8 leading-relaxed">We don't just build sites; we build conversion engines. Using WordPress, Blogger, or Custom Frameworks, we create mobile-first experiences designed to sell.</p>
+                        <ul class="grid sm:grid-cols-2 gap-4 text-lg font-medium opacity-80">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Custom UI/UX Design</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> G-Search Console Setup</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Lead Magnet Integration</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Content Strategy</li>
                         </ul>
                     </div>
-                    <div class="service-card reveal">
-                        <i class="fas fa-search-dollar"></i>
-                        <h3>Local SEO & GMB</h3>
-                        <p>Dominate local searches and climb the Google Business maps.</p>
-                        <ul class="deliverables">
-                            <li><i class="fas fa-check"></i> Maps Setup & Management</li>
-                            <li><i class="fas fa-check"></i> Local Citation Building</li>
-                        </ul>
+
+                    <!-- S2 -->
+                    <div class="bg-zinc-800 p-12 rounded-[4rem] border border-white/5 reveal group">
+                        <i class="fas fa-search-dollar text-5xl opacity-30 mb-8 group-hover:text-yellow-500 transition-colors"></i>
+                        <h3 class="text-3xl font-bold mb-4">Local SEO Mastery</h3>
+                        <p class="text-lg text-platinum/50 leading-relaxed">Dominate your local market. We optimize your Google Business Profile and local citations to put you at #1 on the map.</p>
                     </div>
-                    <div class="service-card reveal">
-                        <i class="fas fa-tools"></i>
-                        <h3>Monthly Maintenance</h3>
-                        <p>Total peace of mind with proactive technical care.</p>
-                        <ul class="deliverables">
-                            <li><i class="fas fa-check"></i> Weekly Automated Backups</li>
-                            <li><i class="fas fa-check"></i> Speed & SEO Enhancements</li>
-                            <li><i class="fas fa-check"></i> Security Patching</li>
-                        </ul>
+
+                    <!-- S3 -->
+                    <div class="bg-zinc-800 p-12 rounded-[4rem] border border-white/5 reveal group">
+                        <i class="fas fa-server text-5xl opacity-30 mb-8 group-hover:text-accent-blue transition-colors"></i>
+                        <h3 class="text-3xl font-bold mb-4">Tech Maintenance</h3>
+                        <p class="text-lg text-platinum/50 leading-relaxed">Never worry about your site being down. We handle uptime, speed optimization, and weekly updates.</p>
                     </div>
-                    <div class="service-card wide reveal">
-                        <i class="fas fa-envelope-open-text"></i>
-                        <h3>Professional Infrastructure</h3>
-                        <p>Complete business communication and setup management.</p>
-                        <ul class="deliverables">
-                            <li><i class="fas fa-check"></i> Domain Registration & DNS Setup</li>
-                            <li><i class="fas fa-check"></i> Business Email (Workspace/Outlook)</li>
-                            <li><i class="fas fa-check"></i> Google Workspace Management</li>
-                        </ul>
+
+                    <!-- S4 -->
+                    <div class="md:col-span-2 bg-bright-snow text-carbon-black p-12 rounded-[4rem] reveal">
+                        <div class="flex flex-col md:flex-row gap-12 items-center">
+                            <div class="flex-1 text-center md:text-left">
+                                <h3 class="text-4xl font-black mb-6 italic tracking-tighter">Enterprise Infrastructure</h3>
+                                <p class="text-xl opacity-70 leading-relaxed mb-6">From Domain registration to setting up Microsoft 365 or Google Workspace. We professionalize your communication.</p>
+                                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                                    <span class="bg-carbon-black text-white px-4 py-2 rounded-xl text-sm font-bold">DNS Security</span>
+                                    <span class="bg-carbon-black text-white px-4 py-2 rounded-xl text-sm font-bold">Business Emails</span>
+                                    <span class="bg-carbon-black text-white px-4 py-2 rounded-xl text-sm font-bold">SaaS Setup</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Our Approach -->
-        <section id="approach">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Our Approach</h2>
-                    <p>A systematic roadmap from initial concept to digital dominance.</p>
+        <section class="py-24 px-6 bg-zinc-950/50" id="approach">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter italic">OUR PROCESS.</h2>
                 </div>
-                <div class="approach-steps">
-                    <div class="step-card reveal">
-                        <div class="step-num">01</div>
-                        <h4>Discovery</h4>
-                        <p>We analyze your brand DNA, competition, and goals to build a strategic foundation.</p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="relative p-10 bg-gunmetal rounded-3xl reveal group hover:bg-zinc-800 transition-colors">
+                        <span class="text-7xl font-black opacity-5 absolute top-4 right-8 group-hover:opacity-20">01</span>
+                        <h4 class="text-2xl font-bold mb-4">Discovery</h4>
+                        <p class="text-platinum/60 leading-relaxed text-lg">Deep dive into your brand DNA, competitors, and goals.</p>
                     </div>
-                    <div class="step-card reveal">
-                        <div class="step-num">02</div>
-                        <h4>Design</h4>
-                        <p>High-fidelity prototyping focusing on user psychology and modern aesthetics.</p>
+                    <div class="relative p-10 bg-gunmetal rounded-3xl reveal group hover:bg-zinc-800 transition-colors">
+                        <span class="text-7xl font-black opacity-5 absolute top-4 right-8 group-hover:opacity-20">02</span>
+                        <h4 class="text-2xl font-bold mb-4">Architecture</h4>
+                        <p class="text-platinum/60 leading-relaxed text-lg">Prototyping focusing on user psychology and flows.</p>
                     </div>
-                    <div class="step-card reveal">
-                        <div class="step-num">03</div>
-                        <h4>Development</h4>
-                        <p>Writing clean, scalable code and integrating AI modules for functionality.</p>
+                    <div class="relative p-10 bg-gunmetal rounded-3xl reveal group hover:bg-zinc-800 transition-colors">
+                        <span class="text-7xl font-black opacity-5 absolute top-4 right-8 group-hover:opacity-20">03</span>
+                        <h4 class="text-2xl font-bold mb-4">Execution</h4>
+                        <p class="text-platinum/60 leading-relaxed text-lg">Writing clean, scalable code with AI integrations.</p>
                     </div>
-                    <div class="step-card reveal">
-                        <div class="step-num">04</div>
-                        <h4>Optimization</h4>
-                        <p>Rigorous testing, SEO indexing, and performance tuning for launch.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose F9XR Team? -->
-        <section id="why">
-            <div class="container">
-                <div class="why-box">
-                    <div class="reveal">
-                        <div class="section-header">
-                            <span class="tagline">The Advantage</span>
-                            <h2>Why Choose F9XR Team?</h2>
-                            <p>We grow with our clients — not just deliver and disappear.</p>
-                        </div>
-                        <ul class="why-points">
-                            <li><i class="fas fa-user-friends"></i> <div><h4>Personal Attention</h4><p>Small team, deep commitment. You talk directly to us.</p></div></li>
-                            <li><i class="fas fa-wallet"></i> <div><h4>Affordable Pricing</h4><p>Premium agency results at local business friendly rates.</p></div></li>
-                            <li><i class="fas fa-rocket"></i> <div><h4>Fast Delivery</h4><p>Ready to launch in 10-14 days with zero fluff.</p></div></li>
-                        </ul>
-                    </div>
-                    <div class="reveal">
-                        <div class="service-card" style="background: var(--bright-snow); color: var(--carbon-black); text-align: center;">
-                            <i class="fas fa-award" style="color: var(--carbon-black); font-size: 5rem;"></i>
-                            <h3 style="font-size: 2.5rem; margin: 20px 0;">Result-Focused</h3>
-                            <p style="color: var(--slate-grey);">We provide free guidance even after project delivery to ensure long-term ROI.</p>
-                        </div>
+                    <div class="relative p-10 bg-gunmetal rounded-3xl reveal group hover:bg-zinc-800 transition-colors">
+                        <span class="text-7xl font-black opacity-5 absolute top-4 right-8 group-hover:opacity-20">04</span>
+                        <h4 class="text-2xl font-bold mb-4">Growth</h4>
+                        <p class="text-platinum/60 leading-relaxed text-lg">Launch, SEO indexing, and performance monitoring.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-         <!-- Featured Works (Improved Browser Style) -->
-        <section id="portfolio">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="tagline">Our Work</span>
-                    <h2>Featured Success Stories</h2>
-                </div>
-                <div class="work-grid">
-                    <a href="https://ttearncrypto.github.io/dashboards" target="_blank" class="browser-card reveal">
-                        <div class="browser-header">
-                            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-                        </div>
-                        <div class="browser-body">
-                            <i class="fas fa-chart-line"></i>
-                            <div class="browser-overlay"><h4>TT Earn Crypto</h4></div>
-                        </div>
-                        <div class="work-info">
-                            <p style="font-size: 0.9rem; color: var(--pale-slate-2);">Fintech Dashboard Architecture</p>
-                        </div>
-                    </a>
-                    <a href="https://vroai.in" target="_blank" class="browser-card reveal">
-                        <div class="browser-header">
-                            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-                        </div>
-                        <div class="browser-body">
-                            <i class="fas fa-brain"></i>
-                            <div class="browser-overlay"><h4>VRO AI</h4></div>
-                        </div>
-                        <div class="work-info">
-                            <p style="font-size: 0.9rem; color: var(--pale-slate-2);">AI-Driven Platform Interface</p>
-                        </div>
-                    </a>
-                    <a href="https://foilai.in" target="_blank" class="browser-card reveal">
-                        <div class="browser-header">
-                            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-                        </div>
-                        <div class="browser-body">
-                            <i class="fas fa-microchip"></i>
-                            <div class="browser-overlay"><h4>Foil AI</h4></div>
-                        </div>
-                        <div class="work-info">
-                            <p style="font-size: 0.9rem; color: var(--pale-slate-2);">Automated Branding Solutions</p>
-                        </div>
-                    </a>
-                    <a href="https://dfamo.co.uk" target="_blank" class="browser-card reveal">
-                        <div class="browser-header">
-                            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-                        </div>
-                        <div class="browser-body">
-                            <i class="fas fa-shopping-bag"></i>
-                            <div class="browser-overlay"><h4>DFAMO</h4></div>
-                        </div>
-                        <div class="work-info">
-                            <p style="font-size: 0.9rem; color: var(--pale-slate-2);">E-commerce Strategy & Design</p>
-                        </div>
-                    </a>
-                </div>
-                <div style="text-align: center; margin-top: 50px;">
-                    <a href="/portfolio.html" class="btn btn-outline">View Our Portfolio <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Testimonials -->
-        <section id="testimonials">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="tagline">Reviews</span>
-                    <h2>What Our Clients Say</h2>
-                </div>
-                <div class="services-bento">
-                    <div class="service-card reveal">
-                        <div style="color:gold; margin-bottom: 20px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p>"F9XR Team fixed our clinic's local SEO. We are finally visible to people searching for doctors in our area. Incredible growth."</p>
-                        <h4 style="margin-top: 20px;">- Dr. Arshdeep</h4>
+        
+        <!-- Portfolio Browser -->
+        <section class="py-32 px-6 bg-zinc-950" id="portfolio">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
+                    <div>
+                        <span class="text-accent-blue font-bold tracking-widest uppercase mb-4 block">Our Work</span>
+                        <h2 class="text-6xl md:text-8xl font-black tracking-tighter">FEATURED.</h2>
                     </div>
-                    <div class="service-card reveal">
-                        <div style="color:gold; margin-bottom: 20px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p>"The best maintenance package I've ever had. Speed is insane and backups are automated. Peace of mind found."</p>
-                        <h4 style="margin-top: 20px;">- Sarah Jenkins</h4>
-                    </div>
+                    <a href="#" class="text-xl font-bold border-b-2 border-white pb-2 hover:opacity-50 transition-opacity">View All Projects</a>
                 </div>
-            </div>
-        </section>
 
-         <!-- Pricing -->
-        <section id="pricing">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="tagline">Pricing</span>
-                    <h2>Transparent Tiers</h2>
-                </div>
-                <div class="price-grid">
-                    <div class="price-card reveal">
-                        <h3>Starter Website</h3>
-                        <p>Best for small businesses.</p>
-                        <ul class="feat-list" style="margin: 30px 0;">
-                            <li><i class="fas fa-check"></i> WordPress Build</li>
-                            <li><i class="fas fa-check"></i> Basic Local SEO</li>
-                        </ul>
-                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-outline" style="width: 100%; justify-content: center;">Get Quote</a>
-                    </div>
-                    <div class="price-card featured reveal">
-                        <h3>Growth Pack</h3>
-                        <p>The total business solution.</p>
-                        <ul class="feat-list" style="margin: 30px 0;">
-                            <li><i class="fas fa-check"></i> Premium Design</li>
-                            <li><i class="fas fa-check"></i> Advanced SEO + GMB</li>
-                            <li><i class="fas fa-check"></i> Email Infrastructure</li>
-                        </ul>
-                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-primary" style="width: 100%; justify-content: center;">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section (Dual Mode) -->
-        <section id="contact">
-            <div class="container">
-                <div class="contact-box reveal">
-                    <div class="section-header" style="text-align: center; margin-inline: auto;">
-                        <h2>Get Your Free Website Audit</h2>
-                        <p>Start your growth journey today.</p>
-                    </div>
-
-                    <div class="toggle-nav">
-                        <div class="toggle-btn active" id="btnEmail" onclick="setContactMode('email')">Email Form</div>
-                        <div class="toggle-btn" id="btnWA" onclick="setContactMode('wa')">WhatsApp Link</div>
-                    </div>
-
-                    <div id="emailView">
-                        <form onsubmit="event.preventDefault(); alert('Demo: Message Sent!');">
-                            <div class="form-row">
-                                <div class="form-group"><input type="text" placeholder="Full Name" required></div>
-                                <div class="form-group"><input type="email" placeholder="Email Address" required></div>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Browser Card -->
+                    <div class="group reveal">
+                        <div class="bg-gunmetal rounded-t-3xl border border-white/10 p-4 flex gap-2 items-center">
+                            <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                            <div class="ml-4 bg-carbon-black/50 px-4 py-1 rounded text-[10px] text-platinum/40 w-full max-w-xs uppercase tracking-widest font-bold">https://ttearncrypto.github.io/</div>
+                        </div>
+                        <div class="bg-zinc-800 aspect-video rounded-b-3xl border-x border-b border-white/10 flex items-center justify-center relative overflow-hidden group-hover:border-white/40 transition-colors">
+                            <i class="fas fa-chart-line text-8xl opacity-5 group-hover:scale-110 transition-transform duration-700"></i>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-10 translate-y-4 group-hover:translate-y-0 transition-transform">
+                                <h4 class="text-3xl font-black mb-2">TT Earn Crypto</h4>
+                                <p class="text-platinum/60 text-lg uppercase tracking-widest">Fintech Architecture</p>
                             </div>
-                            <div class="form-group" style="margin-bottom: 20px;">
-                                <textarea placeholder="How can we help you?" rows="5"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
-                        </form>
+                        </div>
                     </div>
 
-                    <div id="waView" style="display: none; text-align: center;">
-                        <p style="margin-bottom: 30px; color: var(--pale-slate-2);">Direct chat with our strategy team.</p>
-                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-primary" style="background: #25D366; color: white; border: none;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                    <!-- Browser Card 2 -->
+                    <div class="group reveal">
+                        <div class="bg-gunmetal rounded-t-3xl border border-white/10 p-4 flex gap-2 items-center">
+                            <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                            <div class="ml-4 bg-carbon-black/50 px-4 py-1 rounded text-[10px] text-platinum/40 w-full max-w-xs uppercase tracking-widest font-bold">https://vroai.in/</div>
+                        </div>
+                        <div class="bg-zinc-800 aspect-video rounded-b-3xl border-x border-b border-white/10 flex items-center justify-center relative overflow-hidden group-hover:border-white/40 transition-colors">
+                            <i class="fas fa-brain text-8xl opacity-5 group-hover:scale-110 transition-transform duration-700"></i>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-10 translate-y-4 group-hover:translate-y-0 transition-transform">
+                                <h4 class="text-3xl font-black mb-2">VRO AI</h4>
+                                <p class="text-platinum/60 text-lg uppercase tracking-widest">AI Platform Interface</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-32 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic">PRICING.</h2>
+                    <p class="text-2xl text-platinum/60 max-w-2xl mx-auto">Transparent tiers for businesses at every stage of growth.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div class="bg-gunmetal p-12 md:p-16 rounded-[4rem] border border-white/5 reveal">
+                        <h3 class="text-3xl font-bold mb-4">Starter Website</h3>
+                        <p class="text-xl text-platinum/50 mb-10 italic">Perfect for new businesses.</p>
+                        <ul class="space-y-6 mb-12">
+                            <li class="text-xl flex items-center gap-4"><i class="fas fa-check text-accent-blue"></i> WordPress Build</li>
+                            <li class="text-xl flex items-center gap-4"><i class="fas fa-check text-accent-blue"></i> Basic Local SEO</li>
+                            <li class="text-xl flex items-center gap-4"><i class="fas fa-check text-accent-blue"></i> 100% Ownership</li>
+                        </ul>
+                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="block text-center border-2 border-white py-5 rounded-2xl font-black text-xl hover:bg-white hover:text-carbon-black transition-all">GET QUOTE</a>
+                    </div>
+
+                    <div class="bg-bright-snow text-carbon-black p-12 md:p-16 rounded-[4rem] reveal relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-accent-blue text-white px-10 py-2 font-black uppercase tracking-widest text-sm rotate-45 translate-x-8 translate-y-8">Popular</div>
+                        <h3 class="text-3xl font-black mb-4">Growth Pack</h3>
+                        <p class="text-xl opacity-60 mb-10 italic">The complete digital takeover.</p>
+                        <ul class="space-y-6 mb-12">
+                            <li class="text-xl flex items-center gap-4 font-bold"><i class="fas fa-check text-accent-blue"></i> Premium Design</li>
+                            <li class="text-xl flex items-center gap-4 font-bold"><i class="fas fa-check text-accent-blue"></i> Advanced SEO + GMB</li>
+                            <li class="text-xl flex items-center gap-4 font-bold"><i class="fas fa-check text-accent-blue"></i> Email Infrastructure</li>
+                        </ul>
+                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="block text-center bg-carbon-black text-white py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-xl">HIRE US NOW</a>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- FAQ Section -->
-        <section id="faq">
-            <div class="container">
-                <div class="section-header reveal" style="text-align: center; margin-inline: auto;">
-                    <span class="tagline">Common Questions</span>
-                    <h2>Clear Answers</h2>
+        <!-- Reviews -->
+        <section id="reviews" class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16 text-center reveal">
+                    <h2 class="text-5xl font-black tracking-tighter">WHAT CLIENTS SAY.</h2>
                 </div>
-                <div class="faq-box">
-                    <div class="faq-item reveal">
-                        <div class="faq-trigger">How long does a project take? <i class="fas fa-plus"></i></div>
-                        <div class="faq-content"><p style="padding-bottom: 25px;">A standard business website typically takes 10–14 days. Complex sites with full SEO and integrations take about 3-4 weeks.</p></div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div class="bg-zinc-900 p-12 rounded-[3rem] border border-white/5 reveal">
+                        <div class="flex text-yellow-500 mb-6 gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-xl italic text-platinum/80 mb-8 leading-relaxed">"F9XR Team fixed our clinic's local SEO. We are finally visible to people searching for doctors in our area. Incredible growth in just 3 weeks."</p>
+                        <h4 class="font-black text-lg uppercase tracking-widest text-accent-blue">— Dr. Arshdeep</h4>
                     </div>
-                    <div class="faq-item reveal">
-                        <div class="faq-trigger">What is included in the Monthly Care? <i class="fas fa-plus"></i></div>
-                        <div class="faq-content"><p style="padding-bottom: 25px;">Everything you need to stay online: Uptime monitoring, weekly automated backups, security patches, speed optimization, and content updates.</p></div>
+                    <div class="bg-zinc-900 p-12 rounded-[3rem] border border-white/5 reveal">
+                        <div class="flex text-yellow-500 mb-6 gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-xl italic text-platinum/80 mb-8 leading-relaxed">"The maintenance package is a lifesaver. Speed is insane and the automated backups give me total peace of mind for my e-commerce brand."</p>
+                        <h4 class="font-black text-lg uppercase tracking-widest text-accent-blue">— Sarah Jenkins</h4>
                     </div>
-                    <div class="faq-item reveal">
-                        <div class="faq-trigger">Do I own the website? <i class="fas fa-plus"></i></div>
-                        <div class="faq-content"><p style="padding-bottom: 25px;">Yes, 100%. Once final payment is made, all intellectual property and access codes are handed over to you.</p></div>
+                </div>
+            </div>
+        </section>
+        
+         <!-- FAQ Section -->
+        <section class="py-32 px-6 max-w-4xl mx-auto" id="faq">
+            <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-16 italic text-center text-stroke">FAQ.</h2>
+            <div class="space-y-4">
+                <div class="faq-item group bg-zinc-900 border border-white/5 rounded-3xl transition-all reveal">
+                    <button onclick="toggleFAQ(this)" class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                        How long does a project take?
+                        <i class="fas fa-plus transition-transform group-[.open]:rotate-45"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                            A standard business website typically takes 10–14 days. Complex sites with full SEO and integrations take about 3-4 weeks.
+                        </div>
                     </div>
-                    <div class="faq-item reveal">
-                        <div class="faq-trigger">Can you fix my current slow website? <i class="fas fa-plus"></i></div>
-                        <div class="faq-content"><p style="padding-bottom: 25px;">Absolutely. We offer a specific optimization service that focuses on improving Core Web Vitals and load speed.</p></div>
+                </div>
+                
+                <div class="faq-item group bg-zinc-900 border border-white/5 rounded-3xl transition-all reveal">
+                    <button onclick="toggleFAQ(this)" class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                        Do I own the website?
+                        <i class="fas fa-plus transition-transform group-[.open]:rotate-45"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                            Yes, 100%. Once final payment is made, all intellectual property and access codes are handed over to you immediately.
+                        </div>
                     </div>
+                </div>
+
+                <div class="faq-item group bg-zinc-900 border border-white/5 rounded-3xl transition-all reveal">
+                    <button onclick="toggleFAQ(this)" class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                        What is Monthly Care?
+                        <i class="fas fa-plus transition-transform group-[.open]:rotate-45"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                            Everything needed to stay online: Uptime monitoring, weekly backups, security patches, and minor content updates.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-32 px-6 bg-zinc-950">
+            <div class="max-w-4xl mx-auto bg-gunmetal p-12 md:p-20 rounded-[4rem] border border-white/10 reveal shadow-2xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-4 leading-none">LET'S BUILD.</h2>
+                    <p class="text-xl text-platinum/50 italic">Start with a free website audit.</p>
+                </div>
+
+                <div class="flex bg-carbon-black/50 p-2 rounded-full w-fit mx-auto mb-16 border border-white/5">
+                    <button onclick="setContactMode('email')" id="btnEmail" class="px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest transition-all bg-bright-snow text-carbon-black shadow-xl">Email</button>
+                    <button onclick="setContactMode('wa')" id="btnWA" class="px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest transition-all text-platinum">WhatsApp</button>
+                </div>
+
+                <div id="emailView" class="space-y-6">
+                    <form class="grid sm:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Full Name" class="bg-carbon-black border border-white/10 p-6 rounded-2xl outline-none focus:border-white transition-all text-lg col-span-2 md:col-span-1">
+                        <input type="email" placeholder="Email Address" class="bg-carbon-black border border-white/10 p-6 rounded-2xl outline-none focus:border-white transition-all text-lg col-span-2 md:col-span-1">
+                        <textarea placeholder="Your Vision..." rows="4" class="bg-carbon-black border border-white/10 p-6 rounded-2xl outline-none focus:border-white transition-all text-lg col-span-2"></textarea>
+                        <button class="bg-bright-snow text-carbon-black py-6 rounded-2xl font-black text-2xl hover:scale-105 transition-all col-span-2 uppercase">Send Message</button>
+                    </form>
+                </div>
+
+                <div id="waView" class="hidden text-center py-10">
+                    <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="inline-flex items-center gap-6 bg-[#25D366] text-white px-12 py-8 rounded-3xl font-black text-3xl hover:scale-105 transition-transform shadow-2xl">
+                        <i class="fab fa-whatsapp"></i> Chat Direct
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer-main">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-logo">F9XR Team</div>
-                <div class="footer-cols">
-                    <div class="footer-col">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="#portfolio">Projects</a></li>
-                            <li><a href="#approach">Process</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">Twitter</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Shortcuts</h4>
-                        <div class="kbd-guide">
-                            <div class="kbd-row"><span>Home</span><span class="key">H</span></div>
-                            <div class="kbd-row"><span>Services</span><span class="key">S</span></div>
-                            <div class="kbd-row"><span>Work</span><span class="key">P</span></div>
-                            <div class="kbd-row"><span>Contact</span><span class="key">C</span></div>
-                            <div class="kbd-row"><span>Listen</span><span class="key">L</span></div>
-                            <div class="kbd-row"><span>Top</span><span class="key">T</span></div>
-                        </div>
+    <!-- === ENHANCED FOOTER === -->
+    <footer class="bg-zinc-950 pt-32 pb-12 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+        
+        <!-- Footer Top: CTA -->
+            <div class="flex flex-col lg:flex-row justify-between items-center mb-24 gap-12 bg-gunmetal p-12 md:p-20 rounded-[4rem] reveal">
+                <div>
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-4 italic leading-none">READY TO <br> START?</h2>
+                    <p class="text-2xl text-platinum/50 font-medium">Let's build something iconic together.</p>
+                </div>
+                <a href="#contact" class="w-32 h-32 md:w-56 md:h-56 bg-bright-snow rounded-full flex items-center justify-center text-carbon-black font-black text-2xl md:text-3xl hover:scale-110 hover:rotate-12 transition-all shadow-2xl uppercase text-center p-4">Hire <br> Team</a>
+            </div>
+            
+            <div class="grid lg:grid-cols-4 gap-16 mb-24">
+                <div class="lg:col-span-2">
+                    <h3 class="text-5xl font-black mb-8 italic tracking-tighter">F9XR TEAM.</h3>
+                    <p class="text-xl text-platinum/50 leading-relaxed max-w-sm mb-10">A creative studio crafting high-end digital experiences for growth-focused brands.</p>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/f9xr/f9xr.github.io" target="_blank" class="bg-white/5 px-6 py-3 rounded-xl border border-white/5 font-bold hover:bg-white/10 transition-colors flex items-center gap-3">
+                            <i class="fab fa-github"></i> Open Source
+                        </a>
                     </div>
                 </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-black text-iron-grey mb-8">Meet the Team</h4>
+                    <ul class="space-y-6 font-bold text-lg text-platinum/80">
+                        <li><a href="https://inakm.github.io" target="_blank" class="hover:text-accent-blue transition-colors flex items-center gap-2">AKM <i class="fas fa-external-link-alt text-[10px] opacity-40"></i></a></li>
+                        <li><a href="https://aryansh.site" target="_blank" class="hover:text-accent-blue transition-colors flex items-center gap-2">Aryansh <i class="fas fa-external-link-alt text-[10px] opacity-40"></i></a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-black text-iron-grey mb-8">Navigation</h4>
+                    <ul class="space-y-4 font-bold text-lg text-platinum/60">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-bottom">
-                <p>2025 F9XR Team. All rights reserved.</p>
-                <div style="display: flex; gap: 30px;">
-                    <a href="agreement.html" style="color: inherit; text-decoration: none;">Privacy Policy</a>
-                    <a href="agreement.html" style="color: inherit; text-decoration: none;">Terms of Service</a>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 opacity-40 hover:opacity-100 transition-opacity">
+                <p class="font-bold">&copy; 2025 F9XR Team. Built with Precision.</p>
+                <div class="flex gap-8 font-black tracking-widest uppercase text-xs">
+                    <span class="flex items-center gap-2 italic">Remote Global</span>
+                    <span class="flex items-center gap-2 italic text-accent-blue uppercase">Est. 2024</span>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- === SCRIPTS === -->
     <script>
-        // --- Utilities ---
-        const btt = document.getElementById("backToTop");
-        window.onscroll = () => { btt.style.display = (window.scrollY > 600) ? "flex" : "none"; };
-        btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+        // Efficient Scroll Reveal using Intersection Observer
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        function copyEmail() {
-            navigator.clipboard.writeText('tontufytservices@gmail.com');
-            const toast = document.getElementById('toast');
-            toast.style.display = 'block';
-            setTimeout(() => { toast.style.display = 'none'; }, 2500);
-        }
+        // Contact Toggle Logic
+        function setContactMode(mode) {
+            const emailView = document.getElementById('emailView');
+            const waView = document.getElementById('waView');
+            const btnEmail = document.getElementById('btnEmail');
+            const btnWA = document.getElementById('btnWA');
 
-        // --- Voice Mode ---
-        let synth = window.speechSynthesis;
-        let reading = false;
-        function toggleVoice() {
-            if (reading) { synth.cancel(); reading = false; document.getElementById('ttsToggle').innerHTML = '<i class="fas fa-volume-up"></i> Voice Mode'; }
-            else { 
-                const utter = new SpeechSynthesisUtterance(document.body.innerText); 
-                utter.onend = () => { reading = false; document.getElementById('ttsToggle').innerHTML = '<i class="fas fa-volume-up"></i> Voice Mode'; };
-                synth.speak(utter); reading = true; document.getElementById('ttsToggle').innerHTML = '<i class="fas fa-stop"></i> Stop Voice';
+            if(mode === 'email') {
+                emailView.classList.remove('hidden');
+                waView.classList.add('hidden');
+                btnEmail.className = 'px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest transition-all bg-bright-snow text-carbon-black shadow-xl';
+                btnWA.className = 'px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest transition-all text-platinum';
+            } else {
+                waView.classList.remove('hidden');
+                emailView.classList.add('hidden');
+                btnWA.className = 'px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest transition-all bg-bright-snow text-carbon-black shadow-xl';
+                btnEmail.className = 'px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest transition-all text-platinum';
             }
         }
-        document.getElementById('ttsToggle').onclick = toggleVoice;
-
-        // --- Accordions ---
-        document.querySelectorAll('.faq-trigger').forEach(f => {
-            f.onclick = () => {
-                const c = f.nextElementSibling;
-                const i = f.querySelector('i');
-                if(c.style.maxHeight) { c.style.maxHeight = null; i.className = "fas fa-plus"; }
-                else { c.style.maxHeight = c.scrollHeight + "px"; i.className = "fas fa-minus"; }
-            };
-        });
-
-                // Contact Mode
-        function setContactMode(m) {
-            document.getElementById('emailView').style.display = (m === 'email') ? 'block' : 'none';
-            document.getElementById('waView').style.display = (m === 'wa') ? 'block' : 'none';
-            document.getElementById('btnEmail').classList.toggle('active', m === 'email');
-            document.getElementById('btnWA').classList.toggle('active', m === 'wa');
+        
+        // FAQ Accordion
+        function toggleFAQ(button) {
+            const item = button.parentElement;
+            const isOpen = item.classList.contains('open');
+            
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            
+            // Toggle current
+            if (!isOpen) item.classList.add('open');
         }
 
-        // --- Shortcuts ---
+        // Back to Top button
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTop');
+            if (window.scrollY > 800) btn.classList.remove('hidden');
+            else btn.classList.add('hidden');
+        });
+        document.getElementById('backToTop').onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+
+        // Navigation Shortcut Keys
         window.addEventListener('keydown', (e) => {
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-            const k = e.key.toLowerCase();
-            const map = { 'h': '#home', 's': '#services', 'p': '#portfolio', 'c': '#contact' };
-            if (map[k]) { const target = document.querySelector(map[k]); window.scrollTo({top: target.offsetTop - 80, behavior: 'smooth'}); }
-            if (k === 'l') toggleVoice();
-            if (k === 't') window.scrollTo({top: 0, behavior: 'smooth'});
-        });
-
-        // --- Animations ---
-        document.addEventListener('DOMContentLoaded', () => {
-            const obs = new IntersectionObserver((es) => {
-                es.forEach(e => {
-                    if (e.isIntersecting) {
-                        anime({ targets: e.target, translateY: [40, 0], opacity: [0, 1], duration: 1000, easing: 'easeOutExpo' });
-                        obs.unobserve(e.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.reveal').forEach(el => { el.style.opacity = '0'; obs.observe(el); });
+            const key = e.key.toLowerCase();
+            const targets = { 'h': '#home', 's': '#services', 'p': '#portfolio', 'c': '#contact' };
+            if (targets[key]) {
+                const target = document.querySelector(targets[key]);
+                window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
+            }
         });
     </script>
 </body>
