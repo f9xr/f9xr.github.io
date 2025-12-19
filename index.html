@@ -3,12 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F9XR Team | Performance-Driven Digital Agency & SEO Architects</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="F9XR Team designs high-performance, AI-powered websites. Specialized in Local SEO, Maintenance, and Growth for global brands and local businesses.">
-    <meta name="keywords" content="F9XR Team, AI Web Design, Local SEO, Business Growth, Web Maintenance, UI/UX Agency">
     
+    <!-- === PRIMARY SEO META TAGS === -->
+<title>F9XR Team | AI-Powered Web Design & Local SEO Growth Agency</title>
+<meta name="title" content="F9XR Team | AI-Powered Web Design & Local SEO Growth Agency">
+<meta name="description" content="F9XR Team designs high-performance, AI-powered websites that drive measurable growth. Specialized in Local SEO, Monthly Maintenance, and UI/UX for global brands and local businesses.">
+<meta name="keywords" content="F9XR Team, AI Web Design, Local SEO Agency, WordPress Maintenance, Digital Marketing Studio, Website SEO Audit, Global Digital Agency">
+<meta name="author" content="F9XR Team">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<link rel="canonical" href="https://f9xr.github.io/"> 
+
+<!-- === OPEN GRAPH / FACEBOOK / LINKEDIN === -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://f9xr.github.io/"> 
+<meta property="og:title" content="F9XR Team | AI-Powered Web Design & Local SEO Growth Agency">
+<meta property="og:description" content="We build websites that grow businesses, not just look good. Specialized AI-powered architectures and Local SEO for Salons, Clinics, and Global Brands.">
+<meta property="og:image" content="https://yourdomain.com/og-image.jpg"> 
+
+<!-- === TWITTER === -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://f9xr.github.io/"> 
+<meta property="twitter:title" content="F9XR Team | AI-Powered Web Design & Local SEO Growth Agency">
+<meta property="twitter:description" content="High-performance, AI-powered websites that drive growth. Get your free website audit today.">
+<meta property="twitter:image" content="https://yourdomain.com/og-image.jpg"> 
+
+<!-- === MOBILE OPTIMIZATION === -->
+<meta name="theme-color" content="#212529"> <!-- Matches Carbon Black -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "F9XR Team",
+  "alternateName": "F9XR Digital",
+  "description": "Global digital agency and creative studio specializing in AI-powered web development, Local SEO, and monthly website maintenance.",
+  "url": "https://f9xr.github.io/",
+  "logo": "https://yourdomain.com/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "",
+    "contactType": "customer service",
+    "email": "tontufytservices@gmail.com",
+    "availableLanguage": "en"
+  },
+  "sameAs": [
+    "https://wa.me/message/X3KGWTAJ6Z6NB1",
+    "https://facebook.com/f9xrteam",
+    "https://instagram.com/f9xrteam",
+    "https://linkedin.com/company/f9xrteam"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Remote",
+    "addressCountry": "Global"
+  },
+  "serviceArea": "Worldwide",
+  "priceRange": "$$"
+}
+</script>
+
     <!-- External Dependencies -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -109,6 +166,20 @@
         .why-points li { display: flex; gap: 20px; margin-bottom: 35px; list-style: none; }
         .why-points i { font-size: 1.8rem; color: var(--bright-snow); }
 
+        /* --- Contact Form Section --- */
+        .contact-box { background: var(--gunmetal); border-radius: 40px; padding: 60px; border: 1px solid var(--iron-grey); max-width: 900px; margin: 0 auto; }
+        .toggle-nav { display: flex; gap: 10px; background: var(--carbon-black); padding: 6px; border-radius: 100px; width: fit-content; margin: 0 auto 40px; }
+        .toggle-btn { padding: 12px 25px; border-radius: 100px; cursor: pointer; transition: 0.3s; font-weight: 700; font-size: 0.85rem; }
+        .toggle-btn.active { background: var(--bright-snow); color: var(--carbon-black); }
+        
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 16px; background: var(--carbon-black); border: 1px solid var(--iron-grey); border-radius: 12px; color: white; outline: none; font-family: inherit; }
+
+        /* --- Pricing & FAQ --- */
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .price-card { background: var(--gunmetal); padding: 50px; border-radius: 40px; border: 1px solid var(--iron-grey); }
+        .price-card.featured { border-color: var(--bright-snow); background: var(--iron-grey); transform: scale(1.05); }
+
         /* --- Footer (Gretta Style) --- */
         .footer-main { padding: 100px 0 60px; background: var(--carbon-black); color: var(--bright-snow); }
         .footer-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 80px; flex-wrap: wrap; gap: 40px; }
@@ -119,6 +190,20 @@
         .footer-col li { margin-bottom: 15px; }
         .footer-col a { color: var(--bright-snow); text-decoration: none; font-size: 1.1rem; font-weight: 500; transition: var(--transition); opacity: 0.8; }
         .footer-col a:hover { opacity: 1; padding-left: 5px; }
+
+        /* --- Featured Works (Browser Style) --- */
+        .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 35px; }
+        .browser-card { 
+            background: var(--gunmetal); border-radius: 20px; overflow: hidden; border: 1px solid var(--iron-grey);
+            text-decoration: none; color: inherit; transition: var(--transition);
+        }
+        .browser-card:hover { transform: translateY(-10px); border-color: var(--bright-snow); }
+        .browser-header { background: #2a2e33; padding: 12px 15px; display: flex; gap: 8px; border-bottom: 1px solid var(--iron-grey); }
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--slate-grey); }
+        .browser-body { height: 280px; background: var(--carbon-black); display: flex; align-items: center; justify-content: center; position: relative; }
+        .browser-body i { font-size: 5rem; opacity: 0.05; }
+        .browser-overlay { position: absolute; bottom: 20px; left: 20px; }
+        .work-info { padding: 25px; }
         
         .kbd-guide { background: #1a1a1a; padding: 25px; border-radius: 20px; border: 1px solid var(--iron-grey); width: 280px; }
         .kbd-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.85rem; }
@@ -167,7 +252,7 @@
                 <a href="#pricing">Pricing</a>
                 <a href="#contact">Contact</a>
             </div>
-            <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-primary" style="padding: 10px 25px; font-size: 0.85rem;">Free Audit</a>
+            <a href="#contact" class="btn btn-primary" style="padding: 10px 25px; font-size: 0.85rem;">Hire Us!</a>
         </nav>
     </header>
 
@@ -176,7 +261,7 @@
         <section class="hero" id="home">
             <div class="container">
                 <div class="reveal">
-                    <span class="tagline">Global Growth Studio</span>
+                    <span class="tagline">Global Digital Studio</span>
                     <h1>EMPOWERING <br> <span class="accent">BRANDS.</span></h1>
                     <p class="hero-sub">We design and develop high-performance, AI-powered websites that drive growth, engagement, and measurable success for brands worldwide.</p>
                     <div style="display: flex; gap: 20px; flex-wrap: wrap;">
@@ -187,10 +272,10 @@
                 </div>
 
                 <div class="stats-grid reveal" style="margin-top: 80px;">
-                    <div class="stat-item"><h3>150+</h3><p>Global Projects</p></div>
-                    <div class="stat-item"><h3>$20M+</h3><p>Revenue Managed</p></div>
+                    <div class="stat-item"><h3>5+</h3><p>Global Projects</p></div>
+                    <div class="stat-item"><h3>$10k</h3><p>Ad Spend Managed</p></div>
                     <div class="stat-item"><h3>98%</h3><p>Retention Rate</p></div>
-                    <div class="stat-item"><h3>24/7</h3><p>Priority Care</p></div>
+                    <div class="stat-item"><h3>24/5</h3><p>Priority Care</p></div>
                 </div>
             </div>
         </section>
@@ -212,7 +297,7 @@
                                 <li><i class="fas fa-times-circle"></i> Losing leads to local competitors</li>
                                 <li><i class="fas fa-times-circle"></i> No automated online presence</li>
                             </ul>
-                            <p style="margin-top: 30px; font-weight: 700;">F9XR Team fixes all of this — simply & affordably.</p>
+                            <p style="margin-top: 30px; font-weight: 900;">F9XR Team fixes all of this — simply & affordably.</p>
                         </div>
                     </div>
                     <div class="reveal">
@@ -224,7 +309,8 @@
                             <div class="niche-item"><i class="fas fa-spa"></i><h4>Salons</h4></div>
                             <div class="niche-item"><i class="fas fa-user-md"></i><h4>Clinics</h4></div>
                             <div class="niche-item"><i class="fas fa-dumbbell"></i><h4>Gyms</h4></div>
-                            <div class="niche-item"><i class="fas fa-handshake"></i><h4>Services</h4></div>
+                            <div class="niche-item"><i class="fas fa-handshake"></i><h4>Local Services</h4></div>
+                            <div class="niche-item"><i class="fas fa-star"></i><h4>Influencers</h4></div>
                         </div>
                     </div>
                 </div>
@@ -240,10 +326,11 @@
                             <span class="tagline">Who We Are</span>
                             <h2>Architects of Digital Precision.</h2>
                         </div>
-                        <p style="font-size: 1.2rem; margin-bottom: 30px; color: var(--pale-slate);">Serving worldwide businesses and influencers with high-performance, AI-driven web architectures.</p>
+                        <p style="font-size: 1.2rem; margin-bottom: 30px; color: var(--pale-slate);">F9XR Team is more than a digital agency; we are your strategic partner in the digital landscape. Our mission is to bridge the gap between complex technology and human-centric design. Founded by architects and engineers, we bring a structural approach to web design, ensuring every pixel serves a purpose and every line of code drives performance.</p>
                         <ul class="problem-list" style="margin-bottom: 40px;">
                             <li><i class="fas fa-check-circle" style="color: var(--bright-snow);"></i> Monthly Care Packages</li>
                             <li><i class="fas fa-check-circle" style="color: var(--bright-snow);"></i> Results-Focused UI</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--bright-snow);"></i> Personal attention for every niche</li>
                         </ul>
                         <a href="#contact" class="btn btn-outline">Our Full Process <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -280,8 +367,8 @@
                 <div class="services-bento">
                     <div class="service-card wide reveal">
                         <i class="fas fa-laptop-code"></i>
-                        <h3>Business Websites (WordPress)</h3>
-                        <p>High-conversion WordPress architectures optimized for mobile and lead generation.</p>
+                        <h3>Business Websites</h3>
+                        <p>High-conversion WordPress/Blogger architectures optimized for mobile and lead generation.</p>
                         <ul class="deliverables">
                             <li><i class="fas fa-check"></i> Google Search Console Setup</li>
                             <li><i class="fas fa-check"></i> UI/UX Redesign & Improvement</li>
@@ -363,28 +450,69 @@
             </div>
         </section>
 
-        <!-- Portfolio -->
+         <!-- Featured Works (Improved Browser Style) -->
         <section id="portfolio">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="tagline">Case Studies</span>
-                    <h2>Featured Works</h2>
+                    <span class="tagline">Our Work</span>
+                    <h2>Featured Success Stories</h2>
                 </div>
-                <div class="problems-grid" style="margin-bottom: 40px;">
-                    <a href="https://ttearncrypto.github.io/dashboards" target="_blank" class="niche-item reveal">
-                        <i class="fas fa-chart-pie"></i>
-                        <h3>TT Earn Crypto</h3>
-                        <p>Fintech Dashboard Architecture</p>
+                <div class="work-grid">
+                    <a href="https://ttearncrypto.github.io/dashboards" target="_blank" class="browser-card reveal">
+                        <div class="browser-header">
+                            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        </div>
+                        <div class="browser-body">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="browser-overlay"><h4>TT Earn Crypto</h4></div>
+                        </div>
+                        <div class="work-info">
+                            <p style="font-size: 0.9rem; color: var(--pale-slate-2);">Fintech Dashboard Architecture</p>
+                        </div>
                     </a>
-                    <a href="https://vroai.in" target="_blank" class="niche-item reveal">
-                        <i class="fas fa-brain"></i>
-                        <h3>VRO AI</h3>
-                        <p>AI Interface & Branding</p>
+                    <a href="https://vroai.in" target="_blank" class="browser-card reveal">
+                        <div class="browser-header">
+                            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        </div>
+                        <div class="browser-body">
+                            <i class="fas fa-brain"></i>
+                            <div class="browser-overlay"><h4>VRO AI</h4></div>
+                        </div>
+                        <div class="work-info">
+                            <p style="font-size: 0.9rem; color: var(--pale-slate-2);">AI-Driven Platform Interface</p>
+                        </div>
+                    </a>
+                    <a href="https://foilai.in" target="_blank" class="browser-card reveal">
+                        <div class="browser-header">
+                            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        </div>
+                        <div class="browser-body">
+                            <i class="fas fa-microchip"></i>
+                            <div class="browser-overlay"><h4>Foil AI</h4></div>
+                        </div>
+                        <div class="work-info">
+                            <p style="font-size: 0.9rem; color: var(--pale-slate-2);">Automated Branding Solutions</p>
+                        </div>
+                    </a>
+                    <a href="https://dfamo.co.uk" target="_blank" class="browser-card reveal">
+                        <div class="browser-header">
+                            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        </div>
+                        <div class="browser-body">
+                            <i class="fas fa-shopping-bag"></i>
+                            <div class="browser-overlay"><h4>DFAMO</h4></div>
+                        </div>
+                        <div class="work-info">
+                            <p style="font-size: 0.9rem; color: var(--pale-slate-2);">E-commerce Strategy & Design</p>
+                        </div>
                     </a>
                 </div>
-                <div style="text-align: center;"><a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-outline">Request Full Portfolio</a></div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="/portfolio.html" class="btn btn-outline">View Our Portfolio <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </section>
+
 
         <!-- Testimonials -->
         <section id="testimonials">
@@ -408,45 +536,96 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
+         <!-- Pricing -->
+        <section id="pricing">
             <div class="container">
-                <div class="service-card reveal" style="max-width: 900px; margin: 0 auto; padding: 60px;">
-                    <div class="section-header" style="text-align: center; margin-inline: auto;">
-                        <h2>Start Your Audit</h2>
-                        <p>Contact us via your preferred method.</p>
+                <div class="section-header reveal">
+                    <span class="tagline">Pricing</span>
+                    <h2>Transparent Tiers</h2>
+                </div>
+                <div class="price-grid">
+                    <div class="price-card reveal">
+                        <h3>Starter Website</h3>
+                        <p>Best for small businesses.</p>
+                        <ul class="feat-list" style="margin: 30px 0;">
+                            <li><i class="fas fa-check"></i> WordPress Build</li>
+                            <li><i class="fas fa-check"></i> Basic Local SEO</li>
+                        </ul>
+                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-outline" style="width: 100%; justify-content: center;">Get Quote</a>
                     </div>
-                    
-                    <div id="emailZone" style="text-align: center; margin-bottom: 40px;">
-                        <h4 style="margin-bottom: 15px;">Official Email</h4>
-                        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                            <a href="mailto:tontufytservices@gmail.com" class="btn btn-primary">Mail To Us</a>
-                            <button onclick="copyEmail()" class="btn btn-outline">Copy Address <i class="fas fa-copy"></i></button>
-                        </div>
-                    </div>
-
-                    <div style="text-align: center;">
-                        <h4 style="margin-bottom: 15px;">Direct Chat</h4>
-                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-primary" style="background: #25D366; border: none; font-size: 1.2rem; width: 100%; justify-content: center;"><i class="fab fa-whatsapp"></i> WhatsApp Strategy Chat</a>
+                    <div class="price-card featured reveal">
+                        <h3>Growth Pack</h3>
+                        <p>The total business solution.</p>
+                        <ul class="feat-list" style="margin: 30px 0;">
+                            <li><i class="fas fa-check"></i> Premium Design</li>
+                            <li><i class="fas fa-check"></i> Advanced SEO + GMB</li>
+                            <li><i class="fas fa-check"></i> Email Infrastructure</li>
+                        </ul>
+                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-primary" style="width: 100%; justify-content: center;">Contact Us</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ -->
+        <!-- Contact Section (Dual Mode) -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-box reveal">
+                    <div class="section-header" style="text-align: center; margin-inline: auto;">
+                        <h2>Get Your Free Website Audit</h2>
+                        <p>Start your growth journey today.</p>
+                    </div>
+
+                    <div class="toggle-nav">
+                        <div class="toggle-btn active" id="btnEmail" onclick="setContactMode('email')">Email Form</div>
+                        <div class="toggle-btn" id="btnWA" onclick="setContactMode('wa')">WhatsApp Link</div>
+                    </div>
+
+                    <div id="emailView">
+                        <form onsubmit="event.preventDefault(); alert('Demo: Message Sent!');">
+                            <div class="form-row">
+                                <div class="form-group"><input type="text" placeholder="Full Name" required></div>
+                                <div class="form-group"><input type="email" placeholder="Email Address" required></div>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <textarea placeholder="How can we help you?" rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div id="waView" style="display: none; text-align: center;">
+                        <p style="margin-bottom: 30px; color: var(--pale-slate-2);">Direct chat with our strategy team.</p>
+                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="btn btn-primary" style="background: #25D366; color: white; border: none;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FAQ Section -->
         <section id="faq">
             <div class="container">
-                <div class="section-header reveal">
-                    <h2>FAQs</h2>
+                <div class="section-header reveal" style="text-align: center; margin-inline: auto;">
+                    <span class="tagline">Common Questions</span>
+                    <h2>Clear Answers</h2>
                 </div>
                 <div class="faq-box">
                     <div class="faq-item reveal">
-                        <div class="faq-trigger">What is included in the demo? <i class="fas fa-plus"></i></div>
-                        <div class="faq-content"><p style="padding-bottom: 25px;">We create a single-page concept design specifically for your business so you can see the F9XR quality before signing any agreements.</p></div>
+                        <div class="faq-trigger">How long does a project take? <i class="fas fa-plus"></i></div>
+                        <div class="faq-content"><p style="padding-bottom: 25px;">A standard business website typically takes 10–14 days. Complex sites with full SEO and integrations take about 3-4 weeks.</p></div>
                     </div>
                     <div class="faq-item reveal">
-                        <div class="faq-trigger">How much is Monthly Care? <i class="fas fa-plus"></i></div>
-                        <div class="faq-content"><p style="padding-bottom: 25px;">Pricing varies based on site complexity, but our base package covers backups, security, and minor updates at a flat monthly rate.</p></div>
+                        <div class="faq-trigger">What is included in the Monthly Care? <i class="fas fa-plus"></i></div>
+                        <div class="faq-content"><p style="padding-bottom: 25px;">Everything you need to stay online: Uptime monitoring, weekly automated backups, security patches, speed optimization, and content updates.</p></div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <div class="faq-trigger">Do I own the website? <i class="fas fa-plus"></i></div>
+                        <div class="faq-content"><p style="padding-bottom: 25px;">Yes, 100%. Once final payment is made, all intellectual property and access codes are handed over to you.</p></div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <div class="faq-trigger">Can you fix my current slow website? <i class="fas fa-plus"></i></div>
+                        <div class="faq-content"><p style="padding-bottom: 25px;">Absolutely. We offer a specific optimization service that focuses on improving Core Web Vitals and load speed.</p></div>
                     </div>
                 </div>
             </div>
@@ -533,6 +712,14 @@
                 else { c.style.maxHeight = c.scrollHeight + "px"; i.className = "fas fa-minus"; }
             };
         });
+
+                // Contact Mode
+        function setContactMode(m) {
+            document.getElementById('emailView').style.display = (m === 'email') ? 'block' : 'none';
+            document.getElementById('waView').style.display = (m === 'wa') ? 'block' : 'none';
+            document.getElementById('btnEmail').classList.toggle('active', m === 'email');
+            document.getElementById('btnWA').classList.toggle('active', m === 'wa');
+        }
 
         // --- Shortcuts ---
         window.addEventListener('keydown', (e) => {
