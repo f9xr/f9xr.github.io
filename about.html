@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- === PRIMARY SEO META TAGS === -->
+    <title>About F9XR Team | Global Digital Agency & Tech Architects</title>
+    <meta name="title" content="About F9XR Team | Global Digital Agency">
+    <meta name="description" content="Discover F9XR Team - a user-centric digital agency crafting high-performance websites, AI-powered SEO, and professional branding for global businesses.">
+    <meta name="keywords" content="F9XR Team, Digital Agency, Web Development, SEO Experts, Google Business Management, Global Tech Studio">
+    <meta name="author" content="F9XR Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- === SCHEMA MARKUP (JSON-LD) === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "F9XR Team",
+      "description": "Digital agency dedicated to crafting seamless and intuitive experiences through web development, SEO, and branding.",
+      "url": "https://f9xr.github.io/",
+      "logo": "https://f9xr.github.io/logo.png",
+      "priceRange": "$$",
+      "serviceType": ["Web Design", "SEO", "Maintenance", "Domain Setup"],
+      "areaServed": "Worldwide"
+    }
+    </script>
+
+    <!-- === FONTS & ICONS === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Montserrat strictly enforced with swap for performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- === TAILWIND CONFIG === -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'carbon-black': '#212529',
+                        'bright-snow': '#f8f9fa',
+                        'platinum': '#e9ecef',
+                        'iron-grey': '#495057',
+                        'gunmetal': '#343a40',
+                        'accent-blue': '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        /* Performance: Optimize font visibility */
+        @font-face { font-family: 'Montserrat'; font-display: swap; }
+        
+        body { background-color: #212529; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+        /* Floating Pill Header Glassmorphism */
+        .pill-header {
+            background: rgba(33, 37, 41, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Modern Scroll Progress */
+        #scroll-progress {
+            position: fixed; top: 0; left: 0; height: 3px;
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            z-index: 2000; width: 0%; transition: width 0.1s;
+        }
+
+        /* Reveal Animation Utility */
+        .reveal { opacity: 0; transform: translateY(30px); }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px #f8f9fa;
+            color: transparent;
+        }
+
+        /* Service Cards Bento Style */
+        .bento-card {
+            background: rgba(52, 58, 64, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bento-card:hover {
+            border-color: #3b82f6;
+            background: rgba(52, 58, 64, 0.6);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="text-bright-snow font-sans">
+
+    <div id="scroll-progress"></div>
+
+    <!-- === FLOATING PILL HEADER === -->
+    <header class="fixed top-6 left-0 right-0 z-[1000] px-4">
+        <nav class="pill-header max-w-4xl mx-auto rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="bg-bright-snow text-carbon-black w-8 h-8 rounded-full flex items-center justify-center font-black text-xs transition-transform group-hover:rotate-12">F9</div>
+                <span class="text-lg font-black tracking-tighter uppercase hidden sm:block">F9XR <span class="font-light opacity-60">Team</span></span>
+            </a>
+            <div class="flex gap-4 md:gap-8 font-bold text-[10px] tracking-[0.2em] uppercase">
+                <a href="#about" class="hover:text-accent-blue transition-colors">About</a>
+                <a href="#services" class="hover:text-accent-blue transition-colors">Services</a>
+                <a href="#tech" class="hover:text-accent-blue transition-colors hidden md:block">Tech</a>
+            </div>
+            <a href="/contact.html" class="bg-accent-blue text-white px-5 py-2 rounded-full font-bold text-[10px] tracking-widest uppercase hover:scale-105 transition-all">
+                Contact Us
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- === HERO SECTION === -->
+        <section class="min-h-[80vh] flex items-center pt-32 pb-20 px-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-full md:w-1/2 h-full opacity-10 pointer-events-none">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                    <path fill="#3b82f6" d="M45.7,-77.6C58.9,-71.5,69.1,-58,75.3,-43.3C81.5,-28.6,83.7,-12.7,82.2,2.9C80.7,18.5,75.4,33.7,66.8,47C58.1,60.2,46.1,71.5,32,77.5C17.9,83.6,1.8,84.4,-15.1,81.4C-31.9,78.5,-49.4,71.8,-62.1,60.1C-74.8,48.4,-82.6,31.7,-85.4,14.7C-88.3,-2.3,-86.1,-19.5,-79,-34.8C-71.9,-50.1,-59.8,-63.5,-45.7,-69.1C-31.6,-74.6,-15.8,-72.4,0.1,-72.6C16,-72.7,32.4,-83.8,45.7,-77.6Z" transform="translate(100 100)" />
+                </svg>
+            </div>
+
+            <div class="max-w-7xl mx-auto w-full relative z-10">
+                <div class="reveal">
+                    <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block">Architects of Digital Precision</span>
+                    <h1 class="text-6xl md:text-[8rem] font-black leading-[0.85] tracking-tighter mb-10">
+                        GLOBAL <br> <span class="text-stroke italic">IMPACT.</span>
+                    </h1>
+                    <p class="text-xl md:text-3xl text-platinum/80 max-w-3xl leading-relaxed mb-12">
+                        Crafting seamless and intuitive experiences that empower businesses to thrive in the digital age.
+                    </p>
+                    <div class="flex gap-6 items-center font-bold">
+                        <div class="w-12 h-[2px] bg-accent-blue"></div>
+                        <span class="text-sm tracking-widest uppercase text-iron-grey">Trusted Worldwide</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === ABOUT F9XR SECTION === -->
+        <section id="about" class="py-24 px-6 bg-zinc-900/40">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-tight">What is <br> F9XR Team?</h2>
+                    <p class="text-lg md:text-xl text-platinum/70 leading-relaxed mb-6">
+                        We offer a range of design and development services tailored to each client's specific needs. We take a user-centric design approach and use the latest design and development technologies to ensure that our products are functional and visually appealing. 
+                    </p>
+                    <p class="text-lg md:text-xl text-platinum/70 leading-relaxed mb-8">
+                        We prioritize <strong>performance, security, and scalability</strong>, employing robust development practices to ensure our products meet the highest quality standards globally.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <p class="text-3xl font-black text-accent-blue italic mb-1">500+</p>
+                            <p class="text-[10px] uppercase tracking-widest font-black opacity-50">Guaranteed Visitors</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-black text-accent-blue italic mb-1">Project</p>
+                            <p class="text-[10px] uppercase tracking-widest font-black opacity-50">Flat-Rate Billing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal group">
+                    <div class="relative bg-gunmetal p-12 rounded-[3rem] border border-white/5 overflow-hidden">
+                        <i class="fas fa-quote-left absolute top-8 right-8 text-6xl opacity-10 group-hover:scale-110 transition-transform"></i>
+                        <h4 class="text-2xl font-bold mb-6 italic">"We build websites that grow businesses, not just look good."</h4>
+                        <p class="text-platinum/60 leading-relaxed">Specialized AI-powered architectures and Local SEO for Salons, Clinics, Real Estate, and Global Brands.</p>
+                        <ul class="mt-8 space-y-3 font-bold text-sm">
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Coaches & Consultants</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Small Indian Businesses</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> NGOs & Gov Portals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === SERVICES BENTO GRID === -->
+        <section id="services" class="py-32 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 italic text-stroke uppercase">Our Services</h2>
+                    <p class="text-xl text-platinum/60">Find and convert new leads with digital mastery.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Service 1 -->
+                    <div class="bento-card p-10 rounded-[3rem] reveal">
+                        <i class="fas fa-laptop-code text-4xl text-accent-blue mb-8"></i>
+                        <h3 class="text-2xl font-black mb-4 tracking-tighter uppercase">Web Design & Development</h3>
+                        <p class="text-platinum/60 mb-6 leading-relaxed">Modern, responsive websites built with performance, accessibility, and scalability in mind. From sleek landing pages to complex platforms.</p>
+                        <div class="flex flex-wrap gap-2 text-[10px] font-black tracking-widest uppercase opacity-40">
+                            <span>HTML</span> <span>Tailwind</span> <span>WordPress</span>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bento-card p-10 rounded-[3rem] reveal lg:mt-12">
+                        <i class="fas fa-search-dollar text-4xl text-accent-blue mb-8"></i>
+                        <h3 class="text-2xl font-black mb-4 tracking-tighter uppercase">SEO Enhancing</h3>
+                        <p class="text-platinum/60 mb-6 leading-relaxed">Optimize your website to rank higher. Keyword research, metadata, performance tuning, and structural improvements for Google results.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bento-card p-10 rounded-[3rem] reveal">
+                        <i class="fas fa-server text-4xl text-accent-blue mb-8"></i>
+                        <h3 class="text-2xl font-black mb-4 tracking-tighter uppercase">Hosting & Maintenance</h3>
+                        <p class="text-platinum/60 mb-6 leading-relaxed">Reliable solutions including regular updates, uptime monitoring, bug fixes, and backups. Never worry about technical issues again.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bento-card p-10 rounded-[3rem] reveal">
+                        <i class="fas fa-at text-4xl text-accent-blue mb-8"></i>
+                        <h3 class="text-2xl font-black mb-4 tracking-tighter uppercase">Business Email & Setup</h3>
+                        <p class="text-platinum/60 mb-6 leading-relaxed">Custom professional email addresses (you@yourbusiness.com) to build trust and credibility. Hassle-free DNS & SSL setup.</p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="bento-card p-10 rounded-[3rem] reveal lg:mt-12">
+                        <i class="fas fa-map-marked-alt text-4xl text-accent-blue mb-8"></i>
+                        <h3 class="text-2xl font-black mb-4 tracking-tighter uppercase">Google Business Mastery</h3>
+                        <p class="text-platinum/60 mb-6 leading-relaxed">Increase local reach in Edmonton and abroad. Optimization for Google Maps, review management, and photo uploads.</p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="bento-card p-10 rounded-[3rem] reveal">
+                        <i class="fas fa-bullhorn text-4xl text-accent-blue mb-8"></i>
+                        <h3 class="text-2xl font-black mb-4 tracking-tighter uppercase">Digital Marketing & more...</h3>
+                        <p class="text-platinum/60 mb-6 leading-relaxed">Social media management, ad management, and branding. We push your site to the top of Google results with 2 months support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === TECH STACK & VALUES === -->
+        <section id="tech" class="py-24 px-6 bg-accent-blue">
+            <div class="max-w-7xl mx-auto text-carbon-black">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="reveal">
+                        <h2 class="text-5xl font-black tracking-tighter mb-8 italic uppercase">The F9XR Engine.</h2>
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-black text-xs uppercase tracking-[0.2em] mb-4 opacity-60">Tech Stack</h4>
+                                <ul class="font-bold space-y-2">
+                                    <li>Node.js / Node / PHP</li>
+                                    <li>Tailwind / Bootstrap</li>
+                                    <li>WordPress / WIX / WIX</li>
+                                    <li>AWS / Hostinger / Bluehost</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-xs uppercase tracking-[0.2em] mb-4 opacity-60">Success Vault</h4>
+                                <ul class="font-bold space-y-2">
+                                    <li>Full SEO Setup</li>
+                                    <li>Google Indexing</li>
+                                    <li>AdSense Approval Help</li>
+                                    <li>Earning Strategies</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal bg-carbon-black p-12 rounded-[4rem] text-bright-snow shadow-2xl">
+                        <h3 class="text-3xl font-black mb-6 tracking-tighter italic uppercase text-accent-blue">Our Guarantee.</h3>
+                        <p class="text-lg opacity-80 mb-8">We don't just sell services; we sell growth. Every project is handled with a "Skin in the Game" approach.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 bg-gunmetal p-4 rounded-2xl border border-white/5">
+                                <i class="fas fa-users text-2xl text-accent-blue"></i>
+                                <span class="font-bold">Guaranteed 500+ Organic Visitors</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-gunmetal p-4 rounded-2xl border border-white/5">
+                                <i class="fas fa-chart-line text-2xl text-accent-blue"></i>
+                                <span class="font-bold">2 Months Free Ranking Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === FINAL CTA SECTION === -->
+        <section class="py-32 px-6 text-center">
+            <div class="max-w-4xl mx-auto reveal">
+                <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-10 leading-none">READY TO <br> <span class="text-stroke italic">DOMINATE?</span></h2>
+                <p class="text-xl md:text-2xl text-platinum/60 mb-12 italic">Whether you are a local clinic in India or a global brand abroad, we have the architecture to help you scale.</p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="/contact.html" class="bg-bright-snow text-carbon-black px-12 py-6 rounded-full font-black text-xl hover:scale-105 transition-transform shadow-2xl">Start Project</a>
+                    <a href="mailto:tontufytservices@gmail.com" class="border border-iron-grey px-12 py-6 rounded-full font-black text-xl hover:bg-white hover:text-carbon-black transition-all">Send Email</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- === FOOTER === -->
+    <footer class="bg-zinc-950 pt-24 pb-12 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-20">
+                <div class="text-center md:text-left">
+                    <h3 class="text-4xl font-black italic tracking-tighter uppercase mb-2">F9XR Team.</h3>
+                    <p class="text-iron-grey font-bold tracking-widest text-[10px] uppercase">Crafting Digital Excellence Globally</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-blue hover:text-carbon-black transition-all"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-blue hover:text-carbon-black transition-all"><i class="fab fa-linkedin-in text-xl"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-blue hover:text-carbon-black transition-all"><i class="fab fa-twitter text-xl"></i></a>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-8">
+                <p class="text-iron-grey font-bold text-sm uppercase tracking-widest">&copy; 2025 F9XR Team. All rights reserved.</p>
+                <div class="flex gap-8 text-[10px] font-black uppercase tracking-[0.3em] text-iron-grey">
+                    <a href="/privacy.html" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="/terms.html" class="hover:text-white transition-colors">Terms</a>
+                    <a href="/agreement.html" class="hover:text-white transition-colors">Agreement</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === BACK TO TOP === -->
+    <button id="btt" class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-all shadow-2xl">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- === SCRIPTS === -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        // 1. Scroll Progress Bar Logic
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+
+            // 2. Back to Top Toggle
+            const btt = document.getElementById('btt');
+            if (window.scrollY > 800) btt.classList.remove('hidden');
+            else btt.classList.add('hidden');
+        });
+
+        document.getElementById('btt').onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+
+        // 3. Reveal Animations using Intersection Observer (Performance Optimized)
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    anime({
+                        targets: entry.target,
+                        translateY: [40, 0],
+                        opacity: [0, 1],
+                        duration: 1200,
+                        easing: 'easeOutExpo'
+                    });
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
