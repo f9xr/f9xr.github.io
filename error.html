@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- === PRIMARY SEO META TAGS === -->
+    <title>404 - Blueprints Not Found | F9XR Team</title>
+    <meta name="title" content="404 - Page Not Found | F9XR Team">
+    <meta name="description" content="The digital architecture you're looking for doesn't exist. Return to F9XR Team home for high-performance web design.">
+    <meta name="robots" content="noindex, follow"> 
+    <meta name="author" content="F9XR Team">
+
+    <!-- === SCHEMA MARKUP (JSON-LD) === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "404 Not Found - F9XR Team",
+      "description": "Error 404: Page not found on F9XR Team server.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "F9XR Team",
+        "url": "https://f9xr.github.io/"
+      }
+    }
+    </script>
+
+    <!-- === FONTS & ICONS === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- === TAILWIND CONFIG === -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'carbon-black': '#212529',
+                        'bright-snow': '#f8f9fa',
+                        'platinum': '#e9ecef',
+                        'iron-grey': '#495057',
+                        'gunmetal': '#343a40',
+                        'accent-blue': '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        /* Performance: Optimize font visibility and mitigate layout shifts */
+        @font-face { font-family: 'Montserrat'; font-display: swap; }
+        
+        body { background-color: #212529; -webkit-font-smoothing: antialiased; }
+
+        /* Floating Pill Header Glassmorphism */
+        .pill-header {
+            background: rgba(33, 37, 41, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Reveal Animation Utility */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .text-stroke { -webkit-text-stroke: 1px #f8f9fa; color: transparent; }
+
+        /* Glitchy Animation for 404 */
+        @keyframes pulse-stroke {
+            0%, 100% { -webkit-text-stroke: 1px #f8f9fa; }
+            50% { -webkit-text-stroke: 1px #3b82f6; }
+        }
+        .animate-stroke { animation: pulse-stroke 3s infinite ease-in-out; }
+
+        @media (max-width: 480px) {
+            .header-text { display: none; }
+            .pill-header { padding: 0.75rem 1.25rem; }
+        }
+    </style>
+</head>
+<body class="text-bright-snow font-sans selection:bg-accent-blue selection:text-white flex flex-col min-h-screen">
+
+    <!-- === FLOATING PILL HEADER === -->
+    <header class="fixed top-6 left-0 right-0 z-[1000] px-4">
+        <nav class="pill-header max-w-4xl mx-auto rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
+            <a href="https://f9xr.github.io/" class="flex items-center gap-3 group">
+                <div class="bg-bright-snow text-carbon-black w-10 h-10 rounded-full flex items-center justify-center font-black text-xs transition-transform group-hover:rotate-12">F9</div>
+                <span class="text-lg font-black tracking-tighter uppercase header-text">F9XR <span class="font-light opacity-60">Team</span></span>
+            </a>
+            
+            <a href="https://f9xr.github.io/" class="bg-accent-blue text-white px-6 py-2.5 rounded-full font-bold text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
+                <i class="fas fa-home mr-1"></i> Return Home
+            </a>
+        </nav>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center px-6 pt-32 pb-20">
+        <div class="max-w-4xl w-full text-center">
+            
+            <!-- 404 Visual -->
+            <div class="reveal mb-8">
+                <h1 class="text-9xl md:text-[15rem] font-black tracking-tighter leading-none animate-stroke italic text-stroke">404</h1>
+                <p class="text-iron-grey font-black uppercase tracking-[0.5em] text-xs md:text-sm mt-[-20px] md:mt-[-40px]">Blueprints Not Found</p>
+            </div>
+
+            <!-- Error Message -->
+            <div class="reveal">
+                <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-8 uppercase italic leading-tight">
+                    Lost in the <br> <span class="text-accent-blue">Digital Void?</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-platinum/60 font-medium leading-relaxed italic mb-12 max-w-2xl mx-auto">
+                    The architecture you're looking for doesn't exist or has been moved to a new digital dimension.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+                    <a href="/" class="bg-bright-snow text-carbon-black px-12 py-5 rounded-full font-black text-xl hover:scale-105 transition-all shadow-2xl">
+                        Back to Reality
+                    </a>
+                    <a href="/contact.html" target="_blank" class="border border-white/10 px-12 py-5 rounded-full font-black text-xl hover:bg-white hover:text-carbon-black transition-all">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Helpful Links -->
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] font-black uppercase tracking-widest text-iron-grey">
+                    <a href="/services.html" class="hover:text-accent-blue transition-colors underline underline-offset-4">Our Services</a>
+                    <a href="/about.html" class="hover:text-accent-blue transition-colors underline underline-offset-4">About Team</a>
+                    <a href="/projects.html" class="hover:text-accent-blue transition-colors underline underline-offset-4">Our Portfolio</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+   <!-- === FOOTER === -->
+    <footer class="bg-zinc-950 pt-32 pb-12 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+        
+        <!-- Footer Top: CTA -->
+            <div class="flex flex-col lg:flex-row justify-between items-center mb-24 gap-12 bg-gunmetal p-12 md:p-20 rounded-[4rem] reveal">
+                <div>
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-4 italic leading-none">READY TO <br> START?</h2>
+                    <p class="text-2xl text-platinum/50 font-medium">Let's build something iconic together.</p>
+                </div>
+                <a href="/contact.html" class="w-32 h-32 md:w-56 md:h-56 bg-bright-snow rounded-full flex items-center justify-center text-carbon-black font-black text-2xl md:text-3xl hover:scale-110 hover:rotate-12 transition-all shadow-2xl uppercase text-center p-4">Hire <br> Us</a>
+            </div>
+            
+            <div class="grid lg:grid-cols-4 gap-16 mb-24">
+                <div class="lg:col-span-2">
+                    <h3 class="text-5xl font-black mb-8 italic tracking-tighter">F9XR TEAM.</h3>
+                    <p class="text-xl text-platinum/50 leading-relaxed max-w-sm mb-10">A creative studio crafting high-end digital experiences for growth-focused brands.</p>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/f9xr/f9xr.github.io" target="_blank" class="bg-white/5 px-6 py-3 rounded-xl border border-white/5 font-bold hover:bg-white/10 transition-colors flex items-center gap-3">
+                            <i class="fab fa-github"></i> Open Source
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-black text-iron-grey mb-8">Meet the Team</h4>
+                    <ul class="space-y-6 font-bold text-lg text-platinum/80">
+                        <li><a href="https://inakm.github.io" target="_blank" class="hover:text-accent-blue transition-colors flex items-center gap-2">AKM <i class="fas fa-external-link-alt text-[10px] opacity-40"></i></a></li>
+                        <li><a href="https://aryansh.site" target="_blank" class="hover:text-accent-blue transition-colors flex items-center gap-2">Aryansh <i class="fas fa-external-link-alt text-[10px] opacity-40"></i></a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-black text-iron-grey mb-8">Navigation</h4>
+                    <ul class="space-y-4 font-bold text-lg text-platinum/60">
+                        <li><a href="/about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="/projects.html" class="hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="/contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 opacity-40 hover:opacity-100 transition-opacity">
+                <p class="font-bold">&copy; 2025 F9XR Team. Built with Precision.</p>
+                <div class="flex gap-8 font-black tracking-widest uppercase text-xs">
+                    <span class="flex items-center gap-2 italic">Remote Global</span>
+                    <span class="flex items-center gap-2 italic text-accent-blue uppercase">Est. 2024</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === BACK TO TOP === -->
+    <button id="btt" class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-all shadow-2xl">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- === SCRIPTS === -->
+    <script>
+        // Scroll Logic
+        window.addEventListener('scroll', () => {
+            const btt = document.getElementById('btt');
+            if (window.scrollY > 400) btt.classList.remove('hidden');
+            else btt.classList.add('hidden');
+        });
+
+        document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Reveal Animation using Intersection Observer
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>

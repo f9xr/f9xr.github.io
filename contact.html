@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- === PRIMARY SEO META TAGS === -->
+    <title>Contact Us | F9XR Team - Let’s Build Something Great</title>
+    <meta name="title" content="Contact Us | F9XR Team">
+    <meta name="description" content="Get a free consultation for your next project. Contact F9XR Team via Email, WhatsApp, Telegram, or Discord. We respond within 24 hours.">
+    <meta name="author" content="F9XR Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- === SCHEMA MARKUP === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "F9XR Team Contact",
+      "description": "Professional digital agency contact portal for F9XR Team.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "F9XR Team",
+        "logo": "https://f9xr.github.io/logo.png"
+      },
+      "mainEntity": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "tontufytservices@gmail.com",
+        "availableLanguage": "en",
+        "hoursAvailable": "Mo-Sa 10:00-19:00"
+      }
+    }
+    </script>
+
+    <!-- === FONTS & ICONS === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- === TAILWIND CONFIG === -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'carbon-black': '#212529',
+                        'bright-snow': '#f8f9fa',
+                        'platinum': '#e9ecef',
+                        'iron-grey': '#495057',
+                        'gunmetal': '#343a40',
+                        'accent-blue': '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        /* Performance: Optimize font visibility */
+        @font-face { font-family: 'Montserrat'; font-display: swap; }
+        
+        body { background-color: #212529; -webkit-font-smoothing: antialiased; }
+
+        /* Floating Pill Header Glassmorphism */
+        .pill-header {
+            background: rgba(33, 37, 41, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Modern Scroll Progress Bar */
+        #scroll-progress {
+            position: fixed; top: 0; left: 0; height: 3px;
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            z-index: 2000; width: 0%; transition: width 0.1s;
+        }
+
+        /* Reveal Animation Utility */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .text-stroke { -webkit-text-stroke: 1px #f8f9fa; color: transparent; }
+
+        /* Input Styling */
+        input, textarea {
+            background: rgba(52, 58, 64, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        input:focus, textarea:focus {
+            background: rgba(52, 58, 64, 0.6);
+            border-color: #3b82f6;
+            outline: none;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
+        }
+
+        /* Responsive Fix for Mobile Thumb-zone */
+        @media (max-width: 640px) {
+            .mobile-stack { flex-direction: column; }
+            .pill-header { padding: 0.75rem 1rem; width: 95%; }
+            .hero-text { font-size: 2.8rem !important; }
+        }
+    </style>
+</head>
+<body class="text-bright-snow font-sans selection:bg-accent-blue selection:text-white">
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- === FLOATING PILL HEADER === -->
+    <header class="fixed top-6 left-0 right-0 z-[1000] px-4">
+        <nav class="pill-header max-w-4xl mx-auto rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
+            <a href="https://f9xr.github.io/" class="flex items-center gap-3 group">
+                <div class="bg-bright-snow text-carbon-black w-10 h-10 rounded-full flex items-center justify-center font-black text-xs transition-transform group-hover:rotate-12 font-sans">F9</div>
+                <span class="text-lg font-black tracking-tighter uppercase hidden sm:block">F9XR <span class="font-light opacity-60">Team</span></span>
+            </a>
+            
+            <div class="flex gap-6 font-bold text-[10px] tracking-[0.2em] uppercase items-center">
+                <a href="https://f9xr.github.io/services" class="hover:text-accent-blue transition-colors">Services</a>
+                <a href="#contact-grid" class="text-accent-blue underline underline-offset-4">Let's Talk</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+        
+        <!-- === HERO SECTION === -->
+        <section class="mb-20 reveal text-center lg:text-left">
+            <div class="max-w-4xl">
+                <h1 class="hero-text text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8 uppercase italic">
+                    Let’s Build <br> <span class="text-stroke">Something Great.</span>
+                </h1>
+                <p class="text-xl md:text-3xl text-platinum/70 font-medium leading-relaxed italic max-w-2xl">
+                    Tell us about your project and we’ll get back to you within 24 hours. Friendly advice, high-performance results.
+                </p>
+            </div>
+        </section>
+
+        <div class="grid lg:grid-cols-5 gap-12 items-start mb-24" id="contact-grid">
+            
+            <!-- === LEFT: CONTACT FORM (3 Cols) === -->
+            <div class="lg:col-span-3 bg-gunmetal/20 border border-white/5 p-8 md:p-12 rounded-[3.5rem] shadow-2xl backdrop-blur-md reveal">
+                <form id="contact-form" onsubmit="return handleFormSubmit(event)">
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase font-bold tracking-widest opacity-40 ml-2 italic">Full Name *</label>
+                            <input type="text" name="name" placeholder="John Doe" required class="w-full p-5 rounded-2xl text-lg font-medium">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase font-bold tracking-widest opacity-40 ml-2 italic">Email Address *</label>
+                            <input type="email" name="email" placeholder="example@email.com" required class="w-full p-5 rounded-2xl text-lg font-medium">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase font-bold tracking-widest opacity-40 ml-2 italic">WhatsApp / Phone *</label>
+                            <input type="tel" name="phone" placeholder="+1 / +91 ..." required class="w-full p-5 rounded-2xl text-lg font-medium">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase font-bold tracking-widest opacity-40 ml-2 italic">Business Name (Optional)</label>
+                            <input type="text" name="business" placeholder="Your Brand" class="w-full p-5 rounded-2xl text-lg font-medium">
+                        </div>
+                        <div class="md:col-span-2 space-y-2">
+                            <label class="text-[10px] uppercase font-bold tracking-widest opacity-40 ml-2 italic">Project Details / Message</label>
+                            <textarea name="message" rows="5" placeholder="What can we build for you?" class="w-full p-6 rounded-3xl text-lg font-medium"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 p-6 bg-carbon-black rounded-3xl border border-white/5">
+                        <p class="text-[11px] md:text-sm text-platinum/50 leading-relaxed font-medium">
+                            By pressing submit, you acknowledge that you have read, understood, and agreed to our 
+                            <a href="https://f9xr.github.io/refund-policy" class="text-white underline">Refund & Cancellation Policy</a>, 
+                            <a href="https://f9xr.github.io/privacy" class="text-white underline">Privacy Policy</a>, 
+                            <a href="https://f9xr.github.io/terms" class="text-white underline">Terms of Service</a>, and 
+                            <a href="https://f9xr.github.io/agreement" class="text-white underline">Service Agreement</a>.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-6">
+                        <button type="submit" class="w-full bg-bright-snow text-carbon-black py-6 rounded-2xl font-black text-2xl uppercase tracking-tighter hover:scale-[1.02] transition-all shadow-2xl active:scale-95">
+                            Get Free Consultation
+                        </button>
+                        <p class="text-xs font-bold opacity-40 flex items-center gap-2">
+                            <i class="fas fa-lock text-accent-blue"></i> Your information is safe with us. We never share your data.
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- === RIGHT: DM & INFO (2 Cols) === -->
+            <div class="lg:col-span-2 space-y-6 reveal">
+                
+                <!-- Quick WhatsApp Button -->
+                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank" class="block bg-[#25D366] p-8 rounded-[3rem] hover:scale-105 transition-transform shadow-2xl group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fab fa-whatsapp text-5xl"></i>
+                        <span class="bg-white/20 text-xs px-3 py-1 rounded-full font-bold uppercase">Fastest Response</span>
+                    </div>
+                    <h3 class="text-2xl font-black tracking-tight">Chat on WhatsApp</h3>
+                    <p class="font-medium opacity-90 italic">Quick response • No obligation</p>
+                </a>
+
+                <!-- Alternative DMs -->
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="https://t.me/in_akm" target="_blank" class="bg-white/5 border border-white/10 p-6 rounded-3xl hover:border-accent-blue transition-colors text-center">
+                        <i class="fab fa-telegram text-3xl mb-3 text-accent-blue"></i>
+                        <p class="text-xs font-black uppercase tracking-widest">Telegram</p>
+                        <p class="text-xs opacity-50 italic">@in_akm</p>
+                    </a>
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-3xl text-center">
+                        <i class="fab fa-discord text-3xl mb-3 text-[#5865F2]"></i>
+                        <p class="text-xs font-black uppercase tracking-widest">Discord</p>
+                        <p class="text-xs opacity-50 italic">@in_akm</p>
+                    </div>
+                </div>
+
+                <!-- Availability Box -->
+                <div class="bg-gunmetal border border-white/5 p-8 rounded-[3rem]">
+                    <h4 class="text-sm uppercase tracking-[0.3em] font-black text-accent-blue mb-6">🕒 Availability</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="font-bold">Mon – Sat</span>
+                            <span class="text-platinum/60">10:00 AM – 7:00 PM (IST)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">Response Time</span>
+                            <span class="text-platinum/60 italic font-medium underline decoration-accent-blue underline-offset-4">Within 24 Hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Branding / Insta -->
+                <a href="https://www.instagram.com/f9xrteam" target="_blank" class="block bg-white/5 border border-white/10 p-8 rounded-[3rem] hover:bg-white/10 transition-all text-center group">
+                    <i class="fab fa-instagram text-4xl mb-4 group-hover:scale-110 transition-transform"></i>
+                    <p class="font-black text-xl italic uppercase tracking-tighter">Follow @f9xrteam</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+   <!-- === FOOTER === -->
+    <footer class="bg-zinc-950 pt-32 pb-12 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+        
+        <!-- Footer Top: CTA -->
+            <div class="flex flex-col lg:flex-row justify-between items-center mb-24 gap-12 bg-gunmetal p-12 md:p-20 rounded-[4rem] reveal">
+                <div>
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-4 italic leading-none">READY TO <br> START?</h2>
+                    <p class="text-2xl text-platinum/50 font-medium">Let's build something iconic together.</p>
+                </div>
+                <a href="/contact.html" class="w-32 h-32 md:w-56 md:h-56 bg-bright-snow rounded-full flex items-center justify-center text-carbon-black font-black text-2xl md:text-3xl hover:scale-110 hover:rotate-12 transition-all shadow-2xl uppercase text-center p-4">Hire <br> Us</a>
+            </div>
+            
+            <div class="grid lg:grid-cols-4 gap-16 mb-24">
+                <div class="lg:col-span-2">
+                    <h3 class="text-5xl font-black mb-8 italic tracking-tighter">F9XR TEAM.</h3>
+                    <p class="text-xl text-platinum/50 leading-relaxed max-w-sm mb-10">A creative studio crafting high-end digital experiences for growth-focused brands.</p>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/f9xr/f9xr.github.io" target="_blank" class="bg-white/5 px-6 py-3 rounded-xl border border-white/5 font-bold hover:bg-white/10 transition-colors flex items-center gap-3">
+                            <i class="fab fa-github"></i> Open Source
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-black text-iron-grey mb-8">Meet the Team</h4>
+                    <ul class="space-y-6 font-bold text-lg text-platinum/80">
+                        <li><a href="https://inakm.github.io" target="_blank" class="hover:text-accent-blue transition-colors flex items-center gap-2">AKM <i class="fas fa-external-link-alt text-[10px] opacity-40"></i></a></li>
+                        <li><a href="https://aryansh.site" target="_blank" class="hover:text-accent-blue transition-colors flex items-center gap-2">Aryansh <i class="fas fa-external-link-alt text-[10px] opacity-40"></i></a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-black text-iron-grey mb-8">Navigation</h4>
+                    <ul class="space-y-4 font-bold text-lg text-platinum/60">
+                        <li><a href="/about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="/projects.html" class="hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="/contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 opacity-40 hover:opacity-100 transition-opacity">
+                <p class="font-bold">&copy; 2025 F9XR Team. Built with Precision.</p>
+                <div class="flex gap-8 font-black tracking-widest uppercase text-xs">
+                    <span class="flex items-center gap-2 italic">Remote Global</span>
+                    <span class="flex items-center gap-2 italic text-accent-blue uppercase">Est. 2024</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === SUCCESS MODAL === -->
+    <div id="success-modal" class="fixed inset-0 z-[3000] hidden flex items-center justify-center p-6 backdrop-blur-xl bg-carbon-black/80">
+        <div class="bg-gunmetal border border-accent-blue/50 p-10 rounded-[3rem] max-w-md w-full text-center shadow-[0_0_50px_rgba(59,130,246,0.2)]">
+            <i class="fas fa-check-circle text-6xl text-accent-blue mb-6"></i>
+            <h2 class="text-3xl font-black italic tracking-tighter mb-4">THANKS FOR REACHING OUT!</h2>
+            <p class="text-platinum/60 text-lg mb-8 leading-relaxed italic">We'll contact you shortly. For a faster response, message us on WhatsApp now.</p>
+            <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="block w-full bg-[#25D366] text-white py-5 rounded-2xl font-black text-xl mb-4">Message WhatsApp Now</a>
+            <button onclick="closeModal()" class="text-iron-grey font-bold uppercase tracking-widest text-xs hover:text-white">Close</button>
+        </div>
+    </div>
+
+    <!-- === BACK TO TOP === -->
+    <button id="btt" class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-all shadow-2xl">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- === SCRIPTS === -->
+    <script>
+        // Form Success Logic
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button[type="submit"]');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            btn.disabled = true;
+
+            // Simulate form processing
+            setTimeout(() => {
+                document.getElementById('success-modal').classList.remove('hidden');
+                btn.innerHTML = 'Get Free Consultation';
+                btn.disabled = false;
+                event.target.reset();
+            }, 1000);
+            return false;
+        }
+
+        function closeModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+        }
+
+        // Scroll Logic (Performance Optimized)
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+
+            const btt = document.getElementById('btt');
+            if (window.scrollY > 800) btt.classList.remove('hidden');
+            else btt.classList.add('hidden');
+        });
+
+        document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Reveal Animation using Intersection Observer
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
