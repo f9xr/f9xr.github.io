@@ -95,6 +95,43 @@
             .hero-title { font-size: 2.5rem !important; }
             .pill-nav { width: 95% !important; }
         }
+
+        
+
+                @font-face { font-family: 'Montserrat'; font-display: swap; }
+        
+        .glass-pill {
+            background: rgba(33, 37, 41, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Prevent Layout Shift on Header */
+        header { min-height: 80px; }
+
+        /* Mobile Menu Animation */
+        #mobile-overlay {
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
+        }
+        
+        .nav-link-hover {
+            position: relative;
+        }
+        .nav-link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link-hover:hover::after {
+            width: 100%;
+        }
+
     </style>
 </head>
 <body class="text-bright-snow font-sans leading-relaxed selection:bg-accent-blue selection:text-white flex flex-col min-h-screen">
@@ -102,19 +139,63 @@
     <!-- Scroll Progress Indicator -->
     <div id="scroll-progress"></div>
 
-    <!-- === FLOATING PILL HEADER === -->
-    <header class="fixed top-6 left-0 right-0 z-[1000] px-4">
-        <nav class="pill-nav glass-pill max-w-4xl mx-auto rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
-            <a href="#" class="flex items-center gap-3 group" aria-label="F9XR Home">
-                <div class="bg-bright-snow text-carbon-black w-10 h-10 rounded-full flex items-center justify-center font-black text-xs transition-transform group-hover:rotate-12">F9</div>
-                <span class="text-lg font-black tracking-tighter uppercase hidden sm:block">F9XR <span class="font-light opacity-60">Team</span></span>
+    <!-- === UNIVERSAL FLOATING HEADER === -->
+    <header class="fixed top-6 left-0 right-0 z-[1000] px-4 md:px-6 no-print">
+                    <nav class="glass-pill max-w-6xl mx-auto rounded-full px-5 py-3 md:px-8 md:py-4 flex justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+
+            <!-- Logo Section -->
+            <a href="https://f9xr.github.io/" class="flex items-center gap-3 group" aria-label="F9XR Team Home">
+               
+                <div class="flex flex-col">
+                    <span class="text-lg md:text-xl font-black tracking-tighter uppercase leading-none text-bright-snow">
+                        F9XR <span class="font-light opacity-60">Team</span>
+                    </span>
+                    <span class="text-[7px] uppercase tracking-[0.3em] font-bold text-accent-blue leading-none mt-1 hidden md:block">
+                        Digital Agency
+                    </span>
+                </div>
             </a>
-            
-            <div class="flex gap-6 font-bold text-[10px] tracking-[0.2em] uppercase items-center">
-                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank" class="hover:text-accent-blue transition-colors" aria-label="Contact via WhatsApp">Urgent DMs</a>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex gap-10 font-bold text-[10px] tracking-[0.2em] uppercase text-bright-snow/70">
+                <a href="about.html" class="nav-link-hover hover:text-bright-snow transition-colors" aria-label="Learn about F9XR">About</a>
+                <a href="services.html" class="nav-link-hover hover:text-bright-snow transition-colors" aria-label="View our services">Services</a>
+                <a href="projects.html" class="nav-link-hover hover:text-bright-snow transition-colors" aria-label="View our portfolio">Projects</a>
+                <a href="pricing.html" class="nav-link-hover hover:text-bright-snow transition-colors text-accent-blue" aria-label="View pricing plans">Pricing</a>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="flex items-center gap-3 md:gap-5">
+                <!-- Mobile Menu Toggle -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-bright-snow w-10 h-10 flex items-center justify-center" aria-label="Toggle Navigation Menu">
+                    <i id="menu-icon" class="fas fa-bars-staggered text-xl"></i>
+                </button>
+
+                <!-- Universal CTA -->
+                <a href="contact.html" aria-label="Contact F9XR Team" class="bg-accent-blue text-white px-5 py-2.5 md:px-7 md:py-3 rounded-full font-black text-[10px] md:text-[11px] tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-lg shadow-blue-500/20">
+                    Hire Us
+                </a>
             </div>
         </nav>
     </header>
+
+    <!-- === MOBILE NAVIGATION OVERLAY === -->
+    <div id="mobile-overlay" class="fixed inset-0 z-[999] bg-carbon-black/95 backdrop-blur-2xl invisible opacity-0 lg:hidden flex flex-col items-center justify-center text-center px-6">
+        <div class="space-y-10">
+            <a href="about.html" onclick="toggleMobileMenu()" class="block text-4xl font-black italic tracking-tighter uppercase text-bright-snow hover:text-accent-blue transition-colors">About</a>
+            <a href="services.html" onclick="toggleMobileMenu()" class="block text-4xl font-black italic tracking-tighter uppercase text-bright-snow hover:text-accent-blue transition-colors">Services</a>
+            <a href="projects.html" onclick="toggleMobileMenu()" class="block text-4xl font-black italic tracking-tighter uppercase text-bright-snow hover:text-accent-blue transition-colors">Projects</a>
+            <a href="pricing.html" onclick="toggleMobileMenu()" class="block text-4xl font-black italic tracking-tighter uppercase text-accent-blue">Pricing</a>
+            <a href="contact.html" onclick="toggleMobileMenu()" class="block text-4xl font-black italic tracking-tighter uppercase text-bright-snow hover:text-accent-blue transition-colors">Contact</a>
+        </div>
+        
+        <!-- Mobile Social Links -->
+        <div class="absolute bottom-12 flex gap-8">
+            <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="text-bright-snow/40 hover:text-green-500 transition-colors text-2xl"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/f9xrteam" class="text-bright-snow/40 hover:text-pink-500 transition-colors text-2xl"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:tontufytservices@gmail.com" class="text-bright-snow/40 hover:text-accent-blue transition-colors text-2xl"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
 
     <main class="flex-grow flex items-center justify-center pt-32 pb-20 px-6">
         <div class="max-w-5xl w-full">
@@ -241,7 +322,6 @@
     <!-- === SCRIPTS === -->
     <script>
         // 1. Countdown Logic
-        // Set your launch date here
         const launchDate = new Date("Dec 25, 2026 10:00:00").getTime();
 
         const x = setInterval(function() {
@@ -289,6 +369,46 @@
         });
 
         document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+
+        // Toggle Mobile Menu Logic
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobile-overlay');
+            const icon = document.getElementById('menu-icon');
+            const isVisible = overlay.classList.contains('visible');
+
+            if (!isVisible) {
+                overlay.classList.remove('invisible', 'opacity-0');
+                overlay.classList.add('visible', 'opacity-100');
+                icon.classList.replace('fa-bars-staggered', 'fa-times');
+                document.body.style.overflow = 'hidden'; // Prevent scroll
+            } else {
+                overlay.classList.add('invisible', 'opacity-0');
+                overlay.classList.remove('visible', 'opacity-100');
+                icon.classList.replace('fa-times', 'fa-bars-staggered');
+                document.body.style.overflow = 'auto'; // Restore scroll
+            }
+        }
+
+        // Header Scroll Interaction (Performance Optimized)
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const headerNav = document.querySelector('.glass-pill');
+
+            if (currentScroll > 50) {
+                headerNav.style.paddingTop = '12px';
+                headerNav.style.paddingBottom = '12px';
+                headerNav.style.background = 'rgba(33, 37, 41, 0.95)';
+            } else {
+                headerNav.style.paddingTop = '';
+                headerNav.style.paddingBottom = '';
+                headerNav.style.background = 'rgba(33, 37, 41, 0.85)';
+            }
+            lastScroll = currentScroll;
+        });
+
+
     </script>
 </body>
 </html>
