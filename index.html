@@ -803,40 +803,135 @@
             </div>
         </section>
         
-        <!-- Pricing Section -->
-        <section id="pricing" class="py-32 px-6">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20 reveal">
-                    <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic">PRICING.</h2>
-                    <p class="text-2xl text-platinum/60 max-w-2xl mx-auto">Transparent tiers for businesses at every stage of growth.</p>
-                </div>
+        <!-- === ADVANCED PRICING SECTION === -->
+<section id="pricing" class="py-32 px-6 bg-carbon-black relative overflow-hidden">
+    <!-- Background Decor -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
+        <div class="absolute top-1/4 right-0 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px]"></div>
+    </div>
 
-                <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    <div class="bg-gunmetal p-12 md:p-16 rounded-[4rem] border border-white/5 reveal">
-                        <h3 class="text-3xl font-bold mb-4">Starter Website</h3>
-                        <p class="text-xl text-platinum/50 mb-10 italic">Perfect for new businesses.</p>
-                        <ul class="space-y-6 mb-12">
-                            <li class="text-xl flex items-center gap-4"><i class="fas fa-check text-accent-blue"></i> WordPress Build</li>
-                            <li class="text-xl flex items-center gap-4"><i class="fas fa-check text-accent-blue"></i> Basic Local SEO</li>
-                            <li class="text-xl flex items-center gap-4"><i class="fas fa-check text-accent-blue"></i> 100% Ownership</li>
-                        </ul>
-                        <a href="/contact.html" class="block text-center border-2 border-white py-5 rounded-2xl font-black text-xl hover:bg-white hover:text-carbon-black transition-all">GET QUOTE</a>
-                    </div>
+    <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-24 reveal">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] mb-4 block italic">Investment Tiers</span>
+            <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic uppercase leading-none">
+                Transparent <br> <span class="text-stroke">ROI Models.</span>
+            </h2>
+            <p class="text-xl text-platinum/50 max-w-2xl mx-auto font-medium italic">
+                We don't sell "websites." We sell digital assets that capture leads, build trust, and dominate local search. 
+            </p>
+        </div>
 
-                    <div class="bg-bright-snow text-carbon-black p-12 md:p-16 rounded-[4rem] reveal relative overflow-hidden">
-                        <div class="absolute top-0 right-0 bg-accent-blue text-white px-10 py-2 font-black uppercase tracking-widest text-sm rotate-45 translate-x-8 translate-y-8">Popular</div>
-                        <h3 class="text-3xl font-black mb-4">Growth Pack</h3>
-                        <p class="text-xl opacity-60 mb-10 italic">The complete digital takeover.</p>
-                        <ul class="space-y-6 mb-12">
-                            <li class="text-xl flex items-center gap-4 font-bold"><i class="fas fa-check text-accent-blue"></i> Premium Design</li>
-                            <li class="text-xl flex items-center gap-4 font-bold"><i class="fas fa-check text-accent-blue"></i> Advanced SEO + GMB</li>
-                            <li class="text-xl flex items-center gap-4 font-bold"><i class="fas fa-check text-accent-blue"></i> Email Infrastructure</li>
-                        </ul>
-                        <a href="/contact.html" class="block text-center bg-carbon-black text-white py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-xl">HIRE US NOW</a>
-                    </div>
-                </div>
+        <!-- Conversion Bar: Why Choose F9XR? -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 reveal">
+            <div class="bg-white/5 border border-white/10 p-8 rounded-3xl flex items-center gap-5 group hover:bg-white/10 transition-all">
+                <i class="fa-solid fa-hand-holding-dollar text-accent-blue text-2xl group-hover:scale-110 transition-transform"></i>
+                <p class="text-sm font-bold text-platinum/80 uppercase italic tracking-tight leading-snug">Zero Hidden Fees <br><span class="text-[10px] opacity-40 not-italic">One-time project based billing.</span></p>
             </div>
-        </section>
+            <div class="bg-white/5 border border-white/10 p-8 rounded-3xl flex items-center gap-5 group hover:bg-white/10 transition-all">
+                <i class="fa-solid fa-code-merge text-accent-blue text-2xl group-hover:scale-110 transition-transform"></i>
+                <p class="text-sm font-bold text-platinum/80 uppercase italic tracking-tight leading-snug">Scalable Logic <br><span class="text-[10px] opacity-40 not-italic">Grows as your business grows.</span></p>
+            </div>
+            <div class="bg-white/5 border border-white/10 p-8 rounded-3xl flex items-center gap-5 group hover:bg-white/10 transition-all">
+                <i class="fa-solid fa-user-shield text-accent-blue text-2xl group-hover:scale-110 transition-transform"></i>
+                <p class="text-sm font-bold text-platinum/80 uppercase italic tracking-tight leading-snug">100% Ownership <br><span class="text-[10px] opacity-40 not-italic">No proprietary platform lock-in.</span></p>
+            </div>
+        </div>
+
+        <!-- Pricing Cards Grid -->
+        <div class="grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto items-start">
+            
+            <!-- Tier 1: Starter -->
+            <div class="group bg-gunmetal/30 backdrop-blur-md p-10 md:p-14 rounded-[3.5rem] border border-white/5 hover:border-white/20 transition-all duration-500 reveal flex flex-col h-full shadow-2xl">
+                <div class="mb-10">
+                    <h3 class="text-3xl font-black uppercase tracking-tighter italic text-white mb-2">Starter Website</h3>
+                    <p class="text-platinum/50 font-bold italic text-sm">Escaping Technical Debt.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-2xl p-6 mb-10 border border-white/5">
+                    <p class="text-xs font-black text-accent-blue uppercase tracking-widest mb-3 italic">Why buy this?</p>
+                    <p class="text-sm text-platinum/70 leading-relaxed font-medium italic">
+                        Most local businesses lose customers because their site is slow or invisible. This plan solves that by building a modern, SEO-ready foundation.
+                    </p>
+                </div>
+
+                <ul class="space-y-6 mb-12 flex-grow">
+                    <li class="flex items-center gap-4 text-lg font-bold italic">
+                        <i class="fas fa-check text-accent-blue"></i> 
+                        WordPress / Blogger Build
+                    </li>
+                    <li class="flex items-center gap-4 text-lg font-bold italic">
+                        <i class="fas fa-check text-accent-blue"></i> 
+                        Basic Local SEO Indexing
+                    </li>
+                    <li class="flex items-center gap-4 text-lg font-bold italic">
+                        <i class="fas fa-check text-accent-blue"></i> 
+                        Mobile Responsive Layout
+                    </li>
+                    <li class="flex items-center gap-4 text-lg font-bold italic">
+                        <i class="fas fa-check text-accent-blue text-xs opacity-50"></i> 
+                        Project Support (1 Month)
+                    </li>
+                </ul>
+
+                <a href="/contact.html" class="block text-center border-2 border-white py-6 rounded-full font-black text-xl hover:bg-white hover:text-carbon-black transition-all shadow-xl uppercase tracking-tighter italic">
+                    Get a Quote
+                </a>
+            </div>
+
+            <!-- Tier 2: Growth Pack (The Conversion King) -->
+            <div class="relative group bg-bright-snow p-10 md:p-14 rounded-[3.5rem] reveal shadow-[0_50px_100px_rgba(59,130,246,0.15)] flex flex-col h-full scale-100 lg:scale-105 z-20 transition-transform hover:scale-[1.07] duration-500">
+                <!-- Most Popular Badge -->
+                <div class="absolute top-0 right-10 -translate-y-1/2 bg-accent-blue text-white px-8 py-3 rounded-full font-black uppercase text-[10px] tracking-widest shadow-xl">
+                    Most Popular
+                </div>
+
+                <div class="mb-10 text-carbon-black">
+                    <h3 class="text-3xl font-black uppercase tracking-tighter italic mb-2">Growth Pack</h3>
+                    <p class="opacity-60 font-bold italic text-sm">The Market Dominator.</p>
+                </div>
+
+                <div class="bg-carbon-black/5 rounded-2xl p-6 mb-10 border border-carbon-black/5">
+                    <p class="text-xs font-black text-accent-blue uppercase tracking-widest mb-3 italic">Why buy this?</p>
+                    <p class="text-sm text-carbon-black opacity-80 leading-relaxed font-black italic">
+                        The total business solution. We manage your infrastructure, your design, and your Google Business ranking. Designed for businesses ready to beat local competitors.
+                    </p>
+                </div>
+
+                <ul class="space-y-6 mb-12 flex-grow text-carbon-black">
+                    <li class="flex items-center gap-4 text-lg font-black italic">
+                        <i class="fas fa-check-double text-accent-blue"></i> 
+                        Premium Custom Design
+                    </li>
+                    <li class="flex items-center gap-4 text-lg font-black italic">
+                        <i class="fas fa-check-double text-accent-blue"></i> 
+                        Advanced SEO + GMB Maps
+                    </li>
+                    <li class="flex items-center gap-4 text-lg font-black italic">
+                        <i class="fas fa-check-double text-accent-blue"></i> 
+                        Professional Email Setup
+                    </li>
+                    <li class="flex items-center gap-4 text-lg font-black italic">
+                        <i class="fas fa-check-double text-accent-blue"></i> 
+                        AI-Powered Functionality
+                    </li>
+                </ul>
+
+                <a href="/contact.html" class="group block text-center bg-carbon-black text-white py-7 rounded-full font-black text-2xl transition-all shadow-2xl uppercase tracking-tighter italic overflow-hidden relative">
+                    <span class="relative z-10">Hire Us Now</span>
+                    <div class="absolute inset-0 bg-accent-blue translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Trust Signal -->
+        <div class="mt-20 text-center reveal">
+            <p class="text-platinum/30 font-bold uppercase tracking-[0.3em] text-[10px]">
+                Global Standards • <span class="text-white">India to Canada Reach</span> • Project-Based Accountability
+            </p>
+        </div>
+    </div>
+</section>
 
         <!-- Reviews / Testimonials Section -->
 <section id="reviews" class="py-32 px-6 relative overflow-hidden">

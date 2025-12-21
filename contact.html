@@ -150,52 +150,164 @@
 
         <div class="grid lg:grid-cols-5 gap-12 items-start mb-24" id="contact-grid">
             
-            <!-- === LEFT: CONTACT FORM (3 Cols) === -->
-            <div class="lg:col-span-3 bg-gunmetal/20 border border-white/5 p-8 md:p-12 rounded-[3.5rem] shadow-2xl backdrop-blur-md reveal">
-                <form id="contact-form" onsubmit="return handleFormSubmit(event)">
-                    <div class="grid md:grid-cols-2 gap-6 mb-8">
-                        <div class="space-y-2">
-                            <label class="text-[10px] uppercase font-bold tracking-widest opacity-40 ml-2 italic">Full Name *</label>
-                            <input type="text" name="name" placeholder="John Doe" required class="w-full p-5 rounded-2xl text-lg font-medium">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-[10px] uppercase font-bold tracking-widest opacity-40 ml-2 italic">Email Address *</label>
-                            <input type="email" name="email" placeholder="example@email.com" required class="w-full p-5 rounded-2xl text-lg font-medium">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-[10px] uppercase font-bold tracking-widest opacity-40 ml-2 italic">WhatsApp / Phone *</label>
-                            <input type="tel" name="phone" placeholder="+1 / +91 ..." required class="w-full p-5 rounded-2xl text-lg font-medium">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-[10px] uppercase font-bold tracking-widest opacity-40 ml-2 italic">Business Name (Optional)</label>
-                            <input type="text" name="business" placeholder="Your Brand" class="w-full p-5 rounded-2xl text-lg font-medium">
-                        </div>
-                        <div class="md:col-span-2 space-y-2">
-                            <label class="text-[10px] uppercase font-bold tracking-widest opacity-40 ml-2 italic">Project Details / Message</label>
-                            <textarea name="message" rows="5" placeholder="What can we build for you?" class="w-full p-6 rounded-3xl text-lg font-medium"></textarea>
-                        </div>
-                    </div>
+            
+        <!-- === PRODUCTION-READY FUNCTIONAL CONTACT FORM === -->
+<div class="lg:col-span-3 bg-gunmetal/20 border border-white/5 p-8 md:p-14 rounded-[3.5rem] shadow-2xl backdrop-blur-md reveal relative overflow-hidden">
+    
+    <!-- Header -->
+    <div class="mb-12">
+        <h2 class="text-3xl md:text-5xl font-black italic uppercase tracking-tighter mb-4">
+            Stop Guessing. <br> <span class="text-accent-blue">Start Growing.</span>
+        </h2>
+        <p class="text-platinum/50 font-medium italic text-lg leading-relaxed">
+            Most businesses lose <span class="text-white">60% of potential leads</span> due to poor architecture. Fill out the form to plug your revenue leaks.
+        </p>
+    </div>
 
-                    <div class="mb-10 p-6 bg-carbon-black rounded-3xl border border-white/5">
-                        <p class="text-[11px] md:text-sm text-platinum/50 leading-relaxed font-medium">
-                            By pressing submit, you acknowledge that you have read, understood, and agreed to our 
-                            <a href="https://f9xr.github.io/refund-policy" class="text-white underline">Refund & Cancellation Policy</a>, 
-                            <a href="https://f9xr.github.io/privacy" class="text-white underline">Privacy Policy</a>, 
-                            <a href="https://f9xr.github.io/terms" class="text-white underline">Terms of Service</a>, and 
-                            <a href="https://f9xr.github.io/agreement" class="text-white underline">Service Agreement</a>.
-                        </p>
-                    </div>
-
-                    <div class="flex flex-col items-center gap-6">
-                        <button type="submit" class="w-full bg-bright-snow text-carbon-black py-6 rounded-2xl font-black text-2xl uppercase tracking-tighter hover:scale-[1.02] transition-all shadow-2xl active:scale-95">
-                            Get Free Consultation
-                        </button>
-                        <p class="text-xs font-bold opacity-40 flex items-center gap-2">
-                            <i class="fas fa-lock text-accent-blue"></i> Your information is safe with us. We never share your data.
-                        </p>
-                    </div>
-                </form>
+    <!-- The Corrected Form -->
+    <!-- Formspree ID: xwkazyon -->
+    <form id="f9xr-contact-form" class="space-y-6">
+        
+        <!-- Anti-Spam Hidden Field -->
+        <input type="text" name="_gotcha" style="display:none">
+        
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Full Name -->
+            <div class="space-y-2">
+                <label class="flex items-center gap-2 text-[10px] uppercase font-black tracking-widest text-accent-blue ml-2 italic">
+                    <i class="fa-solid fa-user text-[8px]"></i> Full Name *
+                </label>
+                <input type="text" name="name" id="full-name" placeholder="John Doe" required 
+                    class="w-full bg-carbon-black/50 border border-white/5 p-5 rounded-2xl text-lg font-medium focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/5 outline-none transition-all placeholder:opacity-20 text-white">
             </div>
+
+            <!-- Email Address (CRITICAL: Must have name="email") -->
+            <div class="space-y-2">
+                <label class="flex items-center gap-2 text-[10px] uppercase font-black tracking-widest text-accent-blue ml-2 italic">
+                    <i class="fa-solid fa-envelope text-[8px]"></i> Email Address *
+                </label>
+                <input type="email" name="email" id="email-address" placeholder="example@email.com" required 
+                    class="w-full bg-carbon-black/50 border border-white/5 p-5 rounded-2xl text-lg font-medium focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/5 outline-none transition-all placeholder:opacity-20 text-white">
+            </div>
+
+            <!-- Phone/WhatsApp -->
+            <div class="space-y-2">
+                <label class="flex items-center gap-2 text-[10px] uppercase font-black tracking-widest text-accent-blue ml-2 italic">
+                    <i class="fa-brands fa-whatsapp text-[10px]"></i> WhatsApp / Phone *
+                </label>
+                <input type="tel" name="phone" id="phone-number" placeholder="+1 / +91 ..." required 
+                    class="w-full bg-carbon-black/50 border border-white/5 p-5 rounded-2xl text-lg font-medium focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/5 outline-none transition-all placeholder:opacity-20 text-white">
+            </div>
+
+            <!-- Business Name -->
+            <div class="space-y-2">
+                <label class="flex items-center gap-2 text-[10px] uppercase font-black tracking-widest text-accent-blue ml-2 italic">
+                    <i class="fa-solid fa-briefcase text-[8px]"></i> Business Name
+                </label>
+                <input type="text" name="business" id="business-name" placeholder="Your Brand Name" 
+                    class="w-full bg-carbon-black/50 border border-white/5 p-5 rounded-2xl text-lg font-medium focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/5 outline-none transition-all placeholder:opacity-20 text-white">
+            </div>
+
+            <!-- Project Details -->
+            <div class="md:col-span-2 space-y-2">
+                <label class="flex items-center gap-2 text-[10px] uppercase font-black tracking-widest text-accent-blue ml-2 italic">
+                    <i class="fa-solid fa-pen-to-square text-[8px]"></i> Project Details / Vision
+                </label>
+                <textarea name="message" id="project-message" rows="4" placeholder="What are your goals? (e.g., SEO Growth, AI Integration)" 
+                    class="w-full bg-carbon-black/50 border border-white/5 p-6 rounded-3xl text-lg font-medium focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/5 outline-none transition-all placeholder:opacity-20 text-white resize-none"></textarea>
+            </div>
+        </div>
+
+        <!-- Success Message (Hidden by default) -->
+        <div id="form-success" class="hidden p-6 bg-green-500/10 border border-green-500/20 rounded-3xl text-center">
+            <p class="text-green-400 font-bold italic">Thanks for reaching out! We'll contact you within 24 hours.</p>
+        </div>
+
+        <!-- Error Message (Hidden by default) -->
+        <div id="form-error" class="hidden p-6 bg-red-500/10 border border-red-500/20 rounded-3xl text-center">
+            <p class="text-red-400 font-bold italic">Something went wrong. Please check your details or try again.</p>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex flex-col items-center gap-6 pt-4">
+            <button type="submit" id="f9xr-submit-btn" class="w-full bg-bright-snow text-carbon-black py-7 rounded-2xl font-black text-2xl uppercase tracking-tighter hover:scale-[1.02] active:scale-95 transition-all shadow-xl flex items-center justify-center gap-4 group">
+                <span>Get Free Consultation</span>
+                <i class="fa-solid fa-paper-plane text-xl opacity-30 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+            </button>
+            <p class="text-[10px] font-black uppercase tracking-widest text-iron-grey italic">
+                <i class="fas fa-lock text-accent-blue mr-2"></i> Encrypted Submission • 100% Data Privacy
+            </p>
+        </div>
+    </form>
+</div>
+
+<!-- === FIXED JAVASCRIPT FOR FORMSPREE SUBMISSION === -->
+<script>
+    const contactForm = document.getElementById("f9xr-contact-form");
+    const submitBtn = document.getElementById("f9xr-submit-btn");
+    const successMsg = document.getElementById("form-success");
+    const errorMsg = document.getElementById("form-error");
+
+    async function handleFormSubmit(event) {
+        event.preventDefault();
+        
+        // Reset states
+        successMsg.classList.add("hidden");
+        errorMsg.classList.add("hidden");
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Processing...</span> <i class="fas fa-spinner fa-spin"></i>';
+        submitBtn.style.opacity = "0.7";
+
+        // Collect form data
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch("https://formspree.io/f/xbdrkygk", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                // Handle Success
+                successMsg.classList.remove("hidden");
+                contactForm.reset();
+                submitBtn.innerHTML = '<span>Sent Successfully!</span> <i class="fas fa-check"></i>';
+                submitBtn.classList.replace("bg-bright-snow", "bg-green-500");
+                submitBtn.classList.replace("text-carbon-black", "text-white");
+                
+                // Optional: Redirect to contact.html after 2 seconds
+                setTimeout(() => {
+                    window.location.href = "/contact.html?status=success";
+                }, 2000);
+
+            } else {
+                // Handle 400 or other errors
+                const result = await response.json();
+                console.error("Formspree Error:", result);
+                errorMsg.classList.remove("hidden");
+                errorMsg.innerHTML = `<p class="text-red-400 font-bold italic">${result.errors ? result.errors[0].message : "Submission Failed."}</p>`;
+                resetButton();
+            }
+        } catch (error) {
+            console.error("Network Error:", error);
+            errorMsg.classList.remove("hidden");
+            resetButton();
+        }
+    }
+
+    function resetButton() {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Get Free Consultation</span> <i class="fa-solid fa-paper-plane"></i>';
+        submitBtn.style.opacity = "1";
+    }
+
+    contactForm.addEventListener("submit", handleFormSubmit);
+</script>
 
             <!-- === RIGHT: DM & INFO (2 Cols) === -->
             <div class="lg:col-span-2 space-y-6 reveal">
