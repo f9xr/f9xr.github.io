@@ -141,87 +141,238 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="min-h-screen flex items-center pt-32 pb-20 px-6" id="home">
-    <div class="max-w-7xl mx-auto w-full">
-        <div class="reveal">
-            <span class="inline-block px-4 py-1 border border-iron-grey rounded-full uppercase tracking-[0.3em] text-xs font-bold text-platinum/50 mb-8 italic">
-                Digital Strategy Agency
-            </span>
+        
+        <style>
+    /* Custom Performance Card Animation */
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(1deg); }
+    }
+    .animate-float {
+        animation: float 5s ease-in-out infinite;
+    }
+    /* Fixed Stroke for visibility */
+    .text-stroke-sm { -webkit-text-stroke: 1px rgba(248, 249, 250, 0.8); }
+</style>
+
+<!-- === REFINED HERO SECTION === -->
+<section class="relative min-h-screen flex flex-col justify-center pt-32 pb-20 overflow-hidden bg-carbon-black" id="home">
+    
+    <!-- 1. Background: Dotted Blueprint & Nebula -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <div class="absolute inset-0 opacity-[0.1]" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+        <div class="absolute top-1/3 -right-1/4 w-[700px] h-[500px] bg-accent-blue/10 rounded-full blur-[130px] animate-pulse"></div>
+    </div>
+
+    <div class="max-w-[1400px] mx-auto w-full px-6 relative z-10">
+        <!-- Main Layout Grid: Split 50/50 on desktop to prevent any overlap -->
+        <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             
-            <h1 class="text-6xl md:text-[8.5rem] font-black leading-[0.85] tracking-tighter mb-10">
-                EMPOWERING <br> <span class="text-stroke italic">BRANDS.</span>
-            </h1>
-            
-            <p class="text-xl md:text-3xl text-platinum/80 max-w-3xl leading-relaxed mb-12 italic font-medium">
-                We design and develop high-performance, AI-powered websites that drive growth and measurable success for brands worldwide.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-6">
-                <!-- Audit Button with Search/Chart Icon -->
-                <a href="/contact.html" class="group bg-bright-snow text-carbon-black px-12 py-6 rounded-full font-black text-xl text-center hover:bg-white transition-all shadow-xl flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-magnifying-glass-chart text-accent-blue transition-transform group-hover:scale-110"></i>
-                    Get Free Audit
-                </a>
+            <!-- LEFT CONTENT -->
+            <div class="reveal">
+                <span class="inline-block px-4 py-1.5 border border-white/10 rounded-full uppercase tracking-[0.4em] text-[10px] font-black text-accent-blue mb-8 italic bg-white/5 backdrop-blur-sm">
+                    Architects of Digital Growth
+                </span>
                 
-                <!-- Work Button with Arrow Icon -->
-                <a href="/projects.html" class="group border border-iron-grey px-12 py-6 rounded-full font-black text-xl text-center hover:bg-iron-grey transition-all flex items-center justify-center gap-3">
-                    View Our Work
-                    <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
-                </a>
+                <!-- Reduced text size slightly and adjusted line height to ensure no collision -->
+                <h1 class="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-[0.9] tracking-tighter mb-10 uppercase italic">
+                    EMPOWERING <br> 
+                    <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1.5px #f8f9fa;">BRANDS.</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-platinum/70 max-w-lg leading-relaxed mb-12 italic font-medium">
+                    We build high-performance, AI-powered websites that grow businesses, not just look good. <span class="text-white font-bold">Smart design made purposeful.</span>
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <a href="/contact.html" class="group bg-bright-snow text-carbon-black px-8 py-5 rounded-full font-black text-lg flex items-center justify-center gap-3 hover:bg-white transition-all shadow-2xl">
+                        <span>Get Free Audit</span>
+                        <i class="fa-solid fa-magnifying-glass-chart text-accent-blue transition-transform group-hover:scale-110"></i>
+                    </a>
+                    
+                    <a href="/projects.html" class="group border-2 border-white/5 text-white px-8 py-5 rounded-full font-black text-lg flex items-center justify-center gap-3 hover:bg-white/10 transition-all backdrop-blur-md">
+                        <span>View Work</span>
+                        <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
+                    </a>
+                </div>
             </div>
-            
-            <!-- Trust Signal -->
-            <p class="mt-10 text-iron-grey font-bold flex items-center gap-3 text-lg italic">
-                <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
-                Free demo website before you decide
-            </p>
+
+            <!-- RIGHT CONTENT: ANIMATED PERFORMANCE CARD -->
+            <div class="relative hidden lg:flex justify-end reveal animate-float">
+                <div class="w-full max-w-md bg-white/5 backdrop-blur-3xl border border-white/10 p-12 rounded-[4rem] shadow-[0_50px_100px_rgba(0,0,0,0.4)] relative overflow-hidden group">
+                    
+                    <!-- Decorative Icon -->
+                    <div class="absolute top-0 right-0 p-10 opacity-5">
+                        <i class="fa-solid fa-chart-area text-9xl"></i>
+                    </div>
+
+                    <p class="text-[11px] uppercase tracking-[0.5em] font-black text-accent-blue mb-6">Performance Index</p>
+                    
+                    <div class="flex items-end gap-3 mb-6">
+                        <h3 class="text-8xl font-black italic tracking-tighter leading-none">98%</h3>
+                        <div class="bg-accent-blue text-white p-1 rounded-md mb-2">
+                             <i class="fa-solid fa-caret-up text-xl"></i>
+                        </div>
+                    </div>
+
+                    <p class="text-2xl font-bold text-platinum/90 leading-tight italic mb-10">
+                        Retention Rate <br> & Asset Growth.
+                    </p>
+                    
+                    <div class="pt-8 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-iron-grey italic">Engineering Standard</span>
+                        <div class="flex gap-1.5 text-[10px] text-accent-blue">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating National Reach Badge -->
+                <div class="absolute -bottom-6 right-10 bg-accent-blue text-white py-5 px-10 rounded-2xl shadow-2xl -rotate-3 hover:rotate-0 transition-all duration-500">
+                    <p class="text-[10px] font-black uppercase tracking-[0.3em] opacity-80 mb-1 leading-none">Reach</p>
+                    <p class="text-2xl font-black italic">5+ Nations</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- === STATS BAR SECTION === -->
+        <div class="mt-32 pt-16 border-t border-white/5 reveal">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div class="group">
+                    <p class="text-4xl md:text-5xl font-black text-white italic mb-2 uppercase tracking-tighter group-hover:text-accent-blue transition-colors">50<span class="text-accent-blue">+</span></p>
+                    <div class="h-1 w-8 bg-accent-blue/30 mb-3"></div>
+                    <p class="text-[10px] font-black uppercase tracking-[0.3em] text-iron-grey italic">Architectures Live</p>
+                </div>
+                <div class="group">
+                    <p class="text-4xl md:text-5xl font-black text-white italic mb-2 uppercase tracking-tighter group-hover:text-accent-blue transition-colors">12<span class="text-accent-blue">+</span></p>
+                    <div class="h-1 w-8 bg-accent-blue/30 mb-3"></div>
+                    <p class="text-[10px] font-black uppercase tracking-[0.3em] text-iron-grey italic">AI Integrations</p>
+                </div>
+                <div class="group">
+                    <p class="text-4xl md:text-5xl font-black text-white italic mb-2 uppercase tracking-tighter group-hover:text-accent-blue transition-colors">99<span class="text-accent-blue">%</span></p>
+                    <div class="h-1 w-8 bg-accent-blue/30 mb-3"></div>
+                    <p class="text-[10px] font-black uppercase tracking-[0.3em] text-iron-grey italic">Client Retention</p>
+                </div>
+                <div class="group">
+                    <p class="text-4xl md:text-5xl font-black text-white italic mb-2 uppercase tracking-tighter group-hover:text-accent-blue transition-colors">24<span class="text-accent-blue">/</span>5</p>
+                    <div class="h-1 w-8 bg-accent-blue/30 mb-3"></div>
+                    <p class="text-[10px] font-black uppercase tracking-[0.3em] text-iron-grey italic">Priority Support</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
         
-        <!-- Solutions Section -->
-        <section class="py-24 px-6 border-t border-white/5 bg-zinc-900/40" id="problems">
-            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-                <div class="reveal">
-                    <span class="text-accent-blue font-black uppercase tracking-widest mb-4 block">Problem vs Solution</span>
-                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-none text-white">Is Your Business <br>Falling Behind?</h2>
-                    <p class="text-2xl text-platinum/60 mb-10 leading-relaxed">Most agencies sell features. We sell solutions to the gaps costing you money every day.</p>
+        <!-- Solutions / Problem vs. Solution Section -->
+<section class="py-32 px-6 border-t border-white/5 bg-zinc-950/50 relative overflow-hidden" id="problems">
+    <!-- Visual Accent -->
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-accent-blue/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+            
+            <!-- Left Side: The "Why You Need Us" Logic -->
+            <div class="reveal">
+                <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-6 block italic">Reality Check</span>
+                <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-10 leading-[0.9] uppercase italic">
+                    Is Your Growth <br> <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1px #f8f9fa;">Leaking?</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-platinum/60 mb-12 leading-relaxed font-medium italic">
+                    In the digital age, a "good-looking" site isn't enough. If your architecture is slow, your SEO is invisible, and your UI is confusing, <span class="text-white underline decoration-accent-blue underline-offset-8 font-bold">you are losing money every hour.</span>
+                </p>
+                
+                <!-- The Problem/Solution Contrast Box -->
+                <div class="relative group">
+                    <!-- Decorative border glow -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-red-500/20 to-accent-blue/20 rounded-[3rem] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                     
-                    <div class="bg-gunmetal p-10 rounded-[3rem] border border-white/10">
-                        <ul class="space-y-6">
-                            <li class="flex items-center gap-5 text-xl font-medium text-platinum">
-                                <i class="fas fa-times-circle text-red-500 text-2xl"></i> Low Google visibility & maps ranking
+                    <div class="relative bg-gunmetal/40 backdrop-blur-xl p-10 md:p-14 rounded-[3rem] border border-white/10 shadow-2xl">
+                        <h4 class="text-xs font-black uppercase tracking-widest text-iron-grey mb-8">The Engineering Gap</h4>
+                        <ul class="space-y-8">
+                            <li class="flex items-start gap-6 group/item">
+                                <div class="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center flex-shrink-0 border border-red-500/20">
+                                    <i class="fas fa-arrow-trend-down text-red-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xl font-black text-white italic uppercase tracking-tight">The Friction</p>
+                                    <p class="text-lg text-platinum/50 font-medium italic">Low Google visibility and confusing layouts causing 80% bounce rates.</p>
+                                </div>
                             </li>
-                            <li class="flex items-center gap-5 text-xl font-medium text-platinum">
-                                <i class="fas fa-times-circle text-red-500 text-2xl"></i> Losing leads to local competitors
-                            </li>
-                            <li class="flex items-center gap-5 text-xl font-medium text-platinum">
-                                <i class="fas fa-times-circle text-red-500 text-2xl"></i> No automated online presence
+                            <li class="flex items-start gap-6 group/item">
+                                <div class="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center flex-shrink-0 border border-accent-blue/20">
+                                    <i class="fas fa-bolt-lightning text-accent-blue"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xl font-black text-white italic uppercase tracking-tight">The F9XR Fix</p>
+                                    <p class="text-lg text-platinum/50 font-medium italic">AI-driven performance tuning that turns casual visitors into high-value leads.</p>
+                                </div>
                             </li>
                         </ul>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4 reveal">
-                    <div class="bg-zinc-800 p-8 rounded-3xl border border-white/5 text-center transition-transform hover:-translate-y-2">
-                        <i class="fas fa-spa text-5xl mb-6 opacity-30"></i>
-                        <h4 class="font-bold text-xl uppercase tracking-tighter">Salons</h4>
-                    </div>
-                    <div class="bg-zinc-800 p-8 rounded-3xl border border-white/5 text-center transition-transform hover:-translate-y-2">
-                        <i class="fas fa-user-md text-5xl mb-6 opacity-30"></i>
-                        <h4 class="font-bold text-xl uppercase tracking-tighter">Clinics</h4>
-                    </div>
-                    <div class="bg-zinc-800 p-8 rounded-3xl border border-white/5 text-center transition-transform hover:-translate-y-2">
-                        <i class="fas fa-star text-5xl mb-6 opacity-30"></i>
-                        <h4 class="font-bold text-xl uppercase tracking-tighter">Influencers</h4>
-                    </div>
-                    <div class="bg-zinc-800 p-8 rounded-3xl border border-white/5 text-center transition-transform hover:-translate-y-2">
-                        <i class="fas fa-handshake text-5xl mb-6 opacity-30"></i>
-                        <h4 class="font-bold text-xl uppercase tracking-tighter">Local Services</h4>
+                        
+                        <div class="mt-12 pt-10 border-t border-white/5">
+                            <a href="/contact.html" class="flex items-center justify-between group/link">
+                                <span class="text-lg font-black uppercase tracking-tighter italic text-accent-blue">Close the Gap Now</span>
+                                <i class="fa-solid fa-arrow-right-long text-accent-blue transition-transform group-hover/link:translate-x-2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Right Side: The "Who We Scale" Grid -->
+            <div class="reveal">
+                <div class="mb-12">
+                    <span class="text-iron-grey font-black uppercase tracking-[0.4em] text-xs mb-4 block italic">Target Verticals</span>
+                    <h3 class="text-4xl font-black tracking-tighter italic uppercase">Who We <br> <span class="text-accent-blue">Empower.</span></h3>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Local Businesses -->
+                    <div class="bg-white/5 border border-white/5 p-8 rounded-[2.5rem] hover:bg-white/10 hover:border-accent-blue/40 transition-all duration-500 group">
+                        <i class="fas fa-shop text-3xl mb-6 text-accent-blue opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all"></i>
+                        <h4 class="font-black text-xl uppercase tracking-tighter mb-2 italic">Local Heroes</h4>
+                        <p class="text-sm text-platinum/40 font-bold uppercase tracking-widest italic">Clinics, Gyms, Salons</p>
+                    </div>
+
+                    <!-- Influencers -->
+                    <div class="bg-white/5 border border-white/5 p-8 rounded-[2.5rem] hover:bg-white/10 hover:border-accent-blue/40 transition-all duration-500 group">
+                        <i class="fas fa-star text-3xl mb-6 text-accent-blue opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all"></i>
+                        <h4 class="font-black text-xl uppercase tracking-tighter mb-2 italic">Influencers</h4>
+                        <p class="text-sm text-platinum/40 font-bold uppercase tracking-widest italic">Personal Branding</p>
+                    </div>
+
+                    <!-- Global Brands -->
+                    <div class="bg-white/5 border border-white/5 p-8 rounded-[2.5rem] hover:bg-white/10 hover:border-accent-blue/40 transition-all duration-500 group">
+                        <i class="fas fa-globe-americas text-3xl mb-6 text-accent-blue opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all"></i>
+                        <h4 class="font-black text-xl uppercase tracking-tighter mb-2 italic">Global Brands</h4>
+                        <p class="text-sm text-platinum/40 font-bold uppercase tracking-widest italic">Enterprise Scaling</p>
+                    </div>
+
+                    <!-- Companies -->
+                    <div class="bg-white/5 border border-white/5 p-8 rounded-[2.5rem] hover:bg-white/10 hover:border-accent-blue/40 transition-all duration-500 group">
+                        <i class="fas fa-building text-3xl mb-6 text-accent-blue opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all"></i>
+                        <h4 class="font-black text-xl uppercase tracking-tighter mb-2 italic">Companies</h4>
+                        <p class="text-sm text-platinum/40 font-bold uppercase tracking-widest italic">B2B / SaaS Architectures</p>
+                    </div>
+                </div>
+
+                <!-- Trust Signal -->
+                <div class="mt-12 p-8 bg-accent-blue rounded-[2.5rem] text-carbon-black flex items-center gap-6 shadow-2xl shadow-accent-blue/10">
+                    <div class="w-14 h-14 bg-carbon-black rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-hand-fist text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-black italic uppercase tracking-tighter leading-tight">We Build for ROI.</p>
+                        <p class="text-xs font-bold uppercase opacity-60 tracking-widest">Digital results, not just pretty pixels.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
         <!-- Problem vs Solution -->
         <section class="py-24 px-6 border-t border-white/5 bg-zinc-950/50" id="problems">
@@ -299,31 +450,119 @@
     </div>
 </section>
 
-        <!-- Core Features -->
-        <section class="py-24 px-6 bg-zinc-900/50" id="features">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20 reveal">
-                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 italic text-stroke">CORE  STRENGTHS</h2>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="p-10 bg-gunmetal rounded-[3rem] border border-white/10 reveal">
-                        <i class="fas fa-bolt text-4xl text-yellow-400 mb-6"></i>
-                        <h4 class="text-2xl font-bold mb-4">Performance First</h4>
-                        <p class="text-lg text-platinum/60">We target sub-second load times to ensure your users never wait and Google rewards your speed.</p>
+<!-- Core Features / Strengths Section -->
+<section class="py-32 px-6 bg-zinc-900/50 relative overflow-hidden" id="features">
+    <!-- Subtle Background Ambient Light -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-accent-blue/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-24 reveal">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block italic">Technical DNA</span>
+            <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-6 italic text-stroke uppercase leading-none">
+                Core <br class="md:hidden"> <span class="text-white not-italic">Strengths.</span>
+            </h2>
+            <p class="text-xl text-platinum/50 max-w-2xl mx-auto font-medium italic">
+                The technical foundation that separates F9XR architectures from standard web builds.
+            </p>
+        </div>
+
+        <!-- Strengths Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            
+            <!-- Strength 01: Performance -->
+            <div class="group relative p-10 md:p-12 bg-gunmetal/40 backdrop-blur-xl rounded-[3.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/60 transition-all duration-500 reveal shadow-2xl">
+                <!-- Hover Glow Effect -->
+                <div class="absolute inset-0 bg-accent-blue/5 opacity-0 group-hover:opacity-100 rounded-[3.5rem] transition-opacity duration-500"></div>
+                
+                <div class="relative z-10">
+                    <div class="w-20 h-20 bg-accent-blue/10 rounded-3xl flex items-center justify-center mb-10 group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500 shadow-lg shadow-accent-blue/10">
+                        <i class="fas fa-bolt text-3xl text-accent-blue group-hover:text-white"></i>
                     </div>
-                    <div class="p-10 bg-gunmetal rounded-[3rem] border border-white/10 reveal">
-                        <i class="fas fa-shield-alt text-4xl text-green-400 mb-6"></i>
-                        <h4 class="text-2xl font-bold mb-4">Security & Backups</h4>
-                        <p class="text-lg text-platinum/60">Weekly off-site data backups and proactive security patching keep your business safe 24/7.</p>
-                    </div>
-                    <div class="p-10 bg-gunmetal rounded-[3rem] border border-white/10 reveal">
-                        <i class="fas fa-fingerprint text-4xl text-accent-blue mb-6"></i>
-                        <h4 class="text-2xl font-bold mb-4">Niche AI Logic</h4>
-                        <p class="text-lg text-platinum/60">Custom AI modules tailored to your industry, from automated booking to intelligent lead scoring.</p>
+                    
+                    <h4 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-6 italic text-white group-hover:text-accent-blue transition-colors">
+                        Performance First
+                    </h4>
+                    
+                    <p class="text-xl text-platinum/60 leading-relaxed font-medium italic mb-8">
+                        We target <span class="text-white">sub-second load times</span>. We eliminate bloat so your users never wait and Google rewards your technical speed.
+                    </p>
+
+                    <!-- Technical Tags -->
+                    <div class="flex flex-wrap gap-3 pt-6 border-t border-white/5">
+                        <span class="text-[10px] font-black tracking-widest text-accent-blue uppercase bg-accent-blue/10 px-3 py-1 rounded-lg">LCP Optimized</span>
+                        <span class="text-[10px] font-black tracking-widest text-accent-blue uppercase bg-accent-blue/10 px-3 py-1 rounded-lg">Zero Bloat</span>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Strength 02: Security -->
+            <div class="group relative p-10 md:p-12 bg-gunmetal/40 backdrop-blur-xl rounded-[3.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/60 transition-all duration-500 reveal shadow-2xl">
+                <div class="absolute inset-0 bg-accent-blue/5 opacity-0 group-hover:opacity-100 rounded-[3.5rem] transition-opacity duration-500"></div>
+                
+                <div class="relative z-10">
+                    <div class="w-20 h-20 bg-accent-blue/10 rounded-3xl flex items-center justify-center mb-10 group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500 shadow-lg shadow-accent-blue/10">
+                        <i class="fas fa-shield-halved text-3xl text-accent-blue group-hover:text-white"></i>
+                    </div>
+                    
+                    <h4 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-6 italic text-white group-hover:text-accent-blue transition-colors">
+                        Security & Backups
+                    </h4>
+                    
+                    <p class="text-xl text-platinum/60 leading-relaxed font-medium italic mb-8">
+                        Weekly <span class="text-white">off-site encryption</span> and proactive security patching. We protect your business assets and client data 24/7.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3 pt-6 border-t border-white/5">
+                        <span class="text-[10px] font-black tracking-widest text-accent-blue uppercase bg-accent-blue/10 px-3 py-1 rounded-lg">SSL Audited</span>
+                        <span class="text-[10px] font-black tracking-widest text-accent-blue uppercase bg-accent-blue/10 px-3 py-1 rounded-lg">Cloud Backups</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strength 03: AI Logic -->
+            <div class="group relative p-10 md:p-12 bg-gunmetal/40 backdrop-blur-xl rounded-[3.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/60 transition-all duration-500 reveal shadow-2xl">
+                <div class="absolute inset-0 bg-accent-blue/5 opacity-0 group-hover:opacity-100 rounded-[3.5rem] transition-opacity duration-500"></div>
+                
+                <div class="relative z-10">
+                    <div class="w-20 h-20 bg-accent-blue/10 rounded-3xl flex items-center justify-center mb-10 group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500 shadow-lg shadow-accent-blue/10">
+                        <i class="fas fa-fingerprint text-3xl text-accent-blue group-hover:text-white"></i>
+                    </div>
+                    
+                    <h4 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-6 italic text-white group-hover:text-accent-blue transition-colors">
+                        Niche AI Logic
+                    </h4>
+                    
+                    <p class="text-xl text-platinum/60 leading-relaxed font-medium italic mb-8">
+                        Custom <span class="text-white">AI modules</span> tailored to your industry, from automated booking systems to intelligent user lead scoring.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3 pt-6 border-t border-white/5">
+                        <span class="text-[10px] font-black tracking-widest text-accent-blue uppercase bg-accent-blue/10 px-3 py-1 rounded-lg">GPT Integrated</span>
+                        <span class="text-[10px] font-black tracking-widest text-accent-blue uppercase bg-accent-blue/10 px-3 py-1 rounded-lg">Smart Flows</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Trust Signal -->
+        <div class="mt-20 text-center reveal">
+            <div class="inline-flex items-center gap-4 bg-white/5 border border-white/10 px-8 py-4 rounded-full">
+                <div class="flex -space-x-2">
+                    <div class="w-6 h-6 rounded-full bg-accent-blue border-2 border-carbon-black flex items-center justify-center text-[8px] font-black">AI</div>
+                    <div class="w-6 h-6 rounded-full bg-yellow-400 border-2 border-carbon-black flex items-center justify-center text-[8px] font-black text-black">SEO</div>
+                    <div class="w-6 h-6 rounded-full bg-green-400 border-2 border-carbon-black flex items-center justify-center text-[8px] font-black text-black">UX</div>
+                </div>
+                <p class="text-platinum/40 font-bold uppercase tracking-[0.2em] text-[10px]">
+                    Engineering standard for <span class="text-white">Global Brands</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>        
+
+
 
         <!-- In-Depth Services Section -->
 <section class="py-32 px-6" id="services">
@@ -395,36 +634,109 @@
     </div>
 </section>
 
-        <!-- Our Approach -->
-        <section class="py-24 px-6 bg-zinc-950/50" id="approach">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20 reveal">
-                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter italic">OUR PROCESS.</h2>
-                </div>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="relative p-10 bg-gunmetal rounded-3xl reveal group hover:bg-zinc-800 transition-colors">
-                        <span class="text-7xl font-black opacity-5 absolute top-4 right-8 group-hover:opacity-20">01</span>
-                        <h4 class="text-2xl font-bold mb-4">Discovery</h4>
-                        <p class="text-platinum/60 leading-relaxed text-lg">Deep dive into your brand DNA, competitors, and goals.</p>
+       
+<!-- Our Approach / Process Section -->
+<section class="py-32 px-6 bg-zinc-950/50 relative overflow-hidden" id="approach">
+    <!-- Subtle Background Element -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-24 reveal">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block italic">The Methodology</span>
+            <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase">
+                Our <span class="text-stroke">Process.</span>
+            </h2>
+            <p class="text-xl text-platinum/50 mt-6 max-w-2xl mx-auto font-medium italic">
+                A systematic roadmap from initial concept to digital dominance.
+            </p>
+        </div>
+
+        <!-- Process Grid -->
+        <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+            
+            <!-- Step 01 -->
+            <div class="relative group reveal">
+                <!-- Desktop Connecting Line (only visible on large screens) -->
+                <div class="hidden lg:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-accent-blue/30 to-transparent -translate-y-1/2 z-0"></div>
+                
+                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
+                            <i class="fa-solid fa-magnifying-glass text-2xl text-accent-blue group-hover:text-white"></i>
+                        </div>
+                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">01</span>
                     </div>
-                    <div class="relative p-10 bg-gunmetal rounded-3xl reveal group hover:bg-zinc-800 transition-colors">
-                        <span class="text-7xl font-black opacity-5 absolute top-4 right-8 group-hover:opacity-20">02</span>
-                        <h4 class="text-2xl font-bold mb-4">Architecture</h4>
-                        <p class="text-platinum/60 leading-relaxed text-lg">Prototyping focusing on user psychology and flows.</p>
-                    </div>
-                    <div class="relative p-10 bg-gunmetal rounded-3xl reveal group hover:bg-zinc-800 transition-colors">
-                        <span class="text-7xl font-black opacity-5 absolute top-4 right-8 group-hover:opacity-20">03</span>
-                        <h4 class="text-2xl font-bold mb-4">Execution</h4>
-                        <p class="text-platinum/60 leading-relaxed text-lg">Writing clean, scalable code with AI integrations.</p>
-                    </div>
-                    <div class="relative p-10 bg-gunmetal rounded-3xl reveal group hover:bg-zinc-800 transition-colors">
-                        <span class="text-7xl font-black opacity-5 absolute top-4 right-8 group-hover:opacity-20">04</span>
-                        <h4 class="text-2xl font-bold mb-4">Growth</h4>
-                        <p class="text-platinum/60 leading-relaxed text-lg">Launch, SEO indexing, and performance monitoring.</p>
-                    </div>
+                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Discovery</h4>
+                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
+                        Deep dive into your brand DNA, competitors, and goals to build a strategic foundation.
+                    </p>
                 </div>
             </div>
-        </section>
+
+            <!-- Step 02 -->
+            <div class="relative group reveal">
+                <div class="hidden lg:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-accent-blue/30 to-transparent -translate-y-1/2 z-0"></div>
+                
+                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
+                            <i class="fa-solid fa-pen-ruler text-2xl text-accent-blue group-hover:text-white"></i>
+                        </div>
+                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">02</span>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Architecture</h4>
+                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
+                        Prototyping focused on user psychology, conversion flows, and modern aesthetics.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="relative group reveal">
+                <div class="hidden lg:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-accent-blue/30 to-transparent -translate-y-1/2 z-0"></div>
+                
+                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
+                            <i class="fa-solid fa-code text-2xl text-accent-blue group-hover:text-white"></i>
+                        </div>
+                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">03</span>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Execution</h4>
+                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
+                        Writing clean, scalable code integrated with custom AI modules for high functionality.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="relative group reveal">
+                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
+                            <i class="fa-solid fa-rocket text-2xl text-accent-blue group-hover:text-white"></i>
+                        </div>
+                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">04</span>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Growth</h4>
+                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
+                        Launch, rigorous SEO indexing, and performance tuning for long-term dominance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Trust Signal / CTA -->
+        <div class="mt-20 text-center reveal">
+            <p class="text-platinum/40 font-bold uppercase tracking-[0.2em] text-xs">
+                Every project is handled with 
+                <span class="text-white underline underline-offset-4 decoration-accent-blue">Precision Engineering</span>
+            </p>
+        </div>
+    </div>
+</section>
         
         <!-- Portfolio Browser -->
         <section class="py-32 px-6 bg-zinc-950" id="portfolio">
@@ -526,30 +838,97 @@
             </div>
         </section>
 
-        <!-- Reviews -->
-        <section id="reviews" class="py-24 px-6">
-            <div class="max-w-7xl mx-auto">
-                <div class="mb-16 text-center reveal">
-                    <h2 class="text-5xl font-black tracking-tighter">WHAT OUR CLIENTS SAY.</h2>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    <div class="bg-zinc-900 p-12 rounded-[3rem] border border-white/5 reveal">
-                        <div class="flex text-yellow-500 mb-6 gap-1">
+        <!-- Reviews / Testimonials Section -->
+<section id="reviews" class="py-32 px-6 relative overflow-hidden">
+    <!-- Subtle Background Glow -->
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="mb-24 text-center reveal">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block italic">The Proof</span>
+            <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
+                What Our <br> <span class="text-stroke">Clients Say.</span>
+            </h2>
+        </div>
+
+        <!-- Reviews Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+            
+            <!-- Review 1: Healthcare/Local SEO -->
+            <div class="group relative bg-gunmetal/30 backdrop-blur-md p-10 md:p-14 rounded-[3.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/50 transition-all duration-500 reveal shadow-2xl">
+                <!-- Large Decorative Quote Icon -->
+                <i class="fa-solid fa-quote-left absolute top-10 right-10 text-8xl opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500"></i>
+                
+                <div class="relative z-10">
+                    <!-- Rating & Badge -->
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-10">
+                        <div class="flex text-yellow-500 text-sm gap-1">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="text-xl italic text-platinum/80 mb-8 leading-relaxed">"F9XR Team fixed our clinic's local SEO. We are finally visible to people searching for doctors in our area. Incredible growth in just 3 weeks."</p>
-                        <h4 class="font-black text-lg uppercase tracking-widest text-accent-blue">— Dr. Arshdeep</h4>
+                        <span class="bg-accent-blue/10 text-accent-blue text-[10px] font-black tracking-widest px-4 py-1 rounded-full uppercase border border-accent-blue/20">
+                            Verified Project: Medical
+                        </span>
                     </div>
-                    <div class="bg-zinc-900 p-12 rounded-[3rem] border border-white/5 reveal">
-                        <div class="flex text-yellow-500 mb-6 gap-1">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                    <!-- Testimonial Text -->
+                    <p class="text-xl md:text-2xl italic text-platinum/90 mb-10 leading-relaxed font-medium">
+                        "F9XR Team fixed our clinic's local SEO. We are finally visible to people searching for doctors in our area. <span class="text-white font-bold">Incredible growth in just 3 weeks."</span>
+                    </p>
+
+                    <!-- Author Details -->
+                    <div class="flex items-center gap-5 pt-8 border-t border-white/5">
+                        <div class="w-14 h-14 bg-accent-blue rounded-2xl flex items-center justify-center font-black text-white text-xl italic shadow-lg shadow-blue-500/20">
+                            DA
                         </div>
-                        <p class="text-xl italic text-platinum/80 mb-8 leading-relaxed">"The maintenance package is a lifesaver. Speed is insane and the automated backups give me total peace of mind for my e-commerce brand."</p>
-                        <h4 class="font-black text-lg uppercase tracking-widest text-accent-blue">— Sarah Jenkins</h4>
+                        <div>
+                            <h4 class="font-black text-xl tracking-tighter uppercase italic text-white">Dr. Arshdeep</h4>
+                            <p class="text-platinum/40 text-xs font-bold uppercase tracking-widest mt-1">Medical Director</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Review 2: E-commerce/Maintenance -->
+            <div class="group relative bg-gunmetal/30 backdrop-blur-md p-10 md:p-14 rounded-[3.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/50 transition-all duration-500 reveal shadow-2xl">
+                <i class="fa-solid fa-quote-left absolute top-10 right-10 text-8xl opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500"></i>
+                
+                <div class="relative z-10">
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-10">
+                        <div class="flex text-yellow-500 text-sm gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="bg-accent-blue/10 text-accent-blue text-[10px] font-black tracking-widest px-4 py-1 rounded-full uppercase border border-accent-blue/20">
+                            Verified Project: Retail
+                        </span>
+                    </div>
+
+                    <p class="text-xl md:text-2xl italic text-platinum/90 mb-10 leading-relaxed font-medium">
+                        "The maintenance package is a lifesaver. <span class="text-white font-bold text-stroke" style="-webkit-text-stroke: 0.5px #fff;">Speed is insane</span> and the automated backups give me total peace of mind for my e-commerce brand."
+                    </p>
+
+                    <div class="flex items-center gap-5 pt-8 border-t border-white/5">
+                        <div class="w-14 h-14 bg-white text-carbon-black rounded-2xl flex items-center justify-center font-black text-xl italic shadow-lg">
+                            SJ
+                        </div>
+                        <div>
+                            <h4 class="font-black text-xl tracking-tighter uppercase italic text-white">Sarah Jenkins</h4>
+                            <p class="text-platinum/40 text-xs font-bold uppercase tracking-widest mt-1">Brand Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Trust Signal -->
+        <div class="mt-20 text-center reveal">
+            <p class="text-platinum/40 font-bold uppercase tracking-[0.3em] text-[10px]">
+                Loved by brands from <span class="text-white">India</span> to the <span class="text-white">Global Digital World</span>
+            </p>
+        </div>
+    </div>
+</section>
         
          <!-- FAQ Section -->
 <section class="py-32 px-6 max-w-4xl mx-auto" id="faq">
@@ -650,89 +1029,317 @@
     </div>
 </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-32 px-6 bg-zinc-950">
-            <div class="max-w-4xl mx-auto bg-gunmetal p-12 md:p-20 rounded-[4rem] border border-white/10 reveal shadow-2xl">
-                <div class="text-center mb-16">
-                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-4 leading-none">LET'S BUILD.</h2>
-                    <p class="text-xl text-platinum/50 italic">Start with a free website audit.</p>
-                </div>
-
-                <div class="flex bg-carbon-black/50 p-2 rounded-full w-fit mx-auto mb-16 border border-white/5">
-                    <button onclick="setContactMode('email')" id="btnEmail" class="px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest transition-all bg-bright-snow text-carbon-black shadow-xl">Email</button>
-                    <button onclick="setContactMode('wa')" id="btnWA" class="px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest transition-all text-platinum">WhatsApp</button>
-                </div>
-
-                <div id="emailView" class="space-y-6">
-                    <form class="grid sm:grid-cols-2 gap-4">
-                        <input type="text" placeholder="Full Name" class="bg-carbon-black border border-white/10 p-6 rounded-2xl outline-none focus:border-white transition-all text-lg col-span-2 md:col-span-1">
-                        <input type="email" placeholder="Email Address" class="bg-carbon-black border border-white/10 p-6 rounded-2xl outline-none focus:border-white transition-all text-lg col-span-2 md:col-span-1">
-                        <textarea placeholder="Your Vision..." rows="4" class="bg-carbon-black border border-white/10 p-6 rounded-2xl outline-none focus:border-white transition-all text-lg col-span-2"></textarea>
-                        <button class="bg-bright-snow text-carbon-black py-6 rounded-2xl font-black text-2xl hover:scale-105 transition-all col-span-2 uppercase">Send Message</button>
-                    </form>
-                </div>
-
-                <div id="waView" class="hidden text-center py-10">
-                    <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="inline-flex items-center gap-6 bg-[#25D366] text-white px-12 py-8 rounded-3xl font-black text-3xl hover:scale-105 transition-transform shadow-2xl">
-                        <i class="fab fa-whatsapp"></i> Chat with Us on WhatsApp
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-zinc-950 pt-32 pb-12 px-6 border-t border-white/5">
-        <div class="max-w-7xl mx-auto">
         
-        <!-- Footer Top: CTA -->
-            <div class="flex flex-col lg:flex-row justify-between items-center mb-24 gap-12 bg-gunmetal p-12 md:p-20 rounded-[4rem] reveal">
-                <div>
-                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-4 italic leading-none">READY TO <br> START?</h2>
-                    <p class="text-2xl text-platinum/50 font-medium">Let's build something iconic together.</p>
+
+<!-- Contact Section -->
+<section id="contact" class="py-32 px-6 bg-zinc-950 relative overflow-hidden">
+    <!-- Subtle Background Ambient Glow -->
+    <div class="absolute top-0 right-0 w-80 h-80 bg-accent-blue/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto bg-gunmetal/40 backdrop-blur-md p-10 md:p-20 rounded-[4rem] border border-white/5 reveal shadow-2xl relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block italic">Get in Touch</span>
+            <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-4 leading-none uppercase italic">Let's <span class="text-stroke">Build.</span></h2>
+            <p class="text-xl md:text-2xl text-platinum/50 font-medium italic">Start with a free website audit.</p>
+        </div>
+
+        <!-- Floating Toggle Pill -->
+        <div class="flex bg-carbon-black/50 p-2 rounded-full w-fit mx-auto mb-16 border border-white/10 shadow-inner">
+            <button onclick="setContactMode('email')" id="btnEmail" class="px-10 py-4 rounded-full font-black uppercase text-xs tracking-widest transition-all bg-bright-snow text-carbon-black shadow-2xl active:scale-95" aria-label="Switch to Email Form">
+                Email
+            </button>
+            <button onclick="setContactMode('wa')" id="btnWA" class="px-10 py-4 rounded-full font-black uppercase text-xs tracking-widest transition-all text-platinum/60 hover:text-white active:scale-95" aria-label="Switch to WhatsApp Contact">
+                WhatsApp
+            </button>
+        </div>
+
+        <!-- Email Form View -->
+        <div id="emailView" class="space-y-8">
+            <form action="https://formspree.io/f/xwkazyon" method="POST" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                
+                <!-- Anti-Spam / Honeypot (Hidden) -->
+                <input type="text" name="_gotcha" style="display:none">
+                
+                <!-- Redirect after submission -->
+                <input type="hidden" name="_next" value="https://f9xr.github.io/contact.html">
+                
+                <div class="space-y-2">
+                    <label class="text-[10px] font-black uppercase tracking-widest text-iron-grey ml-4">Full Name</label>
+                    <input type="text" name="name" required placeholder="Ex: John Doe" 
+                        class="w-full bg-carbon-black border border-white/5 p-6 rounded-3xl outline-none focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/10 transition-all text-lg font-bold placeholder:opacity-20">
                 </div>
-                <a href="/contact.html" class="w-32 h-32 md:w-56 md:h-56 bg-bright-snow rounded-full flex items-center justify-center text-carbon-black font-black text-2xl md:text-3xl hover:scale-110 hover:rotate-12 transition-all shadow-2xl uppercase text-center p-4">Hire <br> Us</a>
+
+                <div class="space-y-2">
+                    <label class="text-[10px] font-black uppercase tracking-widest text-iron-grey ml-4">Email Address</label>
+                    <input type="email" name="email" required placeholder="Ex: john@brand.com" 
+                        class="w-full bg-carbon-black border border-white/5 p-6 rounded-3xl outline-none focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/10 transition-all text-lg font-bold placeholder:opacity-20">
+                </div>
+
+                <div class="sm:col-span-2 space-y-2">
+                    <label class="text-[10px] font-black uppercase tracking-widest text-iron-grey ml-4">Tell us about your project</label>
+                    <textarea name="message" required rows="4" placeholder="Briefly describe your vision..." 
+                        class="w-full bg-carbon-black border border-white/5 p-8 rounded-[2.5rem] outline-none focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/10 transition-all text-lg font-bold placeholder:opacity-20 resize-none"></textarea>
+                </div>
+
+                <div class="sm:col-span-2 pt-4">
+                    <button type="submit" class="w-full bg-bright-snow text-carbon-black py-7 rounded-3xl font-black text-2xl uppercase tracking-tighter hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-white/5 flex items-center justify-center gap-4">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane text-xl opacity-40"></i>
+                    </button>
+                    <p class="text-center mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-iron-grey opacity-60">
+                        <i class="fa-solid fa-lock mr-2"></i> Your data is end-to-end encrypted
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <!-- WhatsApp View -->
+        <div id="waView" class="hidden text-center py-10 reveal">
+            <div class="max-w-sm mx-auto">
+                <i class="fa-brands fa-whatsapp text-7xl text-[#25D366] mb-8 animate-bounce"></i>
+                <h3 class="text-3xl font-black uppercase tracking-tighter mb-4 italic text-white">Direct Access.</h3>
+                <p class="text-platinum/50 mb-10 font-medium italic">Skip the form and chat with our strategy team instantly for a 15-minute consultation.</p>
+                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank" class="inline-flex items-center gap-4 bg-[#25D366] text-white px-12 py-6 rounded-full font-black text-xl hover:scale-105 transition-transform shadow-2xl shadow-green-500/20">
+                    <span>Chat Now</span>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
             </div>
-            
-            <div class="grid lg:grid-cols-4 gap-16 mb-24">
-                <div class="lg:col-span-2">
-                    <h3 class="text-5xl font-black mb-8 italic tracking-tighter">F9XR TEAM.</h3>
-                    <p class="text-xl text-platinum/50 leading-relaxed max-w-sm mb-10">A creative studio crafting high-end digital experiences for growth-focused brands.</p>
-                    <div class="flex gap-4">
-                        <a href="https://github.com/f9xr/f9xr.github.io" target="_blank" class="bg-white/5 px-6 py-3 rounded-xl border border-white/5 font-bold hover:bg-white/10 transition-colors flex items-center gap-3">
-                            <i class="fab fa-github"></i> Open Source
-                        </a>
+        </div>
+
+        <!-- Secondary CTA for Full Contact Page -->
+        <div class="mt-16 pt-10 border-t border-white/5 text-center">
+            <p class="text-platinum/40 font-bold italic">Need more details? 
+                <a href="/contact.html" class="text-bright-snow underline underline-offset-4 decoration-accent-blue hover:text-accent-blue transition-colors">Visit our full Contact Portal</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- === BOOKING / STRATEGY SESSION SECTION === -->
+<section id="book" class="py-32 px-6 bg-zinc-950/50 relative overflow-hidden">
+    <!-- Background visual logic -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-20">
+        <div class="absolute top-10 left-10 w-64 h-64 bg-accent-blue/20 rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-20 reveal">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] mb-4 block italic">Direct Access</span>
+            <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
+                Book a <br> <span class="text-stroke">Blueprint Session.</span>
+            </h2>
+            <p class="text-xl text-platinum/50 mt-6 max-w-2xl mx-auto font-medium italic">
+                Secure a 30-minute technical audit. We’ll map out your digital architecture and growth strategy — no strings attached.
+            </p>
+        </div>
+
+        <!-- Booking Widget Container -->
+        <div class="reveal group">
+            <div class="relative bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[3rem] md:rounded-[4rem] overflow-hidden shadow-2xl">
+                <!-- Top Bar Decoration -->
+                <div class="bg-white/5 border-b border-white/5 p-4 flex items-center gap-2">
+                    <div class="flex gap-1.5 pl-4">
+                        <div class="w-2 h-2 rounded-full bg-red-500/40"></div>
+                        <div class="w-2 h-2 rounded-full bg-yellow-500/40"></div>
+                        <div class="w-2 h-2 rounded-full bg-green-500/40"></div>
                     </div>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-iron-grey mx-auto italic">
+                        F9XR Team / 30min-consultation
+                    </p>
                 </div>
 
-                <div>
-                    <h4 class="text-xs uppercase tracking-[0.3em] font-black text-iron-grey mb-8">Meet the Team</h4>
-                    <ul class="space-y-6 font-bold text-lg text-platinum/80">
-                        <li><a href="https://inakm.github.io" target="_blank" class="hover:text-accent-blue transition-colors flex items-center gap-2">AKM <i class="fas fa-external-link-alt text-[10px] opacity-40"></i></a></li>
-                        <li><a href="https://aryansh.site" target="_blank" class="hover:text-accent-blue transition-colors flex items-center gap-2">Aryansh <i class="fas fa-external-link-alt text-[10px] opacity-40"></i></a></li>
-                    </ul>
-                </div>
+                <!-- The Cal.com Embed -->
+                <div class="w-full h-[700px] md:h-[650px] overflow-hidden">
+                    <!-- Cal inline embed code begins -->
+                    <div style="width:100%; height:100%; overflow:scroll" id="my-cal-inline-30min"></div>
+                    <script type="text/javascript">
+                    (function (C, A, L) { 
+                        let p = function (a, ar) { a.q.push(ar); }; 
+                        let d = C.document; 
+                        C.Cal = C.Cal || function () { 
+                            let cal = C.Cal; 
+                            let ar = arguments; 
+                            if (!cal.loaded) { 
+                                cal.ns = {}; cal.q = cal.q || []; 
+                                d.head.appendChild(d.createElement("script")).src = A; 
+                                cal.loaded = true; 
+                            } 
+                            if (ar[0] === L) { 
+                                const api = function () { p(api, arguments); }; 
+                                const namespace = ar[1]; 
+                                api.q = api.q || []; 
+                                if(typeof namespace === "string"){
+                                    cal.ns[namespace] = cal.ns[namespace] || api; 
+                                    p(cal.ns[namespace], ar); 
+                                    p(cal, ["initNamespace", namespace]);
+                                } else p(cal, ar); 
+                                return;
+                            } 
+                            p(cal, ar); 
+                        }; 
+                    })(window, "https://app.cal.com/embed/embed.js", "init");
+                    
+                    Cal("init", "30min", {origin:"https://app.cal.com"});
 
-                <div>
-                    <h4 class="text-xs uppercase tracking-[0.3em] font-black text-iron-grey mb-8">Navigation</h4>
-                    <ul class="space-y-4 font-bold text-lg text-platinum/60">
-                        <li><a href="/about.html" class="hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="/services.html" class="hover:text-white transition-colors">Services</a></li>
-                        <li><a href="/projects.html" class="hover:text-white transition-colors">Projects</a></li>
-                        <li><a href="/contact.html" class="hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+                    Cal.ns["30min"]("inline", {
+                        elementOrSelector:"#my-cal-inline-30min",
+                        config: {"layout":"month_view", "theme": "dark"},
+                        calLink: "f9xr-glzk1q/30min",
+                    });
 
-            <!-- Bottom Copyright Bar -->
-            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 opacity-40 hover:opacity-100 transition-opacity">
-                <p class="font-bold">&copy; 2025 F9XR Team. Built with Precision.</p>
-                <div class="flex gap-8 font-black tracking-widest uppercase text-xs">
-                    <span class="flex items-center gap-2 italic">Remote Global</span>
-                    <span class="flex items-center gap-2 italic text-accent-blue uppercase">Est. 2024</span>
+                    Cal.ns["30min"]("ui", {
+                        "hideEventTypeDetails":false,
+                        "layout":"month_view",
+                        "cssVarsPerTheme": {
+                            "dark": {
+                                "cal-brand": "#3b82f6", // Your accent-blue
+                                "cal-bg": "transparent",
+                                "cal-text": "#f8f9fa"
+                            }
+                        }
+                    });
+                    </script>
+                    <!-- Cal inline embed code ends -->
                 </div>
             </div>
         </div>
-    </footer>
+
+        <!-- Trust Signal -->
+        <div class="mt-16 text-center reveal">
+            <div class="inline-flex items-center gap-4 bg-white/5 border border-white/10 px-8 py-3 rounded-full">
+                <i class="fa-solid fa-shield-halved text-accent-blue text-xs"></i>
+                <p class="text-platinum/40 font-bold uppercase tracking-[0.2em] text-[10px]">
+                    Encrypted Scheduling • <span class="text-white">Worldwide Availability</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+<footer class="bg-zinc-950 pt-20 no-print overflow-hidden">
+    
+    <!-- 1. Top Marquee Ticker (Brand Identity) -->
+    <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20">
+        <div class="flex whitespace-nowrap animate-marquee">
+            <div class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">
+                <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
+                <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
+                <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
+                <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
+                <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
+                <!-- Repeated for infinite scroll -->
+                <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
+                <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
+                <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
+                <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
+                <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- 2. Large CTA Header (Reference Image Style) -->
+        <div class="flex flex-col md:flex-row justify-between items-center pb-16 mb-16 border-b border-white/5 gap-8 reveal">
+            <div class="text-center md:text-left">
+                <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
+                    Let's Build <br class="hidden md:block"> <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span>
+                </h2>
+            </div>
+            <a href="/contact.html" class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">
+                Hire Team <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
+            </a>
+        </div>
+
+        <!-- 3. Main Navigation Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-24">
+            
+            <!-- Branding & Github -->
+            <div class="col-span-2 space-y-8">
+                <div>
+                    <h3 class="text-4xl font-black mb-4 tracking-tighter italic uppercase">F9XR TEAM.</h3>
+                    <p class="text-lg text-platinum/50 leading-relaxed max-w-sm">
+                        Global digital studio crafting high-end experiences for growth-focused brands.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://github.com/f9xr/f9xr.github.io" target="_blank" class="bg-white/5 px-5 py-2.5 rounded-xl border border-white/5 font-bold hover:bg-white/10 transition-colors flex items-center gap-3 text-xs uppercase tracking-widest">
+                        <i class="fab fa-github"></i> View Open Source
+                    </a>
+                </div>
+            </div>
+
+            <!-- Page Navigation -->
+            <div class="space-y-8">
+                <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Navigation</h4>
+                <ul class="space-y-4 font-bold text-lg text-platinum/70">
+                    <li><a href="/about.html" class="hover:text-accent-blue transition-colors">About Us</a></li>
+                    <li><a href="/services.html" class="hover:text-accent-blue transition-colors">Services</a></li>
+                    <li><a href="/portfolio.html" class="hover:text-accent-blue transition-colors">Portfolio</a></li>
+                    <li><a href="/contact.html" class="hover:text-accent-blue transition-colors">Get Started</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal Links (New Section) -->
+            <div class="space-y-8">
+                <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Transparency</h4>
+                <ul class="space-y-4 font-bold text-sm text-platinum/60">
+                    <li><a href="/agreement.html" class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Service Agreement</a></li>
+                    <li><a href="/terms.html" class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Terms of Service</a></li>
+                    <li><a href="/privacy.html" class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Privacy Policy</a></li>
+                    <li><a href="/refund.html" class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- The Team -->
+            <div class="space-y-8">
+                <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">The Architects</h4>
+                <ul class="space-y-4 font-bold text-sm text-platinum/60">
+                    <li><a href="https://inakm.github.io" target="_blank" class="hover:text-accent-blue transition-colors flex items-center justify-between group">AKM <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-0 group-hover:opacity-100"></i></a></li>
+                    <li><a href="https://aryansh.site" target="_blank" class="hover:text-accent-blue transition-colors flex items-center justify-between group">Aryansh <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-0 group-hover:opacity-100"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 4. Bottom Copyright Bar -->
+        <div class="py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+            <div class="space-y-2">
+                <p class="font-bold text-platinum/40 text-sm italic">&copy; 2025 F9XR Team. Handcrafted with Precision Engineering.</p>
+                <div class="flex justify-center md:justify-start gap-6 text-[10px] font-black uppercase tracking-[0.2em] text-iron-grey">
+                    <a href="https://instagram.com/f9xrteam" class="hover:text-pink-500">Instagram</a>
+                    <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="hover:text-green-500">WhatsApp</a>
+                    <a href="mailto:tontufytservices@gmail.com" class="hover:text-accent-blue">Email Support</a>
+                </div>
+            </div>
+            
+            <div class="flex gap-8 font-black tracking-widest uppercase text-[10px]">
+                <span class="flex items-center gap-2 italic text-iron-grey">Remote Global <i class="fa-solid fa-globe text-accent-blue"></i></span>
+                <span class="flex items-center gap-2 italic text-white underline decoration-accent-blue decoration-2">EST. 2024</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ticker CSS Animation (Add to your global styles) -->
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            animation: marquee 30s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</footer>
 
     <!-- === SCRIPTS === -->
     <script>
@@ -747,25 +1354,29 @@
         }, observerOptions);
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Contact Toggle Logic
-        function setContactMode(mode) {
-            const emailView = document.getElementById('emailView');
-            const waView = document.getElementById('waView');
-            const btnEmail = document.getElementById('btnEmail');
-            const btnWA = document.getElementById('btnWA');
+         // Improved Contact Mode Switcher
+    function setContactMode(mode) {
+        const emailView = document.getElementById('emailView');
+        const waView = document.getElementById('waView');
+        const btnEmail = document.getElementById('btnEmail');
+        const btnWA = document.getElementById('btnWA');
 
-            if(mode === 'email') {
-                emailView.classList.remove('hidden');
-                waView.classList.add('hidden');
-                btnEmail.className = 'px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest transition-all bg-bright-snow text-carbon-black shadow-xl';
-                btnWA.className = 'px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest transition-all text-platinum';
-            } else {
-                waView.classList.remove('hidden');
-                emailView.classList.add('hidden');
-                btnWA.className = 'px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest transition-all bg-bright-snow text-carbon-black shadow-xl';
-                btnEmail.className = 'px-8 py-3 rounded-full font-black uppercase text-xs tracking-widest transition-all text-platinum';
-            }
+        if(mode === 'email') {
+            emailView.classList.remove('hidden');
+            waView.classList.add('hidden');
+            
+            // UI Update for Buttons
+            btnEmail.className = 'px-10 py-4 rounded-full font-black uppercase text-xs tracking-widest transition-all bg-bright-snow text-carbon-black shadow-2xl';
+            btnWA.className = 'px-10 py-4 rounded-full font-black uppercase text-xs tracking-widest transition-all text-platinum/60 hover:text-white';
+        } else {
+            waView.classList.remove('hidden');
+            emailView.classList.add('hidden');
+
+            // UI Update for Buttons
+            btnWA.className = 'px-10 py-4 rounded-full font-black uppercase text-xs tracking-widest transition-all bg-bright-snow text-carbon-black shadow-2xl';
+            btnEmail.className = 'px-10 py-4 rounded-full font-black uppercase text-xs tracking-widest transition-all text-platinum/60 hover:text-white';
         }
+    }
         
         // FAQ Accordion
         function toggleFAQ(button) {
