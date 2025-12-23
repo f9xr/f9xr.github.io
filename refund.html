@@ -7,7 +7,7 @@
     <!-- === PRIMARY SEO META TAGS === -->
     <title>Refund & Cancellation Policy | F9XR Team - Digital Agency</title>
     <meta name="title" content="Refund & Cancellation Policy | F9XR Team">
-    <meta name="description" content="Official Refund and Cancellation Policy for F9XR Team. Transparency and Trust in our digital services, web development, and AI-powered architectures.">
+    <meta name="description" content="Official Refund and Cancellation Policy for F9XR Team.">
     <meta name="author" content="F9XR Team">
     <meta name="robots" content="index, follow">
 
@@ -40,7 +40,6 @@
     <!-- === FONTS & ICONS === -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Montserrat with font-display: swap for performance & stability -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -67,46 +66,18 @@
     </script>
 
     <style type="text/css">
-        /* Performance Optimization: Prevent layout shifts */
         @font-face { font-family: 'Montserrat'; font-display: swap; }
-        
-        body { 
-            background-color: #212529; 
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        /* Floating Pill Header Glassmorphism */
-        .pill-header {
-            background: rgba(33, 37, 41, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Modern Scroll Progress Bar */
-        #scroll-progress {
-            position: fixed; top: 0; left: 0; height: 3px;
-            background: linear-gradient(to right, #3b82f6, #60a5fa);
-            z-index: 2000; width: 0%; transition: width 0.1s;
-        }
-
-        /* Animation Utility */
+        body { background-color: #212529; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        .pill-header { background: rgba(33, 37, 41, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(to right, #3b82f6, #60a5fa); z-index: 2000; width: 0%; transition: width 0.1s; }
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
-
-        /* Performance: hardware-accelerated transforms for button */
-        .back-to-top { transform: translateZ(0); }
-
-        @media (max-width: 480px) {
-            .header-text { display: none; }
-            .pill-header { padding: 0.75rem 1.25rem; }
-        }
+        .text-stroke { -webkit-text-stroke: 1px #f8f9fa; }
+        @media (max-width: 480px) { .header-text { display: none; } }
     </style>
 </head>
 <body class="text-bright-snow font-sans leading-relaxed selection:bg-accent-blue selection:text-white">
 
-    <!-- Scroll Progress Indicator -->
     <div id="scroll-progress"></div>
 
     <!-- === FLOATING PILL HEADER === -->
@@ -136,7 +107,7 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
                 <div>
                     <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block">Financial Policy</span>
-                    <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-none mb-6">Refund & <br> <span class="text-transparent" style="-webkit-text-stroke: 1px #f8f9fa;">Cancellation.</span></h1>
+                    <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-none mb-6">Refund & <br> <span class="text-transparent text-stroke">Cancellation.</span></h1>
                 </div>
                 <div class="bg-gunmetal border border-white/5 p-6 rounded-3xl backdrop-blur-md h-fit">
                     <p class="text-[10px] uppercase tracking-widest text-iron-grey font-black mb-1">Last Updated</p>
@@ -153,7 +124,7 @@
         <div class="grid lg:grid-cols-2 gap-8 mb-24">
             
             <!-- 1. General Policy -->
-            <div class="p-10 bg-gunmetal/20 rounded-[3rem] border border-white/5 transition-all reveal hover:border-accent-blue/40">
+            <div id="refund" class="p-10 bg-gunmetal/20 rounded-[3rem] border border-white/5 transition-all reveal hover:border-accent-blue/40">
                 <span class="text-5xl font-black opacity-10 block mb-4 italic">01</span>
                 <h3 class="text-2xl font-black tracking-tighter uppercase mb-6">General Policy</h3>
                 <p class="text-lg text-platinum/70">All services provided are digital and customized. Once a project has started, refunds are generally not applicable. By purchasing, you agree to this policy.</p>
@@ -235,7 +206,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
 
         <!-- === ABOUT F9XR SECTION === -->
@@ -263,10 +233,9 @@
                 <span class="text-white font-black underline decoration-accent-blue decoration-4 underline-offset-8">Service Agreement</span>."
             </p>
         </div>
-
     </main>
-
-   <!-- === FOOTER === -->
+    
+    <!-- === FOOTER === -->
     <footer class="bg-zinc-950 pt-20 no-print overflow-hidden">
     
     <!-- 1. Top Marquee Ticker (Brand Identity) -->
@@ -387,54 +356,43 @@
 </footer>
 
     <!-- === BACK TO TOP === -->
-    <button id="btt" class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-all shadow-2xl back-to-top">
+    <button id="btt" class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full opacity-0 pointer-events-none flex items-center justify-center z-50 transition-all duration-300 shadow-2xl">
         <i class="fas fa-arrow-up text-xl"></i>
     </button>
 
-    <!-- === SCRIPTS === -->
     <script>
-        // 1. Dynamic Date Injector
+        // 1. Dynamic Date
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        const now = new Date();
-        document.getElementById('dynamic-date').innerText = now.toLocaleDateString('en-US', options);
-        document.getElementById('current-timestamp').innerText = now.toDateString();
+        document.getElementById('dynamic-date').innerText = new Date().toLocaleDateString('en-US', options);
 
-        // 2. Performance-Focused Scroll Logic (Avoids forced reflows)
-        let lastKnownScrollPosition = 0;
-        let ticking = false;
+        // 2. Performance-Focused Scroll Logic
+        const btt = document.getElementById('btt');
+        const progress = document.getElementById("scroll-progress");
 
         window.addEventListener('scroll', () => {
-            lastKnownScrollPosition = window.scrollY;
+            const scrollPos = window.scrollY;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            
+            // Progress bar
+            progress.style.width = (scrollPos / height) * 100 + "%";
 
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    handleScrollUpdates(lastKnownScrollPosition);
-                    ticking = false;
-                });
-                ticking = true;
+            // Back to Top Toggle
+            if (scrollPos > 600) {
+                btt.classList.replace('opacity-0', 'opacity-100');
+                btt.classList.remove('pointer-events-none');
+            } else {
+                btt.classList.replace('opacity-100', 'opacity-0');
+                btt.classList.add('pointer-events-none');
             }
         });
 
-        function handleScrollUpdates(scrollPos) {
-            // Scroll Progress
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (scrollPos / height) * 100;
-            document.getElementById("scroll-progress").style.width = scrolled + "%";
-
-            // Back to Top Toggle
-            const btt = document.getElementById('btt');
-            if (scrollPos > 600) btt.classList.remove('hidden');
-            else btt.classList.add('hidden');
-        }
-
-        document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+        btt.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
         // 3. Reveal Animation with Intersection Observer
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    revealObserver.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
