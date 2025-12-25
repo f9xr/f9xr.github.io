@@ -1126,49 +1126,57 @@
 </section>
 
 
-        <!-- === DYNAMIC BLOG ARCHIVE SECTION (NATIVE INTEGRATION) === -->
-<section id="blog" class="py-32 px-6 bg-zinc-950/30 relative overflow-hidden">
-    <!-- Background Architectural Glow -->
-    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
+       
+<!-- === TEXT-ONLY DYNAMIC BLOG ARCHIVE === -->
+<section id="blog" class="py-32 px-6 bg-zinc-950/20 relative overflow-hidden">
+    <!-- Clean Background Visuals -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto relative z-10">
         
-        <!-- Section Header -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20 reveal">
-            <div class="max-w-2xl">
-                <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] mb-4 block italic">Phase 04: Continuous Learning</span>
+        <!-- Section Header + Redesigned Big Button -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-10 mb-20 reveal">
+            <div class="max-w-2xl text-center md:text-left">
+                <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] mb-4 block italic">The Knowledge Vault</span>
                 <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
                     Digital <br> <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1.5px #f8f9fa;">Insights.</span>
                 </h2>
             </div>
-            <a href="https://growwithguidance.blogspot.com/" target="_blank" class="group flex items-center gap-4 text-white font-black uppercase tracking-widest text-xs border-b border-white/10 pb-2 hover:border-accent-blue transition-all" aria-label="Visit full blog archive">
-                Full Feed <i class="fa-solid fa-arrow-up-right-from-square text-accent-blue transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"></i>
+            
+            <!-- Bigger, Redesigned CTA Button -->
+            <a href="https://growwithguidance.blogspot.com/" target="_blank" 
+               class="group relative inline-flex items-center gap-6 bg-bright-snow text-carbon-black px-12 py-6 rounded-full font-black text-xl md:text-2xl uppercase tracking-tighter hover:scale-105 transition-all shadow-2xl active:scale-95" 
+               aria-label="Read all blogs on growwithguidance.blogspot.com">
+                <span>Read our Blogs</span>
+                <div class="w-12 h-12 bg-accent-blue rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform duration-500">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-white text-sm"></i>
+                </div>
             </a>
         </div>
 
-        <!-- Dynamic Blog Grid -->
-        <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Initial Skeleton Loaders (Visual Stability) -->
-            <div class="bg-white/5 h-[450px] rounded-[3rem] animate-pulse"></div>
-            <div class="bg-white/5 h-[450px] rounded-[3rem] animate-pulse"></div>
-            <div class="bg-white/5 h-[450px] rounded-[3rem] animate-pulse"></div>
+        <!-- Slim Responsive Blog Grid -->
+        <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Skeleton Loaders for Stability -->
+            <div class="bg-white/5 h-[300px] rounded-[2.5rem] animate-pulse"></div>
+            <div class="bg-white/5 h-[300px] rounded-[2.5rem] animate-pulse"></div>
+            <div class="bg-white/5 h-[300px] rounded-[2.5rem] animate-pulse"></div>
         </div>
 
     </div>
 </section>
 
-<!-- === BLOG LOGIC: NATIVE SCRIPT HANDLER === -->
+<!-- === BLOG LOGIC: SLIM PROFILE HANDLER === -->
 <script type="text/javascript">
     /**
-     * Callback function for Blogger JSON API
-     * Handles dynamic card creation with F9XR Brand Styling
+     * Callback for Blogger JSON API
+     * Focus: Text-only, Slim profile, High Performance
      */
     function showrecentposts(json) {
         const blogGrid = document.getElementById('blog-grid');
         const entries = json.feed.entry;
         
         if (!entries) {
-            blogGrid.innerHTML = `<p class="col-span-full text-center text-platinum/20 py-20 italic uppercase font-black">Archive update in progress...</p>`;
+            blogGrid.innerHTML = `<p class="col-span-full text-center text-platinum/20 py-20 italic uppercase font-black">Updating Intel...</p>`;
             return;
         }
 
@@ -1178,7 +1186,7 @@
             const entry = entries[i];
             const title = entry.title.$t;
             
-            // Extract alternate link (actual post URL)
+            // Link Extraction
             let postUrl = "";
             for (let j = 0; j < entry.link.length; j++) {
                 if (entry.link[j].rel === 'alternate') {
@@ -1187,70 +1195,58 @@
                 }
             }
 
-            // Extract Thumbnail with High-Res Upgrade Logic
-            let thumbUrl = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop"; // Brand Fallback
-            if ("media$thumbnail" in entry) {
-                // Change s72-c to s1600 for high resolution
-                thumbUrl = entry.media$thumbnail.url.replace('/s72-c/', '/s1600/');
-            }
-
-            // Format Date
+            // Date Formatting
             const pubDate = new Date(entry.published.$t).toLocaleDateString('en-US', {
-                year: 'numeric', month: 'long', day: 'numeric'
+                month: 'short', day: '2-digit', year: 'numeric'
             });
 
-            // Extract Snippet
+            // Snippet Extraction (Stripped of HTML)
             const snippet = ("summary" in entry) 
-                ? entry.summary.$t.replace(/<[^>]*>?/gm, '').substring(0, 110) + "..."
-                : entry.content.$t.replace(/<[^>]*>?/gm, '').substring(0, 110) + "...";
+                ? entry.summary.$t.replace(/<[^>]*>?/gm, '').substring(0, 140) + "..."
+                : entry.content.$t.replace(/<[^>]*>?/gm, '').substring(0, 140) + "...";
 
             htmlContent += `
-                <article class="group relative bg-gunmetal/30 backdrop-blur-md border border-white/5 rounded-[3rem] overflow-hidden hover:border-accent-blue/40 transition-all duration-500 reveal shadow-2xl flex flex-col h-full">
-                    <!-- High-Performance Image Area -->
-                    <div class="relative h-60 overflow-hidden">
-                        <img src="${thumbUrl}" alt="${title}" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale-[40%] group-hover:grayscale-0" loading="lazy">
-                        <div class="absolute bottom-6 left-6 bg-accent-blue text-white text-[9px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-xl">
-                            Digital Blueprint
+                <article class="group relative bg-gunmetal/20 backdrop-blur-sm border border-white/5 rounded-[2.5rem] p-8 md:p-10 hover:border-accent-blue/40 hover:bg-gunmetal/40 transition-all duration-500 reveal shadow-xl flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="w-8 h-[1px] bg-accent-blue/40"></span>
+                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-iron-grey italic">${pubDate}</p>
                         </div>
-                    </div>
-
-                    <!-- Content Area -->
-                    <div class="p-10 flex flex-col flex-grow">
-                        <p class="text-[10px] font-black uppercase tracking-[0.2em] text-iron-grey mb-4 italic">${pubDate}</p>
+                        
                         <h3 class="text-2xl font-black italic tracking-tighter uppercase mb-6 leading-tight text-white group-hover:text-accent-blue transition-colors">
                             ${title}
                         </h3>
-                        <p class="text-platinum/50 text-sm leading-relaxed mb-10 italic line-clamp-3 font-medium">
+                        
+                        <p class="text-platinum/50 text-sm leading-relaxed italic line-clamp-3 font-medium mb-8">
                             ${snippet}
                         </p>
-                        
-                        <!-- CTA Link with Discernible Name for SEO -->
-                        <div class="mt-auto pt-6 border-t border-white/5">
-                            <a href="${postUrl}" target="_blank" class="flex items-center justify-between group/link" aria-label="Read full blueprint for ${title}">
-                                <span class="text-[11px] font-black uppercase tracking-widest text-white italic group-hover/link:text-accent-blue transition-colors">Examine Intel</span>
-                                <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover/link:border-accent-blue group-hover/link:bg-accent-blue/10 transition-all">
-                                    <i class="fa-solid fa-arrow-right-long text-accent-blue transition-transform group-hover/link:translate-x-1"></i>
-                                </div>
-                            </a>
-                        </div>
+                    </div>
+                    
+                    <!-- Slim CTA Footer -->
+                    <div class="pt-6 border-t border-white/5">
+                        <a href="${postUrl}" target="_blank" class="flex items-center justify-between group/link" aria-label="Explore Intel: ${title}">
+                            <span class="text-[11px] font-black uppercase tracking-widest text-white/40 group-hover/link:text-white transition-colors">Examine Intel</span>
+                            <i class="fa-solid fa-arrow-right-long text-accent-blue transition-transform group-hover/link:translate-x-2"></i>
+                        </a>
                     </div>
                 </article>
             `;
         }
 
-        // Inject Content & Re-run reveal observer
         blogGrid.innerHTML = htmlContent;
-        if (typeof revealObserver !== 'undefined') {
-            document.querySelectorAll('#blog-grid .reveal').forEach(el => revealObserver.observe(el));
+        
+        // Re-init Reveal Observer if exists
+        if (window.revealObserver) {
+            document.querySelectorAll('#blog-grid .reveal').forEach(el => window.revealObserver.observe(el));
         }
     }
 </script>
 
-<!-- The API Request (Placed at end for non-blocking load) -->
+<!-- API Request (Placed after logic for speed) -->
 <script src="https://growwithguidance.blogspot.com/feeds/posts/default?orderby=published&alt=json-in-script&callback=showrecentposts&max-results=6"></script>
 
 <style>
-    /* Ensure uniform card heights regardless of title length */
+    /* Editorial Line-Clamping for clean grid alignment */
     .line-clamp-3 {
         display: -webkit-box;
         -webkit-line-clamp: 3;
@@ -1258,7 +1254,6 @@
         overflow: hidden;
     }
 </style>
-        
 
 <!-- Contact Section -->
 <section id="contact" class="py-32 px-6 bg-zinc-950 relative overflow-hidden">
