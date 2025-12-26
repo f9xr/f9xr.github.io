@@ -141,35 +141,35 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        
+        <!-- ========================================
+             SECTION 01: HERO
+             ======================================== -->
+
         <style>
-    /* Custom Performance Card Animation */
-    @keyframes float {
-        0%, 100% { transform: translateY(0) rotate(0deg); }
-        50% { transform: translateY(-15px) rotate(1deg); }
-    }
-    .animate-float {
-        animation: float 5s ease-in-out infinite;
-    }
-    /* Fixed Stroke for visibility */
-    .text-stroke-sm { -webkit-text-stroke: 1px rgba(248, 249, 250, 0.8); }
-</style>
+            /* Custom Performance Card Animation */
+            @keyframes float {
+                0%, 100% { transform: translateY(0) rotate(0deg); }
+                50% { transform: translateY(-15px) rotate(1deg); }
+            }
+            .animate-float {
+                animation: float 5s ease-in-out infinite;
+            }
+            /* Fixed Stroke for visibility */
+            .text-stroke-sm { -webkit-text-stroke: 1px rgba(248, 249, 250, 0.8); }
 
-<style>
-    /* Premium Floating Animation */
-    @keyframes float {
-        0%, 100% { transform: translateY(0) rotate(0deg); }
-        50% { transform: translateY(-15px) rotate(1deg); }
-    }
-    .animate-float { animation: float 6s ease-in-out infinite; }
+            /* Premium Floating Animation */
+            @keyframes float {
+                0%, 100% { transform: translateY(0) rotate(0deg); }
+                50% { transform: translateY(-15px) rotate(1deg); }
+            }
+            .animate-float { animation: float 6s ease-in-out infinite; }
 
-    /* Modal Logic */
-    #videoModal.active { display: flex !important; }
-</style>
+            /* Modal Logic */
+            #videoModal.active { display: flex !important; }
+        </style>
 
-<!-- === REFINED HERO SECTION (FIXED OVERLAP & ALIGNMENT) === -->
-<section class="relative min-h-screen flex flex-col justify-center pt-32 pb-24 overflow-hidden bg-carbon-black" id="home">
+        <!-- === REFINED HERO SECTION === -->
+        <section class="relative min-h-screen flex flex-col justify-center pt-32 pb-24 overflow-hidden bg-carbon-black" id="home">
     
     <!-- Background Decor -->
     <div class="absolute inset-0 z-0 pointer-events-none">
@@ -200,19 +200,19 @@
                 <div class="flex flex-row flex-wrap gap-4 items-center">
                     <!-- 1. Audit -->
                     <a href="/contact.html" class="group bg-bright-snow text-carbon-black px-6 py-4 rounded-full font-black text-sm md:text-base flex items-center justify-center gap-3 hover:bg-white transition-all shadow-xl hover:-translate-y-1" aria-label="Get Free Audit">
-                        <span class="whitespace-nowrap">Free Audit</span>
+                        <span class="whitespace-nowrap">Get Free Audit</span>
                         <i class="fa-solid fa-magnifying-glass-chart text-accent-blue text-xs"></i>
                     </a>
 
                     <!-- 2. WATCH INTRO -->
                     <button onclick="openVideoModal()" class="group bg-accent-blue text-white px-6 py-4 rounded-full font-black text-sm md:text-base flex items-center justify-center gap-3 hover:bg-blue-600 transition-all shadow-lg hover:-translate-y-1" aria-label="Watch Introduction Video">
                         <i class="fa-solid fa-circle-play text-lg"></i>
-                        <span class="whitespace-nowrap">Watch Intro</span>
+                        <span class="whitespace-nowrap">Watch Video</span>
                     </button>
                     
                     <!-- 3. Projects -->
                     <a href="/projects.html" class="group border border-white/10 text-white px-6 py-4 rounded-full font-black text-sm md:text-base flex items-center justify-center gap-3 hover:bg-white/10 transition-all backdrop-blur-md hover:-translate-y-1" aria-label="View our projects">
-                        <span class="whitespace-nowrap">View Work</span>
+                        <span class="whitespace-nowrap">View Our Work</span>
                         <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
                     </a>
                 </div>
@@ -307,8 +307,12 @@
     </div>
 </section>
 
-<!-- === SMART VIDEO MODAL === -->
-<div id="videoModal" onclick="closeOnOverlay(event)" class="fixed inset-0 z-[5000] hidden items-center justify-center p-4 md:p-12 bg-carbon-black/95 backdrop-blur-[30px]">
+        <!-- ========================================
+             VIDEO MODAL (Hero Support)
+             ======================================== -->
+
+        <!-- === SMART VIDEO MODAL === -->
+        <div id="videoModal" onclick="closeOnOverlay(event)" class="fixed inset-0 z-[5000] hidden items-center justify-center p-4 md:p-12 bg-carbon-black/95 backdrop-blur-[30px]">
     
     <div class="relative w-full max-w-5xl aspect-video bg-black rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
         
@@ -388,8 +392,9 @@
     window.addEventListener('DOMContentLoaded', animateStats);
 </script>
 
-        
-        <!-- Solutions / Problem vs. Solution Section -->
+        <!-- ========================================
+             SECTION 02: PROBLEM
+             ======================================== -->
 <section class="py-32 px-6 border-t border-white/5 bg-zinc-950/50 relative overflow-hidden" id="problems">
     <!-- Visual Accent -->
     <div class="absolute -top-24 -left-24 w-96 h-96 bg-accent-blue/10 rounded-full blur-[120px] pointer-events-none"></div>
@@ -498,27 +503,188 @@
     </div>
 </section>
 
-        <!-- Problem vs Solution -->
-        <section class="py-24 px-6 border-t border-white/5 bg-zinc-950/50" id="problems">
-            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-                <div class="reveal">
-                    <span class="text-accent-blue font-black tracking-widest uppercase mb-4 block">The Gap</span>
-                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-none">Why Most Sites <br> Fail?</h2>
-                    <p class="text-xl md:text-2xl text-platinum/60 leading-relaxed mb-10">Generic websites don't convert. We identify the friction points in your digital journey and solve them with precision.</p>
+<!-- ========================================
+     SECTION 03: OUR SERVICES
+     ======================================== -->
+<section class="py-32 px-6" id="services">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-20 reveal">
+            <span class="text-accent-blue font-black uppercase tracking-widest block mb-4 italic text-sm">Deep Dive</span>
+            <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none uppercase italic">Comprehensive <br> <span class="text-stroke">Solutions.</span></h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 mb-20">
+            <!-- S1 -->
+            <div class="md:col-span-2 bg-gunmetal p-12 rounded-[4rem] border border-white/5 hover:border-accent-blue/30 transition-all reveal group">
+                <div class="flex justify-between items-start mb-10">
+                    <i class="fas fa-laptop-code text-6xl opacity-30 group-hover:opacity-100 group-hover:text-accent-blue transition-all duration-500"></i>
+                    <span class="bg-bright-snow text-carbon-black px-4 py-1 rounded-full text-[10px] font-black tracking-widest">MOST POPULAR</span>
                 </div>
-                <div class="grid gap-6 reveal">
-                    <div class="bg-gunmetal p-8 rounded-[2rem] border-l-4 border-red-500 shadow-xl">
-                        <h4 class="text-red-500 font-bold uppercase text-sm mb-2">The Problem</h4>
-                        <p class="text-xl font-medium">Outdated design and poor mobile responsiveness are causing 70% of your visitors to bounce.</p>
-                    </div>
-                    <div class="bg-gunmetal p-8 rounded-[2rem] border-l-4 border-green-500 shadow-xl">
-                        <h4 class="text-green-500 font-bold uppercase text-sm mb-2">The F9XR Solution</h4>
-                        <p class="text-xl font-medium">AI-driven UX optimization and lightning-fast architectures that turn visitors into loyal customers.</p>
+                <h3 class="text-4xl font-black mb-6 tracking-tighter uppercase italic">Business Website Ecosystems</h3>
+                <p class="text-xl text-platinum/60 mb-10 leading-relaxed font-medium">We don't just build sites; we build conversion engines. Using WordPress, Blogger, or Custom Frameworks, we create mobile-first experiences designed to sell.</p>
+                <ul class="grid sm:grid-cols-2 gap-4 text-lg font-bold italic opacity-80">
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Custom UI/UX Design</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> G-Search Console Setup</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Lead Magnet Integration</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Content Strategy</li>
+                </ul>
+            </div>
+
+            <!-- S2 -->
+            <div class="bg-zinc-800 p-12 rounded-[4rem] border border-white/5 reveal group hover:border-yellow-500/30 transition-all">
+                <i class="fas fa-search-dollar text-5xl opacity-30 mb-8 group-hover:opacity-100 group-hover:text-yellow-500 transition-all"></i>
+                <h3 class="text-3xl font-black mb-4 tracking-tighter uppercase italic">Local SEO Mastery</h3>
+                <p class="text-lg text-platinum/50 leading-relaxed font-medium italic">Dominate your local market. We optimize your Google Business Profile and local citations to put you at #1 on the map.</p>
+            </div>
+
+            <!-- S3 -->
+            <div class="bg-zinc-800 p-12 rounded-[4rem] border border-white/5 reveal group hover:border-accent-blue/30 transition-all">
+                <i class="fas fa-server text-5xl opacity-30 mb-8 group-hover:opacity-100 group-hover:text-accent-blue transition-all"></i>
+                <h3 class="text-3xl font-black mb-4 tracking-tighter uppercase italic">Tech Maintenance</h3>
+                <p class="text-lg text-platinum/50 leading-relaxed font-medium italic">Never worry about your site being down. We handle uptime, speed optimization, and weekly updates.</p>
+            </div>
+
+            <!-- S4 -->
+            <div class="md:col-span-2 bg-bright-snow text-carbon-black p-12 rounded-[4rem] reveal group">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="flex-1 text-center md:text-left">
+                        <div class="flex items-center justify-center md:justify-start gap-4 mb-6">
+                            <i class="fas fa-shield-halved text-3xl text-accent-blue"></i>
+                            <h3 class="text-4xl font-black italic tracking-tighter uppercase">Enterprise Infrastructure</h3>
+                        </div>
+                        <p class="text-xl opacity-70 leading-relaxed mb-8 font-bold italic">From Domain registration to setting up Microsoft 365 or Google Workspace. We professionalize your communication.</p>
+                        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                            <span class="bg-carbon-black text-white px-6 py-2 rounded-2xl text-xs font-black tracking-widest uppercase shadow-xl">DNS Security</span>
+                            <span class="bg-carbon-black text-white px-6 py-2 rounded-2xl text-xs font-black tracking-widest uppercase shadow-xl">Business Emails</span>
+                            <span class="bg-carbon-black text-white px-6 py-2 rounded-2xl text-xs font-black tracking-widest uppercase shadow-xl">SaaS Setup</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
+        <!-- NEW: View All Services Button -->
+        <div class="flex justify-center reveal">
+            <a href="/services.html" class="group relative inline-flex items-center gap-6 bg-transparent border-2 border-white text-white px-12 py-6 rounded-full font-black text-xl overflow-hidden transition-all duration-300 hover:bg-white hover:text-carbon-black shadow-2xl" aria-label="Explore all digital services offered by F9XR Team">
+                <span class="uppercase tracking-tighter">Explore All Services</span>
+                <div class="w-10 h-10 bg-accent-blue rounded-full flex items-center justify-center group-hover:bg-carbon-black transition-colors">
+                    <i class="fa-solid fa-arrow-right-long text-white transition-transform group-hover:translate-x-1"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+       
+        <!-- ========================================
+             SECTION 04: OUR PROCESS
+             ======================================== -->
+<!-- Our Approach / Process Section -->
+<section class="py-32 px-6 bg-zinc-950/50 relative overflow-hidden" id="approach">
+    <!-- Subtle Background Element -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-24 reveal">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block italic">The Methodology</span>
+            <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase">
+                Our <span class="text-stroke">Process.</span>
+            </h2>
+            <p class="text-xl text-platinum/50 mt-6 max-w-2xl mx-auto font-medium italic">
+                A systematic roadmap from initial concept to digital dominance.
+            </p>
+        </div>
+
+        <!-- Process Grid -->
+        <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+            
+            <!-- Step 01 -->
+            <div class="relative group reveal">
+                <!-- Desktop Connecting Line (only visible on large screens) -->
+                <div class="hidden lg:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-accent-blue/30 to-transparent -translate-y-1/2 z-0"></div>
+                
+                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
+                            <i class="fa-solid fa-magnifying-glass text-2xl text-accent-blue group-hover:text-white"></i>
+                        </div>
+                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">01</span>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Discovery</h4>
+                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
+                        Deep dive into your brand DNA, competitors, and goals to build a strategic foundation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="relative group reveal">
+                <div class="hidden lg:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-accent-blue/30 to-transparent -translate-y-1/2 z-0"></div>
+                
+                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
+                            <i class="fa-solid fa-pen-ruler text-2xl text-accent-blue group-hover:text-white"></i>
+                        </div>
+                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">02</span>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Architecture</h4>
+                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
+                        Prototyping focused on user psychology, conversion flows, and modern aesthetics.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="relative group reveal">
+                <div class="hidden lg:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-accent-blue/30 to-transparent -translate-y-1/2 z-0"></div>
+                
+                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
+                            <i class="fa-solid fa-code text-2xl text-accent-blue group-hover:text-white"></i>
+                        </div>
+                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">03</span>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Execution</h4>
+                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
+                        Writing clean, scalable code integrated with custom AI modules for high functionality.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="relative group reveal">
+                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
+                            <i class="fa-solid fa-rocket text-2xl text-accent-blue group-hover:text-white"></i>
+                        </div>
+                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">04</span>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Growth</h4>
+                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
+                        Launch, rigorous SEO indexing, and performance tuning for long-term dominance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Trust Signal / CTA -->
+        <div class="mt-20 text-center reveal">
+            <p class="text-platinum/40 font-bold uppercase tracking-[0.2em] text-xs">
+                Every project is handled with 
+                <span class="text-white underline underline-offset-4 decoration-accent-blue">Precision Engineering</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+        <!-- ========================================
+             SECTION 05: ABOUT US
+             ======================================== -->
         <!-- Who We Are -->
 <section id="about" class="py-24 px-6 overflow-hidden">
     <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
@@ -574,7 +740,9 @@
     </div>
 </section>
 
-<!-- Core Features / Strengths Section -->
+<!-- ========================================
+     SECTION 05b: TECHNICAL FOUNDATIONS (Support Section)
+     ======================================== -->
 <section class="py-32 px-6 bg-zinc-900/50 relative overflow-hidden" id="features">
     <!-- Subtle Background Ambient Light -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-accent-blue/5 rounded-full blur-[150px] pointer-events-none"></div>
@@ -684,184 +852,13 @@
             </div>
         </div>
     </div>
-</section>        
-
-
-
-        <!-- In-Depth Services Section -->
-<section class="py-32 px-6" id="services">
-    <div class="max-w-7xl mx-auto">
-        <div class="mb-20 reveal">
-            <span class="text-accent-blue font-black uppercase tracking-widest block mb-4 italic text-sm">Deep Dive</span>
-            <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none uppercase italic">Comprehensive <br> <span class="text-stroke">Solutions.</span></h2>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-8 mb-20">
-            <!-- S1 -->
-            <div class="md:col-span-2 bg-gunmetal p-12 rounded-[4rem] border border-white/5 hover:border-accent-blue/30 transition-all reveal group">
-                <div class="flex justify-between items-start mb-10">
-                    <i class="fas fa-laptop-code text-6xl opacity-30 group-hover:opacity-100 group-hover:text-accent-blue transition-all duration-500"></i>
-                    <span class="bg-bright-snow text-carbon-black px-4 py-1 rounded-full text-[10px] font-black tracking-widest">MOST POPULAR</span>
-                </div>
-                <h3 class="text-4xl font-black mb-6 tracking-tighter uppercase italic">Business Website Ecosystems</h3>
-                <p class="text-xl text-platinum/60 mb-10 leading-relaxed font-medium">We don't just build sites; we build conversion engines. Using WordPress, Blogger, or Custom Frameworks, we create mobile-first experiences designed to sell.</p>
-                <ul class="grid sm:grid-cols-2 gap-4 text-lg font-bold italic opacity-80">
-                    <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Custom UI/UX Design</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> G-Search Console Setup</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Lead Magnet Integration</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Content Strategy</li>
-                </ul>
-            </div>
-
-            <!-- S2 -->
-            <div class="bg-zinc-800 p-12 rounded-[4rem] border border-white/5 reveal group hover:border-yellow-500/30 transition-all">
-                <i class="fas fa-search-dollar text-5xl opacity-30 mb-8 group-hover:opacity-100 group-hover:text-yellow-500 transition-all"></i>
-                <h3 class="text-3xl font-black mb-4 tracking-tighter uppercase italic">Local SEO Mastery</h3>
-                <p class="text-lg text-platinum/50 leading-relaxed font-medium italic">Dominate your local market. We optimize your Google Business Profile and local citations to put you at #1 on the map.</p>
-            </div>
-
-            <!-- S3 -->
-            <div class="bg-zinc-800 p-12 rounded-[4rem] border border-white/5 reveal group hover:border-accent-blue/30 transition-all">
-                <i class="fas fa-server text-5xl opacity-30 mb-8 group-hover:opacity-100 group-hover:text-accent-blue transition-all"></i>
-                <h3 class="text-3xl font-black mb-4 tracking-tighter uppercase italic">Tech Maintenance</h3>
-                <p class="text-lg text-platinum/50 leading-relaxed font-medium italic">Never worry about your site being down. We handle uptime, speed optimization, and weekly updates.</p>
-            </div>
-
-            <!-- S4 -->
-            <div class="md:col-span-2 bg-bright-snow text-carbon-black p-12 rounded-[4rem] reveal group">
-                <div class="flex flex-col md:flex-row gap-12 items-center">
-                    <div class="flex-1 text-center md:text-left">
-                        <div class="flex items-center justify-center md:justify-start gap-4 mb-6">
-                            <i class="fas fa-shield-halved text-3xl text-accent-blue"></i>
-                            <h3 class="text-4xl font-black italic tracking-tighter uppercase">Enterprise Infrastructure</h3>
-                        </div>
-                        <p class="text-xl opacity-70 leading-relaxed mb-8 font-bold italic">From Domain registration to setting up Microsoft 365 or Google Workspace. We professionalize your communication.</p>
-                        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                            <span class="bg-carbon-black text-white px-6 py-2 rounded-2xl text-xs font-black tracking-widest uppercase shadow-xl">DNS Security</span>
-                            <span class="bg-carbon-black text-white px-6 py-2 rounded-2xl text-xs font-black tracking-widest uppercase shadow-xl">Business Emails</span>
-                            <span class="bg-carbon-black text-white px-6 py-2 rounded-2xl text-xs font-black tracking-widest uppercase shadow-xl">SaaS Setup</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- NEW: View All Services Button -->
-        <div class="flex justify-center reveal">
-            <a href="/services.html" class="group relative inline-flex items-center gap-6 bg-transparent border-2 border-white text-white px-12 py-6 rounded-full font-black text-xl overflow-hidden transition-all duration-300 hover:bg-white hover:text-carbon-black shadow-2xl" aria-label="Explore all digital services offered by F9XR Team">
-                <span class="uppercase tracking-tighter">Explore All Services</span>
-                <div class="w-10 h-10 bg-accent-blue rounded-full flex items-center justify-center group-hover:bg-carbon-black transition-colors">
-                    <i class="fa-solid fa-arrow-right-long text-white transition-transform group-hover:translate-x-1"></i>
-                </div>
-            </a>
-        </div>
-    </div>
 </section>
 
-       
-<!-- Our Approach / Process Section -->
-<section class="py-32 px-6 bg-zinc-950/50 relative overflow-hidden" id="approach">
-    <!-- Subtle Background Element -->
-    <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto relative z-10">
-        <!-- Section Header -->
-        <div class="text-center mb-24 reveal">
-            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block italic">The Methodology</span>
-            <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase">
-                Our <span class="text-stroke">Process.</span>
-            </h2>
-            <p class="text-xl text-platinum/50 mt-6 max-w-2xl mx-auto font-medium italic">
-                A systematic roadmap from initial concept to digital dominance.
-            </p>
-        </div>
-
-        <!-- Process Grid -->
-        <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
-            
-            <!-- Step 01 -->
-            <div class="relative group reveal">
-                <!-- Desktop Connecting Line (only visible on large screens) -->
-                <div class="hidden lg:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-accent-blue/30 to-transparent -translate-y-1/2 z-0"></div>
-                
-                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
-                    <div class="flex justify-between items-start mb-8">
-                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
-                            <i class="fa-solid fa-magnifying-glass text-2xl text-accent-blue group-hover:text-white"></i>
-                        </div>
-                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">01</span>
-                    </div>
-                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Discovery</h4>
-                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
-                        Deep dive into your brand DNA, competitors, and goals to build a strategic foundation.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Step 02 -->
-            <div class="relative group reveal">
-                <div class="hidden lg:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-accent-blue/30 to-transparent -translate-y-1/2 z-0"></div>
-                
-                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
-                    <div class="flex justify-between items-start mb-8">
-                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
-                            <i class="fa-solid fa-pen-ruler text-2xl text-accent-blue group-hover:text-white"></i>
-                        </div>
-                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">02</span>
-                    </div>
-                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Architecture</h4>
-                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
-                        Prototyping focused on user psychology, conversion flows, and modern aesthetics.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Step 03 -->
-            <div class="relative group reveal">
-                <div class="hidden lg:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-accent-blue/30 to-transparent -translate-y-1/2 z-0"></div>
-                
-                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
-                    <div class="flex justify-between items-start mb-8">
-                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
-                            <i class="fa-solid fa-code text-2xl text-accent-blue group-hover:text-white"></i>
-                        </div>
-                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">03</span>
-                    </div>
-                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Execution</h4>
-                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
-                        Writing clean, scalable code integrated with custom AI modules for high functionality.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Step 04 -->
-            <div class="relative group reveal">
-                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
-                    <div class="flex justify-between items-start mb-8">
-                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
-                            <i class="fa-solid fa-rocket text-2xl text-accent-blue group-hover:text-white"></i>
-                        </div>
-                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">04</span>
-                    </div>
-                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Growth</h4>
-                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
-                        Launch, rigorous SEO indexing, and performance tuning for long-term dominance.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Trust Signal / CTA -->
-        <div class="mt-20 text-center reveal">
-            <p class="text-platinum/40 font-bold uppercase tracking-[0.2em] text-xs">
-                Every project is handled with 
-                <span class="text-white underline underline-offset-4 decoration-accent-blue">Precision Engineering</span>
-            </p>
-        </div>
-    </div>
-</section>
         
+        <!-- ========================================
+             SECTION 06: OUR PROJECTS (PORTFOLIO)
+             ======================================== -->
         <!-- Portfolio Browser -->
         <section class="py-32 px-6 bg-zinc-950" id="portfolio">
             <div class="max-w-7xl mx-auto">
@@ -926,8 +923,108 @@
                 </div>
             </div>
         </section>
+
+
+        <!-- ========================================
+             SECTION 07: TESTIMONIALS
+             ======================================== -->
+        <!-- Reviews / Testimonials Section -->
+<section id="reviews" class="py-32 px-6 relative overflow-hidden">
+    <!-- Subtle Background Glow -->
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="mb-24 text-center reveal">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block italic">The Proof</span>
+            <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
+                What Our <br> <span class="text-stroke">Clients Say.</span>
+            </h2>
+        </div>
+
+        <!-- Reviews Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+            
+            <!-- Review 1: Healthcare/Local SEO -->
+            <div class="group relative bg-gunmetal/30 backdrop-blur-md p-10 md:p-14 rounded-[3.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/50 transition-all duration-500 reveal shadow-2xl">
+                <!-- Large Decorative Quote Icon -->
+                <i class="fa-solid fa-quote-left absolute top-10 right-10 text-8xl opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500"></i>
+                
+                <div class="relative z-10">
+                    <!-- Rating & Badge -->
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-10">
+                        <div class="flex text-yellow-500 text-sm gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="bg-accent-blue/10 text-accent-blue text-[10px] font-black tracking-widest px-4 py-1 rounded-full uppercase border border-accent-blue/20">
+                            Verified Project: Medical
+                        </span>
+                    </div>
+
+                    <!-- Testimonial Text -->
+                    <p class="text-xl md:text-2xl italic text-platinum/90 mb-10 leading-relaxed font-medium">
+                        "F9XR Team fixed our clinic's local SEO. We are finally visible to people searching for doctors in our area. <span class="text-white font-bold">Incredible growth in just 3 weeks."</span>
+                    </p>
+
+                    <!-- Author Details -->
+                    <div class="flex items-center gap-5 pt-8 border-t border-white/5">
+                        <div class="w-14 h-14 bg-accent-blue rounded-2xl flex items-center justify-center font-black text-white text-xl italic shadow-lg shadow-blue-500/20">
+                            DA
+                        </div>
+                        <div>
+                            <h4 class="font-black text-xl tracking-tighter uppercase italic text-white">Dr. Arshdeep</h4>
+                            <p class="text-platinum/40 text-xs font-bold uppercase tracking-widest mt-1">Medical Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2: E-commerce/Maintenance -->
+            <div class="group relative bg-gunmetal/30 backdrop-blur-md p-10 md:p-14 rounded-[3.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/50 transition-all duration-500 reveal shadow-2xl">
+                <i class="fa-solid fa-quote-left absolute top-10 right-10 text-8xl opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500"></i>
+                
+                <div class="relative z-10">
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-10">
+                        <div class="flex text-yellow-500 text-sm gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="bg-accent-blue/10 text-accent-blue text-[10px] font-black tracking-widest px-4 py-1 rounded-full uppercase border border-accent-blue/20">
+                            Verified Project: Retail
+                        </span>
+                    </div>
+
+                    <p class="text-xl md:text-2xl italic text-platinum/90 mb-10 leading-relaxed font-medium">
+                        "The maintenance package is a lifesaver. <span class="text-white font-bold text-stroke" style="-webkit-text-stroke: 0.5px #fff;">Speed is insane</span> and the automated backups give me total peace of mind for my e-commerce brand."
+                    </p>
+
+                    <div class="flex items-center gap-5 pt-8 border-t border-white/5">
+                        <div class="w-14 h-14 bg-white text-carbon-black rounded-2xl flex items-center justify-center font-black text-xl italic shadow-lg">
+                            SJ
+                        </div>
+                        <div>
+                            <h4 class="font-black text-xl tracking-tighter uppercase italic text-white">Sarah Jenkins</h4>
+                            <p class="text-platinum/40 text-xs font-bold uppercase tracking-widest mt-1">Brand Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Trust Signal -->
+        <div class="mt-20 text-center reveal">
+            <p class="text-platinum/40 font-bold uppercase tracking-[0.3em] text-[10px]">
+                Loved by brands from <span class="text-white">India</span> to the <span class="text-white">Global Digital World</span>
+            </p>
+        </div>
+    </div>
+</section>
         
-        <!-- === ADVANCED PRICING SECTION === -->
+        
+        <!-- ========================================
+             SECTION 08: PRICING
+             ======================================== -->
+        <!-- Reviews / Testimonials Section -->
 <section id="pricing" class="py-32 px-6 bg-carbon-black relative overflow-hidden">
     <!-- Background Decor -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
@@ -1057,99 +1154,11 @@
     </div>
 </section>
 
-        <!-- Reviews / Testimonials Section -->
-<section id="reviews" class="py-32 px-6 relative overflow-hidden">
-    <!-- Subtle Background Glow -->
-    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto">
-        <!-- Section Header -->
-        <div class="mb-24 text-center reveal">
-            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block italic">The Proof</span>
-            <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
-                What Our <br> <span class="text-stroke">Clients Say.</span>
-            </h2>
-        </div>
-
-        <!-- Reviews Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-            
-            <!-- Review 1: Healthcare/Local SEO -->
-            <div class="group relative bg-gunmetal/30 backdrop-blur-md p-10 md:p-14 rounded-[3.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/50 transition-all duration-500 reveal shadow-2xl">
-                <!-- Large Decorative Quote Icon -->
-                <i class="fa-solid fa-quote-left absolute top-10 right-10 text-8xl opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500"></i>
-                
-                <div class="relative z-10">
-                    <!-- Rating & Badge -->
-                    <div class="flex flex-wrap items-center justify-between gap-4 mb-10">
-                        <div class="flex text-yellow-500 text-sm gap-1">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <span class="bg-accent-blue/10 text-accent-blue text-[10px] font-black tracking-widest px-4 py-1 rounded-full uppercase border border-accent-blue/20">
-                            Verified Project: Medical
-                        </span>
-                    </div>
-
-                    <!-- Testimonial Text -->
-                    <p class="text-xl md:text-2xl italic text-platinum/90 mb-10 leading-relaxed font-medium">
-                        "F9XR Team fixed our clinic's local SEO. We are finally visible to people searching for doctors in our area. <span class="text-white font-bold">Incredible growth in just 3 weeks."</span>
-                    </p>
-
-                    <!-- Author Details -->
-                    <div class="flex items-center gap-5 pt-8 border-t border-white/5">
-                        <div class="w-14 h-14 bg-accent-blue rounded-2xl flex items-center justify-center font-black text-white text-xl italic shadow-lg shadow-blue-500/20">
-                            DA
-                        </div>
-                        <div>
-                            <h4 class="font-black text-xl tracking-tighter uppercase italic text-white">Dr. Arshdeep</h4>
-                            <p class="text-platinum/40 text-xs font-bold uppercase tracking-widest mt-1">Medical Director</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Review 2: E-commerce/Maintenance -->
-            <div class="group relative bg-gunmetal/30 backdrop-blur-md p-10 md:p-14 rounded-[3.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/50 transition-all duration-500 reveal shadow-2xl">
-                <i class="fa-solid fa-quote-left absolute top-10 right-10 text-8xl opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500"></i>
-                
-                <div class="relative z-10">
-                    <div class="flex flex-wrap items-center justify-between gap-4 mb-10">
-                        <div class="flex text-yellow-500 text-sm gap-1">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <span class="bg-accent-blue/10 text-accent-blue text-[10px] font-black tracking-widest px-4 py-1 rounded-full uppercase border border-accent-blue/20">
-                            Verified Project: Retail
-                        </span>
-                    </div>
-
-                    <p class="text-xl md:text-2xl italic text-platinum/90 mb-10 leading-relaxed font-medium">
-                        "The maintenance package is a lifesaver. <span class="text-white font-bold text-stroke" style="-webkit-text-stroke: 0.5px #fff;">Speed is insane</span> and the automated backups give me total peace of mind for my e-commerce brand."
-                    </p>
-
-                    <div class="flex items-center gap-5 pt-8 border-t border-white/5">
-                        <div class="w-14 h-14 bg-white text-carbon-black rounded-2xl flex items-center justify-center font-black text-xl italic shadow-lg">
-                            SJ
-                        </div>
-                        <div>
-                            <h4 class="font-black text-xl tracking-tighter uppercase italic text-white">Sarah Jenkins</h4>
-                            <p class="text-platinum/40 text-xs font-bold uppercase tracking-widest mt-1">Brand Founder</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Trust Signal -->
-        <div class="mt-20 text-center reveal">
-            <p class="text-platinum/40 font-bold uppercase tracking-[0.3em] text-[10px]">
-                Loved by brands from <span class="text-white">India</span> to the <span class="text-white">Global Digital World</span>
-            </p>
-        </div>
-    </div>
-</section>
         
-         <!-- FAQ Section -->
+         <!-- ========================================
+             SECTION 09: FAQ
+             ======================================== -->
+        <!-- === ADVANCED PRICING SECTION === -->
 <section class="py-32 px-6 max-w-4xl mx-auto" id="faq">
     <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-16 italic text-center text-stroke">FAQ.</h2>
     <div class="space-y-4">
@@ -1251,6 +1260,9 @@
 
        
 <!-- === TEXT-ONLY DYNAMIC BLOG ARCHIVE === -->
+        <!-- ========================================
+             SECTION 10: BLOG POSTS
+             ======================================== -->
 <section id="blog" class="py-32 px-6 bg-zinc-950/20 relative overflow-hidden">
     <!-- Clean Background Visuals -->
     <div class="absolute top-0 right-0 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
@@ -1379,6 +1391,9 @@
 </style>
 
 <!-- Contact Section -->
+        <!-- ========================================
+             SECTION 11: CONTACT US
+             ======================================== -->
 <section id="contact" class="py-32 px-6 bg-zinc-950 relative overflow-hidden">
     <!-- Subtle Background Ambient Glow -->
     <div class="absolute top-0 right-0 w-80 h-80 bg-accent-blue/10 rounded-full blur-[100px] pointer-events-none"></div>
@@ -1466,6 +1481,9 @@
 
 
 <!-- === BOOKING / STRATEGY SESSION SECTION === -->
+        <!-- ========================================
+             SECTION 12: BOOKING / STRATEGY SESSION
+             ======================================== -->
 <section id="book" class="py-32 px-6 bg-zinc-950/50 relative overflow-hidden">
     <!-- Background visual logic -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-20">
@@ -1570,6 +1588,9 @@
     </main>
 
 <footer class="bg-zinc-950 pt-20 no-print overflow-hidden">
+    <!-- ========================================
+         SECTION 13: FOOTER
+         ======================================== -->
     
     <!-- 1. Top Marquee Ticker (Brand Identity) -->
     <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20">
