@@ -242,27 +242,68 @@
             </div>
         </div>
 
-        <!-- STATS ROW -->
-        <div class="mt-28 pt-16 border-t border-white/5 reveal">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center md:text-left">
-                    <p class="text-4xl font-black text-white italic mb-1">50<span class="text-accent-blue">+</span></p>
-                    <p class="text-[9px] font-black uppercase tracking-[0.3em] text-iron-grey italic">Architectures Live</p>
+        
+        <!-- === LARGE SCALE DYNAMIC STATS SECTION === -->
+<div class="mt-32 reveal group">
+    <div class="bg-gunmetal/40 backdrop-blur-xl border border-white/10 p-12 md:p-20 rounded-[4rem] shadow-2xl relative overflow-hidden">
+        
+        <!-- Decorative Background Element -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-accent-blue/10 rounded-full blur-[120px] pointer-events-none group-hover:bg-accent-blue/20 transition-all duration-700"></div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 relative z-10">
+            
+            <!-- Stat 01 -->
+            <div class="text-center md:text-left space-y-2">
+                <div class="flex items-center justify-center md:justify-start">
+                    <p class="stat-number text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter uppercase leading-none" data-target="50">0</p>
+                    <span class="text-4xl md:text-6xl font-black text-accent-blue italic leading-none">+</span>
                 </div>
-                <div class="text-center md:text-left">
-                    <p class="text-4xl font-black text-white italic mb-1">12<span class="text-accent-blue">+</span></p>
-                    <p class="text-[9px] font-black uppercase tracking-[0.3em] text-iron-grey italic">AI Integrations</p>
-                </div>
-                <div class="text-center md:text-left">
-                    <p class="text-4xl font-black text-white italic mb-1">99<span class="text-accent-blue">%</span></p>
-                    <p class="text-[9px] font-black uppercase tracking-[0.3em] text-iron-grey italic">Client Retention</p>
-                </div>
-                <div class="text-center md:text-left">
-                    <p class="text-4xl font-black text-white italic mb-1">24<span class="text-accent-blue">/</span>5</p>
-                    <p class="text-[9px] font-black uppercase tracking-[0.3em] text-iron-grey italic">Priority Support</p>
-                </div>
+                <div class="h-[2px] w-12 bg-accent-blue/40 mx-auto md:ml-0 my-4"></div>
+                <p class="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-iron-grey italic leading-relaxed">
+                    Digital <br class="hidden md:block"> Architectures
+                </p>
             </div>
+
+            <!-- Stat 02 -->
+            <div class="text-center md:text-left space-y-2">
+                <div class="flex items-center justify-center md:justify-start">
+                    <p class="stat-number text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter uppercase leading-none" data-target="15">0</p>
+                    <span class="text-4xl md:text-6xl font-black text-accent-blue italic leading-none">+</span>
+                </div>
+                <div class="h-[2px] w-12 bg-accent-blue/40 mx-auto md:ml-0 my-4"></div>
+                <p class="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-iron-grey italic leading-relaxed">
+                    AI Agent <br class="hidden md:block"> Integrations
+                </p>
+            </div>
+
+            <!-- Stat 03 -->
+            <div class="text-center md:text-left space-y-2">
+                <div class="flex items-center justify-center md:justify-start">
+                    <p class="stat-number text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter uppercase leading-none" data-target="99">0</p>
+                    <span class="text-4xl md:text-6xl font-black text-accent-blue italic leading-none">%</span>
+                </div>
+                <div class="h-[2px] w-12 bg-accent-blue/40 mx-auto md:ml-0 my-4"></div>
+                <p class="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-iron-grey italic leading-relaxed">
+                    Global Client <br class="hidden md:block"> Retention
+                </p>
+            </div>
+
+            <!-- Stat 04 -->
+            <div class="text-center md:text-left space-y-2">
+                <div class="flex items-center justify-center md:justify-start">
+                    <p class="stat-number text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter uppercase leading-none" data-target="24">0</p>
+                    <span class="text-4xl md:text-6xl font-black text-accent-blue italic leading-none">/5</span>
+                </div>
+                <div class="h-[2px] w-12 bg-accent-blue/40 mx-auto md:ml-0 my-4"></div>
+                <p class="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-iron-grey italic leading-relaxed">
+                    Priority <br class="hidden md:block"> Care Support
+                </p>
+            </div>
+
         </div>
+    </div>
+</div>
+
     </div>
 </section>
 
@@ -312,6 +353,39 @@
     window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeVideoModal();
     });
+
+    function animateStats() {
+        const stats = document.querySelectorAll('.stat-number');
+        const speed = 200; // Lower is faster
+
+        stats.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 15);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            
+            // Intersection Observer to trigger once
+            const observer = new IntersectionObserver((entries) => {
+                if(entries[0].isIntersecting) {
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            }, { threshold: 0.5 });
+            
+            observer.observe(counter);
+        });
+    }
+
+    // Run on load
+    window.addEventListener('DOMContentLoaded', animateStats);
 </script>
 
         
