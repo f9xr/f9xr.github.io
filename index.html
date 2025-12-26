@@ -156,115 +156,164 @@
     .text-stroke-sm { -webkit-text-stroke: 1px rgba(248, 249, 250, 0.8); }
 </style>
 
-<!-- === REFINED HERO SECTION === -->
-<section class="relative min-h-screen flex flex-col justify-center pt-32 pb-20 overflow-hidden bg-carbon-black" id="home">
+<style>
+    /* Premium Floating Animation */
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(1deg); }
+    }
+    .animate-float { animation: float 6s ease-in-out infinite; }
+
+    /* Modal Logic */
+    #videoModal.active { display: flex !important; }
+</style>
+
+<!-- === REFINED HERO SECTION (FIXED OVERLAP & ALIGNMENT) === -->
+<section class="relative min-h-screen flex flex-col justify-center pt-32 pb-24 overflow-hidden bg-carbon-black" id="home">
     
-    <!-- 1. Background: Dotted Blueprint & Nebula -->
+    <!-- Background Decor -->
     <div class="absolute inset-0 z-0 pointer-events-none">
-        <div class="absolute inset-0 opacity-[0.1]" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;"></div>
-        <div class="absolute top-1/3 -right-1/4 w-[700px] h-[500px] bg-accent-blue/10 rounded-full blur-[130px] animate-pulse"></div>
+        <div class="absolute inset-0 opacity-[0.08]" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+        <div class="absolute top-1/4 -right-1/4 w-[700px] h-[500px] bg-accent-blue/10 rounded-full blur-[120px] animate-pulse"></div>
     </div>
 
-    <div class="max-w-[1400px] mx-auto w-full px-6 relative z-10">
-        <!-- Main Layout Grid: Split 50/50 on desktop to prevent any overlap -->
-        <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <div class="max-w-[1440px] mx-auto w-full px-6 md:px-12 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
             
-            <!-- LEFT CONTENT -->
+            <!-- LEFT CONTENT: HEADING & SINGLE-ROW BUTTONS -->
             <div class="reveal">
-                <span class="inline-block px-4 py-1.5 border border-white/10 rounded-full uppercase tracking-[0.4em] text-[10px] font-black text-accent-blue mb-8 italic bg-white/5 backdrop-blur-sm">
+                <span class="inline-block px-4 py-1.5 border border-white/10 rounded-full uppercase tracking-[0.4em] text-[10px] font-black text-accent-blue mb-8 italic bg-white/5 backdrop-blur-md">
                     Architects of Digital Growth
                 </span>
                 
-                <!-- Reduced text size slightly and adjusted line height to ensure no collision -->
-                <h1 class="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-[0.9] tracking-tighter mb-10 uppercase italic">
+                <!-- REDUCED SIZE: Prevents overlap with right-side card -->
+                <h1 class="text-5xl md:text-7xl lg:text-[6.5rem] xl:text-[7.5rem] font-black leading-[0.95] tracking-tighter mb-10 uppercase italic">
                     EMPOWERING <br> 
                     <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1.5px #f8f9fa;">BRANDS.</span>
                 </h1>
                 
-                <p class="text-lg md:text-xl text-platinum/70 max-w-lg leading-relaxed mb-12 italic font-medium">
-                    We build high-performance, AI-powered websites that grow businesses, not just look good. <span class="text-white font-bold">Smart design made purposeful.</span>
+                <p class="text-xl md:text-2xl text-platinum/70 max-w-xl leading-relaxed mb-12 italic font-medium">
+                    We build high-performance, AI-powered websites that grow businesses. <span class="text-white font-bold border-b-2 border-accent-blue/40">Smart design made purposeful.</span>
                 </p>
                 
-                <div class="flex flex-col sm:flex-row gap-5">
-                    <a href="/contact.html" class="group bg-bright-snow text-carbon-black px-8 py-5 rounded-full font-black text-lg flex items-center justify-center gap-3 hover:bg-white transition-all shadow-2xl">
-                        <span>Get Free Audit</span>
-                        <i class="fa-solid fa-magnifying-glass-chart text-accent-blue transition-transform group-hover:scale-110"></i>
+                <!-- BUTTONS ALIGNED IN A SINGLE ROW -->
+                <div class="flex flex-row flex-wrap gap-4 items-center">
+                    <!-- 1. Audit -->
+                    <a href="/contact.html" class="group bg-bright-snow text-carbon-black px-6 py-4 rounded-full font-black text-sm md:text-base flex items-center justify-center gap-3 hover:bg-white transition-all shadow-xl hover:-translate-y-1" aria-label="Get Free Audit">
+                        <span class="whitespace-nowrap">Free Audit</span>
+                        <i class="fa-solid fa-magnifying-glass-chart text-accent-blue text-xs"></i>
                     </a>
+
+                    <!-- 2. WATCH INTRO -->
+                    <button onclick="openVideoModal()" class="group bg-accent-blue text-white px-6 py-4 rounded-full font-black text-sm md:text-base flex items-center justify-center gap-3 hover:bg-blue-600 transition-all shadow-lg hover:-translate-y-1" aria-label="Watch Introduction Video">
+                        <i class="fa-solid fa-circle-play text-lg"></i>
+                        <span class="whitespace-nowrap">Watch Intro</span>
+                    </button>
                     
-                    <a href="/projects.html" class="group border-2 border-white/5 text-white px-8 py-5 rounded-full font-black text-lg flex items-center justify-center gap-3 hover:bg-white/10 transition-all backdrop-blur-md">
-                        <span>View Our Work</span>
-                        <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
+                    <!-- 3. Projects -->
+                    <a href="/projects.html" class="group border border-white/10 text-white px-6 py-4 rounded-full font-black text-sm md:text-base flex items-center justify-center gap-3 hover:bg-white/10 transition-all backdrop-blur-md hover:-translate-y-1" aria-label="View our projects">
+                        <span class="whitespace-nowrap">View Work</span>
+                        <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
                     </a>
                 </div>
             </div>
 
             <!-- RIGHT CONTENT: ANIMATED PERFORMANCE CARD -->
             <div class="relative hidden lg:flex justify-end reveal animate-float">
-                <div class="w-full max-w-md bg-white/5 backdrop-blur-3xl border border-white/10 p-12 rounded-[4rem] shadow-[0_50px_100px_rgba(0,0,0,0.4)] relative overflow-hidden group">
-                    
-                    <!-- Decorative Icon -->
-                    <div class="absolute top-0 right-0 p-10 opacity-5">
-                        <i class="fa-solid fa-chart-area text-9xl"></i>
-                    </div>
-
-                    <p class="text-[11px] uppercase tracking-[0.5em] font-black text-accent-blue mb-6">Performance Index</p>
-                    
+                <div class="w-full max-w-md bg-white/5 backdrop-blur-3xl border border-white/10 p-12 rounded-[4rem] shadow-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-8 opacity-5"><i class="fa-solid fa-chart-line text-9xl"></i></div>
+                    <p class="text-[10px] uppercase tracking-[0.5em] font-black text-accent-blue mb-6 italic">Performance Index</p>
                     <div class="flex items-end gap-3 mb-6">
-                        <h3 class="text-8xl font-black italic tracking-tighter leading-none">98%</h3>
-                        <div class="bg-accent-blue text-white p-1 rounded-md mb-2">
-                             <i class="fa-solid fa-caret-up text-xl"></i>
-                        </div>
+                        <h3 class="text-7xl font-black italic tracking-tighter leading-none">98%</h3>
+                        <div class="bg-accent-blue text-white p-1 rounded-md mb-2 shadow-lg"><i class="fa-solid fa-caret-up text-xl"></i></div>
                     </div>
-
-                    <p class="text-2xl font-bold text-platinum/90 leading-tight italic mb-10">
-                        Retention Rate <br> & Asset Growth.
-                    </p>
-                    
+                    <p class="text-xl font-bold text-platinum/90 leading-tight italic mb-10">Retention Rate <br> & Asset Growth.</p>
                     <div class="pt-8 border-t border-white/10 flex items-center justify-between">
-                        <span class="text-[10px] font-black uppercase tracking-widest text-iron-grey italic">Growth Standard</span>
-                        <div class="flex gap-1.5 text-[10px] text-accent-blue">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                        <span class="text-[9px] font-black uppercase tracking-widest text-iron-grey italic">Industry Standard</span>
+                        <div class="flex gap-1.5 text-accent-blue text-[8px]">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                     </div>
                 </div>
-
-                <!-- Floating National Reach Badge -->
-                <div class="absolute -bottom-6 right-10 bg-accent-blue text-white py-5 px-10 rounded-2xl shadow-2xl -rotate-3 hover:rotate-0 transition-all duration-500">
-                    <p class="text-[10px] font-black uppercase tracking-[0.3em] opacity-80 mb-1 leading-none">Reach:</p>
-                    <p class="text-2xl font-black italic">25+ Nations</p>
+                <!-- Global Reach Badge -->
+                <div class="absolute -bottom-6 right-10 bg-accent-blue text-white py-4 px-8 rounded-2xl shadow-2xl -rotate-3 transition-transform hover:rotate-0">
+                    <p class="text-xl font-black italic uppercase">25+ Nations</p>
                 </div>
             </div>
         </div>
 
-        <!-- === STATS BAR SECTION === -->
-        <div class="mt-32 pt-16 border-t border-white/5 reveal">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
-                <div class="group">
-                    <p class="text-4xl md:text-5xl font-black text-white italic mb-2 uppercase tracking-tighter group-hover:text-accent-blue transition-colors">50<span class="text-accent-blue">+</span></p>
-                    <div class="h-1 w-8 bg-accent-blue/30 mb-3"></div>
-                    <p class="text-[10px] font-black uppercase tracking-[0.3em] text-iron-grey italic">Architectures Live</p>
+        <!-- STATS ROW -->
+        <div class="mt-28 pt-16 border-t border-white/5 reveal">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center md:text-left">
+                    <p class="text-4xl font-black text-white italic mb-1">50<span class="text-accent-blue">+</span></p>
+                    <p class="text-[9px] font-black uppercase tracking-[0.3em] text-iron-grey italic">Architectures Live</p>
                 </div>
-                <div class="group">
-                    <p class="text-4xl md:text-5xl font-black text-white italic mb-2 uppercase tracking-tighter group-hover:text-accent-blue transition-colors">12<span class="text-accent-blue">+</span></p>
-                    <div class="h-1 w-8 bg-accent-blue/30 mb-3"></div>
-                    <p class="text-[10px] font-black uppercase tracking-[0.3em] text-iron-grey italic">AI Integrations</p>
+                <div class="text-center md:text-left">
+                    <p class="text-4xl font-black text-white italic mb-1">12<span class="text-accent-blue">+</span></p>
+                    <p class="text-[9px] font-black uppercase tracking-[0.3em] text-iron-grey italic">AI Integrations</p>
                 </div>
-                <div class="group">
-                    <p class="text-4xl md:text-5xl font-black text-white italic mb-2 uppercase tracking-tighter group-hover:text-accent-blue transition-colors">99<span class="text-accent-blue">%</span></p>
-                    <div class="h-1 w-8 bg-accent-blue/30 mb-3"></div>
-                    <p class="text-[10px] font-black uppercase tracking-[0.3em] text-iron-grey italic">Client Retention</p>
+                <div class="text-center md:text-left">
+                    <p class="text-4xl font-black text-white italic mb-1">99<span class="text-accent-blue">%</span></p>
+                    <p class="text-[9px] font-black uppercase tracking-[0.3em] text-iron-grey italic">Client Retention</p>
                 </div>
-                <div class="group">
-                    <p class="text-4xl md:text-5xl font-black text-white italic mb-2 uppercase tracking-tighter group-hover:text-accent-blue transition-colors">24<span class="text-accent-blue">/</span>5</p>
-                    <div class="h-1 w-8 bg-accent-blue/30 mb-3"></div>
-                    <p class="text-[10px] font-black uppercase tracking-[0.3em] text-iron-grey italic">Priority Support</p>
+                <div class="text-center md:text-left">
+                    <p class="text-4xl font-black text-white italic mb-1">24<span class="text-accent-blue">/</span>5</p>
+                    <p class="text-[9px] font-black uppercase tracking-[0.3em] text-iron-grey italic">Priority Support</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- === SMART VIDEO MODAL === -->
+<div id="videoModal" onclick="closeOnOverlay(event)" class="fixed inset-0 z-[5000] hidden items-center justify-center p-4 md:p-12 bg-carbon-black/95 backdrop-blur-[30px]">
+    
+    <div class="relative w-full max-w-5xl aspect-video bg-black rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+        
+        <!-- HIGH-VISIBILITY CLOSE BUTTON -->
+        <button onclick="closeVideoModal()" class="absolute top-6 right-6 z-[6000] bg-white text-carbon-black hover:bg-accent-blue hover:text-white w-12 h-12 rounded-full flex items-center justify-center transition-all shadow-2xl active:scale-90" aria-label="Close video player">
+            <i class="fa-solid fa-xmark text-xl font-bold"></i>
+        </button>
+
+        <!-- YT Player -->
+        <iframe id="introPlayer" class="w-full h-full" src="" 
+            title="F9XR Team Introduction" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById('videoModal');
+    const player = document.getElementById('introPlayer');
+
+    function openVideoModal() {
+        player.src = "https://www.youtube.com/embed/l-52kGRwH_Y?autoplay=1&rel=0";
+        modal.classList.remove('hidden');
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; 
+    }
+
+    function closeVideoModal() {
+        player.src = ""; 
+        modal.classList.add('hidden');
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; 
+    }
+
+    // Close on background overlay click
+    function closeOnOverlay(e) {
+        if (e.target === modal) closeVideoModal();
+    }
+
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeVideoModal();
+    });
+</script>
+
         
         <!-- Solutions / Problem vs. Solution Section -->
 <section class="py-32 px-6 border-t border-white/5 bg-zinc-950/50 relative overflow-hidden" id="problems">
@@ -313,7 +362,7 @@
                         </ul>
                         
                         <div class="mt-12 pt-10 border-t border-white/5">
-                            <a href="/contact.html" class="flex items-center justify-between group/link">
+                            <a href="/contact" class="flex items-center justify-between group/link">
                                 <span class="text-lg font-black uppercase tracking-tighter italic text-accent-blue">Close the Gap Now</span>
                                 <i class="fa-solid fa-arrow-right-long text-accent-blue transition-transform group-hover/link:translate-x-2"></i>
                             </a>
@@ -1357,7 +1406,7 @@
                 Book a <br> <span class="text-stroke">Blueprint Session.</span>
             </h2>
             <p class="text-xl text-platinum/50 mt-6 max-w-2xl mx-auto font-medium italic">
-                Secure a 30-minute technical audit. We’ll map out your digital architecture and growth strategy — no strings attached.
+                Secure a 10-minute technical audit. We’ll map out your digital architecture and growth strategy — no strings attached.
             </p>
         </div>
 
@@ -1372,7 +1421,7 @@
                         <div class="w-2 h-2 rounded-full bg-green-500/40"></div>
                     </div>
                     <p class="text-[10px] font-black uppercase tracking-widest text-iron-grey mx-auto italic">
-                        F9XR Team / 30min-consultation
+                        F9XR Team / 10min-consultation
                     </p>
                 </div>
 
