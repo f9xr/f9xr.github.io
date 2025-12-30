@@ -717,107 +717,256 @@
              SECTION 04: OUR PROCESS
              ======================================== -->
 <!-- Our Approach / Process Section -->
-<section class="py-32 px-6 bg-zinc-950/50 relative overflow-hidden" id="approach">
-    <!-- Subtle Background Element -->
-    <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
+<!-- === SECTION: OUR PROCESS (COMPLETE 01-04 ACCORDION) === -->
+<section class="py-32 px-4 md:px-6 bg-carbon-black relative overflow-hidden" id="process">
+    <!-- Background Ambient Glows -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto relative z-10">
-        <!-- Section Header -->
-        <div class="text-center mb-24 reveal">
-            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block italic">The Methodology</span>
-            <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase">
-                Our <span class="text-stroke">Process.</span>
-            </h2>
-            <p class="text-xl text-platinum/50 mt-6 max-w-2xl mx-auto font-medium italic">
-                A systematic roadmap from initial concept to digital dominance.
-            </p>
-        </div>
-
-        <!-- Process Grid -->
-        <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+        
+        <!-- Header: Inspiration Image Style -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 reveal">
             
-            <!-- Step 01 -->
-            <div class="relative group reveal">
-                <!-- Desktop Connecting Line (only visible on large screens) -->
-                <div class="hidden lg:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-accent-blue/30 to-transparent -translate-y-1/2 z-0"></div>
-                
-                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
-                    <div class="flex justify-between items-start mb-8">
-                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
-                            <i class="fa-solid fa-magnifying-glass text-2xl text-accent-blue group-hover:text-white"></i>
-                        </div>
-                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">01</span>
+            <h2 class="text-6xl md:text-9xl font-black tracking-tighter italic uppercase text-white leading-none">
+                Our Process<span class="text-stroke text-transparent" style="-webkit-text-stroke: 1.5px #f8f9fa;">.</span>
+            </h2>
+        </div>
+
+        <!-- Accordion List -->
+        <div class="space-y-4 reveal">
+            
+            <!-- STEP 01: DISCOVERY -->
+            <div class="process-item group bg-white/5 border border-white/5 rounded-[2rem] md:rounded-[3rem] overflow-hidden transition-all duration-500 hover:border-white/10" id="step-1">
+                <button onclick="toggleProcess('step-1')" class="w-full px-8 py-10 flex items-center justify-between text-left focus:outline-none">
+                    <div class="flex items-center gap-6 md:gap-10">
+                        <span class="text-[10px] md:text-xs font-black text-platinum/30 tracking-widest uppercase italic">(001)</span>
+                        <h3 class="text-2xl md:text-4xl font-black uppercase tracking-tighter text-white italic group-hover:text-accent-blue transition-colors duration-300">Discovery & Audit</h3>
                     </div>
-                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Discovery</h4>
-                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
-                        Deep dive into your brand DNA, competitors, and goals to build a strategic foundation.
-                    </p>
+                    <div class="toggle-icon w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 group-hover:bg-accent-blue group-hover:border-accent-blue transition-all duration-300">
+                        <i class="fa-solid fa-plus text-xs text-white transition-transform duration-500"></i>
+                    </div>
+                </button>
+                
+                <div class="process-content max-h-0 opacity-0 transition-all duration-700 ease-in-out">
+                    <div class="px-8 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center border-t border-white/5 pt-10">
+                        <div class="lg:col-span-7 flex flex-col md:flex-row gap-8 items-center">
+                            <div class="w-full md:w-56 aspect-video md:aspect-square rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 border border-white/10 shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1106&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Audit" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-black text-white uppercase italic mb-4">Uncovering Revenue Leaks</h4>
+                                <p class="text-platinum/50 text-base leading-relaxed italic mb-8">
+                                    We analyze your brand DNA, technical debt, and competitor landscape to find exactly where you are losing global visibility.
+                                </p>
+                                <a href="/contact.html" class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
+                                    Book Free Audit <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5">
+                            <p class="text-[10px] font-black uppercase tracking-widest text-iron-grey mb-6 italic">Core Deliverables</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Competitor Intel</span>
+                                <span class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Tech Audit</span>
+                                <span class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">SEO Roadmap</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Step 02 -->
-            <div class="relative group reveal">
-                <div class="hidden lg:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-accent-blue/30 to-transparent -translate-y-1/2 z-0"></div>
-                
-                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
-                    <div class="flex justify-between items-start mb-8">
-                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
-                            <i class="fa-solid fa-pen-ruler text-2xl text-accent-blue group-hover:text-white"></i>
-                        </div>
-                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">02</span>
+            <!-- STEP 02: ARCHITECTURE -->
+            <div class="process-item group bg-white/5 border border-white/5 rounded-[2rem] md:rounded-[3rem] overflow-hidden transition-all duration-500 hover:border-white/10" id="step-2">
+                <button onclick="toggleProcess('step-2')" class="w-full px-8 py-10 flex items-center justify-between text-left focus:outline-none">
+                    <div class="flex items-center gap-6 md:gap-10">
+                        <span class="text-[10px] md:text-xs font-black text-platinum/30 tracking-widest uppercase italic">(002)</span>
+                        <h3 class="text-2xl md:text-4xl font-black uppercase tracking-tighter text-white italic group-hover:text-accent-blue transition-colors duration-300">Strategy & Design</h3>
                     </div>
-                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Architecture</h4>
-                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
-                        Prototyping focused on user psychology, conversion flows, and modern aesthetics.
-                    </p>
+                    <div class="toggle-icon w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 group-hover:bg-accent-blue group-hover:border-accent-blue transition-all duration-300">
+                        <i class="fa-solid fa-plus text-xs text-white transition-transform duration-500"></i>
+                    </div>
+                </button>
+                
+                <div class="process-content max-h-0 opacity-0 transition-all duration-700 ease-in-out">
+                    <div class="px-8 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center border-t border-white/5 pt-10">
+                        <div class="lg:col-span-7 flex flex-col md:flex-row gap-8 items-center">
+                            <div class="w-full md:w-56 aspect-video md:aspect-square rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 border border-white/10 shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Design" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-black text-white uppercase italic mb-4">High-FID Architecture</h4>
+                                <p class="text-platinum/50 text-base leading-relaxed italic mb-8">
+                                    We map out user psychology, conversion funnels, and modern aesthetics to ensure your digital product converts browsers into high-paying clients.
+                                </p>
+                                <a href="/contact.html" class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
+                                    Review Framework <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5">
+                            <p class="text-[10px] font-black uppercase tracking-widest text-iron-grey mb-6 italic">Core Deliverables</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">UX Mockups</span>
+                                <span class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Interactive Flows</span>
+                                <span class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Brand Guidelines</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Step 03 -->
-            <div class="relative group reveal">
-                <div class="hidden lg:block absolute top-1/2 left-full w-full h-[1px] bg-gradient-to-r from-accent-blue/30 to-transparent -translate-y-1/2 z-0"></div>
-                
-                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
-                    <div class="flex justify-between items-start mb-8">
-                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
-                            <i class="fa-solid fa-code text-2xl text-accent-blue group-hover:text-white"></i>
-                        </div>
-                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">03</span>
+            <!-- STEP 03: EXECUTION -->
+            <div class="process-item group bg-white/5 border border-white/5 rounded-[2rem] md:rounded-[3rem] overflow-hidden transition-all duration-500 hover:border-white/10" id="step-3">
+                <button onclick="toggleProcess('step-3')" class="w-full px-8 py-10 flex items-center justify-between text-left focus:outline-none">
+                    <div class="flex items-center gap-6 md:gap-10">
+                        <span class="text-[10px] md:text-xs font-black text-platinum/30 tracking-widest uppercase italic">(003)</span>
+                        <h3 class="text-2xl md:text-4xl font-black uppercase tracking-tighter text-white italic group-hover:text-accent-blue transition-colors duration-300">Execution & Logic</h3>
                     </div>
-                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Execution</h4>
-                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
-                        Writing clean, scalable code integrated with custom AI modules for high functionality.
-                    </p>
+                    <div class="toggle-icon w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 group-hover:bg-accent-blue group-hover:border-accent-blue transition-all duration-300">
+                        <i class="fa-solid fa-plus text-xs text-white transition-transform duration-500"></i>
+                    </div>
+                </button>
+                
+                <div class="process-content max-h-0 opacity-0 transition-all duration-700 ease-in-out">
+                    <div class="px-8 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center border-t border-white/5 pt-10">
+                        <div class="lg:col-span-7 flex flex-col md:flex-row gap-8 items-center">
+                            <div class="w-full md:w-56 aspect-video md:aspect-square rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 border border-white/10 shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600" alt="Development" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-black text-white uppercase italic mb-4">Precision Code Integration</h4>
+                                <p class="text-platinum/50 text-base leading-relaxed italic mb-8">
+                                    Our engineers translate designs into clean, scalable code integrated with proprietary AI logic for automated engagement and security.
+                                </p>
+                                <a href="/contact.html" class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
+                                    View Tech Stack <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5">
+                            <p class="text-[10px] font-black uppercase tracking-widest text-iron-grey mb-6 italic">Core Deliverables</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Custom CMS</span>
+                                <span class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">AI Agent logic</span>
+                                <span class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">SSL Security</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Step 04 -->
-            <div class="relative group reveal">
-                <div class="relative z-10 p-10 bg-gunmetal/40 rounded-[2.5rem] border border-white/5 group-hover:border-accent-blue/50 group-hover:bg-gunmetal/60 transition-all duration-500 h-full shadow-2xl">
-                    <div class="flex justify-between items-start mb-8">
-                        <div class="w-16 h-16 bg-accent-blue/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-accent-blue transition-all duration-500">
-                            <i class="fa-solid fa-rocket text-2xl text-accent-blue group-hover:text-white"></i>
-                        </div>
-                        <span class="text-5xl font-black italic opacity-5 group-hover:opacity-20 transition-opacity uppercase">04</span>
+            <!-- STEP 04: GROWTH -->
+            <div class="process-item group bg-white/5 border border-white/5 rounded-[2rem] md:rounded-[3rem] overflow-hidden transition-all duration-500 hover:border-white/10" id="step-4">
+                <button onclick="toggleProcess('step-4')" class="w-full px-8 py-10 flex items-center justify-between text-left focus:outline-none">
+                    <div class="flex items-center gap-6 md:gap-10">
+                        <span class="text-[10px] md:text-xs font-black text-platinum/30 tracking-widest uppercase italic">(004)</span>
+                        <h3 class="text-2xl md:text-4xl font-black uppercase tracking-tighter text-white italic group-hover:text-accent-blue transition-colors duration-300">Optimization & Growth</h3>
                     </div>
-                    <h4 class="text-2xl font-black uppercase tracking-tighter mb-4 italic">Growth</h4>
-                    <p class="text-platinum/60 leading-relaxed text-lg font-medium italic">
-                        Launch, rigorous SEO indexing, and performance tuning for long-term dominance.
-                    </p>
+                    <div class="toggle-icon w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 group-hover:bg-accent-blue group-hover:border-accent-blue transition-all duration-500">
+                        <i class="fa-solid fa-plus text-xs text-white transition-transform duration-500"></i>
+                    </div>
+                </button>
+                
+                <div class="process-content max-h-0 opacity-0 transition-all duration-700 ease-in-out">
+                    <div class="px-8 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center border-t border-white/5 pt-10">
+                        <div class="lg:col-span-7 flex flex-col md:flex-row gap-8 items-center">
+                            <div class="w-full md:w-56 aspect-video md:aspect-square rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 border border-white/10 shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600" alt="Growth" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-xl font-black text-white uppercase italic mb-4">Continuous Asset Appreciation</h4>
+                                <p class="text-platinum/50 text-base leading-relaxed italic mb-8">
+                                    Post-launch, we focus on rigorous SEO indexing, Core Web Vital tuning, and performance monitoring to ensure long-term ROI.
+                                </p>
+                                <a href="/contact.html" class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
+                                    Scale My Business <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5">
+                            <p class="text-[10px] font-black uppercase tracking-widest text-iron-grey mb-6 italic">Core Deliverables</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Local SEO Dominance</span>
+                                <span class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Speed Tuning</span>
+                                <span class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">24/5 Priority Care</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
 
-        <!-- Trust Signal / CTA -->
+        <!-- Trust Signal -->
         <div class="mt-20 text-center reveal">
-            <p class="text-platinum/40 font-bold uppercase tracking-[0.2em] text-xs">
-                Every project is handled with 
-                <span class="text-white underline underline-offset-4 decoration-accent-blue">Precision Engineering</span>
+            <p class="text-platinum/30 font-bold uppercase tracking-[0.4em] text-[10px]">
+                Engineering Success from <span class="text-white">India</span> to the <span class="text-white">Global Digital World</span>
             </p>
         </div>
     </div>
 </section>
+
+<style>
+    /* Accordion Interactive States */
+    .process-item.active {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(59, 130, 246, 0.3);
+        box-shadow: 0 40px 80px -20px rgba(0,0,0,0.5);
+    }
+    
+    .process-item.active .process-content {
+        max-height: 1000px; /* High enough for desktop content */
+        opacity: 1;
+        padding-top: 2.5rem;
+    }
+    
+    .process-item.active .toggle-icon {
+        background: #3b82f6;
+        border-color: #3b82f6;
+        transform: scale(1.1);
+    }
+    
+    .process-item.active .toggle-icon i {
+        transform: rotate(45deg);
+    }
+
+    /* Prevent mobile content from being cut off */
+    @media (max-width: 768px) {
+        .process-item.active .process-content {
+            max-height: 2000px;
+        }
+    }
+</style>
+
+<script>
+    /**
+     * F9XR Toggle Engine
+     * Optimized to prevent forced reflow and handle sibling closing
+     */
+    function toggleProcess(id) {
+        const items = document.querySelectorAll('.process-item');
+        const target = document.getElementById(id);
+        const isActive = target.classList.contains('active');
+
+        // Close all siblings
+        items.forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Toggle target
+        if (!isActive) {
+            target.classList.add('active');
+        }
+    }
+    
+    // Auto-expand first step on large screens
+    document.addEventListener('DOMContentLoaded', () => {
+        if(window.innerWidth > 1024) {
+            toggleProcess('step-1');
+        }
+    });
+</script>
 
         <!-- ========================================
              SECTION 05: ABOUT US
@@ -1131,103 +1280,160 @@
         <!-- ========================================
              SECTION 07: TESTIMONIALS
              ======================================== -->
-        <!-- Reviews / Testimonials Section -->
-<section id="reviews" class="py-32 px-6 relative overflow-hidden">
-    <!-- Subtle Background Glow -->
-    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
+<!-- === SLEEK ARCHITECTURAL TESTIMONIALS === -->
+<section id="reviews" class="py-32 bg-carbon-black relative overflow-hidden border-t border-white/5">
+    
+    <!-- Ambient Glow -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-blue/5 rounded-full blur-[150px] pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto">
-        <!-- Section Header -->
-        <div class="mb-24 text-center reveal">
-            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block italic">The Proof</span>
-            <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
-                What Our <br> <span class="text-stroke">Clients Say.</span>
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+        
+        <!-- Header Section (Reference Image Style) -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-12 mb-12 border-b border-white/10 reveal">
+            <h2 class="text-6xl md:text-8xl font-black tracking-tighter italic uppercase text-white leading-none">
+                Testimonials<span class="text-accent-blue">.</span>
             </h2>
-        </div>
-
-        <!-- Reviews Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-            
-            <!-- Review 1: Healthcare/Local SEO -->
-            <div class="group relative bg-gunmetal/30 backdrop-blur-md p-10 md:p-14 rounded-[3.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/50 transition-all duration-500 reveal shadow-2xl">
-                <!-- Large Decorative Quote Icon -->
-                <i class="fa-solid fa-quote-left absolute top-10 right-10 text-8xl opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500"></i>
-                
-                <div class="relative z-10">
-                    <!-- Rating & Badge -->
-                    <div class="flex flex-wrap items-center justify-between gap-4 mb-10">
-                        <div class="flex text-yellow-500 text-sm gap-1">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <span class="bg-accent-blue/10 text-accent-blue text-[10px] font-black tracking-widest px-4 py-1 rounded-full uppercase border border-accent-blue/20">
-                            Verified Project: Medical
-                        </span>
-                    </div>
-
-                    <!-- Testimonial Text -->
-                    <p class="text-xl md:text-2xl italic text-platinum/90 mb-10 leading-relaxed font-medium">
-                        "F9XR Team fixed our clinic's local SEO. We are finally visible to people searching for doctors in our area. <span class="text-white font-bold">Incredible growth in just 3 weeks."</span>
-                    </p>
-
-                    <!-- Author Details -->
-                    <div class="flex items-center gap-5 pt-8 border-t border-white/5">
-                        <div class="w-14 h-14 bg-accent-blue rounded-2xl flex items-center justify-center font-black text-white text-xl italic shadow-lg shadow-blue-500/20">
-                            DA
-                        </div>
-                        <div>
-                            <h4 class="font-black text-xl tracking-tighter uppercase italic text-white">Dr. Arshdeep</h4>
-                            <p class="text-platinum/40 text-xs font-bold uppercase tracking-widest mt-1">Medical Director</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Review 2: E-commerce/Maintenance -->
-            <div class="group relative bg-gunmetal/30 backdrop-blur-md p-10 md:p-14 rounded-[3.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/50 transition-all duration-500 reveal shadow-2xl">
-                <i class="fa-solid fa-quote-left absolute top-10 right-10 text-8xl opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500"></i>
-                
-                <div class="relative z-10">
-                    <div class="flex flex-wrap items-center justify-between gap-4 mb-10">
-                        <div class="flex text-yellow-500 text-sm gap-1">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <span class="bg-accent-blue/10 text-accent-blue text-[10px] font-black tracking-widest px-4 py-1 rounded-full uppercase border border-accent-blue/20">
-                            Verified Project: Retail
-                        </span>
-                    </div>
-
-                    <p class="text-xl md:text-2xl italic text-platinum/90 mb-10 leading-relaxed font-medium">
-                        "The maintenance package is a lifesaver. <span class="text-white font-bold text-stroke" style="-webkit-text-stroke: 0.5px #fff;">Speed is insane</span> and the automated backups give me total peace of mind for my e-commerce brand."
-                    </p>
-
-                    <div class="flex items-center gap-5 pt-8 border-t border-white/5">
-                        <div class="w-14 h-14 bg-white text-carbon-black rounded-2xl flex items-center justify-center font-black text-xl italic shadow-lg">
-                            SJ
-                        </div>
-                        <div>
-                            <h4 class="font-black text-xl tracking-tighter uppercase italic text-white">Sarah Jenkins</h4>
-                            <p class="text-platinum/40 text-xs font-bold uppercase tracking-widest mt-1">Brand Founder</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Trust Signal -->
-        <div class="mt-20 text-center reveal">
-            <p class="text-platinum/40 font-bold uppercase tracking-[0.3em] text-[10px]">
-                Loved by brands from <span class="text-white">India</span> to the <span class="text-white">Global Digital World</span>
+            <p class="text-lg md:text-xl text-platinum/40 max-w-md font-medium italic leading-relaxed">
+                Real stories, real success. Our partners have experienced firsthand the impact of our high-performance digital architectures.
             </p>
+        </div>
+
+        <!-- Horizontal Slider Container -->
+        <div class="relative">
+            <!-- Snap Container -->
+            <div id="review-slider" class="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar py-10">
+                
+                <!-- 01: Medical -->
+                <div class="snap-center flex-shrink-0 w-[85vw] md:w-[450px] bg-bright-snow p-10 md:p-12 rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.3)] group reveal flex flex-col justify-between">
+                    <p class="text-xl md:text-2xl text-carbon-black font-semibold italic leading-relaxed mb-10">
+                        "F9XR Team fixed our clinic's local SEO. We are finally visible to people searching for doctors in our area. <span class="text-accent-blue">Incredible growth in just 3 weeks."</span>
+                    </p>
+                    <div class="flex items-center gap-4 pt-8 border-t border-carbon-black/5">
+                        <div class="w-12 h-12 bg-carbon-black rounded-full flex items-center justify-center text-white font-black italic text-xs">DA</div>
+                        <div>
+                            <h4 class="text-carbon-black font-black uppercase text-sm tracking-tighter">Dr. Arshdeep</h4>
+                            <p class="text-carbon-black/40 text-[10px] font-black uppercase tracking-widest italic">Medical Director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02: Retail/E-commerce -->
+                <div class="snap-center flex-shrink-0 w-[85vw] md:w-[450px] bg-bright-snow p-10 md:p-12 rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.3)] group reveal flex flex-col justify-between">
+                    <p class="text-xl md:text-2xl text-carbon-black font-semibold italic leading-relaxed mb-10">
+                        "The maintenance package is a lifesaver. <span class="text-accent-blue">Speed is insane</span> and the automated backups give me total peace of mind for my global e-com brand."
+                    </p>
+                    <div class="flex items-center gap-4 pt-8 border-t border-carbon-black/5">
+                        <div class="w-12 h-12 bg-accent-blue rounded-full flex items-center justify-center text-white font-black italic text-xs">SJ</div>
+                        <div>
+                            <h4 class="text-carbon-black font-black uppercase text-sm tracking-tighter">Sarah Jenkins</h4>
+                            <p class="text-carbon-black/40 text-[10px] font-black uppercase tracking-widest italic">Brand Founder</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03: Tech Partner -->
+                <div class="snap-center flex-shrink-0 w-[85vw] md:w-[450px] bg-bright-snow p-10 md:p-12 rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.3)] group reveal flex flex-col justify-between">
+                    <p class="text-xl md:text-2xl text-carbon-black font-semibold italic leading-relaxed mb-10">
+                        "Clean code, high performance. The architecture they built for our <span class="text-accent-blue">Fintech tool</span> is absolutely bulletproof and scales effortlessly."
+                    </p>
+                    <div class="flex items-center gap-4 pt-8 border-t border-carbon-black/5">
+                        <div class="w-12 h-12 bg-carbon-black rounded-full flex items-center justify-center text-white font-black italic text-xs">MK</div>
+                        <div>
+                            <h4 class="text-carbon-black font-black uppercase text-sm tracking-tighter">Marcus King</h4>
+                            <p class="text-carbon-black/40 text-[10px] font-black uppercase tracking-widest italic">CTO, King Logic</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 04: Real Estate -->
+                <div class="snap-center flex-shrink-0 w-[85vw] md:w-[450px] bg-bright-snow p-10 md:p-12 rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.3)] group reveal flex flex-col justify-between">
+                    <p class="text-xl md:text-2xl text-carbon-black font-semibold italic leading-relaxed mb-10">
+                        "F9XR transformed our lead gen. Our property portal now <span class="text-accent-blue">ranks #1 in local search</span> across major city keywords."
+                    </p>
+                    <div class="flex items-center gap-4 pt-8 border-t border-carbon-black/5">
+                        <div class="w-12 h-12 bg-accent-blue rounded-full flex items-center justify-center text-white font-black italic text-xs">RS</div>
+                        <div>
+                            <h4 class="text-carbon-black font-black uppercase text-sm tracking-tighter">Rahul Sharma</h4>
+                            <p class="text-carbon-black/40 text-[10px] font-black uppercase tracking-widest italic">Real Estate Dev</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 05: Influencer -->
+                <div class="snap-center flex-shrink-0 w-[85vw] md:w-[450px] bg-bright-snow p-10 md:p-12 rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.3)] group reveal flex flex-col justify-between">
+                    <p class="text-xl md:text-2xl text-carbon-black font-semibold italic leading-relaxed mb-10">
+                        "The <span class="text-accent-blue">AI chatbot handles 90% of my DMs.</span> It's like having a 24/7 assistant that never sleeps or makes a mistake."
+                    </p>
+                    <div class="flex items-center gap-4 pt-8 border-t border-carbon-black/5">
+                        <div class="w-12 h-12 bg-carbon-black rounded-full flex items-center justify-center text-white font-black italic text-xs">EV</div>
+                        <div>
+                            <h4 class="text-carbon-black font-black uppercase text-sm tracking-tighter">Elena V.</h4>
+                            <p class="text-carbon-black/40 text-[10px] font-black uppercase tracking-widest italic">Content Creator</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 06: SaaS Founder -->
+                <div class="snap-center flex-shrink-0 w-[85vw] md:w-[450px] bg-bright-snow p-10 md:p-12 rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.3)] group reveal flex flex-col justify-between">
+                    <p class="text-xl md:text-2xl text-carbon-black font-semibold italic leading-relaxed mb-10">
+                        "The AI automation saved us <span class="text-accent-blue">20+ hours weekly.</span> Our content performance and engagement increased by 300%."
+                    </p>
+                    <div class="flex items-center gap-4 pt-8 border-t border-carbon-black/5">
+                        <div class="w-12 h-12 bg-accent-blue rounded-full flex items-center justify-center text-white font-black italic text-xs">DC</div>
+                        <div>
+                            <h4 class="text-carbon-black font-black uppercase text-sm tracking-tighter">David Chen</h4>
+                            <p class="text-carbon-black/40 text-[10px] font-black uppercase tracking-widest italic">SaaS Founder</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Navigation Controls (Reference Image Style) -->
+            <div class="flex justify-end gap-3 mt-8 reveal">
+                <button onclick="scrollTestimonials('left')" class="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white hover:text-carbon-black transition-all duration-300" aria-label="Previous Testimonial">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button onclick="scrollTestimonials('right')" class="w-14 h-14 rounded-full bg-white text-carbon-black border border-white flex items-center justify-center hover:bg-accent-blue hover:text-white transition-all duration-300" aria-label="Next Testimonial">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
         </div>
     </div>
 </section>
+
+<script>
+    /**
+     * Testimonial Navigation
+     * Uses card width + gap for precision snapping
+     */
+    function scrollTestimonials(direction) {
+        const slider = document.getElementById('review-slider');
+        const scrollAmount = window.innerWidth > 768 ? 482 : window.innerWidth * 0.85 + 24;
+        
+        if (direction === 'left') {
+            slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else {
+            slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    }
+</script>
+
+<style>
+    /* Premium UI fixes */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    /* EnsureMontserrat is crisp on the white cards */
+    #review-slider p {
+        letter-spacing: -0.02em;
+    }
+</style>
         
         
         <!-- ========================================
              SECTION 08: PRICING
              ======================================== -->
-        <!-- Reviews / Testimonials Section -->
 <section id="pricing" class="py-32 px-6 bg-carbon-black relative overflow-hidden">
     <!-- Background Decor -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
@@ -1499,55 +1705,57 @@
         <!-- ========================================
              SECTION 10: BLOG POSTS
              ======================================== -->
-<section id="blog" class="py-32 px-6 bg-zinc-950/20 relative overflow-hidden">
-    <!-- Clean Background Visuals -->
-    <div class="absolute top-0 right-0 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto relative z-10">
-        
-        <!-- Section Header + Redesigned Big Button -->
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-10 mb-20 reveal">
-            <div class="max-w-2xl text-center md:text-left">
-                <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] mb-4 block italic">The Knowledge Vault</span>
-                <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
-                    Digital <br> <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1.5px #f8f9fa;">Insights.</span>
-                </h2>
-            </div>
+
+<section id="blog" class="py-24 px-4 md:px-12 bg-carbon-black relative overflow-hidden border-t border-white/5">
+    <!-- Subtle Ambient Glow -->
+    <div class="absolute top-1/2 left-0 w-96 h-96 bg-accent-blue/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="max-w-[1440px] mx-auto relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
             
-            <!-- Bigger, Redesigned CTA Button -->
-            <a href="https://growwithguidance.blogspot.com/" target="_blank" 
-               class="group relative inline-flex items-center gap-6 bg-bright-snow text-carbon-black px-12 py-6 rounded-full font-black text-xl md:text-2xl uppercase tracking-tighter hover:scale-105 transition-all shadow-2xl active:scale-95" 
-               aria-label="Read all blogs on growwithguidance.blogspot.com">
-                <span>Read our Blogs</span>
-                <div class="w-12 h-12 bg-accent-blue rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform duration-500">
-                    <i class="fa-solid fa-arrow-up-right-from-square text-white text-sm"></i>
+            <!-- LEFT COLUMN: HEADER & CTA -->
+            <div class="lg:col-span-4 lg:sticky lg:top-32 h-fit reveal">
+                <div class="max-w-md">
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter italic uppercase text-white leading-tight mb-6">
+                        The <br> <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1.5px #f8f9fa;">Journal.</span>
+                    </h2>
+                    <p class="text-lg text-platinum/40 font-medium italic leading-relaxed mb-8">
+                        Architectural field notes and growth strategies from the F9XR Team.
+                    </p>
+                    
+                    <!-- High-Impact CTA -->
+                    <a href="https://growwithguidance.blogspot.com/" target="_blank" 
+                       class="group inline-flex items-center gap-3 bg-white/5 border border-white/10 text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-[10px] hover:bg-accent-blue hover:border-accent-blue transition-all duration-500"
+                       aria-label="View all stories on our blog">
+                        Open Our Blog 
+                        <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
+                    </a>
                 </div>
-            </a>
-        </div>
+            </div>
 
-        <!-- Slim Responsive Blog Grid -->
-        <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Skeleton Loaders for Stability -->
-            <div class="bg-white/5 h-[300px] rounded-[2.5rem] animate-pulse"></div>
-            <div class="bg-white/5 h-[300px] rounded-[2.5rem] animate-pulse"></div>
-            <div class="bg-white/5 h-[300px] rounded-[2.5rem] animate-pulse"></div>
-        </div>
+            <!-- RIGHT COLUMN: DYNAMIC LIST -->
+            <div class="lg:col-span-8">
+                <div id="blog-grid" class="flex flex-col">
+                    <!-- Skeleton UI during load -->
+                    <div class="h-32 bg-white/5 rounded-3xl animate-pulse mb-6"></div>
+                    <div class="h-32 bg-white/5 rounded-3xl animate-pulse mb-6"></div>
+                    <div class="h-32 bg-white/5 rounded-3xl animate-pulse"></div>
+                </div>
+            </div>
 
+        </div>
     </div>
 </section>
 
-<!-- === BLOG LOGIC: SLIM PROFILE HANDLER === -->
+<!-- === BLOG LOGIC: FIXED CLICKABLE LIST === -->
 <script type="text/javascript">
-    /**
-     * Callback for Blogger JSON API
-     * Focus: Text-only, Slim profile, High Performance
-     */
     function showrecentposts(json) {
         const blogGrid = document.getElementById('blog-grid');
         const entries = json.feed.entry;
         
         if (!entries) {
-            blogGrid.innerHTML = `<p class="col-span-full text-center text-platinum/20 py-20 italic uppercase font-black">Updating Intel...</p>`;
+            blogGrid.innerHTML = `<p class="text-platinum/20 py-20 italic font-black uppercase tracking-widest">Database Syncing...</p>`;
             return;
         }
 
@@ -1557,7 +1765,6 @@
             const entry = entries[i];
             const title = entry.title.$t;
             
-            // Link Extraction
             let postUrl = "";
             for (let j = 0; j < entry.link.length; j++) {
                 if (entry.link[j].rel === 'alternate') {
@@ -1566,63 +1773,57 @@
                 }
             }
 
-            // Date Formatting
-            const pubDate = new Date(entry.published.$t).toLocaleDateString('en-US', {
-                month: 'short', day: '2-digit', year: 'numeric'
-            });
-
-            // Snippet Extraction (Stripped of HTML)
             const snippet = ("summary" in entry) 
-                ? entry.summary.$t.replace(/<[^>]*>?/gm, '').substring(0, 140) + "..."
-                : entry.content.$t.replace(/<[^>]*>?/gm, '').substring(0, 140) + "...";
+                ? entry.summary.$t.replace(/<[^>]*>?/gm, '').substring(0, 160) + "..."
+                : entry.content.$t.replace(/<[^>]*>?/gm, '').substring(0, 160) + "...";
 
             htmlContent += `
-                <article class="group relative bg-gunmetal/20 backdrop-blur-sm border border-white/5 rounded-[2.5rem] p-8 md:p-10 hover:border-accent-blue/40 hover:bg-gunmetal/40 transition-all duration-500 reveal shadow-xl flex flex-col justify-between h-full">
-                    <div>
-                        <div class="flex items-center gap-3 mb-6">
-                            <span class="w-8 h-[1px] bg-accent-blue/40"></span>
-                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-iron-grey italic">${pubDate}</p>
+                <article class="reveal border-b border-white/5 last:border-none group">
+                    <a href="${postUrl}" target="_blank" class="block py-10 md:py-12 transition-all duration-500 hover:bg-white/5 rounded-3xl px-4 md:px-8 -mx-4 md:-mx-8 group" aria-label="Open article: ${title}">
+                        <div class="flex items-center justify-between gap-10">
+                            <div class="max-w-3xl">
+                                <h3 class="text-2xl md:text-4xl font-black italic tracking-tighter uppercase text-white group-hover:text-accent-blue transition-colors duration-300 mb-4 leading-tight">
+                                    ${title}
+                                </h3>
+                                <p class="text-platinum/50 text-base md:text-lg font-medium italic leading-relaxed line-clamp-2 transition-colors group-hover:text-platinum/80">
+                                    ${snippet}
+                                </p>
+                            </div>
+                            
+                            <!-- Interaction Indicator -->
+                            <div class="hidden sm:flex w-14 h-14 rounded-full border border-white/10 items-center justify-center group-hover:border-accent-blue group-hover:bg-accent-blue/10 transition-all duration-500 flex-shrink-0">
+                                <i class="fa-solid fa-arrow-right-long text-white/20 group-hover:text-accent-blue group-hover:translate-x-1 transition-all"></i>
+                            </div>
                         </div>
-                        
-                        <h3 class="text-2xl font-black italic tracking-tighter uppercase mb-6 leading-tight text-white group-hover:text-accent-blue transition-colors">
-                            ${title}
-                        </h3>
-                        
-                        <p class="text-platinum/50 text-sm leading-relaxed italic line-clamp-3 font-medium mb-8">
-                            ${snippet}
-                        </p>
-                    </div>
-                    
-                    <!-- Slim CTA Footer -->
-                    <div class="pt-6 border-t border-white/5">
-                        <a href="${postUrl}" target="_blank" class="flex items-center justify-between group/link" aria-label="Explore Intel: ${title}">
-                            <span class="text-[11px] font-black uppercase tracking-widest text-white/40 group-hover/link:text-white transition-colors">Read More</span>
-                            <i class="fa-solid fa-arrow-right-long text-accent-blue transition-transform group-hover/link:translate-x-2"></i>
-                        </a>
-                    </div>
+                    </a>
                 </article>
             `;
         }
 
         blogGrid.innerHTML = htmlContent;
         
-        // Re-init Reveal Observer if exists
-        if (window.revealObserver) {
-            document.querySelectorAll('#blog-grid .reveal').forEach(el => window.revealObserver.observe(el));
+        // Re-init Observer to handle newly injected content
+        if (typeof revealObserver !== 'undefined') {
+            document.querySelectorAll('#blog-grid .reveal').forEach(el => revealObserver.observe(el));
         }
     }
 </script>
 
-<!-- API Request (Placed after logic for speed) -->
-<script src="https://growwithguidance.blogspot.com/feeds/posts/default?orderby=published&alt=json-in-script&callback=showrecentposts&max-results=6"></script>
+<!-- API Request (F9XR Production) -->
+<script src="https://growwithguidance.blogspot.com/feeds/posts/default?orderby=published&alt=json-in-script&callback=showrecentposts&max-results=3"></script>
 
 <style>
-    /* Editorial Line-Clamping for clean grid alignment */
-    .line-clamp-3 {
+    /* Prevent text overlap and ensure alignment */
+    .line-clamp-2 {
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;  
         overflow: hidden;
+    }
+
+    /* Fixed hover state to show the card background clearly */
+    article a:hover {
+        transform: scale(1.01);
     }
 </style>
 
@@ -1973,6 +2174,8 @@
             animation-play-state: paused;
         }
     </style>
+
+    
 </footer>
 
     <!-- === SCRIPTS === -->
