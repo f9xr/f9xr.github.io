@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- === PRIMARY SEO META TAGS === -->
+    <title>Thank You | F9XR Team</title>
+    <meta name="title" content="Thank You | F9XR Team">
+    <meta name="description" content="Thank you for contacting F9XR Team. We will get back to you shortly.">
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+
+    <!-- === PERFORMANCE & FONTS === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bright-snow': '#f8f9fa',
+                        'platinum': '#e9ecef',
+                        'iron-grey': '#495057',
+                        'gunmetal': '#343a40',
+                        'carbon-black': '#212529',
+                        'accent-blue': '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        /* @font-face removed */
+
+        body {
+            background-color: #212529;
+            overflow-x: hidden;
+        }
+
+        .glass-nav {
+            background: rgba(33, 37, 41, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #212529;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #495057;
+            border-radius: 10px;
+        }
+
+        /* Animation for the mobile menu text */
+        #mobile-menu a {
+            transform: translateX(-20px);
+            transition: transform 0.5s ease, color 0.3s ease;
+        }
+
+        #mobile-menu.opacity-100 a {
+            transform: translateX(0);
+        }
+    </style>
+
+    <!-- Font Awesome -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+
+<body class="text-bright-snow font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- === ADVANCED RESPONSIVE HEADER === -->
+    <header class="fixed top-6 left-0 right-0 z-[5000] px-4">
+        <nav
+            class="glass-nav max-w-6xl mx-auto rounded-full px-4 py-2 md:px-6 md:py-3 flex justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/10 relative transition-all duration-300 hover:py-3">
+
+            <!-- 1. Brand Logo -->
+            <a href="/" class="flex items-center gap-2 group relative z-[5001]" aria-label="F9XR Home">
+
+                <span class="text-xl font-black tracking-tighter uppercase text-white">F9XR <span
+                        class="text-xs font-bold opacity-80 ml-0.5">Team</span></span>
+            </a>
+
+            <!-- 2. Desktop Navigation (Hidden on Mobile) -->
+            <div class="hidden lg:flex gap-8 font-bold text-[10px] tracking-[0.2em] uppercase text-platinum/70">
+                <a href="/#about"
+                    class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">About</a>
+                <a href="/#services"
+                    class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Services</a>
+                <a href="/#portfolio"
+                    class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Works</a>
+                <a href="/contact.html" class="text-accent-blue hover:text-white transition-colors italic">Hire Us</a>
+            </div>
+
+            <!-- 3. Header Actions -->
+            <div class="flex items-center gap-3 relative z-[5001]">
+                <!-- WhatsApp Link (Hidden on very small screens, shown on md+) -->
+                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank"
+                    class="hidden sm:flex bg-white/10 hover:bg-white/20 text-white border border-white/10 px-5 py-2 rounded-full font-black text-[10px] tracking-widest uppercase transition-all active:scale-95">
+                    <i class="fa-brands fa-whatsapp mr-2 text-green-400"></i> WhatsApp
+                </a>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button onclick="toggleMobileMenu()" id="menu-btn"
+                    class="lg:hidden w-10 h-10 flex items-center justify-center text-white bg-white/5 rounded-full border border-white/10 active:scale-90 transition-all"
+                    aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars-staggered text-lg"></i>
+                </button>
+
+                <!-- Desktop Hire Us Button (Visible on md+) -->
+                <a href="/contact.html"
+                    class="bg-bright-snow text-carbon-black px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-lg">
+                    Get Started
+                </a>
+            </div>
+        </nav>
+
+        <!-- 4. Mobile Overlay Menu (Webflow Style) -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">
+            <!-- Close Button -->
+            <button onclick="toggleMobileMenu()"
+                class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="space-y-8">
+                <span
+                    class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>
+
+                <a href="/#about" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>
+                <a href="/#services" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>
+                <a href="/#portfolio" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>
+                <a href="/contact.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire
+                    Team</a>
+            </div>
+
+            <!-- Mobile Social Links -->
+            <div class="mt-20 pt-10 border-t border-white/5 flex gap-8">
+                <a href="https://instagram.com/f9xrteam" aria-label="Instagram"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" aria-label="WhatsApp"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:tontufytservices@gmail.com" aria-label="Email Us"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center relative overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <div class="absolute inset-0 opacity-[0.08]"
+                style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-accent-blue/10 rounded-full blur-[120px] animate-pulse">
+            </div>
+        </div>
+
+        <div class="relative z-10 text-center px-6">
+            <div class="mb-8 flex justify-center">
+                <div
+                    class="w-20 h-20 bg-accent-blue/10 rounded-full flex items-center justify-center border border-accent-blue/20 shadow-[0_0_40px_rgba(59,130,246,0.2)]">
+                    <i class="fa-solid fa-check text-4xl text-accent-blue"></i>
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter uppercase italic mb-6">
+                Thank <span class="text-accent-blue">You!</span>
+            </h1>
+            <p class="text-xl text-platinum/70 max-w-2xl mx-auto mb-10 font-medium italic">
+                Your message has been received. Our team is already reviewing your inquiry and will get back to you
+                shortly.
+            </p>
+            <a href="/"
+                class="inline-block bg-bright-snow text-carbon-black px-10 py-4 rounded-full font-black text-sm tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-lg hover:bg-white">
+                Back to Home
+            </a>
+        </div>
+    </main>
+
+    <footer class="border-t border-white/5 bg-carbon-black pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+                <div class="space-y-2">
+                    <p class="font-bold text-platinum/40 text-sm italic">&copy; 2025 F9XR Team. Handcrafted with
+                        Precision Engineering.</p>
+                </div>
+
+                <div class="flex gap-8 font-black tracking-widest uppercase text-[10px]">
+                    <span class="flex items-center gap-2 italic text-iron-grey">Remote Global <i
+                            class="fa-solid fa-globe text-accent-blue"></i></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal Script not needed here, only menu script -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const isOpen = menu.classList.contains('opacity-100');
+            if (!isOpen) {
+                menu.classList.remove('opacity-0', 'pointer-events-none');
+                menu.classList.add('opacity-100', 'pointer-events-auto');
+                icon.classList.replace('fa-bars-staggered', 'fa-xmark');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('opacity-0', 'pointer-events-none');
+                menu.classList.remove('opacity-100', 'pointer-events-auto');
+                icon.classList.replace('fa-xmark', 'fa-bars-staggered');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+
+</html>

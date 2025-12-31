@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- === PRIMARY SEO META TAGS === -->
     <title>About F9XR Team | Global Digital Agency & Tech Architects</title>
     <meta name="title" content="About F9XR Team | Global Digital Agency">
-    <meta name="description" content="Discover F9XR Team - a user-centric digital agency crafting high-performance websites, AI-powered SEO, and professional branding for global businesses.">
-    <meta name="keywords" content="F9XR Team, Digital Agency, Web Development, SEO Experts, Google Business Management, Global Tech Studio">
+    <meta name="description"
+        content="Discover F9XR Team - a user-centric digital agency crafting high-performance websites, AI-powered SEO, and professional branding for global businesses.">
+    <meta name="keywords"
+        content="F9XR Team, Digital Agency, Web Development, SEO Experts, Google Business Management, Global Tech Studio">
     <meta name="author" content="F9XR Team">
     <meta name="robots" content="index, follow">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-<link rel="manifest" href="/assets/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
 
     <!-- === SCHEMA MARKUP (JSON-LD) === -->
     <script type="application/ld+json">
@@ -36,7 +39,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Montserrat strictly enforced with swap for performance -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- === TAILWIND CONFIG === -->
@@ -63,9 +67,13 @@
 
     <style type="text/css">
         /* Performance: Optimize font visibility */
-        @font-face { font-family: 'Montserrat'; font-display: swap; }
-        
-        body { background-color: #212529; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        /* @font-face removed */
+
+        body {
+            background-color: #212529;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
 
         /* Floating Pill Header Glassmorphism */
         .pill-header {
@@ -77,13 +85,21 @@
 
         /* Modern Scroll Progress */
         #scroll-progress {
-            position: fixed; top: 0; left: 0; height: 3px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
             background: linear-gradient(to right, #3b82f6, #60a5fa);
-            z-index: 2000; width: 0%; transition: width 0.1s;
+            z-index: 2000;
+            width: 0%;
+            transition: width 0.1s;
         }
 
         /* Reveal Animation Utility */
-        .reveal { opacity: 0; transform: translateY(30px); }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+        }
 
         .text-stroke {
             -webkit-text-stroke: 1px #f8f9fa;
@@ -96,33 +112,118 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
+
         .bento-card:hover {
             border-color: #3b82f6;
             background: rgba(52, 58, 64, 0.6);
             transform: translateY(-5px);
         }
+
+        .glass-nav {
+            background: rgba(33, 37, 41, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #mobile-menu a {
+            transform: translateX(-20px);
+            transition: transform 0.5s ease, color 0.3s ease;
+        }
+
+        #mobile-menu.opacity-100 a {
+            transform: translateX(0);
+        }
     </style>
 </head>
+
 <body class="text-bright-snow font-sans">
 
     <div id="scroll-progress"></div>
 
-    <!-- === FLOATING PILL HEADER === -->
-    <header class="fixed top-6 left-0 right-0 z-[1000] px-4">
-        <nav class="pill-header max-w-4xl mx-auto rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
-            <a href="index.html" class="flex items-center gap-2 group">
-                <div class="bg-bright-snow text-carbon-black w-8 h-8 rounded-full flex items-center justify-center font-black text-xs transition-transform group-hover:rotate-12">F9</div>
-                <span class="text-lg font-black tracking-tighter uppercase hidden sm:block">F9XR <span class="font-light opacity-60">Team</span></span>
+    <!-- === ADVANCED RESPONSIVE HEADER === -->
+    <header class="fixed top-6 left-0 right-0 z-[5000] px-4">
+        <nav
+            class="glass-nav max-w-6xl mx-auto rounded-full px-4 py-2 md:px-6 md:py-3 flex justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/10 relative transition-all duration-300 hover:py-3">
+
+            <!-- 1. Brand Logo -->
+            <a href="https://f9xr.github.io/" class="flex items-center gap-2 group relative z-[5001]"
+                aria-label="F9XR Home">
+
+                <span class="text-xl font-black tracking-tighter uppercase text-white">F9XR <span
+                        class="text-xs font-bold opacity-80 ml-0.5">Team</span></span>
             </a>
-            <div class="flex gap-4 md:gap-8 font-bold text-[10px] tracking-[0.2em] uppercase">
-                <a href="#about" class="hover:text-accent-blue transition-colors">About</a>
-                <a href="#services" class="hover:text-accent-blue transition-colors">Services</a>
-                <a href="#tech" class="hover:text-accent-blue transition-colors hidden md:block">Tech</a>
+
+            <!-- 2. Desktop Navigation (Hidden on Mobile) -->
+            <div class="hidden lg:flex gap-8 font-bold text-[10px] tracking-[0.2em] uppercase text-platinum/70">
+                <a href="/about.html"
+                    class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">About</a>
+                <a href="/services.html"
+                    class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Services</a>
+                <a href="/portfolio.html"
+                    class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Works</a>
+                <a href="/contact.html" class="text-accent-blue hover:text-white transition-colors italic">Hire Us</a>
             </div>
-            <a href="/contact.html" class="bg-accent-blue text-white px-5 py-2 rounded-full font-bold text-[10px] tracking-widest uppercase hover:scale-105 transition-all">
-                Contact Us
-            </a>
+
+            <!-- 3. Header Actions -->
+            <div class="flex items-center gap-3 relative z-[5001]">
+                <!-- WhatsApp Link (Hidden on very small screens, shown on md+) -->
+                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank"
+                    class="hidden sm:flex bg-white/10 hover:bg-white/20 text-white border border-white/10 px-5 py-2 rounded-full font-black text-[10px] tracking-widest uppercase transition-all active:scale-95">
+                    <i class="fa-brands fa-whatsapp mr-2 text-green-400"></i> WhatsApp
+                </a>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button onclick="toggleMobileMenu()" id="menu-btn"
+                    class="lg:hidden w-10 h-10 flex items-center justify-center text-white bg-white/5 rounded-full border border-white/10 active:scale-90 transition-all"
+                    aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars-staggered text-lg"></i>
+                </button>
+
+                <!-- Desktop Hire Us Button (Visible on md+) -->
+                <a href="/contact.html"
+                    class="bg-bright-snow text-carbon-black px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-lg">
+                    Get Started
+                </a>
+            </div>
         </nav>
+
+        <!-- 4. Mobile Overlay Menu (Webflow Style) -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">
+            <!-- Close Button -->
+            <button onclick="toggleMobileMenu()"
+                class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="space-y-8">
+                <span
+                    class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>
+
+                <a href="/about.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>
+                <a href="/services.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>
+                <a href="/portfolio.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>
+                <a href="/contact.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire
+                    Team</a>
+            </div>
+
+            <!-- Mobile Social Links -->
+            <div class="mt-20 pt-10 border-t border-white/5 flex gap-8">
+                <a href="https://instagram.com/f9xrteam" aria-label="Instagram"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" aria-label="WhatsApp"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:tontufytservices@gmail.com" aria-label="Email Us"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -130,18 +231,22 @@
         <section class="min-h-[80vh] flex items-center pt-32 pb-20 px-6 relative overflow-hidden">
             <div class="absolute top-0 right-0 w-full md:w-1/2 h-full opacity-10 pointer-events-none">
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-                    <path fill="#3b82f6" d="M45.7,-77.6C58.9,-71.5,69.1,-58,75.3,-43.3C81.5,-28.6,83.7,-12.7,82.2,2.9C80.7,18.5,75.4,33.7,66.8,47C58.1,60.2,46.1,71.5,32,77.5C17.9,83.6,1.8,84.4,-15.1,81.4C-31.9,78.5,-49.4,71.8,-62.1,60.1C-74.8,48.4,-82.6,31.7,-85.4,14.7C-88.3,-2.3,-86.1,-19.5,-79,-34.8C-71.9,-50.1,-59.8,-63.5,-45.7,-69.1C-31.6,-74.6,-15.8,-72.4,0.1,-72.6C16,-72.7,32.4,-83.8,45.7,-77.6Z" transform="translate(100 100)" />
+                    <path fill="#3b82f6"
+                        d="M45.7,-77.6C58.9,-71.5,69.1,-58,75.3,-43.3C81.5,-28.6,83.7,-12.7,82.2,2.9C80.7,18.5,75.4,33.7,66.8,47C58.1,60.2,46.1,71.5,32,77.5C17.9,83.6,1.8,84.4,-15.1,81.4C-31.9,78.5,-49.4,71.8,-62.1,60.1C-74.8,48.4,-82.6,31.7,-85.4,14.7C-88.3,-2.3,-86.1,-19.5,-79,-34.8C-71.9,-50.1,-59.8,-63.5,-45.7,-69.1C-31.6,-74.6,-15.8,-72.4,0.1,-72.6C16,-72.7,32.4,-83.8,45.7,-77.6Z"
+                        transform="translate(100 100)" />
                 </svg>
             </div>
 
             <div class="max-w-7xl mx-auto w-full relative z-10">
                 <div class="reveal">
-                    <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block">Architects of Digital Precision</span>
+                    <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block">Architects
+                        of Digital Precision</span>
                     <h1 class="text-6xl md:text-[8rem] font-black leading-[0.85] tracking-tighter mb-10">
                         GLOBAL <br> <span class="text-stroke italic">IMPACT.</span>
                     </h1>
                     <p class="text-xl md:text-3xl text-platinum/80 max-w-3xl leading-relaxed mb-12">
-                        Crafting seamless and intuitive experiences that empower businesses to thrive in the digital age.
+                        Crafting seamless and intuitive experiences that empower businesses to thrive in the digital
+                        age.
                     </p>
                     <div class="flex gap-6 items-center font-bold">
                         <div class="w-12 h-[2px] bg-accent-blue"></div>
@@ -155,17 +260,22 @@
         <section id="about" class="py-24 px-6 bg-zinc-900/40">
             <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                 <div class="reveal">
-                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-tight">What is <br> F9XR Team?</h2>
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-tight">What is <br> F9XR
+                        Team?</h2>
                     <p class="text-lg md:text-xl text-platinum/70 leading-relaxed mb-6">
-                        We offer a range of design and development services tailored to each client's specific needs. We take a user-centric design approach and use the latest design and development technologies to ensure that our products are functional and visually appealing. 
+                        We offer a range of design and development services tailored to each client's specific needs. We
+                        take a user-centric design approach and use the latest design and development technologies to
+                        ensure that our products are functional and visually appealing.
                     </p>
                     <p class="text-lg md:text-xl text-platinum/70 leading-relaxed mb-8">
-                        We prioritize <strong>performance, security, and scalability</strong>, employing robust development practices to ensure our products meet the highest quality standards globally.
+                        We prioritize <strong>performance, security, and scalability</strong>, employing robust
+                        development practices to ensure our products meet the highest quality standards globally.
                     </p>
                     <div class="grid grid-cols-2 gap-8">
                         <div>
                             <p class="text-3xl font-black text-accent-blue italic mb-1">500+</p>
-                            <p class="text-[10px] uppercase tracking-widest font-black opacity-50">Guaranteed Visitors</p>
+                            <p class="text-[10px] uppercase tracking-widest font-black opacity-50">Guaranteed Visitors
+                            </p>
                         </div>
                         <div>
                             <p class="text-3xl font-black text-accent-blue italic mb-1">Project</p>
@@ -175,13 +285,19 @@
                 </div>
                 <div class="reveal group">
                     <div class="relative bg-gunmetal p-12 rounded-[3rem] border border-white/5 overflow-hidden">
-                        <i class="fas fa-quote-left absolute top-8 right-8 text-6xl opacity-10 group-hover:scale-110 transition-transform"></i>
-                        <h4 class="text-2xl font-bold mb-6 italic">"We build websites that grow businesses, not just look good."</h4>
-                        <p class="text-platinum/60 leading-relaxed">Specialized AI-powered architectures and Local SEO for Salons, Clinics, Real Estate, and Global Brands.</p>
+                        <i
+                            class="fas fa-quote-left absolute top-8 right-8 text-6xl opacity-10 group-hover:scale-110 transition-transform"></i>
+                        <h4 class="text-2xl font-bold mb-6 italic">"We build websites that grow businesses, not just
+                            look good."</h4>
+                        <p class="text-platinum/60 leading-relaxed">Specialized AI-powered architectures and Local SEO
+                            for Salons, Clinics, Real Estate, and Global Brands.</p>
                         <ul class="mt-8 space-y-3 font-bold text-sm">
-                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Coaches & Consultants</li>
-                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Small Local Businesses</li>
-                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> NGOs & Gov Portals</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i>
+                                Coaches & Consultants</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i>
+                                Small Local Businesses</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i>
+                                NGOs & Gov Portals</li>
                         </ul>
                     </div>
                 </div>
@@ -189,119 +305,131 @@
         </section>
 
         <!-- === COMPANY DECK / PRESENTATION SECTION === -->
-<section id="deck" class="py-32 px-6 bg-zinc-950/20 relative overflow-hidden">
-    <!-- Background Ambient Glow -->
-    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none"></div>
-
-    <div class="max-w-6xl mx-auto relative z-10">
-        
-        <!-- Section Header -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20 reveal">
-            <div class="max-w-2xl">
-                <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] mb-4 block italic">Phase 05: The Blueprint</span>
-                <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
-                    Digital <br> <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1.5px #f8f9fa;">Strategy.</span>
-                </h2>
-                <p class="text-xl text-platinum/50 mt-6 font-medium italic">
-                    Explore our core methodologies, service architectures, and brand philosophy in this comprehensive visual deck.
-                </p>
+        <section id="deck" class="py-32 px-6 bg-zinc-950/20 relative overflow-hidden">
+            <!-- Background Ambient Glow -->
+            <div
+                class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none">
             </div>
-            
-            <!-- External Source Link for Accessibility -->
-            <a href="https://www.slideshare.net/slideshow/vfninK6M1SwkI" target="_blank" 
-               class="group flex items-center gap-4 text-white/40 font-black uppercase tracking-widest text-[10px] hover:text-accent-blue transition-all" 
-               aria-label="Open presentation in new tab">
-                Expand Deck <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-        </div>
 
-        <!-- PPT Presentation Container -->
-        <div class="reveal group shadow-2xl">
-            <div class="relative bg-gunmetal/40 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] md:rounded-[4rem] overflow-hidden transition-all duration-500 hover:border-accent-blue/30">
-                
-                <!-- Deck Player Header -->
-                <div class="bg-white/5 border-b border-white/5 p-5 flex items-center justify-between">
-                    <div class="flex gap-2">
-                        <div class="w-3 h-3 rounded-full bg-red-500/40"></div>
-                        <div class="w-3 h-3 rounded-full bg-yellow-500/40"></div>
-                        <div class="w-3 h-3 rounded-full bg-green-500/40"></div>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-file-powerpoint text-accent-blue text-xs opacity-50"></i>
-                        <p class="text-[9px] font-black uppercase tracking-widest text-platinum/30 italic">
-                            F9XR_Master_Strategy_v2.ppt
+            <div class="max-w-6xl mx-auto relative z-10">
+
+                <!-- Section Header -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20 reveal">
+                    <div class="max-w-2xl">
+                        <span
+                            class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] mb-4 block italic">Phase
+                            05: The Blueprint</span>
+                        <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
+                            Digital <br> <span class="text-stroke text-transparent"
+                                style="-webkit-text-stroke: 1.5px #f8f9fa;">Strategy.</span>
+                        </h2>
+                        <p class="text-xl text-platinum/50 mt-6 font-medium italic">
+                            Explore our core methodologies, service architectures, and brand philosophy in this
+                            comprehensive visual deck.
                         </p>
                     </div>
-                    <div class="flex gap-4">
-                         <i class="fa-solid fa-maximize text-white/10 text-[10px]"></i>
-                    </div>
+
+                    <!-- External Source Link for Accessibility -->
+                    <a href="https://www.slideshare.net/slideshow/vfninK6M1SwkI" target="_blank"
+                        class="group flex items-center gap-4 text-white/40 font-black uppercase tracking-widest text-[10px] hover:text-accent-blue transition-all"
+                        aria-label="Open presentation in new tab">
+                        Expand Deck <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                 </div>
 
-                <!-- SlideShare Iframe Wrapper -->
-                <div class="w-full relative aspect-video min-h-[350px] md:min-h-[500px] bg-black/40">
-                    
-                    <!-- Performance Loader -->
-                    <div class="absolute inset-0 flex items-center justify-center bg-carbon-black z-0">
-                        <div class="text-center">
-                            <div class="w-10 h-10 border-2 border-accent-blue/20 border-t-accent-blue rounded-full animate-spin mx-auto mb-4"></div>
-                            <p class="text-[9px] font-black uppercase tracking-[0.2em] text-iron-grey italic animate-pulse">Rendering Slides...</p>
+                <!-- PPT Presentation Container -->
+                <div class="reveal group shadow-2xl">
+                    <div
+                        class="relative bg-gunmetal/40 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] md:rounded-[4rem] overflow-hidden transition-all duration-500 hover:border-accent-blue/30">
+
+                        <!-- Deck Player Header -->
+                        <div class="bg-white/5 border-b border-white/5 p-5 flex items-center justify-between">
+                            <div class="flex gap-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500/40"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500/40"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500/40"></div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-file-powerpoint text-accent-blue text-xs opacity-50"></i>
+                                <p class="text-[9px] font-black uppercase tracking-widest text-platinum/30 italic">
+                                    F9XR_Master_Strategy_v2.ppt
+                                </p>
+                            </div>
+                            <div class="flex gap-4">
+                                <i class="fa-solid fa-maximize text-white/10 text-[10px]"></i>
+                            </div>
+                        </div>
+
+                        <!-- SlideShare Iframe Wrapper -->
+                        <div class="w-full relative aspect-video min-h-[350px] md:min-h-[500px] bg-black/40">
+
+                            <!-- Performance Loader -->
+                            <div class="absolute inset-0 flex items-center justify-center bg-carbon-black z-0">
+                                <div class="text-center">
+                                    <div
+                                        class="w-10 h-10 border-2 border-accent-blue/20 border-t-accent-blue rounded-full animate-spin mx-auto mb-4">
+                                    </div>
+                                    <p
+                                        class="text-[9px] font-black uppercase tracking-[0.2em] text-iron-grey italic animate-pulse">
+                                        Rendering Slides...</p>
+                                </div>
+                            </div>
+
+                            <!-- The Embed -->
+                            <iframe
+                                src="https://www.slideshare.net/slideshow/embed_code/key/vfninK6M1SwkI?hostedIn=slideshare&page=upload"
+                                class="relative z-10 w-full h-full opacity-0 transition-opacity duration-1000"
+                                frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen
+                                loading="lazy" onload="this.style.opacity='1'"
+                                title="F9XR Team Digital Strategy PPT"></iframe>
+                        </div>
+
+                        <!-- Bottom Controls (Visual Only) -->
+                        <div class="bg-white/5 p-4 flex justify-between items-center px-10 border-t border-white/5">
+                            <p class="text-[9px] font-black text-iron-grey uppercase tracking-widest italic">
+                                Authorized Viewer Only
+                            </p>
+                            <div class="flex gap-6 opacity-20">
+                                <i class="fa-solid fa-download text-xs"></i>
+                                <i class="fa-solid fa-share-nodes text-xs"></i>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- The Embed -->
-                    <iframe 
-                        src="https://www.slideshare.net/slideshow/embed_code/key/vfninK6M1SwkI?hostedIn=slideshare&page=upload" 
-                        class="relative z-10 w-full h-full opacity-0 transition-opacity duration-1000"
-                        frameborder="0" 
-                        marginwidth="0" 
-                        marginheight="0" 
-                        scrolling="no" 
-                        allowfullscreen
-                        loading="lazy"
-                        onload="this.style.opacity='1'"
-                        title="F9XR Team Digital Strategy PPT"
-                    ></iframe>
                 </div>
 
-                <!-- Bottom Controls (Visual Only) -->
-                <div class="bg-white/5 p-4 flex justify-between items-center px-10 border-t border-white/5">
-                    <p class="text-[9px] font-black text-iron-grey uppercase tracking-widest italic">
-                        Authorized Viewer Only
-                    </p>
-                    <div class="flex gap-6 opacity-20">
-                        <i class="fa-solid fa-download text-xs"></i>
-                        <i class="fa-solid fa-share-nodes text-xs"></i>
+                <!-- Post-Deck Insights -->
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+                    <div
+                        class="p-8 bg-white/5 border border-white/5 rounded-3xl group hover:border-accent-blue/20 transition-all">
+                        <i class="fa-solid fa-brain text-accent-blue mb-4 block text-xl"></i>
+                        <h4 class="text-lg font-black uppercase italic text-white mb-2">Technical Mastery</h4>
+                        <p class="text-sm text-platinum/50 italic font-medium leading-relaxed">Detailed breakdown of our
+                            AI-stack and development protocols.</p>
+                    </div>
+                    <div
+                        class="p-8 bg-white/5 border border-white/5 rounded-3xl group hover:border-accent-blue/20 transition-all">
+                        <i class="fa-solid fa-chart-line text-accent-blue mb-4 block text-xl"></i>
+                        <h4 class="text-lg font-black uppercase italic text-white mb-2">Growth Systems</h4>
+                        <p class="text-sm text-platinum/50 italic font-medium leading-relaxed">Our proprietary 10-14 day
+                            roadmap from concept to live market dominating asset.</p>
+                    </div>
+                    <div
+                        class="p-8 bg-white/5 border border-white/5 rounded-3xl group hover:border-accent-blue/20 transition-all">
+                        <i class="fa-solid fa-handshake-angle text-accent-blue mb-4 block text-xl"></i>
+                        <h4 class="text-lg font-black uppercase italic text-white mb-2">Client ROI</h4>
+                        <p class="text-sm text-platinum/50 italic font-medium leading-relaxed">Analyzing success metrics
+                            and long-term asset appreciation for our partners.</p>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Post-Deck Insights -->
-        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
-            <div class="p-8 bg-white/5 border border-white/5 rounded-3xl group hover:border-accent-blue/20 transition-all">
-                <i class="fa-solid fa-brain text-accent-blue mb-4 block text-xl"></i>
-                <h4 class="text-lg font-black uppercase italic text-white mb-2">Technical Mastery</h4>
-                <p class="text-sm text-platinum/50 italic font-medium leading-relaxed">Detailed breakdown of our AI-stack and development protocols.</p>
-            </div>
-            <div class="p-8 bg-white/5 border border-white/5 rounded-3xl group hover:border-accent-blue/20 transition-all">
-                <i class="fa-solid fa-chart-line text-accent-blue mb-4 block text-xl"></i>
-                <h4 class="text-lg font-black uppercase italic text-white mb-2">Growth Systems</h4>
-                <p class="text-sm text-platinum/50 italic font-medium leading-relaxed">Our proprietary 10-14 day roadmap from concept to live market dominating asset.</p>
-            </div>
-            <div class="p-8 bg-white/5 border border-white/5 rounded-3xl group hover:border-accent-blue/20 transition-all">
-                <i class="fa-solid fa-handshake-angle text-accent-blue mb-4 block text-xl"></i>
-                <h4 class="text-lg font-black uppercase italic text-white mb-2">Client ROI</h4>
-                <p class="text-sm text-platinum/50 italic font-medium leading-relaxed">Analyzing success metrics and long-term asset appreciation for our partners.</p>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- === SERVICES BENTO GRID === -->
         <section id="services" class="py-32 px-6">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-20 reveal">
-                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 italic text-stroke uppercase">Our Services</h2>
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 italic text-stroke uppercase">Our
+                        Services</h2>
                     <p class="text-xl text-platinum/60">Find and convert new leads with digital mastery.</p>
                 </div>
 
@@ -310,7 +438,9 @@
                     <div class="bento-card p-10 rounded-[3rem] reveal">
                         <i class="fas fa-laptop-code text-4xl text-accent-blue mb-8"></i>
                         <h3 class="text-2xl font-black mb-4 tracking-tighter uppercase">Web Design & Development</h3>
-                        <p class="text-platinum/60 mb-6 leading-relaxed">Modern, responsive websites built with performance, accessibility, and scalability in mind. From sleek landing pages to complex platforms.</p>
+                        <p class="text-platinum/60 mb-6 leading-relaxed">Modern, responsive websites built with
+                            performance, accessibility, and scalability in mind. From sleek landing pages to complex
+                            platforms.</p>
                         <div class="flex flex-wrap gap-2 text-[10px] font-black tracking-widest uppercase opacity-40">
                             <span>HTML</span> <span>Tailwind</span> <span>WordPress</span>
                         </div>
@@ -320,35 +450,40 @@
                     <div class="bento-card p-10 rounded-[3rem] reveal lg:mt-12">
                         <i class="fas fa-search-dollar text-4xl text-accent-blue mb-8"></i>
                         <h3 class="text-2xl font-black mb-4 tracking-tighter uppercase">SEO Enhancing</h3>
-                        <p class="text-platinum/60 mb-6 leading-relaxed">Optimize your website to rank higher. Keyword research, metadata, performance tuning, and structural improvements for Google results.</p>
+                        <p class="text-platinum/60 mb-6 leading-relaxed">Optimize your website to rank higher. Keyword
+                            research, metadata, performance tuning, and structural improvements for Google results.</p>
                     </div>
 
                     <!-- Service 3 -->
                     <div class="bento-card p-10 rounded-[3rem] reveal">
                         <i class="fas fa-server text-4xl text-accent-blue mb-8"></i>
                         <h3 class="text-2xl font-black mb-4 tracking-tighter uppercase">Hosting & Maintenance</h3>
-                        <p class="text-platinum/60 mb-6 leading-relaxed">Reliable solutions including regular updates, uptime monitoring, bug fixes, and backups. Never worry about technical issues again.</p>
+                        <p class="text-platinum/60 mb-6 leading-relaxed">Reliable solutions including regular updates,
+                            uptime monitoring, bug fixes, and backups. Never worry about technical issues again.</p>
                     </div>
 
                     <!-- Service 4 -->
                     <div class="bento-card p-10 rounded-[3rem] reveal">
                         <i class="fas fa-at text-4xl text-accent-blue mb-8"></i>
                         <h3 class="text-2xl font-black mb-4 tracking-tighter uppercase">Business Email & Setup</h3>
-                        <p class="text-platinum/60 mb-6 leading-relaxed">Custom professional email addresses (you@yourbusiness.com) to build trust and credibility. Hassle-free DNS & SSL setup.</p>
+                        <p class="text-platinum/60 mb-6 leading-relaxed">Custom professional email addresses
+                            (you@yourbusiness.com) to build trust and credibility. Hassle-free DNS & SSL setup.</p>
                     </div>
 
                     <!-- Service 5 -->
                     <div class="bento-card p-10 rounded-[3rem] reveal lg:mt-12">
                         <i class="fas fa-map-marked-alt text-4xl text-accent-blue mb-8"></i>
                         <h3 class="text-2xl font-black mb-4 tracking-tighter uppercase">Google Business Mastery</h3>
-                        <p class="text-platinum/60 mb-6 leading-relaxed">Increase local reach in Edmonton and abroad. Optimization for Google Maps, review management, and photo uploads.</p>
+                        <p class="text-platinum/60 mb-6 leading-relaxed">Increase local reach in Edmonton and abroad.
+                            Optimization for Google Maps, review management, and photo uploads.</p>
                     </div>
 
                     <!-- Service 6 -->
                     <div class="bento-card p-10 rounded-[3rem] reveal">
                         <i class="fas fa-bullhorn text-4xl text-accent-blue mb-8"></i>
                         <h3 class="text-2xl font-black mb-4 tracking-tighter uppercase">Digital Marketing & more...</h3>
-                        <p class="text-platinum/60 mb-6 leading-relaxed">Social media management, ad management, and branding. We push your site to the top of Google results with 2 months support.</p>
+                        <p class="text-platinum/60 mb-6 leading-relaxed">Social media management, ad management, and
+                            branding. We push your site to the top of Google results with 2 months support.</p>
                     </div>
                 </div>
             </div>
@@ -362,7 +497,8 @@
                         <h2 class="text-5xl font-black tracking-tighter mb-8 italic uppercase">The F9XR Engine.</h2>
                         <div class="grid grid-cols-2 gap-8">
                             <div>
-                                <h4 class="font-black text-xs uppercase tracking-[0.2em] mb-4 opacity-60">Tech Stack</h4>
+                                <h4 class="font-black text-xs uppercase tracking-[0.2em] mb-4 opacity-60">Tech Stack
+                                </h4>
                                 <ul class="font-bold space-y-2">
                                     <li>Node.js / Node / PHP</li>
                                     <li>Tailwind / Bootstrap</li>
@@ -371,7 +507,8 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-black text-xs uppercase tracking-[0.2em] mb-4 opacity-60">Success Vault</h4>
+                                <h4 class="font-black text-xs uppercase tracking-[0.2em] mb-4 opacity-60">Success Vault
+                                </h4>
                                 <ul class="font-bold space-y-2">
                                     <li>Full SEO Setup</li>
                                     <li>Google Indexing</li>
@@ -382,8 +519,10 @@
                         </div>
                     </div>
                     <div class="reveal bg-carbon-black p-12 rounded-[4rem] text-bright-snow shadow-2xl">
-                        <h3 class="text-3xl font-black mb-6 tracking-tighter italic uppercase text-accent-blue">Our Guarantee.</h3>
-                        <p class="text-lg opacity-80 mb-8">We don't just sell services; we sell growth. Every project is handled with a "Skin in the Game" approach.</p>
+                        <h3 class="text-3xl font-black mb-6 tracking-tighter italic uppercase text-accent-blue">Our
+                            Guarantee.</h3>
+                        <p class="text-lg opacity-80 mb-8">We don't just sell services; we sell growth. Every project is
+                            handled with a "Skin in the Game" approach.</p>
                         <div class="space-y-4">
                             <div class="flex items-center gap-4 bg-gunmetal p-4 rounded-2xl border border-white/5">
                                 <i class="fas fa-users text-2xl text-accent-blue"></i>
@@ -402,144 +541,205 @@
         <!-- === FINAL CTA SECTION === -->
         <section class="py-32 px-6 text-center">
             <div class="max-w-4xl mx-auto reveal">
-                <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-10 leading-none">READY TO <br> <span class="text-stroke italic">DOMINATE?</span></h2>
-                <p class="text-xl md:text-2xl text-platinum/60 mb-12 italic">Whether you are a local clinic in India or a global brand abroad, we have the architecture to help you scale.</p>
+                <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-10 leading-none">READY TO <br> <span
+                        class="text-stroke italic">DOMINATE?</span></h2>
+                <p class="text-xl md:text-2xl text-platinum/60 mb-12 italic">Whether you are a local clinic in India or
+                    a global brand abroad, we have the architecture to help you scale.</p>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="/contact.html" class="bg-bright-snow text-carbon-black px-12 py-6 rounded-full font-black text-xl hover:scale-105 transition-transform shadow-2xl">Start Project</a>
-                    <a href="mailto:tontufytservices@gmail.com" class="border border-iron-grey px-12 py-6 rounded-full font-black text-xl hover:bg-white hover:text-carbon-black transition-all">Send Email</a>
+                    <a href="/contact.html"
+                        class="bg-bright-snow text-carbon-black px-12 py-6 rounded-full font-black text-xl hover:scale-105 transition-transform shadow-2xl">Start
+                        Project</a>
+                    <a href="mailto:tontufytservices@gmail.com"
+                        class="border border-iron-grey px-12 py-6 rounded-full font-black text-xl hover:bg-white hover:text-carbon-black transition-all">Send
+                        Email</a>
                 </div>
             </div>
         </section>
     </main>
 
-   <!-- === FOOTER === -->
-   <footer class="bg-zinc-950 pt-20 no-print overflow-hidden">
-    
-    <!-- 1. Top Marquee Ticker (Brand Identity) -->
-    <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20">
-        <div class="flex whitespace-nowrap animate-marquee">
-            <div class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">
-                <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
-                <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
-                <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
-                <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
-                <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
-                <!-- Repeated for infinite scroll -->
-                <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
-                <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
-                <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
-                <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
-                <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
-            </div>
-        </div>
-    </div>
+    <!-- === FOOTER === -->
+    <footer class="bg-zinc-950 pt-20 no-print overflow-hidden">
 
-    <div class="max-w-7xl mx-auto px-6">
-        
-        <!-- 2. Large CTA Header (Reference Image Style) -->
-        <div class="flex flex-col md:flex-row justify-between items-center pb-16 mb-16 border-b border-white/5 gap-8 reveal">
-            <div class="text-center md:text-left">
-                <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
-                    Let's Build <br class="hidden md:block"> <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span>
-                </h2>
-            </div>
-            <a href="/contact.html" class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">
-                Hire Team <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
-            </a>
-        </div>
-
-        <!-- 3. Main Navigation Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-24">
-            
-            <!-- Branding & Github -->
-            <div class="col-span-2 space-y-8">
-                <div>
-                    <h3 class="text-4xl font-black mb-4 tracking-tighter italic uppercase">F9XR TEAM.</h3>
-                    <p class="text-lg text-platinum/50 leading-relaxed max-w-sm">
-                        Global digital studio crafting high-end experiences for growth-focused brands.
-                    </p>
-                </div>
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://github.com/f9xr/f9xr.github.io" target="_blank" class="bg-white/5 px-5 py-2.5 rounded-xl border border-white/5 font-bold hover:bg-white/10 transition-colors flex items-center gap-3 text-xs uppercase tracking-widest">
-                        <i class="fab fa-github"></i> View Open Source
-                    </a>
+        <!-- 1. Top Marquee Ticker (Brand Identity) -->
+        <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20">
+            <div class="flex whitespace-nowrap animate-marquee">
+                <div
+                    class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">
+                    <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <!-- Repeated for infinite scroll -->
+                    <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
                 </div>
             </div>
-
-            <!-- Page Navigation -->
-            <div class="space-y-8">
-                <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Navigation</h4>
-                <ul class="space-y-4 font-bold text-lg text-platinum/70">
-                    <li><a href="/about.html" class="hover:text-accent-blue transition-colors">About Us</a></li>
-                    <li><a href="/services.html" class="hover:text-accent-blue transition-colors">Services</a></li>
-                    <li><a href="/portfolio.html" class="hover:text-accent-blue transition-colors">Portfolio</a></li>
-                    <li><a href="/contact.html" class="hover:text-accent-blue transition-colors">Get Started</a></li>
-                </ul>
-            </div>
-
-            <!-- Legal Links (New Section) -->
-            <div class="space-y-8">
-                <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Transparency</h4>
-                <ul class="space-y-4 font-bold text-sm text-platinum/60">
-                    <li><a href="/agreement.html" class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Service Agreement</a></li>
-                    <li><a href="/terms.html" class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Terms of Service</a></li>
-                    <li><a href="/privacy.html" class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Privacy Policy</a></li>
-                    <li><a href="/refund.html" class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Refund Policy</a></li>
-                </ul>
-            </div>
-
-            <!-- The Team -->
-            <div class="space-y-8">
-                <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">The Architects</h4>
-                <ul class="space-y-4 font-bold text-sm text-platinum/60">
-                    <li><a href="https://inakm.github.io" target="_blank" class="hover:text-accent-blue transition-colors flex items-center justify-between group">AKM <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-0 group-hover:opacity-100"></i></a></li>
-                    <li><a href="https://aryansh.site" target="_blank" class="hover:text-accent-blue transition-colors flex items-center justify-between group">Aryansh <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-0 group-hover:opacity-100"></i></a></li>
-                </ul>
-            </div>
         </div>
 
-        <!-- 4. Bottom Copyright Bar -->
-        <div class="py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
-            <div class="space-y-2">
-                <p class="font-bold text-platinum/40 text-sm italic">&copy; 2025 F9XR Team. Handcrafted with Precision Engineering.</p>
-                <div class="flex justify-center md:justify-start gap-6 text-[10px] font-black uppercase tracking-[0.2em] text-iron-grey">
-                    <a href="https://instagram.com/f9xrteam" class="hover:text-pink-500">Instagram</a>
-                    <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="hover:text-green-500">WhatsApp</a>
-                    <a href="mailto:tontufytservices@gmail.com" class="hover:text-accent-blue">Email Support</a>
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- 2. Large CTA Header (Reference Image Style) -->
+            <div
+                class="flex flex-col md:flex-row justify-between items-center pb-16 mb-16 border-b border-white/5 gap-8 reveal">
+                <div class="text-center md:text-left">
+                    <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
+                        Let's Build <br class="hidden md:block"> <span class="text-stroke text-transparent"
+                            style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span>
+                    </h2>
+                </div>
+                <a href="/contact.html"
+                    class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">
+                    Hire Team <i
+                        class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
+                </a>
+            </div>
+
+            <!-- 3. Main Navigation Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-24">
+
+                <!-- Branding & Github -->
+                <div class="col-span-2 space-y-8">
+                    <div>
+                        <h3 class="text-4xl font-black mb-4 tracking-tighter italic uppercase">F9XR TEAM.</h3>
+                        <p class="text-lg text-platinum/50 leading-relaxed max-w-sm">
+                            Global digital studio crafting high-end experiences for growth-focused brands.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://github.com/f9xr/f9xr.github.io" target="_blank"
+                            class="bg-white/5 px-5 py-2.5 rounded-xl border border-white/5 font-bold hover:bg-white/10 transition-colors flex items-center gap-3 text-xs uppercase tracking-widest">
+                            <i class="fab fa-github"></i> View Open Source
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Page Navigation -->
+                <div class="space-y-8">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Navigation</h4>
+                    <ul class="space-y-4 font-bold text-lg text-platinum/70">
+                        <li><a href="/about.html" class="hover:text-accent-blue transition-colors">About Us</a></li>
+                        <li><a href="/services.html" class="hover:text-accent-blue transition-colors">Services</a></li>
+                        <li><a href="/portfolio.html" class="hover:text-accent-blue transition-colors">Portfolio</a>
+                        </li>
+                        <li><a href="/contact.html" class="hover:text-accent-blue transition-colors">Get Started</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links (New Section) -->
+                <div class="space-y-8">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Transparency</h4>
+                    <ul class="space-y-4 font-bold text-sm text-platinum/60">
+                        <li><a href="/agreement.html"
+                                class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Service
+                                Agreement</a></li>
+                        <li><a href="/terms.html"
+                                class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Terms
+                                of Service</a></li>
+                        <li><a href="/privacy.html"
+                                class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Privacy
+                                Policy</a></li>
+                        <li><a href="/refund.html"
+                                class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Refund
+                                Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- The Team -->
+                <div class="space-y-8">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">The Architects</h4>
+                    <ul class="space-y-4 font-bold text-sm text-platinum/60">
+                        <li><a href="https://inakm.github.io" target="_blank"
+                                class="hover:text-accent-blue transition-colors flex items-center justify-between group">AKM
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-0 group-hover:opacity-100"></i></a>
+                        </li>
+                        <li><a href="https://aryansh.site" target="_blank"
+                                class="hover:text-accent-blue transition-colors flex items-center justify-between group">Aryansh
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-0 group-hover:opacity-100"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            
-            <div class="flex gap-8 font-black tracking-widest uppercase text-[10px]">
-                <span class="flex items-center gap-2 italic text-iron-grey">Remote Global <i class="fa-solid fa-globe text-accent-blue"></i></span>
-                <span class="flex items-center gap-2 italic text-white underline decoration-accent-blue decoration-2">EST. 2024</span>
+
+            <!-- 4. Bottom Copyright Bar -->
+            <div
+                class="py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+                <div class="space-y-2">
+                    <p class="font-bold text-platinum/40 text-sm italic">&copy; 2025 F9XR Team. Handcrafted with
+                        Precision Engineering.</p>
+                    <div
+                        class="flex justify-center md:justify-start gap-6 text-[10px] font-black uppercase tracking-[0.2em] text-iron-grey">
+                        <a href="https://instagram.com/f9xrteam" class="hover:text-pink-500">Instagram</a>
+                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="hover:text-green-500">WhatsApp</a>
+                        <a href="mailto:tontufytservices@gmail.com" class="hover:text-accent-blue">Email Support</a>
+                    </div>
+                </div>
+
+                <div class="flex gap-8 font-black tracking-widest uppercase text-[10px]">
+                    <span class="flex items-center gap-2 italic text-iron-grey">Remote Global <i
+                            class="fa-solid fa-globe text-accent-blue"></i></span>
+                    <span
+                        class="flex items-center gap-2 italic text-white underline decoration-accent-blue decoration-2">EST.
+                        2024</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Ticker CSS Animation (Add to your global styles) -->
-    <style>
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-            display: flex;
-            animation: marquee 30s linear infinite;
-        }
-        .animate-marquee:hover {
-            animation-play-state: paused;
-        }
-    </style>
-</footer>
+        <!-- Ticker CSS Animation (Add to your global styles) -->
+        <style>
+            @keyframes marquee {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .animate-marquee {
+                display: flex;
+                animation: marquee 30s linear infinite;
+            }
+
+            .animate-marquee:hover {
+                animation-play-state: paused;
+            }
+        </style>
+    </footer>
 
     <!-- === BACK TO TOP === -->
-    <button id="btt" class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-all shadow-2xl">
+    <button id="btt"
+        class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-all shadow-2xl">
         <i class="fas fa-arrow-up text-xl"></i>
     </button>
 
     <!-- === SCRIPTS === -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const isOpen = menu.classList.contains('opacity-100');
+            if (!isOpen) {
+                menu.classList.remove('opacity-0', 'pointer-events-none');
+                menu.classList.add('opacity-100', 'pointer-events-auto');
+                icon.classList.replace('fa-bars-staggered', 'fa-xmark');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('opacity-0', 'pointer-events-none');
+                menu.classList.remove('opacity-100', 'pointer-events-auto');
+                icon.classList.replace('fa-xmark', 'fa-bars-staggered');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
         // 1. Scroll Progress Bar Logic
         window.addEventListener('scroll', () => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -553,7 +753,7 @@
             else btt.classList.add('hidden');
         });
 
-        document.getElementById('btt').onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+        document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
         // 3. Reveal Animations using Intersection Observer (Performance Optimized)
         const revealObserver = new IntersectionObserver((entries) => {
@@ -574,4 +774,5 @@
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     </script>
 </body>
+
 </html>

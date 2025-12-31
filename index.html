@@ -134,14 +134,14 @@
         }
 
         .reveal {
-            transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-            opacity: 0;
-            transform: translateY(30px);
+            /* Animation Removed */
+            opacity: 1;
+            transform: none;
         }
 
         .reveal.active {
             opacity: 1;
-            transform: translateY(0);
+            transform: none;
         }
 
         .faq-content {
@@ -288,53 +288,51 @@
 
     <!-- UI Tools -->
     <button id="backToTop" aria-label="Scroll to top"
-        class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl"><i
-            class="fas fa-arrow-up text-xl"></i></button>
+        class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl"><i
+            class="fas fa-arrow-up text-sm"></i></button>
 
     <!-- === ADVANCED RESPONSIVE HEADER === -->
     <header class="fixed top-6 left-0 right-0 z-[5000] px-4">
         <nav
-            class="glass-nav max-w-6xl mx-auto rounded-full px-4 py-2 md:px-6 md:py-3 flex justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/10 relative transition-all duration-300 hover:py-3">
+            class="glass-nav max-w-7xl mx-auto rounded-full px-6 py-3 flex justify-between items-center shadow-2xl border border-white/5 relative bg-carbon-black/50 backdrop-blur-xl">
 
             <!-- 1. Brand Logo -->
             <a href="https://f9xr.github.io/" class="flex items-center gap-2 group relative z-[5001]"
                 aria-label="F9XR Home">
-
                 <span class="text-xl font-black tracking-tighter uppercase text-white">F9XR <span
-                        class="text-xs font-bold opacity-80 ml-0.5">Team</span></span>
+                        class="text-xs font-bold opacity-80 ml-0.5 text-accent-blue">Team</span></span>
             </a>
 
-            <!-- 2. Desktop Navigation (Hidden on Mobile) -->
-            <div class="hidden lg:flex gap-8 font-bold text-[10px] tracking-[0.2em] uppercase text-platinum/70">
-                <a href="#about"
-                    class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">About</a>
-                <a href="#services"
-                    class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Services</a>
-                <a href="#portfolio"
-                    class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Works</a>
-                <a href="/contact.html" class="text-accent-blue hover:text-white transition-colors italic">Hire Us</a>
+            <!-- 2. Desktop Navigation (Centered) -->
+            <div
+                class="hidden lg:flex absolute left-1/2 -translate-x-1/2 gap-10 font-bold text-xs tracking-widest uppercase text-platinum/60">
+                <a href="#about" class="hover:text-white transition-colors hover:scale-105 transform">About</a>
+                <a href="#services" class="hover:text-white transition-colors hover:scale-105 transform">Services</a>
+                <a href="#portfolio" class="hover:text-white transition-colors hover:scale-105 transform">Works</a>
+                <a href="/contact.html"
+                    class="text-white hover:text-accent-blue transition-colors hover:scale-105 transform">Hire Us</a>
             </div>
 
             <!-- 3. Header Actions -->
-            <div class="flex items-center gap-3 relative z-[5001]">
-                <!-- WhatsApp Link (Hidden on very small screens, shown on md+) -->
+            <div class="flex items-center gap-4 relative z-[5001]">
+                <!-- Secondary Action (WhatsApp) -->
                 <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank"
-                    class="hidden sm:flex bg-white/10 hover:bg-white/20 text-white border border-white/10 px-5 py-2 rounded-full font-black text-[10px] tracking-widest uppercase transition-all active:scale-95">
-                    <i class="fa-brands fa-whatsapp mr-2 text-green-400"></i> WhatsApp
+                    class="hidden sm:flex items-center gap-2 text-white/80 hover:text-white font-bold text-[10px] tracking-widest uppercase transition-all hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+                </a>
+
+                <!-- Primary Action (Get Started) -->
+                <a href="/contact.html"
+                    class="bg-white text-carbon-black px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95">
+                    Get Started
                 </a>
 
                 <!-- Mobile Menu Toggle Button -->
                 <button onclick="toggleMobileMenu()" id="menu-btn"
-                    class="lg:hidden w-10 h-10 flex items-center justify-center text-white bg-white/5 rounded-full border border-white/10 active:scale-90 transition-all"
+                    class="lg:hidden w-10 h-10 flex items-center justify-center text-white bg-white/5 rounded-full border border-white/10 active:scale-90 transition-all hover:bg-white/10"
                     aria-label="Toggle Menu">
                     <i id="menu-icon" class="fa-solid fa-bars-staggered text-lg"></i>
                 </button>
-
-                <!-- Desktop Hire Us Button (Visible on md+) -->
-                <a href="/contact.html"
-                    class="bg-bright-snow text-carbon-black px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-lg">
-                    Get Started
-                </a>
             </div>
         </nav>
 
@@ -396,93 +394,257 @@
                 <div class="absolute inset-0 opacity-[0.08]"
                     style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;">
                 </div>
+                <!-- Top Center Glow for Impact -->
                 <div
-                    class="absolute top-1/4 -right-1/4 w-[700px] h-[500px] bg-accent-blue/10 rounded-full blur-[120px] animate-pulse">
+                    class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-accent-blue/10 rounded-full blur-[150px] animate-pulse">
                 </div>
             </div>
 
-            <div class="max-w-[1440px] mx-auto w-full px-6 md:px-12 relative z-10">
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="max-w-5xl mx-auto w-full px-6 md:px-12 relative z-10 text-center">
 
-                    <!-- LEFT CONTENT: HEADING & SINGLE-ROW BUTTONS -->
-                    <div class="reveal">
-                        <span
-                            class="inline-block mt-8 px-4 py-1.5 border border-white/10 rounded-full uppercase tracking-[0.4em] text-[10px] font-black text-accent-blue mb-8 italic bg-white/5 backdrop-blur-md">
-                            Architects of Digital Growth
-                        </span>
+                <!-- Tagline Badge -->
+                <div class="flex justify-center mb-8">
+                    <span
+                        class="px-5 py-2 border border-white/10 rounded-full uppercase tracking-[0.3em] text-[9px] md:text-[10px] font-black text-accent-blue italic bg-white/5 backdrop-blur-md">
+                        Architects of Digital Growth
+                    </span>
+                </div>
 
-                        <!-- REDUCED SIZE: Prevents overlap with right-side card -->
-                        <h1
-                            class="text-5xl md:text-7xl lg:text-[6.5rem] xl:text-[7.5rem] font-black leading-[0.95] tracking-tighter mb-10 uppercase italic">
-                            EMPOWERING <br>
-                            <span class="text-stroke text-transparent"
-                                style="-webkit-text-stroke: 1.5px #f8f9fa;">BRANDS.</span>
-                        </h1>
+                <!-- Main Headline -->
+                <h1
+                    class="text-5xl md:text-7xl lg:text-[7rem] xl:text-[8rem] font-black leading-[0.9] tracking-tighter mb-8 uppercase italic text-white drop-shadow-2xl">
+                    Empowering <br>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-white via-platinum to-white/50">Brands.</span>
+                </h1>
 
-                        <p
-                            class="text-xl md:text-2xl text-platinum/80 max-w-xl leading-relaxed mb-12 italic font-medium">
-                            We build high-performance, AI-powered websites that grow businesses. <span
-                                class="text-white font-bold border-b-2 border-accent-blue/40">Smart design made
-                                purposeful.</span>
-                        </p>
+                <!-- Subheadline -->
+                <p
+                    class="text-lg md:text-2xl text-platinum/70 max-w-3xl mx-auto leading-relaxed mb-12 italic font-medium">
+                    Experience unmatched AI automation with lightning-fast cloud processing. We build high-performance
+                    websites that elevate your productivity.
+                </p>
 
-                        <!-- BUTTONS ALIGNED IN A SINGLE ROW -->
-                        <div class="flex flex-row flex-wrap gap-6 items-center">
-                            <!-- 1. Audit -->
-                            <a href="/contact.html"
-                                class="group bg-bright-snow text-carbon-black px-10 py-5 rounded-full font-black text-lg md:text-xl flex items-center justify-center gap-4 hover:bg-white transition-all shadow-[0_10px_40px_rgba(255,255,255,0.2)] hover:-translate-y-1"
-                                aria-label="Get Free Audit">
-                                <span class="whitespace-nowrap">Get Free Audit</span>
-                                <i class="fa-solid fa-magnifying-glass-chart text-accent-blue text-sm"></i>
-                            </a>
+                <!-- CTA Actions -->
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <!-- Primary -->
+                    <a href="/contact.html"
+                        class="group bg-bright-snow text-carbon-black px-10 py-5 rounded-full font-black text-lg uppercase tracking-wider hover:bg-white hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] flex items-center gap-3">
+                        Get Started Today
+                        <i
+                            class="fa-solid fa-arrow-right-long text-accent-blue group-hover:translate-x-1 transition-transform"></i>
+                    </a>
 
-                            <!-- 2. WATCH INTRO -->
-                            <button onclick="openVideoModal()"
-                                class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-lg md:text-xl flex items-center justify-center gap-4 hover:bg-blue-600 transition-all shadow-[0_10px_40px_rgba(59,130,246,0.4)] hover:-translate-y-1"
-                                aria-label="Watch Introduction Video">
-                                <i class="fa-solid fa-circle-play text-2xl"></i>
-                                <span class="whitespace-nowrap">Watch Video</span>
-                            </button>
+                    <!-- Secondary -->
+                    <button onclick="openVideoModal()"
+                        class="group px-8 py-5 rounded-full font-black text-lg uppercase tracking-wider text-white hover:text-accent-blue transition-colors flex items-center gap-3">
+                        <i class="fa-regular fa-circle-play text-2xl"></i>
+                        <span>Watch Demo</span>
+                    </button>
+                </div>
+            </div>
 
+            <!-- === HERO WORKFLOW VISUALIZATION === -->
+            <div class="mt-20 relative w-full max-w-7xl mx-auto px-4 lg:px-8 z-20">
+                <!-- Connector Lines (Background) -->
+                <div class="absolute inset-0 pointer-events-none hidden lg:block">
+                    <svg class="w-full h-full" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none">
+                        <!-- Left to Center -->
+                        <path d="M100 100 C 200 100, 200 300, 350 300" stroke="rgba(255,255,255,0.1)" stroke-width="2"
+                            stroke-dasharray="8 8" />
+                        <path d="M100 300 C 200 300, 200 300, 350 300" stroke="rgba(255,255,255,0.1)" stroke-width="2"
+                            stroke-dasharray="8 8" />
+                        <path d="M100 500 C 200 500, 200 300, 350 300" stroke="rgba(255,255,255,0.1)" stroke-width="2"
+                            stroke-dasharray="8 8" />
 
+                        <!-- Center to Right -->
+                        <path d="M850 300 C 1000 300, 1000 100, 1100 100" stroke="rgba(255,255,255,0.1)"
+                            stroke-width="2" stroke-dasharray="8 8" />
+                        <path d="M850 300 C 1000 300, 1000 300, 1100 300" stroke="rgba(255,255,255,0.1)"
+                            stroke-width="2" stroke-dasharray="8 8" />
+                        <path d="M850 300 C 1000 300, 1000 500, 1100 500" stroke="rgba(255,255,255,0.1)"
+                            stroke-width="2" stroke-dasharray="8 8" />
+                    </svg>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+                    <!-- 1. LEFT COLUMN: INPUTS (Vertical Stack) -->
+                    <div class="col-span-2 hidden lg:flex flex-col gap-6 justify-center">
+                        <!-- Input Item 1 -->
+                        <div
+                            class="bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-2xl flex items-center justify-between shadow-lg group hover:bg-white/10 transition-colors">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white">
+                                <i class="fa-brands fa-google text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase text-platinum/70">Search Trends</span>
+                            <div class="w-2 h-2 rounded-full bg-accent-blue shadow-[0_0_10px_#3b82f6]"></div>
+                        </div>
+                        <!-- Input Item 2 -->
+                        <div
+                            class="bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-2xl flex items-center justify-between shadow-lg group hover:bg-white/10 transition-colors">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white">
+                                <i class="fa-solid fa-code text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase text-platinum/70">Site Structure</span>
+                            <div class="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_10px_#4ade80]"></div>
+                        </div>
+                        <!-- Input Item 3 -->
+                        <div
+                            class="bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-2xl flex items-center justify-between shadow-lg group hover:bg-white/10 transition-colors">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white">
+                                <i class="fa-solid fa-database text-lg"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase text-platinum/70">User Data</span>
+                            <div class="w-2 h-2 rounded-full bg-purple-400 shadow-[0_0_10px_#c084fc]"></div>
                         </div>
                     </div>
 
-                    <!-- RIGHT CONTENT: ANIMATED PERFORMANCE CARD -->
-                    <div class="relative hidden lg:flex justify-end reveal animate-float">
+                    <!-- 2. CENTER COLUMN: PROCESS DASHBOARD -->
+                    <div class="col-span-1 lg:col-span-8">
                         <div
-                            class="w-full max-w-md bg-white/5 backdrop-blur-3xl border border-white/10 p-12 rounded-[4rem] shadow-2xl relative overflow-hidden group">
-                            <div class="absolute top-0 right-0 p-8 opacity-5"><i
-                                    class="fa-solid fa-chart-line text-9xl"></i></div>
-                            <p class="text-[10px] uppercase tracking-[0.5em] font-black text-accent-blue mb-6 italic">
-                                Performance Index</p>
-                            <div class="flex items-end gap-3 mb-6">
-                                <h3 class="text-7xl font-black italic tracking-tighter leading-none">98%</h3>
-                                <div class="bg-accent-blue text-white p-1 rounded-md mb-2 shadow-lg"><i
-                                        class="fa-solid fa-caret-up text-xl"></i></div>
+                            class="bg-carbon-black/80 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-6 md:p-10 shadow-2xl relative overflow-hidden">
+                            <!-- Inner Glow -->
+                            <div
+                                class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent">
                             </div>
-                            <p class="text-xl font-bold text-platinum/90 leading-tight italic mb-10">Retention Rate <br>
-                                & Asset Growth.</p>
-                            <div class="pt-8 border-t border-white/10 flex items-center justify-between">
-                                <span
-                                    class="text-[9px] font-black uppercase tracking-widest text-iron-grey italic">Industry
-                                    Standard</span>
-                                <div class="flex gap-1.5 text-accent-blue text-[8px]">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i>
+
+                            <!-- Header Pill -->
+                            <div
+                                class="bg-black/40 border border-white/5 rounded-full py-2 px-6 inline-flex items-center gap-3 mb-10 mx-auto w-full max-w-lg justify-center shadow-inner">
+                                <div class="w-2 h-2 rounded-full bg-accent-blue animate-pulse"></div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-platinum/80">AI Growth
+                                    Engine: <span class="text-white">Active Processing</span></span>
+                            </div>
+
+                            <!-- Dashboard Grid -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
+                                <!-- Card 1: Keyword Analysis -->
+                                <div
+                                    class="bg-white/5 border border-white/5 rounded-3xl p-6 relative group hover:bg-white/10 transition-colors">
+                                    <h4
+                                        class="text-platinum text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
+                                        <i class="fa-solid fa-layer-group text-accent-blue"></i> Keyword Clustering</h4>
+                                    <div class="space-y-3">
+                                        <div class="h-2 bg-white/10 rounded-full w-3/4"></div>
+                                        <div class="h-2 bg-white/10 rounded-full w-1/2"></div>
+                                    </div>
+                                    <div class="mt-6 flex gap-2">
+                                        <span
+                                            class="text-[10px] bg-accent-blue/20 text-accent-blue px-2 py-1 rounded">SEO</span>
+                                        <span
+                                            class="text-[10px] bg-purple-500/20 text-purple-400 px-2 py-1 rounded">Volume</span>
+                                    </div>
+                                </div>
+
+                                <!-- Card 2: Performance Opt -->
+                                <div
+                                    class="bg-white/5 border border-white/5 rounded-3xl p-6 relative group hover:bg-white/10 transition-colors">
+                                    <h4
+                                        class="text-platinum text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
+                                        <i class="fa-solid fa-bolt text-yellow-400"></i> Speed Optimization</h4>
+                                    <div class="flex items-end gap-2 mb-2">
+                                        <span class="text-3xl font-black text-white italic">0.3s</span>
+                                        <span class="text-xs text-platinum/60 mb-1">Load Time</span>
+                                    </div>
+                                    <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+                                        <div class="bg-green-400 h-full w-[95%]"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Center Floating Element -->
+                                <div
+                                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex flex-col items-center">
+                                    <div
+                                        class="w-20 h-20 bg-gradient-to-br from-carbon-black to-gunmetal rounded-full border border-white/20 shadow-[0_0_50px_rgba(59,130,246,0.5)] flex items-center justify-center z-10 relative">
+                                        <i class="fa-solid fa-microchip text-3xl text-white"></i>
+                                        <!-- Ring Animation -->
+                                        <div
+                                            class="absolute inset-0 border border-accent-blue/30 rounded-full animate-ping">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mt-4 px-4 py-1 bg-black/60 rounded-full border border-white/10 text-[10px] font-bold text-accent-blue uppercase tracking-widest backdrop-blur-md">
+                                        Processing
+                                    </div>
+                                </div>
+
+                                <!-- Card 3: Content Gen -->
+                                <div
+                                    class="bg-white/5 border border-white/5 rounded-3xl p-6 relative group hover:bg-white/10 transition-colors">
+                                    <h4
+                                        class="text-platinum text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
+                                        <i class="fa-solid fa-pen-nib text-pink-400"></i> Content Gen.</h4>
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-full bg-white/20"></div>
+                                        <div class="w-8 h-8 rounded-full bg-white/20 -ml-4 border-2 border-gunmetal">
+                                        </div>
+                                        <span class="text-xs text-platinum/60">+ Generating assets...</span>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4: Analytics -->
+                                <div
+                                    class="bg-white/5 border border-white/5 rounded-3xl p-6 relative group hover:bg-white/10 transition-colors">
+                                    <h4
+                                        class="text-platinum text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
+                                        <i class="fa-solid fa-chart-pie text-green-400"></i> Conversion</h4>
+                                    <div class="flex justify-between items-end">
+                                        <div class="w-2 bg-white/10 h-8 rounded-t-sm"></div>
+                                        <div class="w-2 bg-white/10 h-12 rounded-t-sm"></div>
+                                        <div class="w-2 bg-accent-blue h-16 rounded-t-sm shadow-[0_0_15px_#3b82f6]">
+                                        </div>
+                                        <div class="w-2 bg-white/10 h-10 rounded-t-sm"></div>
+                                        <div class="w-2 bg-white/10 h-14 rounded-t-sm"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Global Reach Badge -->
+                    </div>
+
+                    <!-- 3. RIGHT COLUMN: OUTPUTS (Vertical Stack) -->
+                    <div class="col-span-2 hidden lg:flex flex-col gap-6 justify-center">
+                        <!-- Output Item 1 -->
                         <div
-                            class="absolute -bottom-6 right-10 bg-accent-blue text-white py-4 px-8 rounded-2xl shadow-2xl -rotate-3 transition-transform hover:rotate-0">
-                            <p class="text-xl font-black italic uppercase">25+ Nations</p>
+                            class="bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-2xl flex items-center justify-between shadow-lg group hover:bg-white/10 transition-colors">
+                            <div class="w-2 h-2 rounded-full bg-accent-blue shadow-[0_0_10px_#3b82f6]"></div>
+                            <span class="text-xs font-bold uppercase text-platinum/70 flex-1 ml-4 text-right">Top
+                                Audit</span>
+                            <div
+                                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white ml-4">
+                                <i class="fa-solid fa-ranking-star text-lg text-yellow-400"></i>
+                            </div>
+                        </div>
+                        <!-- Output Item 2 -->
+                        <div
+                            class="bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-2xl flex items-center justify-between shadow-lg group hover:bg-white/10 transition-colors">
+                            <div class="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_10px_#4ade80]"></div>
+                            <span class="text-xs font-bold uppercase text-platinum/70 flex-1 ml-4 text-right">Traffic
+                                Up</span>
+                            <div
+                                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white ml-4">
+                                <i class="fa-solid fa-arrow-trend-up text-lg text-green-400"></i>
+                            </div>
+                        </div>
+                        <!-- Output Item 3 -->
+                        <div
+                            class="bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-2xl flex items-center justify-between shadow-lg group hover:bg-white/10 transition-colors">
+                            <div class="w-2 h-2 rounded-full bg-purple-400 shadow-[0_0_10px_#c084fc]"></div>
+                            <span class="text-xs font-bold uppercase text-platinum/70 flex-1 ml-4 text-right">Leads
+                                Gen</span>
+                            <div
+                                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white ml-4">
+                                <i class="fa-solid fa-users text-lg text-purple-400"></i>
+                            </div>
                         </div>
                     </div>
+
                 </div>
+            </div>
 
 
-                <!-- Stats moved below hero section -->
+            <!-- Stats moved below hero section -->
 
             </div>
         </section>
@@ -2573,6 +2735,58 @@
     </footer>
 
     <!-- === SCRIPTS === -->
+    <!-- === SCRIPTS === -->
+    <!-- GSAP Removed for Static Performance -->
+
+
+    <script>
+        // Register ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // --- GSAP Scroll Animations (Replaces IntersectionObserver) ---
+        // 1. General Reveal Animation
+        // --- GSAP Scroll Animations (Hero Only) ---
+        // 1. Hero Reveal Animation
+        gsap.utils.toArray('#home .reveal').forEach((element) => {
+            gsap.fromTo(element,
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse'
+                    }
+                }
+            );
+        });
+
+        // 2. Bento Card Animations Removed (User Request: Hero Only)
+
+
+        // 2. Bento Cards Setup (Staggered)
+        // 2. Bento Card Animations Removed (User Request: Hero Only)
+
+        // 3. Hero Title Parallax (if applicable)
+        // Check if hero title exists to avoid errors
+        const heroTitle = document.querySelector('.hero-title'); // Assuming class exists or targeting h1
+        if (heroTitle) {
+            gsap.to(heroTitle, {
+                yPercent: 50,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: document.body,
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+        }
+    </script>
+
     <script>
         // --- Mobile Menu ---
         function toggleMobileMenu() {
@@ -2726,14 +2940,9 @@
             }
         }
 
-        // --- Utilities (Scroll Reveal, FAQ, BackToTop, Shortcuts) ---
-        const observerOptions = { threshold: 0.1 };
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, observerOptions);
-        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        // --- Utilities (FAQ, BackToTop, Shortcuts) ---
+        // Note: IntersectionObserver replaced by GSAP above
+
 
         function toggleFAQ(button) {
             const item = button.parentElement;
@@ -2801,7 +3010,7 @@
                         angle: Math.random() * Math.PI * 2,
                         velocity: 2 + Math.random() * 2,
                         life: 1,
-                        color: `hsl(${Math.random() * 360}, 100%, 70%)`
+                        color: '#ffffff'
                     });
                 }
             }
