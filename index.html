@@ -276,7 +276,7 @@
     </style>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 
 <body class="text-bright-snow font-sans antialiased">
@@ -287,7 +287,7 @@
         Copied to clipboard!</div>
 
     <!-- UI Tools -->
-    <button id="backToTop"
+    <button id="backToTop" aria-label="Scroll to top"
         class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl"><i
             class="fas fa-arrow-up text-xl"></i></button>
 
@@ -363,14 +363,14 @@
 
             <!-- Mobile Social Links -->
             <div class="mt-20 pt-10 border-t border-white/5 flex gap-8">
-                <a href="https://instagram.com/f9xrteam"
-                    class="text-platinum/40 text-2xl hover:text-white transition-colors"><i
+                <a href="https://instagram.com/f9xrteam" aria-label="Instagram"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
                         class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1"
-                    class="text-platinum/40 text-2xl hover:text-white transition-colors"><i
+                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" aria-label="WhatsApp"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
                         class="fa-brands fa-whatsapp"></i></a>
-                <a href="mailto:tontufytservices@gmail.com"
-                    class="text-platinum/40 text-2xl hover:text-white transition-colors"><i
+                <a href="mailto:tontufytservices@gmail.com" aria-label="Email Us"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
                         class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
@@ -420,7 +420,7 @@
                         </h1>
 
                         <p
-                            class="text-xl md:text-2xl text-platinum/70 max-w-xl leading-relaxed mb-12 italic font-medium">
+                            class="text-xl md:text-2xl text-platinum/80 max-w-xl leading-relaxed mb-12 italic font-medium">
                             We build high-performance, AI-powered websites that grow businesses. <span
                                 class="text-white font-bold border-b-2 border-accent-blue/40">Smart design made
                                 purposeful.</span>
@@ -482,82 +482,86 @@
                 </div>
 
 
-                <!-- === LARGE SCALE DYNAMIC STATS SECTION === -->
-                <div class="mt-32 reveal group">
+                <!-- Stats moved below hero section -->
+
+            </div>
+        </section>
+
+        <!-- === MOVED STATS SECTION === -->
+        <section class="pb-20 px-6 md:px-12 relative z-10 max-w-[1440px] mx-auto">
+            <div class="reveal group">
+                <div
+                    class="bg-gunmetal/40 backdrop-blur-xl border border-white/10 p-12 md:p-20 rounded-[4rem] shadow-2xl relative overflow-hidden">
+
+                    <!-- Decorative Background Element -->
                     <div
-                        class="bg-gunmetal/40 backdrop-blur-xl border border-white/10 p-12 md:p-20 rounded-[4rem] shadow-2xl relative overflow-hidden">
+                        class="absolute -top-24 -right-24 w-96 h-96 bg-accent-blue/10 rounded-full blur-[120px] pointer-events-none group-hover:bg-accent-blue/20 transition-all duration-700">
+                    </div>
 
-                        <!-- Decorative Background Element -->
-                        <div
-                            class="absolute -top-24 -right-24 w-96 h-96 bg-accent-blue/10 rounded-full blur-[120px] pointer-events-none group-hover:bg-accent-blue/20 transition-all duration-700">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 relative z-10">
+
+                        <!-- Stat 01 -->
+                        <div class="text-center md:text-left space-y-2">
+                            <div class="flex items-center justify-center md:justify-start">
+                                <p class="stat-number text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter uppercase leading-none"
+                                    data-target="50">0</p>
+                                <span
+                                    class="text-4xl md:text-6xl font-black text-accent-blue italic leading-none">+</span>
+                            </div>
+                            <div class="h-[2px] w-12 bg-accent-blue/40 mx-auto md:ml-0 my-4"></div>
+                            <p
+                                class="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-platinum/60 italic leading-relaxed">
+                                Digital <br class="hidden md:block"> Projects
+                            </p>
                         </div>
 
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 relative z-10">
-
-                            <!-- Stat 01 -->
-                            <div class="text-center md:text-left space-y-2">
-                                <div class="flex items-center justify-center md:justify-start">
-                                    <p class="stat-number text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter uppercase leading-none"
-                                        data-target="50">0</p>
-                                    <span
-                                        class="text-4xl md:text-6xl font-black text-accent-blue italic leading-none">+</span>
-                                </div>
-                                <div class="h-[2px] w-12 bg-accent-blue/40 mx-auto md:ml-0 my-4"></div>
-                                <p
-                                    class="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-iron-grey italic leading-relaxed">
-                                    Digital <br class="hidden md:block"> Projects
-                                </p>
+                        <!-- Stat 02 -->
+                        <div class="text-center md:text-left space-y-2">
+                            <div class="flex items-center justify-center md:justify-start">
+                                <p class="stat-number text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter uppercase leading-none"
+                                    data-target="15">0</p>
+                                <span
+                                    class="text-4xl md:text-6xl font-black text-accent-blue italic leading-none">+</span>
                             </div>
-
-                            <!-- Stat 02 -->
-                            <div class="text-center md:text-left space-y-2">
-                                <div class="flex items-center justify-center md:justify-start">
-                                    <p class="stat-number text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter uppercase leading-none"
-                                        data-target="15">0</p>
-                                    <span
-                                        class="text-4xl md:text-6xl font-black text-accent-blue italic leading-none">+</span>
-                                </div>
-                                <div class="h-[2px] w-12 bg-accent-blue/40 mx-auto md:ml-0 my-4"></div>
-                                <p
-                                    class="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-iron-grey italic leading-relaxed">
-                                    AI Agent <br class="hidden md:block"> Integrations
-                                </p>
-                            </div>
-
-                            <!-- Stat 03 -->
-                            <div class="text-center md:text-left space-y-2">
-                                <div class="flex items-center justify-center md:justify-start">
-                                    <p class="stat-number text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter uppercase leading-none"
-                                        data-target="99">0</p>
-                                    <span
-                                        class="text-4xl md:text-6xl font-black text-accent-blue italic leading-none">%</span>
-                                </div>
-                                <div class="h-[2px] w-12 bg-accent-blue/40 mx-auto md:ml-0 my-4"></div>
-                                <p
-                                    class="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-iron-grey italic leading-relaxed">
-                                    Global Client <br class="hidden md:block"> Retention
-                                </p>
-                            </div>
-
-                            <!-- Stat 04 -->
-                            <div class="text-center md:text-left space-y-2">
-                                <div class="flex items-center justify-center md:justify-start">
-                                    <p class="stat-number text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter uppercase leading-none"
-                                        data-target="24">0</p>
-                                    <span
-                                        class="text-4xl md:text-6xl font-black text-accent-blue italic leading-none">/5</span>
-                                </div>
-                                <div class="h-[2px] w-12 bg-accent-blue/40 mx-auto md:ml-0 my-4"></div>
-                                <p
-                                    class="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-iron-grey italic leading-relaxed">
-                                    Priority <br class="hidden md:block"> Care Support
-                                </p>
-                            </div>
-
+                            <div class="h-[2px] w-12 bg-accent-blue/40 mx-auto md:ml-0 my-4"></div>
+                            <p
+                                class="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-platinum/60 italic leading-relaxed">
+                                AI Agent <br class="hidden md:block"> Integrations
+                            </p>
                         </div>
+
+                        <!-- Stat 03 -->
+                        <div class="text-center md:text-left space-y-2">
+                            <div class="flex items-center justify-center md:justify-start">
+                                <p class="stat-number text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter uppercase leading-none"
+                                    data-target="99">0</p>
+                                <span
+                                    class="text-4xl md:text-6xl font-black text-accent-blue italic leading-none">%</span>
+                            </div>
+                            <div class="h-[2px] w-12 bg-accent-blue/40 mx-auto md:ml-0 my-4"></div>
+                            <p
+                                class="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-platinum/60 italic leading-relaxed">
+                                Global Client <br class="hidden md:block"> Retention
+                            </p>
+                        </div>
+
+                        <!-- Stat 04 -->
+                        <div class="text-center md:text-left space-y-2">
+                            <div class="flex items-center justify-center md:justify-start">
+                                <p class="stat-number text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter uppercase leading-none"
+                                    data-target="24">0</p>
+                                <span
+                                    class="text-4xl md:text-6xl font-black text-accent-blue italic leading-none">/5</span>
+                            </div>
+                            <div class="h-[2px] w-12 bg-accent-blue/40 mx-auto md:ml-0 my-4"></div>
+                            <p
+                                class="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-platinum/60 italic leading-relaxed">
+                                Priority <br class="hidden md:block"> Care Support
+                            </p>
+                        </div>
+
                     </div>
                 </div>
-
             </div>
         </section>
         <hr class="border-white/5 my-0 w-full">
@@ -612,7 +616,7 @@
                             Is Your Growth <br> <span class="text-stroke text-transparent"
                                 style="-webkit-text-stroke: 1px #f8f9fa;">Leaking?</span>
                         </h2>
-                        <p class="text-xl md:text-2xl text-platinum/60 mb-12 leading-relaxed font-medium italic">
+                        <p class="text-xl md:text-2xl text-platinum/80 mb-12 leading-relaxed font-medium italic">
                             In the digital age, a "good-looking" site isn't enough. If your architecture is slow, your
                             SEO is invisible, and your UI is confusing, <span
                                 class="text-white underline decoration-accent-blue underline-offset-8 font-bold">you are
@@ -627,9 +631,9 @@
                             </div>
 
                             <div
-                                class="relative bg-gunmetal/40 backdrop-blur-xl p-10 md:p-14 rounded-[3rem] border border-white/10 shadow-2xl">
-                                <h4 class="text-xs font-black uppercase tracking-widest text-iron-grey mb-8">The
-                                    Engineering Gap</h4>
+                                class="relative bg-gunmetal/40 backdrop-blur-xl p-8 md:p-10 rounded-[3rem] border border-white/10 shadow-2xl">
+                                <h3 class="text-xs font-black uppercase tracking-widest text-iron-grey mb-8">The
+                                    Engineering Gap</h3>
                                 <ul class="space-y-8">
                                     <li class="flex items-start gap-6 group/item">
                                         <div
@@ -639,7 +643,7 @@
                                         <div>
                                             <p class="text-xl font-black text-white italic uppercase tracking-tight">The
                                                 Friction</p>
-                                            <p class="text-lg text-platinum/50 font-medium italic">Low Google visibility
+                                            <p class="text-lg text-platinum/70 font-medium italic">Low Google visibility
                                                 and confusing layouts causing 80% bounce rates.</p>
                                         </div>
                                     </li>
@@ -651,7 +655,7 @@
                                         <div>
                                             <p class="text-xl font-black text-white italic uppercase tracking-tight">The
                                                 F9XR Fix</p>
-                                            <p class="text-lg text-platinum/50 font-medium italic">AI-driven performance
+                                            <p class="text-lg text-platinum/70 font-medium italic">AI-driven performance
                                                 tuning that turns casual visitors into high-value leads.</p>
                                         </div>
                                     </li>
@@ -731,7 +735,8 @@
                                 <i class="fas fa-hand-fist text-white text-xl"></i>
                             </div>
                             <div>
-                                <p class="font-black italic uppercase tracking-tighter leading-tight">We Build for ROI.
+                                <p class="font-black italic uppercase tracking-tighter leading-tight"><span
+                                        class="text-white">We Build for ROI.</span>
                                 </p>
                                 <p class="text-xs font-bold uppercase opacity-60 tracking-widest">Digital results, not
                                     just pretty pixels.</p>
@@ -766,7 +771,7 @@
                         <span class="text-stroke text-transparent"
                             style="-webkit-text-stroke: 1.5px #f8f9fa;">Solutions.</span>
                     </h2>
-                    <p class="text-lg md:text-2xl text-platinum/50 max-w-2xl font-medium italic">
+                    <p class="text-lg md:text-2xl text-platinum/70 max-w-2xl font-medium italic">
                         We don't just build sites; we architect high-converting digital assets designed to scale,
                         secure, and dominate your market.
                     </p>
@@ -825,7 +830,7 @@
                             <h3
                                 class="text-2xl md:text-3xl font-black mb-6 tracking-tighter uppercase italic text-white leading-tight">
                                 Local SEO <br> Dominance.</h3>
-                            <p class="text-base md:text-lg text-platinum/50 leading-relaxed font-medium italic mb-8">
+                            <p class="text-base md:text-lg text-platinum/70 leading-relaxed font-medium italic mb-8">
                                 Stop being invisible. We optimize your <span class="text-white">Google Business
                                     Profile</span> and local citations to put your clinic, salon, or brand at the top of
                                 the map.
@@ -850,7 +855,7 @@
                             <h3
                                 class="text-2xl md:text-3xl font-black mb-6 tracking-tighter uppercase italic text-white leading-tight">
                                 Elite Tech <br> Maintenance.</h3>
-                            <p class="text-base md:text-lg text-platinum/50 leading-relaxed font-medium italic mb-8">
+                            <p class="text-base md:text-lg text-platinum/70 leading-relaxed font-medium italic mb-8">
                                 Technical debt kills business. We handle <span class="text-white">Uptime, Backups, and
                                     Security</span> weekly, ensuring your digital asset remains a peak performer 24/7.
                             </p>
@@ -898,7 +903,7 @@
                     <a href="/services.html"
                         class="group relative w-full sm:w-auto inline-flex items-center justify-center gap-6 bg-transparent border-2 border-white/20 text-white px-8 md:px-12 py-5 md:py-6 rounded-full font-black text-lg md:text-xl overflow-hidden transition-all duration-500 hover:bg-white hover:text-carbon-black hover:border-white shadow-2xl active:scale-95"
                         aria-label="Explore all digital services offered by F9XR Team">
-                        <span class="uppercase tracking-widest italic">View Full Blueprint</span>
+                        <span class="uppercase tracking-widest italic">View Full Services</span>
                         <div
                             class="w-10 h-10 md:w-12 md:h-12 bg-accent-blue rounded-full flex items-center justify-center group-hover:bg-carbon-black transition-colors duration-500">
                             <i
@@ -916,7 +921,7 @@
              ======================================== -->
         <!-- Our Approach / Process Section -->
         <!-- === SECTION: OUR PROCESS (COMPLETE 01-04 ACCORDION) === -->
-        <section class="py-32 px-4 md:px-6 bg-carbon-black relative overflow-hidden" id="process">
+        <section class="py-10 px-4 md:px-6 bg-carbon-black relative overflow-hidden" id="process">
             <!-- Background Ambient Glows -->
             <div
                 class="absolute top-0 right-0 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none">
@@ -970,7 +975,7 @@
                                     <div class="flex-1">
                                         <h4 class="text-xl font-black text-white uppercase italic mb-4">Uncovering
                                             Revenue Leaks</h4>
-                                        <p class="text-platinum/50 text-base leading-relaxed italic mb-8">
+                                        <p class="text-platinum/70 text-base leading-relaxed italic mb-8">
                                             We analyze your brand DNA, technical debt, and competitor landscape to find
                                             exactly where you are losing global visibility.
                                         </p>
@@ -1030,7 +1035,7 @@
                                     <div class="flex-1">
                                         <h4 class="text-xl font-black text-white uppercase italic mb-4">High-FID
                                             Architecture</h4>
-                                        <p class="text-platinum/50 text-base leading-relaxed italic mb-8">
+                                        <p class="text-platinum/70 text-base leading-relaxed italic mb-8">
                                             We map out user psychology, conversion funnels, and modern aesthetics to
                                             ensure your digital product converts browsers into high-paying clients.
                                         </p>
@@ -1090,7 +1095,7 @@
                                     <div class="flex-1">
                                         <h4 class="text-xl font-black text-white uppercase italic mb-4">Precision Code
                                             Integration</h4>
-                                        <p class="text-platinum/50 text-base leading-relaxed italic mb-8">
+                                        <p class="text-platinum/70 text-base leading-relaxed italic mb-8">
                                             Our engineers translate designs into clean, scalable code integrated with
                                             proprietary AI logic for automated engagement and security.
                                         </p>
@@ -1150,7 +1155,7 @@
                                     <div class="flex-1">
                                         <h4 class="text-xl font-black text-white uppercase italic mb-4">Continuous Asset
                                             Appreciation</h4>
-                                        <p class="text-platinum/50 text-base leading-relaxed italic mb-8">
+                                        <p class="text-platinum/70 text-base leading-relaxed italic mb-8">
                                             Post-launch, we focus on rigorous SEO indexing, Core Web Vital tuning, and
                                             performance monitoring to ensure long-term ROI.
                                         </p>
@@ -1284,7 +1289,7 @@
                         class="text-5xl md:text-8xl font-black tracking-tighter mb-6 italic text-stroke uppercase leading-none">
                         Core <br class="md:hidden"> <span class="text-white not-italic">Strengths.</span>
                     </h2>
-                    <p class="text-xl text-platinum/50 max-w-2xl mx-auto font-medium italic">
+                    <p class="text-xl text-platinum/70 max-w-2xl mx-auto font-medium italic">
                         The technical foundation that separates F9XR architectures from standard web builds.
                     </p>
                 </div>
@@ -1294,7 +1299,7 @@
 
                     <!-- Strength 01: Performance -->
                     <div
-                        class="group relative p-6 md:p-8 bg-gunmetal/40 backdrop-blur-xl rounded-[2.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/60 transition-all duration-500 reveal shadow-2xl">
+                        class="group relative p-6 md:p-8 bg-gunmetal/40 backdrop-blur-xl rounded-[2.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/60 transition-all duration-500 reveal shadow-2xl hover:-translate-y-2 hover:shadow-accent-blue/20">
                         <!-- Hover Glow Effect -->
                         <div
                             class="absolute inset-0 bg-accent-blue/5 opacity-0 group-hover:opacity-100 rounded-[3.5rem] transition-opacity duration-500">
@@ -1306,10 +1311,10 @@
                                 <i class="fas fa-bolt text-3xl text-accent-blue group-hover:text-white"></i>
                             </div>
 
-                            <h4
+                            <h3
                                 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-6 italic text-white group-hover:text-accent-blue transition-colors">
                                 Performance First
-                            </h4>
+                            </h3>
 
                             <p class="text-xl text-platinum/60 leading-relaxed font-medium italic mb-8">
                                 We target <span class="text-white">sub-second load times</span>. We eliminate bloat so
@@ -1330,7 +1335,7 @@
 
                     <!-- Strength 02: Security -->
                     <div
-                        class="group relative p-6 md:p-8 bg-gunmetal/40 backdrop-blur-xl rounded-[2.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/60 transition-all duration-500 reveal shadow-2xl">
+                        class="group relative p-6 md:p-8 bg-gunmetal/40 backdrop-blur-xl rounded-[2.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/60 transition-all duration-500 reveal shadow-2xl hover:-translate-y-2 hover:shadow-accent-blue/20">
                         <div
                             class="absolute inset-0 bg-accent-blue/5 opacity-0 group-hover:opacity-100 rounded-[3.5rem] transition-opacity duration-500">
                         </div>
@@ -1341,10 +1346,10 @@
                                 <i class="fas fa-shield-halved text-3xl text-accent-blue group-hover:text-white"></i>
                             </div>
 
-                            <h4
+                            <h3
                                 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-6 italic text-white group-hover:text-accent-blue transition-colors">
                                 Security & Backups
-                            </h4>
+                            </h3>
 
                             <p class="text-xl text-platinum/60 leading-relaxed font-medium italic mb-8">
                                 Weekly <span class="text-white">off-site encryption</span> and proactive security
@@ -1364,7 +1369,7 @@
 
                     <!-- Strength 03: AI Logic -->
                     <div
-                        class="group relative p-6 md:p-8 bg-gunmetal/40 backdrop-blur-xl rounded-[2.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/60 transition-all duration-500 reveal shadow-2xl">
+                        class="group relative p-6 md:p-8 bg-gunmetal/40 backdrop-blur-xl rounded-[2.5rem] border border-white/5 hover:border-accent-blue/40 hover:bg-gunmetal/60 transition-all duration-500 reveal shadow-2xl hover:-translate-y-2 hover:shadow-accent-blue/20">
                         <div
                             class="absolute inset-0 bg-accent-blue/5 opacity-0 group-hover:opacity-100 rounded-[3.5rem] transition-opacity duration-500">
                         </div>
@@ -1375,10 +1380,10 @@
                                 <i class="fas fa-fingerprint text-3xl text-accent-blue group-hover:text-white"></i>
                             </div>
 
-                            <h4
+                            <h3
                                 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-6 italic text-white group-hover:text-accent-blue transition-colors">
                                 Niche AI Logic
-                            </h4>
+                            </h3>
 
                             <p class="text-xl text-platinum/60 leading-relaxed font-medium italic mb-8">
                                 Custom <span class="text-white">AI modules</span> tailored to your industry, from
@@ -1490,9 +1495,9 @@
                                 <span
                                     class="text-accent-blue text-[10px] font-black tracking-widest uppercase mb-2">Fintech
                                     Architecture</span>
-                                <h4
+                                <h3
                                     class="text-3xl md:text-4xl font-black italic tracking-tighter uppercase text-white mb-2 leading-none">
-                                    iCryptos Dashboards</h4>
+                                    iCryptos Dashboards</h3>
                                 <p class="text-platinum/80 text-sm md:text-base font-medium italic">High-performance
                                     React/Blogger hybrid analytics.</p>
                             </div>
@@ -1532,9 +1537,9 @@
                                 <span
                                     class="text-accent-blue text-[10px] font-black tracking-widest uppercase mb-2">AI-Image
                                     Generation</span>
-                                <h4
+                                <h3
                                     class="text-3xl md:text-4xl font-black italic tracking-tighter uppercase text-white mb-2 leading-none">
-                                    Foil AI</h4>
+                                    Foil AI</h3>
                                 <p class="text-platinum/80 text-sm md:text-base font-medium italic">Next-gen neural art
                                     generation tool.</p>
                             </div>
@@ -1573,9 +1578,9 @@
                                 class="absolute inset-0 bg-gradient-to-t from-carbon-black via-carbon-black/40 to-transparent flex flex-col justify-end p-8 md:p-12 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                                 <span class="text-accent-blue text-[10px] font-black tracking-widest uppercase mb-2">AI
                                     Platform</span>
-                                <h4
+                                <h3
                                     class="text-3xl md:text-4xl font-black italic tracking-tighter uppercase text-white mb-2 leading-none">
-                                    VroAI Chatbot</h4>
+                                    VroAI Chatbot</h3>
                                 <p class="text-platinum/80 text-sm md:text-base font-medium italic">Advanced AI Chatbot
                                     & GPT service experience.</p>
                             </div>
@@ -1594,7 +1599,7 @@
                         <i
                             class="fa-solid fa-folder-open text-accent-blue text-5xl mb-6 opacity-30 group-hover:opacity-100 transition-opacity"></i>
                         <h4 class="text-2xl font-black uppercase italic tracking-tighter mb-4">Plus 40+ More.</h4>
-                        <p class="text-platinum/50 mb-8 italic text-sm font-medium">We've architected over 40 digital
+                        <p class="text-platinum/70 mb-8 italic text-sm font-medium">We've architected over 40 digital
                             portals, news networks, and AI tools globally.</p>
                         <a href="/projects.html"
                             class="bg-bright-snow text-carbon-black px-8 py-4 rounded-full font-black text-xs tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-xl">
@@ -1626,7 +1631,7 @@
                 <div
                     class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-12 mb-12 border-b border-white/10 reveal">
                     <h2
-                        class="text-6xl md:text-8xl font-black tracking-tighter italic uppercase text-white leading-none">
+                        class="text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter italic uppercase text-white leading-none">
                         Testimonials<span class="text-accent-blue">.</span>
                     </h2>
                     <p class="text-lg md:text-xl text-platinum/40 max-w-md font-medium italic leading-relaxed">
@@ -1799,7 +1804,7 @@
         <!-- ========================================
              SECTION 08: PRICING
              ======================================== -->
-        <section id="pricing" class="pt-0 pb-32 px-6 bg-carbon-black relative overflow-hidden">
+        <section id="pricing" class="pt-20 md:pt-32 pb-32 px-6 bg-carbon-black relative overflow-hidden">
             <!-- Background Decor -->
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
                 <div class="absolute top-1/4 right-0 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px]"></div>
@@ -1814,7 +1819,7 @@
                     <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic uppercase leading-none">
                         Growth <br> <span class="text-stroke">ROI Models.</span>
                     </h2>
-                    <p class="text-xl text-platinum/50 max-w-2xl mx-auto font-medium italic">
+                    <p class="text-xl text-platinum/70 max-w-2xl mx-auto font-medium italic">
                         We don't sell "websites." We sell digital assets that capture leads, build trust, and dominate
                         local search.
                     </p>
@@ -1832,12 +1837,12 @@
                                 class="fa-solid fa-hand-holding-dollar text-accent-blue group-hover:text-white text-4xl"></i>
                         </div>
                         <div class="space-y-3">
-                            <h4
+                            <h3
                                 class="text-2xl md:text-3xl font-black text-white uppercase italic tracking-tighter leading-none">
                                 Zero <br class="hidden lg:block"> Hidden Fees
-                            </h4>
+                            </h3>
                             <p
-                                class="text-base md:text-lg font-medium text-platinum/50 italic leading-snug group-hover:text-platinum/80 transition-colors">
+                                class="text-base md:text-lg font-medium text-platinum/70 italic leading-snug group-hover:text-platinum/80 transition-colors">
                                 One-time project based billing. No monthly surprises.
                             </p>
                         </div>
@@ -1851,12 +1856,12 @@
                             <i class="fa-solid fa-code-merge text-accent-blue group-hover:text-white text-4xl"></i>
                         </div>
                         <div class="space-y-3">
-                            <h4
+                            <h3
                                 class="text-2xl md:text-3xl font-black text-white uppercase italic tracking-tighter leading-none">
                                 Scalable <br class="hidden lg:block"> Logic
-                            </h4>
+                            </h3>
                             <p
-                                class="text-base md:text-lg font-medium text-platinum/50 italic leading-snug group-hover:text-platinum/80 transition-colors">
+                                class="text-base md:text-lg font-medium text-platinum/70 italic leading-snug group-hover:text-platinum/80 transition-colors">
                                 Architectures that grow as your business scales globally.
                             </p>
                         </div>
@@ -1870,12 +1875,12 @@
                             <i class="fa-solid fa-user-shield text-accent-blue group-hover:text-white text-4xl"></i>
                         </div>
                         <div class="space-y-3">
-                            <h4
+                            <h3
                                 class="text-2xl md:text-3xl font-black text-white uppercase italic tracking-tighter leading-none">
                                 100% <br class="hidden lg:block"> Ownership
-                            </h4>
+                            </h3>
                             <p
-                                class="text-base md:text-lg font-medium text-platinum/50 italic leading-snug group-hover:text-platinum/80 transition-colors">
+                                class="text-base md:text-lg font-medium text-platinum/70 italic leading-snug group-hover:text-platinum/80 transition-colors">
                                 No proprietary lock-in. You own every line of code.
                             </p>
                         </div>
@@ -1892,7 +1897,7 @@
                         <div class="mb-10">
                             <h3 class="text-3xl font-black uppercase tracking-tighter italic text-white mb-2">Starter
                                 Website</h3>
-                            <p class="text-platinum/50 font-bold italic text-sm">Escaping Technical Debt.</p>
+                            <p class="text-platinum/70 font-bold italic text-sm">Escaping Technical Debt.</p>
                         </div>
 
                         <div class="bg-white/5 rounded-2xl p-6 mb-10 border border-white/5">
@@ -1931,7 +1936,7 @@
 
                     <!-- Tier 2: Growth Pack (The Conversion King) -->
                     <div
-                        class="relative group bg-bright-snow p-10 md:p-14 rounded-[3.5rem] reveal shadow-[0_50px_100px_rgba(59,130,246,0.15)] flex flex-col h-full scale-100 lg:scale-105 z-20 transition-transform hover:scale-[1.07] duration-500">
+                        class="relative group bg-bright-snow p-10 md:p-14 rounded-[3.5rem] reveal shadow-[0_50px_100px_rgba(59,130,246,0.3)] flex flex-col h-full scale-100 lg:scale-105 z-20 transition-transform hover:scale-[1.07] duration-500 border-2 border-transparent hover:border-accent-blue/20">
                         <!-- Most Popular Badge -->
                         <div
                             class="absolute top-0 right-10 -translate-y-1/2 bg-accent-blue text-white px-8 py-3 rounded-full font-black uppercase text-[10px] tracking-widest shadow-xl">
@@ -2079,7 +2084,7 @@
                     <h2
                         class="text-4xl md:text-8xl font-black tracking-tighter mb-4 leading-none uppercase italic text-white">
                         Let's <span class="text-stroke">Build.</span></h2>
-                    <p class="text-lg md:text-2xl text-platinum/50 font-medium italic">Start with a free website audit.
+                    <p class="text-lg md:text-2xl text-platinum/70 font-medium italic">Start with a free website audit.
                     </p>
                 </div>
 
@@ -2154,7 +2159,7 @@
                             class="fa-brands fa-whatsapp text-6xl md:text-7xl text-[#25D366] mb-6 md:mb-8 animate-bounce"></i>
                         <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-4 italic text-white">
                             Direct Access.</h3>
-                        <p class="text-base md:text-lg text-platinum/50 mb-8 md:mb-10 font-medium italic">Skip the form
+                        <p class="text-base md:text-lg text-platinum/70 mb-8 md:mb-10 font-medium italic">Skip the form
                             and chat with our strategy team instantly for a 15-minute consultation.</p>
                         <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank"
                             class="w-full sm:w-auto inline-flex items-center justify-center gap-4 bg-[#25D366] text-white px-8 py-5 md:px-12 md:py-6 rounded-full font-black text-lg md:text-xl hover:scale-105 transition-transform shadow-2xl shadow-green-500/20">
@@ -2198,7 +2203,7 @@
                     <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
                         Book a <br> <span class="text-stroke">Blueprint Session.</span>
                     </h2>
-                    <p class="text-xl text-platinum/50 mt-6 max-w-2xl mx-auto font-medium italic">
+                    <p class="text-xl text-platinum/70 mt-6 max-w-2xl mx-auto font-medium italic">
                         Secure a 10-minute technical audit. We’ll map out your digital architecture and growth strategy
                         — no strings attached.
                     </p>
@@ -2486,7 +2491,7 @@
                         <li><a href="/services.html" class="hover:text-accent-blue transition-colors">Services</a></li>
                         <li><a href="/portfolio.html" class="hover:text-accent-blue transition-colors">Portfolio</a>
                         </li>
-                        <li><a href="/contact.html" class="hover:text-accent-blue transition-colors">Get Started</a>
+                        <li><a href="/contact.html" class="hover:text-accent-blue transition-colors">Contact Us</a>
                         </li>
                     </ul>
                 </div>
