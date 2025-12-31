@@ -2609,117 +2609,7 @@
 
             </div>
         </section>
-        <hr class="border-white/5 my-0 w-full">
 
-        <!-- ========================================
-             SECTION: BOOKING / STRATEGY SESSION (Ported)
-             ======================================== -->
-        <section id="book" class="py-32 px-6 bg-[#212529]/50 relative overflow-hidden">
-            <!-- Background visual logic -->
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-20">
-                <div class="absolute top-10 left-10 w-64 h-64 bg-accent-blue/20 rounded-full blur-[100px]"></div>
-            </div>
-
-            <div class="max-w-7xl mx-auto relative z-10">
-                <!-- Section Header -->
-                <div class="text-center mb-20 reveal">
-                    <span
-                        class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] mb-4 block italic">Direct
-                        Access</span>
-                    <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
-                        Book a <br> <span class="text-stroke">Blueprint Session.</span>
-                    </h2>
-                    <p class="text-xl text-platinum/70 mt-6 max-w-2xl mx-auto font-medium italic">
-                        Secure a 10-minute technical audit. We’ll map out your digital architecture and growth strategy
-                        — no strings attached.
-                    </p>
-                </div>
-
-                <!-- Booking Widget Container -->
-                <div class="reveal group">
-                    <div
-                        class="relative bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[3rem] md:rounded-[4rem] overflow-hidden shadow-2xl">
-                        <!-- Top Bar Decoration -->
-                        <div class="bg-white/5 border-b border-white/5 p-4 flex items-center gap-2">
-                            <div class="flex gap-1.5 pl-4">
-                                <div class="w-2 h-2 rounded-full bg-red-500/40"></div>
-                                <div class="w-2 h-2 rounded-full bg-yellow-500/40"></div>
-                                <div class="w-2 h-2 rounded-full bg-green-500/40"></div>
-                            </div>
-                            <p class="text-[10px] font-black uppercase tracking-widest text-iron-grey mx-auto italic">
-                                F9XR Team / 10min-consultation
-                            </p>
-                        </div>
-
-                        <!-- The Cal.com Embed -->
-                        <div class="w-full h-[700px] md:h-[650px] overflow-hidden">
-                            <!-- Cal inline embed code begins -->
-                            <div style="width:100%; height:100%; overflow:scroll" id="my-cal-inline-30min"></div>
-                            <script type="text/javascript">
-                                (function (C, A, L) {
-                                    let p = function (a, ar) { a.q.push(ar); };
-                                    let d = C.document;
-                                    C.Cal = C.Cal || function () {
-                                        let cal = C.Cal;
-                                        let ar = arguments;
-                                        if (!cal.loaded) {
-                                            cal.ns = {}; cal.q = cal.q || [];
-                                            d.head.appendChild(d.createElement("script")).src = A;
-                                            cal.loaded = true;
-                                        }
-                                        if (ar[0] === L) {
-                                            const api = function () { p(api, arguments); };
-                                            const namespace = ar[1];
-                                            api.q = api.q || [];
-                                            if (typeof namespace === "string") {
-                                                cal.ns[namespace] = cal.ns[namespace] || api;
-                                                p(cal.ns[namespace], ar);
-                                                p(cal, ["initNamespace", namespace]);
-                                            } else p(cal, ar);
-                                            return;
-                                        }
-                                        p(cal, ar);
-                                    };
-                                })(window, "https://app.cal.com/embed/embed.js", "init");
-
-                                Cal("init", "30min", { origin: "https://app.cal.com" });
-
-                                Cal.ns["30min"]("inline", {
-                                    elementOrSelector: "#my-cal-inline-30min",
-                                    config: { "layout": "month_view", "theme": "dark" },
-                                    calLink: "f9xr-glzk1q/30min",
-                                });
-
-                                Cal.ns["30min"]("ui", {
-                                    "hideEventTypeDetails": false,
-                                    "layout": "month_view",
-                                    "cssVarsPerTheme": {
-                                        "dark": {
-                                            "cal-brand": "#3b82f6", // Your accent-blue
-                                            "cal-bg": "transparent",
-                                            "cal-text": "#f8f9fa"
-                                        }
-                                    }
-                                });
-                            </script>
-                            <!-- Cal inline embed code ends -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Trust Signal -->
-                <div class="mt-16 text-center reveal">
-                    <div
-                        class="inline-flex items-center gap-4 bg-white/5 border border-white/10 px-8 py-3 rounded-full">
-                        <i class="fa-solid fa-shield-halved text-accent-blue text-xs"></i>
-                        <p class="text-platinum/40 font-bold uppercase tracking-[0.2em] text-[10px]">
-                            Encrypted Scheduling • <span class="text-white">Worldwide Availability</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr class="border-white/5 my-0 w-full">
     </main>
 
     <footer class="bg-[#212529] pt-20 no-print overflow-hidden">
@@ -2883,9 +2773,7 @@
         // Register ScrollTrigger
         gsap.registerPlugin(ScrollTrigger);
 
-        // --- GSAP Scroll Animations (Replaces IntersectionObserver) ---
-        // 1. General Reveal Animation
-        // --- GSAP Scroll Animations (Hero Only) ---
+
         // 1. Hero Reveal Animation
         gsap.utils.toArray('#home .reveal').forEach((element) => {
             gsap.fromTo(element,
@@ -2904,14 +2792,7 @@
             );
         });
 
-        // 2. Bento Card Animations Removed (User Request: Hero Only)
 
-
-        // 2. Bento Cards Setup (Staggered)
-        // 2. Bento Card Animations Removed (User Request: Hero Only)
-
-        // 3. Hero Title Parallax (if applicable)
-        // Check if hero title exists to avoid errors
         const heroTitle = document.querySelector('.hero-title'); // Assuming class exists or targeting h1
         if (heroTitle) {
             gsap.to(heroTitle, {
