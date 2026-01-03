@@ -66,9 +66,8 @@
         /* @font-face removed */
 
         body {
-            background-color: #212529;
             -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .glass-nav {
@@ -152,6 +151,14 @@
 </head>
 
 <body class="text-bright-snow font-sans leading-relaxed">
+    <div class="fixed inset-0 -z-50 h-full w-full bg-black">
+        <div
+            class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        </div>
+        <div
+            class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]">
+        </div>
+    </div>
 
     <div id="scroll-progress"></div>
 
@@ -505,7 +512,8 @@
 
             <!-- F9XR Identity -->
             <div class="reveal">
-                <div class="bg-bright-snow text-carbon-black p-12 rounded-[4rem] text-center shadow-2xl">
+                <div
+                    class="bg-white/5 border border-white/5 p-8 rounded-[3rem] text-platinum flex flex-col justify-between">
                     <h2 class="text-4xl font-black tracking-tighter italic mb-8">Official F9XR Ecosystem</h2>
                     <div class="flex flex-col sm:flex-row justify-center gap-6">
                         <a href="https://f9xr.blogspot.com/" aria-label="Visit F9XR Main Blog"
@@ -577,7 +585,7 @@
     </main>
 
     <!-- === FOOTER === -->
-    <footer class="bg-[#212529] pt-20 no-print overflow-hidden">
+    <footer class="pt-20 no-print overflow-hidden">
 
         <!-- 1. Top Marquee Ticker (Brand Identity) -->
         <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20">
@@ -747,8 +755,8 @@
 
     <!-- === BACK TO TOP === -->
     <button id="btt" aria-label="Back to Top"
-        class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-all shadow-2xl">
-        <i class="fas fa-arrow-up text-xl"></i>
+        class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl">
+        <i class="fas fa-arrow-up text-sm"></i>
     </button>
 
     <!-- === SCRIPTS === -->

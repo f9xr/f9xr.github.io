@@ -70,8 +70,8 @@
 
 
         body {
-            background-color: #212529;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         /* Floating Pill Design */
@@ -152,6 +152,14 @@
 
 <body
     class="text-bright-snow font-sans leading-relaxed selection:bg-accent-blue selection:text-white flex flex-col min-h-screen">
+    <div class="fixed inset-0 -z-50 h-full w-full bg-black">
+        <div
+            class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        </div>
+        <div
+            class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]">
+        </div>
+    </div>
 
     <!-- Scroll Progress Indicator -->
     <div id="scroll-progress"></div>
@@ -312,7 +320,7 @@
     </main>
 
     <!-- === FOOTER === -->
-    <footer class="bg-[#212529] pt-20 no-print overflow-hidden">
+    <footer class="pt-20 no-print overflow-hidden">
 
         <!-- 1. Top Marquee Ticker (Brand Identity) -->
         <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20">
@@ -482,9 +490,9 @@
 
     <!-- === BACK TO TOP === -->
     <button id="btt"
-        class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-all shadow-2xl no-print"
+        class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl no-print"
         aria-label="Back to Top">
-        <i class="fas fa-arrow-up text-xl"></i>
+        <i class="fas fa-arrow-up text-sm"></i>
     </button>
 
     <!-- === SCRIPTS === -->

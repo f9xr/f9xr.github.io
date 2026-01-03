@@ -75,7 +75,6 @@
         /* @font-face removed */
 
         body {
-            background-color: #212529;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -160,6 +159,14 @@
 </head>
 
 <body class="text-bright-snow font-sans selection:bg-accent-blue selection:text-white">
+    <div class="fixed inset-0 -z-50 h-full w-full bg-black">
+        <div
+            class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        </div>
+        <div
+            class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]">
+        </div>
+    </div>
 
     <!-- Scroll Progress Indicator -->
     <div id="scroll-progress"></div>
@@ -500,7 +507,7 @@
 
 
         <!-- === CLIENT INTAKE FORM / PROJECT BRIEF SECTION === -->
-        <section id="intake" class="py-32 px-6 bg-[#212529] relative overflow-hidden">
+        <section id="intake" class="py-32 px-6 relative overflow-hidden">
 
             <!-- Background Ambient Glows (Brand Alignment) -->
             <div
@@ -614,7 +621,7 @@
 
 
         <!-- === BOOKING / STRATEGY SESSION SECTION === -->
-        <section id="book" class="py-32 px-6 bg-[#212529] relative overflow-hidden">
+        <section id="book" class="py-32 px-6 relative overflow-hidden">
             <!-- Background visual logic -->
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-20">
                 <div class="absolute top-10 left-10 w-64 h-64 bg-accent-blue/20 rounded-full blur-[100px]"></div>
@@ -723,7 +730,7 @@
     </main>
 
     <!-- === FOOTER === -->
-    <footer class="bg-[#212529] pt-20 no-print overflow-hidden">
+    <footer class="pt-20 no-print overflow-hidden">
 
         <!-- 1. Top Marquee Ticker (Brand Identity) -->
         <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20">
@@ -893,8 +900,8 @@
 
     <!-- === BACK TO TOP === -->
     <button id="btt"
-        class="fixed bottom-8 right-8 w-14 h-14 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-all shadow-2xl">
-        <i class="fas fa-arrow-up text-xl"></i>
+        class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl">
+        <i class="fas fa-arrow-up text-sm"></i>
     </button>
 
     <!-- === SCRIPTS === -->
