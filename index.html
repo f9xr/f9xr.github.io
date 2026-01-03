@@ -443,7 +443,7 @@
                 <!-- Tagline Badge -->
                 <div class="flex justify-center mb-8 mt-10">
                     <button onclick="openVideoModal()"
-                        class="px-8 py-3 border border-accent-blue/30 bg-accent-blue/10 rounded-full uppercase tracking-widest text-base font-black text-accent-blue hover:bg-accent-blue hover:text-white transition-all flex items-center gap-4 group shadow-[0_0_50px_rgba(59,130,246,0.4)] hover:shadow-[0_0_80px_rgba(59,130,246,0.6)]">
+                        class="px-6 py-2 border border-accent-blue/30 bg-accent-blue/10 rounded-full uppercase tracking-widest text-base font-black text-accent-blue hover:bg-accent-blue hover:text-white transition-all flex items-center gap-4 group shadow-[0_0_50px_rgba(59,130,246,0.4)] hover:shadow-[0_0_80px_rgba(59,130,246,0.6)]">
                         <i class="fa-solid fa-play text-sm group-hover:scale-125 transition-transform"></i>
                         Watch: What We Do?
                     </button>
@@ -802,7 +802,7 @@
 
         <!-- === SMART VIDEO MODAL === -->
         <div id="videoModal" onclick="closeOnOverlay(event)"
-            class="fixed inset-0 z-[5000] hidden items-center justify-center p-4 md:p-12 bg-carbon-black/95 backdrop-blur-[30px]">
+            class="fixed inset-0 z-[5000] hidden items-center justify-center p-4 md:p-12 bg-black/40 backdrop-blur-[30px]">
 
             <div
                 class="relative w-full max-w-5xl aspect-video bg-black rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
@@ -2477,24 +2477,35 @@
                             <label
                                 class="text-[10px] font-black uppercase tracking-widest text-iron-grey ml-4 italic">Full
                                 Name</label>
-                            <input type="text" name="name" required placeholder="Ex: John Doe"
-                                class="w-full bg-carbon-black border border-white/5 p-5 md:p-6 rounded-2xl md:rounded-3xl outline-none focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/10 transition-all text-base md:text-lg font-bold placeholder:opacity-20 text-white">
+                            <div class="relative">
+                                <i
+                                    class="fa-solid fa-user absolute left-6 top-1/2 -translate-y-1/2 text-platinum/50 text-lg"></i>
+                                <input type="text" name="name" required placeholder="Ex: John Doe"
+                                    class="w-full bg-carbon-black border border-white/5 p-5 md:p-6 pl-16 md:pl-16 rounded-2xl md:rounded-3xl outline-none focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/10 transition-all text-base md:text-lg font-bold placeholder:opacity-20 text-white">
+                            </div>
                         </div>
 
                         <div class="space-y-2">
                             <label
                                 class="text-[10px] font-black uppercase tracking-widest text-iron-grey ml-4 italic">Email
                                 Address</label>
-                            <input type="email" name="email" required placeholder="Ex: john@brand.com"
-                                class="w-full bg-carbon-black border border-white/5 p-5 md:p-6 rounded-2xl md:rounded-3xl outline-none focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/10 transition-all text-base md:text-lg font-bold placeholder:opacity-20 text-white">
+                            <div class="relative">
+                                <i
+                                    class="fa-solid fa-envelope absolute left-6 top-1/2 -translate-y-1/2 text-platinum/50 text-lg"></i>
+                                <input type="email" name="email" required placeholder="Ex: john@brand.com"
+                                    class="w-full bg-carbon-black border border-white/5 p-5 md:p-6 pl-16 md:pl-16 rounded-2xl md:rounded-3xl outline-none focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/10 transition-all text-base md:text-lg font-bold placeholder:opacity-20 text-white">
+                            </div>
                         </div>
 
                         <div class="sm:col-span-2 space-y-2">
                             <label
                                 class="text-[10px] font-black uppercase tracking-widest text-iron-grey ml-4 italic">Project
                                 Brief</label>
-                            <textarea name="message" required rows="4" placeholder="Briefly describe your vision..."
-                                class="w-full bg-carbon-black border border-white/5 p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] outline-none focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/10 transition-all text-base md:text-lg font-bold placeholder:opacity-20 resize-none text-white"></textarea>
+                            <div class="relative">
+                                <i class="fa-solid fa-comment absolute left-6 top-6 text-platinum/50 text-lg"></i>
+                                <textarea name="message" required rows="4" placeholder="Briefly describe your vision..."
+                                    class="w-full bg-carbon-black border border-white/5 p-6 md:p-8 pl-16 md:pl-16 rounded-[2rem] md:rounded-[2.5rem] outline-none focus:border-accent-blue focus:ring-4 focus:ring-accent-blue/10 transition-all text-base md:text-lg font-bold placeholder:opacity-20 resize-none text-white"></textarea>
+                            </div>
                         </div>
 
                         <div class="sm:col-span-2 pt-4">
@@ -2656,7 +2667,7 @@
 
 
         <!-- ========================================
-             SECTION 09: FAQ (Moved)
+             SECTION 09: FAQ 
              ======================================== -->
         <!-- === ADVANCED PRICING SECTION === -->
         <section class="py-32 px-6 max-w-4xl mx-auto" id="faq">
@@ -2791,7 +2802,7 @@
 
     </main>
 
-    <footer class="pt-20 no-print overflow-hidden bg-black/90 backdrop-blur-xl border-t border-white/10">
+    <footer class="pt-0 no-print overflow-hidden bg-black/90 backdrop-blur-xl border-t border-white/10">
         <!-- ========================================
          SECTION 13: FOOTER
          ======================================== -->
