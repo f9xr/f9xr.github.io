@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://f9xr.github.io/about.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://fast.wistia.com/embed/medias/0aq84xo01v/swatch</video:thumbnail_loc>
+      <video:title>What is F9XR Team? - Digital Growth Engine</video:title>
+      <video:description>An introduction to F9XR Team, explaining how we transform standard websites into digital growth engines through performance, security, and AI-driven logic.</video:description>
+      <video:player_loc>https://fast.wistia.com/embed/iframe/0aq84xo01v</video:player_loc>
+      <video:duration>450</video:duration>
+      <video:publication_date>2026-01-01T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:uploader info="https://f9xr.github.io/about.html">F9XR Team</video:uploader>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+</urlset>

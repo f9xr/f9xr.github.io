@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Insights Hub | F9XR Team</title>
+    <meta name="description"
+        content="Explore our core pillars of digital excellence: Web Architecture, Advanced SEO, and Strategic Branding.">
+    <meta name="robots" content="index, follow">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'carbon-black': '#212529', 'bright-snow': '#f8f9fa', 'platinum': '#e9ecef', 'accent-blue': '#3b82f6' },
+                    fontFamily: { sans: ['Montserrat', 'sans-serif'], },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        .glass-header {
+            background: rgba(33, 37, 41, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hub-card {
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .hub-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-bright-snow font-sans">
+
+    <!-- Background -->
+    <div class="fixed inset-0 -z-50 h-full w-full bg-black">
+        <div
+            class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        </div>
+        <div
+            class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]">
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed top-6 left-0 right-0 z-[5000] px-4">
+        <nav class="glass-header max-w-6xl mx-auto rounded-full px-6 py-3 flex justify-between items-center shadow-xl">
+            <a href="/" class="text-xl font-black tracking-tighter uppercase text-white">F9XR <span
+                    class="text-xs font-bold opacity-80 ml-0.5">Team</span></a>
+            <div class="hidden md:flex gap-6 text-xs font-bold uppercase tracking-widest text-platinum/70">
+                <a href="/about.html" class="hover:text-accent-blue transition-colors">About</a>
+                <a href="/services.html" class="hover:text-accent-blue transition-colors">Services</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-40 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <span
+                    class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block animate-pulse">Knowledge
+                    Base</span>
+                <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-6 leading-none uppercase">Digital <span
+                        class="text-transparent"
+                        style="-webkit-text-stroke: 1px #fff; color: transparent;">Nexus.</span></h1>
+                <p class="text-xl max-w-2xl mx-auto text-platinum/60 italic">Central hub for our core methodologies,
+                    technical research, and strategic frameworks.</p>
+            </div>
+
+            <!-- Hub Sections -->
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Pillar 1: Web Architecture -->
+                <div class="col-span-1 space-y-4">
+                    <div class="p-8 rounded-[2rem] hub-card h-full">
+                        <i class="fas fa-cubes text-4xl text-accent-blue mb-6"></i>
+                        <h2 class="text-2xl font-black uppercase tracking-tighter mb-4">Web Architecture</h2>
+                        <p class="text-sm text-platinum/60 mb-8 leading-relaxed">Deep dives into building scalable,
+                            high-performance web applications using modern stacks.</p>
+
+                        <ul class="space-y-3">
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-xs text-accent-blue group-hover:translate-x-1 transition-transform"></i>
+                                <a href="/services.html" class="font-bold hover:text-accent-blue text-sm">Full-Stack
+                                    Development</a>
+                            </li>
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-xs text-accent-blue group-hover:translate-x-1 transition-transform"></i>
+                                <a href="/portfolio.html" class="font-bold hover:text-accent-blue text-sm">Case Studies:
+                                    Performance</a>
+                            </li>
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-xs text-accent-blue group-hover:translate-x-1 transition-transform"></i>
+                                <a href="/about.html#tech" class="font-bold hover:text-accent-blue text-sm">The F9XR
+                                    Engine</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: SEO & Growth -->
+                <div class="col-span-1 space-y-4">
+                    <div class="p-8 rounded-[2rem] hub-card h-full">
+                        <i class="fas fa-chart-line text-4xl text-green-500 mb-6"></i>
+                        <h2 class="text-2xl font-black uppercase tracking-tighter mb-4">SEO & Growth</h2>
+                        <p class="text-sm text-platinum/60 mb-8 leading-relaxed">Strategies for domination in search
+                            engines, local maps, and organic traffic acquisition.</p>
+
+                        <ul class="space-y-3">
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-green-500 group-hover:translate-x-1 transition-transform"></i>
+                                <a href="/services.html#seo" class="font-bold hover:text-green-500 text-sm">Technical
+                                    SEO Audits</a>
+                            </li>
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-green-500 group-hover:translate-x-1 transition-transform"></i>
+                                <a href="/services.html#gmb" class="font-bold hover:text-green-500 text-sm">Google Maps
+                                    (GMB) Optimization</a>
+                            </li>
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-green-500 group-hover:translate-x-1 transition-transform"></i>
+                                <a href="/llms.txt" class="font-bold hover:text-green-500 text-sm">AI Indexing
+                                    (LLMs)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: E-E-A-T & Authority -->
+                <div class="col-span-1 space-y-4">
+                    <div class="p-8 rounded-[2rem] hub-card h-full">
+                        <i class="fas fa-shield-alt text-4xl text-orange-500 mb-6"></i>
+                        <h2 class="text-2xl font-black uppercase tracking-tighter mb-4">Trust & Authority</h2>
+                        <p class="text-sm text-platinum/60 mb-8 leading-relaxed">Establishing credibility through
+                            transparent practices, expert bios, and verifiably successful outcomes.</p>
+
+                        <ul class="space-y-3">
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-orange-500 group-hover:translate-x-1 transition-transform"></i>
+                                <a href="/expert-bio.html" class="font-bold hover:text-orange-500 text-sm">Meet our
+                                    Team</a>
+                            </li>
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-orange-500 group-hover:translate-x-1 transition-transform"></i>
+                                <a href="/about.html#deck" class="font-bold hover:text-orange-500 text-sm">Strategic
+                                    Blueprints</a>
+                            </li>
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-orange-500 group-hover:translate-x-1 transition-transform"></i>
+                                <a href="/agreement.html" class="font-bold hover:text-orange-500 text-sm">Service
+                                    Standards</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- === FOOTER === -->
+    <footer class="pt-20 no-print overflow-hidden bg-black/90 backdrop-blur-xl border-t border-white/10">
+
+        <!-- 1. Top Marquee Ticker (Brand Identity) -->
+        <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20">
+            <div class="flex whitespace-nowrap animate-marquee">
+                <div
+                    class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">
+                    <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <!-- Repeated for infinite scroll -->
+                    <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- 2. Large CTA Header (Reference Image Style) -->
+            <div
+                class="flex flex-col md:flex-row justify-between items-center pb-16 mb-16 border-b border-white/5 gap-8 reveal">
+                <div class="text-center md:text-left">
+                    <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
+                        Let's Build <br class="hidden md:block"> <span class="text-stroke text-transparent"
+                            style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span>
+                    </h2>
+                </div>
+                <a href="/contact.html"
+                    class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">
+                    Hire Team <i
+                        class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
+                </a>
+            </div>
+
+            <!-- 3. Main Navigation Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-24">
+
+                <!-- Branding & Github -->
+                <div class="col-span-2 space-y-8">
+                    <div>
+                        <h3 class="text-4xl font-black mb-4 tracking-tighter italic uppercase">F9XR TEAM.</h3>
+                        <p class="text-lg text-platinum/50 leading-relaxed max-w-sm">
+                            Global digital studio crafting high-end experiences for growth-focused brands.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://github.com/f9xr/f9xr.github.io" target="_blank"
+                            class="bg-white/5 px-5 py-2.5 rounded-xl border border-white/5 font-bold hover:bg-white/10 transition-colors flex items-center gap-3 text-xs uppercase tracking-widest">
+                            <i class="fab fa-github"></i> View Open Source
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Page Navigation -->
+                <div class="space-y-8">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Navigation</h4>
+                    <ul class="space-y-4 font-bold text-lg text-platinum/70">
+                        <li><a href="/about.html" class="hover:text-accent-blue transition-colors">About Us</a></li>
+                        <li><a href="/services.html" class="hover:text-accent-blue transition-colors">Services</a></li>
+                        <li><a href="/portfolio.html" class="hover:text-accent-blue transition-colors">Portfolio</a>
+                        </li>
+                        <li><a href="/contact.html" class="hover:text-accent-blue transition-colors">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links (New Section) -->
+                <div class="space-y-8">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Transparency</h4>
+                    <ul class="space-y-4 font-bold text-sm text-platinum/60">
+                        <li><a href="/agreement.html"
+                                class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Service
+                                Agreement</a></li>
+                        <li><a href="/terms.html"
+                                class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Terms
+                                of Service</a></li>
+                        <li><a href="/privacy.html"
+                                class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Privacy
+                                Policy</a></li>
+                        <li><a href="/shipping.html"
+                                class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Shipping
+                                Policy</a></li>
+                        <li><a href="/refund.html"
+                                class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Refund
+                                Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- The Team -->
+                <div class="space-y-8">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">The Architects</h4>
+                    <ul class="space-y-4 font-bold text-sm text-platinum/60">
+                        <li><a href="https://inakm.github.io" target="_blank"
+                                class="hover:text-accent-blue transition-colors flex items-center justify-between group">AKM
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-0 group-hover:opacity-100"></i></a>
+                        </li>
+                        <li><a href="https://aryansh.site" target="_blank"
+                                class="hover:text-accent-blue transition-colors flex items-center justify-between group">Aryansh
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-0 group-hover:opacity-100"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. Bottom Copyright Bar -->
+            <!-- Giant Brand Text -->
+            <div class="relative py-24 overflow-hidden select-none pointer-events-none opacity-60">
+                <h1 class="text-[12vw] font-black text-center leading-none tracking-tighter uppercase text-transparent translate-y-8 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+                    style="-webkit-text-stroke: 1.5px rgba(255,255,255,0.7);">
+                    F9XR TEAM
+                </h1>
+                <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#212529] to-transparent"></div>
+            </div>
+
+            <div
+                class="py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+                <div class="space-y-2">
+                    <p class="font-bold text-platinum/40 text-sm italic">&copy; 2025 F9XR Team. Handcrafted with
+                        Precision Engineering.</p>
+                    <div
+                        class="flex justify-center md:justify-start gap-6 text-[10px] font-black uppercase tracking-[0.2em] text-iron-grey">
+                        <a href="https://instagram.com/f9xrteam" class="hover:text-pink-500">Instagram</a>
+                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="hover:text-green-500">WhatsApp</a>
+                        <a href="mailto:tontufytservices@gmail.com" class="hover:text-accent-blue">Email Support</a>
+                    </div>
+                </div>
+
+                <div class="flex gap-8 font-black tracking-widest uppercase text-[10px]">
+                    <span class="flex items-center gap-2 italic text-iron-grey">Remote Global <i
+                            class="fa-solid fa-globe text-accent-blue"></i></span>
+                    <span
+                        class="flex items-center gap-2 italic text-white underline decoration-accent-blue decoration-2">EST.
+                        2024</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ticker CSS Animation (Add to your global styles) -->
+        <style>
+            @keyframes marquee {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .animate-marquee {
+                display: flex;
+                animation: marquee 30s linear infinite;
+            }
+
+            .animate-marquee:hover {
+                animation-play-state: paused;
+            }
+        </style>
+    </footer>
+</body>
+
+</html>

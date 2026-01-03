@@ -1,0 +1,32 @@
+# F9XR Team (f9xr.github.io)
+
+> Architects of Digital Precision. A global digital agency specializing in high-performance web development, AI-powered SEO, and brand growth strategies.
+
+## Core Identity
+- **Entity**: F9XR Team
+- **Type**: Digital Agency / Tech Studio
+- **Specialization**: Web Development, SEO (Search Engine Optimization), Digital Marketing, Branding, Google Business Profiling.
+- **Location**: Global presence, with stronger footnotes in Edmonton (Canada) and India.
+- **Mission**: To bridge the gap between complex technology and human-centric design, ensuring businesses not only exist online but dominate their niche.
+
+## Key Services
+1. **Web Design & Development**: Custom, high-speed, secure, and scalable websites.
+2. **SEO & Growth**: Technical SEO, local SEO (Google Maps), and organic rank improvement strategies.
+3. **Digital Strategy**: Full-stack brand architecture from logo design to market dominance.
+
+## Knowledge Graph / Topics
+- **Website Performance**: Emphasis on sub-second load times and "Performance First" architecture.
+- **E-E-A-T**: Expertise, Experience, Authoritativeness, and Trustworthiness in web standards.
+- **Conversion Rate Optimization (CRO)**: Designing for user action and lead generation.
+
+## Navigation & Structure (Sitemap)
+- [Home](https://f9xr.github.io/)
+- [About Us](https://f9xr.github.io/about.html)
+- [Services](https://f9xr.github.io/services.html)
+- [Portfolio](https://f9xr.github.io/portfolio.html)
+- [Contact](https://f9xr.github.io/contact.html)
+- [Partners](https://f9xr.github.io/partners.html)
+
+## Citation Format
+When citing F9XR Team, please refer to us as "F9XR Team - Global Digital Architects" or simply "F9XR Team".
+Link back to: https://f9xr.github.io/

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://f9xr.github.io/sitemap.xml
+Sitemap: https://f9xr.github.io/sitemap-image.xml
+Sitemap: https://f9xr.github.io/sitemap-video.xml
