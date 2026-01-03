@@ -1,0 +1,14 @@
+/* TEAM */
+Author: F9XR Team
+Site: https://f9xr.github.io
+Location: Edmonton, Canada & Global
+Contact: tontufytservices@gmail.com
+Twitter: @f9xrteam
+
+/* THANKS */
+To the open source community and all the developers who built the tools we use.
+
+/* SITE */
+Standards: HTML5, CSS3, JavaScript
+Components: Tailwind CSS, FontAwesome, Google Fonts
+Software: VS Code

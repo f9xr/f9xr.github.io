@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <rdf:Description rdf:about="https://f9xr.github.io/">
+    <dc:title>F9XR Team</dc:title>
+    <dc:creator>F9XR Team</dc:creator>
+    <dc:subject>Web Development</dc:subject>
+    <dc:subject>Digital Agency</dc:subject>
+    <dc:subject>SEO</dc:subject>
+    <dc:description>Architects of Digital Precision. A global digital agency specializing in high-performance web development and AI-powered SEO.</dc:description>
+    <dc:publisher>F9XR Team</dc:publisher>
+    <dc:date>2026-01-03</dc:date>
+    <dc:type>InteractiveResource</dc:type>
+    <dc:format>text/html</dc:format>
+    <dc:identifier>https://f9xr.github.io/</dc:identifier>
+    <dc:language>en</dc:language>
+    <dc:rights>Copyright 2026 F9XR Team</dc:rights>
+  </rdf:Description>
+</rdf:RDF>

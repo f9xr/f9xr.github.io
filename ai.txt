@@ -1,0 +1,10 @@
+User-Agent: *
+Allow: /summarize
+Disallow: /images/training
+Disallow: /private-data/
+
+# Defined capabilities for 2026 compliant agents
+Capability: summarization
+Capability: citation
+Restriction: no-style-transfer
+Restriction: no-image-generation-training

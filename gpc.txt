@@ -1,0 +1,5 @@
+GPC: true
+Status: Compliant
+Last-Updated: 2026-01-03
+Scope: Global
+Link: https://f9xr.github.io/.well-known/gpc.json
