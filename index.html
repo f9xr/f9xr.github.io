@@ -18,10 +18,10 @@
     <link rel="canonical" href="https://f9xr.github.io/">
     <meta name="google-site-verification" content="eUs3gO62-qye1PfAW79eLM5uws1KN7DXKVM8bjPADLM" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="manifest" href="/assets/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
 
     <!-- === OPEN GRAPH / FACEBOOK / LINKEDIN === -->
     <meta property="og:type" content="website">
@@ -345,8 +345,7 @@
             class="glass-nav max-w-7xl mx-auto rounded-full px-6 py-3 flex justify-between items-center shadow-2xl border border-white/5 relative bg-carbon-black/50 backdrop-blur-xl">
 
             <!-- 1. Brand Logo -->
-            <a href="https://f9xr.github.io/" class="flex items-center gap-2 group relative z-[5001]"
-                aria-label="F9XR Home">
+            <a href="index.html" class="flex items-center gap-2 group relative z-[5001]" aria-label="F9XR Home">
                 <span class="text-xl font-black tracking-tighter uppercase text-white">F9XR <span
                         class="text-xs font-bold opacity-80 ml-0.5 text-accent-blue">Team</span></span>
             </a>
@@ -354,10 +353,13 @@
             <!-- 2. Desktop Navigation (Centered) -->
             <div
                 class="hidden lg:flex absolute left-1/2 -translate-x-1/2 gap-10 font-bold text-xs tracking-widest uppercase text-platinum/60">
-                <a href="#about" class="hover:text-white transition-colors hover:scale-105 transform">About</a>
-                <a href="#services" class="hover:text-white transition-colors hover:scale-105 transform">Services</a>
-                <a href="#portfolio" class="hover:text-white transition-colors hover:scale-105 transform">Works</a>
-                <a href="/contact.html"
+                <a href="pages/about.html"
+                    class="hover:text-white transition-colors hover:scale-105 transform">About</a>
+                <a href="pages/services.html"
+                    class="hover:text-white transition-colors hover:scale-105 transform">Services</a>
+                <a href="pages/portfolio.html"
+                    class="hover:text-white transition-colors hover:scale-105 transform">Works</a>
+                <a href="pages/contact.html"
                     class="text-white hover:text-accent-blue transition-colors hover:scale-105 transform">Hire Us</a>
             </div>
 
@@ -370,7 +372,7 @@
                 </a>
 
                 <!-- Primary Action (Get Started) -->
-                <a href="/contact.html"
+                <a href="pages/contact.html"
                     class="bg-white text-carbon-black px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95">
                     Get Started
                 </a>
@@ -396,13 +398,13 @@
                 <span
                     class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>
 
-                <a href="#about" onclick="toggleMobileMenu()"
+                <a href="pages/about.html" onclick="toggleMobileMenu()"
                     class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>
-                <a href="#services" onclick="toggleMobileMenu()"
+                <a href="pages/services.html" onclick="toggleMobileMenu()"
                     class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>
-                <a href="#portfolio" onclick="toggleMobileMenu()"
+                <a href="pages/portfolio.html" onclick="toggleMobileMenu()"
                     class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>
-                <a href="/contact.html" onclick="toggleMobileMenu()"
+                <a href="pages/contact.html" onclick="toggleMobileMenu()"
                     class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire
                     Team</a>
             </div>
@@ -467,7 +469,7 @@
                 <!-- CTA Actions -->
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
                     <!-- Primary -->
-                    <a href="/contact.html"
+                    <a href="pages/contact.html"
                         class="group bg-bright-snow text-carbon-black px-10 py-5 rounded-full font-black text-lg uppercase tracking-wider hover:bg-white hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] flex items-center gap-3">
                         Get Started Today
                         <i
@@ -892,7 +894,7 @@
                                 </ul>
 
                                 <div class="mt-12 pt-10 border-t border-white/5">
-                                    <a href="/contact" class="flex items-center justify-between group/link">
+                                    <a href="pages/contact.html" class="flex items-center justify-between group/link">
                                         <span
                                             class="text-lg font-black uppercase tracking-tighter italic text-accent-blue">Close
                                             the Gap Now</span>
@@ -1130,7 +1132,7 @@
 
                 <!-- NEW: High-Conversion Services Button -->
                 <div class="flex justify-center reveal px-4">
-                    <a href="/services.html"
+                    <a href="pages/services.html"
                         class="group relative w-full sm:w-auto inline-flex items-center justify-center gap-6 bg-transparent border-2 border-white/20 text-white px-8 md:px-12 py-5 md:py-6 rounded-full font-black text-lg md:text-xl overflow-hidden transition-all duration-500 hover:bg-white hover:text-carbon-black hover:border-white shadow-2xl active:scale-95"
                         aria-label="Explore all digital services offered by F9XR Team">
                         <span class="uppercase tracking-widest italic">View Full Services</span>
@@ -1209,7 +1211,7 @@
                                             We analyze your brand DNA, technical debt, and competitor landscape to find
                                             exactly where you are losing global visibility.
                                         </p>
-                                        <a href="/contact.html"
+                                        <a href="pages/contact.html"
                                             class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
                                             Book Free Audit <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
@@ -1269,7 +1271,7 @@
                                             We map out user psychology, conversion funnels, and modern aesthetics to
                                             ensure your digital product converts browsers into high-paying clients.
                                         </p>
-                                        <a href="/contact.html"
+                                        <a href="pages/contact.html"
                                             class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
                                             Review Framework <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
@@ -1329,7 +1331,7 @@
                                             Our engineers translate designs into clean, scalable code integrated with
                                             proprietary AI logic for automated engagement and security.
                                         </p>
-                                        <a href="/contact.html"
+                                        <a href="pages/contact.html"
                                             class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
                                             View Tech Stack <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
@@ -1389,7 +1391,7 @@
                                             Post-launch, we focus on rigorous SEO indexing, Core Web Vital tuning, and
                                             performance monitoring to ensure long-term ROI.
                                         </p>
-                                        <a href="/contact.html"
+                                        <a href="pages/contact.html"
                                             class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
                                             Scale My Business <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
@@ -1488,7 +1490,7 @@
                     </div>
 
                     <!-- New About Button -->
-                    <a href="/about.html"
+                    <a href="pages/about.html"
                         class="group relative inline-flex items-center gap-4 bg-transparent border-2 border-accent-blue text-white px-10 py-5 rounded-full font-black text-xl overflow-hidden transition-all duration-300 hover:bg-accent-blue shadow-lg shadow-blue-500/10"
                         aria-label="Learn more about F9XR Team">
                         <span>The F9XR Story</span>
@@ -1814,7 +1816,7 @@
                         </h2>
                     </div>
 
-                    <a href="/projects.html"
+                    <a href="pages/projects.html"
                         class="group flex items-center gap-4 text-white font-black uppercase tracking-widest text-[11px] border-b-2 border-accent-blue/30 pb-2 hover:border-accent-blue transition-all"
                         aria-label="View all F9XR Team projects">
                         View Full Portfolio <i
@@ -1960,7 +1962,7 @@
                         <h4 class="text-2xl font-black uppercase italic tracking-tighter mb-4">Plus 40+ More.</h4>
                         <p class="text-platinum/70 mb-8 italic text-sm font-medium">We've architected over 40 digital
                             portals, news networks, and AI tools globally.</p>
-                        <a href="/projects.html"
+                        <a href="pages/projects.html"
                             class="bg-bright-snow text-carbon-black px-8 py-4 rounded-full font-black text-xs tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-xl">
                             Explore Our Projects
                         </a>
@@ -2287,7 +2289,7 @@
                             </li>
                         </ul>
 
-                        <a href="/contact.html"
+                        <a href="pages/contact.html"
                             class="block text-center border-2 border-white py-6 rounded-full font-black text-xl hover:bg-white hover:text-carbon-black transition-all shadow-xl uppercase tracking-tighter italic">
                             Get a Quote
                         </a>
@@ -2335,7 +2337,7 @@
                             </li>
                         </ul>
 
-                        <a href="/contact"
+                        <a href="pages/contact.html"
                             class="group block text-center bg-white text-carbon-black py-7 rounded-full font-black text-2xl transition-all shadow-2xl uppercase tracking-tighter italic overflow-hidden relative">
                             <span class="relative z-10">Hire Us Now</span>
                             <div
@@ -2542,7 +2544,7 @@
                 <!-- Secondary CTA -->
                 <div class="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-white/5 text-center">
                     <p class="text-sm md:text-base text-platinum/40 font-bold italic">Need more details?
-                        <a href="/contact.html"
+                        <a href="pages/contact.html"
                             class="text-bright-snow underline underline-offset-4 decoration-accent-blue hover:text-accent-blue transition-colors">Visit
                             full Contact Portal</a>
                     </p>
@@ -2838,7 +2840,7 @@
                             style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span>
                     </h2>
                 </div>
-                <a href="/contact.html"
+                <a href="pages/contact.html"
                     class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">
                     Hire Team <i
                         class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
@@ -2868,11 +2870,14 @@
                 <div class="space-y-8">
                     <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Navigation</h4>
                     <ul class="space-y-4 font-bold text-lg text-platinum/70">
-                        <li><a href="/about.html" class="hover:text-accent-blue transition-colors">About Us</a></li>
-                        <li><a href="/services.html" class="hover:text-accent-blue transition-colors">Services</a></li>
-                        <li><a href="/portfolio.html" class="hover:text-accent-blue transition-colors">Portfolio</a>
+                        <li><a href="pages/about.html" class="hover:text-accent-blue transition-colors">About Us</a>
                         </li>
-                        <li><a href="/contact.html" class="hover:text-accent-blue transition-colors">Contact Us</a>
+                        <li><a href="pages/services.html" class="hover:text-accent-blue transition-colors">Services</a>
+                        </li>
+                        <li><a href="pages/portfolio.html"
+                                class="hover:text-accent-blue transition-colors">Portfolio</a>
+                        </li>
+                        <li><a href="pages/contact.html" class="hover:text-accent-blue transition-colors">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -2881,19 +2886,19 @@
                 <div class="space-y-8">
                     <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Transparency</h4>
                     <ul class="space-y-4 font-bold text-sm text-platinum/60">
-                        <li><a href="/agreement.html"
+                        <li><a href="legals/agreement.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Service
                                 Agreement</a></li>
-                        <li><a href="/terms.html"
+                        <li><a href="legals/terms.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Terms
                                 of Service</a></li>
-                        <li><a href="/privacy.html"
+                        <li><a href="legals/privacy.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Privacy
                                 Policy</a></li>
-                        <li><a href="/shipping.html"
+                        <li><a href="legals/shipping.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Shipping
                                 Policy</a></li>
-                        <li><a href="/refund.html"
+                        <li><a href="legals/refund.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Refund
                                 Policy</a></li>
                     </ul>

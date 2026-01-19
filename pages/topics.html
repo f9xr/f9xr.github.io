@@ -4,37 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitemap | F9XR Team</title>
-    <meta name="description" content="Navigate through all pages of the F9XR Team website.">
+    <title>Digital Insights Hub | F9XR Team</title>
+    <meta name="description"
+        content="Explore our core pillars of digital excellence: Web Architecture, Advanced SEO, and Strategic Branding.">
     <meta name="robots" content="index, follow">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
 
-    <!-- === FONTS & ICONS === -->
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- === TAILWIND CONFIG === -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        'carbon-black': '#212529',
-                        'bright-snow': '#f8f9fa',
-                        'platinum': '#e9ecef',
-                        'iron-grey': '#495057',
-                        'gunmetal': '#343a40',
-                        'accent-blue': '#3b82f6'
-                    },
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                    },
+                    colors: { 'carbon-black': '#212529', 'bright-snow': '#f8f9fa', 'platinum': '#e9ecef', 'accent-blue': '#3b82f6' },
+                    fontFamily: { sans: ['Montserrat', 'sans-serif'], },
                 }
             }
         }
@@ -45,22 +37,28 @@
             overflow-x: hidden;
         }
 
-        .glass-nav {
+        .glass-header {
             background: rgba(33, 37, 41, 0.7);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .hover-card:hover {
-            transform: translateY(-5px);
+        .hub-card {
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .hub-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
             border-color: #3b82f6;
-            background: rgba(52, 58, 64, 0.6);
         }
     </style>
 </head>
 
 <body class="bg-black text-bright-snow font-sans">
-    <!-- Background -->
+
     <!-- Background -->
     <div class="fixed inset-0 -z-50 h-full w-full bg-black">
         <div
@@ -71,88 +69,128 @@
         </div>
     </div>
 
-    <!-- Header (Simplified) -->
+    <!-- Header -->
     <header class="fixed top-6 left-0 right-0 z-[5000] px-4">
-        <nav class="glass-nav max-w-6xl mx-auto rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
-            <a href="/" class="text-xl font-black tracking-tighter uppercase text-white">F9XR <span
+        <nav class="glass-header max-w-6xl mx-auto rounded-full px-6 py-3 flex justify-between items-center shadow-xl">
+            <a href="../index.html" class="text-xl font-black tracking-tighter uppercase text-white">F9XR <span
                     class="text-xs font-bold opacity-80 ml-0.5">Team</span></a>
-            <a href="/"
-                class="text-xs font-bold uppercase tracking-widest text-platinum/70 hover:text-white transition-colors">Back
-                directly to Home</a>
+            <div class="hidden md:flex gap-6 text-xs font-bold uppercase tracking-widest text-platinum/70">
+                <a href="about.html" class="hover:text-accent-blue transition-colors">About</a>
+                <a href="services.html" class="hover:text-accent-blue transition-colors">Services</a>
+            </div>
         </nav>
     </header>
 
-    <main class="pt-40 pb-20 px-6 min-h-screen">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-4 text-center">SITEMAP</h1>
-            <p class="text-center text-xl text-platinum/60 mb-20 italic">Overview of our digital architecture.</p>
+    <main class="pt-40 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <span
+                    class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block animate-pulse">Knowledge
+                    Base</span>
+                <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-6 leading-none uppercase">Digital <span
+                        class="text-transparent"
+                        style="-webkit-text-stroke: 1px #fff; color: transparent;">Nexus.</span></h1>
+                <p class="text-xl max-w-2xl mx-auto text-platinum/60 italic">Central hub for our core methodologies,
+                    technical research, and strategic frameworks.</p>
+            </div>
 
-            <div class="grid md:grid-cols-2 gap-10">
-                <!-- Main Pages -->
-                <div class="space-y-6">
-                    <h2
-                        class="text-xs font-black uppercase tracking-[0.3em] text-accent-blue border-b border-white/10 pb-4">
-                        Main Navigation</h2>
-                    <ul class="space-y-4">
-                        <li><a href="/"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold"><i
-                                    class="fas fa-home mr-3 text-accent-blue"></i> Home</a></li>
-                        <li><a href="/about.html"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold"><i
-                                    class="fas fa-users mr-3 text-accent-blue"></i> About Us</a></li>
-                        <li><a href="/services.html"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold"><i
-                                    class="fas fa-layer-group mr-3 text-accent-blue"></i> Services</a></li>
-                        <li><a href="/portfolio.html"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold"><i
-                                    class="fas fa-briefcase mr-3 text-accent-blue"></i> Portfolio / Works</a></li>
-                        <li><a href="/projects.html"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold"><i
-                                    class="fas fa-project-diagram mr-3 text-accent-blue"></i> Detailed Projects</a></li>
-                        <li><a href="/contact.html"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold"><i
-                                    class="fas fa-paper-plane mr-3 text-accent-blue"></i> Contact</a></li>
-                        <li><a href="/partners.html"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold"><i
-                                    class="fas fa-handshake mr-3 text-accent-blue"></i> Partners</a></li>
-                    </ul>
+            <!-- Hub Sections -->
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Pillar 1: Web Architecture -->
+                <div class="col-span-1 space-y-4">
+                    <div class="p-8 rounded-[2rem] hub-card h-full">
+                        <i class="fas fa-cubes text-4xl text-accent-blue mb-6"></i>
+                        <h2 class="text-2xl font-black uppercase tracking-tighter mb-4">Web Architecture</h2>
+                        <p class="text-sm text-platinum/60 mb-8 leading-relaxed">Deep dives into building scalable,
+                            high-performance web applications using modern stacks.</p>
+
+                        <ul class="space-y-3">
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-xs text-accent-blue group-hover:translate-x-1 transition-transform"></i>
+                                <a href="services.html" class="font-bold hover:text-accent-blue text-sm">Full-Stack
+                                    Development</a>
+                            </li>
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-xs text-accent-blue group-hover:translate-x-1 transition-transform"></i>
+                                <a href="portfolio.html" class="font-bold hover:text-accent-blue text-sm">Case Studies:
+                                    Performance</a>
+                            </li>
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-xs text-accent-blue group-hover:translate-x-1 transition-transform"></i>
+                                <a href="about.html#tech" class="font-bold hover:text-accent-blue text-sm">The F9XR
+                                    Engine</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- Legal & Support -->
-                <div class="space-y-6">
-                    <h2
-                        class="text-xs font-black uppercase tracking-[0.3em] text-accent-blue border-b border-white/10 pb-4">
-                        Legal & Support</h2>
-                    <ul class="space-y-4">
-                        <li><a href="/privacy.html"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold opacity-80"><i
-                                    class="fas fa-shield-alt mr-3 text-platinum/50"></i> Privacy Policy</a></li>
-                        <li><a href="/terms.html"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold opacity-80"><i
-                                    class="fas fa-gavel mr-3 text-platinum/50"></i> Terms of Service</a></li>
-                        <li><a href="/agreement.html"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold opacity-80"><i
-                                    class="fas fa-file-contract mr-3 text-platinum/50"></i> Service Agreement</a></li>
-                        <li><a href="/refund.html"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold opacity-80"><i
-                                    class="fas fa-undo mr-3 text-platinum/50"></i> Refund Policy</a></li>
-                        <li><a href="/shipping.html"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold opacity-80"><i
-                                    class="fas fa-shipping-fast mr-3 text-platinum/50"></i> Shipping Policy</a></li>
-                    </ul>
+                <!-- Pillar 2: SEO & Growth -->
+                <div class="col-span-1 space-y-4">
+                    <div class="p-8 rounded-[2rem] hub-card h-full">
+                        <i class="fas fa-chart-line text-4xl text-green-500 mb-6"></i>
+                        <h2 class="text-2xl font-black uppercase tracking-tighter mb-4">SEO & Growth</h2>
+                        <p class="text-sm text-platinum/60 mb-8 leading-relaxed">Strategies for domination in search
+                            engines, local maps, and organic traffic acquisition.</p>
 
-                    <h2
-                        class="text-xs font-black uppercase tracking-[0.3em] text-accent-blue border-b border-white/10 pb-4 mt-10">
-                        Resources</h2>
-                    <ul class="space-y-4">
-                        <li><a href="/llms.txt"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold font-mono text-sm"><i
-                                    class="fas fa-robot mr-3 text-green-500"></i> llms.txt (AI Reference)</a></li>
-                        <li><a href="/sitemap.xml"
-                                class="block p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all hover-card font-bold font-mono text-sm"><i
-                                    class="fas fa-sitemap mr-3 text-orange-500"></i> sitemap.xml</a></li>
-                    </ul>
+                        <ul class="space-y-3">
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-green-500 group-hover:translate-x-1 transition-transform"></i>
+                                <a href="services.html#seo" class="font-bold hover:text-green-500 text-sm">Technical
+                                    SEO Audits</a>
+                            </li>
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-green-500 group-hover:translate-x-1 transition-transform"></i>
+                                <a href="services.html#gmb" class="font-bold hover:text-green-500 text-sm">Google Maps
+                                    (GMB) Optimization</a>
+                            </li>
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-green-500 group-hover:translate-x-1 transition-transform"></i>
+                                <a href="../llms.txt" class="font-bold hover:text-green-500 text-sm">AI Indexing
+                                    (LLMs)</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- Pillar 3: E-E-A-T & Authority -->
+                <div class="col-span-1 space-y-4">
+                    <div class="p-8 rounded-[2rem] hub-card h-full">
+                        <i class="fas fa-shield-alt text-4xl text-orange-500 mb-6"></i>
+                        <h2 class="text-2xl font-black uppercase tracking-tighter mb-4">Trust & Authority</h2>
+                        <p class="text-sm text-platinum/60 mb-8 leading-relaxed">Establishing credibility through
+                            transparent practices, expert bios, and verifiably successful outcomes.</p>
+
+                        <ul class="space-y-3">
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-orange-500 group-hover:translate-x-1 transition-transform"></i>
+                                <a href="expert-bio.html" class="font-bold hover:text-orange-500 text-sm">Meet our
+                                    Team</a>
+                            </li>
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-orange-500 group-hover:translate-x-1 transition-transform"></i>
+                                <a href="about.html#deck" class="font-bold hover:text-orange-500 text-sm">Strategic
+                                    Blueprints</a>
+                            </li>
+                            <li class="group flex items-center gap-3">
+                                <i
+                                    class="fas fa-arrow-right text-orange-500 group-hover:translate-x-1 transition-transform"></i>
+                                <a href="../legals/agreement.html"
+                                    class="font-bold hover:text-orange-500 text-sm">Service
+                                    Standards</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
@@ -191,7 +229,7 @@
                             style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span>
                     </h2>
                 </div>
-                <a href="/contact.html"
+                <a href="contact.html"
                     class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">
                     Hire Team <i
                         class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
@@ -221,11 +259,11 @@
                 <div class="space-y-8">
                     <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Navigation</h4>
                     <ul class="space-y-4 font-bold text-lg text-platinum/70">
-                        <li><a href="/about.html" class="hover:text-accent-blue transition-colors">About Us</a></li>
-                        <li><a href="/services.html" class="hover:text-accent-blue transition-colors">Services</a></li>
-                        <li><a href="/portfolio.html" class="hover:text-accent-blue transition-colors">Portfolio</a>
+                        <li><a href="about.html" class="hover:text-accent-blue transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-accent-blue transition-colors">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-accent-blue transition-colors">Portfolio</a>
                         </li>
-                        <li><a href="/contact.html" class="hover:text-accent-blue transition-colors">Contact Us</a>
+                        <li><a href="contact.html" class="hover:text-accent-blue transition-colors">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -234,19 +272,19 @@
                 <div class="space-y-8">
                     <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Transparency</h4>
                     <ul class="space-y-4 font-bold text-sm text-platinum/60">
-                        <li><a href="/agreement.html"
+                        <li><a href="../legals/agreement.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Service
                                 Agreement</a></li>
-                        <li><a href="/terms.html"
+                        <li><a href="../legals/terms.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Terms
                                 of Service</a></li>
-                        <li><a href="/privacy.html"
+                        <li><a href="../legals/privacy.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Privacy
                                 Policy</a></li>
-                        <li><a href="/shipping.html"
+                        <li><a href="../legals/shipping.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Shipping
                                 Policy</a></li>
-                        <li><a href="/refund.html"
+                        <li><a href="../legals/refund.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Refund
                                 Policy</a></li>
                     </ul>

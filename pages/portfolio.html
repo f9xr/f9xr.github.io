@@ -6,26 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- === PRIMARY SEO META TAGS === -->
-    <title>Service Agreement | F9XR Team - Digital Agency</title>
-    <meta name="title" content="Service Agreement | F9XR Team">
+    <title>Portfolio | F9XR Team - Digital Masterpieces</title>
+    <meta name="title" content="Portfolio | F9XR Team">
     <meta name="description"
-        content="Official Terms and Service Agreement for F9XR Team. Transparency, Trust, and professional digital services.">
+        content="Explore the digital masterpieces crafted by F9XR Team. A showcase of high-performance websites, AI solutions, and brand architectures.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="F9XR Team">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="manifest" href="/assets/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <link rel="manifest" href="../assets/site.webmanifest">
 
     <!-- === SCHEMA MARKUP === -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "F9XR Team Service Agreement",
+      "name": "F9XR Team Portfolio",
+      "description": "Showcase of F9XR Team's digital projects and case studies.",
       "publisher": {
-        "@type": "ProfessionalService",
+        "@type": "Organization",
         "name": "F9XR Team",
         "url": "https://f9xr.github.io/"
       }
@@ -35,7 +36,7 @@
     <!-- === FONTS & ICONS === -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Montserrat with font-display: swap to prevent layout shifts -->
+    <!-- Montserrat strictly enforced with swap -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -63,26 +64,14 @@
     </script>
 
     <style type="text/css">
-        /* Performance: Prevent layout shifts */
+        /* Performance: Optimize font visibility */
         /* @font-face removed */
 
         body {
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Custom Scroll Progress */
-        #progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: linear-gradient(to right, #3b82f6, #f8f9fa);
-            z-index: 2000;
-            width: 0%;
-            transition: width 0.1s;
-        }
-
+        /* Floating Pill Design */
         .glass-nav {
             background: rgba(33, 37, 41, 0.7);
             backdrop-filter: blur(20px);
@@ -99,41 +88,107 @@
             transform: translateX(0);
         }
 
+        /* Reveal Animations */
         .reveal {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
         }
 
-        /* Mobile Optimization for Clause Cards */
-        @media (max-width: 640px) {
-            .clause-card {
-                padding: 1.5rem !important;
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px #f8f9fa;
+            color: transparent;
+        }
+
+        /* Progress Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            z-index: 2000;
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Maintenance Glow */
+        .glow-pulse {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+            animation: pulse-border 3s infinite;
+        }
+
+        @keyframes pulse-border {
+
+            0%,
+            100% {
+                border-color: rgba(59, 130, 246, 0.1);
             }
 
-            h1 {
+            50% {
+                border-color: rgba(59, 130, 246, 0.6);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-title {
                 font-size: 2.5rem !important;
             }
+
+            .pill-nav {
+                width: 95% !important;
+            }
         }
 
-        @media print {
-            .no-print {
-                display: none !important;
-            }
 
-            body {
-                background: white;
-                color: black;
-            }
 
-            .clause-card {
-                border: 1px solid #eee;
-                break-inside: avoid;
-            }
+        /* @font-face removed */
+
+        .glass-pill {
+            background: rgba(33, 37, 41, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Prevent Layout Shift on Header */
+        header {
+            min-height: 80px;
+        }
+
+        /* Mobile Menu Animation */
+        #mobile-overlay {
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
+        }
+
+        .nav-link-hover {
+            position: relative;
+        }
+
+        .nav-link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link-hover:hover::after {
+            width: 100%;
         }
     </style>
 </head>
 
-<body class="text-bright-snow font-sans leading-relaxed">
+<body
+    class="text-bright-snow font-sans leading-relaxed selection:bg-accent-blue selection:text-white flex flex-col min-h-screen">
     <div class="fixed inset-0 -z-50 h-full w-full bg-black">
         <div
             class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
@@ -143,7 +198,8 @@
         </div>
     </div>
 
-    <div id="progress-bar"></div>
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
 
     <!-- === ADVANCED RESPONSIVE HEADER === -->
     <header class="fixed top-6 left-0 right-0 z-[5000] px-4">
@@ -160,13 +216,14 @@
 
             <!-- 2. Desktop Navigation (Hidden on Mobile) -->
             <div class="hidden lg:flex gap-8 font-bold text-[10px] tracking-[0.2em] uppercase text-platinum/70">
-                <a href="/about.html"
+                <a href="about.html"
                     class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">About</a>
-                <a href="/services.html"
+                <a href="services.html"
                     class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Services</a>
-                <a href="/portfolio.html"
+                <a href="portfolio.html"
                     class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Works</a>
-                <a href="/contact.html" class="text-accent-blue hover:text-white transition-colors italic">Hire Us</a>
+                <a href="/pages/contact.html" class="text-accent-blue hover:text-white transition-colors italic">Hire
+                    Us</a>
             </div>
 
             <!-- 3. Header Actions -->
@@ -185,7 +242,7 @@
                 </button>
 
                 <!-- Desktop Hire Us Button (Visible on md+) -->
-                <a href="/contact.html"
+                <a href="contact.html"
                     class="bg-bright-snow text-carbon-black px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-lg">
                     Get Started
                 </a>
@@ -204,13 +261,13 @@
                 <span
                     class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>
 
-                <a href="/about.html" onclick="toggleMobileMenu()"
+                <a href="about.html" onclick="toggleMobileMenu()"
                     class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>
-                <a href="/services.html" onclick="toggleMobileMenu()"
+                <a href="services.html" onclick="toggleMobileMenu()"
                     class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>
-                <a href="/portfolio.html" onclick="toggleMobileMenu()"
+                <a href="portfolio.html" onclick="toggleMobileMenu()"
                     class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>
-                <a href="/contact.html" onclick="toggleMobileMenu()"
+                <a href="contact.html" onclick="toggleMobileMenu()"
                     class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire
                     Team</a>
             </div>
@@ -230,212 +287,166 @@
         </div>
     </header>
 
-    <main class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
 
         <!-- === HERO SECTION === -->
-        <section class="mb-20 reveal">
-            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block">Official Service
-                Agreement</span>
-            <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-tight">Legal <br> Understanding.
+        <section class="mb-24 reveal text-center md:text-left">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-6 block">Our Works</span>
+            <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-none mb-8 uppercase italic">
+                Digital <br> <span class="text-stroke text-transparent"
+                    style="-webkit-text-stroke: 1px #f8f9fa;">Masterpieces.</span>
             </h1>
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 py-8 border-y border-white/10">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-gunmetal flex items-center justify-center">
-                        <i class="fas fa-calendar-alt text-accent-blue"></i>
+            <p class="text-xl md:text-2xl text-platinum/60 font-medium italic leading-relaxed max-w-3xl">
+                A showcase of high-performance digital experiences, AI-integrated architectures, and brand-defining
+                designs crafted by the F9XR Team.
+            </p>
+        </section>
+
+        <!-- === PROJECT GALLERY === -->
+        <section class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-32">
+
+            <!-- Project 1: F9XR Team -->
+            <div class="group reveal">
+                <a href="https://f9xr.github.io/" target="_blank"
+                    class="block overflow-hidden rounded-[2.5rem] border border-white/10 relative">
+                    <div
+                        class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center backdrop-blur-sm">
+                        <span
+                            class="bg-accent-blue text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-xs transform translate-y-4 group-hover:translate-y-0 transition-transform">View
+                            Project</span>
                     </div>
-                    <div>
-                        <p class="text-[10px] uppercase tracking-widest text-iron-grey font-bold">Last Updated</p>
-                        <p id="current-date" class="font-bold text-lg">December 19, 2025</p>
-                    </div>
+                    <img src="../assets/screenshots/F9XRTeam.webp" alt="F9XR Team Official Site"
+                        class="w-full h-[400px] object-cover md:grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110">
+                </a>
+                <div class="mt-6">
+                    <h3 class="text-2xl font-black uppercase italic mb-2">F9XR Official</h3>
+                    <p class="text-platinum/50 text-sm font-bold tracking-widest uppercase">Digital Agency Platform</p>
                 </div>
-                <p class="text-platinum/50 font-medium max-w-md">Transparency and Trust are our core values. This
-                    document ensures a professional workflow for both parties.</p>
+            </div>
+
+            <!-- Project 2: Foil AI -->
+            <div class="group reveal delay-100">
+                <a href="https://foilai.in/" target="_blank"
+                    class="block overflow-hidden rounded-[2.5rem] border border-white/10 relative">
+                    <div
+                        class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center backdrop-blur-sm">
+                        <span
+                            class="bg-accent-blue text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-xs transform translate-y-4 group-hover:translate-y-0 transition-transform">View
+                            Project</span>
+                    </div>
+                    <img src="../assets/screenshots/FoilAI.webp" alt="Foil AI Platform"
+                        class="w-full h-[400px] object-cover md:grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110">
+                </a>
+                <div class="mt-6">
+                    <h3 class="text-2xl font-black uppercase italic mb-2">Foil AI</h3>
+                    <p class="text-platinum/50 text-sm font-bold tracking-widest uppercase">AI Image Generator Tool</p>
+                </div>
+            </div>
+
+            <!-- Project 3: Vro AI -->
+            <div class="group reveal delay-200">
+                <a href="http://vroai.in/" target="_blank"
+                    class="block overflow-hidden rounded-[2.5rem] border border-white/10 relative">
+                    <div
+                        class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center backdrop-blur-sm">
+                        <span
+                            class="bg-accent-blue text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-xs transform translate-y-4 group-hover:translate-y-0 transition-transform">View
+                            Project</span>
+                    </div>
+                    <img src="../assets/screenshots/VroAI.webp" alt="Vro AI Solution"
+                        class="w-full h-[400px] object-cover md:grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110">
+                </a>
+                <div class="mt-6">
+                    <h3 class="text-2xl font-black uppercase italic mb-2">Vro AI</h3>
+                    <p class="text-platinum/50 text-sm font-bold tracking-widest uppercase">Next-Gen AI & Automation
+                        Intelligence</p>
+                </div>
+            </div>
+
+            <!-- Project 4: Live Counter -->
+            <div class="group reveal">
+                <a href="#" target="_blank"
+                    class="block overflow-hidden rounded-[2.5rem] border border-white/10 relative">
+                    <div
+                        class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center backdrop-blur-sm">
+                        <span
+                            class="bg-accent-blue text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-xs transform translate-y-4 group-hover:translate-y-0 transition-transform">View
+                            Project</span>
+                    </div>
+                    <img src="../assets/screenshots/LiveCounter.webp" alt="Live Counter App"
+                        class="w-full h-[400px] object-cover md:grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110">
+                </a>
+                <div class="mt-6">
+                    <h3 class="text-2xl font-black uppercase italic mb-2">Live Counter</h3>
+                    <p class="text-platinum/50 text-sm font-bold tracking-widest uppercase">Live Counter Tool</p>
+                </div>
+            </div>
+
+            <!-- Project 5: AKM Portfolio -->
+            <div class="group reveal delay-100">
+                <a href="https://inakm.github.io/" target="_blank"
+                    class="block overflow-hidden rounded-[2.5rem] border border-white/10 relative">
+                    <div
+                        class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center backdrop-blur-sm">
+                        <span
+                            class="bg-accent-blue text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-xs transform translate-y-4 group-hover:translate-y-0 transition-transform">View
+                            Project</span>
+                    </div>
+                    <img src="../assets/screenshots/AKMPortfolio.webp" alt="AKM Personal Portfolio"
+                        class="w-full h-[400px] object-cover md:grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110">
+                </a>
+                <div class="mt-6">
+                    <h3 class="text-2xl font-black uppercase italic mb-2">AKM Portfolio</h3>
+                    <p class="text-platinum/50 text-sm font-bold tracking-widest uppercase">Lead Architect Showcase</p>
+                </div>
+            </div>
+
+            <!-- Project 6: Aryansh Portfolio -->
+            <div class="group reveal delay-200">
+                <a href="https://aryansh.site" target="_blank"
+                    class="block overflow-hidden rounded-[2.5rem] border border-white/10 relative">
+                    <div
+                        class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center backdrop-blur-sm">
+                        <span
+                            class="bg-accent-blue text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-xs transform translate-y-4 group-hover:translate-y-0 transition-transform">View
+                            Project</span>
+                    </div>
+                    <img src="../assets/screenshots/AryanshPortfolio.webp" alt="Aryansh Personal Portfolio"
+                        class="w-full h-[400px] object-cover md:grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110">
+                </a>
+                <div class="mt-6">
+                    <h3 class="text-2xl font-black uppercase italic mb-2">Aryansh Portfolio</h3>
+                    <p class="text-platinum/50 text-sm font-bold tracking-widest uppercase">Lead Developer Showcase</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- === EXPERTISE & CTA === -->
+        <section class="bg-gunmetal/30 rounded-[3rem] border border-white/5 p-12 md:p-20 text-center reveal">
+            <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 italic">Ready to build <br> <span
+                    class="text-accent-blue">The Future?</span></h2>
+            <p class="text-xl text-platinum/60 max-w-2xl mx-auto mb-12">
+                Our portfolio represents a commitment to excellence. If you are ready to elevate your brand with similar
+                high-impact digital architecture, let's talk.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="contact.html"
+                    class="bg-bright-snow text-carbon-black px-10 py-4 rounded-full font-black text-lg uppercase tracking-widest hover:scale-105 transition-transform shadow-lg">Start
+                    Project</a>
+                <a href="services.html"
+                    class="border border-white/10 px-10 py-4 rounded-full font-black text-lg uppercase tracking-widest hover:bg-white hover:text-carbon-black transition-colors">View
+                    Services</a>
             </div>
         </section>
 
-        <!-- === DOCUMENT BODY === -->
-        <div class="grid lg:grid-cols-3 gap-12">
 
-            <!-- Sidebar Navigation (Desktop Only) -->
-            <aside class="hidden lg:block space-y-4 sticky top-32 h-fit no-print">
-                <h4 class="text-xs font-black uppercase tracking-widest text-iron-grey mb-6">Clauses</h4>
-                <nav class="flex flex-col gap-2">
-                    <a href="#s1"
-                        class="px-4 py-2 hover:bg-white/5 rounded-lg transition-all border-l-2 border-transparent hover:border-accent-blue font-semibold text-sm">01
-                        Services Offered</a>
-                    <a href="#s3"
-                        class="px-4 py-2 hover:bg-white/5 rounded-lg transition-all border-l-2 border-transparent hover:border-accent-blue font-semibold text-sm">03
-                        Payment Terms</a>
-                    <a href="#s7"
-                        class="px-4 py-2 hover:bg-white/5 rounded-lg transition-all border-l-2 border-transparent hover:border-accent-blue font-semibold text-sm">07
-                        Website Ownership</a>
-                    <a href="#s10"
-                        class="px-4 py-2 hover:bg-white/5 rounded-lg transition-all border-l-2 border-transparent hover:border-accent-blue font-semibold text-sm">10
-                        Limitation of Liability</a>
-                </nav>
-            </aside>
-
-            <!-- Clause Content -->
-            <div class="lg:col-span-2 space-y-8">
-
-                <!-- Intro -->
-                <div class="clause-card bg-gunmetal/30 p-8 md:p-12 rounded-[2.5rem] border border-white/5 reveal">
-                    <h2 class="text-3xl font-black tracking-tighter mb-6">Introduction</h2>
-                    <p class="text-lg md:text-xl text-platinum/80 leading-relaxed mb-6">
-                        This Service Agreement (“Agreement”) outlines the terms and conditions under which <strong>F9XR
-                            Team</strong> provides web development and digital marketing services to its clients
-                        (“Client”, “You”).
-                    </p>
-                    <p class="text-lg md:text-xl text-platinum/80 leading-relaxed font-bold italic">
-                        By hiring our services, you agree to the terms mentioned below.
-                    </p>
-                </div>
-
-                <!-- 1. Services Offered -->
-                <div id="s1" <div
-                    class="section-card p-10 bg-white/5 text-platinum rounded-[3rem] border border-white/5 hover:border-white/20 transition-all reveal">
-                    <div class="flex items-center gap-4 mb-6">
-                        <span class="text-4xl font-black text-white/10 italic">01</span>
-                        <h3 class="text-2xl font-black uppercase tracking-tighter">Services Offered</h3>
-                    </div>
-                    <ul class="grid md:grid-cols-2 gap-4 text-platinum/70 font-semibold text-lg">
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Web
-                            Development</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i>
-                            WordPress Development</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Landing
-                            Pages</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Local
-                            SEO Setup</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Social
-                            Management</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i>
-                            Technical Support</li>
-                    </ul>
-                </div>
-
-                <!-- 2. Project Scope -->
-                <div id="s2" class="clause-card p-8 md:p-12 border-b border-white/10 reveal">
-                    <h3 class="text-xl font-black uppercase tracking-widest mb-6 flex items-center gap-4">
-                        <span class="w-8 h-[2px] bg-accent-blue"></span> 02 Project Scope
-                    </h3>
-                    <p class="text-lg text-platinum/70 leading-relaxed">The scope of work will be clearly defined before
-                        starting. Any additional features or changes requested after approval may be charged extra.
-                        Major changes require a revised timeline and cost.</p>
-                </div>
-
-                <!-- 3. Payment Terms -->
-                <div id="s3"
-                    class="clause-card p-8 md:p-12 border-b border-white/10 bg-accent-blue/5 rounded-3xl reveal">
-                    <h3 class="text-xl font-black uppercase tracking-widest mb-6">03 Payment Terms</h3>
-                    <div class="space-y-4">
-                        <div class="flex gap-4">
-                            <i class="fas fa-percentage text-accent-blue mt-1"></i>
-                            <p class="text-lg font-bold">50% Advance Required</p>
-                        </div>
-                        <p class="text-lg text-platinum/70 leading-relaxed">Remaining payment must be completed before
-                            final delivery or website launch. Payments once made are non-refundable.</p>
-                    </div>
-                </div>
-
-                <!-- 4. Project Timeline -->
-                <div class="clause-card p-8 md:p-12 border-b border-white/10 reveal">
-                    <h3 class="text-xl font-black uppercase tracking-widest mb-6">04 Project Timeline</h3>
-                    <p class="text-lg text-platinum/70 leading-relaxed">Timelines are estimates and depend on timely
-                        input and approvals from the Client. Delays due to late responses may extend delivery timelines.
-                    </p>
-                </div>
-
-                <!-- 5. Client Responsibilities -->
-                <div class="clause-card p-8 md:p-12 border-b border-white/10 reveal">
-                    <h3 class="text-xl font-black uppercase tracking-widest mb-6 text-accent-blue">05 Client
-                        Responsibilities</h3>
-                    <p class="text-lg text-platinum/70 leading-relaxed mb-4">The Client agrees to provide accurate
-                        content and review work promptly. F9XR Team is not responsible for copyright issues related to
-                        client-provided content.</p>
-                </div>
-
-                <!-- 6. Revisions -->
-                <div class="clause-card p-8 md:p-12 border-b border-white/10 reveal">
-                    <h3 class="text-xl font-black uppercase tracking-widest mb-6">06 Revisions & Changes</h3>
-                    <p class="text-lg text-platinum/70 leading-relaxed italic">"Reasonable revisions are included.
-                        Excessive revisions or new features may be charged additionally."</p>
-                </div>
-
-                <!-- 7. Ownership -->
-                <div id="s7" class="clause-card bg-bright-snow text-carbon-black p-8 md:p-12 rounded-[2.5rem] reveal">
-                    <h3 class="text-2xl font-black uppercase tracking-tighter mb-4">07 Website Ownership</h3>
-                    <p class="text-xl font-bold leading-relaxed mb-6">Full ownership is transferred to the Client after
-                        full payment.</p>
-                    <p class="text-sm font-medium opacity-60 italic">F9XR Team reserves the right to showcase work in
-                        our portfolio unless requested otherwise.</p>
-                </div>
-
-                <!-- 8-9-10 (Grouped for readability) -->
-                <div class="space-y-12 py-10">
-                    <div class="reveal" id="s10">
-                        <h4 class="font-black text-sm uppercase tracking-[0.3em] text-iron-grey mb-4">08 - 10
-                            Operational Bounds</h4>
-                        <div class="space-y-6 text-lg text-platinum/70">
-                            <p><strong>Support:</strong> Monthly maintenance plans are separate. Third-party issues
-                                (Hosting/Plugins) are not the liability of F9XR Team.</p>
-                            <p><strong>Liability:</strong> F9XR Team is not liable for loss of business, downtime, or
-                                consequential damages.</p>
-                        </div>
-                    </div>
-
-                    <!-- 11-12 Termination & Confidentiality -->
-                    <div class="grid md:grid-cols-2 gap-8 reveal">
-                        <div class="p-8 bg-white/5 rounded-3xl">
-                            <h5 class="font-black mb-4">11 Termination</h5>
-                            <p class="text-sm opacity-60">Either party may terminate with notice. Work completed must be
-                                paid for. Advance payments are non-refundable.</p>
-                        </div>
-                        <div class="p-8 bg-white/5 rounded-3xl">
-                            <h5 class="font-black mb-4">12 Confidentiality</h5>
-                            <p class="text-sm opacity-60">Both parties agree to keep all credentials and sensitive
-                                information confidential at all times.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Final Legal Footer Line -->
-                <div class="text-center py-20 reveal">
-                    <p class="text-xl md:text-2xl font-medium text-platinum/50 italic leading-relaxed">
-                        "By using our services, you acknowledge that you have read, understood, <br
-                            class="hidden md:block"> and agreed to our
-                        <span
-                            class="text-white font-black underline decoration-accent-blue decoration-4 underline-offset-8">Refund
-                            & Cancellation Policy</span>,
-                        <span
-                            class="text-white font-black underline decoration-accent-blue decoration-4 underline-offset-8">Privacy
-                            Policy</span>,
-                        <span
-                            class="text-white font-black underline decoration-accent-blue decoration-4 underline-offset-8">Terms
-                            of Service</span>, and
-                        <span
-                            class="text-white font-black underline decoration-accent-blue decoration-4 underline-offset-8">Service
-                            Agreement</span>."
-                    </p>
-                </div>
-
-                <!-- 13. Acceptance -->
-                <div id="acceptance" class="bg-accent-blue p-10 md:p-16 rounded-[3rem] reveal text-center">
-                    <h3 class="text-3xl md:text-5xl font-black tracking-tighter mb-6 italic">13 Agreement Acceptance
-                    </h3>
-                    <p class="text-xl font-bold mb-10 opacity-90">By proceeding with our services, the Client
-                        acknowledges that they have read, understood, and agreed to this Service Agreement.</p>
-                    <a href="/contact.html"
-                        class="inline-block bg-carbon-black text-white px-10 py-5 rounded-full font-black text-lg hover:scale-105 transition-all no-print shadow-2xl">
-                        I AGREE & START PROJECT
-                    </a>
-                </div>
-
-                <p class="text-center text-iron-grey text-xs font-bold uppercase tracking-widest pt-10">
-                    This agreement is subject to change without prior notice.
-                </p>
-            </div>
+        <!-- Final CTA Line -->
+        <div class="text-center py-24">
+            <p class="text-sm font-bold text-iron-grey uppercase tracking-[0.3em] opacity-50">Precision • Performance •
+                Perfection</p>
         </div>
+
     </main>
 
     <!-- === FOOTER === -->
@@ -472,7 +483,7 @@
                             style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span>
                     </h2>
                 </div>
-                <a href="/contact.html"
+                <a href="contact.html"
                     class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">
                     Hire Team <i
                         class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
@@ -502,11 +513,12 @@
                 <div class="space-y-8">
                     <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Navigation</h4>
                     <ul class="space-y-4 font-bold text-lg text-platinum/70">
-                        <li><a href="/about.html" class="hover:text-accent-blue transition-colors">About Us</a></li>
-                        <li><a href="/services.html" class="hover:text-accent-blue transition-colors">Services</a></li>
-                        <li><a href="/portfolio.html" class="hover:text-accent-blue transition-colors">Portfolio</a>
+                        <li><a href="about.html" class="hover:text-accent-blue transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-accent-blue transition-colors">Services</a>
                         </li>
-                        <li><a href="/contact.html" class="hover:text-accent-blue transition-colors">Contact Us</a>
+                        <li><a href="portfolio.html" class="hover:text-accent-blue transition-colors">Portfolio</a>
+                        </li>
+                        <li><a href="contact.html" class="hover:text-accent-blue transition-colors">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -515,19 +527,19 @@
                 <div class="space-y-8">
                     <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Transparency</h4>
                     <ul class="space-y-4 font-bold text-sm text-platinum/60">
-                        <li><a href="/agreement.html"
+                        <li><a href="../legals/agreement.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Service
                                 Agreement</a></li>
-                        <li><a href="/terms.html"
+                        <li><a href="../legals/terms.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Terms
                                 of Service</a></li>
-                        <li><a href="/privacy.html"
+                        <li><a href="../legals/privacy.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Privacy
                                 Policy</a></li>
-                        <li><a href="/shipping.html"
+                        <li><a href="../legals/shipping.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Shipping
                                 Policy</a></li>
-                        <li><a href="/refund.html"
+                        <li><a href="../legals/refund.html"
                                 class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Refund
                                 Policy</a></li>
                     </ul>
@@ -609,13 +621,41 @@
 
     <!-- === BACK TO TOP === -->
     <button id="btt"
-        class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl no-print">
+        class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl no-print"
+        aria-label="Back to Top">
         <i class="fas fa-arrow-up text-sm"></i>
     </button>
 
     <!-- === SCRIPTS === -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script>
+        // 1. Performance Optimized Reveal Animation
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // 2. Scroll Logic
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+
+            const btt = document.getElementById('btt');
+            if (window.scrollY > 600) btt.classList.remove('hidden');
+            else btt.classList.add('hidden');
+        });
+
+        document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+
+        // Toggle Mobile Menu Logic
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('menu-icon');
@@ -632,45 +672,6 @@
                 document.body.style.overflow = 'auto';
             }
         }
-
-        // Update current date dynamically
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById('current-date').innerText = new Date().toLocaleDateString('en-US', options);
-
-        // Scroll Progress
-        window.onscroll = () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById("progress-bar").style.width = scrolled + "%";
-
-            // Toggle BTT
-            const btt = document.getElementById('btt');
-            if (window.scrollY > 600) btt.classList.remove('hidden');
-            else btt.classList.add('hidden');
-        };
-
-        document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-
-        // Animations: Optimized Reveal
-        document.addEventListener('DOMContentLoaded', () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        anime({
-                            targets: entry.target,
-                            translateY: [30, 0],
-                            opacity: [0, 1],
-                            duration: 1200,
-                            easing: 'easeOutExpo'
-                        });
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        });
     </script>
 </body>
 
