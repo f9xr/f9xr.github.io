@@ -6,13 +6,56 @@
     <image:image>
       <image:loc>https://f9xr.github.io/logo.png</image:loc>
       <image:title>F9XR Team Logo</image:title>
-      <image:caption>Offical Logo of F9XR Team Digital Agency</image:caption>
+      <image:caption>Official Logo of F9XR Team Digital Agency</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://f9xr.github.io/about.html</loc>
+    <loc>https://f9xr.github.io/pages/about.html</loc>
     <image:image>
       <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team About Us</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/services.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Services</image:title>
+    </image:image>
+  </url>
+   <url>
+    <loc>https://f9xr.github.io/pages/portfolio.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Portfolio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/expert-bio.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Lead Architect</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/partners.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Partners</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/topics.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Knowledge Base</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/thanks.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Thank You</image:title>
     </image:image>
   </url>
 </urlset>
