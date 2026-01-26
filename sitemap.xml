@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-<loc>https://f9xr.github.io/</loc>
-<priority>1.00</priority>
-</url>
-<!-- Pages -->
-<url>
-<loc>https://f9xr.github.io/pages/about.html</loc>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://f9xr.github.io/pages/services.html</loc>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://f9xr.github.io/pages/portfolio.html</loc>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://f9xr.github.io/pages/projects.html</loc>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://f9xr.github.io/pages/contact.html</loc>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://f9xr.github.io/pages/sitemap.html</loc>
-<priority>0.60</priority>
-</url>
-<url>
-<loc>https://f9xr.github.io/pages/expert-bio.html</loc>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://f9xr.github.io/pages/partners.html</loc>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://f9xr.github.io/pages/topics.html</loc>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://f9xr.github.io/pages/thanks.html</loc>
-<priority>0.50</priority>
-</url>
-<!-- Legal Pages -->
-<url>
-<loc>https://f9xr.github.io/legals/agreement.html</loc>
-<priority>0.50</priority>
-</url>
-<url>
-<loc>https://f9xr.github.io/legals/terms.html</loc>
-<priority>0.50</priority>
-</url>
-<url>
-<loc>https://f9xr.github.io/legals/privacy.html</loc>
-<priority>0.50</priority>
-</url>
-<url>
-<loc>https://f9xr.github.io/legals/shipping.html</loc>
-<priority>0.50</priority>
-</url>
-<url>
-<loc>https://f9xr.github.io/legals/refund.html</loc>
-<priority>0.50</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://f9xr.github.io/</loc>
+    <priority>1.00</priority>
+  </url>
+  <!-- Pages -->
+  <url>
+    <loc>https://f9xr.github.io/pages/about.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/services.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/portfolio.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/projects.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/contact.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/sitemap.html</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/expert-bio.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/partners.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/topics.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/thanks.html</loc>
+    <priority>0.50</priority>
+  </url>
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://f9xr.github.io/legals/agreement.html</loc>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/legals/terms.html</loc>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/legals/privacy.html</loc>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/legals/shipping.html</loc>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/legals/refund.html</loc>
+    <priority>0.50</priority>
+  </url>
 </urlset>
