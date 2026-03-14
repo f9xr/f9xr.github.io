@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -133,7 +133,7 @@
     </style>
 </head>
 
-<body class="text-bright-snow font-sans leading-relaxed">
+<body class="text-bright-snow font-sans leading-relaxed min-h-screen flex flex-col">
     <div class="fixed inset-0 -z-50 h-full w-full bg-black">
         <div
             class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
@@ -230,7 +230,7 @@
         </div>
     </header>
 
-    <main class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
+    <main class="pt-32 pb-20 px-6 max-w-6xl mx-auto flex-grow">
 
         <!-- === HERO SECTION === -->
         <section class="mb-20 reveal">
@@ -282,9 +282,9 @@
                 <div class="clause-card bg-gunmetal/30 p-8 md:p-12 rounded-[2.5rem] border border-white/5 reveal">
                     <h2 class="text-3xl font-black tracking-tighter mb-6">Introduction</h2>
                     <p class="text-lg md:text-xl text-platinum/80 leading-relaxed mb-6">
-                        This Service Agreement (“Agreement”) outlines the terms and conditions under which <strong>F9XR
+                        This Service Agreement (â€œAgreementâ€) outlines the terms and conditions under which <strong>F9XR
                             Team</strong> provides web development and digital marketing services to its clients
-                        (“Client”, “You”).
+                        (â€œClientâ€, â€œYouâ€).
                     </p>
                     <p class="text-lg md:text-xl text-platinum/80 leading-relaxed font-bold italic">
                         By hiring our services, you agree to the terms mentioned below.
@@ -440,12 +440,10 @@
 
     <!-- === FOOTER === -->
     <footer class="pt-0 no-print overflow-hidden bg-black/90 backdrop-blur-xl border-t border-white/10">
-
         <!-- 1. Top Marquee Ticker (Brand Identity) -->
         <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20">
             <div class="flex whitespace-nowrap animate-marquee">
-                <div
-                    class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">
+                <div class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">
                     <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
                     <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
                     <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
@@ -459,9 +457,7 @@
                     <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
                 </div>
             </div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-6">
+        </div><div class="max-w-7xl mx-auto px-6">
 
             <!-- 2. Large CTA Header (Reference Image Style) -->
             <div
@@ -608,9 +604,7 @@
             .animate-marquee:hover {
                 animation-play-state: paused;
             }
-        </style>
-    </footer>
-
+        </style></footer>
     <!-- === BACK TO TOP === -->
     <button id="btt"
         class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl no-print">
@@ -679,3 +673,5 @@
 </body>
 
 </html>
+
+

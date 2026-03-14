@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -59,7 +59,7 @@
     </style>
 </head>
 
-<body class="bg-black text-bright-snow font-sans">
+<body class="bg-black text-bright-snow font-sans min-h-screen flex flex-col">
     <!-- Background -->
     <!-- Background -->
     <div class="fixed inset-0 -z-50 h-full w-full bg-black">
@@ -82,7 +82,7 @@
         </nav>
     </header>
 
-    <main class="pt-40 pb-20 px-6 min-h-screen">
+    <main class="pt-40 pb-20 px-6 min-h-screen flex-grow">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-4 text-center">SITEMAP</h1>
             <p class="text-center text-xl text-platinum/60 mb-20 italic">Overview of our digital architecture.</p>
@@ -166,12 +166,10 @@
 
     <!-- === FOOTER === -->
     <footer class="pt-0 no-print overflow-hidden bg-black/90 backdrop-blur-xl border-t border-white/10">
-
         <!-- 1. Top Marquee Ticker (Brand Identity) -->
         <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20">
             <div class="flex whitespace-nowrap animate-marquee">
-                <div
-                    class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">
+                <div class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">
                     <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
                     <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
                     <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
@@ -185,9 +183,7 @@
                     <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
                 </div>
             </div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-6">
+        </div><div class="max-w-7xl mx-auto px-6">
 
             <!-- 2. Large CTA Header (Reference Image Style) -->
             <div
@@ -330,8 +326,9 @@
             .animate-marquee:hover {
                 animation-play-state: paused;
             }
-        </style>
-    </footer>
+        </style></footer>
 </body>
 
 </html>
+
+

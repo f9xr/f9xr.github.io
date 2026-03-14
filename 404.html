@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- === PRIMARY SEO META TAGS === -->
+    <title>404 - Blueprint Not Found | F9XR Team</title>
+    <meta name="title" content="404 - Page Not Found | F9XR Team">
+    <meta name="description"
+        content="The digital architecture you're looking for doesn't exist. Return to F9XR Team home for high-performance web design.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="author" content="F9XR Team">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+
+    <!-- === SCHEMA MARKUP (JSON-LD) === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "404 Not Found - F9XR Team",
+      "description": "Error 404: Page not found on F9XR Team server.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "F9XR Team",
+        "url": "https://f9xr.github.io/"
+      }
+    }
+    </script>
+
+    <!-- === FONTS & ICONS === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- === TAILWIND CONFIG === -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'carbon-black': '#212529',
+                        'bright-snow': '#f8f9fa',
+                        'platinum': '#e9ecef',
+                        'iron-grey': '#495057',
+                        'gunmetal': '#343a40',
+                        'accent-blue': '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        body {
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px #f8f9fa;
+            color: transparent;
+        }
+
+        .glass-nav {
+            background: rgba(33, 37, 41, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #mobile-menu a {
+            transform: translateX(-20px);
+            transition: transform 0.5s ease, color 0.3s ease;
+        }
+
+        #mobile-menu.opacity-100 a {
+            transform: translateX(0);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glitchy Animation for 404 */
+        @keyframes pulse-stroke {
+            0%, 100% {
+                -webkit-text-stroke: 1px #f8f9fa;
+            }
+            50% {
+                -webkit-text-stroke: 1px #3b82f6;
+            }
+        }
+
+        .animate-stroke {
+            animation: pulse-stroke 3s infinite ease-in-out;
+        }
+
+        /* Marquee */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            animation: marquee 30s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body class="text-bright-snow font-sans antialiased flex flex-col min-h-screen">
+    <div class="fixed inset-0 -z-50 h-full w-full bg-black">
+        <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+        <div class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
+    </div>
+
+    <!-- === ADVANCED RESPONSIVE HEADER === -->
+    <header class="fixed top-6 left-0 right-0 z-[5000] px-4">
+        <nav class="glass-nav max-w-7xl mx-auto rounded-full px-6 py-3 flex justify-between items-center shadow-2xl border border-white/5 relative bg-carbon-black/50 backdrop-blur-xl">
+            <!-- 1. Brand Logo -->
+            <a href="/" class="flex items-center gap-2 group relative z-[5001]" aria-label="F9XR Home">
+                <span class="text-xl font-black tracking-tighter uppercase text-white">F9XR <span class="text-xs font-bold opacity-80 ml-0.5 text-accent-blue">Team</span></span>
+            </a>
+
+            <!-- 2. Desktop Navigation (Centered) -->
+            <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 gap-10 font-bold text-xs tracking-widest uppercase text-platinum/60">
+                <a href="/pages/about.html" class="hover:text-white transition-colors hover:scale-105 transform">About</a>
+                <a href="/pages/services.html" class="hover:text-white transition-colors hover:scale-105 transform">Services</a>
+                <a href="/pages/portfolio.html" class="hover:text-white transition-colors hover:scale-105 transform">Works</a>
+                <a href="/pages/contact.html" class="text-white hover:text-accent-blue transition-colors hover:scale-105 transform">Hire Us</a>
+            </div>
+
+            <!-- 3. Header Actions -->
+            <div class="flex items-center gap-4 relative z-[5001]">
+                <!-- Secondary Action (WhatsApp) -->
+                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank" class="hidden sm:flex items-center gap-2 text-white/80 hover:text-white font-bold text-[10px] tracking-widest uppercase transition-all hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+                </a>
+
+                <!-- Primary Action (Get Started) -->
+                <a href="/pages/contact.html" class="bg-white text-carbon-black px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95">
+                    Get Started
+                </a>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button onclick="toggleMobileMenu()" id="menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center text-white bg-white/5 rounded-full border border-white/10 active:scale-90 transition-all hover:bg-white/10" aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars-staggered text-lg"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- 4. Mobile Overlay Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">
+            <!-- Close Button -->
+            <button onclick="toggleMobileMenu()" class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="space-y-8">
+                <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>
+                <a href="/pages/about.html" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>
+                <a href="/pages/services.html" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>
+                <a href="/pages/portfolio.html" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>
+                <a href="/pages/contact.html" class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire Team</a>
+            </div>
+
+            <!-- Mobile Social Links -->
+            <div class="mt-20 pt-10 border-t border-white/5 flex gap-8">
+                <a href="https://instagram.com/f9xrteam" aria-label="Instagram" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" aria-label="WhatsApp" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:tontufytservices@gmail.com" aria-label="Email Us" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center px-6 pt-32 pb-20 relative z-10 w-full overflow-hidden">
+        <div class="max-w-4xl w-full text-center">
+            <!-- 404 Visual -->
+            <div class="reveal mb-8">
+                <h1 class="text-9xl md:text-[15rem] font-black tracking-tighter leading-none animate-stroke italic text-stroke">
+                    404</h1>
+                <p class="text-platinum/70 font-black uppercase tracking-[0.5em] text-xs md:text-sm mt-[-20px] md:mt-[-40px]">
+                    Blueprints Not Found</p>
+            </div>
+
+            <!-- Error Message -->
+            <div class="reveal">
+                <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-8 uppercase italic leading-tight">
+                    Lost in the <br> <span class="text-accent-blue">Digital Void?</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-platinum/60 font-medium leading-relaxed italic mb-12 max-w-2xl mx-auto">
+                    The architecture you're looking for doesn't exist or has been moved to a new digital dimension.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
+                    <a href="/" class="group bg-bright-snow text-carbon-black px-10 py-4 md:py-5 rounded-full font-black text-lg md:text-xl uppercase tracking-wider hover:bg-white hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] flex items-center gap-3">
+                        Back to Reality
+                        <i class="fa-solid fa-arrow-right-long text-accent-blue group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="/pages/contact.html" class="group px-10 py-4 md:py-5 rounded-full font-black text-lg md:text-xl uppercase tracking-wider text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent-blue/50 transition-all flex items-center gap-3">
+                        <i class="fa-solid fa-paper-plane text-accent-blue"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+
+                <!-- Helpful Links -->
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] font-black uppercase tracking-widest text-iron-grey">
+                    <a href="/pages/services.html" class="hover:text-accent-blue transition-colors underline underline-offset-4 decoration-white/10 hover:decoration-accent-blue">Our Services</a>
+                    <a href="/pages/about.html" class="hover:text-accent-blue transition-colors underline underline-offset-4 decoration-white/10 hover:decoration-accent-blue">About Team</a>
+                    <a href="/pages/projects.html" class="hover:text-accent-blue transition-colors underline underline-offset-4 decoration-white/10 hover:decoration-accent-blue">Our Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- === FOOTER === -->
+    <footer class="pt-0 no-print overflow-hidden bg-black/90 backdrop-blur-xl border-t border-white/10 relative z-10 w-full">
+        <!-- 1. Top Marquee Ticker (Brand Identity) -->
+        <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20">
+            <div class="flex whitespace-nowrap animate-marquee">
+                <div class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">
+                    <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <!-- Repeated for infinite scroll -->
+                    <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
+                </div>
+            </div>
+        </div><div class="max-w-7xl mx-auto px-6">
+            <!-- 2. Large CTA Header -->
+            <div class="flex flex-col md:flex-row justify-between items-center pb-16 mb-16 border-b border-white/5 gap-8 reveal">
+                <div class="text-center md:text-left">
+                    <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none text-white">
+                        Let's Build <br class="hidden md:block"> <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span>
+                    </h2>
+                </div>
+                <a href="/pages/contact.html" class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">
+                    Hire Team <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
+                </a>
+            </div>
+
+            <!-- 3. Main Navigation Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-24">
+                <!-- Branding & Github -->
+                <div class="col-span-2 space-y-8">
+                    <div>
+                        <h3 class="text-4xl font-black mb-4 tracking-tighter italic uppercase text-white">F9XR TEAM.</h3>
+                        <p class="text-lg text-platinum/50 leading-relaxed max-w-sm">
+                            Global digital studio crafting high-end experiences for growth-focused brands.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://github.com/f9xr/f9xr.github.io" target="_blank" class="bg-white/5 px-5 py-2.5 rounded-xl border border-white/5 font-bold hover:bg-white/10 transition-colors flex items-center gap-3 text-xs uppercase tracking-widest text-white">
+                            <i class="fab fa-github"></i> View Open Source
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Page Navigation -->
+                <div class="space-y-8">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Navigation</h4>
+                    <ul class="space-y-4 font-bold text-lg text-platinum/70">
+                        <li><a href="/pages/about.html" class="hover:text-accent-blue transition-colors">About Us</a></li>
+                        <li><a href="/pages/services.html" class="hover:text-accent-blue transition-colors">Services</a></li>
+                        <li><a href="/pages/portfolio.html" class="hover:text-accent-blue transition-colors">Portfolio</a></li>
+                        <li><a href="/pages/contact.html" class="hover:text-accent-blue transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div class="space-y-8">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">Transparency</h4>
+                    <ul class="space-y-4 font-bold text-sm text-platinum/60">
+                        <li><a href="/legals/agreement.html" class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Service Agreement</a></li>
+                        <li><a href="/legals/terms.html" class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Terms of Service</a></li>
+                        <li><a href="/legals/privacy.html" class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Privacy Policy</a></li>
+                        <li><a href="/legals/shipping.html" class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Shipping Policy</a></li>
+                        <li><a href="/legals/refund.html" class="hover:text-white transition-colors underline decoration-white/10 underline-offset-4">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- The Team -->
+                <div class="space-y-8">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-black text-iron-grey">The Architects</h4>
+                    <ul class="space-y-4 font-bold text-sm text-platinum/60">
+                        <li><a href="https://inakm.github.io" target="_blank" class="hover:text-accent-blue transition-colors flex items-center justify-between group">AKM <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-0 group-hover:opacity-100"></i></a></li>
+                        <li><a href="https://aryansh.site" target="_blank" class="hover:text-accent-blue transition-colors flex items-center justify-between group">Aryansh <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-0 group-hover:opacity-100"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. Bottom Copyright Bar -->
+            <!-- Giant Brand Text -->
+            <div class="relative py-24 overflow-hidden select-none pointer-events-none opacity-60">
+                <h1 class="text-[12vw] font-black text-center leading-none tracking-tighter uppercase text-transparent translate-y-8 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" style="-webkit-text-stroke: 1.5px rgba(255,255,255,0.7);">
+                    F9XR TEAM
+                </h1>
+                <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#212529] to-transparent"></div>
+            </div>
+
+            <div class="py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+                <div class="space-y-2">
+                    <p class="font-bold text-platinum/40 text-sm italic">&copy; 2025 F9XR Team. Handcrafted with Precision Engineering.</p>
+                    <div class="flex justify-center md:justify-start gap-6 text-[10px] font-black uppercase tracking-[0.2em] text-iron-grey">
+                        <a href="https://instagram.com/f9xrteam" class="hover:text-pink-500">Instagram</a>
+                        <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" class="hover:text-green-500">WhatsApp</a>
+                        <a href="mailto:tontufytservices@gmail.com" class="hover:text-accent-blue">Email Support</a>
+                    </div>
+                </div>
+
+                <div class="flex gap-8 font-black tracking-widest uppercase text-[10px]">
+                    <span class="flex items-center gap-2 italic text-iron-grey">Remote Global <i class="fa-solid fa-globe text-accent-blue"></i></span>
+                    <span class="flex items-center gap-2 italic text-white underline decoration-accent-blue decoration-2">EST. 2024</span>
+                </div>
+            </div>
+        </div></footer>
+    <!-- === BACK TO TOP === -->
+    <button id="btt" aria-label="Scroll to top" class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl">
+        <i class="fas fa-arrow-up text-sm"></i>
+    </button>
+
+    <!-- === SCRIPTS === -->
+    <script>
+        // Scroll Logic for Back to Top
+        window.addEventListener('scroll', () => {
+            const btt = document.getElementById('btt');
+            if (window.scrollY > 400) btt.classList.remove('hidden');
+            else btt.classList.add('hidden');
+        });
+        document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Reveal Animation using Intersection Observer
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Mobile Menu Logic
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const isOpen = menu.classList.contains('opacity-100');
+            if (!isOpen) {
+                menu.classList.remove('opacity-0', 'pointer-events-none');
+                menu.classList.add('opacity-100', 'pointer-events-auto');
+                icon.classList.replace('fa-bars-staggered', 'fa-xmark');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('opacity-0', 'pointer-events-none');
+                menu.classList.remove('opacity-100', 'pointer-events-auto');
+                icon.classList.replace('fa-xmark', 'fa-bars-staggered');
+                document.body.style.overflow = 'auto';
+            }
+        }
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                const menu = document.getElementById('mobile-menu');
+                if (menu.classList.contains('opacity-100')) toggleMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
