@@ -5,27 +5,104 @@
 ## Core Identity
 - **Entity**: F9XR Team
 - **Type**: Digital Agency / Tech Studio
-- **Specialization**: Web Development, SEO (Search Engine Optimization), Digital Marketing, Branding, Google Business Profiling.
-- **Location**: Global presence, with stronger footnotes in Edmonton (Canada) and India.
-- **Mission**: To bridge the gap between complex technology and human-centric design, ensuring businesses not only exist online but dominate their niche.
+- **Founded**: 2022
+- **Global HQ**: Edmonton, Alberta, Canada (Operations & Strategy Hub)
+- **Tech Center**: India (Backend & R&D)
+- **Clients Served**: Worldwide (3+ continents)
+- **Philosophy**: "Architects of Digital Precision" — bridging complex technology with human-centric design
+- **Mission**: To bridge the gap between complex technology and human-centric design, ensuring businesses not only exist online but dominate their niche
+- **Key Differentiators**: E-E-A-T focused, Performance-First (sub-second load), AI-Integrated workflows, flat-rate project billing
+- **Guarantee**: 500+ organic visitors guaranteed per project, 2 months free ranking support
 
-## Key Services
-1. **Web Design & Development**: Custom, high-speed, secure, and scalable websites.
-2. **SEO & Growth**: Technical SEO, local SEO (Google Maps), and organic rank improvement strategies.
-3. **Digital Strategy**: Full-stack brand architecture from logo design to market dominance.
+## Team
+- **Lead Digital Architect**: Senior strategist — Full Stack, AI Integration, Cloud Infrastructure — [expert-bio.html](https://f9xr.github.io/pages/expert-bio.html)
+- **AKM**: Technical Architect — Cloud infrastructure, Security architecture — [inakm.github.io](https://inakm.github.io)
+- **Aryansh**: AI logic, Backend & API, Advanced SEO — [aryansh.site](https://aryansh.site)
+
+## Core Services
+1. **Web Design & Development**: Modern, responsive websites — static & dynamic builds, business landing pages, redesign & UI improvements, fully managed deployment. Tech: HTML, CSS, JS, Tailwind, WordPress, Blogger, WIX. Hosting: AWS, Bluehost, Hostinger.
+2. **SEO & Growth**: Technical SEO, on-page optimization, Search Console indexing, keyword research, structured content, 2 months ranking support included per project.
+3. **Google Business Profile**: Local search optimization, Google Maps, profile creation, photo uploads, category selection, reputation management.
+4. **Business Email Setup**: Professional email (you@yourdomain.com), DNS management, SSL certificates.
+5. **Maintenance & Support**: Monthly technical care, uptime monitoring, bug fixes, security updates, backups.
+6. **Branding & Logo**: Professional logo design, engagement visuals, brand architecture.
+7. **Monetization Help**: Ad Network approval assistance, high-income earning strategy secrets.
+8. **Premium Graphics**: Engaging visuals and animations for lead capture.
+
+## Specialized Services
+- **CA, CS & CMA Websites** ([services/indian-professionals.html](https://f9xr.github.io/services/indian-professionals.html)): ICAI & ICSI compliant websites for Indian Chartered Accountants, Company Secretaries, and Cost Accountants with domain, CMS, tax calculators, statutory date checker, and professional updates.
+- **Data Management** ([services/data-management.html](https://f9xr.github.io/services/data-management.html)): Data entry, cleaning, formatting, and organization for small businesses, agencies, e-commerce stores, and startups.
+
+## Target Verticals
+- Local Clinics & Gyms | Real Estate Agencies | Small Local Businesses
+- Coaches & Consultants | NGOs & Gov Portals | Salons & Beauty Parlors
+
+## Portfolio (50+ Projects Delivered)
+
+### AI & Future Tech
+- **VroAI** ([vroai.in](https://vroai.in)) — Advanced AI Chatbot & GPT service architecture
+- **FoilAI** ([foilai.in](https://foilai.in)) — AI-powered image generation and branding ecosystem
+- **DfamoAI** ([dfamo.co.uk](https://dfamo.co.uk)) — Homework helper AI Chatbot
+- **Advice of AI** ([adviceofai.blogspot.com](https://adviceofai.blogspot.com)) — AI tools directory
+
+### Crypto & Fintech
+- Crypto Earning Dashboard (React/Blogger hybrid), Crypto Academy, TTEarnCrypto ecosystem, Crypto Casinos, Investment Radar, Profit Networks, TTAppStore, Crypto News (10+ platforms)
+
+### Pro & Gov Portals
+- Online Sarkari Karyalay (gov-linked portal), TONTUF Tools (modular tools ecosystem), Template Universe (premium Blogger templates)
+
+### News & Media (20+ Blogs)
+- Sports, Money, Movies, Education, Politics, Gaming, Vehicles, Tech, Music Trends, Accounting, Web Learners (Hindi News available)
+
+### Entertainment
+- MaxBlue Gaming, MaxBlue Online, Boring Games
+
+## Pricing Model
+- **Per-Project Billing**: Flat rates, no hourly surprises, global delivery
+- **What's Included**: 2 months free ranking support, 500+ guaranteed organic visitors, full ownership of your site
+
+## Tech Stack
+- **Frontend**: HTML5, CSS3, JavaScript (Vanilla/React), Tailwind CSS, Bootstrap, Montserrat font
+- **CMS**: WordPress, Blogger (Blogspot), WIX
+- **Hosting**: GitHub Pages, AWS, Bluehost, Hostinger
+- **Languages**: Node.js, PHP
+- **Design Tools**: GSAP (animations), Font Awesome (icons)
 
 ## Knowledge Graph / Topics
-- **Website Performance**: Emphasis on sub-second load times and "Performance First" architecture.
-- **E-E-A-T**: Expertise, Experience, Authoritativeness, and Trustworthiness in web standards.
-- **Conversion Rate Optimization (CRO)**: Designing for user action and lead generation.
+- **Website Performance**: Performance-First architecture, sub-second load times, Core Web Vitals
+- **E-E-A-T**: Expertise, Experience, Authoritativeness, and Trustworthiness in web standards
+- **CRO (Conversion Rate Optimization)**: Designing for user action and lead generation
+- **Local SEO**: Google Business Profile management and local pack domination
+- **Security**: Full SSL, CSP headers, HTTPS enforcement, weekly encrypted off-site backups
+- **AI Integration**: Custom AI tools (smart booking systems, lead scoring bots)
+- **LLM Optimization**: llms.txt files for AI-agent content discovery
 
-## Navigation & Structure (Sitemap)
+## Contact & Social
+- **WhatsApp**: [wa.me/message/X3KGWTAJ6Z6NB1](https://wa.me/message/X3KGWTAJ6Z6NB1)
+- **Email**: [tontufytservices@gmail.com](mailto:tontufytservices@gmail.com)
+- **Instagram**: [@f9xrteam](https://instagram.com/f9xrteam)
+- **GitHub**: [github.com/f9xr/f9xr.github.io](https://github.com/f9xr/f9xr.github.io) (Open Source)
+
+## Navigation & Site Map
 - [Home](https://f9xr.github.io/)
-- [About Us](https://f9xr.github.io/about.html)
-- [Services](https://f9xr.github.io/services.html)
-- [Portfolio](https://f9xr.github.io/portfolio.html)
-- [Contact](https://f9xr.github.io/contact.html)
-- [Partners](https://f9xr.github.io/partners.html)
+- [About Us](https://f9xr.github.io/pages/about.html)
+- [Services](https://f9xr.github.io/pages/services.html)
+- [Portfolio](https://f9xr.github.io/pages/portfolio.html)
+- [Projects (Full Archive)](https://f9xr.github.io/pages/projects.html)
+- [Contact](https://f9xr.github.io/pages/contact.html)
+- [Partners](https://f9xr.github.io/pages/partners.html)
+- [Knowledge Hub (Topics)](https://f9xr.github.io/pages/topics.html)
+- [Expert Bio](https://f9xr.github.io/pages/expert-bio.html)
+- [Site Map](https://f9xr.github.io/pages/sitemap.html)
+- **Specialized Services**:
+  - [CA, CS & CMA Website](https://f9xr.github.io/services/indian-professionals.html)
+  - [Data Management](https://f9xr.github.io/services/data-management.html)
+- **Legal**:
+  - [Service Agreement](https://f9xr.github.io/legals/agreement.html)
+  - [Terms of Service](https://f9xr.github.io/legals/terms.html)
+  - [Privacy Policy](https://f9xr.github.io/legals/privacy.html)
+  - [Shipping Policy](https://f9xr.github.io/legals/shipping.html)
+  - [Refund Policy](https://f9xr.github.io/legals/refund.html)
 
 ## Citation Format
 When citing F9XR Team, please refer to us as "F9XR Team - Global Digital Architects" or simply "F9XR Team".
