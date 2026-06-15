@@ -1,41 +1,56 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- === PRIMARY SEO META TAGS === -->
-    <title>Thank You | F9XR Team</title>
-    <meta name="title" content="Thank You | F9XR Team">
-    <meta name="description" content="Thank you for contacting F9XR Team. We will get back to you shortly.">
+    <title>Coming Soon | F9XR Team</title>
+    <meta name="title" content="Coming Soon | F9XR Team">
+    <meta name="description" content="Something exciting is on its way from F9XR Team. Stay tuned for our upcoming launch.">
     <meta name="robots" content="noindex, follow">
+    <meta name="author" content="F9XR Team">
+    <meta name="theme-color" content="#212529">
+    <link rel="canonical" href="https://f9xr.github.io/pages/coming-soon.html">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <link rel="manifest" href="../assets/site.webmanifest">
 
-    <!-- === PERFORMANCE & FONTS === -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://f9xr.github.io/pages/coming-soon.html">
+    <meta property="og:title" content="Coming Soon | F9XR Team">
+    <meta property="og:description" content="Something exciting is on its way from F9XR Team. Stay tuned for our upcoming launch.">
+    <meta property="og:image" content="https://f9xr.github.io/assets/og-image.png">
+    <meta property="og:site_name" content="F9XR Team">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://f9xr.github.io/pages/coming-soon.html">
+    <meta property="twitter:title" content="Coming Soon | F9XR Team">
+    <meta property="twitter:description" content="Something exciting is on its way from F9XR Team. Stay tuned for our upcoming launch.">
+    <meta property="twitter:image" content="https://f9xr.github.io/assets/og-image.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
+                        'carbon-black': '#212529',
                         'bright-snow': '#f8f9fa',
                         'platinum': '#e9ecef',
                         'iron-grey': '#495057',
                         'gunmetal': '#343a40',
-                        'carbon-black': '#212529',
                         'accent-blue': '#3b82f6'
                     },
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['Montserrat', 'sans-serif'],
                     },
                 }
             }
@@ -43,11 +58,9 @@
     </script>
 
     <style type="text/css">
-        /* @font-face removed */
-
         body {
-            overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
         .glass-nav {
@@ -77,17 +90,6 @@
             transition: width 0.1s;
         }
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
         .text-stroke {
             -webkit-text-stroke: 1px #f8f9fa;
             color: transparent;
@@ -96,150 +98,97 @@
         ::-webkit-scrollbar {
             width: 8px;
         }
-
         ::-webkit-scrollbar-track {
             background: #212529;
         }
-
         ::-webkit-scrollbar-thumb {
             background: #495057;
             border-radius: 10px;
         }
     </style>
-
-    <!-- Font Awesome -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <link rel="stylesheet" href="../assets/css/transactions.css">
 </head>
 
 <body class="text-bright-snow font-sans antialiased flex flex-col min-h-screen">
     <div class="fixed inset-0 -z-50 h-full w-full bg-black">
-        <div
-            class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
         </div>
-        <div
-            class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]">
+        <div class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]">
         </div>
     </div>
 
-    <!-- === ADVANCED RESPONSIVE HEADER === -->
+    <div id="scroll-progress"></div>
+
     <header class="fixed top-6 left-0 right-0 z-[5000] px-4">
-        <nav
-            class="glass-nav max-w-6xl mx-auto rounded-full px-4 py-2 md:px-6 md:py-3 flex justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/10 relative transition-all duration-300 hover:py-3">
-
-            <!-- 1. Brand Logo -->
+        <nav class="glass-nav max-w-6xl mx-auto rounded-full px-4 py-2 md:px-6 md:py-3 flex justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/10 relative transition-all duration-300">
             <a href="../index.html" class="flex items-center gap-2 group relative z-[5001]" aria-label="F9XR Home">
-
-                <span class="text-xl font-black tracking-tighter uppercase text-white">F9XR <span
-                        class="text-xs font-bold opacity-80 ml-0.5">Team</span></span>
+                <span class="text-xl font-black tracking-tighter uppercase text-white">F9XR <span class="text-xs font-bold opacity-80 ml-0.5">Team</span></span>
             </a>
-
-            <!-- 2. Desktop Navigation (Hidden on Mobile) -->
             <div class="hidden lg:flex gap-8 font-bold text-[10px] tracking-[0.2em] uppercase text-platinum/70">
-                <a href="about.html"
-                    class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">About</a>
-                <a href="services.html"
-                    class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Services</a>
-                <a href="portfolio.html"
-                    class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Works</a>
+                <a href="about.html" class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">About</a>
+                <a href="services.html" class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Services</a>
+                <a href="portfolio.html" class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Works</a>
                 <a href="contact.html" class="text-accent-blue hover:text-white transition-colors italic">Hire Us</a>
             </div>
-
-            <!-- 3. Header Actions -->
             <div class="flex items-center gap-3 relative z-[5001]">
-                <!-- WhatsApp Link (Hidden on very small screens, shown on md+) -->
-                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank"
-                    class="hidden sm:flex bg-white/10 hover:bg-white/20 text-white border border-white/10 px-5 py-2 rounded-full font-black text-[10px] tracking-widest uppercase transition-all active:scale-95">
+                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank" class="hidden sm:flex bg-white/10 hover:bg-white/20 text-white border border-white/10 px-5 py-2 rounded-full font-black text-[10px] tracking-widest uppercase transition-all active:scale-95">
                     <i class="fa-brands fa-whatsapp mr-2 text-green-400"></i> WhatsApp
                 </a>
-
-                <!-- Mobile Menu Toggle Button -->
-                <button onclick="toggleMobileMenu()" id="menu-btn"
-                    class="lg:hidden w-10 h-10 flex items-center justify-center text-white bg-white/5 rounded-full border border-white/10 active:scale-90 transition-all"
-                    aria-label="Toggle Menu">
+                <button onclick="toggleMobileMenu()" id="menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center text-white bg-white/5 rounded-full border border-white/10 active:scale-90 transition-all" aria-label="Toggle Menu">
                     <i id="menu-icon" class="fa-solid fa-bars-staggered text-lg"></i>
                 </button>
-
-                <!-- Desktop Hire Us Button (Visible on md+) -->
-                <a href="contact.html"
-                    class="bg-bright-snow text-carbon-black px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-lg">
+                <a href="contact.html" class="bg-bright-snow text-carbon-black px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-lg">
                     Get Started
                 </a>
             </div>
         </nav>
-
-        <!-- 4. Mobile Overlay Menu (Webflow Style) -->
-        <div id="mobile-menu"
-            class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">
-            <!-- Close Button -->
-            <button onclick="toggleMobileMenu()"
-                class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors">
+        <div id="mobile-menu" class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">
+            <button onclick="toggleMobileMenu()" class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="space-y-8">
-                <span
-                    class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>
-
-                <a href="about.html" onclick="toggleMobileMenu()"
-                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>
-                <a href="services.html" onclick="toggleMobileMenu()"
-                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>
-                <a href="portfolio.html" onclick="toggleMobileMenu()"
-                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>
-                <a href="contact.html" onclick="toggleMobileMenu()"
-                    class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire
-                    Team</a>
+                <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>
+                <a href="about.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>
+                <a href="services.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>
+                <a href="portfolio.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>
+                <a href="contact.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire Team</a>
             </div>
-
-            <!-- Mobile Social Links -->
             <div class="mt-20 pt-10 border-t border-white/5 flex gap-8">
-                <a href="https://instagram.com/f9xrteam" aria-label="Instagram"
-                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" aria-label="WhatsApp"
-                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
-                        class="fa-brands fa-whatsapp"></i></a>
-                <a href="mailto:tontufytservices@gmail.com" aria-label="Email Us"
-                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
-                        class="fa-solid fa-envelope"></i></a>
+                <a href="https://instagram.com/f9xrteam" aria-label="Instagram" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" aria-label="WhatsApp" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:tontufytservices@gmail.com" aria-label="Email Us" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
     </header>
 
     <main class="flex-grow flex items-center justify-center relative overflow-hidden pt-28 pb-28 md:pt-36 md:pb-36">
-        <div id="scroll-progress"></div>
-        <!-- Background Decor -->
         <div class="absolute inset-0 z-0 pointer-events-none">
             <div class="absolute inset-0 opacity-[0.08]"
                 style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;">
             </div>
-            <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-accent-blue/10 rounded-full blur-[120px] animate-pulse">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-accent-blue/10 rounded-full blur-[120px] animate-pulse">
             </div>
         </div>
 
         <div class="relative z-10 text-center px-6 max-w-3xl">
             <div class="mb-8 flex justify-center">
-                <div
-                    class="w-24 h-24 md:w-28 md:h-28 bg-accent-blue/10 rounded-full flex items-center justify-center border border-accent-blue/20 shadow-[0_0_40px_rgba(59,130,246,0.2)]">
-                    <i class="fa-solid fa-check text-4xl md:text-5xl text-accent-blue"></i>
+                <div class="w-24 h-24 md:w-28 md:h-28 bg-accent-blue/10 rounded-full flex items-center justify-center border border-accent-blue/20 shadow-[0_0_40px_rgba(59,130,246,0.2)]">
+                    <i class="fa-solid fa-wand-magic-sparkles text-4xl md:text-5xl text-accent-blue"></i>
                 </div>
             </div>
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-6 block italic">What's Next?</span>
             <h1 class="text-6xl md:text-8xl font-black tracking-tighter uppercase italic mb-8 leading-none">
-                Thank <span class="text-accent-blue">You!</span>
+                Coming <span class="text-stroke">Soon.</span>
             </h1>
             <p class="text-xl md:text-2xl text-platinum/70 max-w-2xl mx-auto mb-12 font-medium italic leading-relaxed">
-                Your message has been received. Our team is already reviewing your inquiry and will get back to you
-                shortly.
+                We're building something exciting. This page will be live shortly with something worth waiting for.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="../index.html"
-                    class="inline-block bg-bright-snow text-carbon-black px-10 py-4 rounded-full font-black text-sm tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-lg hover:bg-white">
+                <a href="../index.html" class="bg-bright-snow text-carbon-black px-10 py-4 rounded-full font-black text-sm tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-lg hover:bg-white">
                     Back to Home
                 </a>
-                <a href="contact.html"
-                    class="inline-block bg-white/5 border border-white/10 px-10 py-4 rounded-full font-black text-sm tracking-widest uppercase hover:bg-white/10 hover:border-accent-blue/50 transition-all">
-                    Another Inquiry
+                <a href="contact.html" class="bg-white/5 border border-white/10 px-10 py-4 rounded-full font-black text-sm tracking-widest uppercase hover:bg-white/10 hover:border-accent-blue/50 transition-all">
+                    Contact Us
                 </a>
             </div>
         </div>
@@ -249,28 +198,28 @@
         <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20">
             <div class="flex whitespace-nowrap animate-marquee">
                 <div class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">
-                    <span>Thank You</span> <i class="fas fa-asterisk text-[10px]"></i>
-                    <span>We Appreciate You</span> <i class="fas fa-asterisk text-[10px]"></i>
-                    <span>Quick Response</span> <i class="fas fa-asterisk text-[10px]"></i>
-                    <span>Premium Support</span> <i class="fas fa-asterisk text-[10px]"></i>
-                    <span>Client First</span> <i class="fas fa-asterisk text-[10px]"></i>
-                    <span>Thank You</span> <i class="fas fa-asterisk text-[10px]"></i>
-                    <span>We Appreciate You</span> <i class="fas fa-asterisk text-[10px]"></i>
-                    <span>Quick Response</span> <i class="fas fa-asterisk text-[10px]"></i>
-                    <span>Premium Support</span> <i class="fas fa-asterisk text-[10px]"></i>
-                    <span>Client First</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Coming Soon</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Stay Tuned</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Something Big</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Launching Soon</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Exciting Times</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Coming Soon</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Stay Tuned</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Something Big</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Launching Soon</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Exciting Times</span> <i class="fas fa-asterisk text-[10px]"></i>
                 </div>
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center pb-16 mb-16 border-b border-white/5 gap-8 reveal">
+            <div class="flex flex-col md:flex-row justify-between items-center pb-16 mb-16 border-b border-white/5 gap-8">
                 <div class="text-center md:text-left">
                     <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none">
-                        Let's Build <br class="hidden md:block"> <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1px #f8f9fa;">Your Vision.</span>
+                        Stay <br class="hidden md:block"> <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1px #f8f9fa;">Tuned.</span>
                     </h2>
                 </div>
                 <a href="contact.html" class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">
-                    Hire Team <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
+                    Notify Me <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
                 </a>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-24">
@@ -387,20 +336,7 @@
         });
 
         document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     </script>
 </body>
 
 </html>
-
-
