@@ -119,44 +119,246 @@
 
     <div id="scroll-progress"></div>
 
-    <header class="fixed top-6 left-0 right-0 z-[5000] px-4">
-        <nav class="glass-nav max-w-6xl mx-auto rounded-full px-4 py-2 md:px-6 md:py-3 flex justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/10 relative transition-all duration-300">
-            <a href="../index.html" class="flex items-center gap-2 group relative z-[5001]" aria-label="F9XR Home">
-                <span class="text-xl font-black tracking-tighter uppercase text-white">F9XR <span class="text-xs font-bold opacity-80 ml-0.5">Team</span></span>
+    <header id="main-header" class="fixed top-6 left-0 right-0 z-[5000] px-4 transition-transform duration-300">
+        <nav
+            class="max-w-[95rem] w-full mx-auto flex justify-between items-center py-1 lg:py-2 px-2 relative z-[5001]">
+
+            <!-- 1. Brand Logo (Left) -->
+            <a href="../index.html" class="flex items-center gap-2 group aria-label="F9XR Home">
+                <span class="text-2xl font-black tracking-tighter uppercase text-white">F9XR <span
+                        class="text-xs font-bold opacity-80 ml-0.5 text-accent-blue border border-white/20 rounded px-1 group-hover:border-white/50 transition-colors">Team</span></span>
             </a>
-            <div class="hidden lg:flex gap-8 font-bold text-[10px] tracking-[0.2em] uppercase text-platinum/70">
-                <a href="about.html" class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">About</a>
-                <a href="services.html" class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Services</a>
-                <a href="portfolio.html" class="hover:text-white transition-colors underline-offset-8 hover:underline decoration-accent-blue">Works</a>
-                <a href="contact.html" class="text-accent-blue hover:text-white transition-colors italic">Hire Us</a>
+
+            <!-- 2. Desktop Navigation Pill (Center) -->
+            <div
+                class="hidden lg:flex items-center gap-1 font-bold text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] tracking-wide text-platinum/80 bg-carbon-black/60 backdrop-blur-2xl border border-white/20 rounded-full pl-3 pr-1 py-1 shadow-2xl">
+                
+                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
+                    <i class="fa-regular fa-building text-[14px] lg:text-[16px]"></i>
+                    <span>Company</span>
+                    <i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>
+
+                    <!-- Mega Menu (Hidden by default) -->
+                    <div
+                        class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[580px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">
+                        <div
+                            class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-2 shadow-2xl flex gap-2 relative overflow-hidden text-left normal-case tracking-normal">
+                            
+                            <div class="w-[55%] flex flex-col gap-1 p-2 bg-[#121212] rounded-xl border border-white/5">
+                                <a href="../pages/about.html"
+                                    class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item">
+                                    <div
+                                        class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">About Us</div>
+                                        <div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">Learn more
+                                            about our story and team</div>
+                                    </div>
+                                </a>
+                                <a href="../index.html#case-studies"
+                                    class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item border-t border-white/5 mt-1 pt-4">
+                                    <div
+                                        class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue">
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Customer Stories</div>
+                                        <div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">See how we've
+                                            helped our clients succeed</div>
+                                    </div>
+                                </a>
+                                <a href="../pages/contact.html"
+                                    class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item border-t border-white/5 mt-1 pt-4">
+                                    <div
+                                        class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue">
+                                        <i class="fa-solid fa-handshake-angle"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Hire Us!</div>
+                                        <div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">Collaborate
+                                            with us for mutual growth</div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="w-[45%] flex flex-col justify-center py-4 px-6 gap-6 bg-[#0a0a0a]">
+                                <a href="../legals/terms.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-regular fa-file-lines w-4 text-center opacity-80"></i> Terms of Service
+                                </a>
+                                <a href="../legals/privacy.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-solid fa-shield-halved w-4 text-center opacity-80"></i> Privacy Policy
+                                </a>
+                                <a href="../legals/refund.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-solid fa-arrow-rotate-left w-4 text-center opacity-80"></i> Refund Policy
+                                </a>
+                                <a href="../legals/agreement.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-solid fa-leaf w-4 text-center opacity-80"></i> Agreement
+                                </a>
+                                <a href="../legals/shipping.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-regular fa-circle-question w-4 text-center opacity-80"></i> Shipping
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
+                    <i class="fa-solid fa-bolt text-[14px] lg:text-[16px]"></i>
+                    <span>Services</span>
+                    <i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>
+
+                    <!-- Services Mega Menu -->
+                    <div class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[650px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">
+                        <div class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-4 shadow-2xl flex gap-4 relative overflow-hidden text-left normal-case tracking-normal">
+                            
+                            <!-- Left Column: Featured Link -->
+                            <div class="w-1/3 flex flex-col justify-center items-center bg-accent-blue/10 rounded-xl p-4 border border-accent-blue/20 hover:bg-accent-blue/20 transition-colors text-center">
+                                <i class="fa-solid fa-layer-group text-3xl text-accent-blue mb-3"></i>
+                                <h4 class="text-white font-bold text-[14px] lg:text-[16px] mb-2">Our Solutions</h4>
+                                <p class="text-platinum/60 text-[10px] leading-tight mb-4">Discover the full spectrum of our digital services.</p>
+                                <a href="../pages/services.html" class="text-[10px] uppercase tracking-widest font-bold text-accent-blue hover:text-white transition-colors">View All <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+
+                            <!-- Right Column: Service Links -->
+                            <div class="w-2/3 grid grid-cols-2 gap-2">
+                                <a href="../services/ai-visibility-optimization.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-robot text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">AI Visibility</div>
+                                        <div class="text-platinum/50 text-[9px]">Future-proof your brand</div>
+                                    </div>
+                                </a>
+                                <a href="../services/google-business-optimization.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-brands fa-google text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Google Maps SEO</div>
+                                        <div class="text-platinum/50 text-[9px]">Dominate local search</div>
+                                    </div>
+                                </a>
+                                <a href="../services/website-rentals.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-laptop-code text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Website Rentals</div>
+                                        <div class="text-platinum/50 text-[9px]">Pay-monthly sites</div>
+                                    </div>
+                                </a>
+                                <a href="../services/social-media-posting.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-hashtag text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Social Media</div>
+                                        <div class="text-platinum/50 text-[9px]">Engage your audience</div>
+                                    </div>
+                                </a>
+                                <a href="../services/indian-professionals.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-users-gear text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Hire Professionals</div>
+                                        <div class="text-platinum/50 text-[9px]">Top Indian talent</div>
+                                    </div>
+                                </a>
+                                <a href="../services/data-management.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-database text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Data Management</div>
+                                        <div class="text-platinum/50 text-[9px]">Organize your data</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
+                    <i class="fa-solid fa-layer-group text-[14px] lg:text-[16px]"></i>
+                    <span>Works</span>
+                    <i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>
+
+                    <!-- Works Mega Menu -->
+                    <div class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[350px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">
+                        <div class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-2 shadow-2xl flex flex-col gap-1 relative overflow-hidden text-left normal-case tracking-normal">
+                            <a href="../pages/portfolio.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item">
+                                <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors">
+                                    <i class="fa-regular fa-image"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Portfolio</div>
+                                    <div class="text-platinum/50 text-[10px] leading-snug font-medium">Browse our recent case studies</div>
+                                </div>
+                            </a>
+                            <a href="../pages/projects.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5">
+                                <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Our Projects</div>
+                                    <div class="text-platinum/50 text-[10px] leading-snug font-medium">Explore active digital assets</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accent Search/Contact Button in Pill -->
+                <button onclick="openSearchModal()" aria-label="Search Site" class="ml-2 w-10 h-10 lg:w-12 lg:h-12 bg-accent-blue text-white rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.5)]"><i class="fa-solid fa-magnifying-glass text-lg"></i></button>
             </div>
-            <div class="flex items-center gap-3 relative z-[5001]">
-                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank" class="hidden sm:flex bg-white/10 hover:bg-white/20 text-white border border-white/10 px-5 py-2 rounded-full font-black text-[10px] tracking-widest uppercase transition-all active:scale-95">
-                    <i class="fa-brands fa-whatsapp mr-2 text-green-400"></i> WhatsApp
+
+            <!-- 3. Header Actions (Right) -->
+            <div class="flex items-center gap-5">
+                
+                <a href="https://web.whatsapp.com/send?phone=919032065784" target="_blank" rel="noopener noreferrer"
+                    class="hidden sm:flex text-white/80 hover:text-white text-xl transition-all hover:scale-110">
+                    <i class="fa-brands fa-whatsapp"></i>
                 </a>
-                <button onclick="toggleMobileMenu()" id="menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center text-white bg-white/5 rounded-full border border-white/10 active:scale-90 transition-all" aria-label="Toggle Menu">
-                    <i id="menu-icon" class="fa-solid fa-bars-staggered text-lg"></i>
+
+                <button onclick="toggleMobileMenu()" id="menu-btn" class="lg:hidden text-white/80 hover:text-white text-xl active:scale-90 transition-all hover:scale-110"
+                    aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars-staggered"></i>
                 </button>
-                <a href="contact.html" class="bg-bright-snow text-carbon-black px-6 py-2.5 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-lg">
+                <a href="../pages/contact.html" class="hidden md:flex bg-white text-carbon-black px-6 py-3 lg:px-8 lg:py-4 rounded-full font-black text-[11px] lg:text-[13px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95 ml-2">
                     Get Started
                 </a>
             </div>
         </nav>
-        <div id="mobile-menu" class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">
-            <button onclick="toggleMobileMenu()" class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors">
+
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">
+            
+            <button onclick="toggleMobileMenu()"
+                class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="space-y-8">
-                <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>
-                <a href="about.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>
-                <a href="services.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>
-                <a href="portfolio.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>
-                <a href="contact.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire Team</a>
+                <span
+                    class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>
+
+                <a href="../pages/about.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>
+                <a href="../pages/services.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>
+                <a href="../pages/portfolio.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>
+                <a href="../pages/contact.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire
+                    Team</a>
             </div>
+
             <div class="mt-20 pt-10 border-t border-white/5 flex gap-8">
-                <a href="https://instagram.com/f9xrteam" aria-label="Instagram" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" aria-label="WhatsApp" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="mailto:tontufytservices@gmail.com" aria-label="Email Us" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://instagram.com/f9xrteam" rel="me" aria-label="Instagram"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://web.whatsapp.com/send?phone=919032065784" aria-label="WhatsApp"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:tontufytservices@gmail.com" aria-label="Email Us"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
     </header>
@@ -194,7 +396,7 @@
         </div>
     </main>
 
-        <footer class="bg-[#0a0a0a] pt-20 no-print overflow-hidden relative">
+                <footer class="bg-[#0a0a0a] pt-0 no-print overflow-hidden relative font-sans">
         <!-- 1. Top Marquee Ticker (Brand Identity) -->
         <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20 w-full">
             <div class="flex whitespace-nowrap animate-marquee">
@@ -236,11 +438,11 @@
                 <div class="flex flex-col gap-6 lg:col-span-3">
                     <h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Pages</h4>
                     <div class="flex flex-col gap-3">
-                        <a href="./about.html" class="text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight">About Us</a>
-                        <a href="./services.html" class="text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight">Services</a>
-                        <a href="./portfolio.html" class="text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight">Portfolio</a>
-                        <a href="./projects.html" class="text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight">Projects</a>
-                        <a href="./contact.html" class="text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight">Contact</a>
+                        <a href="./about.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-circle-info text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>About Us</a>
+                        <a href="./services.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-layer-group text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Services</a>
+                        <a href="./portfolio.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-briefcase text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Portfolio</a>
+                        <a href="./projects.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-rocket text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Projects</a>
+                        <a href="./contact.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-envelope text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Contact</a>
                     </div>
                 </div>
 
@@ -248,18 +450,22 @@
                 <div class="flex flex-col gap-6 lg:col-span-4">
                     <h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Services</h4>
                     <div class="flex flex-col gap-3">
-                        <a href="./services.html" class="text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight">View All Services</a>
-                        <a href="../services/ai-visibility-optimization.html" class="text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight">AI Visibility</a>
-                        <a href="../services/google-business-optimization.html" class="text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight">Google Business</a>
-                        <a href="../services/social-media-posting.html" class="text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight">Social Media</a>
-                        <a href="../services/website-rentals.html" class="text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight">Website Rentals</a>
+                        <a href="./services.html" class="flex items-center text-2xl lg:text-[28px] font-black text-accent-blue hover:text-white transition-colors tracking-tight mb-2"><i class="fa-solid fa-bolt text-white/80 mr-3 text-xl w-6 text-center"></i>View All Services <i class="fa-solid fa-arrow-right text-lg ml-2"></i></a>
+                        <a href="../services/ai-visibility-optimization.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-eye text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>AI Visibility</a>
+                        <a href="../services/google-business-optimization.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-brands fa-google text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Google Business</a>
+                        <a href="../services/social-media-posting.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-hashtag text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Social Media</a>
+                        <a href="../services/website-rentals.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-laptop-house text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Website Rentals</a>
                     </div>
                 </div>
 
-                <!-- Col 3: Contact Email -->
+                <!-- Col 3: Contact Info -->
                 <div class="flex flex-col gap-6 lg:col-span-5 overflow-hidden">
                     <h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Contact</h4>
-                    <a href="mailto:tontufytservices@gmail.com" class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white hover:text-accent-blue transition-colors tracking-tighter truncate w-full block">tontufytservices@gmail.com</a>
+                    <div class="flex flex-col gap-6">
+                        <a href="mailto:tontufytservices@gmail.com" class="text-3xl md:text-4xl lg:text-5xl font-bold text-white hover:text-accent-blue transition-colors break-all select-all inline-block w-fit tracking-tight">tontufytservices@gmail.com</a>
+                        <a href="tel:+919123442431" class="text-2xl md:text-3xl font-bold text-white hover:text-accent-blue transition-colors inline-block w-fit tracking-tight">+91 91234-42431</a>
+                        <a href="https://linkedin.com/company/f9xrteam" target="_blank" class="text-2xl md:text-3xl font-bold text-white hover:text-accent-blue transition-colors inline-block w-fit tracking-tight"><i class="fa-brands fa-linkedin mr-3 text-accent-blue"></i>LinkedIn</a>
+                    </div>
                 </div>
 
             </div>
@@ -291,7 +497,7 @@
             <!-- Giant Logo Section -->
             <div class="w-full flex items-center justify-start gap-4 sm:gap-6 lg:gap-8 mb-16 lg:mb-24 mt-auto">
                 <img src="../logo.png" alt="F9XR" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">
-                <h1 class="text-[11vw] font-black leading-none tracking-tighter text-white">F9XRTeam</h1>
+                <h2 class="text-[11vw] font-black leading-none tracking-tighter text-white">F9XRTeam</h2>
             </div>
 
         </div>
@@ -372,6 +578,75 @@
 
         document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
     </script>
+
+    <!-- Site-wide Search Modal -->
+    <div id="search-modal" class="fixed inset-0 bg-carbon-black/90 backdrop-blur-xl z-[9000] invisible opacity-0 transition-all duration-300 flex flex-col items-center pt-24 px-4">
+        <div class="w-full max-w-3xl relative">
+            <button onclick="closeSearchModal()" class="absolute -top-12 right-0 text-white/50 hover:text-white text-2xl transition-colors"><i class="fa-solid fa-xmark"></i></button>
+            <div class="relative flex items-center bg-white/10 border border-white/20 rounded-2xl overflow-hidden focus-within:border-accent-blue transition-colors">
+                <i class="fa-solid fa-magnifying-glass text-white/50 text-xl ml-6"></i>
+                <input type="text" id="search-input" placeholder="Search pages, services, works..." class="w-full bg-transparent border-none text-white text-xl md:text-2xl py-6 px-6 focus:outline-none focus:ring-0 placeholder-white/30" autocomplete="off">
+            </div>
+            <div id="search-results" class="mt-4 flex flex-col gap-2 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
+                <!-- Results injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const SEARCH_INDEX = [{"title": "F9XR Team | AI-Powered Web Design & Local SEO Growth Agency", "path": "index.html"}, {"title": "About F9XR Team | Global Digital Agency & Tech Architects", "path": "pages/about.html"}, {"title": "Contact Us | F9XR Team - Let\u00e2\u20ac\u2122s Build Something Great", "path": "pages/contact.html"}, {"title": "Lead Architect | F9XR Team", "path": "pages/expert-bio.html"}, {"title": "Backend Crew & Technical Partners | F9XR Team", "path": "pages/partners.html"}, {"title": "Portfolio | F9XR Team - Digital Masterpieces", "path": "pages/portfolio.html"}, {"title": "Our Projects | F9XR Team - Digital Agency Portfolio", "path": "pages/projects.html"}, {"title": "Our Services | F9XR Team - Digital Agency Excellence", "path": "pages/services.html"}, {"title": "Sitemap | F9XR Team - Complete Site Directory", "path": "pages/sitemap.html"}, {"title": "Digital Insights Hub | F9XR Team", "path": "pages/topics.html"}, {"title": "AI Visibility Optimization | AI Ready Content | F9XR Team", "path": "services/ai-visibility-optimization.html"}, {"title": "Data Entry & Management | F9XR Team", "path": "services/data-management.html"}, {"title": "Google Business Profile Optimization | Local SEO | F9XR Team", "path": "services/google-business-optimization.html"}, {"title": "Websites for CA, CS & CMA Professionals | F9XR Team", "path": "services/indian-professionals.html"}, {"title": "Social Media Posting Service | Content Creation | F9XR Team", "path": "services/social-media-posting.html"}, {"title": "Website Rentals | Professional Websites on Rent | F9XR Team", "path": "services/website-rentals.html"}, {"title": "Service Agreement | F9XR Team - Digital Agency", "path": "legals/agreement.html"}, {"title": "Privacy & Policy | F9XR Team - Digital Agency", "path": "legals/privacy.html"}, {"title": "Refund & Cancellation Policy | F9XR Team - Digital Agency", "path": "legals/refund.html"}, {"title": "Shipping & Delivery Policy | F9XR Team - Digital Agency", "path": "legals/shipping.html"}, {"title": "Terms of Service | F9XR Team - Digital Agency", "path": "legals/terms.html"}];
+        const ROOT_PREFIX = "../"; // Dynamically injected per page
+        
+        function openSearchModal() {
+            const modal = document.getElementById('search-modal');
+            modal.classList.remove('invisible', 'opacity-0');
+            document.getElementById('search-input').focus();
+            document.body.style.overflow = 'hidden';
+            renderSearchResults(""); // Show all or empty initially
+        }
+        
+        function closeSearchModal() {
+            const modal = document.getElementById('search-modal');
+            modal.classList.add('invisible', 'opacity-0');
+            document.body.style.overflow = '';
+            document.getElementById('search-input').value = '';
+        }
+
+        document.getElementById('search-input').addEventListener('input', function(e) {
+            renderSearchResults(e.target.value.toLowerCase());
+        });
+
+        function renderSearchResults(query) {
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = '';
+            
+            if(!query) return; // Don't show results until typing
+            
+            const matches = SEARCH_INDEX.filter(item => item.title.toLowerCase().includes(query) || item.path.toLowerCase().includes(query));
+            
+            if (matches.length === 0) {
+                resultsContainer.innerHTML = '<div class="text-white/50 text-center py-8">No results found for "' + query + '"</div>';
+                return;
+            }
+            
+            matches.forEach(match => {
+                const el = document.createElement('a');
+                el.href = ROOT_PREFIX + match.path;
+                el.className = 'bg-white/5 border border-white/5 hover:border-accent-blue/50 hover:bg-white/10 transition-colors p-4 rounded-xl flex items-center justify-between group';
+                el.innerHTML = `
+                    <div class="text-white font-bold text-lg">${match.title}</div>
+                    <i class="fa-solid fa-arrow-right text-white/30 group-hover:text-accent-blue group-hover:-rotate-45 transition-all"></i>
+                `;
+                resultsContainer.appendChild(el);
+            });
+        }
+
+        // Close on escape
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeSearchModal();
+        });
+    </script>
+
 </body>
 
 </html>

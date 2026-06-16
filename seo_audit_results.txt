@@ -1,0 +1,20 @@
+--- MISSING_TITLE (0 files) ---
+
+--- LONG_TITLE (0 files) ---
+
+--- SHORT_TITLE (0 files) ---
+
+--- MISSING_DESC (0 files) ---
+
+--- LONG_DESC (4 files) ---
+- index.html
+- pages\partners.html
+- services\indian-professionals.html
+- services\website-rentals.html
+
+--- MISSING_H1 (0 files) ---
+
+--- MULTIPLE_H1 (0 files) ---
+
+--- MISSING_ALT (0 files) ---
+
