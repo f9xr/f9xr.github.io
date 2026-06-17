@@ -463,38 +463,5 @@
     </image:image>
   </url>
 
-  <!-- ========== 404 PAGE ========== -->
-  <url>
-    <loc>https://f9xr.github.io/404.html</loc>
-    <image:image>
-      <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
-      <image:title>F9XR Team Favicon</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.github.io/assets/favicon-16x16.png</image:loc>
-      <image:title>F9XR Team Favicon 16x16</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.github.io/assets/apple-touch-icon.png</image:loc>
-      <image:title>F9XR Team Apple Touch Icon</image:title>
-    </image:image>
-  </url>
-
-  <!-- ========== ERROR PAGE ========== -->
-  <url>
-    <loc>https://f9xr.github.io/error.html</loc>
-    <image:image>
-      <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
-      <image:title>F9XR Team Favicon</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.github.io/assets/favicon-16x16.png</image:loc>
-      <image:title>F9XR Team Favicon 16x16</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.github.io/assets/apple-touch-icon.png</image:loc>
-      <image:title>F9XR Team Apple Touch Icon</image:title>
-    </image:image>
-  </url>
 
 </urlset>
