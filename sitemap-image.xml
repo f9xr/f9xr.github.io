@@ -464,4 +464,69 @@
   </url>
 
 
+  <!-- ========== TOOLS PAGES ========== -->
+  <url>
+    <loc>https://f9xr.github.io/tools/index.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>F9XR Team Open Graph Image</image:title>
+      <image:caption>SEO & Business Tools by F9XR Team</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/tools/website-cost.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>Website Cost Calculator</image:title>
+      <image:caption>Free website development cost estimation tool by F9XR Team</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/tools/local-seo-score.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>Local SEO Score Calculator</image:title>
+      <image:caption>Evaluate your local SEO performance with F9XR Team</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/tools/gbp-checker.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>GBP Completeness Checker</image:title>
+      <image:caption>Check your Google Business Profile completeness with F9XR Team</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/tools/digital-presence.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>Digital Presence Score Calculator</image:title>
+      <image:caption>Measure your online presence across 8 key factors by F9XR Team</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/tools/freelancer-quote.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>Freelancer Quote Generator</image:title>
+      <image:caption>Generate professional freelance project quotes with F9XR Team</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/tools/redesign-calculator.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>Website Redesign Calculator</image:title>
+      <image:caption>Estimate website redesign costs and timeline with F9XR Team</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/tools/marketing-budget.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>Marketing Budget Calculator</image:title>
+      <image:caption>Plan and allocate your marketing budget with F9XR Team</image:caption>
+    </image:image>
+  </url>
 </urlset>
