@@ -25,14 +25,195 @@
     <meta property="og:url" content="https://f9xr.github.io/pages/services.html">
     <meta property="og:title" content="Our Services | F9XR Team - Digital Agency Excellence">
     <meta property="og:description" content="In-depth digital services by F9XR Team. From AI-powered web development and SEO to Google Business management and professional branding.">
-    <meta property="og:image" content="https://f9xr.github.io/assets/og-image.png">
+    <meta property="og:image" content="https://f9xr.github.io/assets/og-image.webp">
     <meta property="og:site_name" content="F9XR Team">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://f9xr.github.io/pages/services.html">
     <meta property="twitter:title" content="Our Services | F9XR Team - Digital Agency Excellence">
     <meta property="twitter:description" content="In-depth digital services by F9XR Team. From AI-powered web development and SEO to Google Business management and professional branding.">
-    <meta property="twitter:image" content="https://f9xr.github.io/assets/og-image.png">
+    <meta property="twitter:image" content="https://f9xr.github.io/assets/og-image.webp">
+
+    <!-- === SCHEMA MARKUP (JSON-LD) === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Digital Agency Services",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "F9XR Team",
+        "url": "https://f9xr.github.io/"
+      },
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design & Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Optimization" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Business Management" } }
+        ]
+      }
+    }
+    </script>
+
+    <!-- === FONTS & ICONS === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Montserrat with font-display: swap for performance & stability -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- === TAILWIND CONFIG === -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'carbon-black': '#212529',
+                        'bright-snow': '#f8f9fa',
+                        'platinum': '#e9ecef',
+                        'iron-grey': '#495057',
+                        'gunmetal': '#343a40',
+                        'accent-blue': '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        /* Performance: Optimize font visibility and mitigate layout shifts */
+        /* @font-face removed */
+
+        body {
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Floating Pill Header Glassmorphism */
+        .glass-nav {
+            background: rgba(33, 37, 41, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #mobile-menu a {
+            transform: translateX(-20px);
+            transition: transform 0.5s ease, color 0.3s ease;
+        }
+
+        #mobile-menu.opacity-100 a {
+            transform: translateX(0);
+        }
+
+        /* Modern Scroll Progress Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            z-index: 2000;
+            width: 0%;
+            transition: width 0.1s;
+        }
+
+        /* Animation Utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Service Card Styling */
+        .service-card {
+            background: rgba(52, 58, 64, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover {
+            border-color: #3b82f6;
+            background: rgba(52, 58, 64, 0.5);
+            transform: translateY(-10px);
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px #f8f9fa;
+            color: transparent;
+        }
+
+        @media (max-width: 480px) {
+            .header-text {
+                display: none;
+            }
+
+            .pill-header {
+                padding: 0.75rem 1.25rem;
+            }
+        }
+    
+        /* Marquee Animation */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+            display: flex;
+            width: max-content;
+        }
+</style>
+    <link rel="stylesheet" href="../assets/css/transactions.css">
+<style>
+    $css = <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- === PRIMARY SEO META TAGS === -->
+    <title>Our Services | F9XR Team - Digital Agency Excellence</title>
+    <meta name="title" content="Our Services | F9XR Team - Digital Agency Excellence">
+    <meta name="description"
+        content="In-depth digital services by F9XR Team. From AI-powered web development and SEO to Google Business management and professional branding.">
+    <meta name="keywords"
+        content="F9XR Services, Web Development Edmonton, Local SEO, Business Email Setup, Google Business Management, Digital Marketing Studio">
+    <meta name="author" content="F9XR Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://f9xr.github.io/pages/services.html">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <link rel="manifest" href="../assets/site.webmanifest">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://f9xr.github.io/pages/services.html">
+    <meta property="og:title" content="Our Services | F9XR Team - Digital Agency Excellence">
+    <meta property="og:description" content="In-depth digital services by F9XR Team. From AI-powered web development and SEO to Google Business management and professional branding.">
+    <meta property="og:image" content="https://f9xr.github.io/assets/og-image.webp">
+    <meta property="og:site_name" content="F9XR Team">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://f9xr.github.io/pages/services.html">
+    <meta property="twitter:title" content="Our Services | F9XR Team - Digital Agency Excellence">
+    <meta property="twitter:description" content="In-depth digital services by F9XR Team. From AI-powered web development and SEO to Google Business management and professional branding.">
+    <meta property="twitter:image" content="https://f9xr.github.io/assets/og-image.webp">
 
     <!-- === SCHEMA MARKUP (JSON-LD) === -->
     <script type="application/ld+json">
@@ -899,7 +1080,908 @@
 
             <!-- Giant Logo Section -->
             <div class="w-full flex items-center justify-start gap-4 sm:gap-6 lg:gap-8 mb-16 lg:mb-24 mt-auto">
-                <img src="../logo.png" alt="F9XR" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">
+                <img src="../logo.webp" alt="F9XR" loading="lazy"  loading="lazy" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">
+                <h2 class="text-[11vw] font-black leading-none tracking-tighter text-white">F9XRTeam</h2>
+            </div>
+
+        </div>
+
+        <!-- Bottom Banner with Background -->
+        <div class="relative w-full py-6 lg:py-8 border-t border-white/10 overflow-hidden mt-8">
+            <!-- Background Image representation (dark subtle gradient) -->
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-carbon-black via-[#0a0a0a] to-black opacity-80 z-0"></div>
+            
+            <div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+                
+                <!-- Socials -->
+                <div class="flex items-center justify-center sm:justify-start gap-6">
+                    <a href="https://instagram.com/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+                <!-- Center Text -->
+                <div class="sm:absolute sm:left-1/2 sm:-translate-x-1/2">
+                    <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white">Engineering Digital Growth</h2>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-sm md:text-base font-bold text-white">
+                    &copy; 2026 F9XR Team.
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <!-- === BACK TO TOP === -->
+    <button id="btt"
+        class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl">
+        <i class="fas fa-arrow-up text-sm"></i>
+    </button>
+
+    <!-- === SCRIPTS === -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const isOpen = menu.classList.contains('opacity-100');
+            if (!isOpen) {
+                menu.classList.remove('opacity-0', 'pointer-events-none');
+                menu.classList.add('opacity-100', 'pointer-events-auto');
+                icon.classList.replace('fa-bars-staggered', 'fa-xmark');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('opacity-0', 'pointer-events-none');
+                menu.classList.remove('opacity-100', 'pointer-events-auto');
+                icon.classList.replace('fa-xmark', 'fa-bars-staggered');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Dynamic Scroll Progress
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+
+            // Back to Top Toggle
+            const btt = document.getElementById('btt');
+            if (window.scrollY > 600) btt.classList.remove('hidden');
+            else btt.classList.add('hidden');
+        });
+
+        document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Optimized Reveal Animation with Intersection Observer
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+
+    <!-- Site-wide Search Modal -->
+    <div id="search-modal" class="fixed inset-0 bg-carbon-black/90 backdrop-blur-xl z-[9000] invisible opacity-0 transition-all duration-300 flex flex-col items-center pt-24 px-4">
+        <div class="w-full max-w-3xl relative">
+            <button onclick="closeSearchModal()" class="absolute -top-12 right-0 text-white/50 hover:text-white text-2xl transition-colors"><i class="fa-solid fa-xmark"></i></button>
+            <div class="relative flex items-center bg-white/10 border border-white/20 rounded-2xl overflow-hidden focus-within:border-accent-blue transition-colors">
+                <i class="fa-solid fa-magnifying-glass text-white/50 text-xl ml-6"></i>
+                <input type="text" id="search-input" placeholder="Search pages, services, works..." class="w-full bg-transparent border-none text-white text-xl md:text-2xl py-6 px-6 focus:outline-none focus:ring-0 placeholder-white/30" autocomplete="off">
+            </div>
+            <div id="search-results" class="mt-4 flex flex-col gap-2 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
+                <!-- Results injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const SEARCH_INDEX = [{"title": "F9XR Team | AI-Powered Web Design & Local SEO Growth Agency", "path": "index.html"}, {"title": "About F9XR Team | Global Digital Agency & Tech Architects", "path": "pages/about.html"}, {"title": "Contact Us | F9XR Team - Let\u00e2\u20ac\u2122s Build Something Great", "path": "pages/contact.html"}, {"title": "Lead Architect | F9XR Team", "path": "pages/expert-bio.html"}, {"title": "Backend Crew & Technical Partners | F9XR Team", "path": "pages/partners.html"}, {"title": "Portfolio | F9XR Team - Digital Masterpieces", "path": "pages/portfolio.html"}, {"title": "Our Projects | F9XR Team - Digital Agency Portfolio", "path": "pages/projects.html"}, {"title": "Our Services | F9XR Team - Digital Agency Excellence", "path": "pages/services.html"}, {"title": "Sitemap | F9XR Team - Complete Site Directory", "path": "pages/sitemap.html"}, {"title": "Digital Insights Hub | F9XR Team", "path": "pages/topics.html"}, {"title": "AI Visibility Optimization | AI Ready Content | F9XR Team", "path": "services/ai-visibility-optimization.html"}, {"title": "Data Entry & Management | F9XR Team", "path": "services/data-management.html"}, {"title": "Google Business Profile Optimization | Local SEO | F9XR Team", "path": "services/google-business-optimization.html"}, {"title": "Websites for CA, CS & CMA Professionals | F9XR Team", "path": "services/indian-professionals.html"}, {"title": "Social Media Posting Service | Content Creation | F9XR Team", "path": "services/social-media-posting.html"}, {"title": "Website Rentals | Professional Websites on Rent | F9XR Team", "path": "services/website-rentals.html"}, {"title": "Service Agreement | F9XR Team - Digital Agency", "path": "legals/agreement.html"}, {"title": "Privacy & Policy | F9XR Team - Digital Agency", "path": "legals/privacy.html"}, {"title": "Refund & Cancellation Policy | F9XR Team - Digital Agency", "path": "legals/refund.html"}, {"title": "Shipping & Delivery Policy | F9XR Team - Digital Agency", "path": "legals/shipping.html"}, {"title": "Terms of Service | F9XR Team - Digital Agency", "path": "legals/terms.html"}];
+        const ROOT_PREFIX = "../"; // Dynamically injected per page
+        
+        function openSearchModal() {
+            const modal = document.getElementById('search-modal');
+            modal.classList.remove('invisible', 'opacity-0');
+            document.getElementById('search-input').focus();
+            document.body.style.overflow = 'hidden';
+            renderSearchResults(""); // Show all or empty initially
+        }
+        
+        function closeSearchModal() {
+            const modal = document.getElementById('search-modal');
+            modal.classList.add('invisible', 'opacity-0');
+            document.body.style.overflow = '';
+            document.getElementById('search-input').value = '';
+        }
+
+        document.getElementById('search-input').addEventListener('input', function(e) {
+            renderSearchResults(e.target.value.toLowerCase());
+        });
+
+        function renderSearchResults(query) {
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = '';
+            
+            if(!query) return; // Don't show results until typing
+            
+            const matches = SEARCH_INDEX.filter(item => item.title.toLowerCase().includes(query) || item.path.toLowerCase().includes(query));
+            
+            if (matches.length === 0) {
+                resultsContainer.innerHTML = '<div class="text-white/50 text-center py-8">No results found for "' + query + '"</div>';
+                return;
+            }
+            
+            matches.forEach(match => {
+                const el = document.createElement('a');
+                el.href = ROOT_PREFIX + match.path;
+                el.className = 'bg-white/5 border border-white/5 hover:border-accent-blue/50 hover:bg-white/10 transition-colors p-4 rounded-xl flex items-center justify-between group';
+                el.innerHTML = `
+                    <div class="text-white font-bold text-lg">${match.title}</div>
+                    <i class="fa-solid fa-arrow-right text-white/30 group-hover:text-accent-blue group-hover:-rotate-45 transition-all"></i>
+                `;
+                resultsContainer.appendChild(el);
+            });
+        }
+
+        // Close on escape
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeSearchModal();
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+.Groups[1].Value
+    
+    # Skip if this is a tailwind config script (starts with tailwind.config or has @tailwind)
+    if ($css -match 'tailwind\.config' -or $css -match '@tailwind') { return $css }
+    
+    # Remove CSS comments (but not inside strings - simple approach)
+    $css = $css -replace '/\*.*?\*/', ''
+    
+    # Collapse multiple whitespace
+    $css = $css -replace '\s+', ' '
+    
+    # Remove spaces around specific characters
+    $css = $css -replace '\s*([{}:;,])\s*', '@view-transition{navigation:auto}::view-transition-old(root){animation:vt-fade-out .35s ease-out forwards}::view-transition-new(root){animation:vt-fade-in .35s ease-in forwards}@keyframes vt-fade-out{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(-20px)}}@keyframes vt-fade-in{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}'
+    
+    # Remove trailing ; before }
+    $css = $css -replace ';}', '}'
+    
+    # Remove leading/trailing whitespace
+    $css = $css.Trim()
+    
+    return $css
+  </style>
+</head>
+
+<body class="text-bright-snow font-sans selection:bg-accent-blue selection:text-white min-h-screen flex flex-col">
+    <div class="fixed inset-0 -z-50 h-full w-full bg-black">
+        <div
+            class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        </div>
+        <div
+            class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]">
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- === ADVANCED RESPONSIVE HEADER === -->
+    <header id="main-header" class="fixed top-6 left-0 right-0 z-[5000] px-4 transition-transform duration-300">
+        <nav
+            class="max-w-[95rem] w-full mx-auto flex justify-between items-center py-1 lg:py-2 px-2 relative z-[5001]">
+
+            <!-- 1. Brand Logo (Left) -->
+            <a href="../index.html" class="flex items-center gap-2 group aria-label="F9XR Home">
+                <span class="text-2xl font-black tracking-tighter uppercase text-white">F9XR <span
+                        class="text-xs font-bold opacity-80 ml-0.5 text-accent-blue border border-white/20 rounded px-1 group-hover:border-white/50 transition-colors">Team</span></span>
+            </a>
+
+            <!-- 2. Desktop Navigation Pill (Center) -->
+            <div
+                class="hidden lg:flex items-center gap-1 font-bold text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] tracking-wide text-platinum/80 bg-carbon-black/60 backdrop-blur-2xl border border-white/20 rounded-full pl-3 pr-1 py-1 shadow-2xl">
+                
+                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
+                    <i class="fa-regular fa-building text-[14px] lg:text-[16px]"></i>
+                    <span>Company</span>
+                    <i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>
+
+                    <!-- Mega Menu (Hidden by default) -->
+                    <div
+                        class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[580px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">
+                        <div
+                            class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-2 shadow-2xl flex gap-2 relative overflow-hidden text-left normal-case tracking-normal">
+                            
+                            <div class="w-[55%] flex flex-col gap-1 p-2 bg-[#121212] rounded-xl border border-white/5">
+                                <a href="../pages/about.html"
+                                    class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item">
+                                    <div
+                                        class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">About Us</div>
+                                        <div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">Learn more
+                                            about our story and team</div>
+                                    </div>
+                                </a>
+                                <a href="../index.html#case-studies"
+                                    class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item border-t border-white/5 mt-1 pt-4">
+                                    <div
+                                        class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue">
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Customer Stories</div>
+                                        <div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">See how we've
+                                            helped our clients succeed</div>
+                                    </div>
+                                </a>
+                                <a href="../pages/contact.html"
+                                    class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item border-t border-white/5 mt-1 pt-4">
+                                    <div
+                                        class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue">
+                                        <i class="fa-solid fa-handshake-angle"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Hire Us!</div>
+                                        <div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">Collaborate
+                                            with us for mutual growth</div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="w-[45%] flex flex-col justify-center py-4 px-6 gap-6 bg-[#0a0a0a]">
+                                <a href="../legals/terms.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-regular fa-file-lines w-4 text-center opacity-80"></i> Terms of Service
+                                </a>
+                                <a href="../legals/privacy.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-solid fa-shield-halved w-4 text-center opacity-80"></i> Privacy Policy
+                                </a>
+                                <a href="../legals/refund.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-solid fa-arrow-rotate-left w-4 text-center opacity-80"></i> Refund Policy
+                                </a>
+                                <a href="../legals/agreement.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-solid fa-leaf w-4 text-center opacity-80"></i> Agreement
+                                </a>
+                                <a href="../legals/shipping.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-regular fa-circle-question w-4 text-center opacity-80"></i> Shipping
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
+                    <i class="fa-solid fa-bolt text-[14px] lg:text-[16px]"></i>
+                    <span>Services</span>
+                    <i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>
+
+                    <!-- Services Mega Menu -->
+                    <div class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[650px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">
+                        <div class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-4 shadow-2xl flex gap-4 relative overflow-hidden text-left normal-case tracking-normal">
+                            
+                            <!-- Left Column: Featured Link -->
+                            <div class="w-1/3 flex flex-col justify-center items-center bg-accent-blue/10 rounded-xl p-4 border border-accent-blue/20 hover:bg-accent-blue/20 transition-colors text-center">
+                                <i class="fa-solid fa-layer-group text-3xl text-accent-blue mb-3"></i>
+                                <h4 class="text-white font-bold text-[14px] lg:text-[16px] mb-2">Our Solutions</h4>
+                                <p class="text-platinum/60 text-[10px] leading-tight mb-4">Discover the full spectrum of our digital services.</p>
+                                <a href="../pages/services.html" class="text-[10px] uppercase tracking-widest font-bold text-accent-blue hover:text-white transition-colors">View All <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+
+                            <!-- Right Column: Service Links -->
+                            <div class="w-2/3 grid grid-cols-2 gap-2">
+                                <a href="../services/ai-visibility-optimization.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-robot text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">AI Visibility</div>
+                                        <div class="text-platinum/50 text-[9px]">Future-proof your brand</div>
+                                    </div>
+                                </a>
+                                <a href="../services/google-business-optimization.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-brands fa-google text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Google Maps SEO</div>
+                                        <div class="text-platinum/50 text-[9px]">Dominate local search</div>
+                                    </div>
+                                </a>
+                                <a href="../services/website-rentals.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-laptop-code text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Website Rentals</div>
+                                        <div class="text-platinum/50 text-[9px]">Pay-monthly sites</div>
+                                    </div>
+                                </a>
+                                <a href="../services/social-media-posting.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-hashtag text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Social Media</div>
+                                        <div class="text-platinum/50 text-[9px]">Engage your audience</div>
+                                    </div>
+                                </a>
+                                <a href="../services/indian-professionals.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-users-gear text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Hire Professionals</div>
+                                        <div class="text-platinum/50 text-[9px]">Top Indian talent</div>
+                                    </div>
+                                </a>
+                                <a href="../services/data-management.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-database text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Data Management</div>
+                                        <div class="text-platinum/50 text-[9px]">Organize your data</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
+                    <i class="fa-solid fa-layer-group text-[14px] lg:text-[16px]"></i>
+                    <span>Works</span>
+                    <i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>
+
+                    <!-- Works Mega Menu -->
+                    <div class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[350px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">
+                        <div class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-2 shadow-2xl flex flex-col gap-1 relative overflow-hidden text-left normal-case tracking-normal">
+                            <a href="../pages/portfolio.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item">
+                                <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors">
+                                    <i class="fa-regular fa-image"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Portfolio</div>
+                                    <div class="text-platinum/50 text-[10px] leading-snug font-medium">Browse our recent case studies</div>
+                                </div>
+                            </a>
+                            <a href="../pages/projects.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5">
+                                <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Our Projects</div>
+                                    <div class="text-platinum/50 text-[10px] leading-snug font-medium">Explore active digital assets</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accent Search/Contact Button in Pill -->
+                <button onclick="openSearchModal()" aria-label="Search Site" class="ml-2 w-10 h-10 lg:w-12 lg:h-12 bg-accent-blue text-white rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.5)]"><i class="fa-solid fa-magnifying-glass text-lg"></i></button>
+            </div>
+
+            <!-- 3. Header Actions (Right) -->
+            <div class="flex items-center gap-5">
+                
+                <a href="https://web.whatsapp.com/send?phone=919032065784" target="_blank" rel="noopener noreferrer"
+                    class="hidden sm:flex text-white/80 hover:text-white text-xl transition-all hover:scale-110">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <button onclick="toggleMobileMenu()" id="menu-btn" class="lg:hidden text-white/80 hover:text-white text-xl active:scale-90 transition-all hover:scale-110"
+                    aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars-staggered"></i>
+                </button>
+                <a href="../pages/contact.html" class="hidden md:flex bg-white text-carbon-black px-6 py-3 lg:px-8 lg:py-4 rounded-full font-black text-[11px] lg:text-[13px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95 ml-2">
+                    Get Started
+                </a>
+            </div>
+        </nav>
+
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">
+            
+            <button onclick="toggleMobileMenu()"
+                class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="space-y-8">
+                <span
+                    class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>
+
+                <a href="../pages/about.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>
+                <a href="../pages/services.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>
+                <a href="../pages/portfolio.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>
+                <a href="../pages/contact.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire
+                    Team</a>
+            </div>
+
+            <div class="mt-20 pt-10 border-t border-white/5 flex gap-8">
+                <a href="https://instagram.com/f9xrteam" rel="me" aria-label="Instagram"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://web.whatsapp.com/send?phone=919032065784" aria-label="WhatsApp"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:tontufytservices@gmail.com" aria-label="Email Us"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex-grow">
+
+        <!-- === HERO SECTION === -->
+        <section class="mb-24 reveal text-center lg:text-left">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+                <div class="max-w-4xl">
+                    <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block">Architects
+                        of Digital Precision</span>
+                    <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8 uppercase italic">
+                        In-Depth <br> <span class="text-stroke">Solutions.</span>
+                    </h1>
+                    <p class="text-xl md:text-3xl text-platinum/70 font-medium leading-relaxed italic">
+                        What We Do? From web design and development, to SEO and support â€” our services help your site
+                        stand out and convert new leads.
+                    </p>
+                </div>
+                <div class="bg-gunmetal border border-white/5 p-8 rounded-[2.5rem] backdrop-blur-md hidden lg:block">
+                    <p class="text-[10px] uppercase tracking-widest text-iron-grey font-black mb-4 italic">Service Model
+                    </p>
+                    <h4 class="text-2xl font-black text-white italic">Per-Project Billing.</h4>
+                    <p class="text-sm opacity-50 mt-2 font-medium tracking-tight">Flat rates. No hourly surprises.
+                        Global delivery.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- === QUICK STATS BAR === -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24 reveal">
+            <div class="bg-white/5 border border-white/10 p-6 rounded-3xl text-center">
+                <i class="fas fa-globe-americas text-accent-blue text-2xl mb-2"></i>
+                <p class="text-[10px] uppercase tracking-widest font-bold opacity-40">Reach</p>
+                <p class="font-black text-lg">Worldwide</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 p-6 rounded-3xl text-center">
+                <i class="fas fa-microchip text-accent-blue text-2xl mb-2"></i>
+                <p class="text-[10px] uppercase tracking-widest font-bold opacity-40">Tech Stack</p>
+                <p class="font-black text-lg">Modern & Scalable</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 p-6 rounded-3xl text-center">
+                <i class="fas fa-hand-holding-usd text-accent-blue text-2xl mb-2"></i>
+                <p class="text-[10px] uppercase tracking-widest font-bold opacity-40">Pricing</p>
+                <p class="font-black text-lg">Project Based</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 p-6 rounded-3xl text-center">
+                <i class="fas fa-headset text-accent-blue text-2xl mb-2"></i>
+                <p class="text-[10px] uppercase tracking-widest font-bold opacity-40">Support</p>
+                <p class="font-black text-lg">2 Months Included</p>
+            </div>
+        </section>
+
+        <!-- === CORE SERVICES GRID (BENTO STYLE) === -->
+        <section class="space-y-32" id="digital">
+
+            <!-- Development Deep Dive -->
+            <div class="reveal">
+                <div class="flex items-center gap-4 mb-12">
+                    <span class="w-12 h-[2px] bg-accent-blue"></span>
+                    <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter italic">01. Development &
+                        Design</h2>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <!-- Web Dev Card -->
+                    <div class="lg:col-span-2 service-card p-10 rounded-[3rem] relative overflow-hidden group">
+                        <div
+                            class="absolute -bottom-20 -right-20 w-64 h-64 bg-accent-blue/5 rounded-full blur-3xl group-hover:bg-accent-blue/10 transition-all">
+                        </div>
+                        <i class="fas fa-laptop-code text-5xl text-accent-blue mb-8"></i>
+                        <h3 class="text-3xl font-black mb-6 tracking-tighter uppercase">Website Design & Development
+                        </h3>
+                        <p class="text-lg md:text-xl text-platinum/60 leading-relaxed mb-8">
+                            Modern, responsive websites tailored to your brand goals. From sleek landing pages to
+                            complex platforms, we design intuitive experiences that look great on any device.
+                        </p>
+                        <div class="grid sm:grid-cols-2 gap-6 text-sm font-bold opacity-80 italic">
+                            <div class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Static &
+                                Dynamic Builds</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Business
+                                Landing Pages</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Redesign
+                                & UI Improvements</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Fully
+                                Managed Deployment</div>
+                        </div>
+                    </div>
+                    <!-- Tech Stack Sidebar -->
+                    <div class="bg-gunmetal/20 p-10 rounded-[3rem] border border-white/5">
+                        <h4 class="text-sm uppercase tracking-widest font-black text-iron-grey mb-8">The Tech Stack</h4>
+                        <div class="space-y-8">
+                            <div>
+                                <p class="text-xs font-black mb-3 opacity-30">Frontend</p>
+                                <p class="font-bold text-lg">HTML, CSS, JS, Tailwind</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-black mb-3 opacity-30">CMS Integration</p>
+                                <p class="font-bold text-lg">WordPress, Blogger, WIX</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-black mb-3 opacity-30">Hosting Mastery</p>
+                                <p class="font-bold text-lg">AWS, Bluehost, Hostinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEO & Marketing Deep Dive -->
+            <div class="reveal" id="marketing">
+                <div class="flex items-center gap-4 mb-12">
+                    <span class="w-12 h-[2px] bg-accent-blue"></span>
+                    <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter italic">02. Search & Reach
+                    </h2>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="service-card p-10 rounded-[3rem] group">
+                        <i class="fas fa-chart-line text-5xl text-accent-blue mb-8"></i>
+                        <h3 class="text-3xl font-black mb-6 tracking-tighter uppercase">SEO Enhancing</h3>
+                        <p class="text-lg text-platinum/60 leading-relaxed mb-6">
+                            Optimize to rank higher. We help local and world-wide customers find you through keyword
+                            research, performance tuning, and structured content.
+                        </p>
+                        <ul class="space-y-3 font-bold text-sm">
+                            <li class="flex items-center gap-3"><i class="fas fa-arrow-up text-accent-blue"></i> On-Page
+                                & Technical SEO</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-arrow-up text-accent-blue"></i> Search
+                                Console Indexing</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-arrow-up text-accent-blue"></i> 2
+                                Months Ranking Support</li>
+                        </ul>
+                    </div>
+                    <div class="service-card p-10 rounded-[3rem] group">
+                        <i class="fas fa-map-marker-alt text-5xl text-accent-blue mb-8"></i>
+                        <h3 class="text-3xl font-black mb-6 tracking-tighter uppercase">Google Business Profile</h3>
+                        <p class="text-lg text-platinum/60 leading-relaxed mb-6">
+                            Appear in local results and Google Maps. We handle profile creation, photo uploads, category
+                            selection, and reputation management.
+                        </p>
+                        <p class="text-xs font-black text-accent-blue tracking-widest uppercase">Critical for local
+                            Clinics, Gyms, and Salons.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Infrastructure & Security -->
+            <div class="reveal" id="infrastructure">
+                <div class="flex items-center gap-4 mb-12">
+                    <span class="w-12 h-[2px] bg-accent-blue"></span>
+                    <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter italic">03. Infrastructure
+                    </h2>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <!-- Domain/Email -->
+                    <div class="service-card p-10 rounded-[3rem]">
+                        <i class="fas fa-envelope-open-text text-4xl text-accent-blue mb-6"></i>
+                        <h4 class="text-xl font-black mb-4 uppercase">Business Email</h4>
+                        <p class="text-sm text-platinum/60 leading-relaxed">Setup you@yourdomain.com. Build trust and
+                            look credible from day one with managed DNS and SSL.</p>
+                    </div>
+                    <!-- Maintenance -->
+                    <div class="service-card p-10 rounded-[3rem]">
+                        <i class="fas fa-tools text-4xl text-accent-blue mb-6"></i>
+                        <h4 class="text-xl font-black mb-4 uppercase">Maintenance</h4>
+                        <p class="text-sm text-platinum/60 leading-relaxed">Monthly technical care. Uptime monitoring,
+                            bug fixes, and security updates so your site never stops working.</p>
+                    </div>
+                    <!-- Branding -->
+                    <div class="service-card p-10 rounded-[3rem]">
+                        <i class="fas fa-fingerprint text-4xl text-accent-blue mb-6"></i>
+                        <h4 class="text-xl font-black mb-4 uppercase">Branding & Logo</h4>
+                        <p class="text-sm text-platinum/60 leading-relaxed">Engagement visuals and professional logo
+                            design for a unique look that captivates your audience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === SPECIALIZED SERVICES === -->
+            <div class="reveal" id="specialized">
+                <div class="flex items-center gap-4 mb-12">
+                    <span class="w-12 h-[2px] bg-accent-blue"></span>
+                    <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter italic">04. Specialized Services</h2>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <a href="../services/indian-professionals.html" class="service-card p-10 rounded-[3rem] group block relative overflow-hidden">
+                        <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-accent-blue/5 rounded-full blur-3xl group-hover:bg-accent-blue/10 transition-all"></div>
+                        <i class="fas fa-scale-balanced text-5xl text-accent-blue mb-8"></i>
+                        <h3 class="text-3xl font-black mb-6 tracking-tighter uppercase">CA, CS & CMA Website</h3>
+                        <p class="text-lg text-platinum/60 leading-relaxed mb-6">
+                            ICAI & ICSI compliant websites for Indian Chartered Accountants, Company Secretaries, and Cost Accountants with domain, CMS, tax calculators, and professional updates.
+                        </p>
+                        <span class="inline-flex items-center gap-2 text-accent-blue font-black text-sm uppercase tracking-widest group-hover:gap-4 transition-all">
+                            View Service <i class="fa-solid fa-arrow-right-long"></i>
+                        </span>
+                    </a>
+                    <a href="../services/data-management.html" class="service-card p-10 rounded-[3rem] group block relative overflow-hidden">
+                        <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-accent-blue/5 rounded-full blur-3xl group-hover:bg-accent-blue/10 transition-all"></div>
+                        <i class="fas fa-database text-5xl text-accent-blue mb-8"></i>
+                        <h3 class="text-3xl font-black mb-6 tracking-tighter uppercase">Data Management</h3>
+                        <p class="text-lg text-platinum/60 leading-relaxed mb-6">
+                            Data entry, cleaning, formatting, and organization services for small businesses, agencies, e-commerce stores, and startups managing large datasets.
+                        </p>
+                        <span class="inline-flex items-center gap-2 text-accent-blue font-black text-sm uppercase tracking-widest group-hover:gap-4 transition-all">
+                            View Service <i class="fa-solid fa-arrow-right-long"></i>
+                        </span>
+                    </a>
+                    <a href="../services/website-rentals.html" class="service-card p-10 rounded-[3rem] group block relative overflow-hidden">
+                        <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-accent-blue/5 rounded-full blur-3xl group-hover:bg-accent-blue/10 transition-all"></div>
+                        <i class="fas fa-house-circle-check text-5xl text-accent-blue mb-8"></i>
+                        <h3 class="text-3xl font-black mb-6 tracking-tighter uppercase">Website Rentals</h3>
+                        <p class="text-lg text-platinum/60 leading-relaxed mb-6">
+                            Get a fully designed professional website on a low monthly rental. Includes design, hosting, maintenance, updates & priority support — no large upfront cost.
+                        </p>
+                        <span class="inline-flex items-center gap-2 text-accent-blue font-black text-sm uppercase tracking-widest group-hover:gap-4 transition-all">
+                            View Service <i class="fa-solid fa-arrow-right-long"></i>
+                        </span>
+                    </a>
+                    <a href="../services/google-business-optimization.html" class="service-card p-10 rounded-[3rem] group block relative overflow-hidden">
+                        <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-accent-blue/5 rounded-full blur-3xl group-hover:bg-accent-blue/10 transition-all"></div>
+                        <i class="fas fa-map-pin text-5xl text-accent-blue mb-8"></i>
+                        <h3 class="text-3xl font-black mb-6 tracking-tighter uppercase">Google Business Optimization</h3>
+                        <p class="text-lg text-platinum/60 leading-relaxed mb-6">
+                            Optimize your Google Business Profile for more local visibility, more calls, and more customers. GBP setup, verification, ranking & review management.
+                        </p>
+                        <span class="inline-flex items-center gap-2 text-accent-blue font-black text-sm uppercase tracking-widest group-hover:gap-4 transition-all">
+                            View Service <i class="fa-solid fa-arrow-right-long"></i>
+                        </span>
+                    </a>
+                    <a href="../services/social-media-posting.html" class="service-card p-10 rounded-[3rem] group block relative overflow-hidden">
+                        <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-accent-blue/5 rounded-full blur-3xl group-hover:bg-accent-blue/10 transition-all"></div>
+                        <i class="fas fa-hashtag text-5xl text-accent-blue mb-8"></i>
+                        <h3 class="text-3xl font-black mb-6 tracking-tighter uppercase">Social Media Posting</h3>
+                        <p class="text-lg text-platinum/60 leading-relaxed mb-6">
+                            Consistent social media posting service. We create, design, and schedule engaging content for Instagram, Facebook, LinkedIn & more.
+                        </p>
+                        <span class="inline-flex items-center gap-2 text-accent-blue font-black text-sm uppercase tracking-widest group-hover:gap-4 transition-all">
+                            View Service <i class="fa-solid fa-arrow-right-long"></i>
+                        </span>
+                    </a>
+                    <a href="../services/ai-visibility-optimization.html" class="service-card p-10 rounded-[3rem] group block relative overflow-hidden">
+                        <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-accent-blue/5 rounded-full blur-3xl group-hover:bg-accent-blue/10 transition-all"></div>
+                        <i class="fas fa-brain text-5xl text-accent-blue mb-8"></i>
+                        <h3 class="text-3xl font-black mb-6 tracking-tighter uppercase">AI Visibility Optimization</h3>
+                        <p class="text-lg text-platinum/60 leading-relaxed mb-6">
+                            Optimize your brand for AI search engines like ChatGPT, Gemini, Copilot & Perplexity. Make your business discoverable in AI-generated answers.
+                        </p>
+                        <span class="inline-flex items-center gap-2 text-accent-blue font-black text-sm uppercase tracking-widest group-hover:gap-4 transition-all">
+                            View Service <i class="fa-solid fa-arrow-right-long"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+        <!-- === THE F9XR VALUE ADD (EXTRA MILE) === -->
+        <section class="py-32 reveal">
+            <div class="bg-bright-snow text-carbon-black rounded-[4rem] p-10 md:p-20 overflow-hidden relative">
+                <div class="absolute -top-10 -right-10 opacity-5">
+                    <i class="fas fa-gem text-[20rem]"></i>
+                </div>
+                <div class="max-w-4xl relative z-10">
+                    <h2 class="text-4xl md:text-7xl font-black tracking-tighter uppercase mb-12 italic leading-tight">
+                        The <span class="text-accent-blue">Extra</span> Mile.</h2>
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-5">
+                                <div
+                                    class="w-10 h-10 bg-carbon-black text-white rounded-full flex-shrink-0 flex items-center justify-center font-black">
+                                    1</div>
+                                <div>
+                                    <h5 class="font-black text-xl mb-2">Monetization Help</h5>
+                                    <p class="text-sm opacity-70">Ads Network approval assistance and high-income
+                                        earning strategy secrets.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-5">
+                                <div
+                                    class="w-10 h-10 bg-carbon-black text-white rounded-full flex-shrink-0 flex items-center justify-center font-black">
+                                    2</div>
+                                <div>
+                                    <h5 class="font-black text-xl mb-2">Google Indexing</h5>
+                                    <p class="text-sm opacity-70">Search Console setup ensuring Google finds and indexes
+                                        every page instantly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-5">
+                                <div
+                                    class="w-10 h-10 bg-carbon-black text-white rounded-full flex-shrink-0 flex items-center justify-center font-black">
+                                    3</div>
+                                <div>
+                                    <h5 class="font-black text-xl mb-2">Security & Trust</h5>
+                                    <p class="text-sm opacity-70">Full SSL Certificates and Privacy Policy
+                                        implementation for 100% visitor trust.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-5">
+                                <div
+                                    class="w-10 h-10 bg-carbon-black text-white rounded-full flex-shrink-0 flex items-center justify-center font-black">
+                                    4</div>
+                                <div>
+                                    <h5 class="font-black text-xl mb-2">Premium Graphics</h5>
+                                    <p class="text-sm opacity-70">Engaging visuals and animations that captivate your
+                                        potential leads.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === WHO WE WORK FOR === -->
+        <section class="py-24 border-t border-white/10 reveal">
+            <h2 class="text-4xl font-black tracking-tighter mb-12 uppercase italic">Target Verticals</h2>
+            <div class="flex flex-wrap gap-4">
+                <span
+                    class="px-8 py-4 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors">Local
+                    Clinics & Gyms</span>
+                <span
+                    class="px-8 py-4 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors">Real
+                    Estate Agencies</span>
+                <span
+                    class="px-8 py-4 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors">Small
+                    Local Businesses</span>
+                <span
+                    class="px-8 py-4 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors">Coaches
+                    & Consultants</span>
+                <span
+                    class="px-8 py-4 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors">NGOs
+                    & Gov Portals</span>
+                <span
+                    class="px-8 py-4 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors">Salons
+                    & Beauty Parlors</span>
+            </div>
+        </section>
+
+        <!-- === FINAL CTA === -->
+        <section class="py-32 reveal">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-10 leading-none">READY TO <br> <span
+                        class="text-stroke italic">COMMENCE?</span></h2>
+                <p class="text-xl md:text-2xl text-platinum/60 mb-12 italic leading-relaxed">
+                    Our digital agency is dedicated to crafting seamless and intuitive experiences that enable
+                    businesses to thrive.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="https://wa.me/message/X3KGWTAJ6Z6NB1"
+                        class="bg-bright-snow text-carbon-black px-12 py-5 rounded-full font-black text-xl hover:scale-105 transition-all shadow-2xl">
+                        WhatsApp Team
+                    </a>
+                    <a href="mailto:tontufytservices@gmail.com"
+                        class="bg-white/5 border border-white/10 px-12 py-5 rounded-full font-black text-xl hover:bg-white hover:text-carbon-black transition-all">
+                        Email Support
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- === FOOTER === -->
+                <footer class="bg-[#0a0a0a] pt-0 no-print overflow-hidden relative font-sans">
+        <!-- 1. Top Marquee Ticker (Brand Identity) -->
+        <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20 w-full">
+            <div class="flex whitespace-nowrap animate-marquee">
+                <div class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">
+                    <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <!-- Repeated for infinite scroll -->
+                    <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col min-h-[60vh]">
+            <!-- CTA Section -->
+            <div class="flex flex-col md:flex-row justify-between items-center pb-16 mb-16 border-b border-white/5 gap-8 reveal">
+                <div class="text-center md:text-left">
+                    <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none text-white">
+                        Let's Build <br class="hidden md:block"> <span class="text-stroke text-transparent"
+                            style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span>
+                    </h2>
+                </div>
+                <a href="./contact.html"
+                    class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">
+                    Hire Team <i
+                        class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
+                </a>
+            </div>
+
+            <!-- Top Columns -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24">
+                
+                <!-- Col 1 -->
+                <div class="flex flex-col gap-6 lg:col-span-3">
+                    <h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Pages</h4>
+                    <div class="flex flex-col gap-3">
+                        <a href="./about.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-circle-info text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>About Us</a>
+                        <a href="./services.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-layer-group text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Services</a>
+                        <a href="./portfolio.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-briefcase text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Portfolio</a>
+                        <a href="./projects.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-rocket text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Projects</a>
+                        <a href="./contact.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-envelope text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Contact</a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="flex flex-col gap-6 lg:col-span-4">
+                    <h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Services</h4>
+                    <div class="flex flex-col gap-3">
+                        <a href="./services.html" class="flex items-center text-2xl lg:text-[28px] font-black text-accent-blue hover:text-white transition-colors tracking-tight mb-2"><i class="fa-solid fa-bolt text-white/80 mr-3 text-xl w-6 text-center"></i>View All Services <i class="fa-solid fa-arrow-right text-lg ml-2"></i></a>
+                        <a href="../services/ai-visibility-optimization.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-eye text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>AI Visibility</a>
+                        <a href="../services/google-business-optimization.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-brands fa-google text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Google Business</a>
+                        <a href="../services/social-media-posting.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-hashtag text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Social Media</a>
+                        <a href="../services/website-rentals.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-laptop-house text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Website Rentals</a>
+                    </div>
+                </div>
+
+                <!-- Col 3: Contact Info -->
+                <div class="flex flex-col gap-6 lg:col-span-5 overflow-hidden">
+                    <h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Contact</h4>
+                    <div class="flex flex-col gap-6">
+                        <a href="mailto:tontufytservices@gmail.com" class="text-3xl md:text-4xl lg:text-5xl font-bold text-white hover:text-accent-blue transition-colors break-all select-all inline-block w-fit tracking-tight">tontufytservices@gmail.com</a>
+                        <a href="tel:+919123442431" class="text-2xl md:text-3xl font-bold text-white hover:text-accent-blue transition-colors inline-block w-fit tracking-tight">+91 91234-42431</a>
+                        <a href="https://linkedin.com/company/f9xrteam" target="_blank" class="text-2xl md:text-3xl font-bold text-white hover:text-accent-blue transition-colors inline-block w-fit tracking-tight"><i class="fa-brands fa-linkedin mr-3 text-accent-blue"></i>LinkedIn</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Middle Section: Small Links & Video Block -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 mb-20">
+                <!-- Links -->
+                <div class="flex flex-wrap gap-x-6 gap-y-3">
+                    <a href="../legals/terms.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Terms and conditions</a>
+                    <a href="../legals/privacy.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="../legals/agreement.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Service Agreement</a>
+                    <a href="../legals/refund.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Refund Policy</a>
+                    <a href="../legals/shipping.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Shipping Policy</a>
+                    <a href="./sitemap.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Sitemap</a>
+                </div>
+
+                <!-- Showreel Button -->
+                <a href="https://youtu.be/l-52kGRwH_Y?si=WrEJBUEmIMM9KWng" target="_blank" class="relative group cursor-pointer overflow-hidden rounded-xl w-48 h-28 bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-black/50 group-hover:scale-110 transition-transform duration-700"></div>
+                    <div class="relative z-10 flex flex-col items-center gap-2">
+                        <div class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-play ml-1 text-sm"></i>
+                        </div>
+                        <span class="text-[11px] font-bold text-white tracking-widest uppercase">Play showreel</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Giant Logo Section -->
+            <div class="w-full flex items-center justify-start gap-4 sm:gap-6 lg:gap-8 mb-16 lg:mb-24 mt-auto">
+                <img src="../logo.webp" alt="F9XR" loading="lazy"  loading="lazy" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">
                 <h2 class="text-[11vw] font-black leading-none tracking-tighter text-white">F9XRTeam</h2>
             </div>
 

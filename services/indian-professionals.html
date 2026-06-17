@@ -28,7 +28,7 @@
     <meta property="og:url" content="https://f9xr.github.io/services/indian-professionals.html">
     <meta property="og:title" content="Website for CA, CS & CMA Professionals | ICAI/ICSI Compliant">
     <meta property="og:description" content="Get an ICAI & ICSI compliant website for your CA, CS or CMA practice. Domain, CMS, tax calculators, statutory dates & professional updates included.">
-    <meta property="og:image" content="https://f9xr.github.io/assets/og-image.png">
+    <meta property="og:image" content="https://f9xr.github.io/assets/og-image.webp">
     <meta property="og:site_name" content="F9XR Team">
 
     <!-- === TWITTER === -->
@@ -36,7 +36,254 @@
     <meta property="twitter:url" content="https://f9xr.github.io/services/indian-professionals.html">
     <meta property="twitter:title" content="Website for CA, CS & CMA Professionals | ICAI/ICSI Compliant">
     <meta property="twitter:description" content="Get an ICAI & ICSI compliant website for your practice. Domain, CMS, tax calculators, statutory dates & more.">
-    <meta property="twitter:image" content="https://f9xr.github.io/assets/og-image.png">
+    <meta property="twitter:image" content="https://f9xr.github.io/assets/og-image.webp">
+
+    <!-- === SCHEMA MARKUP - Service + LocalBusiness === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Service", "Product"],
+      "name": "ICAI/ICSI Compliant Website for CA, CS & CMA Professionals",
+      "serviceType": "Professional Website Development",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "F9XR Team",
+        "url": "https://f9xr.github.io/",
+        "logo": "https://f9xr.github.io/assets/logo.png",
+        "description": "Global digital agency specializing in AI-powered web development, Local SEO, and professional websites for Indian CA, CS, and CMA firms.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-90320-65784",
+          "contactType": "customer service",
+          "email": "tontufytservices@gmail.com",
+          "availableLanguage": "en"
+        },
+        "sameAs": [
+          "https://wa.me/message/X3KGWTAJ6Z6NB1",
+          "https://facebook.com/f9xrteam",
+          "https://instagram.com/f9xrteam",
+          "https://linkedin.com/company/f9xrteam"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Remote",
+          "addressCountry": "Global"
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": ["Chartered Accountants", "Company Secretaries", "Cost Accountants"]
+      },
+      "description": "ICAI/ICSI compliant websites for Chartered Accountants, Company Secretaries, and Cost Accountants with domain, CMS, tax calculators, and professional updates.",
+      "offers": {
+        "@type": "Offer",
+        "price": "Contact for pricing",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+
+    <!-- === BREADCRUMB SCHEMA === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://f9xr.github.io/"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://f9xr.github.io/pages/services.html"
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Website for Indian Professionals",
+        "item": "https://f9xr.github.io/services/indian-professionals.html"
+      }]
+    }
+    </script>
+
+    <!-- === FONTS & ICONS === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- === TAILWIND CONFIG === -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'carbon-black': '#212529',
+                        'bright-snow': '#f8f9fa',
+                        'platinum': '#e9ecef',
+                        'iron-grey': '#495057',
+                        'gunmetal': '#343a40',
+                        'accent-blue': '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        body {
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass-nav {
+            background: rgba(33, 37, 41, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #mobile-menu a {
+            transform: translateX(-20px);
+            transition: transform 0.5s ease, color 0.3s ease;
+        }
+
+        #mobile-menu.opacity-100 a {
+            transform: translateX(0);
+        }
+
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            z-index: 2000;
+            width: 0%;
+            transition: width 0.1s;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px #f8f9fa;
+            color: transparent;
+        }
+
+        .service-card {
+            background: rgba(52, 58, 64, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover {
+            border-color: #3b82f6;
+            background: rgba(52, 58, 64, 0.5);
+            transform: translateY(-10px);
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .faq-item.open .faq-content {
+            max-height: 5000px;
+        }
+
+        .faq-item.open .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .feature-card {
+            background: rgba(52, 58, 64, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .feature-card:hover {
+            border-color: #3b82f6;
+            background: rgba(52, 58, 64, 0.5);
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 480px) {
+            .header-text {
+                display: none;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #212529;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #495057;
+            border-radius: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="../assets/css/transactions.css">
+<style>
+    $css = <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- === PRIMARY SEO META TAGS === -->
+    <title>Websites for CA, CS & CMA Professionals | F9XR Team</title>
+    <meta name="title" content="Website for CA, CS & CMA Professionals | ICAI/ICSI Compliant | F9XR Team">
+    <meta name="description"
+        content="Get an ICAI & ICSI compliant website for your CA, CS or CMA practice. Includes professional domain, CMS, tax calculators, statutory date checker, news...">
+    <meta name="keywords"
+        content="CA website, CS website, CMA website, ICAI guidelines website, ICSI guidelines website, website for chartered accountants, website for company secretaries, professional website for CA firm, CA firm web design, Indian professionals website, CA website builder, ICAI compliant website design, practice website for CA, CSO website, CMA firm website">
+    <meta name="author" content="F9XR Team">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#212529">
+    <link rel="canonical" href="https://f9xr.github.io/services/indian-professionals.html">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <link rel="manifest" href="../assets/site.webmanifest">
+
+    <!-- === OPEN GRAPH / FACEBOOK / LINKEDIN === -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://f9xr.github.io/services/indian-professionals.html">
+    <meta property="og:title" content="Website for CA, CS & CMA Professionals | ICAI/ICSI Compliant">
+    <meta property="og:description" content="Get an ICAI & ICSI compliant website for your CA, CS or CMA practice. Domain, CMS, tax calculators, statutory dates & professional updates included.">
+    <meta property="og:image" content="https://f9xr.github.io/assets/og-image.webp">
+    <meta property="og:site_name" content="F9XR Team">
+
+    <!-- === TWITTER === -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://f9xr.github.io/services/indian-professionals.html">
+    <meta property="twitter:title" content="Website for CA, CS & CMA Professionals | ICAI/ICSI Compliant">
+    <meta property="twitter:description" content="Get an ICAI & ICSI compliant website for your practice. Domain, CMS, tax calculators, statutory dates & more.">
+    <meta property="twitter:image" content="https://f9xr.github.io/assets/og-image.webp">
 
     <!-- === SCHEMA MARKUP - Service + LocalBusiness === -->
     <script type="application/ld+json">
@@ -879,7 +1126,835 @@
 
             <!-- Giant Logo Section -->
             <div class="w-full flex items-center justify-start gap-4 sm:gap-6 lg:gap-8 mb-16 lg:mb-24 mt-auto">
-                <img src="../logo.png" alt="F9XR" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">
+                <img src="../logo.webp" alt="F9XR" loading="lazy"  loading="lazy" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">
+                <h2 class="text-[11vw] font-black leading-none tracking-tighter text-white">F9XRTeam</h2>
+            </div>
+
+        </div>
+
+        <!-- Bottom Banner with Background -->
+        <div class="relative w-full py-6 lg:py-8 border-t border-white/10 overflow-hidden mt-8">
+            <!-- Background Image representation (dark subtle gradient) -->
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-carbon-black via-[#0a0a0a] to-black opacity-80 z-0"></div>
+            
+            <div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+                
+                <!-- Socials -->
+                <div class="flex items-center justify-center sm:justify-start gap-6">
+                    <a href="https://instagram.com/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+                <!-- Center Text -->
+                <div class="sm:absolute sm:left-1/2 sm:-translate-x-1/2">
+                    <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white">Engineering Digital Growth</h2>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-sm md:text-base font-bold text-white">
+                    &copy; 2026 F9XR Team.
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+    <button id="btt" class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl">
+        <i class="fas fa-arrow-up text-sm"></i>
+    </button>
+
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            animation: marquee 30s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const isOpen = menu.classList.contains('opacity-100');
+            if (!isOpen) {
+                menu.classList.remove('opacity-0', 'pointer-events-none');
+                menu.classList.add('opacity-100', 'pointer-events-auto');
+                icon.classList.replace('fa-bars-staggered', 'fa-xmark');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('opacity-0', 'pointer-events-none');
+                menu.classList.remove('opacity-100', 'pointer-events-auto');
+                icon.classList.replace('fa-xmark', 'fa-bars-staggered');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+            const btt = document.getElementById('btt');
+            if (window.scrollY > 600) btt.classList.remove('hidden');
+            else btt.classList.add('hidden');
+        });
+
+        document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+
+    <!-- Site-wide Search Modal -->
+    <div id="search-modal" class="fixed inset-0 bg-carbon-black/90 backdrop-blur-xl z-[9000] invisible opacity-0 transition-all duration-300 flex flex-col items-center pt-24 px-4">
+        <div class="w-full max-w-3xl relative">
+            <button onclick="closeSearchModal()" class="absolute -top-12 right-0 text-white/50 hover:text-white text-2xl transition-colors"><i class="fa-solid fa-xmark"></i></button>
+            <div class="relative flex items-center bg-white/10 border border-white/20 rounded-2xl overflow-hidden focus-within:border-accent-blue transition-colors">
+                <i class="fa-solid fa-magnifying-glass text-white/50 text-xl ml-6"></i>
+                <input type="text" id="search-input" placeholder="Search pages, services, works..." class="w-full bg-transparent border-none text-white text-xl md:text-2xl py-6 px-6 focus:outline-none focus:ring-0 placeholder-white/30" autocomplete="off">
+            </div>
+            <div id="search-results" class="mt-4 flex flex-col gap-2 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
+                <!-- Results injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const SEARCH_INDEX = [{"title": "F9XR Team | AI-Powered Web Design & Local SEO Growth Agency", "path": "index.html"}, {"title": "About F9XR Team | Global Digital Agency & Tech Architects", "path": "pages/about.html"}, {"title": "Contact Us | F9XR Team - Let\u00e2\u20ac\u2122s Build Something Great", "path": "pages/contact.html"}, {"title": "Lead Architect | F9XR Team", "path": "pages/expert-bio.html"}, {"title": "Backend Crew & Technical Partners | F9XR Team", "path": "pages/partners.html"}, {"title": "Portfolio | F9XR Team - Digital Masterpieces", "path": "pages/portfolio.html"}, {"title": "Our Projects | F9XR Team - Digital Agency Portfolio", "path": "pages/projects.html"}, {"title": "Our Services | F9XR Team - Digital Agency Excellence", "path": "pages/services.html"}, {"title": "Sitemap | F9XR Team - Complete Site Directory", "path": "pages/sitemap.html"}, {"title": "Digital Insights Hub | F9XR Team", "path": "pages/topics.html"}, {"title": "AI Visibility Optimization | AI Ready Content | F9XR Team", "path": "services/ai-visibility-optimization.html"}, {"title": "Data Entry & Management | F9XR Team", "path": "services/data-management.html"}, {"title": "Google Business Profile Optimization | Local SEO | F9XR Team", "path": "services/google-business-optimization.html"}, {"title": "Websites for CA, CS & CMA Professionals | F9XR Team", "path": "services/indian-professionals.html"}, {"title": "Social Media Posting Service | Content Creation | F9XR Team", "path": "services/social-media-posting.html"}, {"title": "Website Rentals | Professional Websites on Rent | F9XR Team", "path": "services/website-rentals.html"}, {"title": "Service Agreement | F9XR Team - Digital Agency", "path": "legals/agreement.html"}, {"title": "Privacy & Policy | F9XR Team - Digital Agency", "path": "legals/privacy.html"}, {"title": "Refund & Cancellation Policy | F9XR Team - Digital Agency", "path": "legals/refund.html"}, {"title": "Shipping & Delivery Policy | F9XR Team - Digital Agency", "path": "legals/shipping.html"}, {"title": "Terms of Service | F9XR Team - Digital Agency", "path": "legals/terms.html"}];
+        const ROOT_PREFIX = "../"; // Dynamically injected per page
+        
+        function openSearchModal() {
+            const modal = document.getElementById('search-modal');
+            modal.classList.remove('invisible', 'opacity-0');
+            document.getElementById('search-input').focus();
+            document.body.style.overflow = 'hidden';
+            renderSearchResults(""); // Show all or empty initially
+        }
+        
+        function closeSearchModal() {
+            const modal = document.getElementById('search-modal');
+            modal.classList.add('invisible', 'opacity-0');
+            document.body.style.overflow = '';
+            document.getElementById('search-input').value = '';
+        }
+
+        document.getElementById('search-input').addEventListener('input', function(e) {
+            renderSearchResults(e.target.value.toLowerCase());
+        });
+
+        function renderSearchResults(query) {
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = '';
+            
+            if(!query) return; // Don't show results until typing
+            
+            const matches = SEARCH_INDEX.filter(item => item.title.toLowerCase().includes(query) || item.path.toLowerCase().includes(query));
+            
+            if (matches.length === 0) {
+                resultsContainer.innerHTML = '<div class="text-white/50 text-center py-8">No results found for "' + query + '"</div>';
+                return;
+            }
+            
+            matches.forEach(match => {
+                const el = document.createElement('a');
+                el.href = ROOT_PREFIX + match.path;
+                el.className = 'bg-white/5 border border-white/5 hover:border-accent-blue/50 hover:bg-white/10 transition-colors p-4 rounded-xl flex items-center justify-between group';
+                el.innerHTML = `
+                    <div class="text-white font-bold text-lg">${match.title}</div>
+                    <i class="fa-solid fa-arrow-right text-white/30 group-hover:text-accent-blue group-hover:-rotate-45 transition-all"></i>
+                `;
+                resultsContainer.appendChild(el);
+            });
+        }
+
+        // Close on escape
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeSearchModal();
+        });
+    </script>
+
+</body>
+
+</html>
+.Groups[1].Value
+    
+    # Skip if this is a tailwind config script (starts with tailwind.config or has @tailwind)
+    if ($css -match 'tailwind\.config' -or $css -match '@tailwind') { return $css }
+    
+    # Remove CSS comments (but not inside strings - simple approach)
+    $css = $css -replace '/\*.*?\*/', ''
+    
+    # Collapse multiple whitespace
+    $css = $css -replace '\s+', ' '
+    
+    # Remove spaces around specific characters
+    $css = $css -replace '\s*([{}:;,])\s*', '@view-transition{navigation:auto}::view-transition-old(root){animation:vt-fade-out .35s ease-out forwards}::view-transition-new(root){animation:vt-fade-in .35s ease-in forwards}@keyframes vt-fade-out{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(-20px)}}@keyframes vt-fade-in{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}'
+    
+    # Remove trailing ; before }
+    $css = $css -replace ';}', '}'
+    
+    # Remove leading/trailing whitespace
+    $css = $css.Trim()
+    
+    return $css
+  </style>
+</head>
+
+<body class="text-bright-snow font-sans selection:bg-accent-blue selection:text-white min-h-screen flex flex-col">
+    <div class="fixed inset-0 -z-50 h-full w-full bg-black">
+        <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        </div>
+        <div class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]">
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- === HEADER === -->
+    <header id="main-header" class="fixed top-6 left-0 right-0 z-[5000] px-4 transition-transform duration-300">
+        <nav
+            class="max-w-[95rem] w-full mx-auto flex justify-between items-center py-1 lg:py-2 px-2 relative z-[5001]">
+
+            <!-- 1. Brand Logo (Left) -->
+            <a href="../index.html" class="flex items-center gap-2 group aria-label="F9XR Home">
+                <span class="text-2xl font-black tracking-tighter uppercase text-white">F9XR <span
+                        class="text-xs font-bold opacity-80 ml-0.5 text-accent-blue border border-white/20 rounded px-1 group-hover:border-white/50 transition-colors">Team</span></span>
+            </a>
+
+            <!-- 2. Desktop Navigation Pill (Center) -->
+            <div
+                class="hidden lg:flex items-center gap-1 font-bold text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] tracking-wide text-platinum/80 bg-carbon-black/60 backdrop-blur-2xl border border-white/20 rounded-full pl-3 pr-1 py-1 shadow-2xl">
+                
+                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
+                    <i class="fa-regular fa-building text-[14px] lg:text-[16px]"></i>
+                    <span>Company</span>
+                    <i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>
+
+                    <!-- Mega Menu (Hidden by default) -->
+                    <div
+                        class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[580px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">
+                        <div
+                            class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-2 shadow-2xl flex gap-2 relative overflow-hidden text-left normal-case tracking-normal">
+                            
+                            <div class="w-[55%] flex flex-col gap-1 p-2 bg-[#121212] rounded-xl border border-white/5">
+                                <a href="../pages/about.html"
+                                    class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item">
+                                    <div
+                                        class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">About Us</div>
+                                        <div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">Learn more
+                                            about our story and team</div>
+                                    </div>
+                                </a>
+                                <a href="../index.html#case-studies"
+                                    class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item border-t border-white/5 mt-1 pt-4">
+                                    <div
+                                        class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue">
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Customer Stories</div>
+                                        <div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">See how we've
+                                            helped our clients succeed</div>
+                                    </div>
+                                </a>
+                                <a href="../pages/contact.html"
+                                    class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item border-t border-white/5 mt-1 pt-4">
+                                    <div
+                                        class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue">
+                                        <i class="fa-solid fa-handshake-angle"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Hire Us!</div>
+                                        <div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">Collaborate
+                                            with us for mutual growth</div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="w-[45%] flex flex-col justify-center py-4 px-6 gap-6 bg-[#0a0a0a]">
+                                <a href="../legals/terms.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-regular fa-file-lines w-4 text-center opacity-80"></i> Terms of Service
+                                </a>
+                                <a href="../legals/privacy.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-solid fa-shield-halved w-4 text-center opacity-80"></i> Privacy Policy
+                                </a>
+                                <a href="../legals/refund.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-solid fa-arrow-rotate-left w-4 text-center opacity-80"></i> Refund Policy
+                                </a>
+                                <a href="../legals/agreement.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-solid fa-leaf w-4 text-center opacity-80"></i> Agreement
+                                </a>
+                                <a href="../legals/shipping.html"
+                                    class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors">
+                                    <i class="fa-regular fa-circle-question w-4 text-center opacity-80"></i> Shipping
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
+                    <i class="fa-solid fa-bolt text-[14px] lg:text-[16px]"></i>
+                    <span>Services</span>
+                    <i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>
+
+                    <!-- Services Mega Menu -->
+                    <div class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[650px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">
+                        <div class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-4 shadow-2xl flex gap-4 relative overflow-hidden text-left normal-case tracking-normal">
+                            
+                            <!-- Left Column: Featured Link -->
+                            <div class="w-1/3 flex flex-col justify-center items-center bg-accent-blue/10 rounded-xl p-4 border border-accent-blue/20 hover:bg-accent-blue/20 transition-colors text-center">
+                                <i class="fa-solid fa-layer-group text-3xl text-accent-blue mb-3"></i>
+                                <h4 class="text-white font-bold text-[14px] lg:text-[16px] mb-2">Our Solutions</h4>
+                                <p class="text-platinum/60 text-[10px] leading-tight mb-4">Discover the full spectrum of our digital services.</p>
+                                <a href="../pages/services.html" class="text-[10px] uppercase tracking-widest font-bold text-accent-blue hover:text-white transition-colors">View All <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+
+                            <!-- Right Column: Service Links -->
+                            <div class="w-2/3 grid grid-cols-2 gap-2">
+                                <a href="../services/ai-visibility-optimization.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-robot text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">AI Visibility</div>
+                                        <div class="text-platinum/50 text-[9px]">Future-proof your brand</div>
+                                    </div>
+                                </a>
+                                <a href="../services/google-business-optimization.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-brands fa-google text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Google Maps SEO</div>
+                                        <div class="text-platinum/50 text-[9px]">Dominate local search</div>
+                                    </div>
+                                </a>
+                                <a href="../services/website-rentals.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-laptop-code text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Website Rentals</div>
+                                        <div class="text-platinum/50 text-[9px]">Pay-monthly sites</div>
+                                    </div>
+                                </a>
+                                <a href="../services/social-media-posting.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-hashtag text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Social Media</div>
+                                        <div class="text-platinum/50 text-[9px]">Engage your audience</div>
+                                    </div>
+                                </a>
+                                <a href="../services/indian-professionals.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-users-gear text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Hire Professionals</div>
+                                        <div class="text-platinum/50 text-[9px]">Top Indian talent</div>
+                                    </div>
+                                </a>
+                                <a href="../services/data-management.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-solid fa-database text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Data Management</div>
+                                        <div class="text-platinum/50 text-[9px]">Organize your data</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
+                    <i class="fa-solid fa-layer-group text-[14px] lg:text-[16px]"></i>
+                    <span>Works</span>
+                    <i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>
+
+                    <!-- Works Mega Menu -->
+                    <div class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[350px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">
+                        <div class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-2 shadow-2xl flex flex-col gap-1 relative overflow-hidden text-left normal-case tracking-normal">
+                            <a href="../pages/portfolio.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item">
+                                <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors">
+                                    <i class="fa-regular fa-image"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Portfolio</div>
+                                    <div class="text-platinum/50 text-[10px] leading-snug font-medium">Browse our recent case studies</div>
+                                </div>
+                            </a>
+                            <a href="../pages/projects.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5">
+                                <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Our Projects</div>
+                                    <div class="text-platinum/50 text-[10px] leading-snug font-medium">Explore active digital assets</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accent Search/Contact Button in Pill -->
+                <button onclick="openSearchModal()" aria-label="Search Site" class="ml-2 w-10 h-10 lg:w-12 lg:h-12 bg-accent-blue text-white rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.5)]"><i class="fa-solid fa-magnifying-glass text-lg"></i></button>
+            </div>
+
+            <!-- 3. Header Actions (Right) -->
+            <div class="flex items-center gap-5">
+                
+                <a href="https://web.whatsapp.com/send?phone=919032065784" target="_blank" rel="noopener noreferrer"
+                    class="hidden sm:flex text-white/80 hover:text-white text-xl transition-all hover:scale-110">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <button onclick="toggleMobileMenu()" id="menu-btn" class="lg:hidden text-white/80 hover:text-white text-xl active:scale-90 transition-all hover:scale-110"
+                    aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars-staggered"></i>
+                </button>
+                <a href="../pages/contact.html" class="hidden md:flex bg-white text-carbon-black px-6 py-3 lg:px-8 lg:py-4 rounded-full font-black text-[11px] lg:text-[13px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95 ml-2">
+                    Get Started
+                </a>
+            </div>
+        </nav>
+
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">
+            
+            <button onclick="toggleMobileMenu()"
+                class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="space-y-8">
+                <span
+                    class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>
+
+                <a href="../pages/about.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>
+                <a href="../pages/services.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>
+                <a href="../pages/portfolio.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>
+                <a href="../pages/contact.html" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire
+                    Team</a>
+            </div>
+
+            <div class="mt-20 pt-10 border-t border-white/5 flex gap-8">
+                <a href="https://instagram.com/f9xrteam" rel="me" aria-label="Instagram"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://web.whatsapp.com/send?phone=919032065784" aria-label="WhatsApp"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:tontufytservices@gmail.com" aria-label="Email Us"
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex-grow">
+
+        <!-- === HERO SECTION === -->
+        <section class="mb-24 reveal text-center lg:text-left">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+                <div class="max-w-4xl">
+                    <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block">Trusted by CA, CS & CMA Professionals</span>
+                    <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8 uppercase italic">
+                        Your Practice <br> <span class="text-stroke">Online.</span>
+                    </h1>
+                    <p class="text-xl md:text-3xl text-platinum/70 font-medium leading-relaxed italic">
+                        Get your own ICAI & ICSI compliant website with domain, CMS, tax tools, and professional updates â€” built for Indian Chartered Accountants, Company Secretaries, and Cost Accountants.
+                    </p>
+                </div>
+                <div class="bg-gunmetal border border-accent-blue/20 p-8 rounded-[2.5rem] backdrop-blur-md hidden lg:block shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+                    <p class="text-[10px] uppercase tracking-widest text-accent-blue font-black mb-4 italic flex items-center gap-2"><i class="fa-solid fa-shield-halved"></i> Compliance</p>
+                    <h4 class="text-2xl font-black text-white italic">ICAI / ICSI Norms.</h4>
+                    <p class="text-sm text-platinum/60 mt-2 font-medium tracking-tight">Fully aligned with Institute guidelines.</p>
+                    <a href="https://f9xr.github.io/XYZ-Associates-CA" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-accent-blue hover:text-white transition-colors border border-accent-blue/30 hover:border-accent-blue rounded-full px-5 py-2.5">
+                        <i class="fa-solid fa-eye"></i> View Live Demo
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-6 mt-12">
+                <a href="https://f9xr.github.io/XYZ-Associates-CA" target="_blank" rel="noopener noreferrer"
+                    class="group px-8 py-5 rounded-full font-black text-lg uppercase tracking-wider text-accent-blue border-2 border-accent-blue hover:bg-accent-blue hover:text-white transition-all flex items-center gap-3">
+                    <i class="fa-solid fa-eye"></i>
+                    <span>View Demo Site</span>
+                </a>
+                <a href="../pages/contact.html"
+                    class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-lg uppercase tracking-wider hover:bg-blue-500 hover:scale-105 transition-all shadow-[0_0_40px_rgba(59,130,246,0.3)] flex items-center gap-3">
+                    Get Pricing & Start Now
+                    <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="../pages/contact.html"
+                    class="group px-8 py-5 rounded-full font-black text-lg uppercase tracking-wider text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent-blue/50 transition-all flex items-center gap-3">
+                    <i class="fa-solid fa-circle-question text-accent-blue"></i>
+                    <span>Request a Callback</span>
+                </a>
+            </div>
+            <div class="mt-8 flex justify-center lg:justify-start">
+                <a href="https://tontufmoney-news.blogspot.com/2026/06/professional-websites-for-ca-cs-cma.html" target="_blank" rel="noopener noreferrer"
+                    class="text-xs text-platinum/40 hover:text-accent-blue transition-colors flex items-center gap-2 underline underline-offset-4 decoration-white/10">
+                    <i class="fa-solid fa-newspaper"></i> Read: Professional Websites for CA, CS & CMA â€” Building Your Compliant Digital Presence
+                </a>
+            </div>
+        </section>
+
+        <!-- === QUICK STATS BAR === -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24 reveal">
+            <div class="bg-white/5 border border-white/10 p-6 rounded-3xl text-center">
+                <i class="fas fa-shield-halved text-accent-blue text-2xl mb-2"></i>
+                <p class="text-[10px] uppercase tracking-widest font-bold opacity-40">Compliant</p>
+                <p class="font-black text-lg">ICAI / ICSI</p>
+            </div>
+        </section>
+
+        <!-- === KEY FEATURES SECTION === -->
+        <section class="mb-24 reveal" id="features">
+            <div class="flex items-center gap-4 mb-16">
+                <span class="w-12 h-[2px] bg-accent-blue"></span>
+                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">Everything You Need</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <div class="w-12 h-12 bg-accent-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-accent-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Your Own Domain</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">www.yourname.in or www.yourfirmname.in â€” your professional identity online.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <div class="w-12 h-12 bg-accent-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-scale-balanced text-accent-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">ICAI / ICSI Compliant</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">Website built as per Institute guidelines â€” no solicitation, no prohibited content.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <div class="w-12 h-12 bg-accent-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-newspaper text-accent-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Professional News Feed</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">Regular professional news, notifications, and circulars on your own website.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <div class="w-12 h-12 bg-accent-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-calculator text-accent-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Tax Calculators & Tools</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">Key updates, important forms, tax calculators, and software integrations.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <div class="w-12 h-12 bg-accent-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-pen-ruler text-accent-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Dynamic CMS</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">Full content management system â€” editable at your end. No coding needed.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <div class="w-12 h-12 bg-accent-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-calendar-check text-accent-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Statutory Dates Checker</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">All important statutory dates â€” check compliance deadlines from your website.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <div class="w-12 h-12 bg-accent-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-share-nodes text-accent-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Social Media Integration</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">Share updates on Facebook, Twitter, LinkedIn directly from your website.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <div class="w-12 h-12 bg-accent-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-briefcase text-accent-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Staff Requirements</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">Post staff requirements on your website and link with social platforms.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <div class="w-12 h-12 bg-accent-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-rotate text-accent-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Regular Updates</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">Latest notifications, circulars, and professional updates on auto-pilot.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <div class="w-12 h-12 bg-accent-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-screen-button text-accent-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Quality Design</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">Modern, responsive, and user-friendly design that builds trust.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- === COMPLIANCE HIGHLIGHT === -->
+        <section class="mb-24 reveal" id="compliance">
+            <div class="bg-gradient-to-br from-accent-blue/10 to-transparent border border-accent-blue/20 p-10 md:p-16 rounded-[3rem] relative overflow-hidden">
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-accent-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="relative z-10 max-w-4xl">
+                    <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block italic">Institute Compliance</span>
+                    <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-8 uppercase italic leading-tight">
+                        Built for <span class="text-stroke">ICAI & ICSI</span> Guidelines
+                    </h2>
+                    <p class="text-lg md:text-xl text-platinum/70 leading-relaxed mb-8 font-medium italic">
+                        Every website we build for professionals strictly adheres to the Code of Ethics and Website Guidelines issued by the Institute of Chartered Accountants of India and the Institute of Company Secretaries of India. No prohibited content. No solicitation. No advertisement.
+                    </p>
+                    <ul class="grid sm:grid-cols-2 gap-4 text-sm font-bold">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> No client names or logos</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> No fee mentions or claims</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> Passport-style photos only</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> No testimonials with client names</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> No rankings or awards</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent-blue"></i> No "Why Choose Us" sections</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- === ICAI ADVISORY DROPDOWN === -->
+        <section class="mb-24 reveal" id="advisory">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="w-12 h-[2px] bg-accent-blue"></span>
+                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">ICAI Advisory</h2>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-[2.5rem] p-8 md:p-12">
+                <p class="text-xs font-black uppercase tracking-[0.3em] text-accent-blue mb-2">14th October, 2020</p>
+                <p class="text-sm font-bold text-iron-grey mb-6">No. M-626/14/2020 &mdash; Advisory with regard to compliance with the Website Guidelines of the Institute</p>
+
+                <!-- Accordion -->
+                <div class="faq-item border border-white/10 rounded-2xl overflow-hidden mb-4">
+                    <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-6 text-left font-bold text-sm md:text-base hover:bg-white/5 transition-colors">
+                        <span class="flex items-center gap-3">
+                            <i class="fa-solid fa-gavel text-accent-blue"></i>
+                            Read the Official ICAI Advisory
+                        </span>
+                        <i class="fa-solid fa-chevron-down toggle-icon transition-transform duration-300 text-accent-blue"></i>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6 text-sm text-platinum/70 leading-relaxed space-y-4 max-h-[600px] overflow-y-auto">
+                            <p>The members are aware that the Council has issued the Website Guidelines in 2001, which have been revised from time to time. The Guidelines, as revised in the 388th Meeting of Council held on 6th and 7th February, 2020, are appearing at page 143 of the Volume-II of Code of Ethics, 2020, which may be accessed at the website of the Institute at <a href="https://resource.cdn.icai.org/60018code-of-ethics-2020vol2.pdf" target="_blank" class="text-accent-blue underline">resource.cdn.icai.org/60018code-of-ethics-2020vol2.pdf</a>. The Guidelines are also available at the website of Ethical Standards Board i.e. <a href="https://esb.icai.org" target="_blank" class="text-accent-blue underline">esb.icai.org</a>.</p>
+
+                            <p>The Clauses (6) and (7) of Part-I of First Schedule to The Chartered Accountants Act, 1949 (&ldquo;Act&rdquo;) bar solicitation and advertisement, respectively. The Website Guidelines have been formulated by the Council in a manner so as to permit members and Firms to have own Website without hitting the provisions of Clauses (6) and (7).</p>
+
+                            <p>Further, it is obligatory to comply with the Guidelines of the Council in terms of the provisions of Clause (1) of Part-II of Second Schedule to the Act. The non-compliance with any Guidelines issued by the Council is deemed as professional misconduct in terms of the provisions of above-mentioned Clause.</p>
+
+                            <p>The reference may also be made to the Announcement issued by the Institute in March, 2014, available on the website of the Institute at <a href="https://www.icai.org/post.html?post_id=10584" target="_blank" class="text-accent-blue underline">icai.org/post.html?post_id=10584</a>, wherein it has been clarified that the members should not share details of Chartered Accountants firms for the purpose of ranking.</p>
+
+                            <p class="font-bold text-white">In the above backdrop, it is pertinent to note that following contents and features on the Websites of members and Firms are prohibited:</p>
+
+                            <ol class="list-decimal list-inside space-y-1 pl-2">
+                                <li>Mention of Names of clients / Client Logo</li>
+                                <li>Writing of Firm name in a manner tantamounting to Logo/Monogram</li>
+                                <li>Mention of Professional Fees, or fact of providing services free of charge</li>
+                                <li>Using Photographs other than passport style, including Event galleries of Photographs</li>
+                                <li>Use of expressions such as "Leading Firm"/"Best Firm"/ "Top Firm"</li>
+                                <li>Claiming to have liasoning with Government offices</li>
+                                <li>Mention of activities forming other business or occupation, which are not allowed to members in practice e.g. Real Estate, Health, etc.</li>
+                                <li>Mention of activities forming other business or occupation allowed to members in practice e.g. reference of Books authored, teaching activities by the member concerned, etc. (since the website can be utilized for mentioning professional services of members only, and not of other business /occupation carried out by him)</li>
+                                <li>Mention of activities which exceed the purview granted to members in practice e.g. "Arrangement of Loans" (the members in practice are permitted to act as Financial Adviser in terms of Regulation 191 of Chartered Accountants Regulations, 1988)</li>
+                                <li>Links of organizations which do not fall under permitted categories e.g. of a commercial Company</li>
+                                <li>Videos other than educational videos e.g. Firm profile, canvassing for Elections etc.</li>
+                                <li>Mentioning subjective claims e.g. "having presence/associates in big cities", "have well equipped Conference Room", "best quality services in the market" etc.</li>
+                                <li>Mentioning CSR contribution / donation done by the Firm</li>
+                                <li>Mentioning any kind of affiliation with any national or international organisation e.g. United Nations</li>
+                                <li>Mention of any award(s) as may have been given to the CA Firm</li>
+                                <li>Mention of any kind of grading granted to the Firm by any organization (including a Regulator) or a survey agency e.g. "Tier 2 Firm"</li>
+                                <li>Mentioning of a particular role instead of professional service e.g. "Training" (which may be provided to existing clients w.r.t a professional service, but cannot be mentioned as a service)</li>
+                                <li>Professional services of the Firm mentioned in push mode/ the website running on a push model of technology</li>
+                                <li>Mention of media coverage of Firm</li>
+                                <li>Mention of association of the member with the Institute e.g. as a Special Invitee in a Committee of the Institute</li>
+                                <li>Mentioning testimonial with client name</li>
+                                <li>ISO Certification or any other certification or accreditation (it is allowed for CA Firms to have ISO certification, but the same cannot be mentioned)</li>
+                                <li>Using Logo of a Government Department or scheme e.g. of Startup India</li>
+                                <li>Mention of updates which do not fall under the category of professional updates e.g. relating to movies, National and International News</li>
+                                <li>Mention of empanelment with any organisation, whether for Audit or any other assignment</li>
+                                <li>Mention of engagement of the Firm in social activity(ies)</li>
+                                <li>Mention of features like "why choose us" on the website</li>
+                                <li>Mentioning association/reference of any other Firm(s), wherein the proprietor or partner of the Firm may be partner</li>
+                                <li>Advertisement of any commodity, service or entity.</li>
+                            </ol>
+
+                            <p class="italic">It may be noted that the above list is not exhaustive. In order that the members remain in the purview of the provisions of the Act and Code of Ethics, the members are hereby advised to align their websites with the Website Guidelines and remove all such contents and features which are not in consonance with the said Guidelines.</p>
+
+                            <p class="font-bold text-white text-right">Acting Secretary, ICAI<br>14.10.2020</p>
+
+                            <p class="text-xs text-iron-grey">Source: <a href="https://icai.org/post/advisory-website-guidelines-of-the-institute" target="_blank" class="text-accent-blue underline">icai.org/post/advisory-website-guidelines-of-the-institute</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-xs text-iron-grey mt-4 px-2 font-medium">We ensure your website is 100% compliant with the guidelines above.</p>
+            </div>
+        </section>
+
+        <!-- === WHO IS THIS FOR === -->
+        <section class="py-24 border-t border-white/10 reveal">
+            <div class="flex items-center gap-4 mb-16">
+                <span class="w-12 h-[2px] bg-accent-blue"></span>
+                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">Who Is This For</h2>
+            </div>
+            <div class="flex flex-wrap gap-4">
+                <span class="px-8 py-4 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors">Chartered Accountants (CA)</span>
+                <span class="px-8 py-4 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors">Company Secretaries (CS)</span>
+                <span class="px-8 py-4 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors">Cost Accountants (CMA)</span>
+                <span class="px-8 py-4 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors">CA Firms</span>
+                <span class="px-8 py-4 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors">CS Firms</span>
+                <span class="px-8 py-4 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors">CMA Firms</span>
+                <span class="px-8 py-4 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors">Sole Proprietors in Practice</span>
+            </div>
+        </section>
+
+        <!-- === FINAL CTA === -->
+        <section class="py-32 reveal">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-10 leading-none">Get Your <br> <span class="text-stroke italic">Website Today.</span></h2>
+                <p class="text-xl md:text-2xl text-platinum/60 mb-12 italic leading-relaxed">
+                    Join hundreds of CA, CS, and CMA professionals who trust F9XR Team for their online presence â€” compliant, professional, and powerful.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank" class="bg-bright-snow text-carbon-black px-12 py-5 rounded-full font-black text-xl hover:scale-105 transition-all shadow-2xl">
+                        WhatsApp Team
+                    </a>
+                    <a href="mailto:tontufytservices@gmail.com" class="bg-white/5 border border-white/10 px-12 py-5 rounded-full font-black text-xl hover:bg-white hover:text-carbon-black transition-all">
+                        Email Support
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- === FOOTER === -->
+                <footer class="bg-[#0a0a0a] pt-0 no-print overflow-hidden relative font-sans">
+        <!-- 1. Top Marquee Ticker (Brand Identity) -->
+        <div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20 w-full">
+            <div class="flex whitespace-nowrap animate-marquee">
+                <div class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">
+                    <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <!-- Repeated for infinite scroll -->
+                    <span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>
+                    <span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col min-h-[60vh]">
+            <!-- CTA Section -->
+            <div class="flex flex-col md:flex-row justify-between items-center pb-16 mb-16 border-b border-white/5 gap-8 reveal">
+                <div class="text-center md:text-left">
+                    <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none text-white">
+                        Let's Build <br class="hidden md:block"> <span class="text-stroke text-transparent"
+                            style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span>
+                    </h2>
+                </div>
+                <a href="../pages/contact.html"
+                    class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">
+                    Hire Team <i
+                        class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
+                </a>
+            </div>
+
+            <!-- Top Columns -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24">
+                
+                <!-- Col 1 -->
+                <div class="flex flex-col gap-6 lg:col-span-3">
+                    <h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Pages</h4>
+                    <div class="flex flex-col gap-3">
+                        <a href="../pages/about.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-circle-info text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>About Us</a>
+                        <a href="../pages/services.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-layer-group text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Services</a>
+                        <a href="../pages/portfolio.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-briefcase text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Portfolio</a>
+                        <a href="../pages/projects.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-rocket text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Projects</a>
+                        <a href="../pages/contact.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-envelope text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Contact</a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="flex flex-col gap-6 lg:col-span-4">
+                    <h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Services</h4>
+                    <div class="flex flex-col gap-3">
+                        <a href="../pages/services.html" class="flex items-center text-2xl lg:text-[28px] font-black text-accent-blue hover:text-white transition-colors tracking-tight mb-2"><i class="fa-solid fa-bolt text-white/80 mr-3 text-xl w-6 text-center"></i>View All Services <i class="fa-solid fa-arrow-right text-lg ml-2"></i></a>
+                        <a href="./ai-visibility-optimization.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-eye text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>AI Visibility</a>
+                        <a href="./google-business-optimization.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-brands fa-google text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Google Business</a>
+                        <a href="./social-media-posting.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-hashtag text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Social Media</a>
+                        <a href="./website-rentals.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-laptop-house text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Website Rentals</a>
+                    </div>
+                </div>
+
+                <!-- Col 3: Contact Info -->
+                <div class="flex flex-col gap-6 lg:col-span-5 overflow-hidden">
+                    <h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Contact</h4>
+                    <div class="flex flex-col gap-6">
+                        <a href="mailto:tontufytservices@gmail.com" class="text-3xl md:text-4xl lg:text-5xl font-bold text-white hover:text-accent-blue transition-colors break-all select-all inline-block w-fit tracking-tight">tontufytservices@gmail.com</a>
+                        <a href="tel:+919123442431" class="text-2xl md:text-3xl font-bold text-white hover:text-accent-blue transition-colors inline-block w-fit tracking-tight">+91 91234-42431</a>
+                        <a href="https://linkedin.com/company/f9xrteam" target="_blank" class="text-2xl md:text-3xl font-bold text-white hover:text-accent-blue transition-colors inline-block w-fit tracking-tight"><i class="fa-brands fa-linkedin mr-3 text-accent-blue"></i>LinkedIn</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Middle Section: Small Links & Video Block -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 mb-20">
+                <!-- Links -->
+                <div class="flex flex-wrap gap-x-6 gap-y-3">
+                    <a href="../legals/terms.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Terms and conditions</a>
+                    <a href="../legals/privacy.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="../legals/agreement.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Service Agreement</a>
+                    <a href="../legals/refund.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Refund Policy</a>
+                    <a href="../legals/shipping.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Shipping Policy</a>
+                    <a href="../pages/sitemap.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Sitemap</a>
+                </div>
+
+                <!-- Showreel Button -->
+                <a href="https://youtu.be/l-52kGRwH_Y?si=WrEJBUEmIMM9KWng" target="_blank" class="relative group cursor-pointer overflow-hidden rounded-xl w-48 h-28 bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-black/50 group-hover:scale-110 transition-transform duration-700"></div>
+                    <div class="relative z-10 flex flex-col items-center gap-2">
+                        <div class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-play ml-1 text-sm"></i>
+                        </div>
+                        <span class="text-[11px] font-bold text-white tracking-widest uppercase">Play showreel</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Giant Logo Section -->
+            <div class="w-full flex items-center justify-start gap-4 sm:gap-6 lg:gap-8 mb-16 lg:mb-24 mt-auto">
+                <img src="../logo.webp" alt="F9XR" loading="lazy"  loading="lazy" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">
                 <h2 class="text-[11vw] font-black leading-none tracking-tighter text-white">F9XRTeam</h2>
             </div>
 
