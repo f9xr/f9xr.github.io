@@ -249,7 +249,7 @@ html{font-family:'Plus Jakarta Sans',sans-serif;scroll-behavior:smooth;-webkit-f
     <div class="flex items-center gap-5">
       <a href="https://web.whatsapp.com/send?phone=919032065784" target="_blank" rel="noopener noreferrer" class="hidden sm:flex text-white/80 hover:text-white text-xl transition-all hover:scale-110"><i class="fa-brands fa-whatsapp"></i></a>
       <button onclick="toggleMobileMenu()" id="menu-btn" class="lg:hidden text-white/80 hover:text-white text-xl active:scale-90 transition-all hover:scale-110" aria-label="Toggle Menu"><i id="menu-icon" class="fa-solid fa-bars-staggered"></i></button>
-      <a href="../pages/contact.html" class="hidden md:flex bg-white text-carbon-black px-6 py-3 lg:px-8 lg:py-4 rounded-full font-black text-[11px] lg:text-[13px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95 ml-2">Get Started</a>
+      <a href="../pages/contact.html" class="hidden md:flex bg-white text-carbon-black px-6 py-3 lg:px-8 lg:py-4 rounded-full font-black text-[11px] lg:text-[13px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95 ml-2">Hire Us</a>
     </div>
   </nav>
   <div id="mobile-menu" class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">
@@ -857,5 +857,21 @@ document.body.appendChild(document.createElement("click-spark"));
   </div>
 </div>
 
+<script>
+// Smart Navbar: hide on scroll down, show on scroll up
+let lastScrollY$ = window.scrollY;
+const header$ = document.getElementById('main-header');
+if (header$) {
+    window.addEventListener('scroll', () => {
+        const currentScrollY$ = window.scrollY;
+        if (currentScrollY$ > lastScrollY$ && currentScrollY$ > 100) {
+            header$.classList.add('-translate-y-full');
+        } else {
+            header$.classList.remove('-translate-y-full');
+        }
+        lastScrollY$ = currentScrollY$;
+    });
+}
+</script>
 </body>
 </html>
