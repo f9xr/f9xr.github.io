@@ -6,10 +6,16 @@
     <title>AR Aging Carousel | F9XR Team</title>
     <meta name="description" content="Instagram carousel: Why AR Aging is Important for Small Businesses — designed by F9XR Team for inakm.github.io">
 
+    <link rel="canonical" href="https://f9xr.github.io/pages/ar-aging-carousel.html">
+    <meta name="theme-color" content="#212529">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -179,8 +185,8 @@
 </head>
 <body>
 
+    <main>
     <div class="min-h-screen flex flex-col items-center justify-center py-10 px-4">
-        <!-- Header -->
         <div class="text-center mb-10 max-w-2xl">
             <span class="text-accent-blue font-black uppercase tracking-[0.3em] text-xs mb-3 block">Instagram Carousel</span>
             <h1 class="text-3xl md:text-5xl font-black tracking-tighter uppercase mb-3">AR Aging</h1>
@@ -505,10 +511,11 @@
         <p class="text-[10px] text-iron-grey font-bold uppercase tracking-widest mt-6 text-center">
             Designed for Instagram &bull; 1080 &times; 1080 px &bull; Swipe to navigate
         </p>
-    </div>
+</div>
+</main>
 
-    <script>
-        const track = document.getElementById('track');
+<script>
+const track = document.getElementById('track');
         const slides = track.querySelectorAll('.slide');
         const dotsContainer = document.getElementById('dots');
         const prevBtn = document.getElementById('prevBtn');
@@ -710,5 +717,9 @@
         script.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
         document.head.appendChild(script);
     </script>
+
+    <footer class="text-center py-8 text-iron-grey text-xs font-bold uppercase tracking-widest border-t border-white/5 mt-10">
+        <span class="text-accent-blue">F9XR Team</span> &mdash; Architects of Digital Precision &bull; &copy; 2026
+    </footer>
 </body>
 </html>

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Intelligence Carousel | F9XR Team</title>
+    <meta name="description" content="LinkedIn/Instagram financial education carousel: Financial Intelligence, Asset Growth & Portfolio Health — designed by F9XR Team">
+
+    <meta name="theme-color" content="#0A1F44">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-navy': '#0A1F44',
+                        'royal-blue': '#1E3A8A',
+                        'bright-blue': '#2563EB',
+                        'off-white': '#F5F7FA',
+                        'finance-green': '#16A34A',
+                        'finance-red': '#EF4444',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #0A1F44;
+            color: #0A1F44;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .slide-container {
+            width: 1080px;
+            height: 1080px;
+            flex-shrink: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @media (max-width: 1120px) {
+            .slide-container {
+                width: 90vw;
+                height: 90vw;
+            }
+        }
+
+        .slide-track {
+            display: flex;
+            transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: transform;
+        }
+
+        .slide {
+            width: 1080px;
+            height: 1080px;
+            flex-shrink: 0;
+            position: relative;
+            padding: 50px 60px 30px;
+            display: flex;
+            flex-direction: column;
+            background: #FFFFFF;
+            overflow: hidden;
+        }
+
+        @media (max-width: 1120px) {
+            .slide {
+                width: 90vw;
+                height: 90vw;
+                padding: 5vw 6vw 3vw;
+            }
+        }
+
+        /* Dotted grid background */
+        .dotted-bg {
+            background-image: radial-gradient(#e0e7ef 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        /* Ribbon tag */
+        .ribbon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            width: 200px;
+            height: 40px;
+            background: #0A1F44;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
+            padding-right: 16px;
+        }
+        .ribbon.green {
+            background: #16A34A;
+        }
+
+        /* Top right logo */
+        .logo-pos {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            z-index: 5;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #0A1F44;
+        }
+        .logo-pos span { color: #2563EB; }
+
+        /* Main content zone */
+        .content-zone {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Headline */
+        .headline {
+            font-size: clamp(48px, 6vw, 88px);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+            color: #0A1F44;
+            margin-bottom: 8px;
+        }
+        .headline .blue { color: #2563EB; }
+        .headline .green { color: #16A34A; }
+        .headline .light { color: #6B7A99; font-weight: 700; font-size: 0.6em; display: block; margin-top: 4px; }
+
+        .headline-underline {
+            display: inline-block;
+            border-bottom: 4px solid #2563EB;
+            padding-bottom: 2px;
+        }
+
+        .subtitle {
+            font-size: clamp(15px, 1.6vw, 22px);
+            font-weight: 500;
+            color: #6B7A99;
+            line-height: 1.5;
+            max-width: 85%;
+            margin-bottom: 24px;
+        }
+
+        /* Info cards row */
+        .cards-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: auto;
+            margin-bottom: 16px;
+        }
+
+        .info-card {
+            background: #F5F7FA;
+            border-radius: 16px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            border: none;
+            box-shadow: 0 2px 8px rgba(10,31,68,0.06);
+            transition: transform 0.2s ease;
+        }
+        .info-card:hover {
+            transform: translateY(-2px);
+        }
+        .info-card .icon-badge {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            border-radius: 50%;
+            background: #0A1F44;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        .info-card .icon-badge.green-bg { background: #16A34A; }
+        .info-card .icon-badge.blue-bg { background: #2563EB; }
+
+        .info-card .card-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: #0A1F44;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+        .info-card .card-desc {
+            font-size: 12px;
+            color: #6B7A99;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        /* Bottom bar */
+        .bottom-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 12px;
+            border-top: 1px solid #E5E9F0;
+            margin-top: auto;
+        }
+        .bottom-bar .byline {
+            font-size: 11px;
+            font-weight: 700;
+            color: #6B7A99;
+            letter-spacing: 0.05em;
+        }
+        .bottom-bar .byline strong { color: #0A1F44; }
+        .bottom-bar .bookmark {
+            color: #6B7A99;
+            font-size: 18px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .bottom-bar .bookmark:hover { color: #2563EB; }
+
+        /* Skyline silhouette */
+        .skyline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.06;
+        }
+
+        /* Photograph wrapper */
+        .photo-hero {
+            position: absolute;
+            right: -30px;
+            bottom: 60px;
+            width: 380px;
+            height: 480px;
+            border-radius: 20px;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .photo-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .photo-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10,31,68,0.4), rgba(37,99,235,0.2));
+            mix-blend-mode: multiply;
+            pointer-events: none;
+        }
+
+        /* 3D Rupee symbol */
+        .rupee-3d {
+            font-size: 160px;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, #0A1F44, #2563EB, #1E3A8A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 8px 24px rgba(37,99,235,0.3));
+            transform: perspective(600px) rotateX(5deg) rotateY(-5deg);
+            display: inline-block;
+        }
+
+        /* Circular gauge */
+        .gauge {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: conic-gradient(#16A34A 0% 47%, #E5E9F0 47% 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(22,163,74,0.15);
+        }
+        .gauge-inner {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .gauge-inner .pct {
+            font-size: 32px;
+            font-weight: 900;
+            color: #16A34A;
+            line-height: 1;
+        }
+        .gauge-inner .label {
+            font-size: 9px;
+            font-weight: 700;
+            color: #6B7A99;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        /* Metric highlight number */
+        .metric-big {
+            font-size: 80px;
+            font-weight: 900;
+            line-height: 1;
+            color: #0A1F44;
+        }
+        .metric-big.green-text { color: #16A34A; }
+
+        /* Shield icon large */
+        .shield-large {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #F5F7FA;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 44px;
+            color: #16A34A;
+            box-shadow: 0 4px 16px rgba(22,163,74,0.08);
+        }
+
+        /* Flow steps */
+        .flow-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .flow-step {
+            background: #F5F7FA;
+            border-radius: 14px;
+            padding: 16px 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .flow-step .step-num {
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
+            border-radius: 50%;
+            background: #0A1F44;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 800;
+        }
+        .flow-step .step-text {
+            font-size: 13px;
+            font-weight: 700;
+            color: #0A1F44;
+            line-height: 1.3;
+        }
+        .flow-step .step-text small {
+            font-weight: 500;
+            color: #6B7A99;
+            display: block;
+            font-size: 11px;
+        }
+        .flow-arrow {
+            text-align: center;
+            font-size: 20px;
+            color: #2563EB;
+            margin: -4px 0 -2px;
+        }
+
+        /* Arrow connector */
+        .arrow-accent {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #2563EB;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .arrow-accent i { font-size: 16px; }
+
+        /* CTA specific */
+        .cta-icons {
+            display: flex;
+            gap: 20px;
+            font-size: 32px;
+            color: #0A1F44;
+            margin-bottom: 24px;
+        }
+        .cta-icons i { transition: transform 0.2s, color 0.2s; cursor: pointer; }
+        .cta-icons i:hover { transform: scale(1.15); color: #2563EB; }
+
+        .bullet-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .bullet-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #0A1F44;
+        }
+        .bullet-item i {
+            color: #2563EB;
+            font-size: 14px;
+        }
+
+        .portrait-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #2563EB;
+            flex-shrink: 0;
+        }
+        .portrait-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Slide number */
+        .slide-number {
+            position: absolute;
+            bottom: 35px;
+            right: 40px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #C5CDD8;
+            letter-spacing: 0.2em;
+            z-index: 3;
+        }
+
+        /* Progress dots */
+        .progress-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(10,31,68,0.12);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .progress-dot.active {
+            background: #2563EB;
+            box-shadow: 0 0 12px rgba(37,99,235,0.4);
+            width: 32px;
+            border-radius: 5px;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide.active .anim {
+            animation: fadeUp 0.45s ease-out forwards;
+        }
+
+        .btn-nav {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.85);
+            border: none;
+            color: #0A1F44;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 15px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .btn-nav:hover {
+            background: #fff;
+            color: #2563EB;
+            transform: scale(1.05);
+        }
+        .btn-nav:disabled {
+            opacity: 0.25;
+            cursor: default;
+            transform: none;
+        }
+        .btn-nav:disabled:hover {
+            background: rgba(255,255,255,0.85);
+            color: #0A1F44;
+        }
+
+        @media (max-width: 500px) {
+            .slide { padding: 30px 24px 20px; }
+            .headline { font-size: 36px; }
+            .rupee-3d { font-size: 90px; }
+            .gauge { width: 90px; height: 90px; }
+            .gauge-inner { width: 68px; height: 68px; }
+            .gauge-inner .pct { font-size: 22px; }
+            .photo-hero { width: 220px; height: 300px; right: -10px; }
+            .info-card { padding: 12px 14px; gap: 10px; }
+            .info-card .icon-badge { width: 34px; height: 34px; min-width: 34px; font-size: 14px; }
+            .cta-icons { font-size: 24px; gap: 14px; }
+            .portrait-circle { width: 50px; height: 50px; }
+            .flow-step { padding: 12px 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="min-h-screen flex flex-col items-center justify-center py-10 px-4">
+
+        <!-- Header -->
+        <div class="text-center mb-8 max-w-2xl">
+            <span class="text-bright-blue font-black uppercase tracking-[0.3em] text-xs mb-3 block" style="color:#2563EB;">LinkedIn Carousel</span>
+            <h1 class="text-3xl md:text-5xl font-black tracking-tighter uppercase mb-3" style="color:#0A1F44;">Financial Intelligence</h1>
+            <p class="text-sm md:text-base font-medium" style="color:#6B7A99;">Smart money, smarter decisions &mdash; swipe through</p>
+            <div class="flex items-center justify-center gap-3 mt-4 text-xs font-bold uppercase tracking-widest" style="color:#6B7A99;">
+                <span>@f9xrteam</span>
+                <span class="w-1 h-1 rounded-full" style="background:#6B7A99;"></span>
+                <span style="color:#2563EB;">F9XR Team</span>
+            </div>
+        </div>
+
+        <!-- Carousel Card -->
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl" id="carousel-card" style="border:1px solid rgba(10,31,68,0.08); background:#fff;">
+            <!-- Controls overlay -->
+            <div class="absolute top-4 left-4 right-4 z-20 flex items-center justify-between pointer-events-none">
+                <div class="flex items-center gap-2 pointer-events-auto">
+                    <button onclick="prevSlide()" id="prevBtn" class="btn-nav"><i class="fa-solid fa-chevron-left"></i></button>
+                    <span id="slideCounter" class="text-sm font-bold tracking-wider" style="color:rgba(10,31,68,0.5);">1 / 5</span>
+                    <button onclick="nextSlide()" id="nextBtn" class="btn-nav"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="flex items-center gap-2 pointer-events-auto">
+                    <button onclick="downloadSlide()" class="btn-nav" title="Download current slide"><i class="fa-solid fa-download"></i></button>
+                    <button onclick="downloadAll()" class="btn-nav" title="Download all slides"><i class="fa-solid fa-layer-group"></i></button>
+                </div>
+            </div>
+
+            <!-- Slide Viewport -->
+            <div class="slide-container" id="viewport">
+                <div class="slide-track" id="track">
+
+                    <!-- SVG skyline def -->
+                    <svg class="skyline" viewBox="0 0 1080 70" preserveAspectRatio="none">
+                        <rect x="0" y="40" width="60" height="30" fill="#0A1F44"/>
+                        <rect x="70" y="20" width="50" height="50" fill="#0A1F44"/>
+                        <rect x="130" y="45" width="40" height="25" fill="#0A1F44"/>
+                        <rect x="180" y="10" width="55" height="60" fill="#0A1F44"/>
+                        <rect x="245" y="35" width="45" height="35" fill="#0A1F44"/>
+                        <rect x="300" y="25" width="60" height="45" fill="#0A1F44"/>
+                        <rect x="370" y="42" width="35" height="28" fill="#0A1F44"/>
+                        <rect x="415" y="5" width="50" height="65" fill="#0A1F44"/>
+                        <rect x="475" y="30" width="70" height="40" fill="#0A1F44"/>
+                        <rect x="555" y="15" width="45" height="55" fill="#0A1F44"/>
+                        <rect x="610" y="38" width="55" height="32" fill="#0A1F44"/>
+                        <rect x="675" y="22" width="40" height="48" fill="#0A1F44"/>
+                        <rect x="725" y="8" width="60" height="62" fill="#0A1F44"/>
+                        <rect x="795" y="35" width="50" height="35" fill="#0A1F44"/>
+                        <rect x="855" y="28" width="45" height="42" fill="#0A1F44"/>
+                        <rect x="910" y="12" width="55" height="58" fill="#0A1F44"/>
+                        <rect x="975" y="40" width="50" height="30" fill="#0A1F44"/>
+                        <rect x="1035" y="18" width="45" height="52" fill="#0A1F44"/>
+                    </svg>
+
+                    <!-- ============================================ -->
+                    <!-- SLIDE 1: Title — FINANCIAL INTELLIGENCE        -->
+                    <!-- ============================================ -->
+                    <div class="slide active">
+                        <div class="dotted-bg absolute inset-0 z-0"></div>
+
+                        <div class="ribbon">MASTERCLASS SERIES</div>
+                        <div class="logo-pos">F9XR <span>Team</span></div>
+
+                        <div class="photo-hero">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Corporate building" width="380" height="480" loading="lazy" class="w-full h-full object-cover">
+                        </div>
+
+                        <div class="content-zone relative z-10" style="max-width:65%;">
+                            <div class="anim" style="animation-delay:0s;">
+                                <div class="headline" style="font-size:clamp(42px,5vw,72px);">
+                                    FINANCIAL<br>
+                                    <span class="blue">INTELLIGENCE</span>
+                                </div>
+                                <div class="headline-underline"></div>
+                                <p class="subtitle" style="margin-top:16px;">
+                                    Making informed decisions in a<br>
+                                    complex, data-driven economy.
+                                </p>
+                            </div>
+
+                            <div class="cards-row anim" style="animation-delay:0.1s;">
+                                <div class="info-card">
+                                    <div class="icon-badge"><i class="fa-solid fa-chart-line"></i></div>
+                                    <div>
+                                        <p class="card-title">Data-Driven</p>
+                                        <p class="card-desc">Analyze trends before making moves</p>
+                                    </div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="icon-badge blue-bg"><i class="fa-solid fa-bullseye"></i></div>
+                                    <div>
+                                        <p class="card-title">Strategic</p>
+                                        <p class="card-desc">Align capital with long-term goals</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-bar" style="position:relative;z-index:3;">
+                            <div class="byline"><strong>F9XR Team</strong> &bull; Financial Education</div>
+                            <div class="bookmark"><i class="fa-regular fa-bookmark"></i></div>
+                        </div>
+
+                        <div class="slide-number">01</div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- SLIDE 2: Metric — 47% OF ASSETS IDLE          -->
+                    <!-- ============================================ -->
+                    <div class="slide">
+                        <div class="dotted-bg absolute inset-0 z-0"></div>
+
+                        <div class="ribbon green">KEY INSIGHT</div>
+                        <div class="logo-pos">F9XR <span>Team</span></div>
+
+                        <div class="content-zone relative z-10">
+                            <div class="flex items-start justify-between gap-8 anim" style="animation-delay:0s;">
+                                <div>
+                                    <div class="metric-big green-text">47%</div>
+                                    <div class="headline" style="font-size:clamp(28px,3.5vw,50px);margin-top:0;">
+                                        OF ASSETS<br>
+                                        <span class="light">Are Sitting Idle</span>
+                                    </div>
+                                    <p class="subtitle" style="max-width:90%;">
+                                        Earning no returns &mdash; silently losing<br>
+                                        value to inflation year after year.
+                                    </p>
+                                </div>
+                                <div class="gauge">
+                                    <div class="gauge-inner">
+                                        <span class="pct">47%</span>
+                                        <span class="label">Idle</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cards-row anim" style="animation-delay:0.1s;">
+                                <div class="info-card">
+                                    <div class="icon-badge"><i class="fa-solid fa-clock"></i></div>
+                                    <div>
+                                        <p class="card-title">Cash Drag</p>
+                                        <p class="card-desc">Uninvested cash loses purchasing power annually</p>
+                                    </div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="icon-badge green-bg"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                                    <div>
+                                        <p class="card-title">Opportunity Cost</p>
+                                        <p class="card-desc">Every idle rupee is a missed growth chance</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-bar" style="position:relative;z-index:3;">
+                            <div class="byline"><strong>F9XR Team</strong> &bull; Financial Education</div>
+                            <div class="bookmark"><i class="fa-regular fa-bookmark"></i></div>
+                        </div>
+
+                        <div class="slide-number">02</div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- SLIDE 3: Quality — PORTFOLIO HEALTH            -->
+                    <!-- ============================================ -->
+                    <div class="slide">
+                        <div class="dotted-bg absolute inset-0 z-0"></div>
+
+                        <div class="ribbon">PORTFOLIO CHECK</div>
+                        <div class="logo-pos">F9XR <span>Team</span></div>
+
+                        <div class="content-zone relative z-10">
+                            <div class="flex items-start justify-between gap-6 anim" style="animation-delay:0s;">
+                                <div>
+                                    <div class="headline" style="font-size:clamp(32px,4vw,58px);">
+                                        PORTFOLIO<br>
+                                        <span class="green">HEALTH</span>
+                                    </div>
+                                    <p class="subtitle">
+                                        Is your asset mix optimized for<br>
+                                        long-term, sustainable growth?
+                                    </p>
+                                    <div class="arrow-accent" style="margin-top:8px;">
+                                        <i class="fa-solid fa-arrow-right"></i> Check Your Allocation
+                                    </div>
+                                </div>
+                                <div class="shield-large">
+                                    <i class="fa-solid fa-shield-check"></i>
+                                </div>
+                            </div>
+
+                            <div class="cards-row anim" style="animation-delay:0.1s;">
+                                <div class="info-card">
+                                    <div class="icon-badge green-bg"><i class="fa-solid fa-scale-balanced"></i></div>
+                                    <div>
+                                        <p class="card-title">Risk Assessment</p>
+                                        <p class="card-desc">Match volatility tolerance to life stage and goals</p>
+                                    </div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="icon-badge blue-bg"><i class="fa-solid fa-layer-group"></i></div>
+                                    <div>
+                                        <p class="card-title">Diversification</p>
+                                        <p class="card-desc">Spread exposure across asset classes and sectors</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-bar" style="position:relative;z-index:3;">
+                            <div class="byline"><strong>F9XR Team</strong> &bull; Financial Education</div>
+                            <div class="bookmark"><i class="fa-regular fa-bookmark"></i></div>
+                        </div>
+
+                        <div class="slide-number">03</div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- SLIDE 4: Process — THE ANALYSIS FRAMEWORK      -->
+                    <!-- ============================================ -->
+                    <div class="slide">
+                        <div class="dotted-bg absolute inset-0 z-0"></div>
+
+                        <div class="ribbon">FRAMEWORK</div>
+                        <div class="logo-pos">F9XR <span>Team</span></div>
+
+                        <div class="content-zone relative z-10">
+                            <div class="anim" style="animation-delay:0s;">
+                                <div class="headline" style="font-size:clamp(28px,3.5vw,52px);">
+                                    THE ANALYSIS<br>
+                                    <span class="blue">FRAMEWORK</span>
+                                </div>
+                                <p class="subtitle" style="margin-bottom:16px;">
+                                    A systematic approach to financial decision-making.
+                                </p>
+                            </div>
+
+                            <div class="anim" style="animation-delay:0.05s;">
+                                <div class="flow-row">
+                                    <div class="flow-step">
+                                        <div class="step-num">1</div>
+                                        <div class="step-text">Assess<small>Current net worth &amp; cash flow</small></div>
+                                    </div>
+                                    <div class="flow-step">
+                                        <div class="step-num">2</div>
+                                        <div class="step-text">Define<small>Risk profile &amp; return targets</small></div>
+                                    </div>
+                                </div>
+                                <div class="flow-arrow"><i class="fa-solid fa-angles-down"></i></div>
+                                <div class="flow-row">
+                                    <div class="flow-step">
+                                        <div class="step-num">3</div>
+                                        <div class="step-text">Allocate<small>Distribute across asset classes</small></div>
+                                    </div>
+                                    <div class="flow-step">
+                                        <div class="step-num">4</div>
+                                        <div class="step-text">Monitor<small>Rebalance quarterly &amp; track KPIs</small></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cards-row anim" style="animation-delay:0.15s;margin-top:8px;">
+                                <div class="info-card">
+                                    <div class="icon-badge"><i class="fa-solid fa-gear"></i></div>
+                                    <div>
+                                        <p class="card-title">Automated Tracking</p>
+                                        <p class="card-desc">Real-time dashboards for portfolio visibility</p>
+                                    </div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="icon-badge blue-bg"><i class="fa-solid fa-arrows-rotate"></i></div>
+                                    <div>
+                                        <p class="card-title">Periodic Rebalancing</p>
+                                        <p class="card-desc">Stay aligned with target allocation ratios</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-bar" style="position:relative;z-index:3;">
+                            <div class="byline"><strong>F9XR Team</strong> &bull; Financial Education</div>
+                            <div class="bookmark"><i class="fa-regular fa-bookmark"></i></div>
+                        </div>
+
+                        <div class="slide-number">04</div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- SLIDE 5: CTA — START YOUR JOURNEY             -->
+                    <!-- ============================================ -->
+                    <div class="slide">
+                        <div class="dotted-bg absolute inset-0 z-0"></div>
+
+                        <div class="ribbon">NEXT STEPS</div>
+                        <div class="logo-pos">F9XR <span>Team</span></div>
+
+                        <div class="content-zone relative z-10">
+                            <div class="anim" style="animation-delay:0s;">
+                                <div class="headline" style="font-size:clamp(32px,4vw,60px);margin-bottom:4px;">
+                                    START YOUR<br>
+                                    <span class="blue">JOURNEY</span>
+                                </div>
+                                <p class="subtitle" style="margin-bottom:20px;">
+                                    Follow for daily financial insights &amp; actionable strategies.
+                                </p>
+                            </div>
+
+                            <div class="flex items-center gap-6 mb-6 anim" style="animation-delay:0.05s;">
+                                <div class="portrait-circle">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Analyst portrait" width="70" height="70" loading="lazy" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <div class="cta-icons">
+                                        <i class="fa-regular fa-thumbs-up"></i>
+                                        <i class="fa-regular fa-heart"></i>
+                                        <i class="fa-regular fa-lightbulb"></i>
+                                        <i class="fa-regular fa-comment"></i>
+                                        <i class="fa-regular fa-question-circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bullet-list anim" style="animation-delay:0.1s;">
+                                <div class="bullet-item"><i class="fa-solid fa-arrow-right"></i> Understand your cash flow before investing</div>
+                                <div class="bullet-item"><i class="fa-solid fa-arrow-right"></i> Diversify across asset classes systematically</div>
+                                <div class="bullet-item"><i class="fa-solid fa-arrow-right"></i> Monitor &amp; rebalance every quarter</div>
+                                <div class="bullet-item"><i class="fa-solid fa-arrow-right"></i> Think long-term &mdash; time in the market wins</div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-bar" style="position:relative;z-index:3;">
+                            <div class="byline"><strong>F9XR Team</strong> &bull; Financial Education</div>
+                            <div class="bookmark"><i class="fa-regular fa-bookmark"></i></div>
+                        </div>
+
+                        <div class="slide-number">05</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Progress dots -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5" id="progressDots"></div>
+        </div>
+
+        <!-- Caption hint -->
+        <p class="text-xs font-bold uppercase tracking-widest mt-6 text-center" style="color:#6B7A99;">
+            Designed for LinkedIn &bull; 1080 &times; 1080 px &bull; Swipe to navigate
+        </p>
+    </main>
+
+    <script>
+        const track = document.getElementById('track');
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const counter = document.getElementById('slideCounter');
+        const progressDots = document.getElementById('progressDots');
+        const totalSlides = slides.length;
+        let current = 0;
+
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'progress-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+            dot.onclick = function() { goTo(i); };
+            progressDots.appendChild(dot);
+        }
+
+        function goTo(index) {
+            if (index < 0) index = 0;
+            if (index >= totalSlides) index = totalSlides - 1;
+            current = index;
+            track.style.transform = 'translateX(-' + (current * 1080) + 'px)';
+
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === current);
+                s.querySelectorAll('.anim').forEach(el => {
+                    el.style.animation = 'none';
+                    el.offsetHeight;
+                    el.style.animation = '';
+                });
+            });
+
+            prevBtn.disabled = current === 0;
+            nextBtn.disabled = current === totalSlides - 1;
+            counter.textContent = (current + 1) + ' / ' + totalSlides;
+
+            document.querySelectorAll('.progress-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === current);
+            });
+        }
+
+        function nextSlide() { goTo(current + 1); }
+        function prevSlide() { goTo(current - 1); }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        let touchStartX = 0;
+        document.getElementById('carousel-card').addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        document.getElementById('carousel-card').addEventListener('touchend', (e) => {
+            const diff = touchStartX - e.changedTouches[0].screenX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) nextSlide();
+                else prevSlide();
+            }
+        });
+
+        function downloadSlide() {
+            const slide = slides[current];
+            const origWidth = 1080;
+            const origHeight = 1080;
+            const link = document.createElement('a');
+            link.download = 'F9XR_FinancialIntelligence_Slide' + (current + 1) + '.png';
+
+            function capture() {
+                if (typeof html2canvas !== 'undefined') {
+                    html2canvas(slide, {
+                        width: origWidth,
+                        height: origHeight,
+                        scale: 2,
+                        backgroundColor: '#FFFFFF',
+                        allowTaint: false,
+                        useCORS: true,
+                        logging: false
+                    }).then(canvas => {
+                        link.href = canvas.toDataURL('image/png');
+                        link.click();
+                    }).catch(() => {
+                        fallbackDownload(link, origWidth, origHeight);
+                    });
+                } else {
+                    fallbackDownload(link, origWidth, origHeight);
+                }
+            }
+
+            if (typeof html2canvas === 'undefined') {
+                const s = document.createElement('script');
+                s.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+                s.onload = capture;
+                s.onerror = function() { fallbackDownload(link, origWidth, origHeight); };
+                document.head.appendChild(s);
+            } else {
+                capture();
+            }
+        }
+
+        function fallbackDownload(link, origWidth, origHeight) {
+            const c = document.createElement('canvas');
+            c.width = origWidth;
+            c.height = origHeight;
+            const cx = c.getContext('2d');
+            cx.fillStyle = '#FFFFFF';
+            cx.fillRect(0, 0, origWidth, origHeight);
+            cx.fillStyle = '#0A1F44';
+            cx.font = 'bold 60px Plus Jakarta Sans, sans-serif';
+            cx.textAlign = 'center';
+            cx.fillText('Slide ' + (current + 1), origWidth / 2, origHeight / 2);
+            link.href = c.toDataURL('image/png');
+            link.click();
+        }
+
+        function downloadAll() {
+            if (confirm('Download all 5 slides as individual PNGs?')) {
+                const total = slides.length;
+                let i = 0;
+                function downloadNext() {
+                    if (i >= total) return;
+                    goTo(i);
+                    setTimeout(() => {
+                        downloadSlide();
+                        i++;
+                        setTimeout(downloadNext, 800);
+                    }, 300);
+                }
+                downloadNext();
+            }
+        }
+
+        goTo(0);
+
+        const html2canvasScript = document.createElement('script');
+        html2canvasScript.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+        document.head.appendChild(html2canvasScript);
+    </script>
+</body>
+</html>

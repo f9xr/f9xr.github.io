@@ -1,5 +1,25 @@
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: FacebookBot
+Crawl-Delay: 10
+
 User-agent: *
 Allow: /
+Disallow: /legals/
+Disallow: /404.html
+Disallow: /error.html
+Disallow: /pages/coming-soon.html
+Disallow: /pages/thanks.html
+Disallow: /*?fbclid
+Disallow: /*?gclid
+Disallow: /*?utm_
 
 Sitemap: https://f9xr.github.io/sitemap.xml
 Sitemap: https://f9xr.github.io/sitemap-image.xml
