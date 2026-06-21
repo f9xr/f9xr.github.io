@@ -473,26 +473,33 @@
              HERO
              ======================================== -->
         <section class="relative min-h-[60vh] flex flex-col justify-center pt-20 pb-10 overflow-hidden">
-            <div class="max-w-5xl mx-auto w-full px-6 md:px-12 relative z-10 text-center">
+            <div class="max-w-7xl mx-auto w-full px-6 md:px-12 relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left">
 
-                <!-- Tagline Badge -->
-                <div class="flex justify-center mb-8 reveal">
-                    <span
-                        class="px-6 py-2 border border-accent-blue/30 bg-accent-blue/10 rounded-full uppercase tracking-widest text-xs font-black text-accent-blue italic shadow-[0_0_40px_rgba(59,130,246,0.2)]">
-                        <i class="fa-solid fa-handshake mr-2"></i> The Backend Crew
-                    </span>
+                        <!-- Tagline Badge -->
+                        <div class="flex justify-center md:justify-start mb-8 reveal">
+                            <span
+                                class="px-6 py-2 border border-accent-blue/30 bg-accent-blue/10 rounded-full uppercase tracking-widest text-xs font-black text-accent-blue italic shadow-[0_0_40px_rgba(59,130,246,0.2)]">
+                                <i class="fa-solid fa-handshake mr-2"></i> The Backend Crew
+                            </span>
+                        </div>
+
+                        <!-- Main Headline -->
+                        <h1
+                            class="hero-title text-5xl md:text-8xl lg:text-[7rem] font-black leading-[0.9] tracking-tighter mb-8 uppercase italic text-white drop-shadow-2xl reveal">
+                            Our <span class="text-stroke">Partners.</span>
+                        </h1>
+
+                        <!-- Subheadline -->
+                        <p class="text-xl md:text-2xl text-platinum/70 max-w-3xl mx-auto md:mx-0 leading-relaxed mb-12 font-medium italic reveal delay-200">
+                            The people who power the engine. From system architecture to backend logic, our partners ensure every service runs flawlessly 24/7.
+                        </p>
+                    </div>
+                    <div class="reveal">
+                        <img src="../assets/illustrations/Starman-rafiki.svg" alt="F9XR Partners" class="w-full h-auto max-w-lg mx-auto" loading="lazy">
+                    </div>
                 </div>
-
-                <!-- Main Headline -->
-                <h1
-                    class="hero-title text-5xl md:text-8xl lg:text-[7rem] font-black leading-[0.9] tracking-tighter mb-8 uppercase italic text-white drop-shadow-2xl reveal">
-                    Our <span class="text-stroke">Partners.</span>
-                </h1>
-
-                <!-- Subheadline -->
-                <p class="text-xl md:text-2xl text-platinum/70 max-w-3xl mx-auto leading-relaxed mb-12 font-medium italic reveal delay-200">
-                    The people who power the engine. From system architecture to backend logic, our partners ensure every service runs flawlessly 24/7.
-                </p>
             </div>
         </section>
 
@@ -904,7 +911,13 @@
             </div>
         </div>
         
-    </footer>
+    
+            <div class="text-center mt-4">
+                <p class="text-[10px] font-medium text-white/30 uppercase tracking-widest">
+                    Illustrations by <a href="https://storyset.com" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Storyset</a>
+                </p>
+            </div>
+        </footer>
 
     <!-- === SCRIPTS === -->
     <script>

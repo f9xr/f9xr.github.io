@@ -3,8 +3,76 @@ Website Design Inspiration
     https://www.notion.so/notion/Notion-for-Startups-f5024471757f4435961902018646777e
 
 
-F9XR data entry and management solutions
-- C:\Users\inanj\Documents\GitHub\f9xr.github.io\services\data-management.html
+remove Our Process section from @index.html file
+update the @sitemap.html file in @pages folder and also the all the sitemaps pages
+
+in About Us page:
+- in Our Services section: linked it to the @services page in @pages folder
+- remove the: Our Guarantee.
+We don't just sell services; we sell growth. Every project is handled with a "Skin in the Game" approach.
+Guaranteed 500+ Organic Visitors
+2 Months Free Ranking Support
+
+also, remove the: Global HQ.
+Edmonton
+Alberta, Canada
+
+Operations & Strategy Hub
+
+India
+Tech Development Center
+
+Backend & R&D
+
+---
+
+in The F9XR Engine.
+Tech Stack
+Node.js / Node / PHP
+Tailwind / Bootstrap
+WordPress / WIX / WIX - WIX is repeated 
+AWS / Hostinger / Bluehost
+Success Vault
+Full SEO Setup
+Google Indexing
+AdSense Approval Help
+Earning Strategies
+
+---
+
+in services.html Page:
+
+there are some text like - Ã¢â‚¬â€ - fix it plz 
+impove the hero's padding 
+also impove the 04. Specialized Services - impove the padding 
+also impove the FAQ section, make it in accordion ui
+
+in portfolio.html
+
+fix - Precision Ã¢â‚¬Â¢ Performance Ã¢â‚¬Â¢ Perfection
+
+in projects.html page:
+
+fix - Gaming Blog
+Ã¢â‚¬Â¢
+Vehicle Blog
+Ã¢â‚¬Â¢
+Tech Blog
+Ã¢â‚¬Â¢
+Music Trends
+Ã¢â‚¬Â¢
+Accounting Blog
+Ã¢â‚¬Â¢
+Web Learners
 
 
-live search bar to search from legals, pages, and services folder
+in contact.html
+
+fix - Secure a 10-minute technical audit. We'll map out your digital architecture and growth strategy ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â no strings attached.
+
+
+
+remove:
+
+expert-bio.html
+topics.html

@@ -448,25 +448,28 @@
     <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex-grow">
 
         <!-- === HERO SECTION === -->
-        <section class="mb-24 reveal text-center lg:text-left">
-            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
-                <div class="max-w-4xl">
+        <section class="py-16 mb-24 reveal">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
                     <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block">Architects
                         of Digital Precision</span>
                     <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8 uppercase italic">
                         In-Depth <br> <span class="text-stroke">Solutions.</span>
                     </h1>
                     <p class="text-xl md:text-3xl text-platinum/70 font-medium leading-relaxed italic">
-                        What We Do? From web design and development, to SEO and support Ã¢â‚¬â€ our services help your site
+                        What We Do? From web design and development, to SEO and support – our services help your site
                         stand out and convert new leads.
                     </p>
+                    <div class="bg-gunmetal border border-white/5 p-8 rounded-[2.5rem] backdrop-blur-md hidden lg:block mt-8">
+                        <p class="text-[10px] uppercase tracking-widest text-iron-grey font-black mb-4 italic">Service Model
+                        </p>
+                        <h4 class="text-2xl font-black text-white italic">Per-Project Billing.</h4>
+                        <p class="text-sm opacity-50 mt-2 font-medium tracking-tight">Flat rates. No hourly surprises.
+                            Global delivery.</p>
+                    </div>
                 </div>
-                <div class="bg-gunmetal border border-white/5 p-8 rounded-[2.5rem] backdrop-blur-md hidden lg:block">
-                    <p class="text-[10px] uppercase tracking-widest text-iron-grey font-black mb-4 italic">Service Model
-                    </p>
-                    <h4 class="text-2xl font-black text-white italic">Per-Project Billing.</h4>
-                    <p class="text-sm opacity-50 mt-2 font-medium tracking-tight">Flat rates. No hourly surprises.
-                        Global delivery.</p>
+                <div class="reveal">
+                    <img src="../assets/illustrations/By my car-rafiki.svg" alt="F9XR Services - Digital Solutions" class="w-full h-auto max-w-lg mx-auto" loading="lazy">
                 </div>
             </div>
         </section>
@@ -621,6 +624,7 @@
         </section>
 
         <!-- === SPECIALIZED SERVICES === -->
+        <section class="py-32 px-6">
             <div class="reveal" id="specialized">
                 <div class="flex items-center gap-4 mb-12">
                     <span class="w-12 h-[2px] bg-accent-blue"></span>
@@ -654,7 +658,7 @@
                         <i class="fas fa-house-circle-check text-5xl text-accent-blue mb-8"></i>
                         <h3 class="text-3xl font-black mb-6 tracking-tighter uppercase">Website Rentals</h3>
                         <p class="text-lg text-platinum/60 leading-relaxed mb-6">
-                            Get a fully designed professional website on a low monthly rental. Includes design, hosting, maintenance, updates & priority support â€” no large upfront cost.
+                            Get a fully designed professional website on a low monthly rental. Includes design, hosting, maintenance, updates & priority support � no large upfront cost.
                         </p>
                         <span class="inline-flex items-center gap-2 text-accent-blue font-black text-sm uppercase tracking-widest group-hover:gap-4 transition-all">
                             View Service <i class="fa-solid fa-arrow-right-long"></i>
@@ -695,6 +699,7 @@
                     </a>
                 </div>
             </div>
+        </section>
 
         <!-- === THE F9XR VALUE ADD (EXTRA MILE) === -->
         <section class="py-32 reveal">
@@ -809,26 +814,61 @@
                 <h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none text-white">Service Insights.</h2>
                 <p class="text-xl text-platinum/50 font-medium italic mt-6 max-w-xl mx-auto">Everything you need to know about working with F9XR Team.</p>
             </div>
-            <div class="space-y-8">
-                <div class="bg-white/5 border border-white/5 rounded-3xl p-10 reveal">
-                    <h3 class="text-2xl md:text-3xl font-black text-white mb-4">How do you improve my local SEO and Google ranking?</h3>
-                    <p class="text-lg text-platinum/60 leading-relaxed">F9XR Team optimizes your Google Business Profile with complete setup, photo uploads, category selection, reputation management, and local citation building. We also run technical SEO audits, keyword research, and on-page optimization to ensure you dominate local search results. Every project includes Search Console indexing and 2 months of ranking support.</p>
+            <div class="space-y-4">
+                <div class="faq-item bg-white/5 border border-white/5 rounded-3xl overflow-hidden transition-all duration-500">
+                    <button onclick="toggleFaq(this)" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
+                        <h3 class="text-2xl md:text-3xl font-black text-white pr-4">How do you improve my local SEO and Google ranking?</h3>
+                        <div class="faq-icon w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 shrink-0 transition-transform duration-500"><i class="fa-solid fa-plus text-xs text-white"></i></div>
+                    </button>
+                    <div class="faq-answer max-h-0 opacity-0 transition-all duration-700 ease-in-out overflow-hidden">
+                        <div class="px-10 pb-10 border-t border-white/5 pt-8">
+                            <p class="text-lg text-platinum/60 leading-relaxed">F9XR Team optimizes your Google Business Profile with complete setup, photo uploads, category selection, reputation management, and local citation building. We also run technical SEO audits, keyword research, and on-page optimization to ensure you dominate local search results. Every project includes Search Console indexing and 2 months of ranking support.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white/5 border border-white/5 rounded-3xl p-10 reveal">
-                    <h3 class="text-2xl md:text-3xl font-black text-white mb-4">What does a website build include?</h3>
-                    <p class="text-lg text-platinum/60 leading-relaxed">Every F9XR website build includes modern responsive design, clean HTML/CSS/JS or WordPress development, SEO-ready structure with meta tags and schema markup, mobile-first optimization, SSL security, and managed deployment. Standard delivery is 10-14 days with 2 months free ranking support. You get 100% ownership of all assets and full IP transfer.</p>
+                <div class="faq-item bg-white/5 border border-white/5 rounded-3xl overflow-hidden transition-all duration-500">
+                    <button onclick="toggleFaq(this)" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
+                        <h3 class="text-2xl md:text-3xl font-black text-white pr-4">What does a website build include?</h3>
+                        <div class="faq-icon w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 shrink-0 transition-transform duration-500"><i class="fa-solid fa-plus text-xs text-white"></i></div>
+                    </button>
+                    <div class="faq-answer max-h-0 opacity-0 transition-all duration-700 ease-in-out overflow-hidden">
+                        <div class="px-10 pb-10 border-t border-white/5 pt-8">
+                            <p class="text-lg text-platinum/60 leading-relaxed">Every F9XR website build includes modern responsive design, clean HTML/CSS/JS or WordPress development, SEO-ready structure with meta tags and schema markup, mobile-first optimization, SSL security, and managed deployment. Standard delivery is 10-14 days with 2 months free ranking support. You get 100% ownership of all assets and full IP transfer.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white/5 border border-white/5 rounded-3xl p-10 reveal">
-                    <h3 class="text-2xl md:text-3xl font-black text-white mb-4">How does F9XR pricing work?</h3>
-                    <p class="text-lg text-platinum/60 leading-relaxed">F9XR charges flat per-project rates with no hourly surprises. A standard business website starts with a competitive project fee, and we offer low monthly website rentals as an alternative. Every project includes 500+ guaranteed organic visitors, 2 months free ranking support, and complete ownership transfer. Monthly maintenance plans are also available for ongoing care.</p>
+                <div class="faq-item bg-white/5 border border-white/5 rounded-3xl overflow-hidden transition-all duration-500">
+                    <button onclick="toggleFaq(this)" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
+                        <h3 class="text-2xl md:text-3xl font-black text-white pr-4">How does F9XR pricing work?</h3>
+                        <div class="faq-icon w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 shrink-0 transition-transform duration-500"><i class="fa-solid fa-plus text-xs text-white"></i></div>
+                    </button>
+                    <div class="faq-answer max-h-0 opacity-0 transition-all duration-700 ease-in-out overflow-hidden">
+                        <div class="px-10 pb-10 border-t border-white/5 pt-8">
+                            <p class="text-lg text-platinum/60 leading-relaxed">F9XR charges flat per-project rates with no hourly surprises. A standard business website starts with a competitive project fee, and we offer low monthly website rentals as an alternative. Every project includes 500+ guaranteed organic visitors, 2 months free ranking support, and complete ownership transfer. Monthly maintenance plans are also available for ongoing care.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white/5 border border-white/5 rounded-3xl p-10 reveal">
-                    <h3 class="text-2xl md:text-3xl font-black text-white mb-4">How do I get my business listed in AI search results like ChatGPT?</h3>
-                    <p class="text-lg text-platinum/60 leading-relaxed">F9XR's AI Visibility Optimization service prepares your brand for AI-powered search. We implement llms.txt files, structured data (JSON-LD), knowledge graph optimization, and conversational content strategies that help AI models like ChatGPT, Gemini, and Copilot discover and cite your business in their answers. This is part of our specialized AI Visibility service.</p>
+                <div class="faq-item bg-white/5 border border-white/5 rounded-3xl overflow-hidden transition-all duration-500">
+                    <button onclick="toggleFaq(this)" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
+                        <h3 class="text-2xl md:text-3xl font-black text-white pr-4">How do I get my business listed in AI search results like ChatGPT?</h3>
+                        <div class="faq-icon w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 shrink-0 transition-transform duration-500"><i class="fa-solid fa-plus text-xs text-white"></i></div>
+                    </button>
+                    <div class="faq-answer max-h-0 opacity-0 transition-all duration-700 ease-in-out overflow-hidden">
+                        <div class="px-10 pb-10 border-t border-white/5 pt-8">
+                            <p class="text-lg text-platinum/60 leading-relaxed">F9XR's AI Visibility Optimization service prepares your brand for AI-powered search. We implement llms.txt files, structured data (JSON-LD), knowledge graph optimization, and conversational content strategies that help AI models like ChatGPT, Gemini, and Copilot discover and cite your business in their answers. This is part of our specialized AI Visibility service.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white/5 border border-white/5 rounded-3xl p-10 reveal">
-                    <h3 class="text-2xl md:text-3xl font-black text-white mb-4">What makes F9XR different from other digital agencies?</h3>
-                    <p class="text-lg text-platinum/60 leading-relaxed">F9XR Team is a performance-first digital agency with a skin-in-the-game guarantee. We offer 500+ guaranteed organic visitors per project, flat-rate billing with no hidden costs, 100% ownership of your site, 2 months free ranking support, and sub-second load times. Our philosophy is "Architects of Digital Precision" — bridging complex technology with human-centric design. Founded in 2022, we serve clients across 3 continents from our Edmonton HQ and India tech center.</p>
+                <div class="faq-item bg-white/5 border border-white/5 rounded-3xl overflow-hidden transition-all duration-500">
+                    <button onclick="toggleFaq(this)" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
+                        <h3 class="text-2xl md:text-3xl font-black text-white pr-4">What makes F9XR different from other digital agencies?</h3>
+                        <div class="faq-icon w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 shrink-0 transition-transform duration-500"><i class="fa-solid fa-plus text-xs text-white"></i></div>
+                    </button>
+                    <div class="faq-answer max-h-0 opacity-0 transition-all duration-700 ease-in-out overflow-hidden">
+                        <div class="px-10 pb-10 border-t border-white/5 pt-8">
+                            <p class="text-lg text-platinum/60 leading-relaxed">F9XR Team is a performance-first digital agency with a skin-in-the-game guarantee. We offer 500+ guaranteed organic visitors per project, flat-rate billing with no hidden costs, 100% ownership of your site, 2 months free ranking support, and sub-second load times. Our philosophy is "Architects of Digital Precision" — bridging complex technology with human-centric design. Founded in 2022, we serve clients across 3 continents from our Edmonton HQ and India tech center.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -971,7 +1011,13 @@
             </div>
         </div>
         
-    </footer>
+    
+            <div class="text-center mt-4">
+                <p class="text-[10px] font-medium text-white/30 uppercase tracking-widest">
+                    Illustrations by <a href="https://storyset.com" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Storyset</a>
+                </p>
+            </div>
+        </footer>
     <!-- === BACK TO TOP === -->
     <button id="btt"
         class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl">
@@ -980,6 +1026,20 @@
 
     <!-- === SCRIPTS === -->
     <script>
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-item');
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-icon i');
+            const isOpen = answer.classList.contains('max-h-0') === false;
+            document.querySelectorAll('.faq-item .faq-answer').forEach(el => { el.classList.add('max-h-0', 'opacity-0'); el.classList.remove('opacity-100'); });
+            document.querySelectorAll('.faq-item .faq-icon i').forEach(el => el.className = 'fa-solid fa-plus text-xs text-white');
+            if (!isOpen) {
+                answer.classList.remove('max-h-0', 'opacity-0');
+                answer.classList.add('opacity-100');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.className = 'fa-solid fa-minus text-xs text-white';
+            }
+        }
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('menu-icon');
