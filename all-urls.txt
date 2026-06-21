@@ -6,6 +6,7 @@ https://f9xr.github.io/legals/refund.html
 https://f9xr.github.io/legals/shipping.html
 https://f9xr.github.io/legals/terms.html
 https://f9xr.github.io/pages/about.html
+https://f9xr.github.io/pages/agentic-browsing-carousel.html
 https://f9xr.github.io/pages/ar-aging-carousel.html
 https://f9xr.github.io/pages/coming-soon.html
 https://f9xr.github.io/pages/contact.html

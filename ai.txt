@@ -1,6 +1,5 @@
 User-Agent: *
 Allow: /summarize
-Disallow: /images/training
 Disallow: /private-data/
 
 # Defined capabilities for 2026 compliant agents
