@@ -74,5 +74,18 @@ fix - Secure a 10-minute technical audit. We'll map out your digital architectur
 
 remove:
 
-expert-bio.html
 topics.html
+
+
+
+--- PENDING E-E-A-T TASKS (from 22 Jun 2026) ---
+
+- Add external citations/references to remaining service pages:
+  → services/data-management.html
+  → services/google-business-optimization.html
+  → services/indian-professionals.html
+  → services/social-media-posting.html
+  → services/website-rentals.html
+  → pages/services.html
+
+- Verify all new files (expert-bio.html, .well-known/*) are indexed in sitemap

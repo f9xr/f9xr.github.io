@@ -1,0 +1,18 @@
+{
+  "resource": "https://f9xr.github.io",
+  "authorization_servers": [
+    "https://f9xr.github.io"
+  ],
+  "scopes_supported": [
+    "openid",
+    "profile",
+    "email",
+    "api:read",
+    "api:write"
+  ],
+  "bearer_methods_supported": [
+    "header",
+    "query"
+  ],
+  "resource_documentation": "https://f9xr.github.io/auth.md"
+}

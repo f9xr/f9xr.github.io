@@ -12,6 +12,8 @@ Disallow: /*?fbclid
 Disallow: /*?gclid
 Disallow: /*?utm_
 
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
 Sitemap: https://f9xr.github.io/sitemap.xml
 Sitemap: https://f9xr.github.io/sitemap-image.xml
 Sitemap: https://f9xr.github.io/sitemap-video.xml

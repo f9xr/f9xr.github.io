@@ -16,6 +16,17 @@
     <link rel="canonical" href="https://f9xr.github.io/">
     <meta name="google-site-verification" content="eUs3gO62-qye1PfAW79eLM5uws1KN7DXKVM8bjPADLM" />
 
+    <link href="/.well-known/api-catalog" rel="api-catalog" type="application/linkset+json">
+    <link href="/llms.txt" rel="service-doc" type="text/plain">
+    <link href="/llms-full.txt" rel="service-doc" type="text/plain">
+    <link href="/auth.md" rel="describedby" type="text/markdown">
+    <link href="/.well-known/agent-skills/index.json" rel="agent-skills" type="application/json">
+    <link href="/.well-known/mcp/server-card.json" rel="mcp-server" type="application/json">
+    <link href="/.well-known/openid-configuration" rel="openid-configuration" type="application/json">
+    <link href="/.well-known/oauth-authorization-server" rel="oauth-authorization-server" type="application/json">
+    <link href="/.well-known/oauth-protected-resource" rel="oauth-protected-resource" type="application/json">
+    <link href="/llms.txt" rel="alternate" type="text/markdown" title="Markdown for Agents">
+
     <meta name="theme-color" content="#212529">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -144,13 +155,26 @@
           "description": "F9XR Team architects high-performance websites, AI-integrated systems, and Local SEO strategies that drive measurable growth for global brands.",
           "foundingDate": "2024",
           "email": "contact@f9xr.com",
-            "sameAs": [
+          "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 10 },
+          "areaServed": "Worldwide",
+          "serviceType": ["Web Design", "SEO", "AI Integration", "Google Business Optimization", "Maintenance", "Branding"],
+          "award": [
+            "500+ Guaranteed Organic Visitors Per Project",
+            "99% Global Client Retention Rate"
+          ],
+          "knowsAbout": ["Web Development", "Search Engine Optimization", "Artificial Intelligence", "Cloud Infrastructure", "Digital Marketing", "UI/UX Design"],
+          "sameAs": [
               "https://github.com/f9xr",
               "https://www.linkedin.com/company/f9xrteam",
               "https://twitter.com/f9xrteam",
               "https://www.facebook.com/profile.php?id=61586225441401",
               "https://www.youtube.com/@QuarterlyLIV"
-            ]
+            ],
+          "founder": [
+            { "@type": "Person", "name": "Lead Digital Architect", "jobTitle": "Lead Digital Architect", "url": "https://f9xr.github.io/pages/expert-bio.html" },
+            { "@type": "Person", "name": "AKM", "jobTitle": "Technical Architect", "url": "https://inakm.github.io" },
+            { "@type": "Person", "name": "Aryansh", "jobTitle": "AI Logic Engineer", "url": "https://aryansh.site" }
+          ]
         },
         {
           "@type": "WebSite",
@@ -175,9 +199,23 @@
           "url": "https://f9xr.github.io/",
           "mainEntity": {
             "@type": "Person",
-            "name": "F9XR Team",
+            "name": "Lead Digital Architect, F9XR Team",
             "description": "Digital precision architects specializing in AI web design, local SEO, and high-performance web systems.",
-            "knowsAbout": ["Web Development", "Search Engine Optimization", "AI Integration", "Digital Marketing", "UI/UX Design"]
+            "knowsAbout": ["Web Development", "Search Engine Optimization", "AI Integration", "Digital Marketing", "UI/UX Design", "Cloud Infrastructure", "System Architecture"],
+            "knowsLanguage": ["HTML", "CSS", "JavaScript", "Node.js", "PHP", "Python"],
+            "jobTitle": "Lead Digital Architect",
+            "worksFor": { "@type": "Organization", "name": "F9XR Team" },
+            "url": "https://f9xr.github.io/pages/expert-bio.html",
+            "sameAs": ["https://github.com/f9xr", "https://www.linkedin.com/company/f9xrteam"],
+            "hasCredential": [
+              { "@type": "EducationalOccupationalCredential", "name": "Full-Stack Web Development" },
+              { "@type": "EducationalOccupationalCredential", "name": "AI System Integration" },
+              { "@type": "EducationalOccupationalCredential", "name": "Cloud Architecture" }
+            ],
+            "knows": [
+              { "@type": "Person", "name": "AKM", "url": "https://inakm.github.io" },
+              { "@type": "Person", "name": "Aryansh", "url": "https://aryansh.site" }
+            ]
           }
         }
       ]
@@ -342,8 +380,8 @@
 
     
     <button id="backToTop" aria-label="Scroll to top"
-        class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl"><i
-            class="fas fa-arrow-up text-sm"></i></button>
+        class="fixed bottom-8 right-8 w-8 h-8 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl"><i
+            class="fas fa-arrow-up text-xs"></i></button>
 
     
     <header id="main-header" class="fixed top-6 left-0 right-0 z-[5000] px-4 transition-transform duration-300">
@@ -584,7 +622,7 @@
                 <a href="mailto:tontufytservices@gmail.com" aria-label="Email Us"
                     class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
                         class="fa-solid fa-envelope"></i></a>
-            <a href="https://www.youtube.com/@QuarterlyLIV" aria-label="YouTube" class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.youtube.com/@QuarterlyLIV" aria-label="YouTube" class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
     </header>
@@ -782,6 +820,283 @@
 
 
         
+        <section class="py-10 px-4 md:px-6 relative overflow-hidden" id="process">
+            
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+
+                
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 reveal">
+
+                    <h2
+                        class="text-6xl md:text-9xl font-black tracking-tighter italic uppercase text-white leading-none">
+                        Our Process<span class="text-stroke text-transparent"
+                            style="-webkit-text-stroke: 1.5px #f8f9fa;">.</span>
+                    </h2>
+                </div>
+
+                
+                <div class="space-y-4 reveal">
+
+                    
+                    <div class="process-item group bg-white/5 border border-white/5 rounded-[2rem] md:rounded-[3rem] overflow-hidden transition-all duration-500 hover:border-white/10"
+                        id="step-1">
+                        <button onclick="toggleProcess('step-1')"
+                            class="w-full px-6 py-6 flex items-center justify-between text-left focus:outline-none">
+                            <div class="flex items-center gap-6 md:gap-10">
+                                <span
+                                    class="text-[10px] md:text-xs font-black text-platinum/30 tracking-widest uppercase italic">(001)</span>
+                                <h3
+                                    class="text-2xl md:text-4xl font-black uppercase tracking-tighter text-white italic group-hover:text-accent-blue transition-colors duration-300">
+                                    Discovery & Audit</h3>
+                            </div>
+                            <div
+                                class="toggle-icon w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 group-hover:bg-accent-blue group-hover:border-accent-blue transition-all duration-300">
+                                <i class="fa-solid fa-plus text-xs text-white transition-transform duration-500"></i>
+                            </div>
+                        </button>
+
+                        <div class="process-content max-h-0 opacity-0 transition-all duration-700 ease-in-out">
+                            <div
+                                class="px-6 pb-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center border-t border-white/5 pt-10">
+                                <div class="lg:col-span-7 flex flex-col md:flex-row gap-8 items-center">
+                                    <div
+                                        class="w-full md:w-56 aspect-video md:aspect-square rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 border border-white/10 shadow-2xl">
+                                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1106&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Audit" loading="lazy" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-xl font-black text-white uppercase italic mb-4">Uncovering
+                                            Revenue Leaks</h4>
+                                        <p class="text-platinum/70 text-base leading-relaxed italic mb-8">
+                                            We analyze your brand DNA, technical debt, and competitor landscape to find
+                                            exactly where you are losing global visibility.
+                                        </p>
+                                        <a href="pages/contact.html"
+                                            class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
+                                            Book Free Audit <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-5">
+                                    <p
+                                        class="text-[10px] font-black uppercase tracking-widest text-iron-grey mb-6 italic">
+                                        Core Deliverables</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Competitor
+                                            Intel</span>
+                                        <span
+                                            class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Tech
+                                            Audit</span>
+                                        <span
+                                            class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">SEO
+                                            Roadmap</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="process-item group bg-white/5 border border-white/5 rounded-[2rem] md:rounded-[3rem] overflow-hidden transition-all duration-500 hover:border-white/10"
+                        id="step-2">
+                        <button onclick="toggleProcess('step-2')"
+                            class="w-full px-6 py-6 flex items-center justify-between text-left focus:outline-none">
+                            <div class="flex items-center gap-6 md:gap-10">
+                                <span
+                                    class="text-[10px] md:text-xs font-black text-platinum/30 tracking-widest uppercase italic">(002)</span>
+                                <h3
+                                    class="text-2xl md:text-4xl font-black uppercase tracking-tighter text-white italic group-hover:text-accent-blue transition-colors duration-300">
+                                    Strategy & Design</h3>
+                            </div>
+                            <div
+                                class="toggle-icon w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 group-hover:bg-accent-blue group-hover:border-accent-blue transition-all duration-300">
+                                <i class="fa-solid fa-plus text-xs text-white transition-transform duration-500"></i>
+                            </div>
+                        </button>
+
+                        <div class="process-content max-h-0 opacity-0 transition-all duration-700 ease-in-out">
+                            <div
+                                class="px-6 pb-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center border-t border-white/5 pt-10">
+                                <div class="lg:col-span-7 flex flex-col md:flex-row gap-8 items-center">
+                                    <div
+                                        class="w-full md:w-56 aspect-video md:aspect-square rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 border border-white/10 shadow-2xl">
+                                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="Design" class="w-full h-full object-cover" loading="lazy">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-xl font-black text-white uppercase italic mb-4">High-FID
+                                            Architecture</h4>
+                                        <p class="text-platinum/70 text-base leading-relaxed italic mb-8">
+                                            We map out user psychology, conversion funnels, and modern aesthetics to
+                                            ensure your digital product converts browsers into high-paying clients.
+                                        </p>
+                                        <a href="pages/contact.html"
+                                            class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
+                                            Review Framework <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-5">
+                                    <p
+                                        class="text-[10px] font-black uppercase tracking-widest text-iron-grey mb-6 italic">
+                                        Core Deliverables</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">UX
+                                            Mockups</span>
+                                        <span
+                                            class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Interactive
+                                            Flows</span>
+                                        <span
+                                            class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Brand
+                                            Guidelines</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="process-item group bg-white/5 border border-white/5 rounded-[2rem] md:rounded-[3rem] overflow-hidden transition-all duration-500 hover:border-white/10"
+                        id="step-3">
+                        <button onclick="toggleProcess('step-3')"
+                            class="w-full px-6 py-6 flex items-center justify-between text-left focus:outline-none">
+                            <div class="flex items-center gap-6 md:gap-10">
+                                <span
+                                    class="text-[10px] md:text-xs font-black text-platinum/30 tracking-widest uppercase italic">(003)</span>
+                                <h3
+                                    class="text-2xl md:text-4xl font-black uppercase tracking-tighter text-white italic group-hover:text-accent-blue transition-colors duration-300">
+                                    Execution & Logic</h3>
+                            </div>
+                            <div
+                                class="toggle-icon w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 group-hover:bg-accent-blue group-hover:border-accent-blue transition-all duration-300">
+                                <i class="fa-solid fa-plus text-xs text-white transition-transform duration-500"></i>
+                            </div>
+                        </button>
+
+                        <div class="process-content max-h-0 opacity-0 transition-all duration-700 ease-in-out">
+                            <div
+                                class="px-6 pb-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center border-t border-white/5 pt-10">
+                                <div class="lg:col-span-7 flex flex-col md:flex-row gap-8 items-center">
+                                    <div
+                                        class="w-full md:w-56 aspect-video md:aspect-square rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 border border-white/10 shadow-2xl">
+                                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600"
+                                            alt="Development" class="w-full h-full object-cover" loading="lazy">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-xl font-black text-white uppercase italic mb-4">Precision Code
+                                            Integration</h4>
+                                        <p class="text-platinum/70 text-base leading-relaxed italic mb-8">
+                                            Our engineers translate designs into clean, scalable code integrated with
+                                            proprietary AI logic for automated engagement and security.
+                                        </p>
+                                        <a href="pages/contact.html"
+                                            class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
+                                            View Tech Stack <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-5">
+                                    <p
+                                        class="text-[10px] font-black uppercase tracking-widest text-iron-grey mb-6 italic">
+                                        Core Deliverables</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Custom
+                                            CMS</span>
+                                        <span
+                                            class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">AI
+                                            Agent logic</span>
+                                        <span
+                                            class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">SSL
+                                            Security</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="process-item group bg-white/5 border border-white/5 rounded-[2rem] md:rounded-[3rem] overflow-hidden transition-all duration-500 hover:border-white/10"
+                        id="step-4">
+                        <button onclick="toggleProcess('step-4')"
+                            class="w-full px-6 py-6 flex items-center justify-between text-left focus:outline-none">
+                            <div class="flex items-center gap-6 md:gap-10">
+                                <span
+                                    class="text-[10px] md:text-xs font-black text-platinum/30 tracking-widest uppercase italic">(004)</span>
+                                <h3
+                                    class="text-2xl md:text-4xl font-black uppercase tracking-tighter text-white italic group-hover:text-accent-blue transition-colors duration-300">
+                                    Optimization & Growth</h3>
+                            </div>
+                            <div
+                                class="toggle-icon w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 group-hover:bg-accent-blue group-hover:border-accent-blue transition-all duration-500">
+                                <i class="fa-solid fa-plus text-xs text-white transition-transform duration-500"></i>
+                            </div>
+                        </button>
+
+                        <div class="process-content max-h-0 opacity-0 transition-all duration-700 ease-in-out">
+                            <div
+                                class="px-6 pb-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center border-t border-white/5 pt-10">
+                                <div class="lg:col-span-7 flex flex-col md:flex-row gap-8 items-center">
+                                    <div
+                                        class="w-full md:w-56 aspect-video md:aspect-square rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 border border-white/10 shadow-2xl">
+                                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600"
+                                            alt="Growth" class="w-full h-full object-cover" loading="lazy">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-xl font-black text-white uppercase italic mb-4">Continuous Asset
+                                            Appreciation</h4>
+                                        <p class="text-platinum/70 text-base leading-relaxed italic mb-8">
+                                            Post-launch, we focus on rigorous SEO indexing, Core Web Vital tuning, and
+                                            performance monitoring to ensure long-term ROI.
+                                        </p>
+                                        <a href="pages/contact.html"
+                                            class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
+                                            Scale My Business <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-5">
+                                    <p
+                                        class="text-[10px] font-black uppercase tracking-widest text-iron-grey mb-6 italic">
+                                        Core Deliverables</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Local
+                                            SEO Dominance</span>
+                                        <span
+                                            class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">Speed
+                                            Tuning</span>
+                                        <span
+                                            class="bg-white/5 px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/5 text-platinum/70">24/5
+                                            Priority Care</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                <div class="mt-20 text-center reveal">
+                    <p class="text-platinum/30 font-bold uppercase tracking-[0.4em] text-[10px]">
+                        Engineering Success from <span class="text-white">India</span> to the <span
+                            class="text-white">Global Digital World</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <hr class="border-white/5 my-0 w-full">
+
         <section class="py-20 px-6 border-t border-white/5 relative overflow-hidden" id="problems">
             
             <div
@@ -2568,12 +2883,12 @@
                 
                 <!-- Socials -->
                 <div class="flex items-center justify-center sm:justify-start gap-6">
-                    <a href="https://instagram.com/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://linkedin.com/company/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://instagram.com/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=61586225441401" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Facebook Page"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.facebook.com/share/g/18J9AMKqRC/" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Facebook Group"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.youtube.com/@QuarterlyLIV" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.youtube.com/@QuarterlyLIV" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
 
                 <!-- Center Text -->
@@ -2889,17 +3204,30 @@
         }
     </script>
     
-    <div class="fixed bottom-8 left-8 z-[9000] group">
-        <button
-            class="w-14 h-14 bg-accent-blue rounded-full shadow-[0_0_30px_rgba(59,130,246,0.5)] flex items-center justify-center hover:scale-110 transition-transform">
-            <i class="fa-solid fa-robot text-white text-2xl animate-[bounce_3s_infinite]"></i>
-        </button>
-        
-        <div
-            class="absolute left-16 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md border border-white/10 px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-            <span class="text-[10px] font-black uppercase tracking-widest text-white">AI Assistant</span>
-        </div>
-    </div>
+<script>
+  (function() {
+    function loadTailorTalkWhatsAppWidget(callback) {
+      var script = document.createElement('script');
+      script.src = "https://plugins.tailortalk.ai/widget_whatsapp.js";
+      script.onload = callback;
+      document.head.appendChild(script);
+    }
+
+    loadTailorTalkWhatsAppWidget(function() {
+      window.TailorTalkWhatsApp && window.TailorTalkWhatsApp.init({
+  "agentId": "public",
+  "whatsappConfig": {
+    "businessInfo": {
+      "phoneNumber": "9123442431"
+    },
+    "buttonText": "Chat with Us!",
+    "welcomeMessage": "Hello 👋\\nHow can we help you today?"
+  },
+  "position": "left"
+});
+    });
+  })();
+</script>
 
     <!-- Site-wide Search Modal -->
     <div id="search-modal" class="fixed inset-0 bg-carbon-black/90 backdrop-blur-xl z-[9000] invisible opacity-0 transition-all duration-300 flex flex-col items-center pt-24 px-4">
@@ -2982,6 +3310,86 @@
     </script>
 
 <script>
+// WebMCP: Expose site tools to AI agents via browser context
+try {
+    if (navigator.modelContext && typeof navigator.modelContext.provideContext === 'function') {
+        navigator.modelContext.provideContext({
+            tools: [{
+                name: 'get_services',
+                description: 'List all digital services offered by F9XR Team including web design, SEO, AI integration, and maintenance.',
+                inputSchema: {
+                    type: 'object',
+                    properties: {},
+                    required: []
+                },
+                execute: async () => {
+                    return {
+                        services: [
+                            { name: 'Web Design & Development', url: '/pages/services.html' },
+                            { name: 'SEO & Growth', url: '/pages/services.html' },
+                            { name: 'Google Business Profile', url: '/services/google-business-optimization.html' },
+                            { name: 'AI Visibility Optimization', url: '/services/ai-visibility-optimization.html' },
+                            { name: 'Social Media Management', url: '/services/social-media-posting.html' },
+                            { name: 'Website Rentals', url: '/services/website-rentals.html' },
+                            { name: 'Data Management', url: '/services/data-management.html' },
+                        ]
+                    };
+                }
+            }, {
+                name: 'get_portfolio',
+                description: 'Browse featured projects and case studies from F9XR Team.',
+                inputSchema: {
+                    type: 'object',
+                    properties: {},
+                    required: []
+                },
+                execute: async () => {
+                    return {
+                        projects: [
+                            { name: 'iCryptos Dashboards', url: 'https://ttearncrypto.github.io/dashboards', category: 'Fintech' },
+                            { name: 'Foil AI', url: 'https://foilai.in', category: 'AI-Image Generation' },
+                            { name: 'VroAI Chatbot', url: 'https://vroai.in', category: 'AI Platform' },
+                        ]
+                    };
+                }
+            }, {
+                name: 'get_llms_txt',
+                description: 'Retrieve the llms.txt content for AI agent consumption.',
+                inputSchema: {
+                    type: 'object',
+                    properties: {},
+                    required: []
+                },
+                execute: async () => {
+                    const res = await fetch('/llms.txt');
+                    return { content: await res.text() };
+                }
+            }, {
+                name: 'get_contact_info',
+                description: 'Get contact information including email, phone, and social media links.',
+                inputSchema: {
+                    type: 'object',
+                    properties: {},
+                    required: []
+                },
+                execute: async () => {
+                    return {
+                        email: 'tontufytservices@gmail.com',
+                        phone: '+91 91234-42431',
+                        whatsapp: 'https://wa.me/message/X3KGWTAJ6Z6NB1',
+                        social: {
+                            instagram: 'https://instagram.com/f9xrteam',
+                            linkedin: 'https://linkedin.com/company/f9xrteam',
+                            github: 'https://github.com/f9xr',
+                            youtube: 'https://www.youtube.com/@QuarterlyLIV'
+                        }
+                    };
+                }
+            }]
+        });
+    }
+} catch (e) { /* WebMCP not available */ }
+
 // Smart Navbar: hide on scroll down, show on scroll up
 let lastScrollY$ = window.scrollY;
 const header$ = document.getElementById('main-header');

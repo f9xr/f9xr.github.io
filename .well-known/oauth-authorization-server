@@ -1,0 +1,47 @@
+{
+  "issuer": "https://f9xr.github.io",
+  "authorization_endpoint": "https://f9xr.github.io/pages/contact.html",
+  "token_endpoint": "https://f9xr.github.io/pages/contact.html",
+  "jwks_uri": "https://f9xr.github.io/.well-known/jwks.json",
+  "registration_endpoint": "https://f9xr.github.io/pages/contact.html",
+  "response_types_supported": [
+    "code"
+  ],
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "client_secret_post"
+  ],
+  "scopes_supported": [
+    "openid",
+    "profile",
+    "email",
+    "api:read",
+    "api:write"
+  ],
+  "code_challenge_methods_supported": [
+    "S256"
+  ],
+  "service_documentation": "https://f9xr.github.io/auth.md",
+  "ui_locales_supported": [
+    "en-US"
+  ],
+  "op_policy_uri": "https://f9xr.github.io/legals/privacy.html",
+  "op_tos_uri": "https://f9xr.github.io/legals/terms.html",
+  "agent_auth": {
+    "register_uri": "https://f9xr.github.io/pages/contact.html",
+    "supported_identity_types": [
+      "email",
+      "oauth2"
+    ],
+    "supported_credential_types": [
+      "client_secret_basic",
+      "client_secret_post"
+    ],
+    "claim_uri": "https://f9xr.github.io/pages/contact.html",
+    "revocation_uri": "https://f9xr.github.io/pages/contact.html"
+  }
+}

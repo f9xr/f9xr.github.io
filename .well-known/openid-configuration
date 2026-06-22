@@ -1,0 +1,28 @@
+{
+  "issuer": "https://f9xr.github.io",
+  "authorization_endpoint": "https://f9xr.github.io/pages/contact.html",
+  "token_endpoint": "https://f9xr.github.io/pages/contact.html",
+  "jwks_uri": "https://f9xr.github.io/.well-known/jwks.json",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "scopes_supported": [
+    "openid",
+    "profile",
+    "email"
+  ],
+  "registration_endpoint": "https://f9xr.github.io/pages/contact.html",
+  "service_documentation": "https://f9xr.github.io/auth.md",
+  "op_policy_uri": "https://f9xr.github.io/legals/privacy.html",
+  "op_tos_uri": "https://f9xr.github.io/legals/terms.html"
+}

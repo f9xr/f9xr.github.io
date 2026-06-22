@@ -1,0 +1,45 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://f9xr.github.io/",
+      "links": [
+        {
+          "href": "https://f9xr.github.io/llms.txt",
+          "rel": "service-desc",
+          "type": "text/plain",
+          "title": "LLMs Description"
+        },
+        {
+          "href": "https://f9xr.github.io/llms-full.txt",
+          "rel": "service-desc",
+          "type": "text/plain",
+          "title": "Full LLMs Description"
+        },
+        {
+          "href": "https://f9xr.github.io/",
+          "rel": "service-doc",
+          "type": "text/html",
+          "title": "F9XR Team Homepage"
+        },
+        {
+          "href": "https://f9xr.github.io/pages/services.html",
+          "rel": "service-doc",
+          "type": "text/html",
+          "title": "Services Documentation"
+        },
+        {
+          "href": "https://f9xr.github.io/pages/contact.html",
+          "rel": "status",
+          "type": "text/html",
+          "title": "Contact & Support"
+        },
+        {
+          "href": "https://f9xr.github.io/.well-known/security.txt",
+          "rel": "status",
+          "type": "text/plain",
+          "title": "Security Policy"
+        }
+      ]
+    }
+  ]
+}
