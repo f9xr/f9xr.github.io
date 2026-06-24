@@ -410,6 +410,15 @@
         ['Reviews → trust', '91% trust reviews'],
         ['Multi-channel → engagement', '300% higher']
       ]
+    },
+    'hashtag-generator': {
+      title: 'Hashtag Benchmarks',
+      data: [
+        ['Posts with hashtags → engagement', '12.6% more'],
+        ['Mix broad + niche → reach', '2.3× higher'],
+        ['5–10 relevant tags → optimal', 'Best performance'],
+        ['Niche-specific tags → conversion', '4× better']
+      ]
     }
   };
 
