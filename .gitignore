@@ -1,0 +1,13 @@
+# Internal / working files
+todo.txt
+template.txt
+all-urls.txt
+growwithguidance-blog-urls.txt
+
+# IndexNow API key (keep locally, not tracked)
+a6c3935b59ab4306bd241c2137d64c90.txt
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+*.log

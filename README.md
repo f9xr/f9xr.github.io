@@ -45,6 +45,6 @@ Global digital agency specializing in high-performance web development, AI-power
 
 ## License
 
-All rights reserved. This code is published publicly for transparency and indexing purposes. Redistribution or commercial use without permission is prohibited.
+Licensed under the [MIT License](LICENSE).
 
 © 2022–2026 F9XR Team

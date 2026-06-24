@@ -1,5 +1,7 @@
+# Security Policy
+# https://f9xr.github.io/.well-known/security.txt
+
 Contact: mailto:tontufytservices@gmail.com
-Expires: 2027-01-01T00:00:00.000Z
+Expires: 2027-06-24T00:00:00.000Z
 Preferred-Languages: en
-Policy: https://f9xr.github.io/legals/privacy.html
-Hiring: https://f9xr.github.io/pages/contact.html
+Canonical: https://f9xr.github.io/.well-known/security.txt

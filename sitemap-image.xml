@@ -225,6 +225,16 @@
       <image:title>Aryansh Portfolio Screenshot</image:title>
       <image:caption>Aryansh - AI Logic &amp; Backend Portfolio by F9XR Team</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/screenshots/googleF9XR.png</image:loc>
+      <image:title>F9XR Team Google Business Profile Results</image:title>
+      <image:caption>Google Business Profile ranking results achieved by F9XR Team</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/screenshots/GooglePHF9XR.jpg</image:loc>
+      <image:title>F9XR Team Google Performance Snapshot</image:title>
+      <image:caption>Google search performance snapshot for F9XR Team clients</image:caption>
+    </image:image>
   </url>
 
   <!-- ========== PROJECTS PAGE ========== -->
