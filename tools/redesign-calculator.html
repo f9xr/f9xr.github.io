@@ -15,9 +15,9 @@
 <meta property="og:image" content="https://f9xr.github.io/assets/og-image.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:site" content="@f9xrteam">
-<meta property="twitter:image" content="https://f9xr.github.io/assets/og-image.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@f9xrteam">
+<meta name="twitter:image" content="https://f9xr.github.io/assets/og-image.webp">
 <meta name="twitter:url" content="https://f9xr.github.io/tools/redesign-calculator.html">
 <meta name="theme-color" content="#212529">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,7 +66,7 @@
   ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://f9xr.github.io/#organization","name":"F9XR Team","url":"https://f9xr.github.io","logo":"https://f9xr.github.io/logo.webp","foundingDate":"2023","contactPoint":{"@type":"ContactPoint","telephone":"+91-9123442431","contactType":"sales","email":"tontufytservices@gmail.com","availableLanguage":"English"},"sameAs":["https://instagram.com/f9xrteam","https://linkedin.com/company/f9xrteam","https://github.com/f9xr","https://www.facebook.com/profile.php?id=61586225441401","https://www.youtube.com/@QuarterlyLIV"]},{"@type":"WebSite","@id":"https://f9xr.github.io/#website","url":"https://f9xr.github.io","name":"F9XR Team","publisher":{"@id":"https://f9xr.github.io/#organization"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://f9xr.github.io/#organization","name":"F9XR Team","url":"https://f9xr.github.io","logo":"https://f9xr.github.io/logo.webp","foundingDate":"2024","contactPoint":{"@type":"ContactPoint","telephone":"+91-9123442431","contactType":"sales","email":"tontufytservices@gmail.com","availableLanguage":"English"},"sameAs":["https://instagram.com/f9xrteam","https://linkedin.com/company/f9xrteam","https://github.com/f9xr","https://www.facebook.com/profile.php?id=61586225441401","https://www.youtube.com/@QuarterlyLIV"]},{"@type":"WebSite","@id":"https://f9xr.github.io/#website","url":"https://f9xr.github.io","name":"F9XR Team","publisher":{"@id":"https://f9xr.github.io/#organization"}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a website redesign cost?","acceptedAnswer":{"@type":"Answer","text":"The cost ranges from $3,000 for a basic 5-page redesign to $25,000+ for a 25+ page site with custom features. Factors include page count, design complexity, CMS integration, and additional features like e-commerce or membership systems."}},{"@type":"Question","name":"When should I redesign my website?","acceptedAnswer":{"@type":"Answer","text":"Consider a redesign if: your site is 3+ years old, mobile experience is poor, page load time exceeds 3 seconds, bounce rate is above 70%, conversion rate is declining, or your brand has evolved. A redesign every 2–3 years is recommended."}},{"@type":"Question","name":"How long does a website redesign take?","acceptedAnswer":{"@type":"Answer","text":"A typical redesign takes 8–16 weeks: planning and strategy (2–3 weeks), design (3–4 weeks), development (4–6 weeks), testing and launch (2–3 weeks). Timelines depend on project complexity and content readiness."}},{"@type":"Question","name":"Should I redesign or rebuild my website?","acceptedAnswer":{"@type":"Answer","text":"Choose a redesign if your current platform works well but needs updated visuals and UX. Choose a rebuild if you need a new CMS, major functionality changes, or your current platform is outdated or insecure."}},{"@type":"Question","name":"Will a redesign improve my SEO?","acceptedAnswer":{"@type":"Answer","text":"A well-executed redesign can significantly improve SEO by improving site speed, mobile-friendliness, information architecture, and content quality. However, a poorly managed redesign can hurt rankings — always maintain URL structure and redirects."}},{"@type":"Question","name":"What is the ROI of a website redesign?","acceptedAnswer":{"@type":"Answer","text":"Businesses typically see 30–50% increase in conversions, 40–60% improvement in page load time, 25% reduction in bounce rate, and 20–30% increase in organic traffic within 6 months of a strategic redesign."}}]}</script>
 <script>
 function toggleFaq(btn){const answer=btn.nextElementSibling;const isOpen=answer.style.maxHeight&&answer.style.maxHeight!=='0px';document.querySelectorAll('.faq-answer').forEach(a=>{a.style.maxHeight='0';a.previousElementSibling.classList.remove('active')});if(!isOpen){answer.style.maxHeight=answer.scrollHeight+'px';btn.classList.add('active')}}
@@ -143,6 +143,7 @@ body{overflow-x:hidden}
 <link rel="stylesheet" href="../assets/css/skeleton.css">
 </head>
 <body class="text-bright-snow font-sans antialiased min-h-screen flex flex-col" data-tool-key="redesign-calculator" data-tool-name="Website Redesign Cost Calculator">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-6 focus:py-3 focus:bg-accent-blue focus:text-white focus:rounded-xl focus:font-bold focus:outline-none focus:ring-4 focus:ring-accent-blue/50 transition-all">Skip to main content</a>
 <div id="skel-overlay" class="skel-overlay">
   <div class="skel-overlay-inner">
     <div class="skel-overlay-logo"></div>
@@ -272,7 +273,7 @@ body{overflow-x:hidden}
     </div>
 </header>
 
-<main class="max-w-[1200px] mx-auto px-6 py-8 md:px-8 md:py-12 relative pt-20 lg:pt-28">
+<main id="main-content" class="max-w-[1200px] mx-auto px-6 py-8 md:px-8 md:py-12 relative pt-20 lg:pt-28">
 
   <div class="text-center mb-10">
     <div class="w-16 h-16 rounded-full bg-accent-blue/20 text-accent-blue flex items-center justify-center mx-auto mb-4 text-2xl border border-white/10 backdrop-blur-md" aria-hidden="true">
@@ -692,8 +693,8 @@ body{overflow-x:hidden}
       </a>
     </div>
     <div class="w-full flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 mb-16 lg:mb-24 mt-auto">
-      <img src="../logo.webp" alt="F9XR Team logo" loading="lazy" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">
-      <h2 class="text-[11vw] font-black leading-none tracking-tighter text-white">F9XRTeam</h2>
+      <img src="../logo.webp" width="512" height="512" alt="F9XR Team logo" loading="lazy" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">
+      <p aria-hidden="true" class="text-[11vw] font-black leading-none tracking-tighter text-white">F9XRTeam</p>
     </div>
   </div>
   <div class="relative w-full py-6 lg:py-8 border-t border-white/10 overflow-hidden mt-8">
@@ -708,7 +709,7 @@ body{overflow-x:hidden}
           <a href="https://www.youtube.com/@QuarterlyLIV" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
       </div>
       <div class="sm:absolute sm:left-1/2 sm:-translate-x-1/2">
-        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white">Engineering Digital Growth</h2>
+        <p aria-hidden="true" class="text-xl sm:text-2xl font-bold tracking-tight text-white">Engineering Digital Growth</p>
       </div>
       <div class="text-sm md:text-base font-bold text-white">&copy; 2026 F9XR Team.</div>
     </div>

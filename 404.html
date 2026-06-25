@@ -6,7 +6,6 @@
 
     <!-- === PRIMARY SEO META TAGS === -->
     <title>404 - Blueprint Not Found | F9XR Team</title>
-    <meta name="title" content="404 - Page Not Found | F9XR Team">
     <meta name="description"
         content="The digital architecture you're looking for doesn't exist. Return to F9XR Team home for high-performance web design.">
     <meta name="robots" content="noindex, follow">
@@ -37,6 +36,7 @@
     <!-- === FONTS & ICONS === -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -133,6 +133,7 @@
 </head>
 
 <body class="text-bright-snow font-sans antialiased flex flex-col min-h-screen">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-6 focus:py-3 focus:bg-accent-blue focus:text-white focus:rounded-xl focus:font-bold focus:outline-none focus:ring-4 focus:ring-accent-blue/50 transition-all">Skip to main content</a>
 <div id="skel-overlay" class="skel-overlay">
   <div class="skel-overlay-inner">
     <div class="skel-overlay-logo"></div>
@@ -403,7 +404,7 @@
         </div>
     </header>
 
-    <main class="flex-grow flex items-center justify-center px-8 pt-40 pb-28 relative z-10 w-full overflow-hidden">
+    <main id="main-content" class="flex-grow flex items-center justify-center px-8 pt-40 pb-28 relative z-10 w-full overflow-hidden">
         <div class="max-w-4xl w-full text-center">
             <!-- 404 Visual -->
             <div class="reveal mb-8">
@@ -548,8 +549,8 @@
 
             <!-- Giant Logo Section -->
             <div class="w-full flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 mb-16 lg:mb-24 mt-auto">
-                <img src="./logo.webp" alt="F9XR" loading="lazy" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">
-                <h2 class="text-[11vw] font-black leading-none tracking-tighter text-white">F9XRTeam</h2>
+                <img src="./logo.webp" width="512" height="512" alt="F9XR" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">
+                <p aria-hidden="true" class="text-[11vw] font-black leading-none tracking-tighter text-white">F9XRTeam</p>
             </div>
 
         </div>
@@ -573,7 +574,7 @@
 
                 <!-- Center Text -->
                 <div class="sm:absolute sm:left-1/2 sm:-translate-x-1/2">
-                    <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white">Engineering Digital Growth</h2>
+                    <p aria-hidden="true" class="text-xl sm:text-2xl font-bold tracking-tight text-white">Engineering Digital Growth</p>
                 </div>
 
                 <!-- Copyright -->

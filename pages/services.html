@@ -17,7 +17,7 @@
 
     <!-- === PRIMARY SEO META TAGS === -->
     <title>Our Services | F9XR Team - Digital Agency Excellence</title>
-    <meta name="title" content="Our Services | F9XR Team - Digital Agency Excellence">
+
     <meta name="description"
         content="In-depth digital services by F9XR Team. From AI-powered web development and SEO to Google Business management and professional branding.">
     <meta name="keywords"
@@ -39,11 +39,11 @@
     <meta property="og:image" content="https://f9xr.github.io/assets/og-image.webp">
     <meta property="og:site_name" content="F9XR Team">
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://f9xr.github.io/pages/services.html">
-    <meta property="twitter:title" content="Our Services | F9XR Team - Digital Agency Excellence">
-    <meta property="twitter:description" content="In-depth digital services by F9XR Team. From AI-powered web development and SEO to Google Business management and professional branding.">
-    <meta property="twitter:image" content="https://f9xr.github.io/assets/og-image.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://f9xr.github.io/pages/services.html">
+    <meta name="twitter:title" content="Our Services | F9XR Team - Digital Agency Excellence">
+    <meta name="twitter:description" content="In-depth digital services by F9XR Team. From AI-powered web development and SEO to Google Business management and professional branding.">
+    <meta name="twitter:image" content="https://f9xr.github.io/assets/og-image.webp">
 
     <!-- === SCHEMA MARKUP (JSON-LD) === -->
     <script type="application/ld+json">
@@ -73,6 +73,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/skeleton.css">
 
@@ -190,6 +192,7 @@
 </head>
 
 <body class="text-bright-snow font-sans selection:bg-accent-blue selection:text-white min-h-screen flex flex-col">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-6 focus:py-3 focus:bg-accent-blue focus:text-white focus:rounded-xl focus:font-bold focus:outline-none focus:ring-4 focus:ring-accent-blue/50 transition-all">Skip to main content</a>
     <!-- Skeleton Screen Preloader -->
     <div id="skel-overlay" class="skel-overlay">
         <div class="skel-overlay-inner">
@@ -315,7 +318,7 @@
                                 <i class="fa-solid fa-layer-group text-3xl text-accent-blue mb-3"></i>
                                 <h4 class="text-white font-bold text-[14px] lg:text-[16px] mb-2">Our Solutions</h4>
                                 <p class="text-platinum/60 text-[10px] leading-tight mb-4">Discover the full spectrum of our digital services.</p>
-                                <a href="../pages/services.html" class="text-[10px] uppercase tracking-widest font-bold text-accent-blue hover:text-white transition-colors">View All <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                                <a aria-current="page" href="../pages/services.html" class="text-[10px] uppercase tracking-widest font-bold text-accent-blue hover:text-white transition-colors">View All <i class="fa-solid fa-arrow-right ml-1"></i></a>
                             </div>
 
                             <!-- Right Column: Service Links -->
@@ -444,7 +447,7 @@
 
                 <a href="../pages/about.html" onclick="toggleMobileMenu()"
                     class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>
-                <a href="../pages/services.html" onclick="toggleMobileMenu()"
+                <a aria-current="page" href="../pages/services.html" onclick="toggleMobileMenu()"
                     class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>
                 <a href="../pages/portfolio.html" onclick="toggleMobileMenu()"
                     class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>
@@ -468,7 +471,7 @@
         </div>
     </header>
 
-    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex-grow">
+    <main id="main-content" class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex-grow">
 
         <!-- === HERO SECTION === -->
         <section class="py-16 mb-24 reveal">
@@ -486,13 +489,13 @@
                     <div class="bg-gunmetal border border-white/5 p-8 rounded-[2.5rem] backdrop-blur-md hidden lg:block mt-8">
                         <p class="text-[10px] uppercase tracking-widest text-iron-grey font-black mb-4 italic">Service Model
                         </p>
-                        <h4 class="text-2xl font-black text-white italic">Per-Project Billing.</h4>
+                        <p class="text-2xl font-black text-white italic">Per-Project Billing.</p>
                         <p class="text-sm opacity-50 mt-2 font-medium tracking-tight">Flat rates. No hourly surprises.
                             Global delivery.</p>
                     </div>
                 </div>
                 <div class="reveal">
-                    <img src="../assets/illustrations/By my car-rafiki.svg" alt="F9XR Services - Digital Solutions" class="w-full h-auto max-w-lg mx-auto" loading="lazy">
+                    <img src="../assets/illustrations/By my car-rafiki.svg" width="500" height="500" alt="F9XR Services - Digital Solutions" class="w-full h-auto max-w-lg mx-auto" fetchpriority="high">
                 </div>
             </div>
         </section>
@@ -1036,8 +1039,8 @@
 
             <!-- Giant Logo Section -->
             <div class="w-full flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 mb-16 lg:mb-24 mt-auto">
-                <img src="../logo.webp" alt="F9XR" loading="lazy" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">
-                <h2 class="text-[11vw] font-black leading-none tracking-tighter text-white">F9XRTeam</h2>
+                <img src="../logo.webp" width="512" height="512" alt="F9XR" loading="lazy" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">
+                <p aria-hidden="true" class="text-[11vw] font-black leading-none tracking-tighter text-white">F9XRTeam</p>
             </div>
 
         </div>
@@ -1061,7 +1064,7 @@
 
                 <!-- Center Text -->
                 <div class="sm:absolute sm:left-1/2 sm:-translate-x-1/2">
-                    <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white">Engineering Digital Growth</h2>
+                    <p aria-hidden="true" class="text-xl sm:text-2xl font-bold tracking-tight text-white">Engineering Digital Growth</p>
                 </div>
 
                 <!-- Copyright -->
