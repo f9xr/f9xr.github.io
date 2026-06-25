@@ -222,8 +222,16 @@
         }
     </style>
     <link rel="stylesheet" href="../assets/css/transactions.css">
+    <link rel="stylesheet" href="../assets/css/skeleton.css">
 </head>
 <body class="bg-carbon-black text-platinum font-sans antialiased overflow-x-hidden selection:bg-accent-blue selection:text-white">
+    <div id="skel-overlay" class="skel-overlay">
+  <div class="skel-overlay-inner">
+    <div class="skel-overlay-logo"></div>
+    <div class="skel-overlay-bar"></div>
+    <div class="skel-overlay-label">Loading...</div>
+  </div>
+</div>
     <header id="main-header" class="fixed top-6 left-0 right-0 z-[5000] px-4 transition-transform duration-300">
         <nav
             class="max-w-[95rem] w-full mx-auto flex justify-between items-center py-1 lg:py-2 px-2 relative z-[5001]">
@@ -373,6 +381,36 @@
                                     <div>
                                         <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Data Management</div>
                                         <div class="text-platinum/50 text-[9px]">Organize your data</div>
+                                    </div>
+                                </a>
+                                <a href="../services/discord-bot-development.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-brands fa-discord text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Discord Bots</div>
+                                        <div class="text-platinum/50 text-[9px]">Automate your server</div>
+                                    </div>
+                                </a>
+                                <a href="../services/telegram-bot-development.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-brands fa-telegram text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Telegram Bots</div>
+                                        <div class="text-platinum/50 text-[9px]">Smart messaging bots</div>
+                                    </div>
+                                </a>
+                            </div>
+                                </a>
+                                <a href="../services/discord-bot-development.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-brands fa-discord text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Discord Bots</div>
+                                        <div class="text-platinum/50 text-[9px]">Automate your server</div>
+                                    </div>
+                                </a>
+                                <a href="../services/telegram-bot-development.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-brands fa-telegram text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Telegram Bots</div>
+                                        <div class="text-platinum/50 text-[9px]">Smart messaging bots</div>
                                     </div>
                                 </a>
                             </div>
@@ -572,6 +610,8 @@
                         <a href="./google-business-optimization.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-brands fa-google text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Google Business</a>
                         <a href="./social-media-posting.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-hashtag text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Social Media</a>
                         <a href="./website-rentals.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-laptop-house text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Website Rentals</a>
+                        <a href="./discord-bot-development.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-brands fa-discord text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Discord Bots</a>
+                        <a href="./telegram-bot-development.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-brands fa-telegram text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Telegram Bots</a>
                     </div>
                 </div>
 
@@ -813,5 +853,6 @@ if (header$) {
     });
 }
 </script>
+    <script src="../assets/js/skeleton.js"></script>
 </body>
 </html>

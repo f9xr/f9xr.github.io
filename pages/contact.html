@@ -70,6 +70,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/skeleton.css">
 
     <!-- === TAILWIND CONFIG === -->
     <script src="https://cdn.tailwindcss.com?version=3.4.17"></script>
@@ -194,6 +195,14 @@
 </head>
 
 <body class="text-bright-snow font-sans selection:bg-accent-blue selection:text-white min-h-screen flex flex-col">
+    <!-- Skeleton Screen Preloader -->
+    <div id="skel-overlay" class="skel-overlay">
+        <div class="skel-overlay-inner">
+            <div class="skel-overlay-logo"></div>
+            <div class="skel-overlay-bar"></div>
+            <div class="skel-overlay-label">Loading...</div>
+        </div>
+    </div>
     <div class="fixed inset-0 -z-50 h-full w-full bg-black">
         <div
             class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
@@ -356,6 +365,20 @@
                                     <div>
                                         <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Data Management</div>
                                         <div class="text-platinum/50 text-[9px]">Organize your data</div>
+                                    </div>
+                                </a>
+                                <a href="../services/discord-bot-development.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-brands fa-discord text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Discord Bots</div>
+                                        <div class="text-platinum/50 text-[9px]">Automate your server</div>
+                                    </div>
+                                </a>
+                                <a href="../services/telegram-bot-development.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+                                    <i class="fa-brands fa-telegram text-accent-blue mt-1"></i>
+                                    <div>
+                                        <div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Telegram Bots</div>
+                                        <div class="text-platinum/50 text-[9px]">Smart messaging bots</div>
                                     </div>
                                 </a>
                             </div>
@@ -998,6 +1021,8 @@
                         <a href="../services/google-business-optimization.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-brands fa-google text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Google Business</a>
                         <a href="../services/social-media-posting.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-hashtag text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Social Media</a>
                         <a href="../services/website-rentals.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-laptop-house text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Website Rentals</a>
+                        <a href="../services/discord-bot-development.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-brands fa-discord text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Discord Bots</a>
+                        <a href="../services/telegram-bot-development.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-brands fa-telegram text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Telegram Bots</a>
                     </div>
                 </div>
 
@@ -1267,6 +1292,7 @@ if (header$) {
     });
 }
 </script>
+<script src="../assets/js/skeleton.js"></script>
 </body>
 
 </html>

@@ -9,12 +9,21 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="stylesheet" href="assets/css/skeleton.css">
 </head>
 <body style="background:#212529;color:#f8f9fa;font-family:sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;">
+<div id="skel-overlay" class="skel-overlay">
+  <div class="skel-overlay-inner">
+    <div class="skel-overlay-logo"></div>
+    <div class="skel-overlay-bar"></div>
+    <div class="skel-overlay-label">Loading...</div>
+  </div>
+</div>
     <div style="text-align:center;">
         <p style="font-size:1.2rem;margin-bottom:1rem;">Redirecting you to the error page...</p>
         <a href="/404.html" style="color:#3b82f6;text-decoration:underline;">Click here if not redirected</a>
     </div>
     <script>window.location.href = '/404.html';</script>
+    <script src="assets/js/skeleton.js"></script>
 </body>
 </html>
