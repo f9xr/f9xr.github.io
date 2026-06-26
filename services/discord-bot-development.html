@@ -123,70 +123,7 @@
     }
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What programming languages do you use for Discord bots?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We primarily build Discord bots using Node.js with discord.js v14, the most popular and well-supported framework. For specific use cases, we can also use Python with discord.py or other languages as needed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does it take to build a custom Discord bot?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A standard bot with basic features typically takes 5–10 days. Complex bots with multiple systems, databases, and custom integrations take 2–4 weeks from discovery to deployment."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you provide hosting for Discord bots?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, every bot comes with 24/7 cloud hosting on AWS or Digital Ocean with PM2 process management, automatic restarts, and uptime monitoring included in our deployment package."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What Discord API features do you support?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We support all modern Discord API features including slash commands, context menus, modals, message components, buttons, select menus, thread management, voice integration, and Gateway intents."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can the bot be updated after deployment?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. We provide ongoing maintenance and feature updates. Bots are built with modular architecture so new features can be added seamlessly without disrupting existing functionality."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you offer maintenance and support packages?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we offer monthly maintenance plans covering API compatibility updates, feature enhancements, performance monitoring, error logging, and priority support to keep your bot running smoothly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you migrate an existing bot to your platform?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we can migrate existing bots to our infrastructure, refactor code for better performance, and add new features. We support migration from Discord.js v12, v13, and other frameworks."
-          }
-        }
-      ]
-    }
-    </script>
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -318,6 +255,54 @@
     <link rel="stylesheet" href="../assets/css/transactions.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="../assets/css/transactions.css"></noscript>
     <link rel="stylesheet" href="../assets/css/skeleton.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What kind of features can a custom Discord bot have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our custom bots can handle automated moderation, ticketing systems, dynamic role assignments, API integrations, economy systems, and custom minigames."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you host the bot for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer professional deployment and ongoing maintenance hosting services to ensure your Discord bot runs 24/7 without interruption."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the bot interact with my website or database?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We can connect your Discord bot to external APIs, databases, or your main application so users can query data directly from the chat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to develop a custom bot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simple utility bots can be developed in 3-5 days. Complex bots with advanced economies, AI integration, or external API requirements typically take 2-4 weeks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I have full access to the source code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, once the project is completed and final payment is made, we hand over all source code and documentation so you have full ownership of your asset."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="text-bright-snow font-sans antialiased selection:bg-accent-blue selection:text-white min-h-screen flex flex-col">
@@ -918,6 +903,80 @@
             </div>
         </section>
 
+
+    
+
+    <section class="py-32 px-6 max-w-4xl mx-auto" id="faq">
+        <div class="text-center mb-20 reveal">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block"><i class="fa-solid fa-question-circle mr-2"></i> KNOWLEDGE BASE</span>
+            <h2 class="text-4xl md:text-6xl font-black text-white italic tracking-tighter">Frequently Asked <span class="text-stroke-sm">Questions.</span></h2>
+        </div>
+        <div class="space-y-4">
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    What kind of features can a custom Discord bot have?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Our custom bots can handle automated moderation, ticketing systems, dynamic role assignments, API integrations, economy systems, and custom minigames.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Do you host the bot for me?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Yes, we offer professional deployment and ongoing maintenance hosting services to ensure your Discord bot runs 24/7 without interruption.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Can the bot interact with my website or database?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Absolutely. We can connect your Discord bot to external APIs, databases, or your main application so users can query data directly from the chat.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    How long does it take to develop a custom bot?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Simple utility bots can be developed in 3-5 days. Complex bots with advanced economies, AI integration, or external API requirements typically take 2-4 weeks.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Will I have full access to the source code?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Yes, once the project is completed and final payment is made, we hand over all source code and documentation so you have full ownership of your asset.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .faq-item.open .faq-content { max-height: 500px; }
+        </style>
+    </section>
 </main>
 
         <hr class="border-white/5 my-0 w-full">
@@ -1257,6 +1316,16 @@ if (header$) {
 }
 </script>
     <script src="../assets/js/skeleton.js"></script>
+
+    <script>
+        function toggleFAQ(button) {
+            const item = button.parentElement;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+    </script>
+
 </body>
 
 </html>

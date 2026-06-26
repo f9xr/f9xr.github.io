@@ -226,6 +226,7 @@
     </style>
     <link rel="stylesheet" href="../assets/css/transactions.css">
     <link rel="stylesheet" href="../assets/css/skeleton.css">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -236,7 +237,7 @@
       "name": "Which platforms do you manage?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We manage Instagram, Facebook, LinkedIn, X (Twitter), TikTok, and Pinterest depending on your target audience and brand strategy."
+        "text": "We strategically manage Instagram, Facebook, LinkedIn, X (Twitter), TikTok, and Pinterest depending on your target audience and brand goals."
       }
     },
     {
@@ -244,7 +245,31 @@
       "name": "Do you create the content too?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! We handle the entire process from strategy and graphic design/video editing to copywriting, scheduling, and community management."
+        "text": "Yes! We handle the entire process end-to-end: from strategy, copywriting, and graphic design/video editing, to scheduling and community management."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many posts do you publish per week?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This depends entirely on the plan you choose. We offer flexible packages ranging from 3 high-quality posts a week up to daily posts with reels and stories."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to provide images or videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While you can provide raw assets for us to edit, we also have the capability to generate high-end AI visuals, license premium stock media, and create custom graphics from scratch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you help grow our follower count organically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, through consistent, highly engaging content, strategic hashtag usage, and active community engagement, we build authentic growth and brand loyalty."
       }
     }
   ]
@@ -733,48 +758,90 @@
             <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
                 <h2 class="text-xl font-bold text-accent-blue mb-4 flex items-center gap-2"><i class="fa-solid fa-book-open"></i> References</h2>
                 <ul class="space-y-2 text-sm text-platinum/60">
-                    <li><a href="https://www.hubspot.com/social-media-marketing" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">HubSpot — Social Media Marketing Guide</a> — Best practices for content creation and engagement.</li>
-                    <li><a href="https://www.hootsuite.com/research/social-trends" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Hootsuite — Social Media Trends Report</a> — Annual research on social media usage and trends.</li>
-                    <li><a href="https://buffer.com/library/social-media-marketing-strategy/" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Buffer — Social Media Strategy Guide</a> — Proven frameworks for consistent content posting.</li>
+                    <li><a href="https://www.hubspot.com/social-media-marketing" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">HubSpot  Social Media Marketing Guide</a>  Best practices for content creation and engagement.</li>
+                    <li><a href="https://www.hootsuite.com/research/social-trends" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Hootsuite  Social Media Trends Report</a>  Annual research on social media usage and trends.</li>
+                    <li><a href="https://buffer.com/library/social-media-marketing-strategy/" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Buffer  Social Media Strategy Guide</a>  Proven frameworks for consistent content posting.</li>
                 </ul>
             </div>
         </section>
 
     
-    <section class="mb-24 reveal" id="faq">
-        <div class="flex items-center gap-4 mb-16">
-            <span class="w-12 h-[2px] bg-accent-blue"></span>
-            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">Frequently Asked Questions</h2>
+    
+
+
+    
+
+    <section class="py-32 px-6 max-w-4xl mx-auto" id="faq">
+        <div class="text-center mb-20 reveal">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block"><i class="fa-solid fa-question-circle mr-2"></i> KNOWLEDGE BASE</span>
+            <h2 class="text-4xl md:text-6xl font-black text-white italic tracking-tighter">Frequently Asked <span class="text-stroke-sm">Questions.</span></h2>
         </div>
-        <div class="grid gap-6 max-w-4xl mx-auto">
-
-            <div class="faq-item bg-gunmetal border border-white/10 rounded-2xl p-6 cursor-pointer hover:border-accent-blue/50 transition-colors" onclick="this.classList.toggle('open')">
-                <div class="flex justify-between items-center gap-4">
-                    <h3 class="text-xl font-bold text-white">Which platforms do you manage?</h3>
-                    <i class="fa-solid fa-plus text-accent-blue transition-transform duration-300"></i>
-                </div>
-                <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-                    <p class="text-platinum/70 mt-4 leading-relaxed font-medium">We manage Instagram, Facebook, LinkedIn, X (Twitter), TikTok, and Pinterest depending on your target audience and brand strategy.</p>
-                </div>
-            </div>
-
-            <div class="faq-item bg-gunmetal border border-white/10 rounded-2xl p-6 cursor-pointer hover:border-accent-blue/50 transition-colors" onclick="this.classList.toggle('open')">
-                <div class="flex justify-between items-center gap-4">
-                    <h3 class="text-xl font-bold text-white">Do you create the content too?</h3>
-                    <i class="fa-solid fa-plus text-accent-blue transition-transform duration-300"></i>
-                </div>
-                <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-                    <p class="text-platinum/70 mt-4 leading-relaxed font-medium">Yes! We handle the entire process from strategy and graphic design/video editing to copywriting, scheduling, and community management.</p>
+        <div class="space-y-4">
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Which platforms do you manage?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        We strategically manage Instagram, Facebook, LinkedIn, X (Twitter), TikTok, and Pinterest depending on your target audience and brand goals.
+                    </div>
                 </div>
             </div>
-
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Do you create the content too?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Yes! We handle the entire process end-to-end: from strategy, copywriting, and graphic design/video editing, to scheduling and community management.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    How many posts do you publish per week?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        This depends entirely on the plan you choose. We offer flexible packages ranging from 3 high-quality posts a week up to daily posts with reels and stories.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Do I need to provide images or videos?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        While you can provide raw assets for us to edit, we also have the capability to generate high-end AI visuals, license premium stock media, and create custom graphics from scratch.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Can you help grow our follower count organically?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Yes, through consistent, highly engaging content, strategic hashtag usage, and active community engagement, we build authentic growth and brand loyalty.
+                    </div>
+                </div>
+            </div>
         </div>
         <style>
-            .faq-item.open i { transform: rotate(45deg); }
             .faq-item.open .faq-content { max-height: 500px; }
         </style>
     </section>
-
 </main>
 
                 <footer class="bg-[#0a0a0a] pt-0 no-print overflow-hidden relative font-sans">
@@ -1082,6 +1149,16 @@ if (header$) {
 }
 </script>
     <script src="../assets/js/skeleton.js"></script>
+
+    <script>
+        function toggleFAQ(button) {
+            const item = button.parentElement;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+    </script>
+
 </body>
 
 </html>

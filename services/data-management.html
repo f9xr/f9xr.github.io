@@ -225,6 +225,7 @@
     </style>
     <link rel="stylesheet" href="../assets/css/transactions.css">
     <link rel="stylesheet" href="../assets/css/skeleton.css">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -243,7 +244,31 @@
       "name": "Is my data kept secure?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely. We follow strict security protocols to ensure all client data is handled with the highest level of confidentiality and protection."
+        "text": "Absolutely. We follow strict security protocols and use encrypted channels to ensure all client data is handled with the highest level of confidentiality."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you integrate data with my existing systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we specialize in building custom API pipelines that seamlessly sync and route data between your CRM, database, and third-party tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle big data processing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we design scalable data architectures using modern cloud infrastructure to efficiently process, clean, and visualize large datasets without performance bottlenecks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you automate my manual data entry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we build automated bots and scripts that can extract data from documents, websites, or emails and perfectly format it into your databases, saving you hundreds of hours."
       }
     }
   ]
@@ -572,48 +597,90 @@
             <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
                 <h2 class="text-xl font-bold text-accent-blue mb-4 flex items-center gap-2"><i class="fa-solid fa-book-open"></i> References</h2>
                 <ul class="space-y-2 text-sm text-platinum/60">
-                    <li><a href="https://www.ibm.com/topics/data-quality" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">IBM — Data Quality Management</a> — Industry best practices for data cleaning and governance.</li>
-                    <li><a href="https://www.gartner.com/en/topics/data-management" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Gartner — Data Management</a> — Research and insights on data management strategies.</li>
-                    <li><a href="https://www.statista.com/topics/2011/data-management/" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Statista — Data Management Market</a> — Market size and trends in data management services.</li>
+                    <li><a href="https://www.ibm.com/topics/data-quality" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">IBM  Data Quality Management</a>  Industry best practices for data cleaning and governance.</li>
+                    <li><a href="https://www.gartner.com/en/topics/data-management" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Gartner  Data Management</a>  Research and insights on data management strategies.</li>
+                    <li><a href="https://www.statista.com/topics/2011/data-management/" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Statista  Data Management Market</a>  Market size and trends in data management services.</li>
                 </ul>
             </div>
         </section>
 
     
-    <section class="mb-24 reveal" id="faq">
-        <div class="flex items-center gap-4 mb-16">
-            <span class="w-12 h-[2px] bg-accent-blue"></span>
-            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">Frequently Asked Questions</h2>
+    
+
+
+    
+
+    <section class="py-32 px-6 max-w-4xl mx-auto" id="faq">
+        <div class="text-center mb-20 reveal">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block"><i class="fa-solid fa-question-circle mr-2"></i> KNOWLEDGE BASE</span>
+            <h2 class="text-4xl md:text-6xl font-black text-white italic tracking-tighter">Frequently Asked <span class="text-stroke-sm">Questions.</span></h2>
         </div>
-        <div class="grid gap-6 max-w-4xl mx-auto">
-
-            <div class="faq-item bg-gunmetal border border-white/10 rounded-2xl p-6 cursor-pointer hover:border-accent-blue/50 transition-colors" onclick="this.classList.toggle('open')">
-                <div class="flex justify-between items-center gap-4">
-                    <h3 class="text-xl font-bold text-white">What data management services do you provide?</h3>
-                    <i class="fa-solid fa-plus text-accent-blue transition-transform duration-300"></i>
-                </div>
-                <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-                    <p class="text-platinum/70 mt-4 leading-relaxed font-medium">We offer data structuring, database management, scraping, organization, and automated data processing tailored to your business needs.</p>
-                </div>
-            </div>
-
-            <div class="faq-item bg-gunmetal border border-white/10 rounded-2xl p-6 cursor-pointer hover:border-accent-blue/50 transition-colors" onclick="this.classList.toggle('open')">
-                <div class="flex justify-between items-center gap-4">
-                    <h3 class="text-xl font-bold text-white">Is my data kept secure?</h3>
-                    <i class="fa-solid fa-plus text-accent-blue transition-transform duration-300"></i>
-                </div>
-                <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-                    <p class="text-platinum/70 mt-4 leading-relaxed font-medium">Absolutely. We follow strict security protocols to ensure all client data is handled with the highest level of confidentiality and protection.</p>
+        <div class="space-y-4">
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    What data management services do you provide?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        We offer data structuring, database management, scraping, organization, and automated data processing tailored to your business needs.
+                    </div>
                 </div>
             </div>
-
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Is my data kept secure?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Absolutely. We follow strict security protocols and use encrypted channels to ensure all client data is handled with the highest level of confidentiality.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Can you integrate data with my existing systems?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Yes, we specialize in building custom API pipelines that seamlessly sync and route data between your CRM, database, and third-party tools.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Do you handle big data processing?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Yes, we design scalable data architectures using modern cloud infrastructure to efficiently process, clean, and visualize large datasets without performance bottlenecks.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Can you automate my manual data entry?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Yes, we build automated bots and scripts that can extract data from documents, websites, or emails and perfectly format it into your databases, saving you hundreds of hours.
+                    </div>
+                </div>
+            </div>
         </div>
         <style>
-            .faq-item.open i { transform: rotate(45deg); }
             .faq-item.open .faq-content { max-height: 500px; }
         </style>
     </section>
-
 </main>
 
     <footer class="bg-[#0a0a0a] pt-0 no-print overflow-hidden relative font-sans">
@@ -921,5 +988,15 @@ if (header$) {
 }
 </script>
     <script src="../assets/js/skeleton.js"></script>
+
+    <script>
+        function toggleFAQ(button) {
+            const item = button.parentElement;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+    </script>
+
 </body>
 </html>

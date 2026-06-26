@@ -123,70 +123,7 @@
     }
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What technologies do you use for Telegram bot development?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We build Telegram bots using Python with python-telegram-bot or Node.js with grammY framework, depending on your project requirements. Both offer full API coverage including inline mode, keyboards, webhooks, and payments."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does it take to develop a Telegram bot?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A standard Telegram bot with core features takes 5–10 days. More complex bots with payment integration, database backends, and multi-language support take 2–4 weeks from discovery to deployment."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you provide hosting for Telegram bots?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we deploy your bot on reliable cloud infrastructure with 24/7 uptime monitoring, automatic restarts, and support for both webhook and polling modes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What Telegram API features do you support?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We support all Telegram Bot API features including inline keyboards, inline mode, callback queries, webhooks, file handling, payments, Telegram Premium interactions, and custom commands."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can the bot be updated or extended after launch?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. Our bots are built with modular architecture making it easy to add new commands, features, and integrations post-launch. We offer ongoing maintenance and feature updates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you offer maintenance and support?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we provide monthly maintenance plans covering API compatibility, feature enhancements, performance monitoring, error logging, and priority technical support."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you migrate my existing Telegram bot?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we can migrate existing Telegram bots to our infrastructure, refactor code for better performance, add new features, and improve scalability. We support migration from any framework."
-          }
-        }
-      ]
-    }
-    </script>
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -318,6 +255,54 @@
     <link rel="stylesheet" href="../assets/css/transactions.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="../assets/css/transactions.css"></noscript>
     <link rel="stylesheet" href="../assets/css/skeleton.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What can Telegram bots do for my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Telegram bots can automate 24/7 customer support, process secure payments, broadcast announcements, scrape data, and seamlessly interact with your CRM or external APIs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to build a Telegram bot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard operational bot can be deployed in just a few days, while complex bots requiring extensive custom logic and API integrations take 1-3 weeks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you integrate crypto payments into the bot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we are highly experienced in Web3 integrations and can connect your Telegram bot to various crypto payment gateways for seamless transactions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will the bot be able to manage large groups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We design robust moderation bots capable of filtering spam, managing user roles, and enforcing rules instantly across groups with thousands of members."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide hosting for the Telegram bot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer premium, high-uptime hosting solutions ensuring your bot remains instantly responsive to user commands around the clock."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="text-bright-snow font-sans antialiased selection:bg-accent-blue selection:text-white min-h-screen flex flex-col">
@@ -918,6 +903,80 @@
             </div>
         </section>
 
+
+    
+
+    <section class="py-32 px-6 max-w-4xl mx-auto" id="faq">
+        <div class="text-center mb-20 reveal">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block"><i class="fa-solid fa-question-circle mr-2"></i> KNOWLEDGE BASE</span>
+            <h2 class="text-4xl md:text-6xl font-black text-white italic tracking-tighter">Frequently Asked <span class="text-stroke-sm">Questions.</span></h2>
+        </div>
+        <div class="space-y-4">
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    What can Telegram bots do for my business?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Telegram bots can automate 24/7 customer support, process secure payments, broadcast announcements, scrape data, and seamlessly interact with your CRM or external APIs.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    How long does it take to build a Telegram bot?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        A standard operational bot can be deployed in just a few days, while complex bots requiring extensive custom logic and API integrations take 1-3 weeks.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Can you integrate crypto payments into the bot?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Yes, we are highly experienced in Web3 integrations and can connect your Telegram bot to various crypto payment gateways for seamless transactions.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Will the bot be able to manage large groups?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Absolutely. We design robust moderation bots capable of filtering spam, managing user roles, and enforcing rules instantly across groups with thousands of members.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Do you provide hosting for the Telegram bot?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Yes, we offer premium, high-uptime hosting solutions ensuring your bot remains instantly responsive to user commands around the clock.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .faq-item.open .faq-content { max-height: 500px; }
+        </style>
+    </section>
 </main>
 
         <hr class="border-white/5 my-0 w-full">
@@ -1257,6 +1316,16 @@ if (header$) {
 }
 </script>
     <script src="../assets/js/skeleton.js"></script>
+
+    <script>
+        function toggleFAQ(button) {
+            const item = button.parentElement;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+    </script>
+
 </body>
 
 </html>

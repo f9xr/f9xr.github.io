@@ -226,6 +226,7 @@
     </style>
     <link rel="stylesheet" href="../assets/css/transactions.css">
     <link rel="stylesheet" href="../assets/css/skeleton.css">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -233,10 +234,18 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is AI Visibility Optimization?",
+      "name": "What is AI Visibility Optimization (AEO)?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is the process of structuring and optimizing your brand content so it is easily discovered and cited by AI engines like ChatGPT, Gemini, and Perplexity."
+        "text": "It is the process of structuring and optimizing your brand content so it is easily discovered, cited, and recommended by AI engines like ChatGPT, Gemini, and Perplexity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is AEO different from traditional SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While SEO focuses on ranking in Google search results via keywords and backlinks, AEO focuses on providing direct, structured entity relationships so AI models can confidently present your brand as the definitive answer."
       }
     },
     {
@@ -244,7 +253,23 @@
       "name": "How long does it take to appear in ChatGPT?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Results vary depending on the platform training schedule, but structured data and high-authority links can help AI crawlers index your brand within a few weeks to months."
+        "text": "Results vary depending on the platform training schedule, but providing structured data and high-authority directory links can help AI crawlers index your brand within a few weeks to months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Entity-Based Optimization?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means defining your brand, services, and key personnel as distinct "entities" using Schema markup, allowing search engines and AIs to understand the real-world context of your business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you optimize for all major AI models?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our AEO strategy ensures your content is structured properly for OpenAI (ChatGPT), Google (Gemini, AI Overviews), Anthropic (Claude), and Perplexity."
       }
     }
   ]
@@ -561,7 +586,7 @@
                     <div class="bg-gunmetal border border-accent-blue/20 p-8 rounded-[2.5rem] backdrop-blur-md hidden lg:block shadow-[0_0_30px_rgba(59,130,246,0.1)] mt-8">
                         <p class="text-[10px] uppercase tracking-widest text-accent-blue font-black mb-4 italic flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles"></i> Next-Gen SEO</p>
                         <h4 class="text-2xl font-black text-white italic">Generative Engine Optimization.</h4>
-                        <p class="text-sm text-platinum/60 mt-2 font-medium tracking-tight">GEO — the new frontier of search visibility.</p>
+                        <p class="text-sm text-platinum/60 mt-2 font-medium tracking-tight">GEO  the new frontier of search visibility.</p>
                     </div>
                     <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-6 mt-8">
                         <a href="../pages/contact.html"
@@ -759,40 +784,82 @@
         </section>
 
     
-    <section class="mb-24 reveal" id="faq">
-        <div class="flex items-center gap-4 mb-16">
-            <span class="w-12 h-[2px] bg-accent-blue"></span>
-            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">Frequently Asked Questions</h2>
+    
+
+
+    
+
+    <section class="py-32 px-6 max-w-4xl mx-auto" id="faq">
+        <div class="text-center mb-20 reveal">
+            <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block"><i class="fa-solid fa-question-circle mr-2"></i> KNOWLEDGE BASE</span>
+            <h2 class="text-4xl md:text-6xl font-black text-white italic tracking-tighter">Frequently Asked <span class="text-stroke-sm">Questions.</span></h2>
         </div>
-        <div class="grid gap-6 max-w-4xl mx-auto">
-
-            <div class="faq-item bg-gunmetal border border-white/10 rounded-2xl p-6 cursor-pointer hover:border-accent-blue/50 transition-colors" onclick="this.classList.toggle('open')">
-                <div class="flex justify-between items-center gap-4">
-                    <h3 class="text-xl font-bold text-white">What is AI Visibility Optimization?</h3>
-                    <i class="fa-solid fa-plus text-accent-blue transition-transform duration-300"></i>
-                </div>
-                <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-                    <p class="text-platinum/70 mt-4 leading-relaxed font-medium">It is the process of structuring and optimizing your brand content so it is easily discovered and cited by AI engines like ChatGPT, Gemini, and Perplexity.</p>
-                </div>
-            </div>
-
-            <div class="faq-item bg-gunmetal border border-white/10 rounded-2xl p-6 cursor-pointer hover:border-accent-blue/50 transition-colors" onclick="this.classList.toggle('open')">
-                <div class="flex justify-between items-center gap-4">
-                    <h3 class="text-xl font-bold text-white">How long does it take to appear in ChatGPT?</h3>
-                    <i class="fa-solid fa-plus text-accent-blue transition-transform duration-300"></i>
-                </div>
-                <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-                    <p class="text-platinum/70 mt-4 leading-relaxed font-medium">Results vary depending on the platform training schedule, but structured data and high-authority links can help AI crawlers index your brand within a few weeks to months.</p>
+        <div class="space-y-4">
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    What is AI Visibility Optimization (AEO)?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        It is the process of structuring and optimizing your brand content so it is easily discovered, cited, and recommended by AI engines like ChatGPT, Gemini, and Perplexity.
+                    </div>
                 </div>
             </div>
-
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    How is AEO different from traditional SEO?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        While SEO focuses on ranking in Google search results via keywords and backlinks, AEO focuses on providing direct, structured entity relationships so AI models can confidently present your brand as the definitive answer.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    How long does it take to appear in ChatGPT?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Results vary depending on the platform training schedule, but providing structured data and high-authority directory links can help AI crawlers index your brand within a few weeks to months.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    What is Entity-Based Optimization?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        It means defining your brand, services, and key personnel as distinct "entities" using Schema markup, allowing search engines and AIs to understand the real-world context of your business.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button onclick="toggleFAQ(this)"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Do you optimize for all major AI models?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Yes. Our AEO strategy ensures your content is structured properly for OpenAI (ChatGPT), Google (Gemini, AI Overviews), Anthropic (Claude), and Perplexity.
+                    </div>
+                </div>
+            </div>
         </div>
         <style>
-            .faq-item.open i { transform: rotate(45deg); }
             .faq-item.open .faq-content { max-height: 500px; }
         </style>
     </section>
-
 </main>
 
         <hr class="border-white/5 my-0 w-full">
@@ -805,7 +872,7 @@
                 <div class="grid md:grid-cols-2 gap-4 reveal">
                     <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener noreferrer" class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 hover:border-accent-blue/30 transition-all group flex items-start gap-4">
                         <div class="w-10 h-10 bg-accent-blue/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-accent-blue transition-colors"><i class="fa-solid fa-book text-accent-blue group-hover:text-white"></i></div>
-                        <div><p class="text-white font-bold text-sm mb-1">Google Search Central</p><p class="text-platinum/50 text-xs leading-relaxed">Creating helpful, reliable, people-first content — Google's official guidance on content quality and E-E-A-T.</p></div>
+                        <div><p class="text-white font-bold text-sm mb-1">Google Search Central</p><p class="text-platinum/50 text-xs leading-relaxed">Creating helpful, reliable, people-first content  Google's official guidance on content quality and E-E-A-T.</p></div>
                     </a>
                     <a href="https://blog.google/products/search/generative-ai-search/" target="_blank" rel="noopener noreferrer" class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 hover:border-accent-blue/30 transition-all group flex items-start gap-4">
                         <div class="w-10 h-10 bg-accent-blue/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-accent-blue transition-colors"><i class="fa-solid fa-brain text-accent-blue group-hover:text-white"></i></div>
@@ -817,7 +884,7 @@
                     </a>
                     <a href="https://www.rfc-editor.org/rfc/rfc8288" target="_blank" rel="noopener noreferrer" class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 hover:border-accent-blue/30 transition-all group flex items-start gap-4">
                         <div class="w-10 h-10 bg-accent-blue/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-accent-blue transition-colors"><i class="fa-solid fa-code text-accent-blue group-hover:text-white"></i></div>
-                        <div><p class="text-white font-bold text-sm mb-1">RFC 8288 — Web Linking</p><p class="text-platinum/50 text-xs leading-relaxed">IETF standard for HTTP Link headers enabling agent discovery and resource relationship declaration.</p></div>
+                        <div><p class="text-white font-bold text-sm mb-1">RFC 8288  Web Linking</p><p class="text-platinum/50 text-xs leading-relaxed">IETF standard for HTTP Link headers enabling agent discovery and resource relationship declaration.</p></div>
                     </a>
                     <a href="https://contentsignals.org/" target="_blank" rel="noopener noreferrer" class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 hover:border-accent-blue/30 transition-all group flex items-start gap-4">
                         <div class="w-10 h-10 bg-accent-blue/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-accent-blue transition-colors"><i class="fa-solid fa-shield-halved text-accent-blue group-hover:text-white"></i></div>
@@ -1136,6 +1203,16 @@ if (header$) {
 }
 </script>
     <script src="../assets/js/skeleton.js"></script>
+
+    <script>
+        function toggleFAQ(button) {
+            const item = button.parentElement;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+    </script>
+
 </body>
 
 </html>
