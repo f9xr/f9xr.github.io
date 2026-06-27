@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -28,13 +28,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="manifest" href="/assets/site.webmanifest">
+    <!-- AEO / LLM Discovery -->
+    <link href="/llms.txt" rel="alternate" type="text/markdown" title="Markdown for Agents">
+    <link href="/.well-known/api-catalog" rel="api-catalog" type="application/linkset+json">
+    <link href="/.well-known/mcp/server-card.json" rel="mcp-server" type="application/json">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://f9xr.github.io/pages/projects.html">
     <meta property="og:title" content="Our Projects | F9XR Team - Digital Agency Portfolio">
     <meta property="og:description" content="Explore the exhaustive digital portfolio of F9XR Team. Over 40+ high-performance projects in AI, Crypto, Government Portals, and Global News Networks.">
     <meta property="og:image" content="https://f9xr.github.io/assets/og-image.webp">
-    <meta property="og:site_name" content="F9XR Team">
+        <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US"><meta property="og:site_name" content="F9XR Team">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://f9xr.github.io/pages/projects.html">
@@ -63,7 +69,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="../assets/css/skeleton.css">
 
     <!-- === TAILWIND CONFIG === -->
@@ -474,7 +481,7 @@
 
             <div class="mt-20 pt-10 border-t border-white/5 flex gap-8">
                 <a href="https://instagram.com/f9xrteam" rel="me noopener noreferrer" aria-label="Instagram"
-                    class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank"><i
+                    class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer"><i
                         class="fa-brands fa-instagram"></i></a>
                 <a href="https://web.whatsapp.com/send?phone=919032065784" aria-label="WhatsApp"
                     class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
@@ -530,7 +537,7 @@
                     <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">AI & Future Tech</h2>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="https://vroai.in" target="_blank" aria-label="VroAI Platform"
+                    <a href="https://vroai.in" target="_blank" rel="noopener noreferrer" aria-label="VroAI Platform"
                         class="project-link p-10 rounded-[3rem] group">
                         <i
                             class="fas fa-robot text-accent-blue text-5xl mb-8 group-hover:scale-110 transition-transform"></i>
@@ -539,7 +546,7 @@
                         <span class="text-[10px] font-black tracking-widest text-accent-blue uppercase">Explore <i
                                 class="fas fa-arrow-right ml-2"></i></span>
                     </a>
-                    <a href="https://foilai.in" target="_blank" aria-label="FoilAI Platform"
+                    <a href="https://foilai.in" target="_blank" rel="noopener noreferrer" aria-label="FoilAI Platform"
                         class="project-link p-10 rounded-[3rem] group">
                         <i
                             class="fas fa-wand-magic-sparkles text-accent-blue text-5xl mb-8 group-hover:scale-110 transition-transform"></i>
@@ -548,7 +555,7 @@
                         <span class="text-[10px] font-black tracking-widest text-accent-blue uppercase">Explore <i
                                 class="fas fa-arrow-right ml-2"></i></span>
                     </a>
-                    <a href="https://dfamo.co.uk/" target="_blank" aria-label="DfamoAI Platform"
+                    <a href="https://dfamo.co.uk/" target="_blank" rel="noopener noreferrer" aria-label="DfamoAI Platform"
                         class="project-link p-10 rounded-[3rem] group">
                         <i
                             class="fas fa-graduation-cap text-accent-blue text-5xl mb-8 group-hover:scale-110 transition-transform"></i>
@@ -557,13 +564,13 @@
                         <span class="text-[10px] font-black tracking-widest text-accent-blue uppercase">Explore <i
                                 class="fas fa-arrow-right ml-2"></i></span>
                     </a>
-                    <a href="https://adviceofai.blogspot.com" target="_blank" aria-label="Advice of AI Discovery Site"
+                    <a href="https://adviceofai.blogspot.com" target="_blank" rel="noopener noreferrer" aria-label="Advice of AI Discovery Site"
                         class="project-link p-10 rounded-[3rem] group lg:col-span-3 border-l-4 border-accent-blue bg-accent-blue/5">
                         <div class="flex flex-col md:flex-row md:items-center gap-8">
                             <i class="fas fa-lightbulb text-accent-blue text-6xl opacity-40"></i>
                             <div>
                                 <h3 class="text-3xl font-black uppercase mb-2 italic">Advice of AI</h3>
-                                <p class="text-xl text-platinum/70 leading-relaxed">Your AI Tools Guru â€” A massive
+                                <p class="text-xl text-platinum/70 leading-relaxed">Your AI Tools Guru Ã¢â‚¬â€ A massive
                                     directory to discover the latest AI tools for every professional need.</p>
                             </div>
                         </div>
@@ -717,15 +724,15 @@
 
                 <div class="mt-8 flex flex-wrap gap-4 font-bold text-[10px] uppercase tracking-widest opacity-40">
                     <a href="https://tontufgaming.blogspot.com" class="hover:text-white">Gaming Blog</a> <span
-                        class="text-accent-blue">�</span>
+                        class="text-accent-blue">•</span>
                     <a href="https://tontufvehicles.blogspot.com/" class="hover:text-white">Vehicle Blog</a> <span
-                        class="text-accent-blue">�</span>
+                        class="text-accent-blue">•</span>
                     <a href="https://tontuftechies.blogspot.com/" class="hover:text-white">Tech Blog</a> <span
-                        class="text-accent-blue">�</span>
+                        class="text-accent-blue">•</span>
                     <a href="https://tontuftrends.blogspot.com/" class="hover:text-white">Music Trends</a> <span
-                        class="text-accent-blue">�</span>
+                        class="text-accent-blue">•</span>
                     <a href="https://decodeaccounting.blogspot.com/" class="hover:text-white">Accounting Blog</a> <span
-                        class="text-accent-blue">�</span>
+                        class="text-accent-blue">•</span>
                     <a href="https://tontufweblearners.blogspot.com/" class="hover:text-white">Web Learners</a>
                 </div>
             </div>
@@ -902,7 +909,7 @@
                     <div class="flex flex-col gap-6">
                         <a href="mailto:tontufytservices@gmail.com" class="text-3xl md:text-4xl lg:text-5xl font-bold text-white hover:text-accent-blue transition-colors break-all select-all inline-block w-fit tracking-tight">tontufytservices@gmail.com</a>
                         <a href="tel:+919123442431" class="text-2xl md:text-3xl font-bold text-white hover:text-accent-blue transition-colors inline-block w-fit tracking-tight">+91 91234-42431</a>
-                        <a href="https://linkedin.com/company/f9xrteam" target="_blank" class="text-2xl md:text-3xl font-bold text-white hover:text-accent-blue transition-colors inline-block w-fit tracking-tight"><i class="fa-brands fa-linkedin mr-3 text-accent-blue"></i>LinkedIn</a>
+                        <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener noreferrer" class="text-2xl md:text-3xl font-bold text-white hover:text-accent-blue transition-colors inline-block w-fit tracking-tight"><i class="fa-brands fa-linkedin mr-3 text-accent-blue"></i>LinkedIn</a>
                         
                     </div>
                 </div>
@@ -922,7 +929,7 @@
                 </div>
 
                 <!-- Showreel Button -->
-                <a href="https://youtu.be/l-52kGRwH_Y?si=WrEJBUEmIMM9KWng" target="_blank" class="relative group cursor-pointer overflow-hidden rounded-xl w-48 h-28 bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                <a href="https://youtu.be/l-52kGRwH_Y?si=WrEJBUEmIMM9KWng" target="_blank" rel="noopener noreferrer" class="relative group cursor-pointer overflow-hidden rounded-xl w-48 h-28 bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
                     <div class="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-black/50 group-hover:scale-110 transition-transform duration-700"></div>
                     <div class="relative z-10 flex flex-col items-center gap-2">
                         <div class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white shadow-lg">

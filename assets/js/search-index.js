@@ -38,4 +38,4 @@ var SEARCH_INDEX = [
   {"title": "Services Index | F9XR Team", "path": "services/index.html"},
   {"title": "Product Launch Directories | F9XR Directory Index", "path": "directories/product-launch-directories.html"},
   {"title": "Directories Index | F9XR Directory Hub", "path": "directories/index.html"}
-];
+,\n  {"title": "Talent & Brand Management | Creator Scaling | F9XR x SponsorLanes", "path": "services/talent-brand-management.html"}\n,\n  {"title": "Partnership Announcement | F9XR Team x SponsorLanes Agency", "path": "announcements/f9xr-sponsorlanes-partnership.html"}\n];
