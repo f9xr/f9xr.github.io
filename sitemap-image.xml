@@ -103,16 +103,6 @@
       <image:title>VroAI Project Screenshot</image:title>
       <image:caption>VroAI - Advanced AI Chatbot Platform by F9XR Team</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>//banners.copyscape.com/img/copyscape-banner-blue-160x56.png</image:loc>
-      <image:title>Copyscape Protection Badge</image:title>
-      <image:caption>Protected by Copyscape - Content Protection</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://images.dmca.com/Badges/dmca-badge-w200-2x1-04.png?ID=d27357cf-0e2f-48e1-b4fd-5b11d9626c73</image:loc>
-      <image:title>DMCA Protection Badge</image:title>
-      <image:caption>DMCA.com Copyright Protection</image:caption>
-    </image:image>
   </url>
 
   <!-- ========== ABOUT PAGE ========== -->
@@ -225,16 +215,6 @@
       <image:title>Aryansh Portfolio Screenshot</image:title>
       <image:caption>Aryansh - AI Logic &amp; Backend Portfolio by F9XR Team</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://f9xr.github.io/assets/screenshots/googleF9XR.png</image:loc>
-      <image:title>F9XR Team Google Business Profile Results</image:title>
-      <image:caption>Google Business Profile ranking results achieved by F9XR Team</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.github.io/assets/screenshots/GooglePHF9XR.jpg</image:loc>
-      <image:title>F9XR Team Google Performance Snapshot</image:title>
-      <image:caption>Google search performance snapshot for F9XR Team clients</image:caption>
-    </image:image>
   </url>
 
   <!-- ========== PROJECTS PAGE ========== -->
@@ -322,23 +302,8 @@
       <image:title>F9XR Team Apple Touch Icon</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/assets/partners/momu.png</image:loc>
-      <image:title>Momu - F9XR Partner Photo</image:title>
-      <image:caption>Momu - Backend Engineer &amp; Technical Partner at F9XR Team</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://f9xr.github.io/assets/partners/momu.webp</image:loc>
       <image:title>Momu - F9XR Partner WebP</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>//banners.copyscape.com/img/copyscape-banner-blue-160x56.png</image:loc>
-      <image:title>Copyscape Protection Badge</image:title>
-      <image:caption>Protected by Copyscape - Content Protection</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://images.dmca.com/Badges/dmca-badge-w200-2x1-04.png?ID=d27357cf-0e2f-48e1-b4fd-5b11d9626c73</image:loc>
-      <image:title>DMCA Protection Badge</image:title>
-      <image:caption>DMCA.com Copyright Protection</image:caption>
     </image:image>
   </url>
 
@@ -587,6 +552,11 @@
   <url>
     <loc>https://f9xr.github.io/services/discord-bot-development.html</loc>
     <image:image>
+      <image:loc>https://f9xr.github.io/assets/illustrations/Critical%20thinking-rafiki.svg</image:loc>
+      <image:title>Discord Bot Development - Critical Thinking Illustration</image:title>
+      <image:caption>Custom Discord Bot Development by F9XR Team</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
@@ -611,6 +581,11 @@
   <!-- ========== TELEGRAM BOT DEVELOPMENT SERVICE ========== -->
   <url>
     <loc>https://f9xr.github.io/services/telegram-bot-development.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/illustrations/Critical%20thinking-rafiki.svg</image:loc>
+      <image:title>Telegram Bot Development - Critical Thinking Illustration</image:title>
+      <image:caption>Custom Telegram Bot Development by F9XR Team</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
       <image:title>F9XR Team Open Graph Image</image:title>
@@ -805,6 +780,194 @@
   </url>
   <url>
     <loc>https://f9xr.github.io/legals/agreement.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
+      <image:title>F9XR Team Favicon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-16x16.png</image:loc>
+      <image:title>F9XR Team Favicon 16x16</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/apple-touch-icon.png</image:loc>
+      <image:title>F9XR Team Apple Touch Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- ========== CASE STUDIES PAGE ========== -->
+  <url>
+    <loc>https://f9xr.github.io/pages/case-studies.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>F9XR Team Open Graph Image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
+      <image:title>F9XR Team Favicon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-16x16.png</image:loc>
+      <image:title>F9XR Team Favicon 16x16</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/apple-touch-icon.png</image:loc>
+      <image:title>F9XR Team Apple Touch Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- ========== SERVICES INDEX ========== -->
+  <url>
+    <loc>https://f9xr.github.io/services/index.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/illustrations/By%20my%20car-rafiki.svg</image:loc>
+      <image:title>F9XR Services - Digital Solutions</image:title>
+      <image:caption>F9XR Services - Digital Solutions by F9XR Team</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>F9XR Team Open Graph Image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
+      <image:title>F9XR Team Favicon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-16x16.png</image:loc>
+      <image:title>F9XR Team Favicon 16x16</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/apple-touch-icon.png</image:loc>
+      <image:title>F9XR Team Apple Touch Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- ========== WE DO FOR YOU SERVICE ========== -->
+  <url>
+    <loc>https://f9xr.github.io/services/we-do-for-you.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/illustrations/By%20my%20car-rafiki.svg</image:loc>
+      <image:title>We Do For You - Directory Submission</image:title>
+      <image:caption>Done For You Directory Submission Service by F9XR Team</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>F9XR Team Open Graph Image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
+      <image:title>F9XR Team Favicon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-16x16.png</image:loc>
+      <image:title>F9XR Team Favicon 16x16</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/apple-touch-icon.png</image:loc>
+      <image:title>F9XR Team Apple Touch Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- ========== TALENT & BRAND MANAGEMENT SERVICE ========== -->
+  <url>
+    <loc>https://f9xr.github.io/services/talent-brand-management.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>F9XR Team Open Graph Image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
+      <image:title>F9XR Team Favicon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-16x16.png</image:loc>
+      <image:title>F9XR Team Favicon 16x16</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/apple-touch-icon.png</image:loc>
+      <image:title>F9XR Team Apple Touch Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- ========== DIRECTORIES PAGES ========== -->
+  <url>
+    <loc>https://f9xr.github.io/directories/index.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>F9XR Team Open Graph Image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
+      <image:title>F9XR Team Favicon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-16x16.png</image:loc>
+      <image:title>F9XR Team Favicon 16x16</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/apple-touch-icon.png</image:loc>
+      <image:title>F9XR Team Apple Touch Icon</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/directories/product-launch-directories.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>F9XR Team Open Graph Image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
+      <image:title>F9XR Team Favicon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-16x16.png</image:loc>
+      <image:title>F9XR Team Favicon 16x16</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/apple-touch-icon.png</image:loc>
+      <image:title>F9XR Team Apple Touch Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- ========== ANNOUNCEMENTS ========== -->
+  <url>
+    <loc>https://f9xr.github.io/announcements/f9xr-sponsorlanes-partnership.html</loc>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&amp;w=2069&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D</image:loc>
+      <image:title>F9XR and SponsorLanes Partnership</image:title>
+      <image:caption>F9XR Team partnership announcement with SponsorLanes Agency</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>F9XR Team Open Graph Image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Logo</image:title>
+    </image:image>
     <image:image>
       <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
       <image:title>F9XR Team Favicon</image:title>
