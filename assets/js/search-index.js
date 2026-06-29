@@ -1,7 +1,6 @@
 var SEARCH_INDEX = [
   {"title": "F9XR Team | AI-Powered Web Design & Local SEO Growth Agency", "path": "index.html"},
   {"title": "About F9XR Team | Global Digital Agency & Tech Architects", "path": "pages/about.html"},
-  {"title": "Coming Soon | F9XR Team", "path": "pages/coming-soon.html"},
   {"title": "Contact Us | F9XR Team - Let's Build Something Great", "path": "pages/contact.html"},
   {"title": "Backend Crew & Technical Partners | F9XR Team", "path": "pages/partners.html"},
   {"title": "Portfolio | F9XR Team - Digital Masterpieces", "path": "pages/portfolio.html"},
@@ -37,5 +36,7 @@ var SEARCH_INDEX = [
   {"title": "We Do For You | Done-For-You Services | F9XR Team", "path": "services/we-do-for-you.html"},
   {"title": "Services Index | F9XR Team", "path": "services/index.html"},
   {"title": "Product Launch Directories | F9XR Directory Index", "path": "directories/product-launch-directories.html"},
-  {"title": "Directories Index | F9XR Directory Hub", "path": "directories/index.html"}
-,\n  {"title": "Talent & Brand Management | Creator Scaling | F9XR x SponsorLanes", "path": "services/talent-brand-management.html"}\n,\n  {"title": "Partnership Announcement | F9XR Team x SponsorLanes Agency", "path": "announcements/f9xr-sponsorlanes-partnership.html"}\n];
+  {"title": "Directories Index | F9XR Directory Hub", "path": "directories/index.html"},
+  {"title": "Talent & Brand Management | Creator Scaling | F9XR x SponsorLanes", "path": "services/talent-brand-management.html"},
+  {"title": "Partnership Announcement | F9XR Team x SponsorLanes Agency", "path": "announcements/f9xr-sponsorlanes-partnership.html"}
+];
