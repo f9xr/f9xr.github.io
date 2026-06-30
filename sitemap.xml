@@ -57,12 +57,6 @@
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://f9xr.github.io/pages/coming-soon.html</loc>
-    <lastmod>2026-06-18T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.50</priority>
-  </url>
-  <url>
     <loc>https://f9xr.github.io/pages/case-studies.html</loc>
     <lastmod>2026-06-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -231,12 +225,6 @@
     <priority>0.70</priority>
   </url>
 
-  <url>
-    <loc>https://f9xr.github.io/pages/thanks.html</loc>
-    <lastmod>2026-06-18T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.50</priority>
-  </url>
   <url>
     <loc>https://f9xr.github.io/services/talent-brand-management.html</loc>
     <lastmod>2026-06-27T00:00:00+00:00</lastmod>
