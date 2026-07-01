@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -57,30 +57,10 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
     <link rel="preload" as="image" href="/assets/og-image.webp">
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://formspree.io">
 
-    <script src="https://cdn.tailwindcss.com?version=3.4.17"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'bright-snow': '#f8f9fa',
-                        'platinum': '#e9ecef',
-                        'iron-grey': '#495057',
-                        'gunmetal': '#343a40',
-                        'carbon-black': '#212529',
-                        'accent-blue': '#3b82f6'
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+
 
     <style>
         body { overflow-x: hidden; }
@@ -135,6 +115,7 @@
     <link rel="stylesheet" href="/assets/css/transactions.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/assets/css/transactions.css"></noscript>
     <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-134PMTPP82"></script>
@@ -145,8 +126,7 @@
       gtag('config', 'G-134PMTPP82');
     </script>
 
-    
-    
+
 
 
 
@@ -219,7 +199,7 @@
             <!-- 2. Desktop Navigation Pill (Center) -->
             <div
                 class="hidden lg:flex items-center gap-1 font-bold text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] tracking-wide text-platinum/80 bg-carbon-black/60 backdrop-blur-2xl border border-white/20 rounded-full pl-3 pr-1 py-1 shadow-2xl">
-                
+
                 <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
                     <i class="fa-regular fa-building text-[14px] lg:text-[16px]"></i>
                     <span>Company</span>
@@ -230,7 +210,7 @@
                         class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[580px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">
                         <div
                             class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-2 shadow-2xl flex gap-2 relative overflow-hidden text-left normal-case tracking-normal">
-                            
+
                             <div class="w-[55%] flex flex-col gap-1 p-2 bg-[#121212] rounded-xl border border-white/5">
                                 <a href="/pages/about.html"
                                     class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item">
@@ -304,7 +284,7 @@
                     <!-- Services Mega Menu -->
                     <div class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[650px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">
                         <div class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-4 shadow-2xl flex gap-4 relative overflow-hidden text-left normal-case tracking-normal">
-                            
+
                             <!-- Left Column: Featured Link -->
                             <div class="w-1/3 flex flex-col justify-center items-center bg-accent-blue/10 rounded-xl p-4 border border-accent-blue/20 hover:bg-accent-blue/20 transition-colors text-center">
                                 <i class="fa-solid fa-layer-group text-3xl text-accent-blue mb-3"></i>
@@ -371,7 +351,7 @@
                                         <div class="text-platinum/50 text-[9px]">Smart messaging bots</div>
                                     </div>
                                 </a>
-                            
+
                                 <a href="/services/we-do-for-you.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
                                     <i class="fa-solid fa-hand-sparkles text-accent-blue mt-1"></i>
                                     <div>
@@ -438,7 +418,7 @@
 
             <!-- 3. Header Actions (Right) -->
             <div class="flex items-center gap-5">
-                
+
                 <a href="https://web.whatsapp.com/send?phone=919032065784" target="_blank" rel="noopener noreferrer"
                     class="hidden sm:flex text-white/80 hover:text-white text-xl transition-all hover:scale-110">
                     <i class="fa-brands fa-whatsapp"></i>
@@ -454,7 +434,7 @@
 
         <div id="mobile-menu"
             class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">
-            
+
             <button onclick="toggleMobileMenu()"
                 class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors">
                 <i class="fa-solid fa-xmark"></i>
@@ -540,7 +520,7 @@
         </div>
 
         <div class="relative mb-6"><i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-white/30 text-sm pointer-events-none" aria-hidden="true"></i><input type="text" id="dir-search" class="search-box" placeholder="Search directories by name..." autocomplete="off"><span id="dir-result-count" class="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-white/30 font-medium"></span></div>
-        
+
         <div id="directory-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <!-- Directory items will be loaded here via JS -->
             <div class="col-span-full text-center py-12 text-platinum/50">
@@ -549,12 +529,12 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Done-For-You Service Section -->
     <section class="mb-24 reveal">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-carbon-black/40 border border-white/10 rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
             <div class="absolute -right-20 -top-20 w-64 h-64 bg-accent-blue/20 blur-[80px] rounded-full"></div>
-            
+
             <div class="relative z-10">
                 <div class="inline-block px-3 py-1 bg-accent-blue/20 border border-accent-blue/30 text-accent-blue rounded-full text-xs font-bold uppercase tracking-wider mb-6">Our Premium Service</div>
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white leading-tight">We Do For Your Directory Submissions</h2>
@@ -596,7 +576,7 @@
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why This Works</h2>
             <p class="text-platinum/60 max-w-2xl mx-auto">Discover how high-quality directory listings generate compounding returns for your business.</p>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="feature-card p-8 rounded-2xl reveal">
                 <div class="w-12 h-12 bg-accent-blue/20 text-accent-blue rounded-xl flex items-center justify-center text-xl mb-6">1</div>
@@ -622,10 +602,10 @@
         </div>
     </section>
 
- 
+
 
     <!-- AEO / SEO FAQ Section -->
-    
+
 
     <!-- Interlinking / Related Services -->
     <section class="mb-12 reveal">
@@ -636,7 +616,7 @@
             <a href="/services/social-media-posting.html" class="px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-sm text-platinum hover:bg-accent-blue hover:border-accent-blue transition-colors font-medium">Social Media Growth</a>
             <a href="/services/telegram-bot-development.html" class="px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-sm text-platinum hover:bg-accent-blue hover:border-accent-blue transition-colors font-medium">Telegram Bots</a>
         </div>
-        
+
         <h3 class="text-xl font-bold text-white mt-12 mb-4">Helpful Resources</h3>
         <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <a href="/tools/digital-presence.html" class="text-accent-blue hover:underline">Digital Presence Score</a>
@@ -648,9 +628,9 @@
     </section>
 
 
-    
 
-    
+
+
 
     <section class="py-32 px-6 max-w-4xl mx-auto" id="faq">
         <div class="text-center mb-20 reveal">
@@ -729,7 +709,7 @@
     // Reveal Animation
     document.addEventListener('DOMContentLoaded', () => {
         const reveals = document.querySelectorAll('.reveal');
-        
+
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -743,7 +723,7 @@
         });
 
         reveals.forEach(reveal => revealObserver.observe(reveal));
-        
+
         let allDirectories = [];
 
         function renderDirectories(filter) {
@@ -838,7 +818,7 @@
 
             <!-- Top Columns -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24">
-                
+
                 <!-- Col 1 -->
                 <div class="flex flex-col gap-6 lg:col-span-3">
                     <h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Pages</h4>
@@ -874,7 +854,7 @@
                         <a href="mailto:tontufytservices@gmail.com" class="text-3xl md:text-4xl lg:text-5xl font-bold text-white hover:text-accent-blue transition-colors break-all select-all inline-block w-fit tracking-tight">tontufytservices@gmail.com</a>
                         <a href="tel:+919123442431" class="text-2xl md:text-3xl font-bold text-white hover:text-accent-blue transition-colors inline-block w-fit tracking-tight">+91 91234-42431</a>
                         <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener noreferrer" class="text-2xl md:text-3xl font-bold text-white hover:text-accent-blue transition-colors inline-block w-fit tracking-tight"><i class="fa-brands fa-linkedin mr-3 text-accent-blue"></i>LinkedIn</a>
-                        
+
                     </div>
                 </div>
 
@@ -916,9 +896,9 @@
         <div class="relative w-full py-6 lg:py-8 border-t border-white/10 overflow-hidden mt-8">
             <!-- Background Image representation (dark subtle gradient) -->
             <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-carbon-black via-[#0a0a0a] to-black opacity-80 z-0"></div>
-            
+
             <div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-                
+
                 <!-- Socials -->
                 <div class="flex items-center justify-center sm:justify-start gap-6">
                     <a href="https://instagram.com/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -940,8 +920,7 @@
                 </div>
             </div>
         </div>
-        
-    
+
             <div class="text-center mt-4">
                 <p class="text-[10px] font-medium text-white/30 uppercase tracking-widest">
                     Illustrations by <a href="https://storyset.com" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Storyset</a>
@@ -986,7 +965,7 @@ if (header$) {
     <script src="../assets/js/search-index.js"></script>
     <script>
         const ROOT_PREFIX = "../"; 
-        
+
         function openSearchModal() {
             const modal = document.getElementById('search-modal');
             modal.classList.remove('invisible', 'opacity-0');
@@ -995,7 +974,7 @@ if (header$) {
             document.body.style.overflow = 'hidden';
             renderSearchResults(""); 
         }
-        
+
         function closeSearchModal() {
             const modal = document.getElementById('search-modal');
             modal.classList.add('invisible', 'opacity-0');
@@ -1020,16 +999,16 @@ if (header$) {
         function renderSearchResults(query) {
             const resultsContainer = document.getElementById('search-results');
             resultsContainer.innerHTML = '';
-            
+
             if(!query) return; 
-            
+
             const matches = SEARCH_INDEX.filter(item => item.title.toLowerCase().includes(query) || item.path.toLowerCase().includes(query));
-            
+
             if (matches.length === 0) {
                 resultsContainer.innerHTML = '<div class="text-white/50 text-center py-8">No results found for "' + query + '"</div>';
                 return;
             }
-            
+
             matches.forEach(match => {
                 const el = document.createElement('a');
                 el.href = ROOT_PREFIX + match.path;

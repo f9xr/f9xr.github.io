@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="stylesheet" href="assets/css/skeleton.css">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
 <body style="background:#212529;color:#f8f9fa;font-family:sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;">
 <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-6 focus:py-3 focus:bg-accent-blue focus:text-white focus:rounded-xl focus:font-bold focus:outline-none focus:ring-4 focus:ring-accent-blue/50 transition-all">Skip to main content</a>
@@ -56,7 +57,7 @@ if (header$) {
     <script src="./assets/js/search-index.js"></script>
     <script>
         const ROOT_PREFIX = "./"; 
-        
+
         function openSearchModal() {
             const modal = document.getElementById('search-modal');
             modal.classList.remove('invisible', 'opacity-0');
@@ -65,7 +66,7 @@ if (header$) {
             document.body.style.overflow = 'hidden';
             renderSearchResults(""); 
         }
-        
+
         function closeSearchModal() {
             const modal = document.getElementById('search-modal');
             modal.classList.add('invisible', 'opacity-0');
@@ -90,16 +91,16 @@ if (header$) {
         function renderSearchResults(query) {
             const resultsContainer = document.getElementById('search-results');
             resultsContainer.innerHTML = '';
-            
+
             if(!query) return; 
-            
+
             const matches = SEARCH_INDEX.filter(item => item.title.toLowerCase().includes(query) || item.path.toLowerCase().includes(query));
-            
+
             if (matches.length === 0) {
                 resultsContainer.innerHTML = '<div class="text-white/50 text-center py-8">No results found for "' + query + '"</div>';
                 return;
             }
-            
+
             matches.forEach(match => {
                 const el = document.createElement('a');
                 el.href = ROOT_PREFIX + match.path;

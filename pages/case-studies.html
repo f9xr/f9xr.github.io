@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -48,26 +48,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="../assets/css/skeleton.css">
-    <script src="https://cdn.tailwindcss.com?version=3.4.17"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'carbon-black': '#212529',
-                        'bright-snow': '#f8f9fa',
-                        'platinum': '#e9ecef',
-                        'iron-grey': '#495057',
-                        'gunmetal': '#343a40',
-                        'accent-blue': '#3b82f6'
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
 
     <style type="text/css">
         body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
@@ -102,7 +83,7 @@
                 <span class="text-2xl font-black tracking-tighter uppercase text-white">F9XR <span class="text-xs font-bold opacity-80 ml-0.5 text-accent-blue border border-white/20 rounded px-1 group-hover:border-white/50 transition-colors">Team</span></span>
             </a>
             <div class="hidden lg:flex items-center gap-1 font-bold text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] tracking-wide text-platinum/80 bg-carbon-black/60 backdrop-blur-2xl border border-white/20 rounded-full pl-3 pr-1 py-1 shadow-2xl">
-                
+
                 <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
                     <i class="fa-regular fa-building text-[14px] lg:text-[16px]"></i>
                     <span>Company</span>
@@ -545,7 +526,7 @@
     <script src="../assets/js/search-index.js"></script>
     <script>
         const ROOT_PREFIX = "../";
-        
+
         function openSearchModal() {
             const modal = document.getElementById('search-modal');
             modal.classList.remove('invisible', 'opacity-0');
@@ -554,7 +535,7 @@
             document.body.style.overflow = 'hidden';
             renderSearchResults("");
         }
-        
+
         function closeSearchModal() {
             const modal = document.getElementById('search-modal');
             modal.classList.add('invisible', 'opacity-0');
@@ -579,16 +560,16 @@
         function renderSearchResults(query) {
             const resultsContainer = document.getElementById('search-results');
             resultsContainer.innerHTML = '';
-            
+
             if(!query) return;
-            
+
             const matches = SEARCH_INDEX.filter(item => item.title.toLowerCase().includes(query) || item.path.toLowerCase().includes(query));
-            
+
             if (matches.length === 0) {
                 resultsContainer.innerHTML = '<div class="text-white/50 text-center py-8">No results found for "' + query + '"</div>';
                 return;
             }
-            
+
             matches.forEach(match => {
                 const el = document.createElement('a');
                 el.href = ROOT_PREFIX + match.path;

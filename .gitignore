@@ -5,6 +5,8 @@ all-urls.txt
 growwithguidance-blog-urls.txt
 
 
+node_modules/
+
 # OS artifacts
 .DS_Store
 Thumbs.db

@@ -191,6 +191,11 @@
       <image:caption>F9XR Team official website preview - Homepage</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://f9xr.github.io/assets/screenshots/F9XR_GoogleSearch.png</image:loc>
+      <image:title>F9XR Google Search Screenshot</image:title>
+      <image:caption>Google Search presence and performance tracking by F9XR Team</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://f9xr.github.io/assets/screenshots/F9XR_GoogleAnalytics.png</image:loc>
       <image:title>F9XR Google Analytics Screenshot</image:title>
       <image:caption>Google Analytics performance screenshot for F9XR Team website traffic and growth reporting</image:caption>
@@ -263,6 +268,36 @@
     <image:image>
       <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
       <image:title>F9XR Team Open Graph Image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
+      <image:title>F9XR Team Favicon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-16x16.png</image:loc>
+      <image:title>F9XR Team Favicon 16x16</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/apple-touch-icon.png</image:loc>
+      <image:title>F9XR Team Apple Touch Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- ========== THANKS PAGE ========== -->
+  <url>
+    <loc>https://f9xr.github.io/pages/thanks.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/illustrations/Super%20thank%20you-rafiki.svg</image:loc>
+      <image:title>Thank You Illustration</image:title>
+      <image:caption>F9XR Team Thank You - Super Thank You Illustration</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>F9XR Team Open Graph Image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
       <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
