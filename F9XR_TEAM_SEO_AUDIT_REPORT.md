@@ -556,11 +556,6 @@ The F9XR Team blog network at `growwithguidance.blogspot.com` comprises **82 pub
 
 **Interlinking Recommendation:** Add contextual blog references from the F9XR site to relevant blog posts. For example, link `pages/services.html` to `growwithguidance.blogspot.com/.../google-business-profile-optimization.html` under the "Google Business Profile" service card.
 
-<p align="center">
-  <img src="assets/partners/momu.webp" alt="MoMu Partnership - F9XR Team Collaborator" width="300" style="border-radius:8px;border:1px solid #e2e4e9;">
-  <br><em>Figure 6: F9XR Team Partner Network — MoMu Collaboration</em>
-</p>
-
 ### 4.4 Internal Link Topology &amp; Equity Distribution Matrix
 
 This matrix identifies specific interlinking opportunities across the site to improve crawl depth, distribute PageRank, and reduce orphan page risk.
