@@ -13,6 +13,7 @@ Global digital agency specializing in high-performance web development, AI-power
 - **Contact** (`pages/contact.html`) — Formspree-powered contact form with honeypot protection
 - **Tools** (`tools/*.html`) — Digital presence score, website cost calculator, marketing budget planner, freelance quote gen, redesign calculator, GBP checker, local SEO score
 - **Legals** (`legals/*.html`) — Agreement, terms, privacy, shipping, refund policies
+- **Directories** (`directories/*.html`) — Curated lists: product launch directories, PDF submission portals, business listing sites
 - **Knowledge Hub** (`pages/topics.html`) — Structured topical authority with pillar-cluster architecture
 - **Robots & AI** — `robots.txt`, `sitemap.xml`, `llms.txt`, `llms-full.txt`, `opensearch.xml`, `ai.txt`, `dublin.rdf`
 
