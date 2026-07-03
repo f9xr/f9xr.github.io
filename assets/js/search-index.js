@@ -37,5 +37,9 @@ var SEARCH_INDEX = [
   {"title": "Product Launch Directories | F9XR Directory Index", "path": "directories/product-launch-directories.html"},
   {"title": "Directories Index | F9XR Directory Hub", "path": "directories/index.html"},
   {"title": "Talent & Brand Management | Creator Scaling | F9XR x SponsorLanes", "path": "services/talent-brand-management.html"},
-  {"title": "Partnership Announcement | F9XR Team x SponsorLanes Agency", "path": "announcements/f9xr-sponsorlanes-partnership.html"}
+  {"title": "Partnership Announcement | F9XR Team x SponsorLanes Agency", "path": "announcements/f9xr-sponsorlanes-partnership.html"},
+  {"title": "Announcements | F9XR Team - News & Updates", "path": "announcements/index.html"},
+  {"title": "Thank You | F9XR Team", "path": "pages/thanks.html"},
+  {"title": "Top Sites to Drop Your PDF - Free PDF Submission Platforms | F9XR", "path": "directories/pdf-submission-portals.html"},
+  {"title": "Business Listing Sites To Skyrocket Your Local SEO & Get More Leads | F9XR", "path": "directories/business-listing-sites.html"}
 ];
