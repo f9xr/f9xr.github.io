@@ -7,7 +7,6 @@ var SEARCH_INDEX = [
   {"title": "Our Projects | F9XR Team - Digital Agency Portfolio", "path": "pages/projects.html"},
   {"title": "Our Services | F9XR Team - Digital Agency Excellence", "path": "pages/services.html"},
   {"title": "Expert Bio | F9XR Team - Lead Digital Architects", "path": "pages/expert-bio.html"},
-  {"title": "Sitemap | F9XR Team - Complete Site Directory", "path": "pages/sitemap.html"},
   {"title": "AI Visibility Optimization | AI Ready Content | F9XR Team", "path": "services/ai-visibility-optimization.html"},
   {"title": "Data Entry & Management | F9XR Team", "path": "services/data-management.html"},
   {"title": "Google Business Profile Optimization | Local SEO | F9XR Team", "path": "services/google-business-optimization.html"},
@@ -39,7 +38,6 @@ var SEARCH_INDEX = [
   {"title": "Talent & Brand Management | Creator Scaling | F9XR x SponsorLanes", "path": "services/talent-brand-management.html"},
   {"title": "Partnership Announcement | F9XR Team x SponsorLanes Agency", "path": "announcements/f9xr-sponsorlanes-partnership.html"},
   {"title": "Announcements | F9XR Team - News & Updates", "path": "announcements/index.html"},
-  {"title": "Thank You | F9XR Team", "path": "pages/thanks.html"},
   {"title": "Top Sites to Drop Your PDF - Free PDF Submission Platforms | F9XR", "path": "directories/pdf-submission-portals.html"},
   {"title": "Business Listing Sites To Skyrocket Your Local SEO & Get More Leads | F9XR", "path": "directories/business-listing-sites.html"}
 ];
