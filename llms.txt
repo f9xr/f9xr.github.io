@@ -5,7 +5,7 @@
 ## Core Identity
 - **Entity**: F9XR Team
 - **Type**: Digital Agency / Tech Studio
-- **Founded**: 2022
+- **Founded**: 2024
 - **Global HQ**: Edmonton, Alberta, Canada (Operations & Strategy Hub)
 - **Tech Center**: India (Backend & R&D)
 - **Clients Served**: Worldwide (3+ continents)
@@ -17,7 +17,6 @@
 ## Team
 - **Lead Digital Architect**: Senior strategist — Full Stack, AI Integration, Cloud Infrastructure — [expert-bio.html](https://f9xr.github.io/pages/expert-bio.html)
 - **AKM**: Technical Architect — Cloud infrastructure, Security architecture — [inakm.github.io](https://inakm.github.io)
-- **Aryansh**: AI logic, Backend & API, Advanced SEO — [aryansh.site](https://aryansh.site)
 
 ## Core Services
 1. **Web Design & Development**: Modern, responsive websites — static & dynamic builds, business landing pages, redesign & UI improvements, fully managed deployment. Tech: HTML, CSS, JS, Tailwind, WordPress, Blogger, WIX. Hosting: AWS, Bluehost, Hostinger.
