@@ -11,15 +11,17 @@ Global digital agency specializing in high-performance web development, AI-power
 - **Portfolio** (`pages/portfolio.html`, `pages/projects.html`) — 50+ delivered projects across AI, fintech, pro portals, news, and entertainment
 - **About** (`pages/about.html`) — Team, philosophy, and E-E-A-T signals
 - **Contact** (`pages/contact.html`) — Formspree-powered contact form with honeypot protection
-- **Tools** (`tools/*.html`) — Digital presence score, website cost calculator, marketing budget planner, freelance quote gen, redesign calculator, GBP checker, local SEO score
+- **Tools** (`tools/*.html`) — Digital presence score, website cost calculator, marketing budget planner, freelance quote gen, redesign calculator, GBP checker, local SEO score, hashtag generator
 - **Legals** (`legals/*.html`) — Agreement, terms, privacy, shipping, refund policies
-- **Directories** (`directories/*.html`) — Curated lists: product launch directories, PDF submission portals, business listing sites
+- **Directories** (`directories/*.html`) — Curated lists: product launch directories, PDF submission portals, business listing sites, free backlink creation sites
+- **Announcements** (`announcements/*.html`) — News, partnerships, and updates
+- **Sitemap** (`pages/sitemap.html`) — Full site index for users and bots
 - **Knowledge Hub** (`pages/topics.html`) — Structured topical authority with pillar-cluster architecture
 - **Robots & AI** — `robots.txt`, `sitemap.xml`, `llms.txt`, `llms-full.txt`, `opensearch.xml`, `ai.txt`, `dublin.rdf`
 
 ## Tech Stack
 
-- **Frontend**: HTML5, CSS3, JavaScript (Vanilla), Tailwind CSS 3.4.17
+- **Frontend**: HTML5, CSS3, JavaScript (Vanilla), Tailwind CSS 3.4.17 (pre-built via `tailwind.css`)
 - **Icons**: Font Awesome 6 (free)
 - **Fonts**: Montserrat (Google Fonts)
 - **Analytics**: Google Analytics 4 (G-134PMTPP82)
@@ -32,16 +34,19 @@ Global digital agency specializing in high-performance web development, AI-power
 ├── index.html              # Homepage
 ├── 404.html                # Error page
 ├── error.html              # Redirects to 404.html
-├── pages/                  # Main content pages
+├── announcements/          # News, partnerships, updates
+├── pages/                  # Main content pages (about, contact, sitemap, topics, etc.)
 ├── services/               # Service detail pages
 ├── tools/                  # Interactive calculators & tools
+├── directories/            # Curated directory lists
 ├── legals/                 # Legal & policy pages
-├── assets/                 # Images, CSS, JS
-│   ├── css/styles.css
-│   ├── js/script.js
-│   └── img/
+├── assets/
+│   ├── css/                # tailwind.css, skeleton.css, transactions.css, llm-cta.css, styles.css
+│   ├── js/                 # script.js
+│   ├── illustrations/      # SVG illustrations (storyset/rafiki)
+│   └── img/                # Images & favicons
 ├── .well-known/            # Security & verification
-└── *.txt / *.xml           # SEO, AI discovery, standards
+└── *.txt / *.xml / *.rdf   # SEO, AI discovery, standards
 ```
 
 ## License
