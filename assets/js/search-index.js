@@ -33,11 +33,12 @@ var SEARCH_INDEX = [
   {"title": "Case Studies | F9XR Team - Customer Success Stories", "path": "pages/case-studies.html"},
   {"title": "We Do For You | Done-For-You Services | F9XR Team", "path": "services/we-do-for-you.html"},
   {"title": "Services Index | F9XR Team", "path": "services/index.html"},
-  {"title": "Product Launch Directories | F9XR Directory Index", "path": "directories/product-launch-directories.html"},
+  {"title": "Best Product Launch Sites & Directories for Startups | F9XR", "path": "directories/product-launch-directories.html"},
   {"title": "Directories Index | F9XR Directory Hub", "path": "directories/index.html"},
   {"title": "Talent & Brand Management | Creator Scaling | F9XR x SponsorLanes", "path": "services/talent-brand-management.html"},
   {"title": "Partnership Announcement | F9XR Team x SponsorLanes Agency", "path": "announcements/f9xr-sponsorlanes-partnership.html"},
   {"title": "Announcements | F9XR Team - News & Updates", "path": "announcements/index.html"},
   {"title": "Top Sites to Drop Your PDF - Free PDF Submission Platforms | F9XR", "path": "directories/pdf-submission-portals.html"},
-  {"title": "Business Listing Sites To Skyrocket Your Local SEO & Get More Leads | F9XR", "path": "directories/business-listing-sites.html"}
+  {"title": "Business Listing Sites To Skyrocket Your Local SEO & Get More Leads | F9XR", "path": "directories/business-listing-sites.html"},
+  {"title": "100+ Free Backlink Sites to Boost Your SEO | F9XR", "path": "directories/free-backlink-creation-sites.html"}
 ];
