@@ -78,7 +78,7 @@
 
   var FOOTER_HTML =
     '<footer itemscope itemtype="https://schema.org/Organization" class="bg-[#0a0a0a] pt-0 no-print overflow-hidden relative font-sans">' +
-    '<div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20 w-full">' +
+    '<div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-12 w-full">' +
     '<div class="flex whitespace-nowrap animate-marquee">' +
     '<div class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">' +
     '<span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>' +
@@ -145,7 +145,7 @@
     '<div class="sm:absolute sm:left-1/2 sm:-translate-x-1/2"><p class="text-xl sm:text-2xl font-bold tracking-tight text-white">Engineering Digital Growth</p></div>' +
     '<div class="text-sm md:text-base font-bold text-white">&copy; 2026 F9XR Team.</div></div></div>' +
     '<div class="text-center mt-4"><p class="text-[10px] font-medium text-white/30 uppercase tracking-widest">Illustrations by <a href="https://storyset.com" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Storyset</a></p></div>' +
-'<div class="flex justify-center mt-6 mb-4"><a href="https://www.internetaccredited.com/members/profile.php?site=f9xr.github.io" target="_blank" rel="noopener noreferrer"><img src="https://www.internetaccredited.com/trust-seals/seal.php?opt=2&site=f9xr.github.io" border="0" alt="Internet Accredited Business - Click For Ratings" /></a></div></footer>';
+'</footer>';
 
   var SEARCH_MODAL_HTML =
     '<div id="search-modal" class="fixed inset-0 bg-carbon-black/90 backdrop-blur-xl z-[9000] invisible opacity-0 transition-all duration-300 flex flex-col items-center pt-24 px-4">' +
