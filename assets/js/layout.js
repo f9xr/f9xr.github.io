@@ -1,0 +1,250 @@
+(function () {
+  'use strict';
+
+  var ROOT_PREFIX = typeof LAYOUT_ROOT !== 'undefined' ? LAYOUT_ROOT : '';
+
+  var NAV_HTML =
+    '<header id="main-header" class="fixed top-6 left-0 right-0 z-[5000] px-4 transition-transform duration-300">' +
+    '<nav class="max-w-[95rem] w-full mx-auto flex justify-between items-center py-1 lg:py-2 px-2 relative z-[5001]">' +
+    '<a href="/" class="flex items-center gap-2 group" aria-label="F9XR Home">' +
+    '<span class="text-2xl font-black tracking-tighter uppercase text-white">F9XR <span class="text-xs font-bold opacity-80 ml-0.5 text-accent-blue border border-white/20 rounded px-1 group-hover:border-white/50 transition-colors">Team</span></span></a>' +
+    '<div class="hidden lg:flex items-center gap-1 font-bold text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] tracking-wide text-platinum/80 bg-carbon-black/60 backdrop-blur-2xl border border-white/20 rounded-full pl-3 pr-1 py-1 shadow-2xl">' +
+    '<div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">' +
+    '<i class="fa-regular fa-building text-[14px] lg:text-[16px]"></i><span>Company</span>' +
+    '<i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>' +
+    '<div class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[580px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">' +
+    '<div class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-2 shadow-2xl flex gap-2 relative overflow-hidden text-left normal-case tracking-normal">' +
+    '<div class="w-[55%] flex flex-col gap-1 p-2 bg-[#121212] rounded-xl border border-white/5">' +
+    '<a href="/pages/about.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item">' +
+    '<div class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue"><i class="fa-solid fa-users"></i></div>' +
+    '<div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">About Us</div><div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">Learn more about our story and team</div></div></a>' +
+    '<a href="/pages/case-studies.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item border-t border-white/5 mt-1 pt-4">' +
+    '<div class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue"><i class="fa-regular fa-star"></i></div>' +
+    '<div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Customer Stories</div><div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">See how we\'ve helped our clients succeed</div></div></a>' +
+    '<a href="/pages/contact.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item border-t border-white/5 mt-1 pt-4">' +
+    '<div class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue"><i class="fa-solid fa-handshake-angle"></i></div>' +
+    '<div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Hire Us!</div><div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">Collaborate with us for mutual growth</div></div></a></div>' +
+    '<div class="w-[45%] flex flex-col justify-center py-4 px-6 gap-6 bg-[#0a0a0a]">' +
+    '<a href="/legals/terms.html" class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors"><i class="fa-regular fa-file-lines w-4 text-center opacity-80"></i> Terms of Service</a>' +
+    '<a href="/legals/privacy.html" class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors"><i class="fa-solid fa-shield-halved w-4 text-center opacity-80"></i> Privacy Policy</a>' +
+    '<a href="/legals/refund.html" class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors"><i class="fa-solid fa-arrow-rotate-left w-4 text-center opacity-80"></i> Refund Policy</a>' +
+    '<a href="/legals/agreement.html" class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors"><i class="fa-solid fa-leaf w-4 text-center opacity-80"></i> Agreement</a>' +
+    '<a href="/legals/shipping.html" class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors"><i class="fa-regular fa-circle-question w-4 text-center opacity-80"></i> Shipping</a></div></div></div></div>' +
+    '<div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">' +
+    '<i class="fa-solid fa-bolt text-[14px] lg:text-[16px]"></i><span>Services</span>' +
+    '<i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>' +
+    '<div class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[650px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">' +
+    '<div class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-4 shadow-2xl flex gap-4 relative overflow-hidden text-left normal-case tracking-normal">' +
+    '<div class="w-1/3 flex flex-col justify-center items-center bg-accent-blue/10 rounded-xl p-4 border border-accent-blue/20 hover:bg-accent-blue/20 transition-colors text-center">' +
+    '<i class="fa-solid fa-layer-group text-3xl text-accent-blue mb-3"></i><span class="text-white font-bold text-[14px] lg:text-[16px] mb-2">Our Solutions</span>' +
+    '<p class="text-platinum/60 text-[10px] leading-tight mb-4">Discover the full spectrum of our digital services.</p>' +
+    '<a href="/pages/services.html" class="text-[10px] uppercase tracking-widest font-bold text-accent-blue hover:text-white transition-colors">View All <i class="fa-solid fa-arrow-right ml-1"></i></a></div>' +
+    '<div class="w-2/3 grid grid-cols-2 gap-2">' +
+    '<a href="/services/ai-visibility-optimization.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors"><i class="fa-solid fa-robot text-accent-blue mt-1"></i><div><div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">AI Visibility</div><div class="text-platinum/50 text-[9px]">Future-proof your brand</div></div></a>' +
+    '<a href="/services/google-business-optimization.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors"><i class="fa-brands fa-google text-accent-blue mt-1"></i><div><div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Google Maps SEO</div><div class="text-platinum/50 text-[9px]">Dominate local search</div></div></a>' +
+    '<a href="/services/website-rentals.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors"><i class="fa-solid fa-laptop-code text-accent-blue mt-1"></i><div><div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Website Rentals</div><div class="text-platinum/50 text-[9px]">Pay-monthly sites</div></div></a>' +
+    '<a href="/services/social-media-posting.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors"><i class="fa-solid fa-hashtag text-accent-blue mt-1"></i><div><div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Social Media</div><div class="text-platinum/50 text-[9px]">Engage your audience</div></div></a>' +
+    '<a href="/services/indian-professionals.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors"><i class="fa-solid fa-users-gear text-accent-blue mt-1"></i><div><div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Hire Professionals</div><div class="text-platinum/50 text-[9px]">Top Indian talent</div></div></a>' +
+    '<a href="/services/data-management.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors"><i class="fa-solid fa-database text-accent-blue mt-1"></i><div><div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">Data Management</div><div class="text-platinum/50 text-[9px]">Organize your data</div></div></a>' +
+    '<a href="/services/we-do-for-you.html" class="flex items-start gap-3 hover:bg-white/5 p-2 rounded-lg transition-colors"><i class="fa-solid fa-hand-sparkles text-accent-blue mt-1"></i><div><div class="text-white text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] font-bold">We Do For You</div><div class="text-platinum/50 text-[9px]">Done-for-you services</div></div></a></div></div></div></div>' +
+    '<div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">' +
+    '<i class="fa-solid fa-layer-group text-[14px] lg:text-[16px]"></i><span>Works</span>' +
+    '<i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>' +
+    '<div class="absolute top-[100%] left-1/2 -translate-x-1/2 w-[350px] pt-4 invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out z-[5002]">' +
+    '<div class="bg-[#0a0a0a] border border-white/10 rounded-2xl p-2 shadow-2xl flex flex-col gap-1 relative overflow-hidden text-left normal-case tracking-normal">' +
+    '<a href="/pages/portfolio.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item"><div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors"><i class="fa-regular fa-image"></i></div><div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Portfolio</div><div class="text-platinum/50 text-[10px] leading-snug font-medium">Browse our recent case studies</div></div></a>' +
+    '<a href="/pages/projects.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5"><div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors"><i class="fa-solid fa-laptop-code"></i></div><div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Our Projects</div><div class="text-platinum/50 text-[10px] leading-snug font-medium">Explore active digital assets</div></div></a>' +
+    '<a href="/tools/index.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5"><div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors"><i class="fa-solid fa-toolbox"></i></div><div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Tools</div><div class="text-platinum/50 text-[10px] leading-snug font-medium">Free digital presence tools</div></div></a>' +
+    '<a href="https://growwithguidance.blogspot.com/" target="_blank" rel="noopener noreferrer" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5"><div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors"><i class="fa-solid fa-blog"></i></div><div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Blog</div><div class="text-platinum/50 text-[10px] leading-snug font-medium">Insights and updates</div></div></a>' +
+    '<a href="/directories/index.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5"><div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors"><i class="fa-solid fa-folder-tree"></i></div><div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Directories</div><div class="text-platinum/50 text-[10px] leading-snug font-medium">Business &amp; SEO directories</div></div></a></div></div></div>' +
+    '<button onclick="openSearchModal()" aria-label="Search Site" class="ml-2 w-10 h-10 lg:w-12 lg:h-12 bg-accent-blue text-white rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.5)]"><i class="fa-solid fa-magnifying-glass text-lg"></i></button></div>' +
+    '<div class="flex items-center gap-5">' +
+    '<a href="https://web.whatsapp.com/send?phone=919032065784" target="_blank" rel="noopener noreferrer" class="hidden sm:flex text-white/80 hover:text-white text-xl transition-all hover:scale-110"><i class="fa-brands fa-whatsapp"></i></a>' +
+    '<button onclick="toggleMobileMenu()" id="menu-btn" class="lg:hidden text-white/80 hover:text-white text-xl active:scale-90 transition-all hover:scale-110" aria-label="Toggle Menu"><i id="menu-icon" class="fa-solid fa-bars-staggered"></i></button>' +
+    '<a href="/pages/contact.html" class="hidden md:flex bg-white text-carbon-black px-6 py-3 lg:px-8 lg:py-4 rounded-full font-black text-[11px] lg:text-[13px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95 ml-2">Hire Us</a></div></nav>' +
+    '<div id="mobile-menu" class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">' +
+    '<button onclick="toggleMobileMenu()" class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors"><i class="fa-solid fa-xmark"></i></button>' +
+    '<div class="space-y-8"><span class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>' +
+    '<a href="/pages/about.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>' +
+    '<a href="/pages/services.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>' +
+    '<a href="/pages/portfolio.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>' +
+    '<a href="/pages/contact.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire Team</a></div>' +
+    '<div class="mt-20 pt-10 border-t border-white/5 flex gap-8">' +
+    '<a href="https://instagram.com/f9xrteam" rel="me noopener noreferrer" aria-label="Instagram" class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank"><i class="fa-brands fa-instagram"></i></a>' +
+    '<a href="https://web.whatsapp.com/send?phone=919032065784" aria-label="WhatsApp" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>' +
+    '<a href="mailto:tontufytservices@gmail.com" aria-label="Email Us" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-solid fa-envelope"></i></a>' +
+    '<a href="https://www.youtube.com/@QuarterlyLIV" aria-label="YouTube" class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>' +
+    '<a href="https://pinterest.com/f9xr" aria-label="Pinterest" class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a></div></div></header>';
+
+  var FOOTER_HTML =
+    '<footer itemscope itemtype="https://schema.org/Organization" class="bg-[#0a0a0a] pt-0 no-print overflow-hidden relative font-sans">' +
+    '<div class="bg-accent-blue py-4 border-y border-white/10 overflow-hidden select-none mb-20 w-full">' +
+    '<div class="flex whitespace-nowrap animate-marquee">' +
+    '<div class="flex items-center gap-10 px-4 text-carbon-black font-black uppercase tracking-[0.3em] text-xs md:text-sm italic">' +
+    '<span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>' +
+    '<span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>' +
+    '<span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>' +
+    '<span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>' +
+    '<span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i>' +
+    '<span>Amazing Design</span> <i class="fas fa-asterisk text-[10px]"></i>' +
+    '<span>AI-Powered Solutions</span> <i class="fas fa-asterisk text-[10px]"></i>' +
+    '<span>Brand Growth</span> <i class="fas fa-asterisk text-[10px]"></i>' +
+    '<span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>' +
+    '<span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i></div></div></div>' +
+    '<div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col min-h-[60vh]">' +
+    '<div class="flex flex-col md:flex-row justify-between items-center pb-16 mb-16 border-b border-white/5 gap-8 reveal">' +
+    '<div class="text-center md:text-left"><h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none text-white">Let\'s Build <br class="hidden md:block"> <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span></h2></div>' +
+    '<a href="/pages/contact.html" class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">Hire Team <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i></a></div>' +
+    '<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24">' +
+    '<div class="flex flex-col gap-6 lg:col-span-3"><h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Pages</h4><div class="flex flex-col gap-3">' +
+    '<a href="/pages/about.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-circle-info text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>About Us</a>' +
+    '<a href="/pages/services.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-layer-group text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Services</a>' +
+    '<a href="/pages/portfolio.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-briefcase text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Portfolio</a>' +
+    '<a href="/pages/projects.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-rocket text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Projects</a>' +
+    '<a href="/pages/contact.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-envelope text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Contact</a>' +
+    '<a href="/tools/index.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-toolbox text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Tools</a>' +
+    '<a href="https://growwithguidance.blogspot.com/" target="_blank" rel="noopener noreferrer" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-arrow-up-right-from-square text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Blog</a></div></div>' +
+    '<div class="flex flex-col gap-6 lg:col-span-4"><h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Services</h4><div class="flex flex-col gap-3">' +
+    '<a href="/pages/services.html" class="flex items-center text-2xl lg:text-[28px] font-black text-accent-blue hover:text-white transition-colors tracking-tight mb-2"><i class="fa-solid fa-bolt text-white/80 mr-3 text-xl w-6 text-center"></i>View All Services <i class="fa-solid fa-arrow-right text-lg ml-2"></i></a>' +
+    '<a href="/services/ai-visibility-optimization.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-eye text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>AI Visibility</a>' +
+    '<a href="/services/google-business-optimization.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-brands fa-google text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Google Business</a>' +
+    '<a href="/services/social-media-posting.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-hashtag text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Social Media</a>' +
+    '<a href="/services/website-rentals.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-laptop-house text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Website Rentals</a>' +
+    '<a href="/services/discord-bot-development.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-brands fa-discord text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Discord Bots</a>' +
+    '<a href="/services/telegram-bot-development.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-brands fa-telegram text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Telegram Bots</a></div></div>' +
+    '<div class="flex flex-col gap-6 lg:col-span-5 overflow-hidden"><h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Contact</h4><div class="flex flex-col gap-6">' +
+    '<a href="mailto:tontufytservices@gmail.com" class="text-3xl md:text-4xl lg:text-5xl font-bold text-white hover:text-accent-blue transition-colors break-all select-all inline-block w-fit tracking-tight">tontufytservices@gmail.com</a>' +
+    '<a href="tel:+919123442431" class="text-2xl md:text-3xl font-bold text-white hover:text-accent-blue transition-colors inline-block w-fit tracking-tight">+91 91234-42431</a>' +
+    '<a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener noreferrer" class="text-2xl md:text-3xl font-bold text-white hover:text-accent-blue transition-colors inline-block w-fit tracking-tight"><i class="fa-brands fa-linkedin mr-3 text-accent-blue"></i>LinkedIn</a></div></div></div>' +
+    '<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 mb-20">' +
+    '<div class="flex flex-wrap gap-x-6 gap-y-3">' +
+    '<a href="/legals/terms.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Terms and conditions</a>' +
+    '<a href="/legals/privacy.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Privacy Policy</a>' +
+    '<a href="/legals/agreement.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Service Agreement</a>' +
+    '<a href="/legals/refund.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Refund Policy</a>' +
+    '<a href="/legals/shipping.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Shipping Policy</a>' +
+    '<a href="/pages/sitemap.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Sitemap</a>' +
+    '<a href="/llms.txt" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">LLMs.txt</a></div>' +
+    '<a href="https://youtu.be/l-52kGRwH_Y?si=WrEJBUEmIMM9KWng" target="_blank" rel="noopener noreferrer" class="relative group cursor-pointer overflow-hidden rounded-xl w-48 h-28 bg-white/5 border border-white/10 flex items-center justify-center shrink-0">' +
+    '<div class="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-black/50 group-hover:scale-110 transition-transform duration-700"></div>' +
+    '<div class="relative z-10 flex flex-col items-center gap-2"><div class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white shadow-lg"><i class="fa-solid fa-play ml-1 text-sm"></i></div><span class="text-[11px] font-bold text-white tracking-widest uppercase">Play showreel</span></div></a></div>' +
+    '<div class="w-full flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 mb-16 lg:mb-24 mt-auto">' +
+    '<img src="' + ROOT_PREFIX + 'logo.webp" width="512" height="512" alt="F9XR" loading="lazy" class="w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-16 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl lg:rounded-[2.5rem] border border-white/10">' +
+    '<p class="text-[11vw] font-black leading-none tracking-tighter text-white" aria-label="F9XR Team">F9XRTeam</p></div></div>' +
+    '<div class="relative w-full py-6 lg:py-8 border-t border-white/10 overflow-hidden mt-8">' +
+    '<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-carbon-black via-[#0a0a0a] to-black opacity-80 z-0"></div>' +
+    '<div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">' +
+    '<div class="flex items-center justify-center sm:justify-start gap-6">' +
+    '<a href="https://instagram.com/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>' +
+    '<a href="https://linkedin.com/company/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>' +
+    '<a href="https://github.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>' +
+    '<a href="https://www.facebook.com/profile.php?id=61586225441401" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Facebook Page"><i class="fa-brands fa-facebook"></i></a>' +
+    '<a href="https://www.facebook.com/share/g/18J9AMKqRC/" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Facebook Group"><i class="fa-brands fa-facebook"></i></a>' +
+    '<a href="https://www.youtube.com/@QuarterlyLIV" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>' +
+    '<a href="https://pinterest.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a></div>' +
+    '<div class="sm:absolute sm:left-1/2 sm:-translate-x-1/2"><p class="text-xl sm:text-2xl font-bold tracking-tight text-white">Engineering Digital Growth</p></div>' +
+    '<div class="text-sm md:text-base font-bold text-white">&copy; 2026 F9XR Team.</div></div></div>' +
+    '<div class="text-center mt-4"><p class="text-[10px] font-medium text-white/30 uppercase tracking-widest">Illustrations by <a href="https://storyset.com" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Storyset</a></p></div>' +
+'<div class="flex justify-center mt-6 mb-4"><a href="https://www.internetaccredited.com/members/profile.php?site=f9xr.github.io" target="_blank" rel="noopener noreferrer"><img src="https://www.internetaccredited.com/trust-seals/seal.php?opt=2&site=f9xr.github.io" border="0" alt="Internet Accredited Business - Click For Ratings" /></a></div></footer>';
+
+  var SEARCH_MODAL_HTML =
+    '<div id="search-modal" class="fixed inset-0 bg-carbon-black/90 backdrop-blur-xl z-[9000] invisible opacity-0 transition-all duration-300 flex flex-col items-center pt-24 px-4">' +
+    '<div class="w-full max-w-3xl relative">' +
+    '<button onclick="closeSearchModal()" class="absolute -top-12 right-0 text-white/50 hover:text-white text-2xl transition-colors"><i class="fa-solid fa-xmark"></i></button>' +
+    '<div class="relative flex items-center bg-white/10 border border-white/20 rounded-2xl overflow-hidden focus-within:border-accent-blue transition-colors">' +
+    '<i class="fa-solid fa-magnifying-glass text-white/50 text-xl ml-6"></i>' +
+    '<input type="text" id="search-input" placeholder="Search pages, services, works..." class="w-full bg-transparent border-none text-white text-xl md:text-2xl py-6 px-6 focus:outline-none focus:ring-0 placeholder-white/30" autocomplete="off"></div>' +
+    '<div id="search-results" class="mt-4 flex flex-col gap-2 max-h-[60vh] overflow-y-auto pr-2"></div></div></div>';
+
+  function initLayout() {
+    var navC = document.getElementById('nav-container');
+    if (navC) navC.innerHTML = NAV_HTML;
+
+    var footerC = document.getElementById('footer-container');
+    if (footerC) footerC.innerHTML = FOOTER_HTML;
+
+    var searchC = document.getElementById('search-modal-container');
+    if (searchC) searchC.innerHTML = SEARCH_MODAL_HTML;
+
+    if (typeof SEARCH_INDEX === 'undefined') {
+      var s = document.createElement('script');
+      s.src = ROOT_PREFIX + 'assets/js/search-index.js';
+      document.body.appendChild(s);
+    }
+
+    setupSmartNav();
+  }
+
+  function setupSmartNav() {
+    var lastScrollY = window.scrollY;
+    var header = document.getElementById('main-header');
+    if (!header) return;
+    window.addEventListener('scroll', function () {
+      var currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        header.classList.add('-translate-y-full');
+      } else {
+        header.classList.remove('-translate-y-full');
+      }
+      lastScrollY = currentScrollY;
+    });
+  }
+
+  window.toggleMobileMenu = function () {
+    var menu = document.getElementById('mobile-menu');
+    var icon = document.getElementById('menu-icon');
+    if (!menu) return;
+    var isOpen = menu.classList.contains('opacity-100');
+    if (!isOpen) {
+      menu.classList.remove('opacity-0', 'pointer-events-none');
+      menu.classList.add('opacity-100', 'pointer-events-auto');
+      if (icon) icon.classList.replace('fa-bars-staggered', 'fa-xmark');
+      document.body.style.overflow = 'hidden';
+    } else {
+      menu.classList.add('opacity-0', 'pointer-events-none');
+      menu.classList.remove('opacity-100', 'pointer-events-auto');
+      if (icon) icon.classList.replace('fa-xmark', 'fa-bars-staggered');
+      document.body.style.overflow = 'auto';
+    }
+  };
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth >= 1024) {
+      var menu = document.getElementById('mobile-menu');
+      if (menu && menu.classList.contains('opacity-100')) {
+        window.toggleMobileMenu();
+      }
+    }
+  });
+
+  window.openSearchModal = function () {
+    var modal = document.getElementById('search-modal');
+    if (!modal) return;
+    modal.classList.remove('invisible', 'opacity-0');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () {
+      var input = document.getElementById('search-input');
+      if (input) input.focus();
+    }, 100);
+    if (typeof renderSearchResults === 'function') renderSearchResults('');
+  };
+
+  window.closeSearchModal = function () {
+    var modal = document.getElementById('search-modal');
+    if (!modal) return;
+    modal.classList.add('invisible', 'opacity-0');
+    document.body.style.overflow = '';
+    var input = document.getElementById('search-input');
+    if (input) input.value = '';
+  };
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') window.closeSearchModal();
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLayout);
+  } else {
+    initLayout();
+  }
+})();
