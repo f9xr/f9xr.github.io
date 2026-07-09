@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Best PDF Submission Platforms & Document Sharing Sites | F9XR</title>
-    <meta name="description" content="Discover the best PDF submission platforms for backlinks and document visibility in 2026. Learn the history, types, and how to choose the right platforms. Get dofollow backlinks from Issuu, Scribd, SlideShare, and more. Step-by-step guide included.">
+    <meta name="description" content="Find the best PDF submission platforms for dofollow backlinks and document visibility. Get listed on Issuu, Scribd, SlideShare & more. Step-by-step guide.">
     <meta name="keywords" content="PDF submission sites, free PDF hosting, document sharing platforms, upload PDF, PDF backlinks, F9XR directories">
     <meta name="author" content="F9XR Team">
     <meta name="robots" content="index, follow">
@@ -67,7 +67,7 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="../assets/css/transactions.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="../assets/css/transactions.css"></noscript>
-    <link rel="stylesheet" href="../assets/css/skeleton.css">
+    <link rel="stylesheet" href="../assets/css/skeleton.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="../assets/css/skeleton.css"></noscript>
     <link rel="stylesheet" href="../assets/css/tailwind.css">
 
     <!-- Google tag (gtag.js) -->
@@ -673,6 +673,10 @@ class ClickSpark extends HTMLElement{constructor(){super();this.attachShadow({mo
 customElements.define("click-spark",ClickSpark);
 document.body.appendChild(document.createElement("click-spark"));
 </script>
+<script>document.getElementById('ts-year').textContent = new Date().getFullYear();</script>
+<script src="../assets/js/skeleton.js"></script>
+<script>window.LAYOUT_ROOT = '../';</script>
+<script src="../assets/js/layout.js"></script>
 <script src="../assets/js/search-index.js"></script>
 <script>
 const ROOT_PREFIX = "../";
@@ -680,9 +684,8 @@ document.getElementById('search-input').addEventListener('input',function(e){ren
 function renderSearchResults(query){const resultsContainer=document.getElementById('search-results');resultsContainer.innerHTML='';if(!query)return;const matches=SEARCH_INDEX.filter(item=>item.title.toLowerCase().includes(query)||item.path.toLowerCase().includes(query));if(matches.length===0){resultsContainer.innerHTML='<div class="text-white/50 text-center py-8">No results found for "'+query+'"</div>';return}
 matches.forEach(match=>{const el=document.createElement('a');el.href=ROOT_PREFIX+match.path;el.className='bg-white/5 border border-white/5 hover:border-accent-blue/50 hover:bg-white/10 transition-colors p-4 rounded-xl flex items-center justify-between group';el.innerHTML='<div class="text-white font-bold text-lg">'+match.title+'</div><i class="fa-solid fa-arrow-right text-white/30 group-hover:text-accent-blue group-hover:-rotate-45 transition-all"></i>';resultsContainer.appendChild(el)})}
 </script>
-<script>document.getElementById('ts-year').textContent = new Date().getFullYear();</script>
-<script src="../assets/js/skeleton.js"></script>
-<script>window.LAYOUT_ROOT = '../';</script>
-<script src="../assets/js/layout.js"></script>
+<script>
+new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.querySelectorAll('.reveal').forEach(function(el){el.classList.add('active')})}})}.bind(null),{threshold:0.05}).observe(document.getElementById('footer-container'));
+</script>
 </body>
 </html>

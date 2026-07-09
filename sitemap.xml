@@ -231,6 +231,13 @@
     <priority>0.70</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/announcements/index.html</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
     <loc>https://f9xr.github.io/services/discord-bot-development.html</loc>
     <lastmod>2026-06-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>

@@ -7,12 +7,12 @@ Allow: /legals/
 Disallow: /404.html
 Disallow: /error.html
 Disallow: /pages/coming-soon.html
-Disallow: /pages/thanks.html
+Disallow: /pinterest-79c83.html
 Disallow: /*?fbclid
 Disallow: /*?gclid
 Disallow: /*?utm_
 
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
 
 Sitemap: https://f9xr.github.io/sitemap.xml
 Sitemap: https://f9xr.github.io/sitemap-image.xml

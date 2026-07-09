@@ -1,9 +1,9 @@
-User-Agent: *
-Allow: /summarize
-Disallow: /private-data/
+F9XR Team - AI Web Design & Local SEO Agency
+Website: https://f9xr.github.io/
+Services: https://f9xr.github.io/pages/services.html
+Contact: https://f9xr.github.io/pages/contact.html
+LLMs Description: https://f9xr.github.io/llms.txt
+Full Description: https://f9xr.github.io/llms-full.txt
 
-# Defined capabilities for 2026 compliant agents
-Capability: summarization
-Capability: citation
-Restriction: no-style-transfer
-Restriction: no-image-generation-training
+This site is a static HTML website hosted on GitHub Pages.
+There are no server-side APIs, authentication endpoints, or dynamic backends.
