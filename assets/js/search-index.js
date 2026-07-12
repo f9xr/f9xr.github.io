@@ -36,6 +36,7 @@ var SEARCH_INDEX = [
   {"title": "Best Product Launch Sites & Directories for Startups | F9XR", "path": "directories/product-launch-directories.html"},
   {"title": "Directories Index | F9XR Directory Hub", "path": "directories/index.html"},
   {"title": "Talent & Brand Management | Creator Scaling | F9XR x SponsorLanes", "path": "services/talent-brand-management.html"},
+  {"title": "F9XR Team Launches Open-Source SEO CodeBase Auditor Skill", "path": "announcements/f9xr-launches-seo-codebase-auditor-skill.html"},
   {"title": "Partnership Announcement | F9XR Team x SponsorLanes Agency", "path": "announcements/f9xr-sponsorlanes-partnership.html"},
   {"title": "Announcements | F9XR Team - News & Updates", "path": "announcements/index.html"},
   {"title": "Top Sites to Drop Your PDF - Free PDF Submission Platforms | F9XR", "path": "directories/pdf-submission-portals.html"},
