@@ -59,10 +59,10 @@
     '<a href="/directories/index.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5"><div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors"><i class="fa-solid fa-folder-tree"></i></div><div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Directories</div><div class="text-platinum/50 text-[10px] leading-snug font-medium">Business &amp; SEO directories</div></div></a></div></div></div>' +
     '<button onclick="openSearchModal()" aria-label="Search Site" class="ml-2 w-10 h-10 lg:w-12 lg:h-12 bg-accent-blue text-white rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.5)]"><i class="fa-solid fa-magnifying-glass text-lg"></i></button></div>' +
     '<div class="flex items-center gap-5">' +
-    '<a href="https://web.whatsapp.com/send?phone=919032065784" target="_blank" rel="noopener noreferrer" class="hidden sm:flex text-white/80 hover:text-white text-xl transition-all hover:scale-110"><i class="fa-brands fa-whatsapp"></i></a>' +
-    '<button onclick="toggleMobileMenu()" id="menu-btn" class="lg:hidden text-white/80 hover:text-white text-xl active:scale-90 transition-all hover:scale-110" aria-label="Toggle Menu"><i id="menu-icon" class="fa-solid fa-bars-staggered"></i></button>' +
+    '<a href="https://web.whatsapp.com/send?phone=919032065784" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="hidden sm:flex text-white/80 hover:text-white text-xl transition-all hover:scale-110"><i class="fa-brands fa-whatsapp"></i></a>' +
+    '<button onclick="toggleMobileMenu()" id="menu-btn" class="lg:hidden text-white/80 hover:text-white text-xl active:scale-90 transition-all hover:scale-110" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu"><i id="menu-icon" class="fa-solid fa-bars-staggered"></i></button>' +
     '<a href="/pages/contact.html" class="hidden md:flex bg-white text-carbon-black px-6 py-3 lg:px-8 lg:py-4 rounded-full font-black text-[11px] lg:text-[13px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95 ml-2">Hire Us</a></div></nav>' +
-    '<div id="mobile-menu" class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">' +
+    '<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation" class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">' +
     '<button onclick="toggleMobileMenu()" class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors"><i class="fa-solid fa-xmark"></i></button>' +
     '<div class="space-y-8"><span class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>' +
     '<a href="/pages/about.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>' +
@@ -74,7 +74,8 @@
     '<a href="https://web.whatsapp.com/send?phone=919032065784" aria-label="WhatsApp" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>' +
     '<a href="mailto:tontufytservices@gmail.com" aria-label="Email Us" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-solid fa-envelope"></i></a>' +
     '<a href="https://www.youtube.com/@QuarterlyLIV" aria-label="YouTube" class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>' +
-    '<a href="https://pinterest.com/f9xr" aria-label="Pinterest" class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a></div></div></header>';
+    '<a href="https://pinterest.com/f9xr" aria-label="Pinterest" class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a></div></div></header>' +
+    '<button id="backToTop" aria-label="Scroll to top" class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl"><i class="fas fa-arrow-up text-sm"></i></button>';
 
   var FOOTER_HTML =
     '<footer itemscope itemtype="https://schema.org/Organization" class="bg-[#0a0a0a] pt-0 no-print overflow-hidden relative font-sans">' +
@@ -92,7 +93,7 @@
     '<span>High Performance SEO</span> <i class="fas fa-asterisk text-[10px]"></i>' +
     '<span>Modern Architectures</span> <i class="fas fa-asterisk text-[10px]"></i></div></div></div>' +
     '<div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col min-h-[60vh]">' +
-    '<div class="flex flex-col md:flex-row justify-between items-center pb-16 mb-16 border-b border-white/5 gap-8 reveal">' +
+    '<div class="flex flex-col md:flex-row justify-between items-center pt-24 pb-20 mb-16 border-b border-white/5 gap-8 reveal">' +
     '<div class="text-center md:text-left"><h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none text-white">Let\'s Build <br class="hidden md:block"> <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span></h2></div>' +
     '<a href="/pages/contact.html" class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">Hire Team <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i></a></div>' +
     '<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24">' +
@@ -135,26 +136,28 @@
     '<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-carbon-black via-[#0a0a0a] to-black opacity-80 z-0"></div>' +
     '<div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">' +
     '<div class="flex items-center justify-center sm:justify-start gap-6">' +
-    '<a href="https://instagram.com/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>' +
-    '<a href="https://linkedin.com/company/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>' +
-    '<a href="https://github.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>' +
-    '<a href="https://www.facebook.com/profile.php?id=61586225441401" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Facebook Page"><i class="fa-brands fa-facebook"></i></a>' +
-    '<a href="https://www.facebook.com/share/g/18J9AMKqRC/" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Facebook Group"><i class="fa-brands fa-facebook"></i></a>' +
-    '<a href="https://www.youtube.com/@QuarterlyLIV" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>' +
-    '<a href="https://pinterest.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a></div>' +
+    '<a href="https://instagram.com/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>' +
+    '<a href="https://linkedin.com/company/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>' +
+    '<a href="https://github.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>' +
+    '<a href="https://www.facebook.com/profile.php?id=61586225441401" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Facebook Page" aria-label="Facebook Page"><i class="fa-brands fa-facebook"></i></a>' +
+    '<a href="https://www.facebook.com/share/g/18J9AMKqRC/" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Facebook Group" aria-label="Facebook Group"><i class="fa-brands fa-facebook"></i></a>' +
+    '<a href="https://www.youtube.com/@QuarterlyLIV" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>' +
+    '<a href="https://pinterest.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" title="Pinterest" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a></div>' +
     '<div class="sm:absolute sm:left-1/2 sm:-translate-x-1/2"><p class="text-xl sm:text-2xl font-bold tracking-tight text-white">Engineering Digital Growth</p></div>' +
     '<div class="text-sm md:text-base font-bold text-white">&copy; 2026 F9XR Team.</div></div></div>' +
     '<div class="text-center mt-4"><p class="text-[10px] font-medium text-white/30 uppercase tracking-widest">Illustrations by <a href="https://storyset.com" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Storyset</a></p></div>' +
 '</footer>';
 
   var SEARCH_MODAL_HTML =
-    '<div id="search-modal" class="fixed inset-0 bg-carbon-black/90 backdrop-blur-xl z-[9000] invisible opacity-0 transition-all duration-300 flex flex-col items-center pt-24 px-4">' +
+    '<div id="search-modal" role="dialog" aria-modal="true" aria-label="Site search" class="fixed inset-0 bg-carbon-black/90 backdrop-blur-xl z-[9000] invisible opacity-0 transition-all duration-300 flex flex-col items-center pt-24 px-4">' +
     '<div class="w-full max-w-3xl relative">' +
-    '<button onclick="closeSearchModal()" class="absolute -top-12 right-0 text-white/50 hover:text-white text-2xl transition-colors"><i class="fa-solid fa-xmark"></i></button>' +
+    '<button onclick="closeSearchModal()" class="absolute -top-12 right-0 text-white/50 hover:text-white text-2xl transition-colors" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>' +
     '<div class="relative flex items-center bg-white/10 border border-white/20 rounded-2xl overflow-hidden focus-within:border-accent-blue transition-colors">' +
     '<i class="fa-solid fa-magnifying-glass text-white/50 text-xl ml-6"></i>' +
-    '<input type="text" id="search-input" placeholder="Search pages, services, works..." class="w-full bg-transparent border-none text-white text-xl md:text-2xl py-6 px-6 focus:outline-none focus:ring-0 placeholder-white/30" autocomplete="off"></div>' +
-    '<div id="search-results" class="mt-4 flex flex-col gap-2 max-h-[60vh] overflow-y-auto pr-2"></div></div></div>';
+    '<input type="text" id="search-input" placeholder="Search pages, services, works..." class="w-full bg-transparent border-none text-white text-xl md:text-2xl py-6 pl-6 pr-14 focus:outline-none focus:ring-0 placeholder-white/30" autocomplete="off">' +
+    '<button type="button" onclick="clearSearchInput()" id="search-clear-btn" class="hidden absolute right-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-white text-xl transition-colors z-10" aria-label="Clear search"><i class="fa-solid fa-xmark"></i></button>' +
+    '</div>' +
+    '<div id="search-results" class="mt-4 flex flex-col gap-2 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar"></div></div></div>';
 
   function initLayout() {
     var navC = document.getElementById('nav-container');
@@ -172,38 +175,73 @@
       document.body.appendChild(s);
     }
 
+    var input = document.getElementById('search-input');
+    if (input) {
+      input.addEventListener('input', function (e) {
+        var val = e.target.value;
+        var clearBtn = document.getElementById('search-clear-btn');
+        if (clearBtn) clearBtn.classList.toggle('hidden', !val);
+        window.renderSearchResults(val.toLowerCase());
+      });
+    }
+
+    var revealEls = document.querySelectorAll('.reveal');
+    if (revealEls.length) {
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      revealEls.forEach(function (el) { revealObserver.observe(el); });
+    }
+
     setupSmartNav();
   }
 
   function setupSmartNav() {
     var lastScrollY = window.scrollY;
     var header = document.getElementById('main-header');
-    if (!header) return;
+    var btt = document.getElementById('backToTop');
     window.addEventListener('scroll', function () {
       var currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        header.classList.add('-translate-y-full');
-      } else {
-        header.classList.remove('-translate-y-full');
+      if (header) {
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          header.classList.add('-translate-y-full');
+        } else {
+          header.classList.remove('-translate-y-full');
+        }
+      }
+      if (btt) {
+        if (currentScrollY > 600) btt.classList.remove('hidden');
+        else btt.classList.add('hidden');
       }
       lastScrollY = currentScrollY;
     });
+    if (btt) {
+      btt.onclick = function () { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    }
   }
 
   window.toggleMobileMenu = function () {
     var menu = document.getElementById('mobile-menu');
     var icon = document.getElementById('menu-icon');
+    var btn = document.getElementById('menu-btn');
     if (!menu) return;
     var isOpen = menu.classList.contains('opacity-100');
     if (!isOpen) {
       menu.classList.remove('opacity-0', 'pointer-events-none');
       menu.classList.add('opacity-100', 'pointer-events-auto');
       if (icon) icon.classList.replace('fa-bars-staggered', 'fa-xmark');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
     } else {
       menu.classList.add('opacity-0', 'pointer-events-none');
       menu.classList.remove('opacity-100', 'pointer-events-auto');
       if (icon) icon.classList.replace('fa-xmark', 'fa-bars-staggered');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = 'auto';
     }
   };
@@ -221,12 +259,14 @@
     var modal = document.getElementById('search-modal');
     if (!modal) return;
     modal.classList.remove('invisible', 'opacity-0');
+    var clearBtn = document.getElementById('search-clear-btn');
+    if (clearBtn) clearBtn.classList.add('hidden');
     document.body.style.overflow = 'hidden';
     setTimeout(function () {
       var input = document.getElementById('search-input');
       if (input) input.focus();
     }, 100);
-    if (typeof renderSearchResults === 'function') renderSearchResults('');
+    window.renderSearchResults('');
   };
 
   window.closeSearchModal = function () {
@@ -236,6 +276,38 @@
     document.body.style.overflow = '';
     var input = document.getElementById('search-input');
     if (input) input.value = '';
+    var clearBtn = document.getElementById('search-clear-btn');
+    if (clearBtn) clearBtn.classList.add('hidden');
+  };
+
+  window.clearSearchInput = function () {
+    var input = document.getElementById('search-input');
+    if (input) input.value = '';
+    var clearBtn = document.getElementById('search-clear-btn');
+    if (clearBtn) clearBtn.classList.add('hidden');
+    window.renderSearchResults('');
+    if (input) input.focus();
+  };
+
+  window.renderSearchResults = function (query) {
+    var resultsContainer = document.getElementById('search-results');
+    if (!resultsContainer) return;
+    resultsContainer.innerHTML = '';
+    if (!query || typeof SEARCH_INDEX === 'undefined') return;
+    var matches = SEARCH_INDEX.filter(function (item) {
+      return item.title.toLowerCase().indexOf(query) !== -1 || item.path.toLowerCase().indexOf(query) !== -1;
+    });
+    if (matches.length === 0) {
+      resultsContainer.innerHTML = '<div class="text-white/50 text-center py-8">No results found for &quot;' + query + '&quot;</div>';
+      return;
+    }
+    matches.forEach(function (match) {
+      var el = document.createElement('a');
+      el.href = ROOT_PREFIX + match.path;
+      el.className = 'bg-white/5 border border-white/5 hover:border-accent-blue/50 hover:bg-white/10 transition-colors p-4 rounded-xl flex items-center justify-between group';
+      el.innerHTML = '<div class="text-white font-bold text-lg">' + match.title + '</div><i class="fa-solid fa-arrow-right text-white/30 group-hover:text-accent-blue group-hover:-rotate-45 transition-all"></i>';
+      resultsContainer.appendChild(el);
+    });
   };
 
   document.addEventListener('keydown', function (e) {

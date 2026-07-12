@@ -40,5 +40,8 @@ var SEARCH_INDEX = [
   {"title": "Announcements | F9XR Team - News & Updates", "path": "announcements/index.html"},
   {"title": "Top Sites to Drop Your PDF - Free PDF Submission Platforms | F9XR", "path": "directories/pdf-submission-portals.html"},
   {"title": "Business Listing Sites To Skyrocket Your Local SEO & Get More Leads | F9XR", "path": "directories/business-listing-sites.html"},
-  {"title": "100+ Free Backlink Sites to Boost Your SEO | F9XR", "path": "directories/free-backlink-creation-sites.html"}
+  {"title": "100+ Free Backlink Sites to Boost Your SEO | F9XR", "path": "directories/free-backlink-creation-sites.html"},
+  {"title": "Case Studies | F9XR Team - Case Study Hub", "path": "case-studies/index.html"},
+  {"title": "Case Study: SEO Audit Report Skill | F9XR Team", "path": "case-studies/seo-audit-report-skill.html"},
+  {"title": "Sitemap | F9XR Team - Complete Site Directory", "path": "pages/sitemap.html"}
 ];

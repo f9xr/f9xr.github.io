@@ -45,3 +45,4 @@ https://f9xr.github.io/tools/local-seo-score.html
 https://f9xr.github.io/tools/marketing-budget.html
 https://f9xr.github.io/tools/redesign-calculator.html
 https://f9xr.github.io/tools/website-cost.html
+https://f9xr.github.io/seo-audit-report-skill/index.html

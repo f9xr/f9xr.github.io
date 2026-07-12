@@ -588,7 +588,7 @@
             </div>
         </footer>
     <!-- === BACK TO TOP === -->
-    <button id="btt" aria-label="Scroll to top" class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl">
+    <button id="backToTop" aria-label="Scroll to top" class="fixed bottom-8 right-8 w-10 h-10 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl">
         <i class="fas fa-arrow-up text-sm"></i>
     </button>
 
@@ -596,11 +596,11 @@
     <script>
         // Scroll Logic for Back to Top
         window.addEventListener('scroll', () => {
-            const btt = document.getElementById('btt');
+            const btt = document.getElementById('backToTop');
             if (window.scrollY > 400) btt.classList.remove('hidden');
             else btt.classList.add('hidden');
         });
-        document.getElementById('btt').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+        document.getElementById('backToTop').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
         // Reveal Animation using Intersection Observer
         const revealObserver = new IntersectionObserver((entries) => {

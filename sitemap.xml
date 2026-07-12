@@ -76,7 +76,7 @@
   </url>
   <url>
     <loc>https://f9xr.github.io/directories/product-launch-directories.html</loc>
-    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -261,5 +261,12 @@
     <lastmod>2026-06-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://f9xr.github.io/seo-audit-report-skill/index.html</loc>
+    <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
 </urlset>
