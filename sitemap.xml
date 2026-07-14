@@ -264,16 +264,30 @@
   </url>
 
   <url>
-    <loc>https://f9xr.github.io/seo-audit-report-skill/index.html</loc>
-    <lastmod>2026-07-11T00:00:00+00:00</lastmod>
+    <loc>https://f9xr.github.io/announcements/f9xr-launches-seo-codebase-auditor-skill.html</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://f9xr.github.io/case-studies/index.html</loc>
+    <lastmod>2026-07-14T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://f9xr.github.io/announcements/f9xr-launches-seo-codebase-auditor-skill.html</loc>
-    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+    <loc>https://f9xr.github.io/case-studies/seo-audit-report-skill.html</loc>
+    <lastmod>2026-07-14T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://f9xr.github.io/directories/forum-posting-sites.html</loc>
+    <lastmod>2026-07-14T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
 </urlset>
