@@ -1019,4 +1019,30 @@
       <image:title>F9XR Team Apple Touch Icon</image:title>
     </image:image>
   </url>
+
+  <!-- ========== FORUM POSTING SITES ========== -->
+  <url>
+    <loc>https://f9xr.github.io/directories/forum-posting-sites.html</loc>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
+      <image:title>F9XR Forum Posting Sites Directory</image:title>
+      <image:caption>Best forum posting sites for backlinks organized by niche</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:title>F9XR Team Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
+      <image:title>F9XR Team Favicon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/favicon-16x16.png</image:loc>
+      <image:title>F9XR Team Favicon 16x16</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://f9xr.github.io/assets/apple-touch-icon.png</image:loc>
+      <image:title>F9XR Team Apple Touch Icon</image:title>
+    </image:image>
+  </url>
 </urlset>
