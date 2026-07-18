@@ -680,6 +680,52 @@ document.body.appendChild(document.createElement("click-spark"));
 <script src="../assets/js/layout.js"></script>
 
 <script>
+var SHEET_CSV='https://docs.google.com/spreadsheets/d/1hQaYa19LsIVERZa5ubRv7ZVlRLqrF_d3Stih9VllEI0/gviz/tq?tqx=out:csv';
+var dirData=[];
+var filteredDirData=[];
+
+function renderGrid(data){
+  var grid=document.getElementById('directory-grid');
+  var rc=document.getElementById('dir-result-count');
+  if(rc)rc.textContent=data.length+' directories';
+  if(!grid)return;
+  if(data.length===0){grid.innerHTML='<div class="col-span-full text-center py-12 text-platinum/50"><p>No directories match your search.</p></div>';return;}
+  grid.innerHTML=data.map(function(d){
+    return '<a href="'+d.url+'" target="_blank" rel="noopener noreferrer" class="group bg-gunmetal/40 backdrop-blur-xl border border-white/10 rounded-2xl p-5 hover:border-accent-blue/40 hover:bg-white/5 transition-all duration-300 flex items-center gap-4"><div class="w-10 h-10 rounded-xl bg-accent-blue/20 flex items-center justify-center shrink-0 group-hover:bg-accent-blue/30 transition-colors"><i class="fas fa-arrow-up-right-from-square text-accent-blue text-sm"></i></div><div class="min-w-0"><h3 class="text-sm font-bold text-white group-hover:text-accent-blue transition-colors truncate">'+d.name+'</h3><p class="text-xs text-platinum/50 truncate">'+d.url.replace(/^https?:\/\//,'').replace(/\/$/,'')+'</p></div></a>';
+  }).join('');
+}
+
+async function initData(){
+  try{
+    var res=await fetch(SHEET_CSV);
+    var csv=await res.text();
+    var rows=csv.trim().split('\n').slice(1);
+    dirData=rows.map(function(line){
+      var parts=line.replace(/^"(.*)"$/,'$1').split('","');
+      if(parts.length>=2){
+        var name=parts[0].trim();
+        var url=parts[1].trim();
+        if(!/^https?:\/\//.test(url))url='https://'+url;
+        return{name:name,url:url};
+      }
+      return null;
+    }).filter(Boolean);
+  }catch(e){
+    document.getElementById('directory-grid').innerHTML='<div class="col-span-full text-center py-12 text-platinum/50"><p>Failed to load directory data. Please refresh or try again later.</p></div>';
+    return;
+  }
+  filteredDirData=dirData;
+  renderGrid(filteredDirData);
+}
+
+document.getElementById('dir-search').addEventListener('input',function(e){
+  var q=e.target.value.toLowerCase();
+  filteredDirData=q?dirData.filter(function(d){return d.name.toLowerCase().includes(q)||d.url.toLowerCase().includes(q)}):dirData;
+  renderGrid(filteredDirData);
+});
+
+initData();
+
 new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.querySelectorAll('.reveal').forEach(function(el){el.classList.add('active')})}})}.bind(null),{threshold:0.05}).observe(document.getElementById('footer-container'));
 </script>
 </body>
