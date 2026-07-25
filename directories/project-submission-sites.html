@@ -556,200 +556,68 @@ var LAYOUT_ROOT = "../";
 </script>
 <script src="../assets/js/layout.js"></script>
 <script>
-var DIRECTORIES = [
-  {n:"AI Tools",t:"AI Directory",dr:91,u:"https://aitools.neilpatel.com/",s:"https://aitools.neilpatel.com/submit/",img:"https://drive.google.com/uc?export=view&id=1Jluwwg_41KrORCk_ApwPy5Abgj4yeddE"},
-  {n:"DEV Community",t:"Community",dr:90,u:"https://dev.to",s:"https://dev.to",img:"https://drive.google.com/uc?export=view&id=17hn3Sk_ygSYY5zjMajGHoQT0_cua0yEt"},
-  {n:"FinancesOnline.com",t:"Software Directory",dr:87,u:"https://financesonline.com/",s:"https://financesonline.com/add-product/",img:"https://drive.google.com/uc?export=view&id=1VNmE42P9DXhVfDS6Q7OlUPWuvXDe8aER"},
-  {n:"Alternativeto",t:"Software Directory",dr:80,u:"https://alternativeto.net/",s:"https://alternativeto.net/manage-item/",img:"https://drive.google.com/uc?export=view&id=1jiXjty2FO9bebggbt75ypPqt7Wrb2dfX"},
-  {n:"StackShare",t:"Software Directory",dr:80,u:"https://stackshare.io/",s:"https://stackshare.io/submit/",img:"https://drive.google.com/uc?export=view&id=1a1hL8c3yom59pEqCKqc9FkNt6SItNlOJ"},
-  {n:"Brownbook",t:"General Directory",dr:79,u:"https://www.brownbook.net/",s:"https://www.brownbook.net/add-business/",img:"https://drive.google.com/uc?export=view&id=1D9Dac9YQPfKw_CPyPMJB8bw3LOCrM9Hw"},
-  {n:"Webwiki",t:"General Directory",dr:78,u:"https://www.webwiki.com/",s:"https://www.webwiki.com/info/add-website.html",img:"https://drive.google.com/uc?export=view&id=1DpMS6G7MrWOcE0vWxOnTWOmfisRYir9y"},
-  {n:"Active Search Results",t:"Others",dr:78,u:"https://www.activesearchresults.com/",s:"https://www.activesearchresults.com/addwebsite.php/",img:"https://drive.google.com/uc?export=view&id=1TLtR5GxVAdIqPdSa0qEWrWy1-m9PdRsT"},
-  {n:"Webrazzi",t:"Media",dr:76,u:"https://webrazzi.com/en/category/startups/",s:"https://webrazzi.com/en/startup-form/",img:"https://drive.google.com/uc?export=view&id=1sigUfqYa4SuQykKKLiqrb2O6yCovb6VG"},
-  {n:"Callupcontact",t:"General Directory",dr:76,u:"https://www.callupcontact.com/",s:"https://www.callupcontact.com/active/register/register.php",img:"https://drive.google.com/uc?export=view&id=1jVrJypN2RUVitlWL4oQ5jhgsykYAQeUl"},
-  {n:"SaaSHub",t:"Software Directory",dr:74,u:"https://www.saashub.com/",s:"https://www.saashub.com/services/submit/",img:"https://drive.google.com/uc?export=view&id=1l9r2ny7POWnLMTxURmRc9sAGOlux8uPT"},
-  {n:"Alternative.me",t:"Software Directory",dr:73,u:"https://alternative.me/",s:"https://alternative.me/account/",img:"https://drive.google.com/uc?export=view&id=1g_-rhBMeV3vBDqtNL37W2qJcB5TG0foz"},
-  {n:"Viesearch",t:"General Directory",dr:73,u:"https://viesearch.com/",s:"https://viesearch.com/submit",img:"https://drive.google.com/uc?export=view&id=1-zm5LTSK292Sm543t0h5TdDSV_74J2CI"},
-  {n:"ExactSeek.com",t:"General Directory",dr:73,u:"https://www.exactseek.com/",s:"https://www.exactseek.com/add.html",img:"https://drive.google.com/uc?export=view&id=1k8PByu3BAGibbvgMQNNKOHcH6c7RmQGt"},
-  {n:"HotVsNot.Com",t:"General Directory",dr:71,u:"http://hotvsnot.com/",s:"http://hotvsnot.com/addurl/Add-Url.aspx?c=3232",img:"https://drive.google.com/uc?export=view&id=11aYlPVA_dRaJO1Ij11sXIkLSXukobBwf"},
-  {n:"sitelike.org",t:"Software Directory",dr:71,u:"https://www.sitelike.org/",s:"https://www.sitelike.org/new-site",img:"https://drive.google.com/uc?export=view&id=1UAPkHFVMhQbCcRbJBqdVild6QQdMWR2g"},
-  {n:"SideProjectors",t:"Software Directory",dr:71,u:"https://v3.sideprojectors.com/",s:"https://www.sideprojectors.com/",img:"https://drive.google.com/uc?export=view&id=1z090aAV1vAsKM2A1g7Kq8e8FYGq2W8dC"},
-  {n:"AI Tools Directory",t:"AI Directory",dr:67,u:"https://aitools.inc/",s:"https://aitools.inc/submit",img:"https://drive.google.com/uc?export=view&id=12nrJVg-gFbdIUs1Atm2Ri2oYiKqzDVi5"},
-  {n:"PitchWall",t:"Community",dr:65,u:"https://pitchwall.co/",s:"https://pitchwall.co/product/submit",img:"https://drive.google.com/uc?export=view&id=1QTmepwU-oda1B1VUmhOFF3x1wDFLRyvP"},
-  {n:"Future Tools",t:"AI Directory",dr:64,u:"https://www.futuretools.io/",s:"https://www.futuretools.io/submit-a-tool",img:"https://drive.google.com/uc?export=view&id=1ELBzNDIPxTRE9h4RH5R1bqgB3D__MtHD"},
-  {n:"Submission Web Directory",t:"General Directory",dr:64,u:"https://www.submissionwebdirectory.com/",s:"https://www.submissionwebdirectory.com/submit.php",img:"https://drive.google.com/uc?export=view&id=1ZKFADuxOekrAsiI_B4no42a59HzVDpvH"},
-  {n:"Addon Biz",t:"General Directory",dr:64,u:"https://www.addonbiz.com/",s:"https://www.addonbiz.com/add-your-listing/",img:"https://drive.google.com/uc?export=view&id=1Tcpnw2XLC3_weCLeoR_jqh4iMrU1wKu-"},
-  {n:"Sprout24",t:"Startup Directory",dr:64,u:"https://sprout24.com/hub/directory/",s:"https://sprout24.com/submit/",img:"https://drive.google.com/uc?export=view&id=1UNgFtXUc8wJD0S4vs7z0gioOQ87P34EP"},
-  {n:"TinyLaunch",t:"Launchpad",dr:63,u:"https://www.tinylaun.ch/",s:"https://www.tinylaun.ch/dashboard/startups/new",img:"https://drive.google.com/uc?export=view&id=1aFwIUG19UavhEyG1i5HrvTEljpXQR4_p"},
-  {n:"High Rank Directory",t:"General Directory",dr:61,u:"https://highrankdirectory.com/",s:"https://highrankdirectory.com/submit.php",img:"https://drive.google.com/uc?export=view&id=1OU2KES69lM1aD475sqQQSB8EpFvDWmNZ"},
-  {n:"DealMirror",t:"Software Directory",dr:61,u:"https://dealmirror.com/",s:"https://dealmirror.com/product-deal-request/",img:"https://drive.google.com/uc?export=view&id=1HhSwfKQgtPmAqtvjYZ30_PQtgbaodNbz"},
-  {n:"Sites Directory",t:"General Directory",dr:59,u:"https://www.siteswebdirectory.com/",s:"https://www.siteswebdirectory.com/submit.php",img:"https://drive.google.com/uc?export=view&id=18-8ZDi5RgzgSquKoKYQUsOO2q9ekTzTb"},
-  {n:"ToolsFine.com",t:"AI Directory",dr:57,u:"https://toolsfine.com/",s:"https://tally.so/r/wvB7Xg/",img:"https://drive.google.com/uc?export=view&id=1NrzFUKeG-pAQtNArxAK2DRd7uD5lHM6b"},
-  {n:"Weboworld",t:"General Directory",dr:56,u:"https://weboworld.com",s:"https://weboworld.com/user/select-plan",img:"https://drive.google.com/uc?export=view&id=199VrxMCC5bGW0bixrxUldWuLNw043rOX"},
-  {n:"Directory Web Promotion",t:"General Directory",dr:56,u:"https://www.promotebusinessdirectory.com/",s:"https://www.promotebusinessdirectory.com/submit.php",img:"https://drive.google.com/uc?export=view&id=1RZz6zRypY6a0WyzrBNmRGCMkH3IFTqzv"},
-  {n:"Site promotion directory",t:"General Directory",dr:56,u:"https://www.sitepromotiondirectory.com/",s:"https://www.sitepromotiondirectory.com/submit.php",img:"https://drive.google.com/uc?export=view&id=11VaaGb08Ixv8af7ZNEY0KXzQfQhTrZEk"},
-  {n:"Ben's Bites",t:"AI Directory",dr:53,u:"https://news.bensbites.com/",s:"https://news.bensbites.com/submit",img:"https://drive.google.com/uc?export=view&id=1qSXMWQFG8NB9GkQTEUMX2IOmck5wOvQG"},
-  {n:"10015 Tools",t:"Startup Directory",dr:50,u:"https://10015.io/",s:"https://10015.io/product-finder/submit",img:"https://drive.google.com/uc?export=view&id=1IFrh5TSmiA08zOJ7UX1FnHRAUBudi0ck"},
-  {n:"ProductBurst",t:"Launchpad",dr:48,u:"https://productburst.com/",s:"https://productburst.com/pre-launch",img:"https://drive.google.com/uc?export=view&id=1J8la76FS4DgQj1ilDZIy3LwN8GOL72TK"},
-  {n:"BAI.tools",t:"AI Directory",dr:48,u:"https://bai.tools/",s:"https://bai.tools/submit-ai-tools",img:"https://drive.google.com/uc?export=view&id=1ieF-o3sbQevfec9pWpF3xYQEHpdS8ONf"},
-  {n:"Launching Next",t:"Startup Directory",dr:48,u:"https://www.launchingnext.com/",s:"https://www.launchingnext.com/submit/",img:"https://drive.google.com/uc?export=view&id=1Yq8Iz7c5PPiOA6st9HJumWu7bxvvNZ4v"},
-  {n:"Tiny Startups",t:"Startup Directory",dr:47,u:"https://www.tinystartups.com/",s:"https://tally.so/r/npZLWP",img:"https://drive.google.com/uc?export=view&id=1N2zeOA6fJ_BMZ5eZ7HUgMOeN74JxdIif"},
-  {n:"AI Library",t:"AI Directory",dr:46,u:"https://library.phygital.plus/",s:"https://library.phygital.plus/tool-submission/",img:"https://drive.google.com/uc?export=view&id=1M9l24eMpmwP3JcP-efPgEkB8XY5NW1I9"},
-  {n:"A1 BOOKMARKS",t:"General Directory",dr:45,u:"https://www.a1bookmarks.com/",s:"https://www.a1bookmarks.com/submit-story/",img:"https://drive.google.com/uc?export=view&id=1GDsS5kqN9ZGx7NTCN6Wi73MEdaH92uV9"},
-  {n:"Navs Site",t:"AI Directory",dr:45,u:"https://navs.site/",s:"https://navs.site/submit",img:"https://drive.google.com/uc?export=view&id=1xbt4Dlahy4lh8E6oqjhT13JPkq271UbO"},
-  {n:"SoloPush",t:"Software Directory",dr:44,u:"https://www.solopush.com/",s:"https://solopush.com/submit",img:"https://drive.google.com/uc?export=view&id=1S33N1NiJ6EkVlMisv8e9h0RN9Nonozf2"},
-  {n:"AI Agents Directory",t:"AI Directory",dr:43,u:"https://aiagentsdirectory.com/",s:"https://aiagentsdirectory.com/submit-agent",img:"https://drive.google.com/uc?export=view&id=16eINSRD5m0qitie_aOOVV0SssCK8I9zW"},
-  {n:"T5",t:"Startup Directory",dr:43,u:"https://tools.robingood.com/",s:"https://tools.robingood.com/",img:"https://drive.google.com/uc?export=view&id=1FtXIKa59--dpzJ8DPQv5MOFCG-Vj8DBQ"},
-  {n:"AI Startups",t:"AI Directory",dr:43,u:"https://marsx.dev/ai-startups/",s:"https://marsx.dev/ai-startups/",img:"https://drive.google.com/uc?export=view&id=1rtRSHK6zB-npXHTnjclsMjp7WO07RFjT"},
-  {n:"Promote Project",t:"Startup Directory",dr:40,u:"https://www.promoteproject.com/",s:"https://www.promoteproject.com/submit-startup",img:"https://drive.google.com/uc?export=view&id=1x20x6fTMqt__cLx_zaXYFL2md0N8nbrA"},
-  {n:"Scout Forge",t:"Launchpad",dr:40,u:"https://scoutforge.net/",s:"https://scoutforge.net/app-registration/",img:"https://drive.google.com/uc?export=view&id=1FknD4vV93l-P_7UkaUiQjuLBzHRceXhp"},
-  {n:"BestofAI",t:"AI Directory",dr:39,u:"https://bestofai.com/",s:"https://bestofai.com/tool/add",img:"https://drive.google.com/uc?export=view&id=1D04qHqlW8Pxt6SEo_O3v6rrQOwTlQNV_"},
-  {n:"Startup Buffer",t:"Startup Directory",dr:38,u:"https://startupbuffer.com/",s:"https://startupbuffer.com/site/submit/",img:"https://drive.google.com/uc?export=view&id=1lTXGys5I8vktgognUOMp4TjQFXWCKiTb"},
-  {n:"ProjectHunt",t:"Software Directory",dr:38,u:"https://projecthunt.me/",s:"https://projecthunt.me/",img:"https://drive.google.com/uc?export=view&id=10JEwcNgNaRWaRzuC-hx0q-pJntVCmkFB"},
-  {n:"Top 10",t:"Software Directory",dr:38,u:"https://top10.now/",s:"https://top10.now/submit",img:"https://drive.google.com/uc?export=view&id=1sStIQ5im92RlVD1nBuL3pcwTUz1gXNMI"},
-  {n:"The Rundown",t:"AI Directory",dr:38,u:"https://www.rundown.ai/tools",s:"https://www.rundown.ai/submit",img:"https://drive.google.com/uc?export=view&id=1lyBVeTMJXB_C94hgMZF-xR8jc4KBKR1f"},
-  {n:"CTRL ALT",t:"Launchpad",dr:38,u:"https://ctrlalt.cc/",s:"https://ctrlalt.cc/",img:"https://drive.google.com/uc?export=view&id=1528v3n2VgLkHdkU8gB-rz4BsUhav2gGS"},
-  {n:"Resource.fyi",t:"Software Directory",dr:37,u:"https://resource.fyi/",s:"https://resource.fyi/account/submit/",img:"https://drive.google.com/uc?export=view&id=1qEngnTkp-k0iXKOIXCxM6-yp5K1d4bge"},
-  {n:"Open-Launch",t:"Launchpad",dr:37,u:"https://open-launch.com/",s:"https://open-launch.com/projects/submit",img:"https://drive.google.com/uc?export=view&id=1iyVVS3NQss04WP2PCkN4nO_eWsvqj8zb"},
-  {n:"AI Tools Marketer",t:"AI Directory",dr:37,u:"https://aitoolsmarketer.com/",s:"https://aitoolsmarketer.com/submit/",img:"https://drive.google.com/uc?export=view&id=19rpGZNTdoElTEmMYcXpivRf5H20PCjjh"},
-  {n:"SubmitHunt",t:"Startup Directory",dr:36,u:"https://www.submithunt.com/",s:"https://www.submithunt.com/",img:"https://drive.google.com/uc?export=view&id=1vFMSRmFvWwNTgQPQOe-GRcc7kYt_ldox"},
-  {n:"Dirs.cc",t:"Software Directory",dr:36,u:"https://dirs.cc/",s:"https://dirs.cc/submit",img:"https://drive.google.com/uc?export=view&id=1JDapY7Npyj1EmsK-vvHxnb0owrLye9IC"},
-  {n:"Firsto",t:"Launchpad",dr:35,u:"https://firsto.co/",s:"https://firsto.co/projects/submit",img:"https://drive.google.com/uc?export=view&id=1tSGKUONXAjeFWCcuo5zdw4lqRkdv32yt"},
-  {n:"HuntScreens.com",t:"Startup Directory",dr:35,u:"https://huntscreens.com/en",s:"https://huntscreens.com/en",img:"https://drive.google.com/uc?export=view&id=117_vpG4mcC3ltaZB7osFw061lPnJQaTC"},
-  {n:"9SITES.NET",t:"General Directory",dr:35,u:"https://9sites.net",s:"https://9sites.net/addurl.php",img:"https://drive.google.com/uc?export=view&id=14GsROPX9P6P8IW1eyZRMzJZ-ZM8JuuvO"},
-  {n:"Toolfolio",t:"Software Directory",dr:34,u:"https://toolfolio.io/",s:"https://toolfolio.io/",img:"https://drive.google.com/uc?export=view&id=1dW3vh7wiVIp3TliZujGyPDWcgbB1secK"},
-  {n:"Startuplister",t:"Startup Directory",dr:34,u:"https://startuplister.com/",s:"https://startuplister.com/",img:"https://drive.google.com/uc?export=view&id=11WHvzTa-dKvBKK6DoQpmvAflhlqnatkA"},
-  {n:"AIFINDY",t:"AI Directory",dr:34,u:"https://aifindy.com/directorio-en-galera",s:"https://aifindy.com/contacto/publica-tu-ia-en-aifindy",img:"https://drive.google.com/uc?export=view&id=1G8YZFmOtMbCBf63NTLUzexx4KfFn8BuL"},
-  {n:"Spiff.store",t:"AI Directory",dr:33,u:"https://spiff.store/",s:"https://spiff.store/submit-tool/",img:"https://drive.google.com/uc?export=view&id=1nxPbDmc1c7kVEGVafCiqsicPj5e40CjE"},
-  {n:"Directory-Free",t:"General Directory",dr:32,u:"https://directory-free.com/",s:"https://www.directory-free.com/submit/submit.php",img:"https://drive.google.com/uc?export=view&id=1Pvb3oxCJG_D09qvotR29tPUN8jgkQuZs"},
-  {n:"Featured Tool",t:"Software Directory",dr:32,u:"https://featuredtool.com/",s:"https://featuredtool.com/submit",img:"https://drive.google.com/uc?export=view&id=1tKylELD2PXzQBrGvj-RSQR9JebDR499a"},
-  {n:"600.tools",t:"Software Directory",dr:31,u:"https://600.tools/",s:"https://600.tools/submit",img:"https://drive.google.com/uc?export=view&id=1DchrHjhmhVgwz6gvP8xn30tlGcASXxui"},
-  {n:"AI Tool Details",t:"AI Directory",dr:30,u:"https://chatgptdemo.com/",s:"https://chatgptdemo.com/submit-new-ai-tool/",img:"https://drive.google.com/uc?export=view&id=1kyvuNhHGzv_y5puB1vHLThfjVkupta67"},
-  {n:"PromptZone",t:"Community",dr:30,u:"https://www.promptzone.com/",s:"https://www.promptzone.com/",img:"https://drive.google.com/uc?export=view&id=1Vfy7F1OI1uR4YufJM211LLl5erU2Gd4u"},
-  {n:"Make.rs",t:"Community",dr:30,u:"https://make.rs/",s:"https://make.rs/",img:"https://drive.google.com/uc?export=view&id=1r8SUso55L_manecP0q4X8sQ9Up7Paon4"},
-  {n:"OpenFuture",t:"AI Directory",dr:30,u:"https://openfuture.ai/",s:"https://openfuture.ai/submit-tool",img:"https://drive.google.com/uc?export=view&id=1OH80IX69twqAaLYYZMoSxdLWJg9vVJAK"},
-  {n:"AI TOOL GURU",t:"AI Directory",dr:29,u:"https://aitoolguru.com/",s:"https://aitoolguru.com/submit-ai-tool/",img:"https://drive.google.com/uc?export=view&id=16hvGk_QLUw4PGFmscIsbiKtZLfWExHFc"},
-  {n:"AI Navbar",t:"AI Directory",dr:29,u:"https://ainavbar.ai",s:"https://ainavbar.ai/submit",img:"https://drive.google.com/uc?export=view&id=19dDBlVqLcQ9mXmbL3h63ibVKMI0bw8SL"},
-  {n:"Ant Directory",t:"Software Directory",dr:29,u:"https://antdirectory.com/",s:"https://antdirectory.com/submit",img:"https://drive.google.com/uc?export=view&id=12YySQXXXEmwK2aYA_wxk7u89CzMVhUWU"},
-  {n:"Text Link Directory",t:"General Directory",dr:29,u:"https://www.textlinkdirectory.com/",s:"https://www.textlinkdirectory.com/index.php?go=addpage&catid=44",img:"https://drive.google.com/uc?export=view&id=1R-vG3nQI_sJxP6m4bL1EJ_FQdBUXzwHQ"},
-  {n:"AffordHunt",t:"AI Directory",dr:28,u:"https://www.affordhunt.com/",s:"https://www.affordhunt.com/onesubmitai",img:"https://drive.google.com/uc?export=view&id=1dtFPIvZoJdUsYclouGs6iCZnCGUqKfIO"},
-  {n:"OneMillionDirectory",t:"General Directory",dr:28,u:"https://www.onemilliondirectory.com/",s:"https://www.onemilliondirectory.com/submit",img:"https://drive.google.com/uc?export=view&id=1XYxng5RfPCfXCjhJIZqW6whOksvbU2QW"},
-  {n:"ItsLaunched",t:"Community",dr:28,u:"https://itslaunched.com/",s:"https://itslaunched.com/add-product",img:"https://drive.google.com/uc?export=view&id=1HqD4soQbLHCCBwMk5efekYmC5iUDzE4J"},
-  {n:"AI Tools List",t:"AI Directory",dr:27,u:"https://aitoolslist.com",s:"https://aitoolslist.com/submit/",img:"https://drive.google.com/uc?export=view&id=1iuQuG5RgpwlFp-B2K0byI3TZoxt0L-_m"},
-  {n:"ailib.ru",t:"International",dr:27,u:"https://ailib.ru/",s:"https://ailib.ru/en/add-ai/free/",img:"https://drive.google.com/uc?export=view&id=1AgrMNHUoZf_yhX_JNvpzlaqyuF78wp-k"},
-  {n:"Best of Web",t:"Startup Directory",dr:27,u:"https://bestofweb.site/",s:"https://bestofweb.site/dashboard/startups",img:"https://drive.google.com/uc?export=view&id=1i2tCwpVb6vSJPrZyzRXAsh2ooftjjl0Q"},
-  {n:"10words",t:"Startup Directory",dr:27,u:"https://10words.io/",s:"https://portal.10words.io/submissions/submit/",img:"https://drive.google.com/uc?export=view&id=1YWxlxdq4jmSV_Q7a7lCBUInOJ2jMW46r"},
-  {n:"AIxuanfeng",t:"International",dr:27,u:"https://www.aixuanfeng.com/",s:"https://www.aixuanfeng.com/links/",img:"https://drive.google.com/uc?export=view&id=1G1mkHgvY0xvUyG7nJzs5geSwk01QtQ3I"},
-  {n:"NavFolders",t:"Software Directory",dr:26,u:"https://navfolders.com/",s:"https://navfolders.com/submit",img:"https://drive.google.com/uc?export=view&id=1XK4aeGVCQWFL6gON6v1Wcyw-4rlsQHfo"},
-  {n:"SideProjects",t:"Community",dr:26,u:"https://sideprojects.net/",s:"https://sideprojects.net/projects/submit",img:"https://drive.google.com/uc?export=view&id=1fPhPlqE04mDdX4QDbSvRMebOmzIcCY93"},
-  {n:"One Million Screenshots",t:"Others",dr:26,u:"https://onemillionscreenshots.com/",s:"https://onemillionscreenshots.com/add",img:"https://drive.google.com/uc?export=view&id=1xBfI1M5Y-jIIhMGo30spLCh5Tvu9oQi0"},
-  {n:"ai.dreamthere.cn",t:"AI Directory",dr:26,u:"https://ai.dreamthere.cn/",s:"https://ai.dreamthere.cn/site/submit",img:"https://drive.google.com/uc?export=view&id=1GGBIwuFoHduHYtnPSiqD8mP7FdpwFrLi"},
-  {n:"LaunchIgniter",t:"Launchpad",dr:25,u:"https://launchigniter.com/",s:"https://launchigniter.com/submit",img:"https://drive.google.com/uc?export=view&id=1pTaJoeRUHKepn-mIduPnRHypXx38sqAj"},
-  {n:"ANYFP",t:"AI Directory",dr:25,u:"https://anyfp.com/",s:"https://anyfp.com/contact/",img:"https://drive.google.com/uc?export=view&id=1jBBwzo4_L3EZH4ymewtutRJW4ckE3kj7"},
-  {n:"Startups Lab",t:"Software Directory",dr:25,u:"https://startupslab.site/",s:"https://startupslab.site/submit-product",img:"https://drive.google.com/uc?export=view&id=1bawN6EzIIjSDXvXDBhZjfN2Sj8HZtqU3"},
-  {n:"stashli.st",t:"Others",dr:24,u:"https://stashli.st/",s:"https://stashli.st/dashboard",img:"https://drive.google.com/uc?export=view&id=1pbIJA3KPrIbd_iGpd79jlf6zjaqKEXa3"},
-  {n:"Tip Season",t:"AI Directory",dr:23,u:"https://tipseason.com/",s:"https://tipseason.com/ai-tools/submit-free",img:"https://drive.google.com/uc?export=view&id=1ZaZsLfRh94jARYpJbnXfT9ASS6vMFk6Y"},
-  {n:"Kyi AI Directory",t:"AI Directory",dr:23,u:"https://kyi.ai/",s:"https://kyi.ai/submit",img:"https://drive.google.com/uc?export=view&id=1KjS9KSy4LphKdxonA-b4_ruRw_wCUi1s"},
-  {n:"AI Depot",t:"AI Directory",dr:22,u:"https://aidepot.co/",s:"https://tally.so/r/nW0X1v",img:"https://drive.google.com/uc?export=view&id=1AF7d4nBVmNAhSdFCy-lCMe9EG8531JMN"},
-  {n:"Expify",t:"AI Directory",dr:21,u:"https://www.expify.ai/",s:"https://www.expify.ai/dashboard/manage-products",img:"https://drive.google.com/uc?export=view&id=1f78gPPyXKirBvzSGC4FiUalFvkT05xKc"},
-  {n:"Lachief.io",t:"AI Directory",dr:21,u:"https://www.lachief.io/",s:"https://tally.so/r/w4Jb4b",img:"https://drive.google.com/uc?export=view&id=1FjzsVa7KHXS-L_fS9rXQwZQJr5l86jU8"},
-  {n:"NewAIForYou",t:"AI Directory",dr:20,u:"https://newaiforyou.com/",s:"https://newaiforyou.com/submit",img:"https://drive.google.com/uc?export=view&id=1HX-kFAD1KjbOfLbIatKrTEgdwWcSRuHY"},
-  {n:"Startup Fast",t:"Launchpad",dr:19,u:"https://www.startupfa.st/",s:"https://www.startupfa.st/dashboard/startups/new",img:"https://drive.google.com/uc?export=view&id=1xduusZFmJVUyrHiB01YvUc_4mpmNQQeY"},
-  {n:"Awesome Indie",t:"Startup Directory",dr:19,u:"https://awesomeindie.com/",s:"https://awesomeindie.com/submit",img:"https://drive.google.com/uc?export=view&id=10QfkyzbbGLYS_CHBOjL7TZycJnpzYgFS"},
-  {n:"DailyPings",t:"Software Directory",dr:19,u:"https://dailypings.com/",s:"https://dailypings.com/submit",img:"https://drive.google.com/uc?export=view&id=1CjaKEP3hatwg8hy693iKfujxoOEr1jcw"},
-  {n:"Sites Plus",t:"General Directory",dr:18,u:"https://www.sites-plus.com/",s:"https://www.sites-plus.com/submit?c=105&LINK_TYPE=9",img:"https://drive.google.com/uc?export=view&id=1Ge0bFDtQE-yEiFl-k17dHOrAsPlELe-h"},
-  {n:"Launchtory",t:"Software Directory",dr:17,u:"https://launchtory.com/",s:"https://launchtory.com/projects/new",img:"https://drive.google.com/uc?export=view&id=1-K6QtvufWaigoBXJPxAEZlOv7eoKNGbM"},
-  {n:"AItoGrow",t:"AI Directory",dr:17,u:"https://aitogrow.com/",s:"https://aitogrow.com/#send-your-tool",img:"https://drive.google.com/uc?export=view&id=1fM08UGO1OIuzuval0N_Wbf5VTuo3mVmF"},
-  {n:"ToolScout",t:"AI Directory",dr:17,u:"https://toolscout.ai/",s:"https://toolscout.ai/submit",img:"https://drive.google.com/uc?export=view&id=1zBddyspjjHARMNMU55JYWs6K9fRBawXg"},
-  {n:"The Startup Project",t:"Media",dr:17,u:"https://www.startupproject.org/",s:"https://www.startupproject.org/submit-your-startup/",img:"https://drive.google.com/uc?export=view&id=1Tpu3wE9v8zO27dghml1888kFSnDxOD1n"},
-  {n:"AppRater",t:"Startup Directory",dr:16,u:"https://apprater.net/",s:"https://apprater.net/add/",img:"https://drive.google.com/uc?export=view&id=1zMEN5ZNbb2IkrK-A7IBIH0SZHhTy4PkH"},
-  {n:"Hack the Prompt",t:"AI Directory",dr:15,u:"https://hacktheprompt.com/",s:"https://hacktheprompt.com/submit-new-ai-tools/",img:"https://drive.google.com/uc?export=view&id=1e-30sgT_JGjBwt9Cehi9_F7NWylKAloq"},
-  {n:"AI Tools Board",t:"AI Directory",dr:15,u:"https://www.aitoolsboard.com/",s:"https://www.aitoolsboard.com/new-tool/submit/",img:"https://drive.google.com/uc?export=view&id=1kdDvJVhG2dPbUprmYPh8xpS0wbpr4LQi"},
-  {n:"Internet Is Beautiful",t:"Startup Directory",dr:15,u:"https://internetisbeautiful.com/",s:"https://tally.so/r/nGrXLj",img:"https://drive.google.com/uc?export=view&id=1PX0nvazOTu-IfBkbwW4GaMirmAMBqWKs"},
-  {n:"Meta Previews",t:"Others",dr:14,u:"https://metapreviews.com/",s:"https://metapreviews.com/",img:"https://drive.google.com/uc?export=view&id=1Vs1-CXS1V8rl9-qef3u6afBzR3c4Y7Iw"},
-  {n:"HLW.AI",t:"AI Directory",dr:14,u:"https://hlw.ai/",s:"https://hlw.ai/submitwebsite",img:"https://drive.google.com/uc?export=view&id=1WM0zT36ywNefLa8TGI8Z9poavqpwIGSy"},
-  {n:"FastPedia",t:"AI Directory",dr:14,u:"https://fastpedia.io/",s:"https://fastpedia.io/submit-tool/",img:"https://drive.google.com/uc?export=view&id=1eCJJeu3EAx24c7dsCTFlGr5AIIF5nmHZ"},
-  {n:"Tool Battles",t:"Launchpad",dr:14,u:"https://toolbattles.com/",s:"https://toolbattles.com/submit-product/",img:"https://drive.google.com/uc?export=view&id=11cuCKBspG5YhhFPwrMTml8wJI6kpUcZ3"},
-  {n:"Idea Kiln",t:"Software Directory",dr:14,u:"https://ideakiln.com/",s:"https://ideakiln.com/dashboard/submit-idea",img:"https://drive.google.com/uc?export=view&id=1LZl-jPWg8hKyJLfi2zDmCWL7WAtzv3_u"},
-  {n:"Website Hunt",t:"General Directory",dr:14,u:"https://www.websitehunt.co/",s:"https://www.websitehunt.co/websites/submit",img:"https://drive.google.com/uc?export=view&id=1QmuD3GN9D5Q-_l1YtvqlQew7VA2s-8dN"},
-  {n:"Online AI Tools Directory",t:"AI Directory",dr:14,u:"https://www.tools-ai.online/",s:"https://www.tools-ai.online/submit-tool",img:"https://drive.google.com/uc?export=view&id=15z_HEBdxr13T1KhNBjGf_g3Qx8Nujs8d"},
-  {n:"Startup Listing",t:"Software Directory",dr:13,u:"https://startuplist.ing/",s:"https://startuplist.ing/products/new",img:"https://drive.google.com/uc?export=view&id=1rfqomB04MMjhK2KP1KH-0j__WNvb4Zdx"},
-  {n:"Find Your SaaS",t:"Software Directory",dr:13,u:"https://www.findyoursaas.com/",s:"https://www.findyoursaas.com/pricing",img:"https://drive.google.com/uc?export=view&id=1TYHLChUWrtsetFNKrkFiFlMUieeKSSkz"},
-  {n:"Super AI List",t:"AI Directory",dr:12,u:"https://www.superailist.com/",s:"https://www.superailist.com/submit",img:"https://drive.google.com/uc?export=view&id=1npa1sAxyf2zQnUa-d7fa80HeyrrCKbjA"},
-  {n:"Next Big Product",t:"Software Directory",dr:12,u:"https://nextbigproduct.com/",s:"https://nextbigproduct.com/list-fast",img:"https://drive.google.com/uc?export=view&id=17ePQ92dhcK9t7qlIEUsnqQz7bvvpdx4t"},
-  {n:"AiSuperSmart",t:"AI Directory",dr:12,u:"https://www.aisupersmart.com/",s:"https://www.aisupersmart.com/submit-tool/",img:"https://drive.google.com/uc?export=view&id=1Til1pud_cFqTx9LMgOz-RzuP1qD46rAf"},
-  {n:"taalk",t:"Media",dr:12,u:"https://taalk.com/",s:"https://taalk.com/free-submmission/",img:"https://drive.google.com/uc?export=view&id=1_yzlDg9-J_7R4ltWcq4wdLvoAbwZjKRm"},
-  {n:"Canopy Directory",t:"Software Directory",dr:12,u:"https://www.canopydirectory.com/directory",s:"https://www.canopydirectory.com/directory",img:"https://drive.google.com/uc?export=view&id=1lD86qF9c69R2zxym7pVJmXCSrqKA2rpV"},
-  {n:"FuturePedia",t:"AI Directory",dr:11,u:"https://www.future-pedia.com/",s:"https://www.future-pedia.com/submit-tool/",img:"https://drive.google.com/uc?export=view&id=1srSiMT7yrj40F9uhJVVVAFfHixQEvxZX"},
-  {n:"SaaS Radius",t:"Software Directory",dr:11,u:"https://www.saasradius.com/",s:"https://www.saasradius.com/add-listing",img:"https://drive.google.com/uc?export=view&id=1H6qmlRNqLsjqNMK7CtFrwwqUBhAZCERy"},
-  {n:"FindTools.ai",t:"AI Directory",dr:11,u:"https://www.findtools.ai/",s:"https://www.findtools.ai/submit",img:"https://drive.google.com/uc?export=view&id=1lp4IyGPlScFqFKpwmI0TA_al3ywIyOra"},
-  {n:"Toplistly",t:"Software Directory",dr:10,u:"https://toplistly.com",s:"https://toplistly.com/submit",img:"https://drive.google.com/uc?export=view&id=1CtZ-yt09LkNkkmL0iPwvqQdZ4h1IJBPX"},
-  {n:"Go Publicly",t:"Software Directory",dr:10,u:"https://www.go-publicly.com/",s:"https://www.go-publicly.com/create",img:"https://drive.google.com/uc?export=view&id=13TQ0DJwL8TerhkDX4z-nIZNQEz-ORJmv"},
-  {n:"Hackerspad",t:"Startup Directory",dr:10,u:"https://hackerspad.net/",s:"https://hackerspad.net/projects/new",img:"https://drive.google.com/uc?export=view&id=1QyANuJln1QaFB-nVYy8l8s05GX5tJ5bP"},
-  {n:"GrowthBoosters",t:"Software Directory",dr:10,u:"https://www.growthboosters.com/",s:"https://www.growthboosters.com/product/add",img:"https://drive.google.com/uc?export=view&id=1dy5R926xTQJhUQSUngqD36VSrUZVrfSa"},
-  {n:"AI of The Day",t:"AI Directory",dr:10,u:"https://aioftheday.com/",s:"https://tally.so/r/nprK2q",img:"https://drive.google.com/uc?export=view&id=1iy96pgbN3nPeTb9AoynY-33fnDagRyJx"},
-  {n:"AI Bucket",t:"AI Directory",dr:10,u:"https://www.aibucket.io/",s:"https://www.aibucket.io/tool-submission",img:"https://drive.google.com/uc?export=view&id=1G32jfylTkdPWo8o3VeHlbzAcQJhW2EG2"},
-  {n:"Power Up Tools",t:"AI Directory",dr:9,u:"https://poweruptools.com/",s:"https://poweruptools.com/submit",img:"https://drive.google.com/uc?export=view&id=1iLhwoxT68V0zNEcp9bpot8GYlNsSO43_"},
-  {n:"AI Tools Guide",t:"AI Directory",dr:9,u:"https://aitoolsguide.com/",s:"https://aitoolsguide.com/contact/",img:"https://drive.google.com/uc?export=view&id=1WtVLC28Cc4FmA9ZziVoELQKzpSd4uMDg"},
-  {n:"BestFreeTools.io",t:"Startup Directory",dr:9,u:"https://www.bestfreetools.io/",s:"https://www.bestfreetools.io/submit",img:"https://drive.google.com/uc?export=view&id=1vd41sfHBkZJq0JL3zj1Hdrzy6J0mK6cI"},
-  {n:"Follow Monday",t:"Others",dr:9,u:"https://followmonday.com/",s:"https://followmonday.com/",img:"https://drive.google.com/uc?export=view&id=1NF_LqDcr7xk-CCDYoXR5BL_5KdgtK7tz"},
-  {n:"Stackviv",t:"AI Directory",dr:8,u:"https://stackviv.ai/",s:"https://tally.so/r/waE1jE",img:"https://drive.google.com/uc?export=view&id=11lpKtWhq7uwqbjVrEmJAFlOdI-HnIsbX"},
-  {n:"AI Gems",t:"AI Directory",dr:8,u:"https://aigems.net/",s:"https://aigems.net/submit",img:"https://drive.google.com/uc?export=view&id=1U7D52_Ftybk1tj3xDMA-QOyXL42fef-n"},
-  {n:"Human or Not",t:"AI Directory",dr:7,u:"https://www.humanornot.co/",s:"https://www.humanornot.co/submit-tool",img:"https://drive.google.com/uc?export=view&id=1BzV6FhA1v-fhpWDklHHD6ZOmxRR3V1jn"},
-  {n:"AllYourTech",t:"AI Directory",dr:7,u:"https://allyourtech.ai/",s:"https://allyourtech.ai/ai-tools/submit",img:"https://drive.google.com/uc?export=view&id=1R3JAdMBtq0XKVK2BerhOrQb_RelCxAly"},
-  {n:"Rank Anything",t:"General Directory",dr:7,u:"https://www.rankanything.online/",s:"https://www.rankanything.online/create-item",img:"https://drive.google.com/uc?export=view&id=1mEGFO-eCZZ55jNaz_V6SFmqPpDIE1Rv8"},
-  {n:"Noxilo",t:"AI Directory",dr:7,u:"https://noxilo.com/",s:"https://noxilo.com/submit-tool/",img:"https://drive.google.com/uc?export=view&id=1GID79HgyZ23arQQJhBf49usLOZf3luHY"},
-  {n:"BroUseAI",t:"AI Directory",dr:7,u:"https://www.brouseai.com/",s:"https://www.brouseai.com/submission/ai",img:"https://drive.google.com/uc?export=view&id=1lcgzdrK8iH5ktyqtu8FT5yldUq-6Fo17"},
-  {n:"JustGotFound",t:"Launchpad",dr:7,u:"https://justgotfound.com",s:"https://justgotfound.com/submit",img:"https://drive.google.com/uc?export=view&id=1qLVIC2OPvy0ao10xVFsJVpSgoljAUE4T"},
-  {n:"Indie Hacker Projects",t:"Software Directory",dr:7,u:"https://indiehackerprojects.com/",s:"https://indiehackerprojects.com/submit",img:"https://drive.google.com/uc?export=view&id=10bUif_EXYaTdkJQfnvn9FoJzZfuT6p7p"},
-  {n:"NextGenTools",t:"Startup Directory",dr:7,u:"https://nextgentools.me/",s:"https://nextgentools.me/submit-your-tool/",img:"https://drive.google.com/uc?export=view&id=1cdLiZlLBmK0QerFwO-JvsiRHCMOMmFTz"},
-  {n:"Alternate Tools",t:"AI Directory",dr:6,u:"https://www.alternate.tools/",s:"https://tally.so/r/3NoeVp/",img:"https://drive.google.com/uc?export=view&id=12w5pGTKcNVp0ixWR4BWyXTyofOgYYEeM"},
-  {n:"Waildworld",t:"AI Directory",dr:6,u:"https://waildworld.com/",s:"https://waildworld.com/",img:"https://drive.google.com/uc?export=view&id=1v3kgfNpjEUeFA5I7-e_Gcd1XRaR-vph2"},
-  {n:"IndieHustles",t:"Software Directory",dr:6,u:"https://www.indiehustles.com/",s:"https://www.indiehustles.com/",img:"https://drive.google.com/uc?export=view&id=17siH6JJUVRehjaPZVA6RAqnB6I2HntqW"},
-  {n:"Super Launch",t:"Software Directory",dr:5,u:"https://www.superlaun.ch/",s:"https://www.superlaun.ch/dashboard/submit",img:"https://drive.google.com/uc?export=view&id=1DLy2SZ7TZOBjnlzPdO03ATiYP7WFZ45N"},
-  {n:"Future AGI Tools",t:"AI Directory",dr:5,u:"https://www.futureagitools.com/",s:"https://www.futureagitools.com/submit-a-site",img:"https://drive.google.com/uc?export=view&id=1N5Ltscp01z640TYhhzyUvNiWLmkpmlR0"},
-  {n:"aitoolslist.io",t:"AI Directory",dr:5,u:"https://aitoolslist.io",s:"https://aitoolslist.io/submit-ai-tool/",img:"https://drive.google.com/uc?export=view&id=1plMCITwqbk2qLuR8_e9vuH90DvCwsJCl"},
-  {n:"100 AI Apps Directory",t:"AI Directory",dr:5,u:"https://100apps.org/",s:"https://100apps.org/submit",img:"https://drive.google.com/uc?export=view&id=1_e6Rg7AKHfrzvl1tGQ_SIgSHS4ccTXKE"},
-  {n:"AITACH",t:"AI Directory",dr:4.7,u:"https://aitach.com/",s:"https://aitach.com/account/submit-a-tool",img:"https://drive.google.com/uc?export=view&id=1f1_z07giq6PFAcfS0KDoH6EzSxvVpGHI"},
-  {n:"AI Tools Up",t:"AI Directory",dr:4.5,u:"https://aitoolsup.com/",s:"https://aitoolsup.com/submit-tool/",img:"https://drive.google.com/uc?export=view&id=1G6-5LkN-IXgtzjpBVMX4bGG7sRwcB9hR"},
-  {n:"AI Tool Hunter",t:"AI Directory",dr:4.2,u:"https://www.toolhunter.ai/",s:"https://www.toolhunter.ai/submit-a-tool",img:"https://drive.google.com/uc?export=view&id=1xKTb-cxb33mzVrKq4pngnW273xwdspW3"},
-  {n:"AI Generation",t:"AI Directory",dr:3.8,u:"https://www.theaigeneration.com/",s:"https://www.theaigeneration.com/add/",img:"https://drive.google.com/uc?export=view&id=1RgKwlE74WQiZz94JY24FOvswCK_1s5bj"}
-];
-</script>
-<script>
-(function(){
+var SHEET_CSV='https://docs.google.com/spreadsheets/d/1Ij4Q1eYAbqFW8R-FguKLNqqEdzQcF_EE81FRWg63l7M/gviz/tq?tqx=out:csv';
+var dirData=[];
+var filteredDirData=[];
+
+function renderGrid(data){
   var grid=document.getElementById('directory-grid');
-  var search=document.getElementById('dir-search');
-  var countEl=document.getElementById('dir-result-count');
-  function render(q){
-    grid.innerHTML='';
-    var query=(q||'').toLowerCase();
-    var c=0;
-    DIRECTORIES.forEach(function(d){
-      if(query && d.n.toLowerCase().indexOf(query)===-1 && d.t.toLowerCase().indexOf(query)===-1) return;
-      c++;
-      var drClass=d.dr>=50?'bg-green-500/20 text-green-400 border-green-500/30':d.dr>=20?'bg-yellow-500/20 text-yellow-400 border-yellow-500/30':'bg-red-500/20 text-red-400 border-red-500/30';
-      var hasImg=d.img&&d.img.length>10;
-      var card=document.createElement('div');
-      card.className='bg-gunmetal/40 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:border-accent-blue/40 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(59,130,246,0.15)]';
-      card.innerHTML=
-        (hasImg?'<div class="h-32 overflow-hidden bg-white/5"><img src="'+d.img+'" alt="'+d.n+' screenshot" class="w-full h-full object-cover object-top opacity-80" loading="lazy" onerror="this.parentElement.style.display=\'none\'"></div>':'')+
-        '<div class="p-5">'+
-        '<div class="flex items-start justify-between mb-3">'+
-        '<div class="flex-1 min-w-0"><h3 class="font-bold text-sm text-white truncate">'+d.n+'</h3>'+
-        '<p class="text-xs text-platinum/50 mt-1">'+d.t+'</p></div>'+
-        '<span class="ml-2 shrink-0 text-[10px] font-black px-2 py-1 rounded-lg border '+drClass+'">DR '+d.dr+'</span></div>'+
-        '<div class="flex gap-2 mt-4">'+
-        '<a href="'+d.u+'" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2 px-3 bg-white/5 border border-white/10 rounded-xl text-xs font-bold text-white hover:bg-white/10 transition-all"><i class="fa-solid fa-external-link-alt mr-1"></i>Visit</a>'+
-        '<a href="'+d.s+'" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2 px-3 bg-accent-blue/20 border border-accent-blue/30 rounded-xl text-xs font-bold text-accent-blue hover:bg-accent-blue/30 transition-all"><i class="fa-solid fa-paper-plane mr-1"></i>Submit</a>'+
-        '</div></div>';
-      grid.appendChild(card);
-    });
-    if(countEl) countEl.textContent=c+' sites';
+  var rc=document.getElementById('dir-result-count');
+  if(rc)rc.textContent=data.length+' sites';
+  if(!grid)return;
+  if(data.length===0){grid.innerHTML='<div class="col-span-full text-center py-12 text-platinum/50"><p>No sites match your search.</p></div>';return;}
+  grid.innerHTML=data.map(function(d){
+    var drClass=d.dr>=50?'bg-green-500/20 text-green-400 border-green-500/30':d.dr>=20?'bg-yellow-500/20 text-yellow-400 border-yellow-500/30':'bg-red-500/20 text-red-400 border-red-500/30';
+    var hasImg=d.img&&d.img.length>10;
+    return '<div class="bg-gunmetal/40 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:border-accent-blue/40 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(59,130,246,0.15)]">'+
+      (hasImg?'<div class="h-32 overflow-hidden bg-white/5"><img src="'+d.img+'" alt="'+d.name+' screenshot" class="w-full h-full object-cover object-top opacity-80" loading="lazy" onerror="this.parentElement.style.display=\'none\'"></div>':'')+
+      '<div class="p-5">'+
+      '<div class="flex items-start justify-between mb-3">'+
+      '<div class="flex-1 min-w-0"><h3 class="font-bold text-sm text-white truncate">'+d.name+'</h3>'+
+      '<p class="text-xs text-platinum/50 mt-1">'+d.type+'</p></div>'+
+      '<span class="ml-2 shrink-0 text-[10px] font-black px-2 py-1 rounded-lg border '+drClass+'">DR '+d.dr+'</span></div>'+
+      '<div class="flex gap-2 mt-4">'+
+      '<a href="'+d.url+'" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2 px-3 bg-white/5 border border-white/10 rounded-xl text-xs font-bold text-white hover:bg-white/10 transition-all"><i class="fa-solid fa-external-link-alt mr-1"></i>Visit</a>'+
+      '<a href="'+d.submit+'" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2 px-3 bg-accent-blue/20 border border-accent-blue/30 rounded-xl text-xs font-bold text-accent-blue hover:bg-accent-blue/30 transition-all"><i class="fa-solid fa-paper-plane mr-1"></i>Submit</a>'+
+      '</div></div></div>';
+  }).join('');
+}
+
+async function initData(){
+  try{
+    var res=await fetch(SHEET_CSV);
+    var csv=await res.text();
+    var rows=csv.trim().split('\n').slice(1);
+    dirData=rows.map(function(line){
+      var parts=line.replace(/^"(.*)"$/,'$1').split('","');
+      if(parts.length>=6){
+        var name=parts[0].trim();
+        var type=parts[1].trim();
+        var dr=parseFloat(parts[2].trim())||0;
+        var url=parts[3].trim();
+        var submit=parts[4].trim();
+        var img=parts[5].trim();
+        if(!/^https?:\/\//.test(url))url='https://'+url;
+        if(!/^https?:\/\//.test(submit))submit='https://'+submit;
+        return{name:name,type:type,dr:dr,url:url,submit:submit,img:img};
+      }
+      return null;
+    }).filter(Boolean);
+  }catch(e){
+    document.getElementById('directory-grid').innerHTML='<div class="col-span-full text-center py-12 text-platinum/50"><p>Failed to load directory data. Please refresh or try again later.</p></div>';
+    return;
   }
-  render();
-  if(search) search.addEventListener('input',function(){render(this.value);});
-})();
+  filteredDirData=dirData;
+  renderGrid(filteredDirData);
+}
+
+document.getElementById('dir-search').addEventListener('input',function(e){
+  var q=e.target.value.toLowerCase();
+  filteredDirData=q?dirData.filter(function(d){return d.name.toLowerCase().includes(q)||d.type.toLowerCase().includes(q)}):dirData;
+  renderGrid(filteredDirData);
+});
+
+initData();
 </script>
 </body>
 </html>
