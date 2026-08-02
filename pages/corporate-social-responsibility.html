@@ -126,6 +126,10 @@
             background: rgba(52, 58, 64, 0.5);
             transform: translateY(-10px);
         }
+
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-marquee { display: flex; animation: marquee 30s linear infinite; }
+        .animate-marquee:hover { animation-play-state: paused; }
 </style>
 <script type="application/ld+json">
     {
@@ -458,6 +462,25 @@
             </div>
         </section>
 
+        <section class="py-32 reveal">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-10 leading-none">BUILD A BETTER <br> <span class="text-stroke italic">DIGITAL WORLD.</span></h2>
+                <p class="text-xl md:text-2xl text-platinum/60 mb-12 italic leading-relaxed">
+                    Every project, every partnership, every line of code. An opportunity to create positive change. Let's build something that matters.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="https://wa.me/message/X3KGWTAJ6Z6NB1"
+                        class="bg-bright-snow text-carbon-black px-12 py-5 rounded-full font-black text-xl hover:scale-105 transition-all shadow-2xl">
+                        WhatsApp Team
+                    </a>
+                    <a href="mailto:tontufytservices@gmail.com"
+                        class="bg-white/5 border border-white/10 px-12 py-5 rounded-full font-black text-xl hover:bg-white hover:text-carbon-black transition-all">
+                        Email Support
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <section class="py-32 px-6 max-w-4xl mx-auto" id="faq">
             <div class="text-center mb-20 reveal">
                 <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block"><i class="fa-solid fa-question-circle mr-2"></i> KNOWLEDGE BASE</span>
@@ -508,37 +531,6 @@
                     <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
                         <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">We plan to publish an annual CSR impact report that details our initiatives, metrics, financial contributions, and areas for improvement. Our first report will cover our inaugural year of CSR activities and will be available once we have measurable outcomes to report.</div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-12 reveal">
-            <h3 class="text-2xl font-bold text-white mb-6"><i class="fa-solid fa-compass mr-3"></i>Explore More About F9XR</h3>
-            <div class="flex flex-wrap gap-4">
-                <a href="/pages/about.html" class="px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-sm text-platinum hover:bg-accent-blue hover:border-accent-blue transition-colors font-medium">About Us</a>
-                <a href="/pages/services.html" class="px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-sm text-platinum hover:bg-accent-blue hover:border-accent-blue transition-colors font-medium">Our Services</a>
-                <a href="/pages/partners.html" class="px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-sm text-platinum hover:bg-accent-blue hover:border-accent-blue transition-colors font-medium">Partners</a>
-                <a href="/pages/portfolio.html" class="px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-sm text-platinum hover:bg-accent-blue hover:border-accent-blue transition-colors font-medium">Portfolio</a>
-                <a href="/pages/case-studies.html" class="px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-sm text-platinum hover:bg-accent-blue hover:border-accent-blue transition-colors font-medium">Case Studies</a>
-                <a href="/pages/contact.html" class="px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-sm text-platinum hover:bg-accent-blue hover:border-accent-blue transition-colors font-medium">Contact Us</a>
-            </div>
-        </section>
-
-        <section class="py-32 reveal">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-10 leading-none">BUILD A BETTER <br> <span class="text-stroke italic">DIGITAL WORLD.</span></h2>
-                <p class="text-xl md:text-2xl text-platinum/60 mb-12 italic leading-relaxed">
-                    Every project, every partnership, every line of code. An opportunity to create positive change. Let's build something that matters.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-6">
-                    <a href="https://wa.me/message/X3KGWTAJ6Z6NB1"
-                        class="bg-bright-snow text-carbon-black px-12 py-5 rounded-full font-black text-xl hover:scale-105 transition-all shadow-2xl">
-                        WhatsApp Team
-                    </a>
-                    <a href="mailto:tontufytservices@gmail.com"
-                        class="bg-white/5 border border-white/10 px-12 py-5 rounded-full font-black text-xl hover:bg-white hover:text-carbon-black transition-all">
-                        Email Support
-                    </a>
                 </div>
             </div>
         </section>

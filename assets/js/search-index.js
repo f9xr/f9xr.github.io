@@ -48,5 +48,7 @@ var SEARCH_INDEX = [
   {"title": "150+ Project Submission Sites & Directories (2026) | F9XR", "path": "directories/project-submission-sites.html"},
   {"title": "Case Studies | F9XR Team - Case Study Hub", "path": "case-studies/index.html"},
   {"title": "Case Study: SEO Audit Report Skill | F9XR Team", "path": "case-studies/seo-audit-report-skill.html"},
-  {"title": "Sitemap | F9XR Team - Complete Site Directory", "path": "pages/sitemap.html"}
+  {"title": "Case Study: SkyLimit Group AR Dashboard | F9XR Team", "path": "case-studies/skylimit-ar-dashboard.html"},
+  {"title": "Sitemap | F9XR Team - Complete Site Directory", "path": "pages/sitemap.html"},
+  {"title": "Corporate Social Responsibility | F9XR Team", "path": "pages/corporate-social-responsibility.html"}
 ];
