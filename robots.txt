@@ -6,11 +6,17 @@ Allow: /
 Allow: /legals/
 Disallow: /404.html
 Disallow: /error.html
+Disallow: /pages/case-studies.html
 Disallow: /pages/coming-soon.html
+Disallow: /pages/sitemap.html
 Disallow: /pinterest-79c83.html
 Disallow: /*?fbclid
 Disallow: /*?gclid
 Disallow: /*?utm_
+
+Content-Signal: ai-train=yes
+Content-Signal: search=yes
+Content-Signal: ai-input=yes
 
 
 

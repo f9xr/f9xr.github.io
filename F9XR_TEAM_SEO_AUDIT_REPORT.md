@@ -241,7 +241,7 @@
     <strong>Target Architecture:</strong> <a href="https://f9xr.github.io">https://f9xr.github.io</a><br>
     <strong>Codebase Scope:</strong> 44 HTML pages &bull; 3 XML sitemaps &bull; 82+ internal assets<br>
     <strong>Classification:</strong> Public Distribution &mdash; Free to Share<br>
-    <strong>Report Version:</strong> 2.1 &mdash; Post-Remediation Edition + Rich Results Audit
+    <strong>Report Version:</strong> 2.2 &mdash; Post-Remediation Edition + Rich Results Audit + Aug 2026 Reconciliation
   </div>
 </div>
 
@@ -344,7 +344,7 @@
 | **Audit Date** | July 2026 |
 | **Audit Scope** | Full Local Codebase &mdash; HTML, CSS, JS, XML, Configurations |
 | **Pages Analyzed** | 44 HTML files across 8 directories |
-| **Sitemaps Reviewed** | `sitemap.xml` (40 URLs), `sitemap-image.xml` (30+ pages), `sitemap-video.xml` (1 entry) |
+| **Sitemaps Reviewed** | `sitemap.xml` (50 URLs), `sitemap-image.xml` (30+ pages), `sitemap-video.xml` (1 entry) |
 | **Blog Network** | 82 blog posts @ growwithguidance.blogspot.com |
 
 ---
@@ -669,7 +669,7 @@ All three XML sitemaps were cross-referenced against the actual file system inve
 
 | Sitemap | URLs Listed | Files on Disk | Match | Missing |
 |---|---|---|---|---|
-| `sitemap.xml` | 40 | 40 (indexable) | <span class="status-good">100%</span> | None |
+| `sitemap.xml` | 50 | 50 (indexable) | <span class="status-good">100%</span> | None |
 | `sitemap-image.xml` | 30+ pages | 30+ pages with images | <span class="status-good">100%</span> | None (recently updated) |
 | `sitemap-video.xml` | 1 | 1 (about.html video) | <span class="status-good">100%</span> | None |
 
@@ -829,17 +829,17 @@ Then replace the CDN script in all pages:
 | Feature | Status | File(s) | Impact |
 |---|---|---|---|
 | `llms.txt` / `llms-full.txt` | <span class="status-good">DEPLOYED</span> | Root | Enables LLM crawlers (GPT, Claude, Gemini) to discover site content |
-| MCP Server Card | <span class="status-good">DEPLOYED</span> | `.well-known/mcp/server-card.json` | Makes site tools accessible via Model Context Protocol |
+| MCP Server Card | <span class="status-warn">REMOVED</span> | `.well-known/mcp/server-card.json` | Links removed from all 47 pages (empty directory, no server card deployed) |
 | API Catalog | <span class="status-good">DEPLOYED</span> | `.well-known/api-catalog` | Exposes structured API endpoints for AI consumption |
-| Agent Skills Index | <span class="status-good">DEPLOYED</span> | `.well-known/agent-skills/index.json` | Lists capabilities for autonomous AI agents |
-| OpenID Configuration | <span class="status-good">DEPLOYED</span> | `.well-known/openid-configuration` | Enables authenticated AI agent interactions |
-| OAuth Server Config | <span class="status-good">DEPLOYED</span> | `.well-known/oauth-authorization-server` | Standardized auth for AI agents |
+| Agent Skills Index | <span class="status-warn">REMOVED</span> | `.well-known/agent-skills/index.json` | Links removed from 7 directory pages (empty directory, no manifest deployed) |
+| OpenID Configuration | <span class="status-warn">REMOVED</span> | `.well-known/openid-configuration` | Links removed (endpoint not deployed) |
+| OAuth Server Config | <span class="status-warn">REMOVED</span> | `.well-known/oauth-authorization-server` | Links removed (endpoint not deployed) |
 | FAQ Schema (QAPage) | <span class="status-warn">PARTIAL</span> | `pages/services.html` ~915&ndash;970 | FAQ on services page only |
 | `Content-Signal` in robots.txt | <span class="status-good">DEPLOYED</span> | `robots.txt` | Explicit AI training/search permissions |
 | Dublin Core (dublin.rdf) | <span class="status-good">DEPLOYED</span> | Root | Semantic metadata for AI knowledge graphs |
 | Structured Data Breadcrumbs | <span class="status-warn">MISSING</span> | All pages | No breadcrumbList schema found |
 
-**F9XR Advantage:** The F9XR Team site is among the most AI-optimized codebases in our audit portfolio. The combination of `llms.txt`, MCP server cards, agent skill manifests, OAuth configuration, and Content-Signal directives represents cutting-edge AEO implementation. **Only 2 gaps remain**: FAQ schema on service subpages and breadcrumbList structured data.
+**F9XR Advantage:** The F9XR Team site is among the most AI-optimized codebases in our audit portfolio. The combination of `llms.txt`, the API catalog, and Content-Signal directives represents solid AEO implementation. **Remaining gaps**: FAQ schema on service subpages, breadcrumbList structured data, and re-deploying the MCP/agent-skills/OAuth endpoints if those integrations are restored.
 
 #### Remediation: BreadcrumbList Schema
 
@@ -949,7 +949,7 @@ Then replace the CDN script in all pages:
 - <span class="status-good">100%</span> robots.txt with AI-specific Content-Signal directives
 - <span class="status-good">100%</span> schema markup on key pages (LocalBusiness, Service)
 - <span class="status-good">100%</span> skip-to-content accessibility links on every page
-- <span class="status-good">100%</span> footer Organization schema markup on all 42 pages
+- <span class="status-warn">2/44</span> footer Organization schema markup (index.html, 404.html only) &mdash; NOT yet rolled out to all footers
 - <span class="status-good">~93%</span> BreadcrumbList schema deployed on 39/42 indexable pages
 - <span class="status-good">100%</span> pre-built Tailwind CSS replacing CDN (render-blocking eliminated)
 - <span class="status-good">100%</span> heading hierarchy compliance across all pages
@@ -965,7 +965,7 @@ The remediation was executed in structured phases. Below is the actual vs. plann
 | **Phase 2** | Fix heading hierarchy (h2&rarr;h3, no h4 before h1) | <span class="severity-fixed">COMPLETED</span> | 20 min | WCAG compliance, improved crawl understanding |
 | **Phase 3** | Add internal links to orphan pages | <span class="severity-fixed">COMPLETED</span> | 15 min | Improved crawl depth, equity distribution |
 | **Phase 4** | Expand JSON-LD schema to all 12+ services | <span class="severity-fixed">COMPLETED</span> | 10 min | Rich snippet eligibility for all services |
-| **Phase 5** | Add Organization schema to all footers | <span class="severity-fixed">COMPLETED</span> | 10 min | Structured data coverage across all pages |
+| **Phase 5** | Add Organization schema to all footers | <span class="status-warn">PARTIAL</span> | 10 min | Only 2/44 footers carry schema (index.html, 404.html) |
 | **Phase 6** | Add BreadcrumbList schema to all pages | <span class="severity-fixed">COMPLETED</span> | 15 min | Breadcrumb rich results in SERPs |
 | **Phase 7** | Internal link equity improvements | <span class="severity-fixed">COMPLETED</span> | 10 min | +50% links per page |
 | **Phase 8** | Standardize toggleFaq/toggleFAQ naming | <span class="severity-fixed">COMPLETED</span> | 5 min | JS function consistency |
@@ -1011,7 +1011,7 @@ Each vulnerability from the registry (Section 5.1) is tracked below with its cur
 | 5 | <span class="severity-high">HIGH</span> | H1 to H4 heading skip (index.html) | <span class="severity-fixed">FIXED</span> | 1/1 | Added `<h2 class="sr-only">Our Process</h2>` between hero and process section |
 | 6 | <span class="severity-high">HIGH</span> | JSON-LD only lists 3 of 12+ services | <span class="severity-fixed">FIXED</span> | 2/2 | Expanded `itemListElement` to 12 services in `pages/services.html` and `services/index.html` |
 | 7 | <span class="severity-medium">MEDIUM</span> | Portfolio project cards missing H2 section heading | <span class="severity-fixed">FIXED</span> | 1/1 | Added `<h2 class="sr-only">Our Portfolio Projects</h2>` in `pages/portfolio.html` |
-| 8 | <span class="severity-medium">MEDIUM</span> | Footer Organization missing schema.org markup | <span class="severity-fixed">FIXED</span> | 42/42 | Added `itemscope itemtype="https://schema.org/Organization"` to all `<footer>` tags |
+| 8 | <span class="severity-medium">MEDIUM</span> | Footer Organization missing schema.org markup | <span class="status-warn">PENDING</span> | 2/42 | Only `index.html` + `404.html` carry `itemscope itemtype="https://schema.org/Organization"`; rollout to remaining footers still needed |
 | 9 | <span class="severity-medium">MEDIUM</span> | Orphan page (SponsorLanes announcement) | <span class="severity-fixed">FIXED</span> | 3/3 | Added contextual links from `index.html` (Growth ROI section) and `pages/partners.html` |
 | 10 | <span class="severity-medium">MEDIUM</span> | Orphan page (Talent &amp; Brand Management) | <span class="status-warn">PENDING</span> | 0/1 | Link from `pages/services.html` specialized services grid still needed |
 | 11 | <span class="severity-low">LOW</span> | Sitemap `lastmod` hardcoded | <span class="status-warn">PENDING</span> | 0/1 | Requires CI/CD pipeline implementation |
@@ -1023,8 +1023,8 @@ Each vulnerability from the registry (Section 5.1) is tracked below with its cur
 <div style="page-break-inside: avoid; margin-top: 20px;">
 <p><strong>Overall Progress:</strong></p>
 <p>
-  <span class="progress-bar" style="width:200px;"><span class="progress-fill" style="width:87%;"></span></span>
-  <strong>87% Complete</strong> &mdash; 13 of 15 vulnerabilities resolved
+  <span class="progress-bar" style="width:200px;"><span class="progress-fill" style="width:80%;"></span></span>
+  <strong>80% Complete</strong> &mdash; 12 of 15 vulnerabilities resolved
 </p>
 <p style="font-size:9pt;color:#696f7c;">
   Legend: <span class="severity-fixed">FIXED</span> Remediation applied and verified &bull;
@@ -1041,7 +1041,7 @@ The following table compares the original audit scores (pre-remediation) against
 | **Heading Hierarchy Compliance** | <span class="status-bad">FAIL</span> (4 violations) | <span class="status-good">PASS</span> (0 violations) | <span class="badge-improved">FIXED</span> |
 | **Semantic HTML5 Compliance** | <span class="status-warn">PARTIAL</span> (h4 in nav) | <span class="status-good">PASS</span> | <span class="badge-improved">FIXED</span> |
 | **JSON-LD Service Coverage** | 3 of 12 services (25%) | 12 of 12 services (100%) | <span class="badge-improved">+75%</span> |
-| **Footer Schema Markup** | <span class="status-bad">MISSING</span> (0 pages) | <span class="status-good">DEPLOYED</span> (42 pages) | <span class="badge-improved">42x</span> |
+| **Footer Schema Markup** | <span class="status-bad">MISSING</span> (0 pages) | <span class="status-warn">PARTIAL</span> (2 pages) | <span class="badge-improved">2x</span> |
 | **BreadcrumbList Schema** | <span class="status-bad">MISSING</span> (0 pages) | <span class="status-good">DEPLOYED</span> (39 pages) | <span class="badge-improved">NEW</span> |
 | **Internal Inbound Links to Orphans** | 0 links (3 orphan pages) | 3+ links per orphan | <span class="badge-improved">FIXED</span> |
 | **aria-hidden Accessibility Violations** | 2 violations | 0 violations | <span class="badge-improved">FIXED</span> |
@@ -1049,7 +1049,7 @@ The following table compares the original audit scores (pre-remediation) against
 | **toggleFaq Naming Consistency** | Mixed (`toggleFaq`/`toggleFAQ`) | Standardized (`toggleFAQ`) | <span class="badge-improved">FIXED</span> |
 | **Internal Link Equity Distribution** | ~8&ndash;12 links/page | ~12&ndash;18 links/page | <span class="badge-improved">+50%</span> |
 | **Review Snippet `itemReviewed` Field** | <span class="status-bad">MISSING</span> (6 reviews blocked) | <span class="status-good">DEPLOYED</span> (dedicated script) | <span class="badge-improved">FIXED</span> |
-| **Total Vulnerabilities Resolved** | 12 of 14 (85%) | 13 of 15 (87%) | <span class="badge-improved">+1 remediated</span> |
+| **Total Vulnerabilities Resolved** | 12 of 14 (85%) | 12 of 15 (80%) | <span class="badge-unchanged">Corrected</span> |
 
 ### 7.3 Updated Core Web Vitals Scorecard
 
@@ -1082,7 +1082,7 @@ Based on actual remediation results rather than projections:
 | Schema Coverage | 2 pages | 44 pages | <span class="badge-improved">22x increase</span> |
 | Breadcrumb Schema | 0 pages | 39 pages | <span class="badge-improved">NEW</span> |
 | Internal Links per Page | ~8&ndash;12 | ~12&ndash;18 | <span class="badge-improved">50% increase</span> |
-| Footer Organization Schema | 0 pages | 42 pages | <span class="badge-improved">NEW</span> |
+| Footer Organization Schema | 0 pages | 2 pages | <span class="badge-improved">PARTIAL</span> |
 | Accessibility Violations | 2 pages | 0 pages | <span class="badge-improved">RESOLVED</span> |
 | Review Snippet Eligibility | <span class="status-bad">BLOCKED</span> (Search Console error) | <span class="status-good">FIXED</span> (dedicated script) | <span class="badge-improved">RESTORED</span> |
 
@@ -1096,17 +1096,17 @@ Based on actual remediation results rather than projections:
 </div>
 
 <div class="card-score" style="background:linear-gradient(135deg,#0d6efd,#6610f2);">
-  <div class="card-score-value" style="color:#fff;">42/42</div>
+  <div class="card-score-value" style="color:#fff;">2/44</div>
   <div class="card-score-label" style="color:rgba(255,255,255,0.8);">Footers with Schema</div>
 </div>
 
 <div class="card-score" style="background:linear-gradient(135deg,#582b8c,#7c3aed);">
-  <div class="card-score-value" style="color:#fff;">87%</div>
+  <div class="card-score-value" style="color:#fff;">80%</div>
   <div class="card-score-label" style="color:rgba(255,255,255,0.8);">Remediation Complete</div>
 </div>
 
 <div class="card-score" style="background:linear-gradient(135deg,#198754,#20c997);">
-  <div class="card-score-value" style="color:#fff;">13/15</div>
+  <div class="card-score-value" style="color:#fff;">12/15</div>
   <div class="card-score-label" style="color:rgba(255,255,255,0.8);">Vulnerabilities Fixed</div>
 </div>
 
@@ -1118,7 +1118,7 @@ Based on actual remediation results rather than projections:
 </div>
 
 <div class="callout-success">
-  <strong>Conclusion:</strong> The F9XR Team codebase has been comprehensively remediated. Of the <strong>15 identified vulnerabilities</strong>, <strong>13 have been resolved</strong> across all 44 HTML pages. The remaining 2 items (CI/CD pipeline automation and Talent &amp; Brand Management internal link) represent ongoing maintenance tasks rather than critical blockers. The site now features <strong>11 distinct schema types</strong>, fully compliant Core Web Vitals architecture, comprehensive E-E-A-T signals, and cutting-edge AI visibility (AEO) deployment. All Search Console errors resolved.
+  <strong>Conclusion:</strong> The F9XR Team codebase has been substantially remediated. Of the <strong>15 identified vulnerabilities</strong>, <strong>12 have been resolved</strong> across all HTML pages. The remaining 3 items (footer Organization schema rollout to all pages, CI/CD pipeline automation, and Talent &amp; Brand Management internal link) represent ongoing maintenance tasks rather than critical blockers. The site now features <strong>11 distinct schema types</strong>, fully compliant Core Web Vitals architecture, comprehensive E-E-A-T signals, and solid AI visibility (AEO) deployment. All Search Console errors resolved.
 </div>
 
 ---
@@ -1339,6 +1339,28 @@ Based on the gap analysis and comprehensive audit, the following strategic initi
 
 ---
 
+<a id="section12"></a>
+## SECTION 12: AUGUST 2026 RECONCILIATION &amp; POST-AUDIT CHANGES
+
+This section documents the corrective actions applied on 2026-08-08/09 after a fresh code-level re-verification of the claims in Sections 1&ndash;7. Where the live codebase no longer matched the report, the report has been corrected or the codebase fixed.
+
+| # | Item | Before (Claimed) | Actual / After | Action |
+|---|---|---|---|---|
+| 1 | `sitemap.xml` URL count | 40 | 50 (dead + noindex URLs removed; `case-studies/skylimit-ar-dashboard.html` and `pages/corporate-social-responsibility.html` added; `lastmod` refreshed) | <span class="severity-fixed">FIXED</span> |
+| 2 | Heading skip h2&rarr;h5 in `pages/services.html` + `services/index.html` | Claimed fixed | Was still present (4&times; each) | <span class="severity-fixed">FIXED</span> &mdash; h5&rarr;h3 applied |
+| 3 | `index.html` card heading skip | Not tracked | `h4` "Plus 40+ More." under `h2` "Our Featured." | <span class="severity-fixed">FIXED</span> &mdash; h4&rarr;h3 |
+| 4 | `canonical` / `og:url` on homepage | `https://f9xr.github.io/index.html` | Mismatch with sitemap root `/` | <span class="severity-fixed">FIXED</span> &mdash; now `https://f9xr.github.io/` |
+| 5 | Dead `.well-known` links (MCP, agent-skills, OpenID, OAuth) | Claimed DEPLOYED | Endpoints never existed; empty `mcp/` + `agent-skills/` dirs | <span class="severity-fixed">REMOVED</span> &mdash; 75 dead `<link>` tags stripped from 47 pages; `api-catalog` + `llms.txt` kept |
+| 6 | Footer Organization schema | Claimed 42/42 | Only `index.html` + `404.html` (2 pages) | <span class="status-warn">REPORT CORRECTED</span> &mdash; rollout to all footers pending |
+| 7 | NAP phone consistency | 3 numbers in use | `+91 91234-42431` chosen as primary | <span class="severity-fixed">FIXED</span> &mdash; 13 files updated (wa.me, `tel:`, JSON-LD) |
+| 8 | `robots.txt` | No Content-Signal lines despite report claim | Report cited them | <span class="severity-fixed">FIXED</span> &mdash; 3 Content-Signal lines added + Disallow for `pages/case-studies.html` / `pages/sitemap.html` |
+| 9 | Empty `products/index.html` (0 bytes) | Present | Broken empty artifact | <span class="severity-fixed">DELETED</span> |
+| 10 | Legal pages robots meta | `noindex, nofollow` | Decision: index legals | <span class="severity-fixed">FIXED</span> &mdash; now `index, follow` (6 files) |
+
+**Remaining open items after reconciliation:** footer Organization schema rollout to all pages, CI/CD `lastmod` automation, internal link to `services/talent-brand-management.html`, and (optional) re-deploying MCP/agent-skills/OAuth endpoints if those integrations are desired.
+
+---
+
 <hr class="f9xr-section-divider">
 
 <p align="center">
@@ -1354,7 +1376,7 @@ Based on the gap analysis and comprehensive audit, the following strategic initi
   </p>
   <div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;">
     <a href="https://f9xr.github.io" style="display:inline-block;background:#582b8c;color:#ffffff;padding:12px 30px;border-radius:6px;font-weight:700;font-size:11pt;">Visit Our Website</a>
-    <a href="https://web.whatsapp.com/send?phone=919032065784" style="display:inline-block;background:#25D366;color:#ffffff;padding:12px 30px;border-radius:6px;font-weight:700;font-size:11pt;">Chat on WhatsApp</a>
+    <a href="https://web.whatsapp.com/send?phone=919123442431" style="display:inline-block;background:#25D366;color:#ffffff;padding:12px 30px;border-radius:6px;font-weight:700;font-size:11pt;">Chat on WhatsApp</a>
   </div>
   <p style="color:#9ba1b0;font-size:9pt;margin-top:30px;">
     F9XR Team &bull; Architects of Digital Precision<br>
@@ -1369,4 +1391,5 @@ Based on the gap analysis and comprehensive audit, the following strategic initi
 </p>
 
 *Report generated by F9XR Team &mdash; Growth Engine Lab*  
-*Codebase commit: July 2026 &bull; 44 HTML pages analyzed &bull; 3 XML sitemaps verified &bull; 82+ internal assets inventoried &bull; 11 schema types cataloged &bull; 15 vulnerabilities tracked*
+*Codebase commit: July 2026 &bull; 44 HTML pages analyzed &bull; 3 XML sitemaps verified &bull; 82+ internal assets inventoried &bull; 11 schema types cataloged &bull; 15 vulnerabilities tracked*  
+*Aug 2026 reconciliation: 50-URL sitemap, .well-known dead links removed, heading fixes verified, NAP standardized to +91 91234-42431, homepage canonical normalized*

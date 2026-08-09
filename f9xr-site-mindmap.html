@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>F9XR Team &mdash; Site Architecture & Gap Analysis Mind Map</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#fff;touch-action:none;user-select:none;-webkit-user-select:none}
+#bg{position:fixed;inset:0;z-index:0;background-image:radial-gradient(#d1d5db 1px,transparent 1px);background-size:28px 28px}
+#vp{position:fixed;inset:0;z-index:1;overflow:hidden}
+#world{position:absolute;left:0;top:0;transform-origin:0 0}
+#svg{position:absolute;left:0;top:0;width:1px;height:1px;overflow:visible;z-index:1}
+
+.nd{position:absolute;z-index:5;cursor:pointer;transition:filter .15s,transform .15s}
+.nd:hover{z-index:50;filter:brightness(1.02);transform:scale(1.04)}
+
+.nd-root{width:140px;height:70px;border-radius:20px;background:linear-gradient(135deg,#1e293b,#334155);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(30,41,59,.25),0 0 0 3px #e2e8f0;z-index:20}
+.nd-root h2{font-size:17px;font-weight:800;color:#fff;letter-spacing:-.5px}
+.nd-root span{font-size:9px;color:#94a3b8;letter-spacing:1.5px;margin-top:2px}
+
+.nd-silo{height:50px;min-width:105px;border-radius:25px;padding:0 20px;display:flex;align-items:center;gap:8px;z-index:15;box-shadow:0 4px 20px rgba(0,0,0,.12)}
+.nd-silo b{font-size:15px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.2)}
+.nd-silo em{font-style:normal;font-size:10px;color:rgba(255,255,255,.75);background:rgba(0,0,0,.15);border-radius:10px;padding:2px 8px;font-weight:700}
+
+.nd-pillar{min-width:150px;padding:10px 16px;background:#fff;border-radius:12px;text-align:center;z-index:12;box-shadow:0 3px 16px rgba(0,0,0,.08)}
+.nd-pillar .tag{font-size:8px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.nd-pillar .nm{font-size:12px;font-weight:700;color:#1e293b;margin-top:3px;line-height:1.3}
+
+.nd-hub{min-width:115px;padding:10px 14px;background:#fff;border-radius:12px;text-align:center;z-index:10;box-shadow:0 3px 14px rgba(0,0,0,.07)}
+.nd-hub .nm{font-size:13px;font-weight:700}
+.nd-hub .ct{font-size:10px;color:#64748b;margin-top:2px}
+.nd-hub .lk{display:inline-block;font-size:8px;font-weight:700;padding:3px 8px;border-radius:5px;margin-top:4px}
+.nd-hub .gaps-badge{display:inline-block;font-size:8px;font-weight:700;padding:2px 7px;border-radius:5px;margin-top:3px;background:#dcfce7;color:#15803d;margin-left:3px}
+
+/* Existing post node */
+.nd-post{max-width:155px;padding:8px 11px;background:#fff;border-radius:10px;z-index:6;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.nd-post .row{display:flex;align-items:flex-start;gap:5px}
+.nd-post .dot{width:7px;height:7px;border-radius:50%;margin-top:3px;flex-shrink:0}
+.nd-post .nm{font-size:11px;font-weight:500;color:#1e293b;line-height:1.35}
+.nd-post .go{font-size:8px;font-weight:700;margin-top:3px;display:block}
+.nd-post .wrn{font-size:8px;color:#92400e;margin-top:3px;background:#fef3c7;padding:2px 6px;border-radius:4px;display:inline-block}
+/* Link pills on posts */
+.nd-post .link-pills{display:flex;flex-wrap:wrap;gap:2px;margin-top:4px}
+.nd-post .lp{font-size:7px;font-weight:700;padding:1px 5px;border-radius:3px;background:#eff6ff;color:#2563eb;white-space:nowrap}
+
+/* GAP node &mdash; suggested new content */
+.nd-gap{max-width:155px;padding:8px 11px;border-radius:10px;z-index:6;background:#f0fdf4;border:2px dashed #22c55e80;box-shadow:0 2px 10px rgba(34,197,94,.1)}
+.nd-gap .row{display:flex;align-items:flex-start;gap:5px}
+.nd-gap .plus{width:16px;height:16px;border-radius:50%;background:#22c55e;color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;line-height:1}
+.nd-gap .nm{font-size:11px;font-weight:600;color:#15803d;line-height:1.35}
+.nd-gap .kw{font-size:8px;color:#4ade80;font-family:monospace;margin-top:3px;display:block}
+.nd-gap .pri{font-size:7px;font-weight:800;padding:2px 6px;border-radius:4px;margin-top:3px;display:inline-block;text-transform:uppercase;letter-spacing:.5px}
+.nd-gap .pri-high{background:#fef2f2;color:#dc2626}
+.nd-gap .pri-med{background:#fffbeb;color:#d97706}
+.nd-gap .pri-low{background:#f0fdf4;color:#16a34a}
+
+#bar{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid #e5e7eb;padding:10px 14px}
+#bar h1{font-size:14px;font-weight:800;color:#0f172a;letter-spacing:-.3px}
+#bar p{font-size:10px;color:#64748b;line-height:1.5;margin-top:2px}
+#bar .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:5px;align-items:center}
+#bar .legend .it{display:flex;align-items:center;gap:3px;font-size:9px;color:#64748b}
+
+.ctrl{position:fixed;z-index:200;display:flex;gap:5px}
+.ctrl button{width:44px;height:44px;border-radius:12px;border:1.5px solid #e2e8f0;background:#fff;font-size:20px;font-weight:600;color:#334155;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.ctrl button:active{background:#f1f5f9}
+#zCtrl{bottom:20px;right:14px;flex-direction:column}
+#zLbl{position:fixed;bottom:26px;left:14px;z-index:200;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:5px 12px;font-size:11px;color:#64748b;font-weight:700;box-shadow:0 1px 6px rgba(0,0,0,.05)}
+
+/* Toggle for gaps */
+#gapToggle{position:fixed;top:auto;bottom:76px;right:14px;z-index:200;background:#22c55e;color:#fff;border:none;border-radius:12px;padding:8px 12px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 3px 12px rgba(34,197,94,.3);display:flex;align-items:center;gap:5px}
+#gapToggle.off{background:#94a3b8}
+</style>
+</head>
+<body>
+<div id="bg"></div>
+
+<div id="bar">
+  <h1>f9xr.github.io &mdash; Site Architecture + Gap Analysis</h1>
+  <p>Tap <b>silo</b> &rarr; branches &middot; Tap <b>hub</b> &rarr; posts + suggested gaps &middot; Tap <b>post</b> &rarr; open page</p>
+  <div class="legend">
+    <div class="it"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#7c3aed"></span> Existing</div>
+    <div class="it"><span style="display:inline-block;width:10px;height:10px;border-radius:5px;border:2px dashed #22c55e;background:#f0fdf4"></span> <b style="color:#15803d">NEW Gap</b></div>
+    <div class="it"><span style="display:inline-block;width:14px;height:9px;border-radius:3px;background:#eff6ff;font-size:6px;color:#2563eb;text-align:center;line-height:9px;font-weight:700">&rarr;</span> Link targets</div>
+    <div class="it"><span style="color:#f59e0b;font-weight:700">⚠</span> URL issue</div>
+  </div>
+</div>
+
+<div id="vp"><div id="world"><svg id="svg"></svg></div></div>
+
+<div class="ctrl" id="zCtrl">
+  <button onclick="Z(1)">+</button>
+  <button onclick="Z(-1)">−</button>
+  <button onclick="RESET()">↺</button>
+</div>
+<div id="zLbl">42%</div>
+<button id="gapToggle" onclick="toggleGaps()">✦ Gaps ON</button>
+
+<script>
+const B="https://f9xr.github.io";
+let showGaps=true;
+
+const SL=[
+{id:"about",n:"About",c:"#0284c7",p:{t:"About F9XR Team",u:"/pages/about.html"},b:[
+{h:"Team & Values",lk:"\u2192 About + Home",ps:[
+{t:"Expert Bio",u:"/pages/expert-bio.html",ln:["About Pillar","Contact"]},
+{t:"Corporate Social Responsibility",u:"/pages/corporate-social-responsibility.html",ln:["About Pillar","Legals"],w:"Added to sitemap 08-2026"},
+],gaps:[
+{t:"Meet the Team Page",kw:"f9xr team members",pri:"high"},
+{t:"Our Process / Methodology Page",kw:"f9xr working process",pri:"med"},
+{t:"Careers / Join F9XR",kw:"f9xr careers",pri:"low"},
+]},
+{h:"Engage",lk:"\u2192 About + Home",ps:[
+{t:"Contact",u:"/pages/contact.html",ln:["About Pillar","Services Pillar"]},
+{t:"Partners",u:"/pages/partners.html",ln:["About Pillar","Announcements"]},
+],gaps:[
+{t:"Client Testimonials Page",kw:"f9xr client reviews",pri:"high"},
+{t:"Request a Free Audit",kw:"free website audit request",pri:"high"},
+]},
+]},
+
+{id:"services",n:"Services",c:"#7c3aed",p:{t:"Digital Services",u:"/pages/services.html"},b:[
+{h:"Overview",lk:"\u2192 Services Pillar",ps:[
+{t:"Services Index",u:"/services/index.html",ln:["Services Pillar"]},
+],gaps:[
+{t:"Service Pricing Guide",kw:"f9xr service pricing",pri:"med"},
+]},
+{h:"Web & Local SEO",lk:"\u2192 Services Pillar + Tools",ps:[
+{t:"Website Rentals",u:"/services/website-rentals.html",ln:["Services Pillar","Website Cost Tool"]},
+{t:"Google Business Optimization",u:"/services/google-business-optimization.html",ln:["Services Pillar","GBP Checker"]},
+{t:"AI Visibility Optimization",u:"/services/ai-visibility-optimization.html",ln:["Services Pillar","SEO Auditor Case Study"]},
+{t:"Data Management",u:"/services/data-management.html",ln:["Services Pillar"]},
+],gaps:[
+{t:"Local SEO Case Study",kw:"local seo results f9xr",pri:"high"},
+{t:"E-commerce Development Service",kw:"ecommerce website design",pri:"med"},
+]},
+{h:"Growth & Brand",lk:"\u2192 Services Pillar",ps:[
+{t:"Social Media Posting",u:"/services/social-media-posting.html",ln:["Services Pillar","Hashtag Tool"]},
+{t:"Talent & Brand Management",u:"/services/talent-brand-management.html",ln:["Services Pillar"],w:"Orphan \u2014 only sitemap link"},
+{t:"Indian Professionals",u:"/services/indian-professionals.html",ln:["Services Pillar","Freelancer Quote"]},
+{t:"We Do For You",u:"/services/we-do-for-you.html",ln:["Services Pillar","Directories Silo"]},
+],gaps:[
+{t:"Content Marketing Service",kw:"content writing service",pri:"med"},
+{t:"Reputation Management Service",kw:"online reputation management",pri:"med"},
+]},
+{h:"Automation",lk:"\u2192 Services Pillar",ps:[
+{t:"Discord Bot Development",u:"/services/discord-bot-development.html",ln:["Services Pillar"]},
+{t:"Telegram Bot Development",u:"/services/telegram-bot-development.html",ln:["Services Pillar"]},
+],gaps:[
+{t:"AI Chatbot Service",kw:"ai chatbot for business",pri:"high"},
+{t:"WhatsApp Bot Service",kw:"whatsapp bot for business",pri:"med"},
+]},
+]},
+
+{id:"showcase",n:"Showcase",c:"#16a34a",p:{t:"Portfolio",u:"/pages/portfolio.html"},b:[
+{h:"Projects",lk:"\u2192 Showcase + About",ps:[
+{t:"Projects Gallery",u:"/pages/projects.html",ln:["Showcase Pillar","Contact"]},
+],gaps:[
+{t:"Client Success Metrics Page",kw:"f9xr portfolio results",pri:"med"},
+]},
+]},
+
+{id:"cases",n:"Case Studies",c:"#ea580c",p:{t:"Case Studies Index",u:"/case-studies/index.html"},b:[
+{h:"SEO & Audits",lk:"\u2192 Case Studies + Services",ps:[
+{t:"SEO Codebase Auditor Skill",u:"/case-studies/seo-audit-report-skill.html",ln:["Case Studies Pillar","Skill Listing Directory","AI Visibility Service"]},
+],gaps:[
+{t:"Local Business SEO Case Study",kw:"local seo case study",pri:"high"},
+]},
+{h:"Dashboards",lk:"\u2192 Case Studies + Projects",ps:[
+{t:"SkyLimit AR Dashboard",u:"/case-studies/skylimit-ar-dashboard.html",ln:["Case Studies Pillar","Projects"]},
+],gaps:[
+{t:"E-commerce Case Study",kw:"ecommerce project case study",pri:"med"},
+]},
+]},
+
+{id:"tools",n:"Tools",c:"#dc2626",p:{t:"Tools Index",u:"/tools/index.html"},b:[
+{h:"Estimators & Quotes",lk:"\u2192 Tools + Services",ps:[
+{t:"Website Cost",u:"/tools/website-cost.html",ln:["Website Rentals Service"]},
+{t:"Redesign Calculator",u:"/tools/redesign-calculator.html",ln:["Services Pillar"]},
+{t:"Marketing Budget",u:"/tools/marketing-budget.html",ln:["Services Pillar"]},
+{t:"Freelancer Quote",u:"/tools/freelancer-quote.html",ln:["Contact","Indian Professionals"]},
+],gaps:[
+{t:"SEO Cost Calculator",kw:"seo pricing calculator",pri:"high"},
+]},
+{h:"SEO Checkers",lk:"\u2192 Tools + Local SEO",ps:[
+{t:"Local SEO Score",u:"/tools/local-seo-score.html",ln:["GBP Optimization Service"]},
+{t:"GBP Checker",u:"/tools/gbp-checker.html",ln:["GBP Optimization Service"]},
+{t:"Digital Presence",u:"/tools/digital-presence.html",ln:["Services Pillar"]},
+],gaps:[
+{t:"Website Speed Test Tool",kw:"free website speed test",pri:"med"},
+{t:"Backlink Checker Tool",kw:"free backlink checker",pri:"med"},
+]},
+{h:"Content",lk:"\u2192 Tools + Social Media",ps:[
+{t:"Hashtag Generator",u:"/tools/hashtag-generator.html",ln:["Social Media Posting Service"]},
+],gaps:[
+{t:"Keyword Research Tool",kw:"free keyword tool",pri:"med"},
+]},
+]},
+
+{id:"dirs",n:"Directories",c:"#0d9488",p:{t:"Directories Index",u:"/directories/index.html"},b:[
+{h:"Backlinks",lk:"\u2192 Directories + We Do For You",ps:[
+{t:"Free Backlink Creation Sites",u:"/directories/free-backlink-creation-sites.html",ln:["We Do For You Service"]},
+{t:"Forum Posting Sites",u:"/directories/forum-posting-sites.html",ln:["We Do For You Service"]},
+{t:"Web 2.0 Submission Sites",u:"/directories/web2-submission-sites.html",ln:["We Do For You Service"]},
+],gaps:[
+{t:"Guest Posting Sites",kw:"guest posting sites list",pri:"high"},
+]},
+{h:"Listings & Portals",lk:"\u2192 Directories + Local SEO",ps:[
+{t:"Business Listing Sites",u:"/directories/business-listing-sites.html",ln:["GBP Optimization Service"]},
+{t:"PDF Submission Portals",u:"/directories/pdf-submission-portals.html",ln:["We Do For You Service"]},
+{t:"Product Launch Directories",u:"/directories/product-launch-directories.html",ln:["We Do For You Service"]},
+{t:"Project Submission Sites",u:"/directories/project-submission-sites.html",ln:["We Do For You Service"]},
+],gaps:[
+{t:"Niche Directory List",kw:"niche directories list",pri:"low"},
+]},
+{h:"Skills",lk:"\u2192 Directories + AI Services",ps:[
+{t:"Skill Listing Directory",u:"/directories/skill-listing-directory.html",ln:["SEO Auditor Case Study"]},
+],gaps:[
+{t:"AI Tool Directories List",kw:"ai tool submission sites",pri:"med"},
+]},
+]},
+
+{id:"news",n:"Announcements",c:"#db2777",p:{t:"Announcements Index",u:"/announcements/index.html"},b:[
+{h:"News",lk:"\u2192 Announcements + Partners",ps:[
+{t:"SponsorLanes Partnership",u:"/announcements/f9xr-sponsorlanes-partnership.html",ln:["Partners"],w:"Low inbound links"},
+{t:"SEO Codebase Auditor Skill Launch",u:"/announcements/f9xr-launches-seo-codebase-auditor-skill.html",ln:["SEO Auditor Case Study","Skill Listing Directory"]},
+],gaps:[
+{t:"More Product Launch Announcements",kw:"f9xr announcements",pri:"low"},
+]},
+]},
+
+{id:"legal",n:"Legals",c:"#475569",p:{t:"Terms of Service",u:"/legals/terms.html"},b:[
+{h:"Policies",lk:"\u2192 Legals + Contact",ps:[
+{t:"Privacy Policy",u:"/legals/privacy.html",ln:["Terms"]},
+{t:"Refund Policy",u:"/legals/refund.html",ln:["Terms","Contact"]},
+{t:"Shipping Policy",u:"/legals/shipping.html",ln:["Terms","Contact"]},
+],gaps:[
+{t:"Cookie Policy",kw:"f9xr cookie policy",pri:"low"},
+{t:"Accessibility Statement",kw:"f9xr accessibility statement",pri:"low"},
+]},
+{h:"Agreements",lk:"\u2192 Legals + Contact",ps:[
+{t:"Client Agreement",u:"/legals/agreement.html",ln:["Terms"]},
+{t:"Freelancer Terms",u:"/legals/freelancer.html",ln:["Terms","Freelancer Quote Tool"]},
+],gaps:[
+]},
+]},
+];
+
+// ═══════ ENGINE ═══════
+let exS=new Set(["services"]),exH=new Set(),nPos={},edgeArr=[],chMap={};
+let pan={x:0,y:0},zm=0.42,drag=null,moved=0,pinchD=0,pinchZ=0;
+const R1=370,R2=280,R3=190;
+const svgEl=document.getElementById('svg'),world=document.getElementById('world');
+const OFF={root:[-70,-35],silo:[-56,-25],pillar:[-80,-32],hub:[-62,-38],post:[-75,-28],gap:[-75,-28]};
+
+function allItems(hub){return [...hub.ps,...(showGaps&&hub.gaps?hub.gaps.map(g=>({...g,isGap:true})):[])]}
+
+function layout(){
+  const p={},e=[],ch={};
+  p.root=nPos.root||{x:0,y:0};ch.root=[];
+  const n=SL.length,st=2*Math.PI/n;
+  SL.forEach((s,i)=>{
+    const a=-Math.PI/2+st*i,sx=Math.cos(a)*R1,sy=Math.sin(a)*R1;
+    p[s.id]=nPos[s.id]||{x:sx,y:sy};ch.root.push(s.id);ch[s.id]=[];
+    e.push({f:'root',t:s.id,c:s.c,w:5});
+    if(exS.has(s.id)){
+      const pid=s.id+'_p';
+      p[pid]=nPos[pid]||{x:p[s.id].x+Math.cos(a)*130,y:p[s.id].y+Math.sin(a)*130};
+      ch[s.id].push(pid);ch[pid]=[];
+      e.push({f:s.id,t:pid,c:s.c,w:3,d:1});
+      const hubs=s.b,sp=Math.min(st*.82,Math.PI*.6),hSt=hubs.length>1?sp/(hubs.length-1):0,hA=a-sp/2;
+      hubs.forEach((hub,hi)=>{
+        const ha=hubs.length>1?hA+hSt*hi:a,hid=s.id+'-'+hi;
+        p[hid]=nPos[hid]||{x:p[s.id].x+Math.cos(ha)*R2,y:p[s.id].y+Math.sin(ha)*R2};
+        ch[s.id].push(hid);ch[hid]=[];
+        e.push({f:s.id,t:hid,c:s.c,w:3.5});
+        if(exH.has(hid)){
+          const items=allItems(hub);
+          const pSp=Math.min(hSt||st*.5,Math.PI*.45),pSt=items.length>1?pSp/(items.length-1):0,pA=ha-pSp/2;
+          items.forEach((item,pi)=>{
+            const pa=items.length>1?pA+pSt*pi:ha,postId=hid+'-'+pi;
+            p[postId]=nPos[postId]||{x:p[hid].x+Math.cos(pa)*R3,y:p[hid].y+Math.sin(pa)*R3};
+            ch[hid].push(postId);ch[postId]=[];
+            e.push({f:hid,t:postId,c:item.isGap?'#22c55e':s.c,w:item.isGap?1.5:2,d:item.isGap?1:0});
+          });
+        }
+      });
+    }
+  });
+  nPos=p;edgeArr=e;chMap=ch;
+}
+
+function desc(id){const r=[],k=chMap[id]||[];k.forEach(c=>{r.push(c);r.push(...desc(c))});return r}
+
+function meta(id){
+  if(id==='root')return{tp:'root'};
+  for(const s of SL){
+    if(s.id===id)return{tp:'silo',s};
+    if(id===s.id+'_p')return{tp:'pillar',s};
+    for(let i=0;i<s.b.length;i++){
+      const h=s.id+'-'+i;
+      if(id===h)return{tp:'hub',s,h:s.b[i],hi:i};
+      const items=allItems(s.b[i]);
+      for(let j=0;j<items.length;j++){
+        if(id===h+'-'+j){
+          const item=items[j];
+          return item.isGap?{tp:'gap',s,g:item}:{tp:'post',s,p:item};
+        }
+      }
+    }
+  }
+  return null;
+}
+
+function bz(x1,y1,x2,y2){const dx=x2-x1;return`M${x1} ${y1}C${x1+dx*.45} ${y1} ${x2-dx*.45} ${y2} ${x2} ${y2}`}
+
+function drawRopes(){
+  let h='';
+  edgeArr.forEach(e=>{
+    const a=nPos[e.f],b=nPos[e.t];if(!a||!b)return;
+    const d=bz(a.x,a.y,b.x,b.y);
+    h+=`<path d="${d}" stroke="${e.c}" stroke-width="${e.w+8}" fill="none" stroke-linecap="round" opacity=".07"/>`;
+    h+=`<path d="${d}" stroke="${e.c}" stroke-width="${e.w}" fill="none" stroke-linecap="round" opacity="${e.d?.35:.55}"${e.d?' stroke-dasharray="8 5"':''}/>`;
+    h+=`<circle cx="${a.x}" cy="${a.y}" r="${Math.min(e.w*.6,3)}" fill="${e.c}" opacity=".3"/>`;
+    h+=`<circle cx="${b.x}" cy="${b.y}" r="${Math.min(e.w*.6,3)}" fill="${e.c}" opacity=".3"/>`;
+  });
+  svgEl.innerHTML=h;
+}
+
+function drawNodes(){
+  world.querySelectorAll('.nd').forEach(e=>e.remove());
+  Object.keys(nPos).forEach(id=>{
+    const p=nPos[id],m=meta(id);if(!m)return;
+    const d=document.createElement('div');d.className='nd';d.dataset.nid=id;
+    const o=OFF[m.tp]||[-50,-20];
+
+    if(m.tp==='root'){
+      d.className+=' nd-root';
+      d.innerHTML='<h2>F9XR</h2><span>TEAM \u00B7 SITEMAP</span>';
+    }else if(m.tp==='silo'){
+      d.className+=' nd-silo';
+      const ct=m.s.b.reduce((a,b)=>a+b.ps.length,0);
+      const gc=m.s.b.reduce((a,b)=>a+(b.gaps?b.gaps.length:0),0);
+      d.style.background=m.s.c;d.style.boxShadow='0 4px 24px '+m.s.c+'40'+(exS.has(id)?',0 0 0 4px '+m.s.c+'50':'');
+      d.innerHTML=`<b>${m.s.n}</b><em>${ct}${showGaps&&gc?' +'+gc:''}</em>`;
+    }else if(m.tp==='pillar'){
+      d.className+=' nd-pillar';const w=m.s.p.t.startsWith('⚠');
+      d.style.border='3px solid '+(w?'#f59e0b':m.s.c);if(w)d.style.background='#fffbeb';
+      d.innerHTML=`<div class="tag" style="color:${w?'#b45309':m.s.c}">${w?'⚠ MISSING PILLAR':'★ PILLAR PAGE'}</div><div class="nm">${m.s.p.t}</div>`;
+    }else if(m.tp==='hub'){
+      d.className+=' nd-hub';const gc=m.h.gaps?m.h.gaps.length:0;
+      d.style.borderLeft='5px solid '+m.s.c;d.style.boxShadow='0 3px 14px rgba(0,0,0,.07)'+(exH.has(id)?',0 0 0 3px '+m.s.c+'30':'');
+      d.innerHTML=`<div class="nm" style="color:${m.s.c}">${m.h.h}</div><div class="ct">${m.h.ps.length} posts</div>${m.h.lk?`<div class="lk" style="background:${m.s.c}12;color:${m.s.c}">${m.h.lk}</div>`:''}${showGaps&&gc?`<div class="gaps-badge">+${gc} gaps</div>`:''}`;
+    }else if(m.tp==='post'){
+      d.className+=' nd-post';const w=m.p.w;
+      d.style.border='1.5px solid '+(w?'#fbbf24':m.s.c+'28');if(w)d.style.background='#fffbeb';
+      let lnk='';
+      if(m.p.ln&&m.p.ln.length){lnk='<div class="link-pills">'+m.p.ln.map(l=>'<span class="lp">\u2192'+l+'</span>').join('')+'</div>';}
+      d.innerHTML=`<div class="row"><span class="dot" style="background:${m.s.c}"></span><span class="nm">${m.p.t}</span></div>${w?'<div class="wrn">⚠ '+w+'</div>':''}${lnk}<span class="go" style="color:${m.s.c}">↗ Open</span>`;
+    }else if(m.tp==='gap'){
+      d.className+=' nd-gap';
+      const pc=m.g.pri==='high'?'pri-high':m.g.pri==='med'?'pri-med':'pri-low';
+      d.innerHTML=`<div class="row"><span class="plus">+</span><span class="nm">${m.g.t}</span></div><span class="kw">🎯 ${m.g.kw}</span><span class="pri ${pc}">${m.g.pri} priority</span>`;
+    }
+    d.style.left=(p.x+o[0])+'px';d.style.top=(p.y+o[1])+'px';
+    world.appendChild(d);
+  });
+}
+
+function updateTransform(){const vw=innerWidth,vh=innerHeight;world.style.transform=`translate(${vw/2+pan.x}px,${vh/2+pan.y}px) scale(${zm})`;document.getElementById('zLbl').textContent=Math.round(zm*100)+'%'}
+function render(){layout();drawRopes();drawNodes();updateTransform()}
+
+function gp(e){const t=e.touches?e.touches[0]:e;return{x:t.clientX,y:t.clientY}}
+document.getElementById('vp').addEventListener('pointerdown',function(e){
+  const nd=e.target.closest('.nd');const pp=gp(e);moved=0;
+  if(nd){const snap={};for(const k in nPos)snap[k]={...nPos[k]};drag={tp:'node',id:nd.dataset.nid,sx:pp.x,sy:pp.y,snap}}
+  else{drag={tp:'pan',sx:pp.x-pan.x,sy:pp.y-pan.y}}
+});
+document.addEventListener('pointermove',function(e){
+  if(!drag)return;const pp=gp(e);
+  if(drag.tp==='pan'){const nx=pp.x-drag.sx,ny=pp.y-drag.sy;moved+=Math.abs(nx-pan.x)+Math.abs(ny-pan.y);pan.x=nx;pan.y=ny;updateTransform()}
+  else{const dx=(pp.x-drag.sx)/zm,dy=(pp.y-drag.sy)/zm;moved+=Math.abs(dx)+Math.abs(dy);
+    const ids=[drag.id,...desc(drag.id)],snap=drag.snap;
+    ids.forEach(nid=>{if(snap[nid])nPos[nid]={x:snap[nid].x+dx,y:snap[nid].y+dy}});
+    drawRopes();
+    ids.forEach(nid=>{const el=world.querySelector(`[data-nid="${nid}"]`);if(!el||!nPos[nid])return;const p=nPos[nid],m=meta(nid),o=OFF[m.tp]||[-50,-20];el.style.left=(p.x+o[0])+'px';el.style.top=(p.y+o[1])+'px'});
+  }
+});
+document.addEventListener('pointerup',function(){
+  if(!drag)return;const d=drag;drag=null;
+  if(moved<10){const m=meta(d.id);if(!m)return;
+    if(m.tp==='silo'){if(exS.has(d.id)){exS.delete(d.id);m.s.b.forEach((_,i)=>exH.delete(d.id+'-'+i))}else exS.add(d.id);render()}
+    else if(m.tp==='hub'){exH.has(d.id)?exH.delete(d.id):exH.add(d.id);render()}
+    else if(m.tp==='pillar'&&m.s.p.u){window.open(B+m.s.p.u,'_blank')}
+    else if(m.tp==='post'&&m.p.u){window.open(B+m.p.u,'_blank')}
+  }
+});
+document.getElementById('vp').addEventListener('touchstart',function(e){if(e.touches.length===2){e.preventDefault();pinchD=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);pinchZ=zm}},{passive:false});
+document.addEventListener('touchmove',function(e){if(e.touches.length===2&&pinchD){e.preventDefault();const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);zm=Math.max(.12,Math.min(2.5,pinchZ*(d/pinchD)));updateTransform()}},{passive:false});
+document.addEventListener('touchend',()=>{pinchD=0});
+
+function Z(dir){zm=Math.max(.12,Math.min(2.5,zm+dir*.1));updateTransform()}
+function RESET(){pan={x:0,y:0};zm=.42;exS=new Set(["services"]);exH=new Set();nPos={};render()}
+function toggleGaps(){showGaps=!showGaps;document.getElementById('gapToggle').textContent=showGaps?'✦ Gaps ON':'✦ Gaps OFF';document.getElementById('gapToggle').className=showGaps?'':'off';nPos={};exH=new Set();render()}
+
+render();
+</script>
+</body>
+</html>
