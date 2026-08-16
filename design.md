@@ -376,23 +376,7 @@ f9xr.github.io/
 
 ---
 
-## 13. Build & Deployment
 
-```bash
-# Build Tailwind CSS
-npx tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --minify
-
-# Deploy
-# Push to main branch → GitHub Pages auto-deploys
-```
-
-- No bundler or framework — pure static HTML
-- Only build step is Tailwind CSS compilation
-- Blog hosted externally (Blogger) via JSONP
-- Forms handled by Formspree (no backend)
-- Scheduling via Cal.com embed (no backend)
-
----
 
 ## 14. Design Philosophy
 

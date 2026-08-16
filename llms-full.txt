@@ -178,7 +178,7 @@
 - **Professional Services**: Service + LocalBusiness (CA/CS/CMA page)
 
 ### Open Graph & Social
-- **OG Image**: [assets/og-image.png](https://f9xr.github.io/assets/og-image.png) (1200×630)
+- **OG Image**: [assets/og-image.webp](https://f9xr.github.io/assets/og-image.webp) (1200×630)
 - **Twitter**: @f9xrteam
 - **Social Profiles**: Instagram, WhatsApp, Email
 

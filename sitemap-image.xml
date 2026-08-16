@@ -11,14 +11,11 @@
       <image:caption>F9XR Team - Architects of Digital Precision</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
       <image:caption>Official Logo of F9XR Team Digital Agency</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://f9xr.github.io/assets/og-image.png</image:loc>
-      <image:title>F9XR Team Open Graph PNG</image:title>
-    </image:image>
+    
     <image:image>
       <image:loc>https://f9xr.github.io/assets/favicon-32x32.png</image:loc>
       <image:title>F9XR Team Favicon 32x32</image:title>
@@ -114,7 +111,7 @@
       <image:caption>About F9XR Team - Hero Section Illustration</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -133,11 +130,7 @@
       <image:loc>https://f9xr.github.io/assets/apple-touch-icon.png</image:loc>
       <image:title>F9XR Team Apple Touch Icon</image:title>
     </image:image>
-    <image:image>
-      <image:loc>https://fast.wistia.com/embed/medias/0aq84xo01v/swatch</image:loc>
-      <image:title>F9XR Team Introduction Video Thumbnail</image:title>
-      <image:caption>F9XR Team - Company Introduction Video</image:caption>
-    </image:image>
+    
   </url>
 
   <!-- ========== SERVICES PAGE ========== -->
@@ -190,16 +183,8 @@
       <image:title>F9XR Team Website Screenshot</image:title>
       <image:caption>F9XR Team official website preview - Homepage</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://f9xr.github.io/assets/screenshots/F9XR_GoogleSearch.png</image:loc>
-      <image:title>F9XR Google Search Screenshot</image:title>
-      <image:caption>Google Search presence and performance tracking by F9XR Team</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.github.io/assets/screenshots/F9XR_GoogleAnalytics.png</image:loc>
-      <image:title>F9XR Google Analytics Screenshot</image:title>
-      <image:caption>Google Analytics performance screenshot for F9XR Team website traffic and growth reporting</image:caption>
-    </image:image>
+    
+    
     <image:image>
       <image:loc>https://f9xr.github.io/assets/screenshots/FoilAI.webp</image:loc>
       <image:title>FoilAI Platform Screenshot</image:title>
@@ -257,7 +242,7 @@
       <image:caption>Contact F9XR Team - Get in Touch</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -291,7 +276,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -321,7 +306,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -397,7 +382,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -427,7 +412,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -452,7 +437,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -477,7 +462,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -502,7 +487,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -553,7 +538,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -583,7 +568,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -678,7 +663,7 @@
   <url>
     <loc>https://f9xr.github.io/legals/terms.html</loc>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -697,7 +682,7 @@
   <url>
     <loc>https://f9xr.github.io/legals/privacy.html</loc>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -716,7 +701,7 @@
   <url>
     <loc>https://f9xr.github.io/legals/refund.html</loc>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -735,7 +720,7 @@
   <url>
     <loc>https://f9xr.github.io/legals/shipping.html</loc>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -754,7 +739,7 @@
   <url>
     <loc>https://f9xr.github.io/legals/freelancer.html</loc>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -794,7 +779,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -824,7 +809,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -854,7 +839,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -879,7 +864,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -904,7 +889,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -927,7 +912,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -950,7 +935,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -973,7 +958,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -1003,7 +988,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -1029,7 +1014,7 @@
       <image:caption>Best forum posting sites for backlinks organized by niche</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -1055,7 +1040,7 @@
       <image:caption>150+ AI directories, software directories &amp; launchpads sorted by DR</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -1708,7 +1693,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -1729,11 +1714,17 @@
   <url>
     <loc>https://f9xr.github.io/announcements/f9xr-launches-seo-codebase-auditor-skill.html</loc>
     <image:image>
+      <image:loc>https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&amp;w=2074&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D</image:loc>
+      <image:title>SEO CodeBase Auditor Skill - Code on screen</image:title>
+      <image:caption>F9XR announcement - SEO CodeBase Auditor Skill launched</image:caption>
+    </image:image>
+
+    <image:image>
       <image:loc>https://f9xr.github.io/assets/og-image.webp</image:loc>
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -1758,7 +1749,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -1783,7 +1774,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -1808,7 +1799,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -1833,7 +1824,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -1858,7 +1849,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -1883,7 +1874,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -1908,7 +1899,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>
@@ -1933,7 +1924,7 @@
       <image:title>F9XR Team Open Graph Image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://f9xr.github.io/logo.png</image:loc>
+      <image:loc>https://f9xr.github.io/logo.webp</image:loc>
       <image:title>F9XR Team Logo</image:title>
     </image:image>
     <image:image>

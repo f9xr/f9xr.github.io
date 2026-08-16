@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-134PMTPP82"></script>
@@ -35,8 +35,10 @@
     <meta property="og:title" content="Data Entry & Management | F9XR Team">
     <meta property="og:description" content="Professional data entry, cleaning, and management services to organize and optimize your business data.">
     <meta property="og:image" content="https://f9xr.github.io/assets/og-image.webp">
+    <meta property="og:image:type" content="image/webp">
         <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Data Entry &amp; Management | F9XR Team">
     <meta property="og:locale" content="en_US"><meta property="og:site_name" content="F9XR Team">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -44,11 +46,13 @@
     <meta name="twitter:title" content="Data Entry & Management | F9XR Team">
     <meta name="twitter:description" content="Professional data entry, cleaning, and management services to organize and optimize your business data.">
     <meta name="twitter:image" content="https://f9xr.github.io/assets/og-image.webp">
+    <meta name="twitter:image:alt" content="Data Entry &amp; Management | F9XR Team">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
+      "@id": "https://f9xr.github.io/services/data-management.html#service",
       "name": "Data Entry & Management",
       "serviceType": "Data Management Services",
       "provider": {
@@ -77,13 +81,7 @@
           "addressCountry": "Global"
         }
       },
-      "description": "Professional data entry, cleaning, and management services to organize, structure, and optimize your business data for better decision-making.",
-      "offers": {
-        "@type": "Offer",
-        "price": "Contact for pricing",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock"
-      }
+      "description": "Professional data entry, cleaning, and management services to organize, structure, and optimize your business data for better decision-making."
     }
     </script>
 
@@ -156,6 +154,8 @@
             color: transparent;
         }
 
+        .text-stroke-sm { -webkit-text-stroke: 1px rgba(248, 249, 250, 0.8); }
+
         .service-card {
             background: rgba(52, 58, 64, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -197,8 +197,6 @@
             border-radius: 10px;
         }
     </style>
-<noscript>
-</noscript>
     <link rel="stylesheet" href="../assets/css/tailwind.css">
     <link rel="stylesheet" href="../assets/css/llm-cta.css">
 
@@ -246,13 +244,43 @@
         "@type": "Answer",
         "text": "Yes, we build automated bots and scripts that can extract data from documents, websites, or emails and perfectly format it into your databases, saving you hundreds of hours."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What file formats do you work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We work with Excel, CSV, Google Sheets, JSON, XML, PDFs, SQL databases, and most CRM exports. If your data lives somewhere, we can import, clean, and export it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your typical turnaround time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most data entry and cleaning projects are completed within 24-48 hours. Larger migrations and integrations are scoped with clear milestones and delivery dates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer ongoing data management?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many clients use our recurring plans for weekly or monthly data hygiene, enrichment, and reporting so your data stays clean as your business grows."
+      }
     }
   ]
 }
 </script>
 </head>
-<body class="bg-carbon-black text-platinum font-sans antialiased overflow-x-hidden selection:bg-accent-blue selection:text-white">
+<body class="text-bright-snow font-sans antialiased selection:bg-accent-blue selection:text-white min-h-screen flex flex-col overflow-x-hidden">
 <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-6 focus:py-3 focus:bg-accent-blue focus:text-white focus:rounded-xl focus:font-bold focus:outline-none focus:ring-4 focus:ring-accent-blue/50 transition-all">Skip to main content</a>
+    <div class="fixed inset-0 -z-50 h-full w-full bg-black">
+        <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        </div>
+        <div class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]">
+        </div>
+    </div>
     <div id="nav-container"></div>
 <noscript>
 <nav style="background:#0a0a0a;padding:1rem 2rem;border-bottom:1px solid rgba(255,255,255,0.1);position:sticky;top:0;z-index:9999">
@@ -298,6 +326,32 @@
                 </div>
                 <div class="reveal">
                     <img src="../assets/illustrations/About%20me-rafiki.svg" width="500" height="500" alt="Data Management" class="w-full h-auto max-w-lg mx-auto" fetchpriority="high">
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24 reveal">
+            <div class="grid lg:grid-cols-3 gap-12 items-start">
+                <div class="lg:col-span-2">
+                    <span class="text-accent-blue font-black uppercase tracking-[0.4em] text-xs mb-4 block">Data Management Services</span>
+                    <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic mb-6">Data Entry & Management Services for Growing Teams</h2>
+                    <p class="text-lg text-platinum/60 leading-relaxed mb-6">
+                        Every business runs on data â€” customer records, orders, leads, inventory, and spreadsheets that multiply faster than anyone can maintain. Our data management services give you one partner for the entire lifecycle: we enter it, clean it, structure it, automate it, and keep it accurate.
+                    </p>
+                    <p class="text-lg text-platinum/60 leading-relaxed">
+                        Whether you need a one-time data cleaning or an ongoing data team, we handle it remotely with fast turnaround, strict confidentiality, and a 99.9% accuracy guarantee. Pair it with a <a href="../services/website-rentals.html" class="text-accent-blue hover:text-white transition-colors font-bold">rental website</a> or our <a href="../services/we-do-for-you.html" class="text-accent-blue hover:text-white transition-colors font-bold">done-for-you submissions</a> to keep your whole online presence in sync.
+                    </p>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-8 rounded-[2.5rem]">
+                    <h3 class="text-lg font-black mb-4 uppercase tracking-tight">What's Included</h3>
+                    <ul class="space-y-3 text-sm font-bold">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Data entry & capture</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Cleaning & deduplication</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Structuring & database design</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Automation & API pipelines</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Migration & enrichment</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Reporting & dashboards</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -373,6 +427,56 @@
                     <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Process Automation</h3>
                     <p class="text-sm text-platinum/60 leading-relaxed">Automate repetitive data tasks with custom scripts and bots. Reduce manual effort, minimize human error, and free your team for higher-value work.</p>
                 </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <div class="w-12 h-12 bg-accent-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-cloud-arrow-down text-accent-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Data Scraping & Collection</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">Gather public data from websites, directories, and social platforms into clean, structured files â€” contact lists, product catalogs, pricing, and reviews.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <div class="w-12 h-12 bg-accent-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-user-plus text-accent-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Lead List Building</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">Build targeted B2B and B2C lead lists with verified emails, phone numbers, and company data â€” formatted and deduplicated for your outreach tools.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <div class="w-12 h-12 bg-accent-blue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-database text-accent-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">CRM & Database Cleanup</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">Audit your HubSpot, Salesforce, Zoho, or any CRM â€” merge duplicates, fix broken records, enrich missing fields, and keep your pipeline trustworthy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24 reveal">
+            <div class="flex items-center gap-4 mb-16">
+                <span class="w-12 h-[2px] bg-accent-blue"></span>
+                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">How It Works</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <p class="text-5xl font-black text-accent-blue opacity-40 mb-4">01</p>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Audit & Discovery</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">We map your current data sources, identify duplicates, gaps, and errors, and define the structure your business actually needs before we touch a single record.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <p class="text-5xl font-black text-accent-blue opacity-40 mb-4">02</p>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Clean & Structure</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">We remove duplicates, standardize formats, validate entries, and organize everything into clear, query-ready schemas and databases you can search in seconds.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <p class="text-5xl font-black text-accent-blue opacity-40 mb-4">03</p>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Automate & Integrate</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">Repetitive tasks get automated with scripts and API pipelines that keep your CRM, spreadsheets, and tools in perfect sync â€” with zero manual copy-paste.</p>
+                </div>
+                <div class="feature-card p-8 rounded-[2.5rem]">
+                    <p class="text-5xl font-black text-accent-blue opacity-40 mb-4">04</p>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tight">Maintain & Report</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed">We monitor data quality, schedule recurring cleanups, and deliver reports that turn your data from a liability into a reliable decision-making asset.</p>
+                </div>
             </div>
         </section>
 
@@ -385,8 +489,8 @@
                 <div class="bg-white/5 border border-white/10 p-10 rounded-[2.5rem]">
                     <h3 class="text-xl font-black mb-6 uppercase tracking-tight flex items-center gap-3"><i class="fa-solid fa-circle-exclamation text-accent-blue"></i> The Cost of Bad Data</h3>
                     <ul class="space-y-4 text-sm font-bold">
-                        <li class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent-blue"></i> Poor data quality costs businesses 12% of their revenue on average</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent-blue"></i> Data scientists spend 60% of their time cleaning data, not analyzing it</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent-blue"></i> Poor data quality is estimated to cost businesses around 12% of their revenue</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent-blue"></i> Data professionals report spending close to 60% of their time cleaning data instead of analyzing it</li>
                         <li class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent-blue"></i> Duplicate records lead to wasted marketing spend and missed opportunities</li>
                         <li class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent-blue"></i> Inaccurate data causes costly compliance and reporting errors</li>
                     </ul>
@@ -398,6 +502,36 @@
                         <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Custom workflows tailored to your specific business processes</li>
                         <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Strict confidentiality and data security protocols</li>
                         <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Fast turnaround with dedicated project managers</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24 reveal">
+            <div class="flex items-center gap-4 mb-16">
+                <span class="w-12 h-[2px] bg-accent-blue"></span>
+                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">What Clean Data Really Means</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white/5 border border-white/10 p-10 rounded-[2.5rem]">
+                    <h3 class="text-xl font-black mb-6 uppercase tracking-tight flex items-center gap-3"><i class="fa-solid fa-clipboard-check text-accent-blue"></i> The Data Quality Checklist</h3>
+                    <ul class="space-y-4 text-sm font-bold">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Complete â€” no missing names, emails, phone numbers, or critical fields</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Unique â€” duplicates merged and removed across every source</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Consistent â€” standardized formats for dates, phones, addresses, and currencies</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Accurate â€” validated against source documents and business logic rules</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Timely â€” updated on a schedule that matches how you actually use it</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-accent-blue"></i> Structured â€” organized into schemas that search and reporting can read</li>
+                    </ul>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-10 rounded-[2.5rem]">
+                    <h3 class="text-xl font-black mb-6 uppercase tracking-tight flex items-center gap-3"><i class="fa-solid fa-bullseye text-accent-blue"></i> Why Quality Beats Quantity</h3>
+                    <p class="text-sm text-platinum/60 leading-relaxed mb-6">More records don't help if they're wrong. One clean customer list outperforms ten messy ones â€” because every marketing email, sales call, and analytics report starts from the same foundation: your data.</p>
+                    <ul class="space-y-4 text-sm font-bold">
+                        <li class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent-blue"></i> Clean data raises email deliverability and response rates</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent-blue"></i> Sales teams trust the pipeline and qualify leads faster</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent-blue"></i> Reporting becomes dependable, so decisions stop being guesses</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent-blue"></i> Automation runs on accurate records, not errors multiplied at scale</li>
                     </ul>
                 </div>
             </div>
@@ -424,6 +558,47 @@
             </div>
         </section>
 
+        <section class="mb-24 reveal">
+            <div class="flex items-center gap-4 mb-16">
+                <span class="w-12 h-[2px] bg-accent-blue"></span>
+                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">Tools & Platforms We Work With</h2>
+            </div>
+            <div class="flex flex-wrap gap-4">
+                <span class="px-6 py-3 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors text-sm">Excel & Google Sheets</span>
+                <span class="px-6 py-3 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors text-sm">Airtable</span>
+                <span class="px-6 py-3 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors text-sm">SQL Databases</span>
+                <span class="px-6 py-3 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors text-sm">Python & Pandas</span>
+                <span class="px-6 py-3 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors text-sm">HubSpot & CRMs</span>
+                <span class="px-6 py-3 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors text-sm">Zapier & Make</span>
+                <span class="px-6 py-3 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors text-sm">Power BI & Looker Studio</span>
+                <span class="px-6 py-3 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors text-sm">Shopify & WooCommerce</span>
+                <span class="px-6 py-3 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors text-sm">Notion & ClickUp</span>
+                <span class="px-6 py-3 bg-gunmetal rounded-2xl font-bold border border-white/5 hover:border-accent-blue transition-colors text-sm">Google Workspace</span>
+            </div>
+            <p class="text-sm text-platinum/60 mt-6 italic max-w-3xl">Don't see your stack? We're tool-agnostic â€” if you manage data in it, we can clean, structure, and automate it.</p>
+        </section>
+
+        <section class="mb-24 reveal">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl text-center">
+                    <p class="text-4xl font-black text-accent-blue">99.9%</p>
+                    <p class="text-[10px] uppercase tracking-widest font-bold opacity-40 mt-2">Accuracy Guarantee</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl text-center">
+                    <p class="text-4xl font-black text-accent-blue">24â€“48h</p>
+                    <p class="text-[10px] uppercase tracking-widest font-bold opacity-40 mt-2">Avg Turnaround</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl text-center">
+                    <p class="text-4xl font-black text-accent-blue">40+</p>
+                    <p class="text-[10px] uppercase tracking-widest font-bold opacity-40 mt-2">Formats Supported</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl text-center">
+                    <p class="text-4xl font-black text-accent-blue">10+</p>
+                    <p class="text-[10px] uppercase tracking-widest font-bold opacity-40 mt-2">Industries Served</p>
+                </div>
+            </div>
+        </section>
+
         <section class="py-16 reveal">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-10 leading-none">Clean Data, <br> <span class="text-stroke italic">Better Decisions.</span></h2>
@@ -438,18 +613,6 @@
                         Email Us
                     </a>
                 </div>
-            </div>
-        </section>
-
-        <!-- === REFERENCES & SOURCES (E-E-A-T) === -->
-        <section class="max-w-5xl mx-auto px-4 mt-16 mb-8 reveal">
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
-                <h2 class="text-xl font-bold text-accent-blue mb-4 flex items-center gap-2"><i class="fa-solid fa-book-open"></i> References</h2>
-                <ul class="space-y-2 text-sm text-platinum/60">
-                    <li><a href="https://www.ibm.com/topics/data-quality" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">IBM  Data Quality Management</a>  Industry best practices for data cleaning and governance.</li>
-                    <li><a href="https://www.gartner.com/en/topics/data-management" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Gartner  Data Management</a>  Research and insights on data management strategies.</li>
-                    <li><a href="https://www.statista.com/topics/2011/data-management/" target="_blank" rel="noopener noreferrer" class="text-accent-blue hover:text-white transition-colors">Statista  Data Management Market</a>  Market size and trends in data management services.</li>
-                </ul>
             </div>
         </section>
 
@@ -487,62 +650,98 @@
         </div>
         <div class="space-y-4">
             <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
-                <button onclick="toggleFAQ(this)"
+                <button type="button" onclick="toggleFAQ(this)" aria-expanded="false" aria-controls="faq-1-content"
                     class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
                     What data management services do you provide?
                     <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
                 </button>
-                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                <div id="faq-1-content" class="faq-content overflow-hidden max-h-0 transition-[max-height] ease-in-out">
                     <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
                         We offer data structuring, database management, scraping, organization, and automated data processing tailored to your business needs.
                     </div>
                 </div>
             </div>
             <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
-                <button onclick="toggleFAQ(this)"
+                <button type="button" onclick="toggleFAQ(this)" aria-expanded="false" aria-controls="faq-2-content"
                     class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
                     Is my data kept secure?
                     <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
                 </button>
-                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                <div id="faq-2-content" class="faq-content overflow-hidden max-h-0 transition-[max-height] ease-in-out">
                     <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
                         Absolutely. We follow strict security protocols and use encrypted channels to ensure all client data is handled with the highest level of confidentiality.
                     </div>
                 </div>
             </div>
             <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
-                <button onclick="toggleFAQ(this)"
+                <button type="button" onclick="toggleFAQ(this)" aria-expanded="false" aria-controls="faq-3-content"
                     class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
                     Can you integrate data with my existing systems?
                     <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
                 </button>
-                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                <div id="faq-3-content" class="faq-content overflow-hidden max-h-0 transition-[max-height] ease-in-out">
                     <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
                         Yes, we specialize in building custom API pipelines that seamlessly sync and route data between your CRM, database, and third-party tools.
                     </div>
                 </div>
             </div>
             <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
-                <button onclick="toggleFAQ(this)"
+                <button type="button" onclick="toggleFAQ(this)" aria-expanded="false" aria-controls="faq-4-content"
                     class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
                     Do you handle big data processing?
                     <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
                 </button>
-                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                <div id="faq-4-content" class="faq-content overflow-hidden max-h-0 transition-[max-height] ease-in-out">
                     <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
                         Yes, we design scalable data architectures using modern cloud infrastructure to efficiently process, clean, and visualize large datasets without performance bottlenecks.
                     </div>
                 </div>
             </div>
             <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
-                <button onclick="toggleFAQ(this)"
+                <button type="button" onclick="toggleFAQ(this)" aria-expanded="false" aria-controls="faq-5-content"
                     class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
                     Can you automate my manual data entry?
                     <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
                 </button>
-                <div class="faq-content overflow-hidden max-h-0 transition-[max-height] duration-400 ease-in-out">
+                <div id="faq-5-content" class="faq-content overflow-hidden max-h-0 transition-[max-height] ease-in-out">
                     <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
                         Yes, we build automated bots and scripts that can extract data from documents, websites, or emails and perfectly format it into your databases, saving you hundreds of hours.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button type="button" onclick="toggleFAQ(this)" aria-expanded="false" aria-controls="faq-6-content"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    What file formats do you work with?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div id="faq-6-content" class="faq-content overflow-hidden max-h-0 transition-[max-height] ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        We work with Excel, CSV, Google Sheets, JSON, XML, PDFs, SQL databases, and most CRM exports. If your data lives somewhere, we can import, clean, and export it.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button type="button" onclick="toggleFAQ(this)" aria-expanded="false" aria-controls="faq-7-content"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    What is your typical turnaround time?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div id="faq-7-content" class="faq-content overflow-hidden max-h-0 transition-[max-height] ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Most data entry and cleaning projects are completed within 24â€“48 hours. Larger migrations and integrations are scoped with clear milestones and delivery dates.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item group bg-white/5 border border-white/5 rounded-3xl transition-all reveal">
+                <button type="button" onclick="toggleFAQ(this)" aria-expanded="false" aria-controls="faq-8-content"
+                    class="w-full px-10 py-8 flex justify-between items-center text-left font-bold text-2xl group-hover:text-platinum">
+                    Do you offer ongoing data management?
+                    <i class="fas fa-plus transition-transform group-[.open]:rotate-45 text-accent-blue"></i>
+                </button>
+                <div id="faq-8-content" class="faq-content overflow-hidden max-h-0 transition-[max-height] ease-in-out">
+                    <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
+                        Yes. Many clients use our recurring plans for weekly or monthly data hygiene, enrichment, and reporting â€” so your data stays clean as your business grows.
                     </div>
                 </div>
             </div>
@@ -613,19 +812,6 @@
     </script>
 
     <div id="footer-container"></div>
-<style>
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-            display: flex;
-            animation: marquee 30s linear infinite;
-        }
-        .animate-marquee:hover {
-            animation-play-state: paused;
-        }
-    </style>
 
     <!-- Site-wide Search Modal -->
     <div id="search-modal-container"></div>
@@ -634,7 +820,11 @@
             const item = button.parentElement;
             const isOpen = item.classList.contains('open');
             document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-            if (!isOpen) item.classList.add('open');
+            document.querySelectorAll('.faq-item button').forEach(b => b.setAttribute('aria-expanded', 'false'));
+            if (!isOpen) {
+                item.classList.add('open');
+                button.setAttribute('aria-expanded', 'true');
+            }
         }
     </script>
 
