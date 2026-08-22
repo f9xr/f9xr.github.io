@@ -118,6 +118,18 @@
     <priority>0.70</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/services/content-creation-editorial-operations.html</loc>
+    <lastmod>2026-08-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/pages/publications.html</loc>
+    <lastmod>2026-08-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
     <loc>https://f9xr.github.io/services/ai-visibility-optimization.html</loc>
     <lastmod>2026-08-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
