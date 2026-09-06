@@ -3,6 +3,12 @@
 
   var ROOT_PREFIX = typeof LAYOUT_ROOT !== 'undefined' ? LAYOUT_ROOT : '';
 
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
   var NAV_HTML =
     '<header id="main-header" class="fixed top-6 left-0 right-0 z-[5000] px-4 transition-transform duration-300">' +
     '<nav class="max-w-[95rem] w-full mx-auto flex justify-between items-center py-1 lg:py-2 px-2 relative z-[5001]">' +
@@ -18,6 +24,9 @@
     '<a href="/pages/about.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item">' +
     '<div class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue"><i class="fa-solid fa-users"></i></div>' +
     '<div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">About Us</div><div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">Learn more about our story and team</div></div></a>' +
+    '<a href="/pages/why-us.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item border-t border-white/5 mt-1 pt-4">' +
+    '<div class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue"><i class="fa-solid fa-scale-balanced"></i></div>' +
+    '<div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Why Us</div><div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">F9XR vs other agencies</div></div></a>' +
     '<a href="/pages/case-studies.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item border-t border-white/5 mt-1 pt-4">' +
     '<div class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue"><i class="fa-regular fa-star"></i></div>' +
     '<div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Customer Stories</div><div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">See how we\'ve helped our clients succeed</div></div></a>' +
@@ -55,7 +64,7 @@
     '<a href="/pages/portfolio.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item"><div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors"><i class="fa-regular fa-image"></i></div><div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Portfolio</div><div class="text-platinum/50 text-[10px] leading-snug font-medium">Browse our recent case studies</div></div></a>' +
     '<a href="/pages/projects.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5"><div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors"><i class="fa-solid fa-laptop-code"></i></div><div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Our Projects</div><div class="text-platinum/50 text-[10px] leading-snug font-medium">Explore active digital assets</div></div></a>' +
     '<a href="/tools/index.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5"><div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors"><i class="fa-solid fa-toolbox"></i></div><div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Tools</div><div class="text-platinum/50 text-[10px] leading-snug font-medium">Free digital presence tools</div></div></a>' +
-    '<a href="https://growwithguidance.blogspot.com/" target="_blank" rel="noopener noreferrer" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5"><div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors"><i class="fa-solid fa-blog"></i></div><div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Blog</div><div class="text-platinum/50 text-[10px] leading-snug font-medium">Insights and updates</div></div></a>' +
+    '<a href="https://f9xr.github.io/articles/" target="_blank" rel="noopener noreferrer" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5"><div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors"><i class="fa-solid fa-blog"></i></div><div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Blog</div><div class="text-platinum/50 text-[10px] leading-snug font-medium">Insights and updates</div></div></a>' +
     '<a href="/directories/index.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5"><div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors"><i class="fa-solid fa-folder-tree"></i></div><div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Directories</div><div class="text-platinum/50 text-[10px] leading-snug font-medium">Business &amp; SEO directories</div></div></a></div></div></div>' +
     '<button onclick="openSearchModal()" aria-label="Search Site" class="ml-2 w-10 h-10 lg:w-12 lg:h-12 bg-accent-blue text-white rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.5)]"><i class="fa-solid fa-magnifying-glass text-lg"></i></button></div>' +
     '<div class="flex items-center gap-5">' +
@@ -66,6 +75,7 @@
     '<button onclick="toggleMobileMenu()" class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors"><i class="fa-solid fa-xmark"></i></button>' +
     '<div class="space-y-8"><span class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>' +
     '<a href="/pages/about.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">About</a>' +
+    '<a href="/pages/why-us.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Why Us</a>' +
     '<a href="/pages/services.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>' +
     '<a href="/pages/portfolio.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>' +
     '<a href="/pages/contact.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire Team</a></div>' +
@@ -99,12 +109,13 @@
     '<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24">' +
     '<div class="flex flex-col gap-6 lg:col-span-3"><h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Pages</h4><div class="flex flex-col gap-3">' +
     '<a href="/pages/about.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-circle-info text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>About Us</a>' +
+    '<a href="/pages/why-us.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-scale-balanced text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Why Us</a>' +
     '<a href="/pages/services.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-layer-group text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Services</a>' +
     '<a href="/pages/portfolio.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-briefcase text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Portfolio</a>' +
     '<a href="/pages/projects.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-rocket text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Projects</a>' +
     '<a href="/pages/contact.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-envelope text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Contact</a>' +
     '<a href="/tools/index.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-toolbox text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Tools</a>' +
-    '<a href="https://growwithguidance.blogspot.com/" target="_blank" rel="noopener noreferrer" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-arrow-up-right-from-square text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Blog</a></div></div>' +
+    '<a href="https://f9xr.github.io/articles/" target="_blank" rel="noopener noreferrer" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-arrow-up-right-from-square text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Blog</a></div></div>' +
     '<div class="flex flex-col gap-6 lg:col-span-4"><h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Services</h4><div class="flex flex-col gap-3">' +
     '<a href="/pages/services.html" class="flex items-center text-2xl lg:text-[28px] font-black text-accent-blue hover:text-white transition-colors tracking-tight mb-2"><i class="fa-solid fa-bolt text-white/80 mr-3 text-xl w-6 text-center"></i>View All Services <i class="fa-solid fa-arrow-right text-lg ml-2"></i></a>' +
     '<a href="/services/ai-visibility-optimization.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-eye text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>AI Visibility</a>' +
@@ -199,6 +210,57 @@
     }
 
     setupSmartNav();
+    setupFooterReveal(footerC);
+  }
+
+  function injectFooterRevealCss() {
+    if (document.getElementById('footer-reveal-css')) return;
+    var style = document.createElement('style');
+    style.id = 'footer-reveal-css';
+    style.textContent =
+      'html,body{background-color:#0a0a0a;}' +
+      '#footer-container{position:fixed;bottom:0;left:0;right:0;z-index:0;transform:translateY(100%);will-change:transform;}' +
+      'html{overflow-x:hidden;}' +
+      'body{will-change:padding-bottom;}';
+    document.head.appendChild(style);
+  }
+
+  function setupFooterReveal(c) {
+    if (!c || !c.firstElementChild) return;
+    injectFooterRevealCss();
+
+    var main = document.getElementById('main-content');
+    var wrapId = 'f9xr-content-wrap';
+    if (main && !document.getElementById(wrapId)) {
+      var wrap = document.createElement('div');
+      wrap.id = wrapId;
+      wrap.style.position = 'relative';
+      wrap.style.zIndex = '1';
+      wrap.style.backgroundColor = '#0a0a0a';
+      wrap.style.width = '100%';
+      wrap.style.flex = '1 1 auto';
+      main.parentNode.insertBefore(wrap, main);
+      wrap.appendChild(main);
+    }
+
+    var height = 0;
+    var updateReveal = function () {
+      if (!height) return;
+      var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      var start = maxScroll - height;
+      var progress = Math.max(0, Math.min(1, (window.scrollY - start) / height));
+      c.style.transform = 'translateY(' + ((1 - progress) * 100) + '%)';
+    };
+    var measure = function () {
+      height = c.offsetHeight;
+      document.body.style.paddingBottom = (height > 0 ? height : 0) + 'px';
+      updateReveal();
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    window.addEventListener('scroll', updateReveal, { passive: true });
+    setTimeout(measure, 300);
+    setTimeout(measure, 900);
   }
 
   function setupSmartNav() {
@@ -298,14 +360,14 @@
       return item.title.toLowerCase().indexOf(query) !== -1 || item.path.toLowerCase().indexOf(query) !== -1;
     });
     if (matches.length === 0) {
-      resultsContainer.innerHTML = '<div class="text-white/50 text-center py-8">No results found for &quot;' + query + '&quot;</div>';
+      resultsContainer.innerHTML = '<div class="text-white/50 text-center py-8">No results found for &quot;' + escapeHtml(query) + '&quot;</div>';
       return;
     }
     matches.forEach(function (match) {
       var el = document.createElement('a');
       el.href = ROOT_PREFIX + match.path;
       el.className = 'bg-white/5 border border-white/5 hover:border-accent-blue/50 hover:bg-white/10 transition-colors p-4 rounded-xl flex items-center justify-between group';
-      el.innerHTML = '<div class="text-white font-bold text-lg">' + match.title + '</div><i class="fa-solid fa-arrow-right text-white/30 group-hover:text-accent-blue group-hover:-rotate-45 transition-all"></i>';
+      el.innerHTML = '<div class="text-white font-bold text-lg">' + escapeHtml(match.title) + '</div><i class="fa-solid fa-arrow-right text-white/30 group-hover:text-accent-blue group-hover:-rotate-45 transition-all"></i>';
       resultsContainer.appendChild(el);
     });
   };

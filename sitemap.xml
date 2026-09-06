@@ -14,6 +14,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/pages/why-us.html</loc>
+    <lastmod>2026-09-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://f9xr.github.io/pages/services.html</loc>
     <lastmod>2026-08-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -260,6 +266,12 @@
   <url>
     <loc>https://f9xr.github.io/directories/project-submission-sites.html</loc>
     <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/directories/ai-tools.html</loc>
+    <lastmod>2026-09-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>

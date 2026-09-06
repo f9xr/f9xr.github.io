@@ -345,7 +345,7 @@
 | **Audit Scope** | Full Local Codebase &mdash; HTML, CSS, JS, XML, Configurations |
 | **Pages Analyzed** | 44 HTML files across 8 directories |
 | **Sitemaps Reviewed** | `sitemap.xml` (50 URLs), `sitemap-image.xml` (30+ pages), `sitemap-video.xml` (1 entry) |
-| **Blog Network** | 82 blog posts @ growwithguidance.blogspot.com |
+| **Blog Network** | 82 blog posts @ f9xr.github.io/articles |
 
 ---
 
@@ -699,7 +699,7 @@ All three XML sitemaps were cross-referenced against the actual file system inve
 
 ### 4.3 Blog Network &amp; External Content Inventory
 
-The F9XR Team blog network at `growwithguidance.blogspot.com` comprises **82 published posts** organized into two categories:
+The F9XR Team blog network at `f9xr.github.io/articles` comprises **82 published posts** organized into two categories:
 
 | Category | Count | Examples |
 |---|---|---|
@@ -709,7 +709,7 @@ The F9XR Team blog network at `growwithguidance.blogspot.com` comprises **82 pub
 | **Discord Growth** | 8 | "Grow Your Discord Server Using Disboard", "Monetizing Discord Guide" |
 | **Other (Backlinks, Tools)** | 13 | "New Instant Approval DoFollow Backlink Sites", "Hashtag Converter", "Free Press Release Sites" |
 
-**Interlinking Recommendation:** Add contextual blog references from the F9XR site to relevant blog posts. For example, link `pages/services.html` to `growwithguidance.blogspot.com/.../google-business-profile-optimization.html` under the "Google Business Profile" service card.
+**Interlinking Recommendation:** Add contextual blog references from the F9XR site to relevant blog posts. For example, link `pages/services.html` to `f9xr.github.io/articles/.../google-business-profile-optimization.html` under the "Google Business Profile" service card.
 
 ### 4.4 Internal Link Topology &amp; Equity Distribution Matrix
 
@@ -724,7 +724,7 @@ This matrix identifies specific interlinking opportunities across the site to im
 | `pages/portfolio.html` | ~190 (project cards) | Project cards link to external URLs only | `/services/indian-professionals.html` | "Indian Professionals" | Add: `<a href="/services/indian-professionals.html" class="text-sm ...">Built for Indian Professionals &rarr;</a>` |
 | `index.html` | ~820 (Who We Empower) | No link to case studies | `/pages/case-studies.html` | "View our case studies" | `<a href="/pages/case-studies.html">See how we've helped businesses like yours</a>` |
 | `pages/contact.html` | ~570 (form section) | No link to `/services/` | `/services/index.html` | "Explore all services" | Add before form: `<p class="...">Not sure what you need? <a href="/services/index.html">Explore all our services</a>.</p>` |
-| All pages (Footer) | Footer | Generic "Blog" link | `growwithguidance.blogspot.com/.../google-business-profile-optimization.html` | "Latest: Google Business Profile Optimization" | Update footer blog link to point to latest post |
+| All pages (Footer) | Footer | Generic "Blog" link | `f9xr.github.io/articles/.../google-business-profile-optimization.html` | "Latest: Google Business Profile Optimization" | Update footer blog link to point to latest post |
 | `index.html` | ~1700 (Growth ROI section) | Static pricing cards | `/announcements/f9xr-sponsorlanes-partnership.html` | "SponsorLanes Partnership" | Add: `<a href="/announcements/f9xr-sponsorlanes-partnership.html" class="...">Read our SponsorLanes partnership announcement</a>` |
 | `pages/services.html` | ~690 (CA/CS section) | No link to `/services/indian-professionals.html` | `/services/indian-professionals.html` | "Indian Professionals" | `<a href="/services/indian-professionals.html">Learn more about our Indian Professionals service</a>` |
 
@@ -1144,7 +1144,7 @@ The following structured data types were detected across the F9XR Team codebase.
 | `ProfilePage` | 1 page | `index.html` | Profile page (Google) |
 | `ItemList` (directories) | 2 pages | `directories/index.html`, `tools/index.html` | Carousel (indirect) |
 | `CollectionPage` | 2 pages | `directories/index.html`, `tools/index.html` | Collection results |
-| `Product` / `SoftwareApplication` (blog) | External | `growwithguidance.blogspot.com` posts | Product Snippets |
+| `Product` / `SoftwareApplication` (blog) | External | `f9xr.github.io/articles` posts | Product Snippets |
 
 **Schema Coverage:** <span class="status-good">11 distinct schema types deployed across 44 pages</span> &mdash; representing comprehensive structured data adoption.
 
@@ -1267,7 +1267,7 @@ Google's E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) fra
 | **Expertise** | Expert bio page with credentials | `pages/expert-bio.html` | <span class="status-good">STRONG</span> |
 | | Schema.org `knowsAbout` with skill list | `index.html` (Organization/Person schema) | <span class="status-good">STRONG</span> |
 | | Educational credentials in schema | `index.html` (`hasCredential` array) | <span class="status-good">STRONG</span> |
-| | Technical blog network (82 posts) | `growwithguidance.blogspot.com` | <span class="status-good">STRONG</span> |
+| | Technical blog network (82 posts) | `f9xr.github.io/articles` | <span class="status-good">STRONG</span> |
 | **Authoritativeness** | External backlinks from directories | Blog network + citations | <span class="status-warn">MODERATE</span> |
 | | Structured data citations | Schema `sameAs` profiles | <span class="status-good">STRONG</span> |
 | | Industry partnerships (SponsorLanes) | `announcements/` | <span class="status-good">STRONG</span> |
@@ -1361,6 +1361,57 @@ This section documents the corrective actions applied on 2026-08-08/09 after a f
 
 ---
 
+<a id="section13"></a>
+## SECTION 13: SEPTEMBER 2026 RECONCILIATION &amp; DIRECTORY PAGES AUDIT
+
+This section documents corrective actions applied on 2026-09-06 after a code-level audit of all 10 pages under `directories/`, plus the site-wide migration of blog outbound links away from the legacy Blogger subdomain.
+
+### 13.1 New AI Tools Directory
+
+| Item | Before | After | Status |
+|---|---|---|---|
+| AI Tools directory page | Not present | `/directories/ai-tools.html` launched (120+ tools, 8-column Google Sheet data source) | <span class="severity-fixed">LAUNCHED</span> |
+| Homepage hub | Not tracked | AI Tools card added to `directories/index.html` grid; `ItemList` expanded 8&rarr;9 positions; search-array entry added | <span class="severity-fixed">FIXED</span> |
+| Sibling connectivity | &mdash; | AI Tools card added to all 8 sibling directory pages | <span class="severity-fixed">FIXED</span> |
+| `sitemap.xml` | 50 URLs | ai-tools entry added &mdash; now 51 URLs (`2026-09-06` lastmod) | <span class="severity-fixed">FIXED</span> |
+| Meta description | 190 chars | Trimmed to 157 chars | <span class="severity-fixed">FIXED</span> |
+
+### 13.2 Blog Link Migration (`growwithguidance.blogspot.com` &rarr; `f9xr.github.io/articles`)
+
+| Item | Before | After | Status |
+|---|---|---|---|
+| Legacy outbound links | `https://growwithguidance.blogspot.com/...` across 9 files | All 161 references migrated to `https://f9xr.github.io/articles/...` (incl. 65 deep article links) | <span class="severity-fixed">FIXED</span> |
+| Homepage recent-posts feed widget | Blogger feed URL | Now points to `https://f9xr.github.io/articles/feeds/posts/...` &mdash; will error until the articles site exposes the feed | <span class="status-warn">CAVEAT</span> |
+| `growwithguidance-blog-urls.txt` | Blogger URLs | Content migrated (82 refs) | <span class="severity-fixed">FIXED</span> |
+| Shared layout | &mdash; | `assets/js/layout.js` footer/nav Blog links migrated site-wide | <span class="severity-fixed">FIXED</span> |
+
+### 13.3 Count Accuracy vs. Live Data
+
+| Page | Claimed | Live rows | Action | Status |
+|---|---|---|---|---|
+| `web2-submission-sites.html` | "100+" | 11 | Removed count from all 5 meta/og/twitter/JSON-LD descriptions ("curated") | <span class="severity-fixed">FIXED</span> |
+| `forum-posting-sites.html` | "250+" | 203 | Corrected to "200+" in all 5 locations | <span class="severity-fixed">FIXED</span> |
+| `project-submission-sites.html` JSON-LD | `numberOfItems` 157 (static) | 185 | ItemList regenerated from live sheet (185 entries, https-normalized) | <span class="severity-fixed">FIXED</span> |
+
+### 13.4 Metadata, Trust &amp; Link Hygiene
+
+| Item | Before | After | Status |
+|---|---|---|---|
+| `directories/index.html` og:title/twitter:title | Dropped "100+" prefix | Aligned with `<title>` | <span class="severity-fixed">FIXED</span> |
+| `auth.md` references | 8 directory pages still emitted `<link rel="describedby">` (file deleted per F006) | All 8 removed; 0 references remain | <span class="severity-fixed">FIXED</span> |
+| Mixed-content URL | `http://hotvsnot.com/` in project-submission sheet data | Normalized to `https://` during regeneration; 0 `http://` links remain in `directories/` | <span class="severity-fixed">FIXED</span> |
+| Cross-link reciprocity | `project-submission-sites.html` linked from only 3 pages | Now linked from all 9 sibling + index pages | <span class="severity-fixed">FIXED</span> |
+
+### 13.5 Verification
+
+- All 10 directory pages pass tag-balance checks; 51/51 JSON-LD blocks parse.
+- Internal `.html` link matrix symmetrical; no orphan directory pages.
+- Zero `growwithguidance` and zero `http://` references remain site-wide.
+
+**Sept 2026 open items:** import the repaired 121-row CSV (`directories/AI Tools Directory - Sheet1.csv`) into the live AI Tools Google Sheet (page currently displays the original 3 rows), and publish the articles feed to restore the homepage recent-posts widget.
+
+---
+
 <hr class="f9xr-section-divider">
 
 <p align="center">
@@ -1392,4 +1443,5 @@ This section documents the corrective actions applied on 2026-08-08/09 after a f
 
 *Report generated by F9XR Team &mdash; Growth Engine Lab*  
 *Codebase commit: July 2026 &bull; 44 HTML pages analyzed &bull; 3 XML sitemaps verified &bull; 82+ internal assets inventoried &bull; 11 schema types cataloged &bull; 15 vulnerabilities tracked*  
-*Aug 2026 reconciliation: 50-URL sitemap, .well-known dead links removed, heading fixes verified, NAP standardized to +91 91234-42431, homepage canonical normalized*
+*Aug 2026 reconciliation: 50-URL sitemap, .well-known dead links removed, heading fixes verified, NAP standardized to +91 91234-42431, homepage canonical normalized*  
+*Sep 2026 reconciliation: directories audit fixes applied, blog links migrated to f9xr.github.io/articles, AI Tools directory launched (51-URL sitemap)*

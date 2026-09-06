@@ -319,7 +319,7 @@
                                     <div class="text-platinum/50 text-[10px] leading-snug font-medium">Free digital presence tools</div>
                                 </div>
                             </a>
-                            <a href="https://growwithguidance.blogspot.com/" target="_blank" rel="noopener noreferrer" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5">
+                            <a href="https://f9xr.github.io/articles/" target="_blank" rel="noopener noreferrer" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5">
                                 <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors">
                                     <i class="fa-solid fa-blog"></i>
                                 </div>
@@ -489,7 +489,7 @@
                         <a href="/pages/projects.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-rocket text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Projects</a>
                         <a href="/pages/contact.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-envelope text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Contact</a>
                         <a href="/tools/index.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-toolbox text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Tools</a>
-                        <a href="https://growwithguidance.blogspot.com/" target="_blank" rel="noopener noreferrer" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-arrow-up-right-from-square text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Blog</a>
+                        <a href="https://f9xr.github.io/articles/" target="_blank" rel="noopener noreferrer" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-arrow-up-right-from-square text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>Blog</a>
                     </div>
                 </div>
 
@@ -690,6 +690,9 @@
         });
 
         function renderSearchResults(query) {
+            function escapeHtml(value) {
+                return String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+            }
             const resultsContainer = document.getElementById('search-results');
             resultsContainer.innerHTML = '';
 
@@ -698,7 +701,7 @@
             const matches = SEARCH_INDEX.filter(item => item.title.toLowerCase().includes(query) || item.path.toLowerCase().includes(query));
 
             if (matches.length === 0) {
-                resultsContainer.innerHTML = '<div class="text-white/50 text-center py-8">No results found for "' + query + '"</div>';
+                resultsContainer.innerHTML = '<div class="text-white/50 text-center py-8">No results found for "' + escapeHtml(query) + '"</div>';
                 return;
             }
 
@@ -707,7 +710,7 @@
                 el.href = ROOT_PREFIX + match.path;
                 el.className = 'bg-white/5 border border-white/5 hover:border-accent-blue/50 hover:bg-white/10 transition-colors p-4 rounded-xl flex items-center justify-between group';
                 el.innerHTML = `
-                    <div class="text-white font-bold text-lg">${match.title}</div>
+                    <div class="text-white font-bold text-lg">${escapeHtml(match.title)}</div>
                     <i class="fa-solid fa-arrow-right text-white/30 group-hover:text-accent-blue group-hover:-rotate-45 transition-all"></i>
                 `;
                 resultsContainer.appendChild(el);
@@ -735,6 +738,37 @@ if (header$) {
         lastScrollY$ = currentScrollY$;
     });
 }
+</script>
+<script>
+(function () {
+  var f = document.querySelector('body > footer');
+  if (!f) return;
+  var st = document.createElement('style');
+  st.textContent =
+    'html,body{background-color:#0a0a0a;}' +
+    'html{overflow-x:hidden;}' +
+    'body>footer{position:fixed;bottom:0;left:0;right:0;z-index:0;transform:translateY(100%);will-change:transform;}' +
+    'main#main-content{position:relative;z-index:1;background-color:#0a0a0a;}';
+  document.head.appendChild(st);
+  var height = 0;
+  var updateReveal = function () {
+    if (!height) return;
+    var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    var start = maxScroll - height;
+    var progress = Math.max(0, Math.min(1, (window.scrollY - start) / height));
+    f.style.transform = 'translateY(' + ((1 - progress) * 100) + '%)';
+  };
+  var measure = function () {
+    height = f.offsetHeight;
+    document.body.style.paddingBottom = (height > 0 ? height : 0) + 'px';
+    updateReveal();
+  };
+  measure();
+  addEventListener('resize', measure);
+  addEventListener('scroll', updateReveal, { passive: true });
+  setTimeout(measure, 300);
+  setTimeout(measure, 900);
+})();
 </script>
 <script src="assets/js/skeleton.js"></script>
 </body>

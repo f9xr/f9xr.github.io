@@ -1,6 +1,7 @@
 var SEARCH_INDEX = [
   {"title": "F9XR Team | AI-Powered Web Design & Local SEO Growth Agency", "path": "index.html"},
   {"title": "About F9XR Team | Global Digital Agency & Tech Architects", "path": "pages/about.html"},
+  {"title": "Why Us | F9XR Team vs Other Agencies - The Comparison", "path": "pages/why-us.html"},
   {"title": "Contact Us | F9XR Team - Let's Build Something Great", "path": "pages/contact.html"},
   {"title": "Backend Crew & Technical Partners | F9XR Team", "path": "pages/partners.html"},
   {"title": "Portfolio | F9XR Team - Digital Masterpieces", "path": "pages/portfolio.html"},
