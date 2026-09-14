@@ -20,6 +20,6 @@ Content-Signal: ai-input=yes
 
 
 
-Sitemap: https://f9xr.github.io/sitemap.xml
-Sitemap: https://f9xr.github.io/sitemap-image.xml
-Sitemap: https://f9xr.github.io/sitemap-video.xml
+Sitemap: https://www.f9xr.org/sitemap.xml
+Sitemap: https://www.f9xr.org/sitemap-image.xml
+Sitemap: https://www.f9xr.org/sitemap-video.xml

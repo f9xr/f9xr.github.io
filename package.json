@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/f9xr/f9xr.github.io/issues"
   },
-  "homepage": "https://github.com/f9xr/f9xr.github.io#readme",
+  "homepage": "https://www.f9xr.org",
   "devDependencies": {
     "tailwindcss": "^3.4.17"
   }

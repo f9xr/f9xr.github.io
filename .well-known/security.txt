@@ -1,7 +1,7 @@
 # Security Policy
-# https://f9xr.github.io/.well-known/security.txt
+# https://www.f9xr.org/.well-known/security.txt
 
-Contact: mailto:tontufytservices@gmail.com
+Contact: mailto:hello@f9xr.org
 Expires: 2027-06-24T00:00:00.000Z
 Preferred-Languages: en
-Canonical: https://f9xr.github.io/.well-known/security.txt
+Canonical: https://www.f9xr.org/.well-known/security.txt

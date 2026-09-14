@@ -238,7 +238,7 @@
   </div></center>
   <div class="f9xr-meta" style="position:relative;z-index:1;">
     <strong>Prepared By:</strong> F9XR Team<br>
-    <strong>Target Architecture:</strong> <a href="https://f9xr.github.io">https://f9xr.github.io</a><br>
+    <strong>Target Architecture:</strong> <a href="https://www.f9xr.org">https://www.f9xr.org</a><br>
     <strong>Codebase Scope:</strong> 44 HTML pages &bull; 3 XML sitemaps &bull; 82+ internal assets<br>
     <strong>Classification:</strong> Public Distribution &mdash; Free to Share<br>
     <strong>Report Version:</strong> 2.2 &mdash; Post-Remediation Edition + Rich Results Audit + Aug 2026 Reconciliation
@@ -340,12 +340,12 @@
 
 | Metadata | Value |
 |---|---|
-| **Target Asset** | https://f9xr.github.io |
+| **Target Asset** | https://www.f9xr.org |
 | **Audit Date** | July 2026 |
 | **Audit Scope** | Full Local Codebase &mdash; HTML, CSS, JS, XML, Configurations |
 | **Pages Analyzed** | 44 HTML files across 8 directories |
 | **Sitemaps Reviewed** | `sitemap.xml` (50 URLs), `sitemap-image.xml` (30+ pages), `sitemap-video.xml` (1 entry) |
-| **Blog Network** | 82 blog posts @ f9xr.github.io/articles |
+| **Blog Network** | 82 blog posts @ www.f9xr.org/articles |
 
 ---
 
@@ -386,7 +386,7 @@ flowchart TB
     N --> O[End: Actionable Roadmap]
 ```
 
-This audit was conducted by directly scanning the local repository files at `C:\Users\inanj\OneDrive\Documents\GitHub\f9xr.github.io`. Every HTML file, stylesheet, JavaScript module, XML sitemap, and configuration file was programmatically inspected for:
+This audit was conducted by directly scanning the local repository files at `C:\Users\inanj\OneDrive\Documents\GitHub\www.f9xr.org`. Every HTML file, stylesheet, JavaScript module, XML sitemap, and configuration file was programmatically inspected for:
 
 - Semantic HTML5 compliance and heading hierarchy integrity
 - Metadata completeness (meta titles, descriptions, OG tags, JSON-LD)
@@ -402,7 +402,7 @@ The following 43 URLs comprise the full F9XR Team web architecture, cross-refere
 
 | Priority | URL Group | Count | Example Pages |
 |---|---|---|---|
-| <span class="matrix-hl">1.00</span> | Root / Homepage | 1 | `https://f9xr.github.io/` |
+| <span class="matrix-hl">1.00</span> | Root / Homepage | 1 | `https://www.f9xr.org/` |
 | <span class="matrix-hl">0.80</span> | Primary Pages | 7 | `/pages/about.html`, `/pages/services.html`, `/pages/portfolio.html`, `/pages/projects.html`, `/pages/contact.html`, `/pages/partners.html`, `/pages/expert-bio.html` |
 | <span class="matrix-hl">0.80</span> | Case Studies &amp; Sitemap | 2 | `/pages/case-studies.html`, `/pages/sitemap.html` |
 | <span class="matrix-hl">0.70</span> | Service Subpages | 10 | `/services/ai-visibility-optimization.html`, `/services/google-business-optimization.html`, etc. |
@@ -505,7 +505,7 @@ The heading structure was programmatically extracted from all primary pages. Bel
 |---|---|---|
 | Meta Title (unique per page) | <span class="status-good">PASS</span> | All 44 pages have unique, keyword-optimized titles |
 | Meta Description (unique per page) | <span class="status-good">PASS</span> | All 44 pages carry distinct, action-oriented descriptions |
-| Canonical Tag | <span class="status-good">PASS</span> | Every page has `<link rel="canonical" href="https://f9xr.github.io/..." />` |
+| Canonical Tag | <span class="status-good">PASS</span> | Every page has `<link rel="canonical" href="https://www.f9xr.org/..." />` |
 | Open Graph (og:) Title | <span class="status-good">PASS</span> | Present on all pages |
 | Open Graph (og:) Description | <span class="status-good">PASS</span> | Present on all pages |
 | Open Graph (og:) Image | <span class="status-good">PASS</span> | References `/assets/og-image.webp` (1200x630) |
@@ -526,7 +526,7 @@ The heading structure was programmatically extracted from all primary pages. Bel
   "provider": {
     "@type": "LocalBusiness",
     "name": "F9XR Team",
-    "url": "https://f9xr.github.io/"
+    "url": "https://www.f9xr.org/"
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -699,7 +699,7 @@ All three XML sitemaps were cross-referenced against the actual file system inve
 
 ### 4.3 Blog Network &amp; External Content Inventory
 
-The F9XR Team blog network at `f9xr.github.io/articles` comprises **82 published posts** organized into two categories:
+The F9XR Team blog network at `www.f9xr.org/articles` comprises **82 published posts** organized into two categories:
 
 | Category | Count | Examples |
 |---|---|---|
@@ -709,7 +709,7 @@ The F9XR Team blog network at `f9xr.github.io/articles` comprises **82 published
 | **Discord Growth** | 8 | "Grow Your Discord Server Using Disboard", "Monetizing Discord Guide" |
 | **Other (Backlinks, Tools)** | 13 | "New Instant Approval DoFollow Backlink Sites", "Hashtag Converter", "Free Press Release Sites" |
 
-**Interlinking Recommendation:** Add contextual blog references from the F9XR site to relevant blog posts. For example, link `pages/services.html` to `f9xr.github.io/articles/.../google-business-profile-optimization.html` under the "Google Business Profile" service card.
+**Interlinking Recommendation:** Add contextual blog references from the F9XR site to relevant blog posts. For example, link `pages/services.html` to `www.f9xr.org/articles/.../google-business-profile-optimization.html` under the "Google Business Profile" service card.
 
 ### 4.4 Internal Link Topology &amp; Equity Distribution Matrix
 
@@ -724,7 +724,7 @@ This matrix identifies specific interlinking opportunities across the site to im
 | `pages/portfolio.html` | ~190 (project cards) | Project cards link to external URLs only | `/services/indian-professionals.html` | "Indian Professionals" | Add: `<a href="/services/indian-professionals.html" class="text-sm ...">Built for Indian Professionals &rarr;</a>` |
 | `index.html` | ~820 (Who We Empower) | No link to case studies | `/pages/case-studies.html` | "View our case studies" | `<a href="/pages/case-studies.html">See how we've helped businesses like yours</a>` |
 | `pages/contact.html` | ~570 (form section) | No link to `/services/` | `/services/index.html` | "Explore all services" | Add before form: `<p class="...">Not sure what you need? <a href="/services/index.html">Explore all our services</a>.</p>` |
-| All pages (Footer) | Footer | Generic "Blog" link | `f9xr.github.io/articles/.../google-business-profile-optimization.html` | "Latest: Google Business Profile Optimization" | Update footer blog link to point to latest post |
+| All pages (Footer) | Footer | Generic "Blog" link | `www.f9xr.org/articles/.../google-business-profile-optimization.html` | "Latest: Google Business Profile Optimization" | Update footer blog link to point to latest post |
 | `index.html` | ~1700 (Growth ROI section) | Static pricing cards | `/announcements/f9xr-sponsorlanes-partnership.html` | "SponsorLanes Partnership" | Add: `<a href="/announcements/f9xr-sponsorlanes-partnership.html" class="...">Read our SponsorLanes partnership announcement</a>` |
 | `pages/services.html` | ~690 (CA/CS section) | No link to `/services/indian-professionals.html` | `/services/indian-professionals.html` | "Indian Professionals" | `<a href="/services/indian-professionals.html">Learn more about our Indian Professionals service</a>` |
 
@@ -850,9 +850,9 @@ Then replace the CDN script in all pages:
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/" },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://f9xr.github.io/pages/services.html" },
-    { "@type": "ListItem", "position": 3, "name": "AI Visibility Optimization", "item": "https://f9xr.github.io/services/ai-visibility-optimization.html" }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.f9xr.org/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.f9xr.org/pages/services.html" },
+    { "@type": "ListItem", "position": 3, "name": "AI Visibility Optimization", "item": "https://www.f9xr.org/services/ai-visibility-optimization.html" }
   ]
 }
 </script>
@@ -910,7 +910,7 @@ Then replace the CDN script in all pages:
     {
       "@type": "Review",
       "author": { "@type": "Person", "name": "Dr. Arshdeep" },
-      "itemReviewed": { "@type": "Organization", "name": "F9XR Team", "url": "https://f9xr.github.io/" },
+      "itemReviewed": { "@type": "Organization", "name": "F9XR Team", "url": "https://www.f9xr.org/" },
       "reviewBody": "...",
       "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5, "worstRating": 1 }
     }
@@ -1144,7 +1144,7 @@ The following structured data types were detected across the F9XR Team codebase.
 | `ProfilePage` | 1 page | `index.html` | Profile page (Google) |
 | `ItemList` (directories) | 2 pages | `directories/index.html`, `tools/index.html` | Carousel (indirect) |
 | `CollectionPage` | 2 pages | `directories/index.html`, `tools/index.html` | Collection results |
-| `Product` / `SoftwareApplication` (blog) | External | `f9xr.github.io/articles` posts | Product Snippets |
+| `Product` / `SoftwareApplication` (blog) | External | `www.f9xr.org/articles` posts | Product Snippets |
 
 **Schema Coverage:** <span class="status-good">11 distinct schema types deployed across 44 pages</span> &mdash; representing comprehensive structured data adoption.
 
@@ -1175,7 +1175,7 @@ The structured data was validated against Google's Rich Results Test requirement
 | Missing `@id` on `FAQPage` entities | 3 instances | <span class="severity-low">LOW</span> | <span class="status-warn">PENDING</span> |
 | Non-descriptive `itemListElement` naming | 2 instances | <span class="severity-low">LOW</span> | <span class="status-warn">PENDING</span> |
 
-**Recommendation:** Add stable `@id` anchors to all top-level entities (e.g., `"@id": "https://f9xr.github.io/#faq"`) for cross-referencing within the knowledge graph. This is not a ranking factor but improves graph connectivity for Google's Knowledge Vault.
+**Recommendation:** Add stable `@id` anchors to all top-level entities (e.g., `"@id": "https://www.f9xr.org/#faq"`) for cross-referencing within the knowledge graph. This is not a ranking factor but improves graph connectivity for Google's Knowledge Vault.
 
 ---
 
@@ -1267,7 +1267,7 @@ Google's E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) fra
 | **Expertise** | Expert bio page with credentials | `pages/expert-bio.html` | <span class="status-good">STRONG</span> |
 | | Schema.org `knowsAbout` with skill list | `index.html` (Organization/Person schema) | <span class="status-good">STRONG</span> |
 | | Educational credentials in schema | `index.html` (`hasCredential` array) | <span class="status-good">STRONG</span> |
-| | Technical blog network (82 posts) | `f9xr.github.io/articles` | <span class="status-good">STRONG</span> |
+| | Technical blog network (82 posts) | `www.f9xr.org/articles` | <span class="status-good">STRONG</span> |
 | **Authoritativeness** | External backlinks from directories | Blog network + citations | <span class="status-warn">MODERATE</span> |
 | | Structured data citations | Schema `sameAs` profiles | <span class="status-good">STRONG</span> |
 | | Industry partnerships (SponsorLanes) | `announcements/` | <span class="status-good">STRONG</span> |
@@ -1349,7 +1349,7 @@ This section documents the corrective actions applied on 2026-08-08/09 after a f
 | 1 | `sitemap.xml` URL count | 40 | 50 (dead + noindex URLs removed; `case-studies/skylimit-ar-dashboard.html` and `pages/corporate-social-responsibility.html` added; `lastmod` refreshed) | <span class="severity-fixed">FIXED</span> |
 | 2 | Heading skip h2&rarr;h5 in `pages/services.html` + `services/index.html` | Claimed fixed | Was still present (4&times; each) | <span class="severity-fixed">FIXED</span> &mdash; h5&rarr;h3 applied |
 | 3 | `index.html` card heading skip | Not tracked | `h4` "Plus 40+ More." under `h2` "Our Featured." | <span class="severity-fixed">FIXED</span> &mdash; h4&rarr;h3 |
-| 4 | `canonical` / `og:url` on homepage | `https://f9xr.github.io/index.html` | Mismatch with sitemap root `/` | <span class="severity-fixed">FIXED</span> &mdash; now `https://f9xr.github.io/` |
+| 4 | `canonical` / `og:url` on homepage | `https://www.f9xr.org/index.html` | Mismatch with sitemap root `/` | <span class="severity-fixed">FIXED</span> &mdash; now `https://www.f9xr.org/` |
 | 5 | Dead `.well-known` links (MCP, agent-skills, OpenID, OAuth) | Claimed DEPLOYED | Endpoints never existed; empty `mcp/` + `agent-skills/` dirs | <span class="severity-fixed">REMOVED</span> &mdash; 75 dead `<link>` tags stripped from 47 pages; `api-catalog` + `llms.txt` kept |
 | 6 | Footer Organization schema | Claimed 42/42 | Only `index.html` + `404.html` (2 pages) | <span class="status-warn">REPORT CORRECTED</span> &mdash; rollout to all footers pending |
 | 7 | NAP phone consistency | 3 numbers in use | `+91 91234-42431` chosen as primary | <span class="severity-fixed">FIXED</span> &mdash; 13 files updated (wa.me, `tel:`, JSON-LD) |
@@ -1376,12 +1376,12 @@ This section documents corrective actions applied on 2026-09-06 after a code-lev
 | `sitemap.xml` | 50 URLs | ai-tools entry added &mdash; now 51 URLs (`2026-09-06` lastmod) | <span class="severity-fixed">FIXED</span> |
 | Meta description | 190 chars | Trimmed to 157 chars | <span class="severity-fixed">FIXED</span> |
 
-### 13.2 Blog Link Migration (`growwithguidance.blogspot.com` &rarr; `f9xr.github.io/articles`)
+### 13.2 Blog Link Migration (`growwithguidance.blogspot.com` &rarr; `www.f9xr.org/articles`)
 
 | Item | Before | After | Status |
 |---|---|---|---|
-| Legacy outbound links | `https://growwithguidance.blogspot.com/...` across 9 files | All 161 references migrated to `https://f9xr.github.io/articles/...` (incl. 65 deep article links) | <span class="severity-fixed">FIXED</span> |
-| Homepage recent-posts feed widget | Blogger feed URL | Now points to `https://f9xr.github.io/articles/feeds/posts/...` &mdash; will error until the articles site exposes the feed | <span class="status-warn">CAVEAT</span> |
+| Legacy outbound links | `https://growwithguidance.blogspot.com/...` across 9 files | All 161 references migrated to `https://www.f9xr.org/articles/...` (incl. 65 deep article links) | <span class="severity-fixed">FIXED</span> |
+| Homepage recent-posts feed widget | Blogger feed URL | Now points to `https://www.f9xr.org/articles/feeds/posts/...` &mdash; will error until the articles site exposes the feed | <span class="status-warn">CAVEAT</span> |
 | `growwithguidance-blog-urls.txt` | Blogger URLs | Content migrated (82 refs) | <span class="severity-fixed">FIXED</span> |
 | Shared layout | &mdash; | `assets/js/layout.js` footer/nav Blog links migrated site-wide | <span class="severity-fixed">FIXED</span> |
 
@@ -1426,7 +1426,7 @@ This section documents corrective actions applied on 2026-09-06 after a code-lev
     AI-optimized web architecture, and technical SEO that converts visitors into revenue.
   </p>
   <div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;">
-    <a href="https://f9xr.github.io" style="display:inline-block;background:#582b8c;color:#ffffff;padding:12px 30px;border-radius:6px;font-weight:700;font-size:11pt;">Visit Our Website</a>
+    <a href="https://www.f9xr.org" style="display:inline-block;background:#582b8c;color:#ffffff;padding:12px 30px;border-radius:6px;font-weight:700;font-size:11pt;">Visit Our Website</a>
     <a href="https://web.whatsapp.com/send?phone=919123442431" style="display:inline-block;background:#25D366;color:#ffffff;padding:12px 30px;border-radius:6px;font-weight:700;font-size:11pt;">Chat on WhatsApp</a>
   </div>
   <p style="color:#9ba1b0;font-size:9pt;margin-top:30px;">
@@ -1444,4 +1444,4 @@ This section documents corrective actions applied on 2026-09-06 after a code-lev
 *Report generated by F9XR Team &mdash; Growth Engine Lab*  
 *Codebase commit: July 2026 &bull; 44 HTML pages analyzed &bull; 3 XML sitemaps verified &bull; 82+ internal assets inventoried &bull; 11 schema types cataloged &bull; 15 vulnerabilities tracked*  
 *Aug 2026 reconciliation: 50-URL sitemap, .well-known dead links removed, heading fixes verified, NAP standardized to +91 91234-42431, homepage canonical normalized*  
-*Sep 2026 reconciliation: directories audit fixes applied, blog links migrated to f9xr.github.io/articles, AI Tools directory launched (51-URL sitemap)*
+*Sep 2026 reconciliation: directories audit fixes applied, blog links migrated to www.f9xr.org/articles, AI Tools directory launched (51-URL sitemap)*

@@ -1,4 +1,4 @@
-# F9XR Team — [https://F9XR.github.io](https://f9xr.github.io)
+# F9XR Team — [https://www.f9xr.org](https://www.f9xr.org)
 
 > Architects of Digital Precision
 
