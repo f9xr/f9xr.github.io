@@ -210,57 +210,6 @@
     }
 
     setupSmartNav();
-    setupFooterReveal(footerC);
-  }
-
-  function injectFooterRevealCss() {
-    if (document.getElementById('footer-reveal-css')) return;
-    var style = document.createElement('style');
-    style.id = 'footer-reveal-css';
-    style.textContent =
-      'html,body{background-color:#0a0a0a;}' +
-      '#footer-container{position:fixed;bottom:0;left:0;right:0;z-index:0;transform:translateY(100%);will-change:transform;}' +
-      'html{overflow-x:hidden;}' +
-      'body{will-change:padding-bottom;}';
-    document.head.appendChild(style);
-  }
-
-  function setupFooterReveal(c) {
-    if (!c || !c.firstElementChild) return;
-    injectFooterRevealCss();
-
-    var main = document.getElementById('main-content');
-    var wrapId = 'f9xr-content-wrap';
-    if (main && !document.getElementById(wrapId)) {
-      var wrap = document.createElement('div');
-      wrap.id = wrapId;
-      wrap.style.position = 'relative';
-      wrap.style.zIndex = '1';
-      wrap.style.backgroundColor = '#0a0a0a';
-      wrap.style.width = '100%';
-      wrap.style.flex = '1 1 auto';
-      main.parentNode.insertBefore(wrap, main);
-      wrap.appendChild(main);
-    }
-
-    var height = 0;
-    var updateReveal = function () {
-      if (!height) return;
-      var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      var start = maxScroll - height;
-      var progress = Math.max(0, Math.min(1, (window.scrollY - start) / height));
-      c.style.transform = 'translateY(' + ((1 - progress) * 100) + '%)';
-    };
-    var measure = function () {
-      height = c.offsetHeight;
-      document.body.style.paddingBottom = (height > 0 ? height : 0) + 'px';
-      updateReveal();
-    };
-    measure();
-    window.addEventListener('resize', measure);
-    window.addEventListener('scroll', updateReveal, { passive: true });
-    setTimeout(measure, 300);
-    setTimeout(measure, 900);
   }
 
   function setupSmartNav() {
