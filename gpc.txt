@@ -2,4 +2,4 @@ GPC: true
 Status: Compliant
 Last-Updated: 2026-01-03
 Scope: Global
-Link: https://www.f9xr.org/.well-known/gpc.json
+Link: https://f9xr.org/.well-known/gpc.json

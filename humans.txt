@@ -1,6 +1,6 @@
 /* TEAM */
 Author: F9XR Team
-Site: https://www.f9xr.org
+Site: https://f9xr.org
 Location: India, Canada & Global
 Contact: hello@f9xr.org
 

@@ -1,40 +1,40 @@
 {
   "linkset": [
     {
-      "anchor": "https://www.f9xr.org/",
+      "anchor": "https://f9xr.org/",
       "links": [
         {
-          "href": "https://www.f9xr.org/llms.txt",
+          "href": "https://f9xr.org/llms.txt",
           "rel": "service-desc",
           "type": "text/plain",
           "title": "LLMs Description"
         },
         {
-          "href": "https://www.f9xr.org/llms-full.txt",
+          "href": "https://f9xr.org/llms-full.txt",
           "rel": "service-desc",
           "type": "text/plain",
           "title": "Full LLMs Description"
         },
         {
-          "href": "https://www.f9xr.org/",
+          "href": "https://f9xr.org/",
           "rel": "service-doc",
           "type": "text/html",
           "title": "F9XR Team Homepage"
         },
         {
-          "href": "https://www.f9xr.org/pages/services.html",
+          "href": "https://f9xr.org/pages/services.html",
           "rel": "service-doc",
           "type": "text/html",
           "title": "Services Documentation"
         },
         {
-          "href": "https://www.f9xr.org/pages/contact.html",
+          "href": "https://f9xr.org/pages/contact.html",
           "rel": "status",
           "type": "text/html",
           "title": "Contact & Support"
         },
         {
-          "href": "https://www.f9xr.org/.well-known/security.txt",
+          "href": "https://f9xr.org/.well-known/security.txt",
           "rel": "status",
           "type": "text/plain",
           "title": "Security Policy"

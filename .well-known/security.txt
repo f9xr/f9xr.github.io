@@ -1,7 +1,7 @@
 # Security Policy
-# https://www.f9xr.org/.well-known/security.txt
+# https://f9xr.org/.well-known/security.txt
 
 Contact: mailto:hello@f9xr.org
 Expires: 2027-06-24T00:00:00.000Z
 Preferred-Languages: en
-Canonical: https://www.f9xr.org/.well-known/security.txt
+Canonical: https://f9xr.org/.well-known/security.txt
