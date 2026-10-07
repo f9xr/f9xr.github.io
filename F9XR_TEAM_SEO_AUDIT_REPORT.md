@@ -1011,9 +1011,9 @@ Each vulnerability from the registry (Section 5.1) is tracked below with its cur
 | 5 | <span class="severity-high">HIGH</span> | H1 to H4 heading skip (index.html) | <span class="severity-fixed">FIXED</span> | 1/1 | Added `<h2 class="sr-only">Our Process</h2>` between hero and process section |
 | 6 | <span class="severity-high">HIGH</span> | JSON-LD only lists 3 of 12+ services | <span class="severity-fixed">FIXED</span> | 2/2 | Expanded `itemListElement` to 12 services in `pages/services.html` and `services/index.html` |
 | 7 | <span class="severity-medium">MEDIUM</span> | Portfolio project cards missing H2 section heading | <span class="severity-fixed">FIXED</span> | 1/1 | Added `<h2 class="sr-only">Our Portfolio Projects</h2>` in `pages/portfolio.html` |
-| 8 | <span class="severity-medium">MEDIUM</span> | Footer Organization missing schema.org markup | <span class="status-warn">PENDING</span> | 2/42 | Only `index.html` + `404.html` carry `itemscope itemtype="https://schema.org/Organization"`; rollout to remaining footers still needed |
+| 8 | <span class="severity-medium">MEDIUM</span> | Footer Organization missing schema.org markup | <span class="severity-fixed">FIXED</span> | 58/58 | Footer scope carries `itemscope itemtype="https://schema.org/Organization"` with `itemprop` `name`, `url`, `logo`, `sameAs`; emitted by `assets/js/layout.js` on 56 pages plus static `index.html`/`404.html` (4 pages intentionally have no footer: `error.html`, `f9xr-site-mindmap.html`, `pinterest-79c83.html`, legacy `pages/case-studies.html`) |
 | 9 | <span class="severity-medium">MEDIUM</span> | Orphan page (SponsorLanes announcement) | <span class="severity-fixed">FIXED</span> | 3/3 | Added contextual links from `index.html` (Growth ROI section) and `pages/partners.html` |
-| 10 | <span class="severity-medium">MEDIUM</span> | Orphan page (Talent &amp; Brand Management) | <span class="status-warn">PENDING</span> | 0/1 | Link from `pages/services.html` specialized services grid still needed |
+| 10 | <span class="severity-medium">MEDIUM</span> | Orphan page (Talent &amp; Brand Management) | <span class="severity-fixed">FIXED</span> | 1/1 | Contextual card added to the specialized services grid in `pages/services.html` (line 495, `../services/talent-brand-management.html`) |
 | 11 | <span class="severity-low">LOW</span> | Sitemap `lastmod` hardcoded | <span class="status-warn">PENDING</span> | 0/1 | Requires CI/CD pipeline implementation |
 | 12 | <span class="severity-low">LOW</span> | `toggleFaq`/`toggleMobileMenu` function order | <span class="severity-fixed">FIXED</span> | 13/13 | Standardized `toggleFaq()` &rarr; `toggleFAQ()` naming across all files |
 | 13 | <span class="severity-low">LOW</span> | Dead DNS-prefetch for Tailwind CDN | <span class="severity-fixed">FIXED</span> | 44/44 | Removed CDN dns-prefetch, resolved via CDN removal |
@@ -1023,8 +1023,8 @@ Each vulnerability from the registry (Section 5.1) is tracked below with its cur
 <div style="page-break-inside: avoid; margin-top: 20px;">
 <p><strong>Overall Progress:</strong></p>
 <p>
-  <span class="progress-bar" style="width:200px;"><span class="progress-fill" style="width:80%;"></span></span>
-  <strong>80% Complete</strong> &mdash; 12 of 15 vulnerabilities resolved
+  <span class="progress-bar" style="width:200px;"><span class="progress-fill" style="width:93%;"></span></span>
+  <strong>93% Complete</strong> &mdash; 14 of 15 vulnerabilities resolved
 </p>
 <p style="font-size:9pt;color:#696f7c;">
   Legend: <span class="severity-fixed">FIXED</span> Remediation applied and verified &bull;
@@ -1041,7 +1041,7 @@ The following table compares the original audit scores (pre-remediation) against
 | **Heading Hierarchy Compliance** | <span class="status-bad">FAIL</span> (4 violations) | <span class="status-good">PASS</span> (0 violations) | <span class="badge-improved">FIXED</span> |
 | **Semantic HTML5 Compliance** | <span class="status-warn">PARTIAL</span> (h4 in nav) | <span class="status-good">PASS</span> | <span class="badge-improved">FIXED</span> |
 | **JSON-LD Service Coverage** | 3 of 12 services (25%) | 12 of 12 services (100%) | <span class="badge-improved">+75%</span> |
-| **Footer Schema Markup** | <span class="status-bad">MISSING</span> (0 pages) | <span class="status-warn">PARTIAL</span> (2 pages) | <span class="badge-improved">2x</span> |
+| **Footer Schema Markup** | <span class="status-bad">MISSING</span> (0 pages) | <span class="status-good">DEPLOYED</span> (58 pages, full property set) | <span class="badge-improved">FIXED</span> |
 | **BreadcrumbList Schema** | <span class="status-bad">MISSING</span> (0 pages) | <span class="status-good">DEPLOYED</span> (39 pages) | <span class="badge-improved">NEW</span> |
 | **Internal Inbound Links to Orphans** | 0 links (3 orphan pages) | 3+ links per orphan | <span class="badge-improved">FIXED</span> |
 | **aria-hidden Accessibility Violations** | 2 violations | 0 violations | <span class="badge-improved">FIXED</span> |
@@ -1049,7 +1049,7 @@ The following table compares the original audit scores (pre-remediation) against
 | **toggleFaq Naming Consistency** | Mixed (`toggleFaq`/`toggleFAQ`) | Standardized (`toggleFAQ`) | <span class="badge-improved">FIXED</span> |
 | **Internal Link Equity Distribution** | ~8&ndash;12 links/page | ~12&ndash;18 links/page | <span class="badge-improved">+50%</span> |
 | **Review Snippet `itemReviewed` Field** | <span class="status-bad">MISSING</span> (6 reviews blocked) | <span class="status-good">DEPLOYED</span> (dedicated script) | <span class="badge-improved">FIXED</span> |
-| **Total Vulnerabilities Resolved** | 12 of 14 (85%) | 12 of 15 (80%) | <span class="badge-unchanged">Corrected</span> |
+| **Total Vulnerabilities Resolved** | 12 of 14 (85%) | 14 of 15 (93%) | <span class="badge-improved">+8%</span> |
 
 ### 7.3 Updated Core Web Vitals Scorecard
 
@@ -1408,7 +1408,67 @@ This section documents corrective actions applied on 2026-09-06 after a code-lev
 - Internal `.html` link matrix symmetrical; no orphan directory pages.
 - Zero `growwithguidance` and zero `http://` references remain site-wide.
 
-**Sept 2026 open items:** import the repaired 121-row CSV (`directories/AI Tools Directory - Sheet1.csv`) into the live AI Tools Google Sheet (page currently displays the original 3 rows), and publish the articles feed to restore the homepage recent-posts widget.
+**Sept 2026 open items:** AI Tools CSV import resolved &mdash; the live sheet now serves 127 rows (verified 2026-10-07, see Section 14); the articles feed is still required to restore the homepage recent-posts widget.
+
+---
+
+## SECTION 14: OCTOBER 2026 RECONCILIATION &mdash; DIRECTORY DATA PIPELINE &amp; PAGINATION
+
+Corrective actions applied on 2026-10-07 to the 9 Google-Sheet-backed directory listing pages plus the shared footer schema.
+
+### 14.1 Local Data Snapshots (no runtime dependency on Google Sheets)
+
+| Item | Before | After | Status |
+|---|---|---|---|
+| Data source | Each page fetched `https://docs.google.com/spreadsheets/.../gviz/tq?tqx=out:csv` at runtime (extra round trip before first paint, hard dependency on `docs.google.com`) | Pages fetch local `directories/data/<slug>.csv`; the Google Sheet remains the source of truth | <span class="severity-fixed">FIXED</span> |
+| Snapshots | n/a | 9 committed CSVs: ai-tools 127, business 130, forum 203, free-backlink 160, pdf 80, product-launch 142, project 185, skill 9, web2 11 | <span class="severity-fixed">NEW</span> |
+| Refresh path | Manual re-export | `npm run refresh:data` (`scripts/refresh-directory-data.js`) re-pulls all 9 sheets, validates row/column counts, keeps existing snapshots on failure | <span class="severity-fixed">NEW</span> |
+| `ai-tools.html` dns-prefetch | `<link rel="dns-prefetch" href="https://docs.google.com">` | Removed (no Google runtime dependency) | <span class="severity-fixed">FIXED</span> |
+
+### 14.2 CSV Parsing &amp; Data Quality
+
+The previous parser (`csv.trim().split('\n').slice(1)` + `.split('","')`) corrupted any row containing an embedded newline and was duplicated in 9 files. All pages now use the shared RFC-4180 parser in `assets/js/directories.js` (`F9XRDirs.dataRows`).
+
+| Page | Sheet rows | Rendered | Data fixes applied |
+|---|---|---|---|
+| `ai-tools.html` | 127 | 127 | newline-safe parsing (1 row previously mangled) |
+| `business-listing-sites.html` | 130 | 129 | 97 rows had a blank `Name` (rendered as empty cards) &rarr; hostname fallback; 1 duplicate URL removed |
+| `forum-posting-sites.html` | 203 | 198 | 32 rows with a blank `Niche` &rarr; labelled `Other` (previously hidden by a silent filter); 5 duplicate rows removed; legacy `http://` URLs preserved instead of being force-rewritten to `https://` |
+| `free-backlink-creation-sites.html` | 160 | 159 | 52 blank `Name` &rarr; hostname fallback; 1 duplicate removed; newline-safe parsing (2 rows) |
+| `pdf-submission-portals.html` | 80 | 78 | 77 blank `Name` &rarr; hostname fallback; 2 duplicates removed |
+| `product-launch-directories.html` | 142 | 142 | newline-safe parsing (1 row) |
+| `project-submission-sites.html` | 185 | 185 | unchanged mapping; newline-safe parser |
+| `skill-listing-directory.html` | 9 | 9 | unchanged mapping |
+| `web2-submission-sites.html` | 11 | 11 | unchanged mapping |
+
+HTML source still contains zero `http://` references; the preserved `http://` URLs above live only inside sheet data and are rendered as authored.
+
+### 14.3 Pagination for Long Lists
+
+| Item | Before | After | Status |
+|---|---|---|---|
+| 8 grid-based directory pages | every row rendered in one grid | 48 rows per page with Prev/Next pager; page resets on search, filter, and sort | <span class="severity-fixed">FIXED</span> |
+| `forum-posting-sites.html` table | all 203 rows in one table | 50 rows per page, row numbering continues across pages, pager scrolls back to the list | <span class="severity-fixed">FIXED</span> |
+| Shared helper | none | `assets/js/directories.js` &mdash; CSV parser, `pager()`, `slice()`, `pageCount()`, `absUrl()`, `host()`, `uniqBy()`, `esc()` | <span class="severity-fixed">NEW</span> |
+
+### 14.4 Footer Organization Microdata
+
+The footer `itemscope itemtype="https://schema.org/Organization"` scope previously carried no `itemprop` at all. Added in `assets/js/layout.js` (56 pages) and static `index.html`/`404.html`:
+
+- `itemprop="name"` on the brand wordmark, wrapped with `itemprop="url"` home link (new footer home link)
+- `itemprop="logo"` on the footer logo image
+- `itemprop="sameAs"` on all 7 footer social links (Instagram, LinkedIn, GitHub, Facebook Page, Facebook Group, YouTube, Pinterest)
+
+Values align with the existing JSON-LD `@graph` Organization at `https://f9xr.org/#organization`. Closes Section 7.1 rows 8 and 10 (progress now 14 of 15).
+
+### 14.5 Verification
+
+- All 62 HTML files: 0 inline-JS parse errors, 0 JSON-LD parse errors, 0 missing local script/stylesheet references.
+- `npm run refresh:data` (2026-10-07): all 9 sheets re-pulled, row counts match the committed snapshots exactly.
+- Row counts above re-derived from the committed CSVs through each page's own mapping logic.
+- `git diff` reviewed per file; page line endings preserved (CRLF).
+
+**October 2026 open items:** sitemap `lastmod` remains hardcoded (Section 7.1 row 11, requires CI/CD); the homepage recent-posts widget still awaits the `f9xr.org/articles` feed.
 
 ---
 

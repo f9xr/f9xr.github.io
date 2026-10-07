@@ -35,7 +35,7 @@
     
     <meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Best Product Launch Sites &amp; Directories for Startups | F9XR">
+    <meta property="og:image:alt" content="Best Product Launch Sites & Directories for Startups | F9XR">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="F9XR Team">
     <meta property="og:updated_time" content="2026-07-06T00:00:00+00:00">
@@ -47,7 +47,7 @@
     <meta name="twitter:title" content="Best Product Launch Sites & Directories for Startups | F9XR">
     <meta name="twitter:description" content="Discover the best product launch directories for startups. Learn how to choose platforms and list your product. Step-by-step guide.">
     <meta name="twitter:image" content="https://f9xr.org/assets/og-image.webp">
-    <meta name="twitter:image:alt" content="Best Product Launch Sites &amp; Directories for Startups | F9XR">
+    <meta name="twitter:image:alt" content="Best Product Launch Sites & Directories for Startups | F9XR">
     <meta name="twitter:url" content="https://f9xr.org/directories/product-launch-directories.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -261,7 +261,7 @@
 <a href="../pages/services.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Services</a>
 <a href="../pages/portfolio.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Portfolio</a>
 <a href="../pages/projects.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Projects</a>
-<a href="../pages/case-studies.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Case Studies</a>
+<a href="../case-studies/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Case Studies</a>
 <a href="../tools/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Tools</a>
 <a href="../pages/contact.html" style="color:#3b82f6;font-weight:700;text-decoration:none;font-size:0.875rem">Hire Us</a>
 </div>
@@ -345,6 +345,8 @@
                 <p>Loading the best launch directories...</p>
             </div>
         </div>
+        <div id="dir-pagination" class="flex items-center justify-center gap-2 mt-8"></div>
+
     </section>
 
     <!-- Done-For-You Service Section -->
@@ -749,11 +751,14 @@ document.body.appendChild(document.createElement("click-spark"));
 
 <script>var LAYOUT_ROOT = "../";</script>
 <script src="../assets/js/layout.js"></script>
+<script src="../assets/js/directories.js"></script>
 
 <script>
-var SHEET_CSV='https://docs.google.com/spreadsheets/d/1hQaYa19LsIVERZa5ubRv7ZVlRLqrF_d3Stih9VllEI0/gviz/tq?tqx=out:csv';
+var SHEET_CSV='data/product-launch-directories.csv';
 var dirData=[];
 var filteredDirData=[];
+var dirPage=1;
+var DIR_PER_PAGE=48;
 
 function injectItemList(data){
   var existing=document.getElementById('product-itemlist-schema');
@@ -795,26 +800,34 @@ function renderGrid(data){
   var rc=document.getElementById('dir-result-count');
   if(rc)rc.textContent=data.length+' directories';
   if(!grid)return;
-  if(data.length===0){grid.innerHTML='<div class="col-span-full text-center py-12 text-platinum/50"><p>No directories match your search.</p></div>';return;}
-  grid.innerHTML=data.map(function(d){
+  if(data.length===0){
+    grid.innerHTML='<div class="col-span-full text-center py-12 text-platinum/50"><p>No directories match your search.</p></div>';
+    F9XRDirs.pager('dir-pagination',1,0,function(){});
+    return;
+  }
+  var totalPages=F9XRDirs.pageCount(data.length,DIR_PER_PAGE);
+  if(dirPage>totalPages)dirPage=totalPages;
+  grid.innerHTML=F9XRDirs.slice(data,dirPage,DIR_PER_PAGE).map(function(d){
     return '<a href="'+d.url+'" target="_blank" rel="noopener noreferrer" class="group bg-gunmetal/40 backdrop-blur-xl border border-white/10 rounded-2xl p-5 hover:border-accent-blue/40 hover:bg-white/5 transition-all duration-300 flex items-center gap-4"><div class="w-10 h-10 rounded-xl bg-accent-blue/20 flex items-center justify-center shrink-0 group-hover:bg-accent-blue/30 transition-colors"><i class="fas fa-arrow-up-right-from-square text-accent-blue text-sm"></i></div><div class="min-w-0"><h3 class="text-sm font-bold text-white group-hover:text-accent-blue transition-colors truncate">'+d.name+'</h3><p class="text-xs text-platinum/50 truncate">'+d.url.replace(/^https?:\/\//,'').replace(/\/$/,'')+'</p></div></a>';
   }).join('');
+  F9XRDirs.pager('dir-pagination',dirPage,totalPages,function(page){
+    dirPage=page;
+    renderGrid(filteredDirData);
+    var el=document.getElementById('directory-grid');
+    if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'start'});
+  });
 }
 
 async function initData(){
   try{
     var res=await fetch(SHEET_CSV);
     var csv=await res.text();
-    var rows=csv.trim().split('\n').slice(1);
-    dirData=rows.map(function(line){
-      var parts=line.replace(/^"(.*)"$/,'$1').split('","');
-      if(parts.length>=2){
-        var name=parts[0].trim();
-        var url=parts[1].trim();
-        if(!/^https?:\/\//.test(url))url='https://'+url;
-        return{name:name,url:url};
-      }
-      return null;
+    var rows=F9XRDirs.dataRows(csv);
+    dirData=rows.map(function(parts){
+      var name=(parts[0]||'').trim();
+      var url=F9XRDirs.absUrl(parts[1]);
+      if(!name||!url)return null;
+      return{name:name,url:url};
     }).filter(Boolean);
   }catch(e){
     document.getElementById('directory-grid').innerHTML='<div class="col-span-full text-center py-12 text-platinum/50"><p>Failed to load directory data. Please refresh or try again later.</p></div>';
@@ -828,6 +841,7 @@ async function initData(){
 document.getElementById('dir-search').addEventListener('input',function(e){
   var q=e.target.value.toLowerCase();
   filteredDirData=q?dirData.filter(function(d){return d.name.toLowerCase().includes(q)||d.url.toLowerCase().includes(q)}):dirData;
+  dirPage=1;
   renderGrid(filteredDirData);
 });
 

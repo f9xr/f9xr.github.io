@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "skills": {
+    "paths": ["./marketingskills/skills"]
+  },
+  "references": {
+    "marketing-tools": {
+      "path": "./marketingskills/tools",
+      "description": "Use when a marketing skill asks for a tool integration guide (ga4, stripe, mailchimp, resend, google-ads, rewardful, hubspot, salesforce) or for tools/REGISTRY.md capability lookup."
+    }
+  }
+}

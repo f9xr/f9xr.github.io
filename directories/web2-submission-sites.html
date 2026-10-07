@@ -249,7 +249,7 @@
 <a href="../pages/services.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Services</a>
 <a href="../pages/portfolio.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Portfolio</a>
 <a href="../pages/projects.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Projects</a>
-<a href="../pages/case-studies.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Case Studies</a>
+<a href="../case-studies/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Case Studies</a>
 <a href="../tools/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Tools</a>
 <a href="../pages/contact.html" style="color:#3b82f6;font-weight:700;text-decoration:none;font-size:0.875rem">Hire Us</a>
 </div>
@@ -766,9 +766,10 @@ document.body.appendChild(document.createElement("click-spark"));
 
 <script>var LAYOUT_ROOT = "../";</script>
 <script src="../assets/js/layout.js"></script>
+<script src="../assets/js/directories.js"></script>
 
 <script>
-var SHEET_CSV='https://docs.google.com/spreadsheets/d/135iqVxSEWpmuDMyB08X5mN2EqY2GYayHZqZ_U_J5P2Y/gviz/tq?tqx=out:csv';
+var SHEET_CSV='data/web2-submission-sites.csv';
 var siteData=[];
 var filteredSiteData=[];
 
@@ -844,15 +845,11 @@ async function initSiteData(){
   try{
     var res=await fetch(SHEET_CSV);
     var csv=await res.text();
-    var rows=csv.trim().split('\n').slice(1);
-    siteData=rows.map(function(line){
-      var parts=line.replace(/^"(.*)"$/,'$1').split('","');
-      if(parts.length>=3){
-        var link=parts[0].trim();
-        if(!/^https?:\/\//.test(link))link='https://'+link;
-        return{link:link,username:parts[1].trim(),password:parts[2].trim()};
-      }
-      return null;
+    var rows=F9XRDirs.dataRows(csv);
+    siteData=rows.map(function(parts){
+      var link=F9XRDirs.absUrl(parts[0]);
+      if(!link)return null;
+      return{link:link,username:(parts[1]||'').trim(),password:(parts[2]||'').trim()};
     }).filter(Boolean);
   }catch(e){
     document.getElementById('site-table-body').innerHTML='<tr><td colspan="4" class="text-center py-12 text-platinum/50"><p>Failed to load site data. Please refresh or try again later.</p></td></tr>';

@@ -208,7 +208,7 @@
 <a href="../pages/services.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Services</a>
 <a href="../pages/portfolio.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Portfolio</a>
 <a href="../pages/projects.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Projects</a>
-<a href="../pages/case-studies.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Case Studies</a>
+<a href="../case-studies/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Case Studies</a>
 <a href="../tools/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Tools</a>
 <a href="../pages/contact.html" style="color:#3b82f6;font-weight:700;text-decoration:none;font-size:0.875rem">Hire Us</a>
 </div>
@@ -277,6 +277,7 @@
                     <tr><td colspan="3" class="text-center py-12 text-platinum/50"><i class="fa-solid fa-circle-notch fa-spin text-3xl mb-4 text-accent-blue"></i><p>Loading forum sites...</p></td></tr>
                 </tbody>
             </table>
+        <div id="forum-pagination" class="flex items-center justify-center gap-2 mt-6"></div>
         </div>
     </section>
     <section class="mb-24 reveal">
@@ -590,10 +591,13 @@
 <div id="search-modal-container"></div>
 <script>var LAYOUT_ROOT = "../";</script>
 <script src="../assets/js/layout.js"></script>
+<script src="../assets/js/directories.js"></script>
 <script>
-const SHEET_CSV='https://docs.google.com/spreadsheets/d/1L66EZD-CgLOv1hjuZNOYDNV1RcYdGXo_LQvpvYcCyeY/gviz/tq?tqx=out:csv';
+const SHEET_CSV='data/forum-posting-sites.csv';
 let forumData=[];
 let filteredData=[];
+let forumPage=1;
+let FORUM_PER_PAGE=50;
 let sortField=null;
 let sortAsc=true;
 function injectItemList(data){
@@ -609,8 +613,8 @@ function injectItemList(data){
     var d=data[i];
     var name='',url='';
     if(Array.isArray(d)){
-      name=d[0]||'';
-      url=d[0]?'https://'+d[0]:'';
+      name=String(d[0]||'').replace(/^https?:\/\//,'').replace(/\/$/,'');
+      url=d[0]||'';
     }else if(d){
       url=d.url||d.link||'';
       if(d.name){name=d.name;}
@@ -638,8 +642,24 @@ function renderTable(data){
   if(count)count.textContent=data.length+' forums';
   if(rc)rc.textContent=data.length+' results';
   if(!tbody)return;
-  if(data.length===0){tbody.innerHTML='<tr><td colspan="3" class="text-center py-12 text-platinum/50"><p>No forums match your search.</p></td></tr>';return;}
-  tbody.innerHTML=data.map(function(d,i){return'<tr class="border-b border-white/5 hover:bg-white/5 transition-colors"><td class="px-5 py-3 text-platinum/50 font-mono text-xs">'+(i+1)+'</td><td class="px-5 py-3"><a href="https://'+d[0]+'" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent-blue font-medium transition-colors">'+d[0]+' <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-50 ml-1"></i></a></td><td class="px-5 py-3"><span class="px-3 py-1 bg-accent-blue/20 text-accent-blue rounded-full text-xs font-bold">'+d[1]+'</span></td></tr>';}).join('');
+  if(data.length===0){
+    tbody.innerHTML='<tr><td colspan="3" class="text-center py-12 text-platinum/50"><p>No forums match your search.</p></td></tr>';
+    F9XRDirs.pager('forum-pagination',1,0,function(){});
+    return;
+  }
+  var totalPages=F9XRDirs.pageCount(data.length,FORUM_PER_PAGE);
+  if(forumPage>totalPages)forumPage=totalPages;
+  var startIndex=(forumPage-1)*FORUM_PER_PAGE;
+  tbody.innerHTML=F9XRDirs.slice(data,forumPage,FORUM_PER_PAGE).map(function(d,i){
+    var label=String(d[0]).replace(/^https?:\/\//,'').replace(/\/$/,'');
+    return'<tr class="border-b border-white/5 hover:bg-white/5 transition-colors"><td class="px-5 py-3 text-platinum/50 font-mono text-xs">'+(startIndex+i+1)+'</td><td class="px-5 py-3"><a href="'+F9XRDirs.esc(d[0])+'" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent-blue font-medium transition-colors">'+F9XRDirs.esc(label)+' <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-50 ml-1"></i></a></td><td class="px-5 py-3"><span class="px-3 py-1 bg-accent-blue/20 text-accent-blue rounded-full text-xs font-bold">'+F9XRDirs.esc(d[1])+'</span></td></tr>';
+  }).join('');
+  F9XRDirs.pager('forum-pagination',forumPage,totalPages,function(page){
+    forumPage=page;
+    renderTable(filteredData);
+    var el=document.getElementById('forums-list');
+    if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'start'});
+  });
   document.querySelectorAll('th .fa-sort, th .fa-sort-up, th .fa-sort-down').forEach(function(icon){
     var th=icon.closest('th');
     var field=th?.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
@@ -655,6 +675,7 @@ function sortForums(field){
     if(valA>valB)return sortAsc?1:-1;
     return 0;
   });
+  forumPage=1;
   renderTable(filteredData);
 }
 function filterForums(niche,btn){
@@ -664,21 +685,20 @@ function filterForums(niche,btn){
   var searchVal=document.getElementById('forum-search')?.value?.toLowerCase()||'';
   if(searchVal)filteredData=filteredData.filter(function(d){return d[0].toLowerCase().includes(searchVal)});
   sortField=null;
+  forumPage=1;
   renderTable(filteredData);
 }
 async function initForumData(){
   try{
     var res=await fetch(SHEET_CSV);
     var csv=await res.text();
-    var rows=csv.trim().split('\n').slice(1);
-    forumData=rows.map(function(line){
-      var p=line.replace(/^"(.*)"$/,'$1').split('","');
-      if(p.length>=3){
-        var link=p[1].trim().replace(/^https?:\/\//,'');
-        return[link,p[2].trim()];
-      }
-      return null;
-    }).filter(Boolean);
+    var rows=F9XRDirs.dataRows(csv);
+    forumData=F9XRDirs.uniqBy(rows.map(function(p){
+      var link=F9XRDirs.absUrl(p[1]);
+      var niche=(p[2]||'').trim()||'Other';
+      if(!link)return null;
+      return[link,niche];
+    }).filter(Boolean),function(d){return d[0].toLowerCase().replace(/\/+$/,'')+'|'+d[1];});
   }catch(e){
     document.getElementById('forum-table-body').innerHTML='<tr><td colspan="3" class="text-center py-12 text-platinum/50"><p>Failed to load forum data. Please refresh or try again later.</p></td></tr>';
     return;
@@ -713,6 +733,7 @@ document.getElementById('forum-search')?.addEventListener('input',function(e){
   if(q)data=data.filter(function(d){return d[0].toLowerCase().includes(q);});
   filteredData=data;
   sortField=null;
+  forumPage=1;
   renderTable(data);
 });
 initForumData();

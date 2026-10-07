@@ -35,7 +35,7 @@
     
     <meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Project Submission Sites &amp; Directories | F9XR">
+    <meta property="og:image:alt" content="Project Submission Sites & Directories | F9XR">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="F9XR Team">
     <meta property="og:updated_time" content="2026-07-23T00:00:00+00:00">
@@ -47,7 +47,7 @@
     <meta name="twitter:title" content="Project Submission Sites & Directories | F9XR">
     <meta name="twitter:description" content="Complete list of 150+ project submission sites, AI directories, and launchpads sorted by Domain Rating (DR).">
     <meta name="twitter:image" content="https://f9xr.org/assets/og-image.webp">
-    <meta name="twitter:image:alt" content="Project Submission Sites &amp; Directories | F9XR">
+    <meta name="twitter:image:alt" content="Project Submission Sites & Directories | F9XR">
     <meta name="twitter:url" content="https://f9xr.org/directories/project-submission-sites.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -215,7 +215,7 @@
 <a href="../pages/services.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Services</a>
 <a href="../pages/portfolio.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Portfolio</a>
 <a href="../pages/projects.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Projects</a>
-<a href="../pages/case-studies.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Case Studies</a>
+<a href="../case-studies/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Case Studies</a>
 <a href="../tools/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Tools</a>
 <a href="../pages/contact.html" style="color:#3b82f6;font-weight:700;text-decoration:none;font-size:0.875rem">Hire Us</a>
 </div>
@@ -291,6 +291,8 @@
 
         <div id="directory-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         </div>
+        <div id="dir-pagination" class="flex items-center justify-center gap-2 mt-8"></div>
+
     </section>
 
     <section class="mb-24 reveal">
@@ -431,10 +433,13 @@
 var LAYOUT_ROOT = "../";
 </script>
 <script src="../assets/js/layout.js"></script>
+<script src="../assets/js/directories.js"></script>
 <script>
-var SHEET_CSV='https://docs.google.com/spreadsheets/d/1Ij4Q1eYAbqFW8R-FguKLNqqEdzQcF_EE81FRWg63l7M/gviz/tq?tqx=out:csv';
+var SHEET_CSV='data/project-submission-sites.csv';
 var dirData=[];
 var filteredDirData=[];
+var dirPage=1;
+var DIR_PER_PAGE=48;
 
 function injectItemList(data){
   var existing=document.getElementById('project-itemlist-schema');
@@ -476,8 +481,14 @@ function renderGrid(data){
   var rc=document.getElementById('dir-result-count');
   if(rc)rc.textContent=data.length+' sites';
   if(!grid)return;
-  if(data.length===0){grid.innerHTML='<div class="col-span-full text-center py-12 text-platinum/50"><p>No sites match your search.</p></div>';return;}
-  grid.innerHTML=data.map(function(d){
+  if(data.length===0){
+    grid.innerHTML='<div class="col-span-full text-center py-12 text-platinum/50"><p>No sites match your search.</p></div>';
+    F9XRDirs.pager('dir-pagination',1,0,function(){});
+    return;
+  }
+  var totalPages=F9XRDirs.pageCount(data.length,DIR_PER_PAGE);
+  if(dirPage>totalPages)dirPage=totalPages;
+  grid.innerHTML=F9XRDirs.slice(data,dirPage,DIR_PER_PAGE).map(function(d){
     var drClass=d.dr>=50?'bg-green-500/20 text-green-400 border-green-500/30':d.dr>=20?'bg-yellow-500/20 text-yellow-400 border-yellow-500/30':'bg-red-500/20 text-red-400 border-red-500/30';
     var hasImg=d.img&&d.img.length>10;
     return '<div class="bg-gunmetal/40 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:border-accent-blue/40 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(59,130,246,0.15)]">'+
@@ -492,27 +503,29 @@ function renderGrid(data){
       '<a href="'+d.submit+'" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2 px-3 bg-accent-blue/20 border border-accent-blue/30 rounded-xl text-xs font-bold text-accent-blue hover:bg-accent-blue/30 transition-all"><i class="fa-solid fa-paper-plane mr-1"></i>Submit</a>'+
       '</div></div></div>';
   }).join('');
+  F9XRDirs.pager('dir-pagination',dirPage,totalPages,function(page){
+    dirPage=page;
+    renderGrid(filteredDirData);
+    var el=document.getElementById('directory-grid');
+    if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'start'});
+  });
 }
 
 async function initData(){
   try{
     var res=await fetch(SHEET_CSV);
     var csv=await res.text();
-    var rows=csv.trim().split('\n').slice(1);
-    dirData=rows.map(function(line){
-      var parts=line.replace(/^"(.*)"$/,'$1').split('","');
-      if(parts.length>=6){
-        var name=parts[0].trim();
-        var type=parts[1].trim();
-        var dr=parseFloat(parts[2].trim())||0;
-        var url=parts[3].trim();
-        var submit=parts[4].trim();
-        var img=parts[5].trim();
-        if(!/^https?:\/\//.test(url))url='https://'+url;
-        if(!/^https?:\/\//.test(submit))submit='https://'+submit;
-        return{name:name,type:type,dr:dr,url:url,submit:submit,img:img};
-      }
-      return null;
+    var rows=F9XRDirs.dataRows(csv);
+    dirData=rows.map(function(parts){
+      var name=(parts[0]||'').trim();
+      if(!name)return null;
+      var type=(parts[1]||'').trim();
+      var dr=parseFloat((parts[2]||'').trim())||0;
+      var url=F9XRDirs.absUrl(parts[3]);
+      var submit=F9XRDirs.absUrl(parts[4]);
+      var img=F9XRDirs.absUrl(parts[5]);
+      if(!url)return null;
+      return{name:name,type:type,dr:dr,url:url,submit:submit,img:img};
     }).filter(Boolean);
   }catch(e){
     document.getElementById('directory-grid').innerHTML='<div class="col-span-full text-center py-12 text-platinum/50"><p>Failed to load directory data. Please refresh or try again later.</p></div>';
@@ -526,6 +539,7 @@ async function initData(){
 document.getElementById('dir-search').addEventListener('input',function(e){
   var q=e.target.value.toLowerCase();
   filteredDirData=q?dirData.filter(function(d){return d.name.toLowerCase().includes(q)||d.type.toLowerCase().includes(q)}):dirData;
+  dirPage=1;
   renderGrid(filteredDirData);
 });
 

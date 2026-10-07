@@ -5,6 +5,7 @@ https://f9xr.org/announcements/index.html
 https://f9xr.org/case-studies/index.html
 https://f9xr.org/case-studies/seo-audit-report-skill.html
 https://f9xr.org/case-studies/skylimit-ar-dashboard.html
+https://f9xr.org/directories/ai-tools.html
 https://f9xr.org/directories/business-listing-sites.html
 https://f9xr.org/directories/forum-posting-sites.html
 https://f9xr.org/directories/free-backlink-creation-sites.html
@@ -29,6 +30,8 @@ https://f9xr.org/pages/portfolio.html
 https://f9xr.org/pages/projects.html
 https://f9xr.org/pages/publications.html
 https://f9xr.org/pages/services.html
+https://f9xr.org/pages/sitemap.html
+https://f9xr.org/pages/why-us.html
 https://f9xr.org/services/ai-visibility-optimization.html
 https://f9xr.org/services/content-creation-editorial-operations.html
 https://f9xr.org/services/data-management.html
@@ -50,6 +53,4 @@ https://f9xr.org/tools/local-seo-score.html
 https://f9xr.org/tools/marketing-budget.html
 https://f9xr.org/tools/redesign-calculator.html
 https://f9xr.org/tools/website-cost.html
-https://f9xr.org/troolify/
-https://f9xr.org/BharatByDay/
 https://f9xr.org/articles/

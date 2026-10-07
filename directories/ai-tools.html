@@ -58,8 +58,7 @@
     <link rel="preload" as="image" href="../assets/og-image.webp">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://formspree.io">
-    <link rel="dns-prefetch" href="https://docs.google.com">
-
+    
     <link rel="stylesheet" href="../assets/css/directories.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -258,7 +257,7 @@
 <a href="../pages/services.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Services</a>
 <a href="../pages/portfolio.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Portfolio</a>
 <a href="../pages/projects.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Projects</a>
-<a href="../pages/case-studies.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Case Studies</a>
+<a href="../case-studies/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Case Studies</a>
 <a href="../tools/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Tools</a>
 <a href="../pages/contact.html" style="color:#3b82f6;font-weight:700;text-decoration:none;font-size:0.875rem">Hire Us</a>
 </div>
@@ -707,9 +706,10 @@ document.body.appendChild(document.createElement("click-spark"));
 
 <script>var LAYOUT_ROOT = "../";</script>
 <script src="../assets/js/layout.js"></script>
+<script src="../assets/js/directories.js"></script>
 
 <script>
-var SHEET_CSV='https://docs.google.com/spreadsheets/d/1Hr3oGmWGUZPO4wgtmb7bDQBgZcB-RtzCuNDpMDA6l8Q/gviz/tq?tqx=out:csv';
+var SHEET_CSV='data/ai-tools.csv';
 var toolData=[];
 var filteredToolData=[];
 var toolCurrentPage=1;
@@ -922,23 +922,22 @@ async function initData(){
   try{
     var res=await fetch(SHEET_CSV);
     var csv=await res.text();
-    var rows=csv.trim().split('\n').slice(1);
-    toolData=rows.map(function(line){
-      var parts=line.replace(/^"(.*)"$/,'$1').split('","');
-      if(parts.length>=7){
-        var logo=parts[0].trim();
-        var name=parts[1].trim();
-        var url=parts[2].trim();
-        var intro=parts[3].trim();
-        var category=parts[4].trim();
-        var tags=parts[5].trim();
-        var desc=parts[6].trim();
-        var screenshot=(parts.length>=8)?parts[7].trim():'';
-        if(!/^https?:\/\//.test(url))url='https://'+url;
-        return{logo:logo,name:name,url:url,intro:intro,category:category,tags:tags,desc:desc,screenshot:screenshot};
-      }
-      return null;
-    }).filter(function(d){return d&&d.name&&d.url});
+    var rows=F9XRDirs.dataRows(csv);
+    toolData=rows.map(function(parts){
+      var name=(parts[1]||'').trim();
+      var url=F9XRDirs.absUrl(parts[2]);
+      if(!name||!url)return null;
+      return{
+        logo:(parts[0]||'').trim(),
+        name:name,
+        url:url,
+        intro:(parts[3]||'').trim(),
+        category:(parts[4]||'').trim(),
+        tags:(parts[5]||'').trim(),
+        desc:(parts[6]||'').trim(),
+        screenshot:(parts[7]||'').trim()
+      };
+    }).filter(Boolean);
   }catch(e){
     document.getElementById('tools-grid').innerHTML='<div class="col-span-full text-center py-12 text-platinum/50"><i class="fa-solid fa-triangle-exclamation mb-4 text-2xl text-accent-blue"></i><p>Failed to load AI tools data. Please refresh or try again later.</p></div>';
     return;
