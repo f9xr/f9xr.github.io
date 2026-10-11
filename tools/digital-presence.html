@@ -2,7 +2,21 @@
 <html lang="en">
 <head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-134PMTPP82"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-134PMTPP82');</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-134PMTPP82');
+    </script>
+
+    <!-- Clarity tracking code for https://f9xr.org/ -->
+    <script>
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "xgqzx0h42p");
+    </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +34,8 @@
 <meta property="og:url" content="https://f9xr.org/tools/digital-presence.html">
 <meta property="og:image" content="https://f9xr.org/assets/og-image.webp">
 
-    <meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1200">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Digital Presence Score Calculator &mdash; F9XR Tools">
 <meta property="og:locale" content="en_US">
@@ -49,7 +64,7 @@
   "operatingSystem": "All",
   "applicationCategory": "BusinessApplication",
   "url": "https://f9xr.org/tools/digital-presence.html",
-  "description": "Evaluate your business's online presence across 8 key factors ? website, social media, reviews, local SEO, and more. Get your score out of 100 plus personalized recommendations.",
+  "description": "Evaluate your business's online presence across 8 key factors — website, social media, reviews, local SEO, and more. Get your score out of 100 plus personalized recommendations.",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "provider": { "@type": "Organization", "name": "F9XR Team", "url": "https://f9xr.org/" }
 }
@@ -82,7 +97,7 @@
       "@id": "https://f9xr.org/#website",
       "url": "https://f9xr.org/",
       "name": "F9XR Team",
-      "description": "AI Web Design & Local SEO Agency ? Architects of Digital Precision",
+      "description": "AI Web Design & Local SEO Agency — Architects of Digital Precision",
       "publisher": { "@id": "https://f9xr.org/#organization" },
       "inLanguage": "en-US",
       "potentialAction": {
@@ -181,7 +196,7 @@ body{overflow-x:hidden}
 <a href="../pages/projects.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Projects</a>
 <a href="../case-studies/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Case Studies</a>
 <a href="../tools/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Tools</a>
-<a href="../pages/contact.html" style="color:#3b82f6;font-weight:700;text-decoration:none;font-size:0.875rem">Hire Us</a>
+<a href="../pages/contact.html#book" style="color:#3b82f6;font-weight:700;text-decoration:none;font-size:0.875rem">Book Your Free Call</a>
 </div>
 </nav>
 </noscript>
@@ -339,7 +354,7 @@ body{overflow-x:hidden}
         </div>
         <div class="bg-gradient-to-br from-accent-blue/20 to-accent-blue/5 border border-accent-blue/20 rounded-2xl p-5 mt-6 text-center flex flex-wrap items-center justify-center gap-3 animate-fade" style="animation-delay:.15s">
           <p class="text-sm font-semibold text-bright-snow m-0"><i class="fa-solid fa-rocket" aria-hidden="true"></i> Want help improving your score?</p>
-          <a href="https://f9xr.org/pages/contact.html" class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-accent-blue text-white text-xs font-bold no-underline hover:bg-blue-700 hover:-translate-y-0.5 transition-all">Book a Free Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="https://f9xr.org/pages/contact.html#book" class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-accent-blue text-white text-xs font-bold no-underline hover:bg-blue-700 hover:-translate-y-0.5 transition-all">Book Your Free Call <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -585,7 +600,7 @@ body{overflow-x:hidden}
       </div>
       <div class="text-center mt-2 mb-8">
         <a href="https://tontuftools.blogspot.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/40 hover:text-accent-blue transition-colors">
-          <i class="fa-solid fa-bolt text-accent-blue"></i> Powered by TONTUFTools
+          <i class="fa-solid fa-bolt text-accent-blue"></i> Powered by F9XR Team
         </a>
       </div>
 
@@ -753,7 +768,7 @@ body{overflow-x:hidden}
   function getRecommendations(raw) {
     const recs = [];
 
-    if (raw.website === 0) recs.push({ level: 'red', icon: 'fa-globe', text: 'Get a professional website ? it is your digital storefront and the #1 ranked factor (25 pts).' });
+    if (raw.website === 0) recs.push({ level: 'red', icon: 'fa-globe', text: 'Get a professional website — it is your digital storefront and the #1 ranked factor (25 pts).' });
     else if (raw.website < 15) recs.push({ level: 'amber', icon: 'fa-globe', text: 'Upgrade your website. Aim for a fast, mobile-friendly, SEO-optimized site with clear CTAs.' });
     else if (raw.website < 25) recs.push({ level: 'green', icon: 'fa-globe', text: 'Great website! Consider adding live chat, testimonials, and a blog to maximize engagement.' });
 
@@ -818,9 +833,9 @@ body{overflow-x:hidden}
 
     const missing = getMissingFactors(result.raw);
     if (missing.length === 0) {
-      el.missingList.innerHTML = 'Nothing ? you\'re fully covered!';
+      el.missingList.innerHTML = 'Nothing — you\'re fully covered!';
     } else {
-      const items = missing.slice(0, 5).map(m => '? ' + m);
+      const items = missing.slice(0, 5).map(m => '• ' + m);
       el.missingList.innerHTML = items.join(', ');
     }
 

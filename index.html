@@ -35,7 +35,8 @@
     <meta property="og:description" content="F9XR Team architects high-performance websites, AI-integrated systems & Local SEO. We build conversion engines that drive measurable growth for global brands.">
     <meta property="og:image" content="https://f9xr.org/assets/og-image.webp">
     
-    <meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1200">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="F9XR Team - AI Web Design & Local SEO Agency">
     <meta property="og:locale" content="en_US">
@@ -91,12 +92,6 @@
         #review-slider p { letter-spacing: -0.02em; }
         .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
         article a:hover { transform: scale(1.01); }
-        .card-stack-container { perspective: 1000px; }
-        .card-stack-item { position: absolute; top: 0; left: 0; width: 100%; height: 100%; transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); transform-origin: center bottom; cursor: pointer; box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5); }
-        .card-stack-item:nth-last-child(1) { z-index: 3; transform: translateY(0) scale(1); opacity: 1; }
-        .card-stack-item:nth-last-child(2) { z-index: 2; transform: translateY(-20px) scale(0.95); opacity: 0.8; }
-        .card-stack-item:nth-last-child(3) { z-index: 1; transform: translateY(-40px) scale(0.90); opacity: 0.6; pointer-events: none; }
-        .card-stack-item.swapping-out { transform: translateY(100px) scale(0.8); opacity: 0; }
         @view-transition { navigation: auto; }
         ::view-transition-old(root) { animation: vt-fade-out 0.35s ease-out forwards; }
         ::view-transition-new(root) { animation: vt-fade-in 0.35s ease-in forwards; }
@@ -458,7 +453,7 @@
                                         <i class="fa-solid fa-handshake-angle"></i>
                                     </div>
                                     <div class="flex-1">
-                                        <div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Hire Us!</div>
+                                        <div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Contact Us</div>
                                         <div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">Collaborate
                                             with us for mutual growth</div>
                                     </div>
@@ -654,7 +649,7 @@
             <!-- 3. Header Actions (Right) -->
             <div class="flex items-center gap-5">
 
-                <a href="https://web.whatsapp.com/send?phone=919123442431" target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank" rel="noopener noreferrer"
                     class="hidden sm:flex text-white/80 hover:text-white text-xl transition-all hover:scale-110">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
@@ -663,7 +658,7 @@
                     aria-label="Toggle Menu">
                     <i id="menu-icon" class="fa-solid fa-bars-staggered"></i>
                 </button>
-                <a href="/pages/contact.html" class="hidden md:flex bg-white text-carbon-black px-6 py-3 lg:px-8 lg:py-4 rounded-full font-black text-[11px] lg:text-[13px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95 ml-2">Hire Us</a>
+                <a href="#book" class="hidden md:flex bg-white text-carbon-black px-6 py-3 lg:px-8 lg:py-4 rounded-full font-black text-[11px] lg:text-[13px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95 ml-2">Book Your Free Call</a>
             </div>
         </nav>
 
@@ -684,16 +679,16 @@
                     class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>
                 <a href="/pages/portfolio.html" onclick="toggleMobileMenu()"
                     class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>
-                <a href="/pages/contact.html" onclick="toggleMobileMenu()"
-                    class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire
-                    Team</a>
+                <a href="#book" onclick="toggleMobileMenu()"
+                    class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Book
+                    Your Free Call</a>
             </div>
 
             <div class="mt-20 pt-10 border-t border-white/5 flex gap-8">
-                <a href="https://instagram.com/f9xrteam" rel="me noopener noreferrer" aria-label="Instagram"
+                <a href="https://instagram.com/f9xrteam" aria-label="Instagram"
                     class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer"><i
                         class="fa-brands fa-instagram"></i></a>
-                <a href="https://web.whatsapp.com/send?phone=919123442431" aria-label="WhatsApp"
+                <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" aria-label="WhatsApp"
                     class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
                         class="fa-brands fa-whatsapp"></i></a>
                 <a href="mailto:hello@f9xr.org" aria-label="Email Us"
@@ -733,24 +728,24 @@
 
                 <h1
                     class="text-5xl md:text-7xl lg:text-[7rem] xl:text-[8rem] font-black leading-[0.9] tracking-tighter mb-8 uppercase italic text-white drop-shadow-2xl">
-                    Empowering <br>
+                    Web Design & <br>
                     <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-white via-platinum to-white/50">Brands.</span>
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-white via-platinum to-white/50">Local SEO.</span>
                 </h1>
 
 
                 <p
                     class="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-platinum via-white to-platinum max-w-4xl mx-auto leading-relaxed mb-12 italic font-medium drop-shadow-lg reveal delay-200">
-                    We Build, We Invest, We Publish, We Market Digital Services and Businesses that elevate your
-                    productivity.
+                    We architect high-converting websites, AI-integrated systems, and Local SEO strategies that turn
+                    visitors into revenue.
                 </p>
 
 
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
 
-                    <a href="pages/contact.html"
+                    <a href="#book"
                         class="group bg-bright-snow text-carbon-black px-10 py-5 rounded-full font-black text-lg uppercase tracking-wider hover:bg-white hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] flex items-center gap-3">
-                        Get Started Today
+                        Book Your Free Call
                         <i
                             class="fa-solid fa-arrow-right-long text-accent-blue group-hover:translate-x-1 transition-transform"></i>
                     </a>
@@ -953,10 +948,10 @@
                                 </ul>
 
                                 <div class="mt-12 pt-10 border-t border-white/5">
-                                    <a href="pages/contact.html" class="flex items-center justify-between group/link">
+                                    <a href="#book" class="flex items-center justify-between group/link">
                                         <span
-                                            class="text-lg font-black uppercase tracking-tighter italic text-accent-blue">Close
-                                            the Gap Now</span>
+                                            class="text-lg font-black uppercase tracking-tighter italic text-accent-blue">Book
+                                            Your Free Call</span>
                                         <i
                                             class="fa-solid fa-arrow-right-long text-accent-blue transition-transform group-hover/link:translate-x-2"></i>
                                     </a>
@@ -1268,9 +1263,9 @@
                                             We analyze your brand DNA, technical debt, and competitor landscape to find
                                             exactly where you are losing global visibility.
                                         </p>
-                                        <a href="pages/contact.html"
+                                        <a href="#book"
                                             class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
-                                            Book Free Audit <i class="fa-solid fa-arrow-right-long"></i>
+                                            Book Your Free Call <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -1328,9 +1323,9 @@
                                             We map out user psychology, conversion funnels, and modern aesthetics to
                                             ensure your digital product converts browsers into high-paying clients.
                                         </p>
-                                        <a href="pages/contact.html"
+                                        <a href="#book"
                                             class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
-                                            Review Framework <i class="fa-solid fa-arrow-right-long"></i>
+                                            Book Your Free Call <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -1388,9 +1383,9 @@
                                             Our engineers translate designs into clean, scalable code integrated with
                                             proprietary AI logic for automated engagement and security.
                                         </p>
-                                        <a href="pages/contact.html"
+                                        <a href="#book"
                                             class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
-                                            View Tech Stack <i class="fa-solid fa-arrow-right-long"></i>
+                                            Book Your Free Call <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -1448,9 +1443,9 @@
                                             Post-launch, we focus on rigorous SEO indexing, Core Web Vital tuning, and
                                             performance monitoring to ensure long-term ROI.
                                         </p>
-                                        <a href="pages/contact.html"
+                                        <a href="#book"
                                             class="inline-flex items-center gap-3 bg-accent-blue text-white px-8 py-4 rounded-full font-black text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-lg">
-                                            Scale My Business <i class="fa-solid fa-arrow-right-long"></i>
+                                            Book Your Free Call <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -2202,9 +2197,9 @@
                             </li>
                         </ul>
 
-                        <a href="pages/contact.html"
+                        <a href="#book"
                             class="block text-center border-2 border-white py-6 rounded-full font-black text-xl hover:bg-white hover:text-carbon-black transition-all shadow-xl uppercase tracking-tighter italic">
-                            Get a Quote
+                            Book Your Free Call
                         </a>
                     </div>
 
@@ -2250,9 +2245,9 @@
                             </li>
                         </ul>
 
-                        <a href="pages/contact.html"
+                        <a href="#book"
                             class="group block text-center bg-white text-carbon-black py-7 rounded-full font-black text-2xl transition-all shadow-2xl uppercase tracking-tighter italic overflow-hidden relative">
-                            <span class="relative z-10">Hire Us Now</span>
+                            <span class="relative z-10">Book Your Free Call</span>
                             <div
                                 class="absolute inset-0 bg-accent-blue translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                             </div>
@@ -2434,7 +2429,7 @@
                             </button>
                             <p
                                 class="text-center mt-6 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-iron-grey opacity-60">
-                                <i class="fa-solid fa-lock mr-2 text-accent-blue"></i> Your data is end-to-end encrypted
+                                <i class="fa-solid fa-lock mr-2 text-accent-blue"></i> Your data is encrypted &amp; protected
                             </p>
                         </div>
                     </form>
@@ -2448,7 +2443,7 @@
                         <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-4 italic text-white">
                             Direct Access.</h3>
                         <p class="text-base md:text-lg text-platinum/70 mb-8 md:mb-10 font-medium italic">Skip the form
-                            and chat with our strategy team instantly for a 15-minute consultation.</p>
+                            and chat with our strategy team instantly for a 30-minute consultation.</p>
                         <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank" rel="noopener noreferrer"
                             class="w-full sm:w-auto inline-flex items-center justify-center gap-4 bg-[#25D366] text-white px-8 py-5 md:px-12 md:py-6 rounded-full font-black text-lg md:text-xl hover:scale-105 transition-transform shadow-2xl shadow-green-500/20">
                             <span>Chat Now</span>
@@ -2460,7 +2455,7 @@
 
                 <div class="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-white/5 text-center">
                     <p class="text-sm md:text-base text-platinum/40 font-bold italic">Need more details?
-                        <a href="pages/contact.html"
+                        <a href="pages/contact.html#book"
                             class="text-bright-snow underline underline-offset-4 decoration-accent-blue hover:text-accent-blue transition-colors">Visit
                             full Contact Portal</a>
                     </p>
@@ -2489,9 +2484,9 @@
                         Book a <br> <span class="text-stroke">Blueprint Session.</span>
                     </h2>
                     <p class="text-xl text-platinum/70 mt-6 max-w-2xl mx-auto font-medium italic">
-                        Secure a 10-minute technical audit. We'll map out your digital architecture and growth
+                        Secure a 30-minute technical audit. We'll map out your digital architecture and growth
                         strategy
-                        ''" no strings attached.
+                        — no strings attached.
                     </p>
                 </div>
 
@@ -2507,7 +2502,7 @@
                                 <div class="w-2 h-2 rounded-full bg-green-500/40"></div>
                             </div>
                             <p class="text-[10px] font-black uppercase tracking-widest text-iron-grey mx-auto italic">
-                                F9XR Team / 10min-consultation
+                                F9XR Team / 30min-consultation
                             </p>
                         </div>
 
@@ -2573,7 +2568,7 @@
                         class="inline-flex items-center gap-4 bg-white/5 border border-white/10 px-8 py-3 rounded-full">
                         <i class="fa-solid fa-shield-halved text-accent-blue text-xs"></i>
                         <p class="text-platinum/40 font-bold uppercase tracking-[0.2em] text-[10px]">
-                            Encrypted Scheduling &bull; <span class="text-white">Worldwide Availability</span>
+                            Secure Scheduling &bull; <span class="text-white">Worldwide Availability</span>
                         </p>
                     </div>
                 </div>
@@ -2606,7 +2601,7 @@
                     </button>
                     <div class="faq-content">
                         <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
-                            A standard business website typically takes 10''?14 days. Complex sites with full SEO
+                            A standard business website typically takes 10–14 days. Complex sites with full SEO
                             architectures, AI integrations, or custom fintech dashboards take about 3-4 weeks from
                             discovery to deployment.
                         </div>
@@ -2670,7 +2665,7 @@
                     </button>
                     <div class="faq-content">
                         <div class="px-10 pb-10 text-xl text-platinum/60 leading-relaxed">
-                            Every F9XR project includes "Standard Technical SEO"''"this means clean meta tags, image
+                            Every F9XR project includes "Standard Technical SEO" — this means clean meta tags, image
                             alt-text, schema markup, and Search Console indexing. For those looking to dominate local
                             search, our "Growth Packs" include advanced Local SEO and GMB management.
                         </div>
@@ -2742,9 +2737,9 @@
                             style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span>
                     </h2>
                 </div>
-                <a href="/pages/contact.html"
+                <a href="#book"
                     class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">
-                    Hire Team <i
+                    Book Your Free Call <i
                         class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
                 </a>
             </div>
@@ -2889,10 +2884,10 @@
             });
 
 
-            const heroTitle = document.querySelector('.hero-title'); // Assuming class exists or targeting h1
+            const heroTitle = document.querySelector('h1');
             if (heroTitle) {
                 gsap.to(heroTitle, {
-                    yPercent: 50,
+                    yPercent: 20,
                     ease: "none",
                     scrollTrigger: {
                         trigger: document.body,
@@ -3049,7 +3044,7 @@
                         const lm = (u.getElementsByTagName('lastmod')[0] || {}).textContent || '';
                         return { loc: loc, lastmod: lm };
                     }).filter(function(p) {
-                        return /^https:\/\/f9xr\.github\.io\/articles\/\d{4}\/\d{2}\/\d{2}\/.+\.html$/.test(p.loc);
+                        return /^https:\/\/f9xr\.(?:org|github\.io)\/articles\/\d{4}\/\d{2}\/\d{2}\/.+\.html$/.test(p.loc);
                     }).sort(function(a, b) {
                         return (b.lastmod || '').localeCompare(a.lastmod || '');
                     }).slice(0, 3);
@@ -3177,19 +3172,6 @@
         }
         customElements.define("click-spark", ClickSpark);
         document.body.appendChild(document.createElement("click-spark"));
-
-        function swapCard(card) {
-            const container = card.parentElement;
-
-            if (card !== container.lastElementChild) return;
-
-            card.classList.add('swapping-out');
-
-            setTimeout(() => {
-                card.classList.remove('swapping-out');
-                container.prepend(card); // Move to bottom of stack (first child in DOM)
-            }, 500);
-        }
     </script>
 
 <script>
@@ -3209,7 +3191,7 @@
       "phoneNumber": "9123442431"
     },
     "buttonText": "Chat with Us!",
-    "welcomeMessage": "Hello ??\\nHow can we help you today?"
+    "welcomeMessage": "Hello! How can we help you today?"
   },
   "position": "left"
 });

@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   'use strict';
 
   var ROOT_PREFIX = typeof LAYOUT_ROOT !== 'undefined' ? LAYOUT_ROOT : '';
@@ -32,7 +32,7 @@
     '<div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Customer Stories</div><div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">See how we\'ve helped our clients succeed</div></div></a>' +
     '<a href="/pages/contact.html" class="flex gap-4 hover:bg-white/5 p-3 rounded-lg transition-colors group/item border-t border-white/5 mt-1 pt-4">' +
     '<div class="w-10 h-10 lg:w-12 lg:h-12 rounded-md bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-white/10 transition-colors text-accent-blue"><i class="fa-solid fa-handshake-angle"></i></div>' +
-    '<div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Hire Us!</div><div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">Collaborate with us for mutual growth</div></div></a></div>' +
+    '<div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-1">Contact Us</div><div class="text-platinum/50 text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] leading-snug font-medium">Collaborate with us for mutual growth</div></div></a></div>' +
     '<div class="w-[45%] flex flex-col justify-center py-4 px-6 gap-6 bg-[#0a0a0a]">' +
     '<a href="/legals/terms.html" class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors"><i class="fa-regular fa-file-lines w-4 text-center opacity-80"></i> Terms of Service</a>' +
     '<a href="/legals/privacy.html" class="flex items-center gap-3 text-platinum/80 hover:text-white text-[13px] lg:text-[15px] font-bold transition-colors"><i class="fa-solid fa-shield-halved w-4 text-center opacity-80"></i> Privacy Policy</a>' +
@@ -71,9 +71,9 @@
     '<a href="https://f9xr.org/dev9b" target="_blank" rel="noopener noreferrer" class="flex gap-4 hover:bg-white/5 p-3 rounded-xl transition-colors group/item border-t border-white/5"><div class="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center shrink-0 group-hover/item:bg-accent-blue/20 group-hover/item:text-accent-blue transition-colors"><i class="fa-solid fa-code"></i></div><div class="flex-1"><div class="text-white text-[13px] lg:text-[15px] font-bold mb-0.5">Developer Blog</div><div class="text-platinum/50 text-[10px] leading-snug font-medium">Build notes and dev logs</div></div></a></div></div></div>' +
     '<button onclick="openSearchModal()" aria-label="Search Site" class="ml-2 w-10 h-10 lg:w-12 lg:h-12 bg-accent-blue text-white rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.5)]"><i class="fa-solid fa-magnifying-glass text-lg"></i></button></div>' +
     '<div class="flex items-center gap-5">' +
-    '<a href="https://web.whatsapp.com/send?phone=919032065784" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="hidden sm:flex text-white/80 hover:text-white text-xl transition-all hover:scale-110"><i class="fa-brands fa-whatsapp"></i></a>' +
+    '<a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="hidden sm:flex text-white/80 hover:text-white text-xl transition-all hover:scale-110"><i class="fa-brands fa-whatsapp"></i></a>' +
     '<button onclick="toggleMobileMenu()" id="menu-btn" class="lg:hidden text-white/80 hover:text-white text-xl active:scale-90 transition-all hover:scale-110" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu"><i id="menu-icon" class="fa-solid fa-bars-staggered"></i></button>' +
-    '<a href="/pages/contact.html" class="hidden md:flex bg-white text-carbon-black px-6 py-3 lg:px-8 lg:py-4 rounded-full font-black text-[11px] lg:text-[13px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95 ml-2">Hire Us</a></div></nav>' +
+    '<a href="/pages/contact.html#book" class="hidden md:flex bg-white text-carbon-black px-6 py-3 lg:px-8 lg:py-4 rounded-full font-black text-[11px] lg:text-[13px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95 ml-2">Book Your Free Call</a></div></nav>' +
     '<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation" class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">' +
     '<button onclick="toggleMobileMenu()" class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors"><i class="fa-solid fa-xmark"></i></button>' +
     '<div class="space-y-8"><span class="text-accent-blue font-black uppercase tracking-[0.4em] text-[10px] block mb-4 italic">Menu</span>' +
@@ -81,10 +81,10 @@
     '<a href="/pages/why-us.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Why Us</a>' +
     '<a href="/pages/services.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Services</a>' +
     '<a href="/pages/portfolio.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-white hover:text-accent-blue transition-colors">Works</a>' +
-    '<a href="/pages/contact.html" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Hire Team</a></div>' +
+    '<a href="/pages/contact.html#book" onclick="toggleMobileMenu()" class="block text-5xl font-black italic tracking-tighter uppercase text-accent-blue underline underline-offset-8">Book Your Free Call</a></div>' +
     '<div class="mt-20 pt-10 border-t border-white/5 flex gap-8">' +
     '<a href="https://instagram.com/f9xrteam" rel="me noopener noreferrer" aria-label="Instagram" class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank"><i class="fa-brands fa-instagram"></i></a>' +
-    '<a href="https://web.whatsapp.com/send?phone=919032065784" aria-label="WhatsApp" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>' +
+    '<a href="https://wa.me/message/X3KGWTAJ6Z6NB1" aria-label="WhatsApp" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>' +
     '<a href="mailto:hello@f9xr.org" aria-label="Email Us" class="text-platinum/70 text-2xl hover:text-white transition-colors"><i class="fa-solid fa-envelope"></i></a>' +
     '<a href="https://www.youtube.com/@QuarterlyLIV" aria-label="YouTube" class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>' +
     '<a href="https://pinterest.com/f9xr" aria-label="Pinterest" class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a></div></div></header>' +
@@ -108,7 +108,7 @@
     '<div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col min-h-[60vh]">' +
     '<div class="flex flex-col md:flex-row justify-between items-center pt-10 pb-10 mb-10 border-b border-white/5 gap-8 reveal">' +
     '<div class="text-center md:text-left"><h2 class="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none text-white">Let\'s Build <br class="hidden md:block"> <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1px #f8f9fa;">Something Great.</span></h2></div>' +
-    '<a href="/pages/contact.html" class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">Hire Team <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i></a></div>' +
+    '<a href="/pages/contact.html#book" class="group bg-accent-blue text-white px-10 py-5 rounded-full font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-[0_20px_50px_rgba(59,130,246,0.3)] flex items-center gap-4">Book Your Free Call <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i></a></div>' +
     '<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-14">' +
     '<div class="flex flex-col gap-6 lg:col-span-3"><h4 class="text-[10px] font-bold text-white/50 uppercase tracking-widest">Pages</h4><div class="flex flex-col gap-3">' +
     '<a href="/pages/about.html" class="flex items-center text-2xl lg:text-[28px] font-bold text-white hover:text-accent-blue transition-colors tracking-tight"><i class="fa-solid fa-circle-info text-accent-blue/50 mr-3 text-xl w-6 text-center"></i>About Us</a>' +

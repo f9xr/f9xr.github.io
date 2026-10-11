@@ -4,13 +4,21 @@
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-134PMTPP82"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-134PMTPP82');
+    </script>
 
-  gtag('config', 'G-134PMTPP82');
-</script>
+    <!-- Clarity tracking code for https://f9xr.org/ -->
+    <script>
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "xgqzx0h42p");
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,10 +46,12 @@
     <meta property="og:description" content="Explore the digital masterpieces crafted by F9XR Team. A showcase of high-performance websites, AI solutions, and brand architectures.">
     <meta property="og:image" content="https://f9xr.org/assets/og-image.webp">
         
-    <meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1200">
+<meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Portfolio | F9XR Team - Digital Masterpieces">
-    <meta property="og:locale" content="en_US"><meta property="og:site_name" content="F9XR Team">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="F9XR Team">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://f9xr.org/pages/portfolio.html">
@@ -72,9 +82,7 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
-<noscript>
-</noscript>
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="../assets/css/tailwind.css">
 <style type="text/css">
         /* Performance: Optimize font visibility */
@@ -234,7 +242,7 @@
 <a href="../pages/projects.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Projects</a>
 <a href="../case-studies/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Case Studies</a>
 <a href="../tools/index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.875rem">Tools</a>
-<a href="../pages/contact.html" style="color:#3b82f6;font-weight:700;text-decoration:none;font-size:0.875rem">Hire Us</a>
+<a href="../pages/contact.html#book" style="color:#3b82f6;font-weight:700;text-decoration:none;font-size:0.875rem">Book Your Free Call</a>
 </div>
 </nav>
 </noscript>
@@ -252,6 +260,11 @@
                 A showcase of high-performance digital experiences, AI-integrated architectures, and brand-defining
                 designs crafted by the F9XR Team.
             </p>
+            <div class="flex flex-wrap gap-6 mt-10 justify-center md:justify-start">
+                <span class="inline-flex items-center gap-2 text-sm text-platinum/70 font-bold"><i class="fa-solid fa-bolt text-accent-blue"></i>Performance-First Builds</span>
+                <span class="inline-flex items-center gap-2 text-sm text-platinum/70 font-bold"><i class="fa-solid fa-shield-halved text-accent-blue"></i>Enterprise-Grade Security</span>
+                <span class="inline-flex items-center gap-2 text-sm text-platinum/70 font-bold"><i class="fa-solid fa-rocket text-accent-blue"></i>SEO-Optimized</span>
+            </div>
         </section>
 
         <!-- === PROJECT GALLERY === -->
@@ -315,7 +328,7 @@
 
             <!-- Project 4: Live Counter -->
             <div class="group reveal">
-                <a href="#" target="_blank" rel="noopener noreferrer"
+                <a href="https://livewordcountertool.blogspot.com/" target="_blank" rel="noopener noreferrer"
                     class="block overflow-hidden rounded-[2.5rem] border border-white/10 relative">
                     <div
                         class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center backdrop-blur-sm">
@@ -386,18 +399,20 @@
                 high-impact digital architecture, let's talk.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="contact.html"
-                    class="bg-bright-snow text-carbon-black px-10 py-4 rounded-full font-black text-lg uppercase tracking-widest hover:scale-105 transition-transform shadow-lg">Start
-                    Project</a>
+                <a href="contact.html#book"
+                    class="bg-bright-snow text-carbon-black px-10 py-4 rounded-full font-black text-lg uppercase tracking-widest hover:scale-105 transition-transform shadow-lg inline-flex items-center justify-center gap-3"><i
+                        class="fa-solid fa-calendar-check text-accent-blue"></i>Book
+                    Your Free Call</a>
                 <a href="services.html"
-                    class="border border-white/10 px-10 py-4 rounded-full font-black text-lg uppercase tracking-widest hover:bg-white hover:text-carbon-black transition-colors">View
+                    class="border border-white/10 px-10 py-4 rounded-full font-black text-lg uppercase tracking-widest hover:bg-white hover:text-carbon-black transition-colors inline-flex items-center justify-center gap-3"><i
+                        class="fa-solid fa-layer-group text-accent-blue"></i>View
                     Services</a>
             </div>
         </section>
 
         <!-- Final CTA Line -->
         <div class="text-center py-24">
-            <p class="text-sm font-bold text-iron-grey uppercase tracking-[0.3em] opacity-50">Precision ? Performance ? Perfection</p>
+            <p class="text-sm font-bold text-iron-grey uppercase tracking-[0.3em] opacity-50">Precision &mdash; Performance &mdash; Perfection</p>
         </div>
 
     </main>

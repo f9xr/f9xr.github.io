@@ -31,7 +31,7 @@ var SEARCH_INDEX = [
   {"title": "Website Redesign Calculator - F9XR Tools", "path": "tools/redesign-calculator.html"},
   {"title": "Marketing Budget Calculator - F9XR Tools", "path": "tools/marketing-budget.html"},
   {"title": "Digital Presence Score Calculator - F9XR Tools", "path": "tools/digital-presence.html"},
-  {"title": "Case Studies | F9XR Team - Customer Success Stories", "path": "pages/case-studies.html"},
+
   {"title": "We Do For You | Done-For-You Services | F9XR Team", "path": "services/we-do-for-you.html"},
   {"title": "Services Index | F9XR Team", "path": "services/index.html"},
   {"title": "Best Product Launch Sites & Directories for Startups | F9XR", "path": "directories/product-launch-directories.html"},
