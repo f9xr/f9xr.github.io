@@ -1,0 +1,21 @@
+{
+  "serverInfo": {
+    "name": "f9xr",
+    "title": "F9XR Team Discovery Server",
+    "version": "1.0.0"
+  },
+  "protocolVersion": "2025-06-18",
+  "endpoint": "https://f9xr.org/mcp",
+  "transports": [
+    {
+      "type": "streamable-http",
+      "url": "https://f9xr.org/mcp"
+    }
+  ],
+  "capabilities": {
+    "resources": {
+      "subscribe": false,
+      "listChanged": false
+    }
+  }
+}

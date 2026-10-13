@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "f9xr-discovery",
+      "type": "skill-md",
+      "description": "Discover F9XR Team's public, machine-readable resources: who F9XR is, the services it offers, LLM summaries, the API catalog, and contact details.",
+      "url": "https://f9xr.org/.well-known/agent-skills/f9xr-discovery/SKILL.md",
+      "digest": "sha256:f84305b0ab1ec42a3cd4d7284f8113c43d816e5acc44df67c9aacdb99ca01387"
+    }
+  ]
+}

@@ -17,7 +17,7 @@ Content-Signal: ai-train=yes
 Content-Signal: search=yes
 Content-Signal: ai-input=yes
 
-
+Agentmap: https://f9xr.org/.well-known/ai-catalog.json
 
 Sitemap: https://f9xr.org/sitemap.xml
 Sitemap: https://f9xr.org/sitemap-image.xml

@@ -1,0 +1,53 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "F9XR Team",
+    "identifier": "did:web:f9xr.org"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:f9xr.org:doc:llms",
+      "displayName": "F9XR Team LLM Summary",
+      "type": "text/plain",
+      "url": "https://f9xr.org/llms.txt",
+      "representativeQueries": [
+        "who is F9XR Team",
+        "what services does F9XR offer",
+        "how do I contact F9XR"
+      ]
+    },
+    {
+      "identifier": "urn:air:f9xr.org:catalog:api",
+      "displayName": "F9XR API Catalog (Linkset)",
+      "type": "application/linkset+json",
+      "url": "https://f9xr.org/.well-known/api-catalog",
+      "representativeQueries": [
+        "where is the F9XR API catalog",
+        "what machine-readable resources does F9XR publish",
+        "list F9XR service documentation links"
+      ]
+    },
+    {
+      "identifier": "urn:air:f9xr.org:mcp:f9xr",
+      "displayName": "F9XR Team MCP Server Card",
+      "type": "application/mcp-server-card+json",
+      "url": "https://f9xr.org/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "does F9XR have an MCP server",
+        "find the F9XR MCP server card",
+        "how do I connect to F9XR via MCP"
+      ]
+    },
+    {
+      "identifier": "urn:air:f9xr.org:skills:index",
+      "displayName": "F9XR Agent Skills Index",
+      "type": "application/json",
+      "url": "https://f9xr.org/.well-known/agent-skills/index.json",
+      "representativeQueries": [
+        "what agent skills does F9XR publish",
+        "find the F9XR skills discovery index",
+        "F9XR agent skill for discovery"
+      ]
+    }
+  ]
+}
