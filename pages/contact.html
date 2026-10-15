@@ -32,6 +32,7 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#212529">
     <link rel="canonical" href="https://f9xr.org/pages/contact.html">
+    <link rel="dns-prefetch" href="https://formspree.io">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -369,6 +370,16 @@
                         return;
                     }
 
+                    // Cooldown check
+                    if (window.F9XRCooldown && typeof window.F9XRCooldown.getRemaining === "function") {
+                        const rem = window.F9XRCooldown.getRemaining();
+                        if (rem > 0) {
+                            errorMsg.classList.remove("hidden");
+                            errorMsg.querySelector("p").textContent = "Please wait " + rem + " second" + (rem === 1 ? "" : "s") + " before submitting again.";
+                            return;
+                        }
+                    }
+
                     // Reset states
                     successMsg.classList.add("hidden");
                     errorMsg.classList.add("hidden");
@@ -398,22 +409,39 @@
                             submitBtn.classList.replace("bg-bright-snow", "bg-green-500");
                             submitBtn.classList.replace("text-carbon-black", "text-white");
 
-                            // Optional: Redirect to contact.html after 2 seconds
-                            setTimeout(() => {
-                                window.location.href = "contact.html?status=success";
-                            }, 2000);
+                            // Cooldown marker
+                            if (window.F9XRCooldown && typeof window.F9XRCooldown.markSubmitted === "function") {
+                                window.F9XRCooldown.markSubmitted();
+                            }
 
                         } else {
                             // Handle 400 or other errors
-                            const result = await response.json();
-                            console.error("Formspree Error:", result);
+                            let errorText = "Submission Failed.";
+                            try {
+                                const result = await response.json();
+                                console.error("Formspree Error:", result);
+                                errorText = (result && result.errors && result.errors[0] && result.errors[0].message) ? result.errors[0].message : errorText;
+                            } catch (e) {
+                                console.error("Formspree Error (non-JSON):", e);
+                            }
                             errorMsg.classList.remove("hidden");
-                            errorMsg.innerHTML = `<p class="text-red-400 font-bold italic">${result.errors ? result.errors[0].message : "Submission Failed."}</p>`;
+                            const ep = errorMsg.querySelector("p");
+                            if (ep) {
+                                ep.textContent = errorText;
+                            } else {
+                                errorMsg.textContent = errorText;
+                            }
                             resetButton();
                         }
                     } catch (error) {
                         console.error("Network Error:", error);
                         errorMsg.classList.remove("hidden");
+                        const nep = errorMsg.querySelector("p");
+                        if (nep) {
+                            nep.textContent = "Network error. Please check your connection and try again.";
+                        } else {
+                            errorMsg.textContent = "Network error. Please check your connection and try again.";
+                        }
                         resetButton();
                     }
                 }
@@ -741,23 +769,9 @@ Secure a 30-minute technical audit. We'll map out your digital architecture and 
     <!-- === FOOTER === -->
                 <div id="footer-container"></div>
 
-    <!-- === SUCCESS MODAL === -->
-    <div id="success-modal"
-        class="fixed inset-0 z-[3000] hidden flex items-center justify-center p-6 backdrop-blur-xl bg-carbon-black/80">
-        <div
-            class="bg-gunmetal border border-accent-blue/50 p-10 rounded-[3rem] max-w-md w-full text-center shadow-[0_0_50px_rgba(59,130,246,0.2)]">
-            <i class="fas fa-check-circle text-6xl text-accent-blue mb-6"></i>
-            <h2 class="text-3xl font-black italic tracking-tighter mb-4">THANKS FOR REACHING OUT!</h2>
-            <p class="text-platinum/60 text-lg mb-8 leading-relaxed italic">We'll contact you shortly. For a faster
-                response, message us on WhatsApp now.</p>
-            <a href="https://wa.me/message/X3KGWTAJ6Z6NB1"
-                class="block w-full bg-[#25D366] text-white py-5 rounded-2xl font-black text-xl mb-4">Message WhatsApp
-                Now</a>
-            <button onclick="closeModal()"
-                class="text-iron-grey font-bold uppercase tracking-widest text-xs hover:text-white">Close</button>
-        </div>
-    </div>
-<!-- === SCRIPTS === -->
+    <!-- === SUCCESS MODAL (removed; unused) === -->
+    <!-- === SCRIPTS === -->
+    <script src="../assets/js/contact-form.js"></script>
 
     <!-- Site-wide Search Modal -->
     <div id="search-modal-container"></div>

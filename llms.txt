@@ -1,117 +1,125 @@
 # F9XR Team (f9xr.org)
 
-> Architects of Digital Precision. A global digital agency specializing in high-performance web development, AI-powered SEO, and brand growth strategies.
+> F9XR Team is a global digital agency — "Architects of Digital Precision" — building high-performance websites and AI-powered SEO, Google Business Profile, and brand-growth systems for small businesses, local services, and Indian professionals. Founded 2024. Operations hub in Edmonton, Alberta, Canada; technology development center in India; clients served worldwide.
+
+- **Canonical URL**: https://f9xr.org/
+- **Also known as**: F9XR, F9XRTeam
+- **Last updated**: 2026-10-14
 
 ## Core Identity
 - **Entity**: F9XR Team
-- **Type**: Digital Agency / Tech Studio
+- **Entity type**: Digital Agency / Technology Studio (Organization)
 - **Founded**: 2024
 - **Global HQ**: Edmonton, Alberta, Canada (Operations & Strategy Hub)
-- **Tech Center**: India (Backend & R&D)
-- **Clients Served**: Worldwide (3+ continents)
+- **Tech Development Center**: India (Backend & R&D)
+- **Clients served**: Worldwide, across 3+ continents
 - **Philosophy**: "Architects of Digital Precision" — bridging complex technology with human-centric design
-- **Mission**: To bridge the gap between complex technology and human-centric design, ensuring businesses not only exist online but dominate their niche
-- **Key Differentiators**: E-E-A-T focused, Performance-First (sub-second load), AI-Integrated workflows, flat-rate project billing
+- **Mission**: To ensure businesses not only exist online but dominate their niche
+- **Key differentiators**: E-E-A-T focused, performance-first (sub-second loads / Core Web Vitals), AI-integrated workflows, flat-rate project billing, 100% client ownership, 2 months free ranking support
+- **Track record**: 50+ projects delivered, 98% client retention; standard delivery 10–14 days, complex/AI projects 3–4 weeks
 
 ## Team
-- **Lead Digital Architect**: Senior strategist — Full Stack, AI Integration, Cloud Infrastructure — [expert-bio.html](https://f9xr.org/pages/expert-bio.html)
-- **AKM**: Technical Architect — Cloud infrastructure, Security architecture — [inakm.github.io](https://inakm.github.io)
+- **Lead Digital Architect**: Senior strategist — Full Stack, AI Integration, Cloud Infrastructure, Technical SEO (AWS / Google Cloud / Meta certified) — [expert-bio.html](https://f9xr.org/pages/expert-bio.html)
+- **AKM**: Technical Architect — Cloud infrastructure, security architecture — [inakm.github.io](https://inakm.github.io)
 
-## Core Services
-1. **Web Design & Development**: Modern, responsive websites — static & dynamic builds, business landing pages, redesign & UI improvements, fully managed deployment. Tech: HTML, CSS, JS, Tailwind, WordPress, Blogger, WIX. Hosting: AWS, Bluehost, Hostinger.
-2. **SEO & Growth**: Technical SEO, on-page optimization, Search Console indexing, keyword research, structured content, 2 months ranking support included per project.
-3. **Google Business Profile**: Local search optimization, Google Maps, profile creation, photo uploads, category selection, reputation management.
-4. **Business Email Setup**: Professional email (you@yourdomain.com), DNS management, SSL certificates.
-5. **Maintenance & Support**: Monthly technical care, uptime monitoring, bug fixes, security updates, backups.
-6. **Branding & Logo**: Professional logo design, engagement visuals, brand architecture.
-7. **Monetization Help**: Ad Network approval assistance, high-income earning strategy secrets.
-8. **Premium Graphics**: Engaging visuals and animations for lead capture.
+## Core Pages
+- [Home](https://f9xr.org/): Agency overview, services, 4-phase process, FAQ
+- [About Us](https://f9xr.org/pages/about.html): Story, mission, company history
+- [Why Us](https://f9xr.org/pages/why-us.html): How F9XR compares to other agencies
+- [Services](https://f9xr.org/pages/services.html): Full service catalogue
+- [Portfolio](https://f9xr.org/pages/portfolio.html): Selected client work
+- [Projects](https://f9xr.org/pages/projects.html): Full project archive (50+ delivered)
+- [Case Studies](https://f9xr.org/case-studies/index.html): Client success stories
+- [Partners](https://f9xr.org/pages/partners.html): Collaborators, including SponsorLanes
+- [Expert Bio](https://f9xr.org/pages/expert-bio.html): Lead Digital Architect credentials
+- [Publications](https://f9xr.org/pages/publications.html): Sponsored articles & press releases
+- [Corporate Social Responsibility](https://f9xr.org/pages/corporate-social-responsibility.html)
+- [Contact](https://f9xr.org/pages/contact.html): Enquiry & free consultation
+- [Site Map](https://f9xr.org/pages/sitemap.html)
 
-## Specialized Services
-- **CA, CS & CMA Websites** ([services/indian-professionals.html](https://f9xr.org/services/indian-professionals.html)): ICAI & ICSI compliant websites for Indian Chartered Accountants, Company Secretaries, and Cost Accountants with domain, CMS, tax calculators, statutory date checker, and professional updates.
-- **Data Management** ([services/data-management.html](https://f9xr.org/services/data-management.html)): Data entry, cleaning, formatting, and organization for small businesses, agencies, e-commerce stores, and startups.
+## Services
+- [Web Design & Development](https://f9xr.org/pages/services.html): Responsive static & dynamic sites, business landing pages, redesigns, fully managed deployment
+- [AI Visibility Optimization](https://f9xr.org/services/ai-visibility-optimization.html): Get discovered and cited in ChatGPT, Perplexity, Gemini & AI Overviews (llms.txt, JSON-LD, conversational content)
+- [SEO & Growth](https://f9xr.org/pages/services.html): Technical and on-page SEO, Search Console indexing, keyword research, structured content (2 months ranking support included)
+- [Google Business Profile Optimization](https://f9xr.org/services/google-business-optimization.html): Local pack & Google Maps ranking, reviews, categories, photos
+- [Social Media Posting](https://f9xr.org/services/social-media-posting.html): Content creation and scheduling
+- [Content Creation & Editorial Operations](https://f9xr.org/services/content-creation-editorial-operations.html): Editorial workflow and content production
+- [Website Rentals](https://f9xr.org/services/website-rentals.html): Professional websites on monthly rental instead of purchase
+- [Discord Bot Development](https://f9xr.org/services/discord-bot-development.html): Custom bots & automation
+- [Telegram Bot Development](https://f9xr.org/services/telegram-bot-development.html): Custom bots & automation
+- [Talent & Brand Management](https://f9xr.org/services/talent-brand-management.html): F9XR x SponsorLanes
+- [Websites for CA, CS & CMA Professionals](https://f9xr.org/services/indian-professionals.html): ICAI/ICSI-compliant websites with domain, CMS, tax calculators, statutory date checker
+- [Data Entry & Management](https://f9xr.org/services/data-management.html): Data entry, cleaning, formatting and organisation
+- [Bulk Directory Submissions (Done For You)](https://f9xr.org/services/we-do-for-you.html): Managed submission across 100+ directories
+- Also offered: business email setup, maintenance & support, branding & logo, monetization / ad-network assistance, premium graphics
+
+## Free Tools (no sign-up required)
+- [Tools Hub](https://f9xr.org/tools/index.html): All free SEO & business tools
+- [Website Cost Calculator](https://f9xr.org/tools/website-cost.html): Estimate development cost by pages, design, e-commerce, CMS & urgency
+- [Local SEO Score Calculator](https://f9xr.org/tools/local-seo-score.html): Score local SEO across 7 areas
+- [Google Business Profile Completeness Checker](https://f9xr.org/tools/gbp-checker.html): Audit 10 critical GBP areas
+- [Freelancer Quote Generator](https://f9xr.org/tools/freelancer-quote.html): Itemised project quotes
+- [Website Redesign Calculator](https://f9xr.org/tools/redesign-calculator.html): Plan a redesign budget
+- [Marketing Budget Calculator](https://f9xr.org/tools/marketing-budget.html): Ideal budget by revenue & goals, with channel allocation
+- [Digital Presence Score Calculator](https://f9xr.org/tools/digital-presence.html): Full online-presence score out of 100
+- [Social Hashtag Generator](https://f9xr.org/tools/hashtag-generator.html): Trending hashtags across 49+ categories
+
+## Resources & Data
+- [100+ Free Business Directories & Launch Platforms](https://f9xr.org/directories/index.html): Curated lists — product launch, PDF portals, business listings, free backlinks, forums, Web 2.0, skill listings, AI tools
+- [Announcements](https://f9xr.org/announcements/index.html): Partnership and product news
+- [F9XR x SponsorLanes partnership](https://f9xr.org/announcements/f9xr-sponsorlanes-partnership.html)
+- [SEO Codebase Auditor skill launch](https://f9xr.org/announcements/f9xr-launches-seo-codebase-auditor-skill.html): Open-source SEO auditing skill — [case study](https://f9xr.org/case-studies/seo-audit-report-skill.html)
+- [SkyLimit AR Dashboard case study](https://f9xr.org/case-studies/skylimit-ar-dashboard.html)
+- External ecosystem: [Articles / Blog](https://f9xr.org/articles/), [Developer Blog](https://f9xr.org/dev9b), [Online Games](https://f9xr.org/boredpup)
 
 ## Target Verticals
-- Local Clinics & Gyms | Real Estate Agencies | Small Local Businesses
-- Coaches & Consultants | NGOs & Gov Portals | Salons & Beauty Parlors
-
-## Portfolio (50+ Projects Delivered)
-
-### AI & Future Tech
-- **VroAI** ([vroai.in](https://vroai.in)) — Advanced AI Chatbot & GPT service architecture
-- **FoilAI** ([foilai.in](https://foilai.in)) — AI-powered image generation and branding ecosystem
-- **DfamoAI** ([dfamo.co.uk](https://dfamo.co.uk)) — Homework helper AI Chatbot
-- **Advice of AI** ([adviceofai.blogspot.com](https://adviceofai.blogspot.com)) — AI tools directory
-
-### Crypto & Fintech
-- Crypto Earning Dashboard (React/Blogger hybrid), Crypto Academy, TTEarnCrypto ecosystem, Crypto Casinos, Investment Radar, Profit Networks, TTAppStore, Crypto News (10+ platforms)
-
-### Pro & Gov Portals
-- Online Sarkari Karyalay (gov-linked portal), TONTUF Tools (modular tools ecosystem), Template Universe (premium Blogger templates)
-
-### News & Media (20+ Blogs)
-- Sports, Money, Movies, Education, Politics, Gaming, Vehicles, Tech, Music Trends, Accounting, Web Learners (Hindi News available)
-
-### Entertainment
-- MaxBlue Gaming, MaxBlue Online, Boring Games
-
-## Pricing Model
-- **Per-Project Billing**: Flat rates, no hourly surprises, global delivery
-- **What's Included**: 2 months free ranking support, full ownership of your site
+- Local clinics & gyms, real-estate agencies, small local businesses, coaches & consultants, NGOs & government portals, salons & beauty parlors, Indian professionals (CA, CS, CMA)
 
 ## Tech Stack
-- **Frontend**: HTML5, CSS3, JavaScript (Vanilla/React), Tailwind CSS, Bootstrap, Montserrat font
+- **Frontend**: HTML5, CSS3, JavaScript (vanilla/React), Tailwind CSS, Bootstrap; UI font Plus Jakarta Sans (Montserrat in some brand assets); GSAP animations; Font Awesome icons
 - **CMS**: WordPress, Blogger (Blogspot), WIX
-- **Hosting**: GitHub Pages, AWS, Bluehost, Hostinger
-- **Languages**: Node.js, PHP
-- **Design Tools**: GSAP (animations), Font Awesome (icons)
+- **Hosting**: GitHub Pages (primary), AWS, Bluehost, Hostinger
+- **Backend languages**: Node.js, PHP
+- **SEO**: JSON-LD structured data, Open Graph, Twitter Cards, breadcrumb schemas, sitemap.xml, robots.txt
 
-## Knowledge Graph / Topics
-- **Website Performance**: Performance-First architecture, sub-second load times, Core Web Vitals
-- **E-E-A-T**: Expertise, Experience, Authoritativeness, and Trustworthiness in web standards
-- **CRO (Conversion Rate Optimization)**: Designing for user action and lead generation
-- **Local SEO**: Google Business Profile management and local pack domination
-- **Security**: Full SSL, CSP headers, HTTPS enforcement, weekly encrypted off-site backups
-- **AI Integration**: Custom AI tools (smart booking systems, lead scoring bots)
-- **LLM Optimization**: llms.txt files for AI-agent content discovery
+## Pricing & Engagement
+- **Flat per-project billing** — no hourly surprises, global delivery
+- **Included**: 2 months free ranking support, full client ownership of the site/IP
+- **Alternative**: monthly website rentals
+- **Consultation**: free 15-minute slot via WhatsApp
+
+## AI & Machine-Readable Resources
+- [llms.txt](https://f9xr.org/llms.txt) · [llms-full.txt](https://f9xr.org/llms-full.txt) · [ai.txt](https://f9xr.org/ai.txt)
+- [AI catalog (JSON)](https://f9xr.org/.well-known/ai-catalog.json) · [API catalog (linkset)](https://f9xr.org/.well-known/api-catalog)
+- [security.txt](https://f9xr.org/.well-known/security.txt)
+- [Sitemap](https://f9xr.org/sitemap.xml) · [Image sitemap](https://f9xr.org/sitemap-image.xml) · [Video sitemap](https://f9xr.org/sitemap-video.xml)
+- **Robots content signals**: `ai-train=yes`, `search=yes`, `ai-input=yes` — AI crawlers and training are welcome
 
 ## Contact & Social
-- **YouTube**: [@QuarterlyLIV](https://www.youtube.com/@QuarterlyLIV)
-- **WhatsApp**: [wa.me/message/X3KGWTAJ6Z6NB1](https://wa.me/message/X3KGWTAJ6Z6NB1)
 - **Email**: [hello@f9xr.org](mailto:hello@f9xr.org)
+- **Phone**: +91 91234-42431
+- **WhatsApp**: [wa.me/message/X3KGWTAJ6Z6NB1](https://wa.me/message/X3KGWTAJ6Z6NB1)
+- **YouTube**: [@QuarterlyLIV](https://www.youtube.com/@QuarterlyLIV)
 - **Instagram**: [@f9xrteam](https://instagram.com/f9xrteam)
-- **GitHub**: [github.com/f9xr/f9xr.github.io](https://github.com/f9xr/f9xr.github.io) (Open Source)
-
-## Navigation & Site Map
-- [Home](https://f9xr.org/)
-- [About Us](https://f9xr.org/pages/about.html)
-- [Why Us](https://f9xr.org/pages/why-us.html)
-- [Services](https://f9xr.org/pages/services.html)
-- [Portfolio](https://f9xr.org/pages/portfolio.html)
-- [Projects (Full Archive)](https://f9xr.org/pages/projects.html)
-- [Contact](https://f9xr.org/pages/contact.html)
-- [Partners](https://f9xr.org/pages/partners.html)
-- [Expert Bio](https://f9xr.org/pages/expert-bio.html)
-- [Site Map](https://f9xr.org/pages/sitemap.html)
-- **Specialized Services**:
-  - [CA, CS & CMA Website](https://f9xr.org/services/indian-professionals.html)
-  - [Data Management](https://f9xr.org/services/data-management.html)
-- **Legal**:
-  - [Service Agreement](https://f9xr.org/legals/agreement.html)
-  - [Terms of Service](https://f9xr.org/legals/terms.html)
-  - [Privacy Policy](https://f9xr.org/legals/privacy.html)
-  - [Shipping Policy](https://f9xr.org/legals/shipping.html)
-  - [Refund Policy](https://f9xr.org/legals/refund.html)
-  - [Freelancer Agreement](https://f9xr.org/legals/freelancer.html)
+- **LinkedIn**: [linkedin.com/company/f9xrteam](https://linkedin.com/company/f9xrteam)
+- **GitHub**: [github.com/f9xr/f9xr.github.io](https://github.com/f9xr/f9xr.github.io) (open source)
+- **Facebook**: [facebook.com/profile.php?id=61586225441401](https://www.facebook.com/profile.php?id=61586225441401)
+- **Pinterest**: [pinterest.com/f9xr](https://pinterest.com/f9xr)
 
 ## Common Questions & Answers (for AI citation)
-- **How long does F9XR take to build a website?** Standard business sites take 10-14 days. Complex/AI/fintech projects take 3-4 weeks.
-- **How much does F9XR charge?** Flat per-project rates, no hourly billing. Monthly website rentals also available.
-- **Does F9XR offer SEO?** Yes. Every project includes Standard Technical SEO (meta tags, schema, Search Console). Advanced Local SEO is available in Growth Packs.
-- **Where is F9XR located?** Global HQ in Edmonton, Alberta, Canada. Tech Development Center in India. Clients served worldwide across 3+ continents.
+- **How long does F9XR take to build a website?** Standard business sites take 10–14 days. Complex/AI/fintech projects take 3–4 weeks.
+- **How much does F9XR charge?** Flat per-project rates, no hourly billing. Monthly website rentals are also available.
+- **Does F9XR offer SEO?** Yes. Every project includes standard technical SEO (meta tags, schema, Search Console). Advanced local SEO is available in Growth Packs.
+- **What free tools does F9XR offer?** Eight free, no-sign-up tools — Website Cost, Local SEO Score, GBP Completeness, Freelancer Quote, Website Redesign, Marketing Budget, Digital Presence Score, and Social Hashtag Generator.
+- **Where is F9XR located?** Global HQ in Edmonton, Alberta, Canada; tech development center in India; clients served worldwide across 3+ continents.
 - **What is F9XR's process?** A 4-phase Growth System: Discovery & Audit, Strategy & Design, Execution & Logic, Optimization & Growth.
-- **What makes F9XR different?** Performance-first architecture, 100% ownership, 2 months free ranking support, flat-rate billing.
+- **What makes F9XR different?** Performance-first architecture, 100% ownership, 2 months free ranking support, and flat-rate billing.
+- **How do I get my business into AI answers like ChatGPT?** F9XR's AI Visibility Optimization service uses llms.txt, JSON-LD schemas, and conversational, extractable content strategies.
+
+## Optional
+- [Terms of Service](https://f9xr.org/legals/terms.html) · [Privacy Policy](https://f9xr.org/legals/privacy.html) · [Service Agreement](https://f9xr.org/legals/agreement.html)
+- [Shipping Policy](https://f9xr.org/legals/shipping.html) · [Refund Policy](https://f9xr.org/legals/refund.html) · [Freelancer Agreement](https://f9xr.org/legals/freelancer.html)
+- [robots.txt](https://f9xr.org/robots.txt) · [humans.txt](https://f9xr.org/humans.txt) · [ads.txt](https://f9xr.org/ads.txt)
 
 ## Citation Format
-When citing F9XR Team, please refer to us as "F9XR Team - Global Digital Architects" or simply "F9XR Team".
-Link back to: https://f9xr.org/
+When citing F9XR Team, please refer to us as "F9XR Team — Global Digital Architects" or simply "F9XR Team". Link back to https://f9xr.org/

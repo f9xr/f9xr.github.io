@@ -395,7 +395,7 @@
 
 
     <button id="backToTop" aria-label="Scroll to top"
-        class="fixed bottom-8 right-8 w-8 h-8 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl"><i
+        class="fixed bottom-8 right-8 w-11 h-11 bg-bright-snow text-carbon-black rounded-full hidden flex items-center justify-center z-50 hover:scale-110 transition-transform shadow-xl"><i
             class="fas fa-arrow-up text-xs"></i></button>
 
 
@@ -413,7 +413,7 @@
             <div
                 class="hidden lg:flex items-center gap-1 font-bold text-[11px] lg:text-[13px] lg:text-[15px] xl:text-[14px] lg:text-[16px] tracking-wide text-platinum/80 bg-carbon-black/60 backdrop-blur-2xl border border-white/20 rounded-full pl-3 pr-1 py-1 shadow-2xl">
 
-                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
+                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-3 lg:px-6 lg:py-4 rounded-full transition-colors">
                     <i class="fa-regular fa-building text-[14px] lg:text-[16px]"></i>
                     <span>Company</span>
                     <i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>
@@ -489,7 +489,7 @@
                     </div>
                 </div> 
 
-                                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
+                                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-3 lg:px-6 lg:py-4 rounded-full transition-colors">
                     <i class="fa-solid fa-bolt text-[14px] lg:text-[16px]"></i>
                     <span>Services</span>
                     <i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>
@@ -563,7 +563,7 @@
                     </div>
                 </div>
 
-                                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-2.5 lg:px-6 lg:py-3 rounded-full transition-colors">
+                                <div class="group relative cursor-pointer flex items-center gap-2 hover:bg-white/10 px-4 py-3 lg:px-6 lg:py-4 rounded-full transition-colors">
                     <i class="fa-solid fa-layer-group text-[14px] lg:text-[16px]"></i>
                     <span>Works</span>
                     <i class="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform duration-300"></i>
@@ -646,22 +646,22 @@
                         </div>
                     </div>
                 </div>
-                <button onclick="openSearchModal()" aria-label="Search Site" class="ml-2 w-10 h-10 lg:w-12 lg:h-12 bg-accent-blue text-white rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.5)]"><i class="fa-solid fa-magnifying-glass text-lg"></i></button>
+                <button onclick="openSearchModal()" aria-label="Search Site" class="ml-2 w-11 h-11 lg:w-12 lg:h-12 bg-accent-blue text-white rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.5)]"><i class="fa-solid fa-magnifying-glass text-lg"></i></button>
             </div>
 
             <!-- 3. Header Actions (Right) -->
             <div class="flex items-center gap-5">
 
                 <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" target="_blank" rel="noopener noreferrer"
-                    class="hidden sm:flex text-white/80 hover:text-white text-xl transition-all hover:scale-110">
+                    class="hidden sm:flex w-11 h-11 items-center justify-center text-white/80 hover:text-white text-xl transition-all hover:scale-110">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
 
-                <button onclick="toggleMobileMenu()" id="menu-btn" class="lg:hidden text-white/80 hover:text-white text-xl active:scale-90 transition-all hover:scale-110"
+                <button onclick="toggleMobileMenu()" id="menu-btn" class="lg:hidden w-11 h-11 flex items-center justify-center text-white/80 hover:text-white text-xl active:scale-90 transition-all hover:scale-110"
                     aria-label="Toggle Menu">
                     <i id="menu-icon" class="fa-solid fa-bars-staggered"></i>
                 </button>
-                <a href="#book" class="hidden md:flex bg-white text-carbon-black px-6 py-3 lg:px-8 lg:py-4 rounded-full font-black text-[11px] lg:text-[13px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95 ml-2">Book Your Free Call</a>
+                <a href="#book" class="hidden md:flex min-h-[44px] items-center bg-white text-carbon-black px-6 py-3 lg:px-8 lg:py-4 rounded-full font-black text-[11px] lg:text-[13px] tracking-widest uppercase hover:bg-accent-blue hover:text-white transition-all shadow-lg active:scale-95 ml-2">Book Your Free Call</a>
             </div>
         </nav>
 
@@ -669,7 +669,7 @@
             class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">
 
             <button onclick="toggleMobileMenu()"
-                class="absolute top-8 right-8 text-white text-2xl hover:text-accent-blue transition-colors">
+                class="absolute top-8 right-8 w-11 h-11 flex items-center justify-center text-white text-2xl hover:text-accent-blue transition-colors">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="space-y-8">
@@ -687,18 +687,18 @@
                     Your Free Call</a>
             </div>
 
-            <div class="mt-20 pt-10 border-t border-white/5 flex gap-8">
+            <div class="mt-20 pt-10 border-t border-white/5 flex flex-wrap gap-4">
                 <a href="https://instagram.com/f9xrteam" aria-label="Instagram"
-                    class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer"><i
+                    class="text-platinum/70 text-2xl w-11 h-11 inline-flex items-center justify-center hover:text-white transition-colors" target="_blank" rel="noopener noreferrer"><i
                         class="fa-brands fa-instagram"></i></a>
                 <a href="https://wa.me/message/X3KGWTAJ6Z6NB1" aria-label="WhatsApp"
-                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                    class="text-platinum/70 text-2xl w-11 h-11 inline-flex items-center justify-center hover:text-white transition-colors"><i
                         class="fa-brands fa-whatsapp"></i></a>
                 <a href="mailto:hello@f9xr.org" aria-label="Email Us"
-                    class="text-platinum/70 text-2xl hover:text-white transition-colors"><i
+                    class="text-platinum/70 text-2xl w-11 h-11 inline-flex items-center justify-center hover:text-white transition-colors"><i
                         class="fa-solid fa-envelope"></i></a>
-            <a href="https://www.youtube.com/@QuarterlyLIV" aria-label="YouTube" class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://pinterest.com/f9xr" aria-label="Pinterest" class="text-platinum/70 text-2xl hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="https://www.youtube.com/@QuarterlyLIV" aria-label="YouTube" class="text-platinum/70 text-2xl w-11 h-11 inline-flex items-center justify-center hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://pinterest.com/f9xr" aria-label="Pinterest" class="text-platinum/70 text-2xl w-11 h-11 inline-flex items-center justify-center hover:text-white transition-colors" target="_blank" rel="noopener noreferrer" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
             </div>
         </div>
     </header>
@@ -2380,11 +2380,11 @@
 
 
                 <div id="emailView" class="space-y-6 md:space-y-8">
-                    <form action="https://formspree.io/f/xwkazyon" method="POST"
+                    <form id="f9xr-home-form" action="https://formspree.io/f/xwkazyon" method="POST"
                         class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
 
 
-                        <input type="text" name="_gotcha" style="display:none">
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
 
                         <input type="hidden" name="_next" value="https://f9xr.org/pages/thanks.html">
@@ -2436,6 +2436,10 @@
                             </p>
                         </div>
                     </form>
+                    <div id="home-form-status" role="alert" aria-live="assertive"
+                        class="hidden mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-2xl text-center">
+                        <p class="text-red-400 font-bold italic text-sm"></p>
+                    </div>
                 </div>
 
 
@@ -2797,13 +2801,13 @@
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 mb-12">
                 <!-- Links -->
                 <div class="flex flex-wrap gap-x-6 gap-y-3">
-                    <a href="/legals/terms.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Terms and conditions</a>
-                    <a href="/legals/privacy.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="/legals/agreement.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Service Agreement</a>
-                    <a href="/legals/refund.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Refund Policy</a>
-                    <a href="/legals/shipping.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Shipping Policy</a>
-                    <a href="/pages/sitemap.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">Sitemap</a>
-                    <a href="/llms.txt" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors">LLMs.txt</a>
+                    <a href="/legals/terms.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors inline-flex items-center min-h-[44px]">Terms and conditions</a>
+                    <a href="/legals/privacy.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors inline-flex items-center min-h-[44px]">Privacy Policy</a>
+                    <a href="/legals/agreement.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors inline-flex items-center min-h-[44px]">Service Agreement</a>
+                    <a href="/legals/refund.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors inline-flex items-center min-h-[44px]">Refund Policy</a>
+                    <a href="/legals/shipping.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors inline-flex items-center min-h-[44px]">Shipping Policy</a>
+                    <a href="/pages/sitemap.html" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors inline-flex items-center min-h-[44px]">Sitemap</a>
+                    <a href="/llms.txt" class="text-[11px] font-medium text-white/50 hover:text-white transition-colors inline-flex items-center min-h-[44px]">LLMs.txt</a>
                 </div>
 
                 <!-- Showreel Button -->
@@ -2834,14 +2838,14 @@
             <div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
 
                 <!-- Socials -->
-                <div class="flex items-center justify-center sm:justify-start gap-6">
-                    <a href="https://instagram.com/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://linkedin.com/company/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61586225441401" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="Facebook Page"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.facebook.com/share/g/18J9AMKqRC/" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="Facebook Group"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.youtube.com/@QuarterlyLIV" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://pinterest.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                    <a href="https://instagram.com/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg w-11 h-11 inline-flex items-center justify-center" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/f9xrteam" class="text-white/70 hover:text-white transition-colors text-lg w-11 h-11 inline-flex items-center justify-center" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg w-11 h-11 inline-flex items-center justify-center" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61586225441401" class="text-white/70 hover:text-white transition-colors text-lg w-11 h-11 inline-flex items-center justify-center" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="Facebook Page"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/share/g/18J9AMKqRC/" class="text-white/70 hover:text-white transition-colors text-lg w-11 h-11 inline-flex items-center justify-center" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="Facebook Group"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/@QuarterlyLIV" class="text-white/70 hover:text-white transition-colors text-lg w-11 h-11 inline-flex items-center justify-center" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://pinterest.com/f9xr" class="text-white/70 hover:text-white transition-colors text-lg w-11 h-11 inline-flex items-center justify-center" target="_blank" rel="noopener noreferrer" itemprop="sameAs" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
                 </div>
 
                 <!-- Center Text -->
@@ -2903,6 +2907,7 @@
         });
     </script>
 
+    <script src="assets/js/contact-form.js"></script>
     <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
@@ -2993,6 +2998,48 @@
             const scrollAmount = window.innerWidth > 768 ? 482 : window.innerWidth * 0.85 + 24;
             slider.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
         }
+
+        (function initHomeContactForm() {
+            const homeForm = document.getElementById('f9xr-home-form');
+            if (!homeForm) return;
+
+            const statusBox = document.getElementById('home-form-status');
+            const statusText = statusBox ? statusBox.querySelector('p') : null;
+
+            function showStatus(message) {
+                if (!statusBox || !statusText) return;
+                statusText.textContent = message;
+                statusBox.classList.remove('hidden');
+            }
+
+            function hideStatus() {
+                if (statusBox) statusBox.classList.add('hidden');
+            }
+
+            homeForm.addEventListener('submit', function (event) {
+                // Client-side honeypot: silently block bots
+                const gotcha = homeForm.querySelector('[name="_gotcha"]');
+                if (gotcha && gotcha.value !== '') {
+                    event.preventDefault();
+                    return;
+                }
+
+                // Cooldown check
+                if (window.F9XRCooldown && typeof window.F9XRCooldown.getRemaining === 'function') {
+                    const rem = window.F9XRCooldown.getRemaining();
+                    if (rem > 0) {
+                        event.preventDefault();
+                        showStatus('Please wait ' + rem + ' second' + (rem === 1 ? '' : 's') + ' before sending another message.');
+                        return;
+                    }
+                }
+
+                hideStatus();
+                if (window.F9XRCooldown && typeof window.F9XRCooldown.markSubmitted === 'function') {
+                    window.F9XRCooldown.markSubmitted();
+                }
+            });
+        })();
 
         function setContactMode(mode) {
             const emailView = document.getElementById('emailView');

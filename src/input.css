@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global responsive hardening (desktop + mobile audit fixes) */
+html,
+body {
+  /* Clip horizontal overflow without creating a scroll container,
+     so position: sticky keeps working (unlike overflow-x: hidden). */
+  overflow-x: clip;
+}
+
+main {
+  /* main is a flex item in body.flex.flex-col and was not stretching,
+     so its content forced the page wider than the viewport on mobile. */
+  width: 100%;
+  min-width: 0;
+}
+
+h1,
+h2,
+h3 {
+  /* Let long, unbreakable hero words wrap instead of overflowing. */
+  overflow-wrap: anywhere;
+}
+
+/* Tools: let the input card shrink and its fields reflow on small screens */
+#ts-inputs-card {
+  min-width: 0;
+}
+
+#ts-inputs-card select,
+#ts-inputs-card input {
+  min-width: 0;
+  width: 100%;
+}
+
+#ts-results-card,
+#ts-score-breakdown {
+  min-width: 0;
+}
+
+#ts-score-breakdown * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  input,
+  select,
+  textarea {
+    /* 16px prevents iOS from zooming the page when a field is focused. */
+    font-size: 16px;
+  }
+
+  #ts-inputs-card .grid-cols-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Raise sub-12px utility text to a readable floor (audit: tiny type).
+   These arbitrary sizes set only font-size, so we override only font-size. */
+.text-\[9px\],
+.text-\[10px\],
+.text-\[11px\],
+.text-\[0\.55rem\],
+.text-\[0\.6rem\],
+.text-\[0\.65rem\],
+.text-\[0\.7rem\],
+.text-\[0\.72rem\] {
+  font-size: 0.75rem;
+}

@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./**/*.html",
+    "./assets/js/**/*.js",
     "!./node_modules/**",
     "!./.git/**"
   ],
