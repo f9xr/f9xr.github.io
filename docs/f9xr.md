@@ -1,7 +1,7 @@
   <div align="center">
 
-  <a href="https://f9xr.github.io">
-    <img src="https://f9xr.github.io/logo.webp" alt="F9XR Team Logo" width="140" style="border-radius:24px;" />
+  <a href="https://f9xr.org">
+    <img src="https://f9xr.org/logo.webp" alt="F9XR Team Logo" width="140" style="border-radius:24px;" />
   </a>
 
   # F9XR Team
@@ -10,7 +10,7 @@
 
   [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=600&color=0EA5E9&center=true&vCenter=true&multiline=true&width=640&height=60&lines=Global+Digital+Agency+%7C+Founded+2024;High-Performance+Web+Development;AI-Powered+SEO+%26+Brand+Growth;50%2B+Projects+Delivered)](https://git.io/typing-svg)
 
-  [![Website](https://img.shields.io/badge/Website-f9xr.github.io-0ea5e9?style=for-the-badge)](https://f9xr.github.io)
+  [![Website](https://img.shields.io/badge/Website-f9xr.org-0ea5e9?style=for-the-badge)](https://f9xr.org)
   [![GitHub](https://img.shields.io/badge/GitHub-@f9xr-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/f9xr)
   [![X](https://img.shields.io/badge/X-@f9xrteam-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/f9xrteam)
   [![Instagram](https://img.shields.io/badge/Instagram-@f9xrteam-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/f9xrteam)
@@ -129,7 +129,7 @@
 
   - ✅ **50+ Projects Delivered** across AI, fintech, portals, news & entertainment
   - ✅ **E-E-A-T Focused** — content built for users *and* search engines
-  - ✅ **Free Digital Tools** — calculators, score checkers & generators ([explore](https://f9xr.github.io/tools/))
+  - ✅ **Free Digital Tools** — calculators, score checkers & generators ([explore](https://f9xr.org/tools/))
   - ✅ **Open-Source Contributions** — tools & skills released for the community
 
   ---
@@ -137,7 +137,7 @@
   ### 🤝 Connect With Us
 
   <p align="center">
-    <a href="https://f9xr.github.io"><img src="https://img.shields.io/badge/Website-f9xr.github.io-0ea5e9?style=for-the-badge&logo=internet-explorer&logoColor=white" alt="Website"></a>
+    <a href="https://f9xr.org"><img src="https://img.shields.io/badge/Website-f9xr.org-0ea5e9?style=for-the-badge&logo=internet-explorer&logoColor=white" alt="Website"></a>
     <a href="https://github.com/f9xr"><img src="https://img.shields.io/badge/GitHub-f9xr-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
     <a href="https://linkedin.com/company/f9xrteam"><img src="https://img.shields.io/badge/LinkedIn-f9xrteam-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
     <a href="https://twitter.com/f9xrteam"><img src="https://img.shields.io/badge/X-f9xrteam-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"></a>
@@ -162,7 +162,7 @@
   </p>
 
   <p align="center">
-    <em>Built with ⚡ by <a href="https://f9xr.github.io">F9XR Team</a> · © 2022–2026 F9XR Team</em>
+    <em>Built with ⚡ by <a href="https://f9xr.org">F9XR Team</a> · © 2022–2026 F9XR Team</em>
   </p>
 
   </div>

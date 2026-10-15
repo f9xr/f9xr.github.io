@@ -110,23 +110,7 @@
     <noscript><link rel="stylesheet" href="assets/css/skeleton.css"></noscript>
     <link rel="stylesheet" href="assets/css/tailwind.css">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-134PMTPP82"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-134PMTPP82');
-    </script>
-
-    <!-- Clarity tracking code for https://f9xr.org/ -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "xgqzx0h42p");
-    </script>
+    <script src="/assets/js/consent.js" defer></script>
 
     <script type="application/ld+json">
     {
@@ -669,6 +653,7 @@
             class="fixed inset-0 bg-carbon-black/95 backdrop-blur-[40px] z-[4999] opacity-0 pointer-events-none transition-all duration-500 flex flex-col justify-center px-10">
 
             <button onclick="toggleMobileMenu()"
+                aria-label="Close Menu"
                 class="absolute top-8 right-8 w-11 h-11 flex items-center justify-center text-white text-2xl hover:text-accent-blue transition-colors">
                 <i class="fa-solid fa-xmark"></i>
             </button>
@@ -3094,7 +3079,7 @@
                         const lm = (u.getElementsByTagName('lastmod')[0] || {}).textContent || '';
                         return { loc: loc, lastmod: lm };
                     }).filter(function(p) {
-                        return /^https:\/\/f9xr\.(?:org|github\.io)\/articles\/\d{4}\/\d{2}\/\d{2}\/.+\.html$/.test(p.loc);
+                        return /^https:\/\/f9xr\.org\/articles\/\d{4}\/\d{2}\/\d{2}\/.+\.html$/.test(p.loc);
                     }).sort(function(a, b) {
                         return (b.lastmod || '').localeCompare(a.lastmod || '');
                     }).slice(0, 3);
@@ -3252,7 +3237,7 @@
     <!-- Site-wide Search Modal -->
     <div id="search-modal" class="fixed inset-0 bg-carbon-black/90 backdrop-blur-xl z-[9000] invisible opacity-0 transition-all duration-300 flex flex-col items-center pt-24 px-4">
         <div class="w-full max-w-3xl relative">
-            <button onclick="closeSearchModal()" class="absolute -top-12 right-0 text-white/50 hover:text-white text-2xl transition-colors"><i class="fa-solid fa-xmark"></i></button>
+            <button onclick="closeSearchModal()" aria-label="Close Search" class="absolute -top-12 right-0 text-white/50 hover:text-white text-2xl transition-colors"><i class="fa-solid fa-xmark"></i></button>
             <div class="relative flex items-center bg-white/10 border border-white/20 rounded-2xl overflow-hidden focus-within:border-accent-blue transition-colors">
                 <i class="fa-solid fa-magnifying-glass text-white/50 text-xl ml-6"></i>
                 <input type="text" id="search-input" placeholder="Search pages, services, works..." class="w-full bg-transparent border-none text-white text-xl md:text-2xl py-6 pl-6 pr-14 focus:outline-none focus:ring-0 placeholder-white/30" autocomplete="off">

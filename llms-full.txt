@@ -208,7 +208,7 @@
 - **Sitemap (XML)**: [sitemap.xml](https://f9xr.org/sitemap.xml) — all indexable pages with lastmod & changefreq
 - **Image / Video sitemaps**: [sitemap-image.xml](https://f9xr.org/sitemap-image.xml) · [sitemap-video.xml](https://f9xr.org/sitemap-video.xml)
 - **HTML Sitemap**: [pages/sitemap.html](https://f9xr.org/pages/sitemap.html)
-- **Disallowed (non-content)**: /404.html, /error.html, /pages/case-studies.html, /pages/coming-soon.html, /pinterest-79c83.html, and tracking query strings (`?fbclid`, `?gclid`, `?utm_`)
+- **Disallowed (non-content)**: /404.html, /error.html, /pages/case-studies.html, /pages/coming-soon.html, and tracking query strings (`?fbclid`, `?gclid`, `?utm_`)
 
 ### AI & Machine-Readable Files
 - **llms.txt**: [f9xr.org/llms.txt](https://f9xr.org/llms.txt) — concise AI context

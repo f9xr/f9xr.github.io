@@ -4,6 +4,7 @@ template.txt
 
 
 node_modules/
+.kilo/
 
 # OS artifacts
 .DS_Store

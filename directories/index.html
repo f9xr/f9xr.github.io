@@ -1,22 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-134PMTPP82"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-134PMTPP82');
-    </script>
-
-    <!-- Clarity tracking code for https://f9xr.org/ -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "xgqzx0h42p");
-    </script>
+<script src="/assets/js/consent.js" defer></script>
 <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +33,7 @@
 <meta name="referrer" content="no-referrer-when-downgrade">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="F9XR Directories">
+<meta property="og:site_name" content="F9XR Team">
 <meta name="twitter:title" content="100+ Free Business Directories & Launch Platforms | F9XR">
 <meta name="twitter:description" content="Browse 100+ curated product launch, PDF submission &amp; business listing directories. Find the right platform to grow your business.">
 <link rel="icon" type="image/png" href="../assets/favicon-32x32.png" sizes="32x32">
@@ -380,7 +365,7 @@
                 <div><p class="text-white font-bold text-sm">Domain Authority</p><p class="text-xs text-platinum/40">25% weight</p></div>
               </div>
               <div class="flex-1 flex items-center gap-4">
-                <input type="range" min="0" max="5" value="0" step="1" class="score-slider flex-1 h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-[#3b82f6]" oninput="updateScore(this)">
+                <input type="range" min="0" max="5" value="0" step="1" aria-label="Domain Authority score" class="score-slider flex-1 h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-[#3b82f6]" oninput="updateScore(this)">
                 <div class="flex items-center gap-1.5 w-16 justify-end">
                   <span class="score-val text-white font-black text-lg">0</span>
                   <span class="text-platinum/30 text-sm">/5</span>
@@ -394,7 +379,7 @@
                 <div><p class="text-white font-bold text-sm">Community Activity</p><p class="text-xs text-platinum/40">20% weight</p></div>
               </div>
               <div class="flex-1 flex items-center gap-4">
-                <input type="range" min="0" max="5" value="0" step="1" class="score-slider flex-1 h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-[#3b82f6]" oninput="updateScore(this)">
+                <input type="range" min="0" max="5" value="0" step="1" aria-label="Community Activity score" class="score-slider flex-1 h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-[#3b82f6]" oninput="updateScore(this)">
                 <div class="flex items-center gap-1.5 w-16 justify-end">
                   <span class="score-val text-white font-black text-lg">0</span>
                   <span class="text-platinum/30 text-sm">/5</span>
@@ -408,7 +393,7 @@
                 <div><p class="text-white font-bold text-sm">Moderation Quality</p><p class="text-xs text-platinum/40">20% weight</p></div>
               </div>
               <div class="flex-1 flex items-center gap-4">
-                <input type="range" min="0" max="5" value="0" step="1" class="score-slider flex-1 h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-[#3b82f6]" oninput="updateScore(this)">
+                <input type="range" min="0" max="5" value="0" step="1" aria-label="Moderation Quality score" class="score-slider flex-1 h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-[#3b82f6]" oninput="updateScore(this)">
                 <div class="flex items-center gap-1.5 w-16 justify-end">
                   <span class="score-val text-white font-black text-lg">0</span>
                   <span class="text-platinum/30 text-sm">/5</span>
@@ -422,7 +407,7 @@
                 <div><p class="text-white font-bold text-sm">Link Placement</p><p class="text-xs text-platinum/40">15% weight</p></div>
               </div>
               <div class="flex-1 flex items-center gap-4">
-                <input type="range" min="0" max="5" value="0" step="1" class="score-slider flex-1 h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-[#3b82f6]" oninput="updateScore(this)">
+                <input type="range" min="0" max="5" value="0" step="1" aria-label="Link Placement score" class="score-slider flex-1 h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-[#3b82f6]" oninput="updateScore(this)">
                 <div class="flex items-center gap-1.5 w-16 justify-end">
                   <span class="score-val text-white font-black text-lg">0</span>
                   <span class="text-platinum/30 text-sm">/5</span>
@@ -436,7 +421,7 @@
                 <div><p class="text-white font-bold text-sm">Niche Relevance</p><p class="text-xs text-platinum/40">10% weight</p></div>
               </div>
               <div class="flex-1 flex items-center gap-4">
-                <input type="range" min="0" max="5" value="0" step="1" class="score-slider flex-1 h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-[#3b82f6]" oninput="updateScore(this)">
+                <input type="range" min="0" max="5" value="0" step="1" aria-label="Niche Relevance score" class="score-slider flex-1 h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-[#3b82f6]" oninput="updateScore(this)">
                 <div class="flex items-center gap-1.5 w-16 justify-end">
                   <span class="score-val text-white font-black text-lg">0</span>
                   <span class="text-platinum/30 text-sm">/5</span>
@@ -450,7 +435,7 @@
                 <div><p class="text-white font-bold text-sm">Trust Signals</p><p class="text-xs text-platinum/40">10% weight</p></div>
               </div>
               <div class="flex-1 flex items-center gap-4">
-                <input type="range" min="0" max="5" value="0" step="1" class="score-slider flex-1 h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-[#3b82f6]" oninput="updateScore(this)">
+                <input type="range" min="0" max="5" value="0" step="1" aria-label="Trust Signals score" class="score-slider flex-1 h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-[#3b82f6]" oninput="updateScore(this)">
                 <div class="flex items-center gap-1.5 w-16 justify-end">
                   <span class="score-val text-white font-black text-lg">0</span>
                   <span class="text-platinum/30 text-sm">/5</span>

@@ -66,22 +66,7 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="../assets/css/tailwind.css">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-134PMTPP82"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-134PMTPP82');
-    </script>
-
-    <!-- Clarity tracking code for https://f9xr.org/ -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "xgqzx0h42p");
-    </script>
+    <script src="/assets/js/consent.js" defer></script>
 
 <script type="application/ld+json">
 {
@@ -867,7 +852,7 @@ function renderPaginationTools(total,paginateElId){
   if(!container)return;
   var totalPages=Math.ceil(total/TOOLS_PER_PAGE);
   if(totalPages<=1){container.innerHTML='';return;}
-  var html='<button onclick="toolsGoPage('+(toolCurrentPage-1)+')" '+(toolCurrentPage===1?'disabled':'')+' class="px-3 py-2 rounded-lg text-xs font-bold bg-white/5 border border-white/10 text-white/70 hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all"><i class="fa-solid fa-chevron-left"></i></button>';
+  var html='<button onclick="toolsGoPage('+(toolCurrentPage-1)+')" aria-label="Previous page" '+(toolCurrentPage===1?'disabled':'')+' class="px-3 py-2 rounded-lg text-xs font-bold bg-white/5 border border-white/10 text-white/70 hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all"><i class="fa-solid fa-chevron-left"></i></button>';
   var start=Math.max(1,toolCurrentPage-2);
   var end=Math.min(totalPages,toolCurrentPage+2);
   if(start>1){html+='<button onclick="toolsGoPage(1)" class="px-3 py-2 rounded-lg text-xs font-bold bg-white/5 border border-white/10 text-white/70 hover:bg-white/10 transition-all">1</button>';if(start>2)html+='<span class="text-white/30 text-xs px-1">...</span>';}
@@ -875,7 +860,7 @@ function renderPaginationTools(total,paginateElId){
     html+='<button onclick="toolsGoPage('+i+')" class="px-3 py-2 rounded-lg text-xs font-bold '+(i===toolCurrentPage?'bg-accent-blue text-white border border-accent-blue':'bg-white/5 border border-white/10 text-white/70 hover:bg-white/10')+' transition-all">'+i+'</button>';
   }
   if(end<totalPages){if(end<totalPages-1)html+='<span class="text-white/30 text-xs px-1">...</span>';html+='<button onclick="toolsGoPage('+totalPages+')" class="px-3 py-2 rounded-lg text-xs font-bold bg-white/5 border border-white/10 text-white/70 hover:bg-white/10 transition-all">'+totalPages+'</button>';}
-  html+='<button onclick="toolsGoPage('+(toolCurrentPage+1)+')" '+(toolCurrentPage===totalPages?'disabled':'')+' class="px-3 py-2 rounded-lg text-xs font-bold bg-white/5 border border-white/10 text-white/70 hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all"><i class="fa-solid fa-chevron-right"></i></button>';
+  html+='<button onclick="toolsGoPage('+(toolCurrentPage+1)+')" aria-label="Next page" '+(toolCurrentPage===totalPages?'disabled':'')+' class="px-3 py-2 rounded-lg text-xs font-bold bg-white/5 border border-white/10 text-white/70 hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all"><i class="fa-solid fa-chevron-right"></i></button>';
   container.innerHTML=html;
 }
 

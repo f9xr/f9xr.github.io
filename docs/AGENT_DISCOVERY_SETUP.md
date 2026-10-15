@@ -9,7 +9,7 @@ and what each one requires. Some goals are satisfied by files in this repo
 
 | Goal | In-repo artifact | Still required |
 |---|---|---|
-| Link response headers | `_headers` (for header-capable hosts) | Cloudflare Transform Rule — see §1 |
+| Link response headers | — (values in §1 below) | Cloudflare Transform Rule — see §1 |
 | DNS-AID records | — | Cloudflare DNS records + DNSSEC — see §2 |
 | Markdown for Agents | — | Enable Cloudflare feature — see §3 |
 | OAuth/OIDC discovery | *intentionally omitted* (no auth backend) | — |
@@ -21,10 +21,10 @@ and what each one requires. Some goals are satisfied by files in this repo
 
 Also updated: `robots.txt` (`Agentmap:` directive) and `index.html` `<link>` hints.
 
-> **Note:** GitHub Pages ignores the `_headers` file. It is kept as the source of
-> truth for header values and works as-is if the site is ever moved to
-> Cloudflare Pages or Netlify. On GitHub Pages, apply the values via Cloudflare
-> Transform Rules below.
+> **Note:** The legacy `_headers` file has been removed from the repo, since
+> GitHub Pages ignores it. The header values in §1 are the source of truth and
+> work as-is if the site is ever moved to Cloudflare Pages or Netlify. On GitHub
+> Pages, apply the values via the Cloudflare Transform Rules below.
 
 ---
 

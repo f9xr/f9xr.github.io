@@ -263,36 +263,6 @@
     </image:image>
   </url>
 
-  <!-- ========== THANKS PAGE ========== -->
-  <url>
-    <loc>https://f9xr.org/pages/thanks.html</loc>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/illustrations/Super%20thank%20you-rafiki.svg</image:loc>
-      <image:title>Thank You Illustration</image:title>
-      <image:caption>F9XR Team Thank You - Super Thank You Illustration</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/og-image.webp</image:loc>
-      <image:title>F9XR Team Open Graph Image</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/logo.webp</image:loc>
-      <image:title>F9XR Team Logo</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/favicon-32x32.png</image:loc>
-      <image:title>F9XR Team Favicon</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/favicon-16x16.png</image:loc>
-      <image:title>F9XR Team Favicon 16x16</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/apple-touch-icon.png</image:loc>
-      <image:title>F9XR Team Apple Touch Icon</image:title>
-    </image:image>
-  </url>
-
   <!-- ========== PARTNERS PAGE ========== -->
   <url>
     <loc>https://f9xr.org/pages/partners.html</loc>
@@ -783,61 +753,6 @@
   </url>
   <url>
     <loc>https://f9xr.org/legals/agreement.html</loc>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/favicon-32x32.png</image:loc>
-      <image:title>F9XR Team Favicon</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/favicon-16x16.png</image:loc>
-      <image:title>F9XR Team Favicon 16x16</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/apple-touch-icon.png</image:loc>
-      <image:title>F9XR Team Apple Touch Icon</image:title>
-    </image:image>
-  </url>
-
-  <!-- ========== CASE STUDIES PAGE ========== -->
-  <url>
-    <loc>https://f9xr.org/pages/case-studies.html</loc>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/og-image.webp</image:loc>
-      <image:title>F9XR Team Open Graph Image</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/logo.webp</image:loc>
-      <image:title>F9XR Team Logo</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/favicon-32x32.png</image:loc>
-      <image:title>F9XR Team Favicon</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/favicon-16x16.png</image:loc>
-      <image:title>F9XR Team Favicon 16x16</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/apple-touch-icon.png</image:loc>
-      <image:title>F9XR Team Apple Touch Icon</image:title>
-    </image:image>
-  </url>
-
-  <!-- ========== SERVICES INDEX ========== -->
-  <url>
-    <loc>https://f9xr.org/services/index.html</loc>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/illustrations/By%20my%20car-rafiki.svg</image:loc>
-      <image:title>F9XR Services - Digital Solutions</image:title>
-      <image:caption>F9XR Services - Digital Solutions by F9XR Team</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/og-image.webp</image:loc>
-      <image:title>F9XR Team Open Graph Image</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/logo.webp</image:loc>
-      <image:title>F9XR Team Logo</image:title>
-    </image:image>
     <image:image>
       <image:loc>https://f9xr.org/assets/favicon-32x32.png</image:loc>
       <image:title>F9XR Team Favicon</image:title>
@@ -1892,78 +1807,4 @@
     </image:image>
   </url>
 
-  <!-- ========== SEO AUDIT REPORT SKILL ========== -->
-  <url>
-    <loc>https://f9xr.org/seo-audit-report-skill/index.html</loc>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/og-image.webp</image:loc>
-      <image:title>F9XR Team Open Graph Image</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/logo.webp</image:loc>
-      <image:title>F9XR Team Logo</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/favicon-32x32.png</image:loc>
-      <image:title>F9XR Team Favicon</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/favicon-16x16.png</image:loc>
-      <image:title>F9XR Team Favicon 16x16</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/apple-touch-icon.png</image:loc>
-      <image:title>F9XR Team Apple Touch Icon</image:title>
-    </image:image>
-  </url>
-
-  <!-- ========== COMING SOON PAGE ========== -->
-  <url>
-    <loc>https://f9xr.org/pages/coming-soon.html</loc>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/og-image.webp</image:loc>
-      <image:title>F9XR Team Open Graph Image</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/logo.webp</image:loc>
-      <image:title>F9XR Team Logo</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/favicon-32x32.png</image:loc>
-      <image:title>F9XR Team Favicon</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/favicon-16x16.png</image:loc>
-      <image:title>F9XR Team Favicon 16x16</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/apple-touch-icon.png</image:loc>
-      <image:title>F9XR Team Apple Touch Icon</image:title>
-    </image:image>
-  </url>
-
-  <!-- ========== ARTICLES ========== -->
-  <url>
-    <loc>https://f9xr.org/articles</loc>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/og-image.webp</image:loc>
-      <image:title>F9XR Team Open Graph Image</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/logo.webp</image:loc>
-      <image:title>F9XR Team Logo</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/favicon-32x32.png</image:loc>
-      <image:title>F9XR Team Favicon</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/favicon-16x16.png</image:loc>
-      <image:title>F9XR Team Favicon 16x16</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://f9xr.org/assets/apple-touch-icon.png</image:loc>
-      <image:title>F9XR Team Apple Touch Icon</image:title>
-    </image:image>
-  </url>
 </urlset>

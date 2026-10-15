@@ -8,7 +8,6 @@ Disallow: /404.html
 Disallow: /error.html
 Disallow: /pages/case-studies.html
 Disallow: /pages/coming-soon.html
-Disallow: /pinterest-79c83.html
 Disallow: /*?fbclid
 Disallow: /*?gclid
 Disallow: /*?utm_
