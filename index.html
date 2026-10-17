@@ -60,6 +60,9 @@
 
     <link rel="preload" as="image" href="assets/og-image.webp">
     <link rel="dns-prefetch" href="https://formspree.io">
+    <link rel="dns-prefetch" href="https://js.hcaptcha.com">
+    <link rel="preconnect" href="https://js.hcaptcha.com" crossorigin>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
 
 
@@ -1004,19 +1007,22 @@
 
 
                         <div
-                            class="mt-12 p-8 bg-accent-blue rounded-[2.5rem] text-carbon-black flex items-center gap-6 shadow-[0_0_50px_rgba(59,130,246,0.5)] border border-white/20">
-                            <div
-                                class="w-14 h-14 bg-carbon-black rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-hand-fist text-white text-xl"></i>
+                            class="mt-12 p-6 md:p-8 bg-accent-blue rounded-[2.5rem] text-carbon-black flex flex-col sm:flex-row sm:items-center gap-6 shadow-[0_0_50px_rgba(59,130,246,0.5)] border border-white/20">
+                            <div class="flex items-center gap-5 flex-1 min-w-0">
+                                <div
+                                    class="w-14 h-14 bg-carbon-black rounded-2xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-hand-fist text-white text-xl"></i>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <p class="font-black italic uppercase tracking-tighter leading-tight"><span
+                                            class="text-white">We Build for ROI.</span>
+                                    </p>
+                                    <p class="text-xs font-bold uppercase opacity-60 tracking-widest">Digital results,
+                                        not just pretty pixels.</p>
+                                </div>
                             </div>
-                            <div class="flex-1">
-                                <p class="font-black italic uppercase tracking-tighter leading-tight"><span
-                                        class="text-white">We Build for ROI.</span>
-                                </p>
-                                <p class="text-xs font-bold uppercase opacity-60 tracking-widest">Digital results, not
-                                    just pretty pixels.</p>
-                            </div>
-                            <a href="/case-studies/index.html" class="flex-shrink-0 bg-carbon-black text-white px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest hover:bg-white hover:text-carbon-black transition-all">
+                            <a href="/case-studies/index.html"
+                                class="w-full sm:w-auto text-center flex-shrink-0 bg-carbon-black text-white px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest hover:bg-white hover:text-carbon-black transition-all">
                                 See Our Work &rarr;
                             </a>
                         </div>
@@ -2409,6 +2415,10 @@
                             </div>
                         </div>
 
+                        <div class="sm:col-span-2 flex justify-center">
+                            <div class="h-captcha" data-sitekey="11e84a4e-d1da-4988-b18a-c22c3dd46a24" data-theme="dark"></div>
+                        </div>
+
                         <div class="sm:col-span-2 pt-4">
                             <button type="submit"
                                 class="w-full bg-bright-snow text-carbon-black py-5 md:py-7 rounded-2xl md:rounded-3xl font-black text-xl md:text-2xl uppercase tracking-tighter hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-white/5 flex items-center justify-center gap-4">
@@ -3017,6 +3027,14 @@
                         showStatus('Please wait ' + rem + ' second' + (rem === 1 ? '' : 's') + ' before sending another message.');
                         return;
                     }
+                }
+
+                // hCaptcha check
+                const captchaField = homeForm.querySelector('textarea[name="h-captcha-response"], input[name="h-captcha-response"]');
+                if (!captchaField || captchaField.value === '') {
+                    event.preventDefault();
+                    showStatus('Please complete the hCaptcha challenge to continue.');
+                    return;
                 }
 
                 hideStatus();

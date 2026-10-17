@@ -17,6 +17,9 @@
     <meta name="theme-color" content="#212529">
     <link rel="canonical" href="https://f9xr.org/pages/contact.html">
     <link rel="dns-prefetch" href="https://formspree.io">
+    <link rel="dns-prefetch" href="https://js.hcaptcha.com">
+    <link rel="preconnect" href="https://js.hcaptcha.com" crossorigin>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -319,6 +322,11 @@
                             again.</p>
                     </div>
 
+                    <!-- hCaptcha (required by Formspree) -->
+                    <div class="flex justify-center pt-2">
+                        <div class="h-captcha" data-sitekey="11e84a4e-d1da-4988-b18a-c22c3dd46a24" data-theme="dark"></div>
+                    </div>
+
                     <!-- Submit Button -->
                     <div class="flex flex-col items-center gap-6 pt-4">
                         <button type="submit" id="f9xr-submit-btn"
@@ -341,6 +349,23 @@
                 const successMsg = document.getElementById("form-success");
                 const errorMsg = document.getElementById("form-error");
 
+                function showError(message) {
+                    errorMsg.classList.remove("hidden");
+                    const p = errorMsg.querySelector("p");
+                    if (p) { p.textContent = message; } else { errorMsg.textContent = message; }
+                }
+
+                function getCaptchaToken() {
+                    const el = document.querySelector('textarea[name="h-captcha-response"], input[name="h-captcha-response"]');
+                    return el && el.value ? el.value : "";
+                }
+
+                function resetCaptcha() {
+                    if (window.hcaptcha && typeof window.hcaptcha.reset === "function") {
+                        try { window.hcaptcha.reset(); } catch (e) { /* ignore */ }
+                    }
+                }
+
                 async function handleFormSubmit(event) {
                     event.preventDefault();
 
@@ -350,6 +375,7 @@
                         successMsg.classList.remove("hidden");
                         successMsg.querySelector("p").textContent = "Thanks for reaching out! We'll contact you within 24 hours.";
                         contactForm.reset();
+                        resetCaptcha();
                         resetButton();
                         return;
                     }
@@ -358,10 +384,16 @@
                     if (window.F9XRCooldown && typeof window.F9XRCooldown.getRemaining === "function") {
                         const rem = window.F9XRCooldown.getRemaining();
                         if (rem > 0) {
-                            errorMsg.classList.remove("hidden");
-                            errorMsg.querySelector("p").textContent = "Please wait " + rem + " second" + (rem === 1 ? "" : "s") + " before submitting again.";
+                            showError("Please wait " + rem + " second" + (rem === 1 ? "" : "s") + " before submitting again.");
                             return;
                         }
+                    }
+
+                    // hCaptcha check
+                    const captchaToken = getCaptchaToken();
+                    if (!captchaToken) {
+                        showError("Please complete the hCaptcha challenge to continue.");
+                        return;
                     }
 
                     // Reset states
@@ -374,6 +406,7 @@
                     // Collect form data
                     const formData = new FormData(event.target);
                     const data = Object.fromEntries(formData.entries());
+                    data["h-captcha-response"] = captchaToken;
 
                     try {
                         const response = await fetch("https://formspree.io/f/xwkazyon", {
@@ -389,9 +422,8 @@
                             // Handle Success
                             successMsg.classList.remove("hidden");
                             contactForm.reset();
-                            submitBtn.innerHTML = '<span>Sent Successfully!</span> <i class="fas fa-check"></i>';
-                            submitBtn.classList.replace("bg-bright-snow", "bg-green-500");
-                            submitBtn.classList.replace("text-carbon-black", "text-white");
+                            resetCaptcha();
+                            resetButton();
 
                             // Cooldown marker
                             if (window.F9XRCooldown && typeof window.F9XRCooldown.markSubmitted === "function") {
@@ -408,24 +440,14 @@
                             } catch (e) {
                                 console.error("Formspree Error (non-JSON):", e);
                             }
-                            errorMsg.classList.remove("hidden");
-                            const ep = errorMsg.querySelector("p");
-                            if (ep) {
-                                ep.textContent = errorText;
-                            } else {
-                                errorMsg.textContent = errorText;
-                            }
+                            showError(errorText);
+                            resetCaptcha();
                             resetButton();
                         }
                     } catch (error) {
                         console.error("Network Error:", error);
-                        errorMsg.classList.remove("hidden");
-                        const nep = errorMsg.querySelector("p");
-                        if (nep) {
-                            nep.textContent = "Network error. Please check your connection and try again.";
-                        } else {
-                            errorMsg.textContent = "Network error. Please check your connection and try again.";
-                        }
+                        showError("Network error. Please check your connection and try again.");
+                        resetCaptcha();
                         resetButton();
                     }
                 }
@@ -436,7 +458,9 @@
                     submitBtn.style.opacity = "1";
                 }
 
-                contactForm.addEventListener("submit", handleFormSubmit);
+                if (contactForm) {
+                    contactForm.addEventListener("submit", handleFormSubmit);
+                }
             </script>
 
             <!-- === RIGHT: DM & INFO (2 Cols) === -->
@@ -746,8 +770,6 @@ Secure a 30-minute technical audit. We'll map out your digital architecture and 
             </div>
         </section>
 
-    <div data-testimonial-id="37d92147-41fa-45d6-b8e3-8ef33f9f7ade"></div>
-    <script src="https://testimly.com/js/embed.js" async></script>
     </main>
 
     <!-- === FOOTER === -->
